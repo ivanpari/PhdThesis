@@ -1,0 +1,81 @@
+%!TEX root = template.tex
+
+% -- packages -------------------------------------- %
+
+% basic layout of the document
+\documentclass[
+  11pt, a4paper,        % font and paper size
+  fleqn,                % align equations to the left
+  twoside, openright,   % two sided option with new chapters on the right page
+  \status               % the status (defined in main document)
+]{memoir}
+
+% general stuff
+\usepackage[utf8]{inputenc}   % Input-Encoding
+                              % (encoding which is used for saving)
+\usepackage[TS1,T1]{fontenc}  % Output-Encoding
+                              % (Latin1 [T1] with additional sepecial characters [TS1])
+
+% \usepackage[ngerman]{babel}   % German language package
+\usepackage[english]{babel}   % English language package
+
+% image stuff
+\usepackage[final]{graphicx}  % include graphics
+\usepackage{rotating}         % rotate images
+% \usepackage{caption}          % customize your captions (memoir incompatible)
+% \usepackage{subfig}           % sub-captions (memoir incompatible, already included there with \subbottom)
+\usepackage{wrapfig}          % wrap text around images and tables
+
+% font and symbols
+\usepackage[charter, greeklowercase=upright]{mathdesign} % Bitstream Charter font, not-italic greek letter like \alphaup
+\usepackage[scaled=.96,lining]{XCharter} % Provides additional Charter-like symbols, and small caps
+\usepackage{microtype}        % better type setting
+% \usepackage{amssymb,amsmath}  % more math symbols and environments % mathdesign interferes with amssymb
+% \usepackage{textcomp}         % even more special characters
+\usepackage{tikz}             % used to make circled numbers
+\usepackage{color}            % define your own colors
+\usepackage{scrhack}          % fixes an error caused by listings package
+\usepackage{listings}         % enables syntax highlighting for your code
+\usepackage{zi4}              % Use Inconsolata for fixed-width texttt
+
+% references
+\usepackage[backend=biber,style=numeric-comp]{biblatex}
+
+% physics and maths
+\usepackage{amsmath}
+\usepackage{wasysym}          % glyphs and other symbols, e.g. \int, http://www.ctan.org/pkg/wasysym
+\usepackage[alsoload=hep]{siunitx}          % macros for printing numbers (\num{12345}) and units (\SI{1e7}{\kilogram\per\metre\squared}), also interesting: \SIrange{10}{30}{\metre}, \mega\electronvolt, \DeclareSIUnit. \per can be set individually via SI[per-mode=reciprocal], or per-mode-fraction to overwrite the new default in the next line; http://www.ctan.org/pkg/siunitx
+\usepackage{commath}          % defines differential operators (\del, \dif)
+\usepackage{feynmp-auto}      % Feynman diagrams (alternative: feynmf)
+\usepackage{cancel, slashed}  % Feynman notation
+% \usepackage{maybemath}        % For context-sensitive maths, like headings
+\usepackage{hepparticles}     % particle names
+\usepackage{hepnames}         % shortcuts for lots of particle names
+\usepackage{braket}           % provides \bra and \ket notation
+
+% configuration
+\usepackage{hyperref}         % hyperlinks in PDF
+% The two following packages don't work with the memoir style
+% \usepackage{fancyhdr}         % configure your page header
+% \usepackage[noindentafter]{titlesec}  % configure titles
+
+% table stuff
+\usepackage{booktabs}         % professional tables
+\usepackage{multirow}         % combine table rows
+% \usepackage{arydshln}         % dashed lines in tables
+
+% additional packages (mixed)
+% \usepackage{keystroke}        % display keystrokes
+\usepackage{xspace}           % adds spaces to the end of commands if needed
+\usepackage{pdflscape}        % allows for landscaped, pdf-rotated single pages
+\usepackage[acronym,nonumberlist,xindy]{glossaries-prefix}  % glossaries % xindy is used for sorting non-latin characters correctly
+\usepackage{multicol}         % offers multi column environments
+\usepackage{ifdraft}          % offers \ifdraft{}{} command to do stuff while in draft mode
+% \usepackage{panda}            % Custom \panda package for overlining the P
+% \usepackage{gitinfo2}         % Provides infos about git (needs hooks, though)
+
+% packages that help during draft versions
+% (change document option from draft to final to disable)
+\usepackage[obeyDraft,textsize=scriptsize]
+  {todonotes}                 % notes and missing images
+% \usepackage{showlabels}       % show label names next to numbering
