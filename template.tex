@@ -1,5 +1,5 @@
 % ======================================================= %
-%          Random Thesis of super-cool author             %
+%          Phd Thesis of Isis Van Parijs             %
 %                                                         %
 %  Structure:                                             %
 %   template.tex          (main file)                     %
@@ -13,17 +13,17 @@
 % ======================================================= %
 
 % draft or final?
-\newcommand{\status}{final}
+\newcommand{\status}{draft}
 
 % The most general information for this document
-\newcommand{\Title}{An Article About the Correlation of Random Words with Alpha Male Gorillas and Rainbow-colored Highland Unicorns}
+\newcommand{\Title}{A search for flavour changing neutral currents involving a top quark and a Z boson, using the data collected by the CMS collaboration at a centre of mass of 13 TeV}
 \newcommand{\Pdftitle}{\Title}  % For if you want to have a different title in the pdf document (e.g. special characters removed)
-\newcommand{\Author}{The Doctor, PhD}
-\newcommand{\keywords}{LaTeX, template, Sublime Text 3, keyword, unicorns}
-\newcommand{\refereeOne}{Prof.~Dr.~A. Einstein}
-\newcommand{\refereeTwo}{Prof.~Dr.~P. Thagoras}
-\newcommand{\dateHandIn}{1~June~1970}
-\newcommand{\dateDefense}{8~July~1970}
+\newcommand{\Author}{Van Parijs, Isis}
+\newcommand{\keywords}{LaTeX, template, CMS, FCNC, phd, thesis}
+\newcommand{\refereeOne}{Prof.~Dr.~J. D'Hondt}
+%\newcommand{\refereeTwo}{Prof.~Dr.~P. Thagoras}
+\newcommand{\dateHandIn}{1~June~2017}
+\newcommand{\dateDefense}{1~October~2017}
 
 
 % load the general configuration
@@ -59,13 +59,61 @@
 % -------------------------------------------------- %
 
 \mainmatter
+\chapter[An introduction to the theory]{Theoretical bases}
+\section[SM]{Elementary particles and forces}
+\section[SML]{Standard Model Lagrangian}
+\section[BSM]{Physics beyond the standard model}
+\subsection[EFT]{Effective field theory}
+\subsection[BSM]{Motivations for new physics}
+\subsection[BSMsearch]{Searches beyond the Standard Model}
+\subsection{Experimental and theoretical constraints}
+\section[Statistics]{Statistics for a high energy particle physiscist}
+\subsection[BDT]{Boosted decision trees}
+\subsection[CL]{Confidence levels }
 
-\chapter{Showcase}
+\chapter[Experiment]{Experimental setup}
+\section[LHC]{The Large Hadron Collider}
+\subsection{LHC design and operation}
+\subsection{Physics programme}
+\section[CMS]{The Compact Muon Solenoid}
+\subsection{CMS coordinate system}
+\subsection{Inner trackking system and operations}
+\subsection{Electromagnetic calorimeter}
+\subsection{Hadronic calorimeter}
+\subsection{Muon system}
+\subsection{Data acquisition}
+\subsection{CMS computing model}
+\chapter[Event]{Event generation, simulation and reconstruction}
+\section[Generation]{Collision event generation}
+\subsection{Parton distribution functions and the hard interaction}
+\subsection{Parton showering}
+\subsection{Hadronization and decay}
+\subsection{Underlying event}
+\subsection[Reconstruction]{Event reconstruction and identification}
+\section{Detector simulation}
+\section{Physics object recontstruction and identification}
+\subsection{The particle flow event reconstruction method}
+\subsection{Muon reco and ID}
+\subsection{Electron reco and ID}
+\subsection{Jet reco and ID of b quarks}
+\subsection{Missing transverse energy reconstruction}
+
+\chapter{The search for FCNC involving a top quark and a Z boson}
+\section[Assumtions]{Model assumptions}
+\section[Samples]{Data and simulation}
+\subsection{Standard Model Background simulation}
+\subsection{FCNC signal simulation}
+\subsection{Trigger requirements}
+\section{Baseline event selection}
+\section{Data driven background estimation}
+\section{Regions and channels}
+\section{Construction of template distributions}
+\section{Systematic uncertainties}
+\section{Limit setting procedure}
+\section{Result and discussion}
+\chapter{Conclusion and outlook}
 \label{s:showcase}
-\input{1_Showcase/Showcase}
-
-\chapter{Unicorns}
-\input{2_Unicorns/Unicorns}
+%\input{1_Showcase/Showcase}
 
 
 % -------------------------------------------------- %
