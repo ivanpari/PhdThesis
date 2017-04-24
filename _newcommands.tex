@@ -1,5 +1,9 @@
 %!TEX root = template.tex
 
+% fancy header
+
+
+
 % general commands
 \renewcommand{\>}{\frqq}
 \newcommand{\<}{\flqq}
@@ -30,6 +34,7 @@
 \newcommand{\heq}{\widehat{=}}
 \renewcommand{\deg}{$\,^\circ$}
 \newcommand{\chindof}{\chi^2/\mathrm{ndof}}
+\newcommand{\com}{$\sqrt{s}$ }
 
 \newcommand{\xcal}[1]{\text{\usefont{OMS}{cmsy}{m}{n}#1}}  % Use original mathcal font instead of charters mathcal version
 \newcommand{\orderof}[1]{$\xcal{O}\left( #1 \right)$}  % \orderof{\si{\metre}} now is more beautiful
@@ -37,3 +42,15 @@
 % new units for siunitx package
 \DeclareSIUnit\event{ev}
 \DeclareSIUnit\channel{ch}
+\DeclareSIUnit\MeV{MeV}
+\DeclareSIUnit\GeV{GeV}
+\DeclareSIUnit\TeV{TeV}
+% particles
+
+
+\newenvironment{chapquote}[2][2em]
+{\setlength{\@tempdima}{#1}%
+	\def\chapquote@author{#2}%
+	\parshape 1 \@tempdima \dimexpr\textwidth-2\@tempdima\relax%
+	\itshape}
+{\par\normalfont\hfill--\ \chapquote@author\hspace*{\@tempdima}\par\bigskip}
