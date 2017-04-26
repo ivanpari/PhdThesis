@@ -1,5 +1,5 @@
 \section{The Compact Muon Solenoid}
-At one of the collision points of the LHC, the CMS detector\cite{CMS, Bayatian:2006zz} is placed. Weighing 14 000 \si{ \tonne}, This cylindrical detector is about 28.7 \si{ \meter} long and 15 \si{ \meter} in diameter, weighing around 14 000 \si{ \tonne}. It has an onion like structure of several specialised detectors and contains a superconducting solenoid with a magnetic field of 3.8 \si{ \Tesla}. The CMS detector is designed in a way that it can address the needs of physics coming from the LHC. Living in a hadronic environment, multi-jet processes produced by the strong interaction are a main source of background for rare physics processes. Therefore, good identification, momentum resolution, and charge determination of muon, electrons and photons is one of the main goals of the CMS detector. Further it provides a good charged particle momentum resolution and reconstruction efficiency in the inner tracker such that for example jets coming from b quarks or tau particles can be identified. Also th electromagnetic resolution for an efficient photon and lepton isolation as well as a good hadronic calorimeter for the missing transverse energy were kept into account while designing CMS. 
+At one of the collision points of the LHC, the CMS detector\cite{CMS, Bayatian:2006zz,Bayatian:922757} is placed. Weighing 14 000 \si{ \tonne}, This cylindrical detector is about 28.7 \si{ \meter} long and 15 \si{ \meter} in diameter, weighing around 14 000 \si{ \tonne}. It has an onion like structure of several specialised detectors and contains a superconducting solenoid with a magnetic field of 3.8 \si{ \Tesla}. The CMS detector is designed in a way that it can address the needs of physics coming from the LHC. Living in a hadronic environment, multi-jet processes produced by the strong interaction are a main source of background for rare physics processes. Therefore, good identification, momentum resolution, and charge determination of muon, electrons and photons is one of the main goals of the CMS detector. Further it provides a good charged particle momentum resolution and reconstruction efficiency in the inner tracker such that for example jets coming from b quarks or tau particles can be identified. Also th electromagnetic resolution for an efficient photon and lepton isolation as well as a good hadronic calorimeter for the missing transverse energy were kept into account while designing CMS. 
 
 The LHC provides many collisions in a short amount of time. In order to discriminate between consecutive collisions - known as out of time pile up events - , CMS has to complete the full data acquisition for one collision event before the next one happen (around 50 \si{ \nano \second} (FIXME) ). Furthermore, since the photons are in packets, around 21 (FIXME) inelastic collisions happen every beam crossing. This creates a great amount of background processes in the detector called in time pile up events. Due to this difficult conditions, the detector has a great granularity which on its turn creates a need for huge number of synchronized electronic channels. Furthermore, due to to high flux of particles in the regions close to the beam, the electronics has to be able to endure high radiation. 
 
@@ -21,20 +21,29 @@ where the difference of rapidities of two particles is invariant under a Lorentz
 \end{figure}
 
 \subsection{Towards the heart of CMS}
-The CMS consists of two parts; a central barrel around the beam pipe (\abspsrap $<1.4$) and two plugs to ensure the hermeticity of the detector. In Figure~\ref{fig:CMS} the onion like structure of the CMS detector is visible. The solenoid contains the hadronic calorimeter,  the electromagnetic calorimeter and the tracker, while the muon chambers are placed outside the solenoid.
-
+The CMS detector consists of two parts; a central barrel around the beam pipe (\abspsrap $<1.4$) and two plugs to ensure the hermeticity of the detector. In Figure~\ref{fig:CMS,fig:CMSpsrap} the onion like structure of the CMS detector is visible. The choice of a solenoid of 12.9 \si{ \meter} (FIXME) long and 5.9 \si{ \meter}
+diameter gives the advantage of bending the particle trajectories in the transverse plane. The hadronic calorimeter,  the electromagnetic calorimeter and the tracker are within the solenoid, while the muon chambers are placed outside the solenoid.
 
 \begin{figure}[ht]
    \centering
 	\includegraphics[width=\textwidth]{2_ExperimentalSetup/Figures/cms_complete_labelled}
-	\caption{Mechanical layout of the CMS detector\cite{CMSdraw} (FIXME)
-		.}
+	\caption{Mechanical layout of the CMS detector\cite{CMSdraw}.}
 	\label{fig:CMS}
 \end{figure}
 	
 
 \subsubsection{Inner tracking system and operations}
 %https://indico.cern.ch/event/632928/
+The tracking system is the closest to the point of interaction. It reconstructs the trajectories of charged particles with \abspsrap $<2.5$ that are being bend by the magnetic field. This provides a measurement of the momentum of those particles, as well as the determination of the interaction point or vertex. The tracking system is divided into three parts that are illustrated in Figure~\ref{fig:Tracker}.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=\textwidth]{2_ExperimentalSetup/Figures/imageedit_3_5170744545}
+	\caption{Schematic cross section thorugh the CMS tracker. Each line represents a detector module. Double lines indicate back-to-back modules\cite{Chatrchyan:2008aa}.}
+	\label{fig:Tracker}
+\end{figure}
+
+
 \subsubsection{Electromagnetic calorimeter}
 \subsubsection{Hadronic calorimeter}
 \subsubsection{Muon system}
