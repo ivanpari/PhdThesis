@@ -34,7 +34,7 @@ diameter gives the advantage of bending the particle trajectories in the transve
 
 \subsubsection{Inner tracking system and operations}
 %https://indico.cern.ch/event/632928/
-The tracking system is the closest to the point of interaction. It reconstructs the trajectories of charged particles with \abspsrap $<2.5$ that are being bend by the magnetic field. This provides a measurement of the momentum of those particles, as well as the determination of the interaction point or vertex. The tracking system is divided into three parts that are illustrated in Figure~\ref{fig:Tracker}.
+The tracking system is the closest to the point of interaction. It reconstructs the trajectories of charged particles with \abspsrap $<2.5$ that are being bend by the magnetic field. This provides a measurement of the momentum of those particles, as well as the determination of the interaction point or vertex. The system should be able to provide high granularity as well as speed, and be able to endure high radiation. For this reason, the CMS collaboration choose silicon detector technology.
 
 \begin{figure}[ht]
 	\centering
@@ -43,8 +43,29 @@ The tracking system is the closest to the point of interaction. It reconstructs 
 	\label{fig:Tracker}
 \end{figure}
 
+ The tracking system consists of a cylinder of 5.8 \si{ \meter} long and 2.5 \si{ \meter} in diameter,  illustrated in Figure~\ref{fig:Tracker}. 
+ The inner region called pixel ($4.4<r<10.2$ \si{ \cm}), gets the highest flux of particles. Therefore, pixel silicon sensors of $100 \times 150$ \si{ \squared \micro \meter} is used. It consists of three cylindrical barrels that are complemented by two discs of pixel modules at each side.
+  Around the PIXEL, is the silicon strip tracker ($20<r<116$ \si{ \cm} ) that is composed of three systems. The Tracker Inner Barrel  and Discs(TIB, TID) are composed of four barrel layers accompanied by three discs at each end. The outer part of the tracker - Tracker Outer Barrel (TOB) -  consists  of 6 barrel layers. In the outer discs, there are nine discs of silicon sensors, referred to as Tracker End Caps (TEC). 
+ 
+
+
 
 \subsubsection{Electromagnetic calorimeter}
+The electromagnetic calorimeter (ECAL) is designed to measure the energy of photons and electrons and covers \abspsrap $<3$. It consists of 75 848 lead tungstae (PbW$O_4$) crystals. Electromagnetic showers produced by passing electrons or photons ionize the crystal atoms which emit a blue-green scintillation light, that is collected by silicon avalanche photodiodes (APDs) and vacuum phototriodes (VPTs). There are three regions: a central barrel (EB), a endcap region (EE) and a preshower (ES) (Figure \ref{fig:ECAL}). 
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.75\textwidth]{2_ExperimentalSetup/Figures/imageedit_5_8264930617}
+	\caption{Schematic cross section of the electromagnetic calorimeter\cite{Chatrchyan:2008aa}.}
+	\label{fig:ECAL}
+\end{figure}
+The relative energy resolution of the ECAL for electrons is between 1.4-3\% in EB and 3-4\% for EE. In Figure \ref{fig:ECALres}, the resolutions for low and high bremsstrahlung electrons are shown. 
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=\textwidth]{2_ExperimentalSetup/Figures/imageedit_7_5931623976}
+	\caption{Relative energy resolution in bins of pseudo rapidity for the barrel and end caps using electrons from $Z \rightarrow ee$. Left: low bremsstrahlung electrons, Right: high brehmstrahlung electrons\cite{Sun:2233637}.}
+	\label{fig:ECALres}
+\end{figure}
+
 \subsubsection{Hadronic calorimeter}
 \subsubsection{Muon system}
 
