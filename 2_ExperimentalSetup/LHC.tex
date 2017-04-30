@@ -10,7 +10,7 @@ The LHC has started its era of cutting edge science on 10 September 2008~\cite{L
 
  As can be seen in figure~\ref{fig:LHCchain}, the LHC is last element in a chain of creation, injection and acceleration of protons. Protons are obtained by ionising hydrogen and injected in a linear accerator (LINAC 2), where they obtain an energy of 50\si{ \MeV}. They continue to the proton synchrotron booster (PSB or Booster), where the proton packets are accelerated to 1.4\si{ \GeV} and are split up in twelve. The proton synchrotron (PS) increases their energy to 25\si{ \GeV} before handing the protons to the super proton synchrotron (SPS), where the proton reach an energy of 450\si{ \GeV}. Each accelerator ring increases in radius in order to reduce the energy loss of the protons by synchrotron radiation. This energy loss is proportional to the fourth power of the proton energy and inversely proportional to the bending radius. The protons are then injected into opposite directions into the LHC, where they are accelerated to 3.5\si{ \TeV} (in 2010 and 2011), 4\si{ \TeV} (in 2012 and 2013) or 6.5\si{ \TeV} (in 2015 and 2016)~\cite{Wenninger:2254678}. Before the start up of the LHC in 2010, the previous energy record was held by the Tevatron collider at Fermilab, colliding proton with antiprotons at \com = 1.96 \si{ \TeV}.
  
- The beam has a bunch structure obtained by the injection scheme and properties of the dump system. These bunches are obtained in the PS with 25 \si{ \nano \s} spacing. The operation of accelerating and transfering to the LHC is repeated 12 times for each counter-rotating beam.  When completly filled, the LHC nominally contains 32808 bunches (FIXME) of approximatley $10^{11}$ protons. 
+ The beam has a bunch structure obtained by the injection scheme and properties of the dump system. These bunches are obtained in the PS with 25 \si{ \nano \s} spacing. The operation of accelerating and transfering to the LHC is repeated 12 times for each counter-rotating beam.  When completly filled, the LHC nominally contains 2220 bunches in run II, compared to 1380 in run I (design: 2200). At full intensity, it would have nearly 2800 bunches but this is limited due to SPS. 
  
  \begin{figure}[h]
 	\centering
@@ -29,7 +29,7 @@ The LHC is home to seven experiments that are placed on an interaction point:
 
 
 \subsection{LHC design and operation}
- The most important quantity at the LHC is the luminosity. This is a measurement of the number of collisions that can be produced in a detector per \si{\meter\squared} and per second. The LHC collisions create a number of events per second given by
+ The most important quantity at the LHC is the luminosity\cite{Gillies:1997001}. This is a measurement of the number of collisions that can be produced in a detector per \si{\meter\squared} and per second. The LHC collisions create a number of events per second given by
 \begin{equation}\label{eq:NbEv}
 \centering
 N_{event} = L \sigma_{event}, 
@@ -38,10 +38,11 @@ where $\sigma_{event}$ is the cross section of the event of interest and $L$ the
 \begin{equation}\label{eq:Lumi}
 	L = \frac{1}{4\pi}\textcolor{blue}{N_b n_b f_{rev}}\textcolor{red}{\frac{N_b}{\epsilon_n }}\textcolor{green}{\left(1+\left(\frac{\theta_c \sigma_z}{2\sigma^*} \right)^2\right)^{\frac{-1}{2}}} \frac{\gamma_r}{ \beta^*}.
 \end{equation}
-The number of particles per bunch is expressed by $N_b$, while $n_b$ is the number of bunches per beam, $f_{rev}$ the revolution frequency, $\gamma_r$ the relativistic gamma factor, $\epsilon_n$ the normalized transverse beam emittance - a quality for the confinement of the beam  , $\beta^*$ the beta function at the collision point - a measurement for the width of the beam, $\theta_c$ the angle between the two beams at the interaction point, $\sigma_z$ the mean lengths of one packet, and $\sigma^*$ the mean height of one packet. In Equation~\ref{eq:Lumi}, the blue part represents the stream of particles, the red represents the brilliance; and the green part represents the geometric reduction factor due to the crossing angle at the interaction point. 
+The number of particles per bunch is expressed by $N_b$, while $n_b$ is the number of bunches per beam, $f_{rev}$ the revolution frequency, $\gamma_r$ the relativistic gamma factor, $\epsilon_n$ the normalized transverse beam emittance - a quality for the confinement of the beam  , $\beta^*$ the beta function at the collision point - a measurement for the width of the beam, $\theta_c$ the angle between the two beams at the interaction point, $\sigma_z$ the mean lengths of one packet, and $\sigma^*$ the mean height of one packet. In Equation()~\ref{eq:Lumi}), the blue part represents the stream of particles, the red represents the brilliance; and the green part represents the geometric reduction factor due to the crossing angle at the interaction point. 
  Hence, in order to enhance the chances for exploration of rare events and thus enhancing the number of collisions. High beam energies as well as high beam intensities are required.
 
-The peak luminosity for the LHC in 2016 was $10^{34}$ \si{\per\square\meter \per\second }, which leads to about 1 billion proton interactions per second. This luminosity is not a constant in time. It diminishes due to collisions between the beams, and the interaction of the protons and the particle gas that is trapped in the centre of the vacuum tubes due to the magnetic field. The intern diffusion of the beam degrades the emmitance and therefiore also the luminisity. For this reason, the mean lifetime of a beam inside the LHC is around 15 \si{ \hour}. The integrated luminosity - the luminosity provided for a certain time range - recorded by CMS and ATLAS over the year 2016 is given in Figure~\ref{fig:IntLumi}.
+The peak design luminosity for the LHC in 2016 was $10^{34}$ \si{\per\square\meter \per\second }, which leads to about 1 billion proton interactions per second. In 2016, the LHC was around 10\% above this design luminosity\cite{Harriet:2212301}. The luminosity is not a constant in time. It diminishes due to collisions between the beams, and the interaction of the protons and the particle gas that is trapped in the centre of the vacuum tubes due to the magnetic field. The intern diffusion of the beam degrades the emmitance and therefiore also the luminisity. For this reason, the mean lifetime of a beam inside the LHC is around 15 \si{ \hour}. The integrated luminosity - the luminosity provided for a certain time range - recorded by CMS and ATLAS over the year 2016 is given in Figure~\ref{fig:IntLumi}. In Run II, the peak luminosity is 13-17 10$^33$ \si{ \per \square \centi \meter \per \second} compared to 7.7 10$^33$ \si{ \per \square \centi \meter \per \second} in Run I.
+% https://science.energy.gov/~/media/hep/hepap/pdf/201512/CMSRestart_Rakness_HEPAP_20151210.pdf
  \begin{figure}[ht]
  	\centering
 	\begin{minipage}[b]{0.4\textwidth}
@@ -59,16 +60,17 @@ The peak luminosity for the LHC in 2016 was $10^{34}$ \si{\per\square\meter \per
 \end{figure}
 
  
-Inside the LHC ring~\cite{Bruning:782076}, the protons are accelerated by the means of radiofrequenciy cavities, while 1232 dipole magnets of approximately 15\si{ \m} long, weighing 35\si{ \tonne} esure the deflection of the beams. The cross section view of such a dipole is given in Figure~\ref{fig:dipole}. The two proton beams circulate in opposite direction in separate pipes inside of the magnet. Through the use of a strong electric current in the coils around the beam pipe, magnetic fields are generated and cause the protons to bend in the required orbits. In order to get the coil to become superconducting and able to produce - with the aid of an iron return yoke - a strong magnetic field of 8.3\si{ \tesla}, the magnet structure is surrounded by a vessel. This vessel is filled with liquid Helium making it possible to cool down the magnet to 1.9\si{ \kelvin}. In order to get more focussed and stabilised proton beam, other higher-order multipole and corrector magnets are placed along the LHC tunnel.
+Inside the LHC ring~\cite{Bruning:782076}, the protons are accelerated by the means of radiofrequenciy cavities, while 1232  magnets of approximately 15\si{ \m} long, weighing 35\si{ \tonne} esure the deflection of the beams. The cross section view of such a dipole is given in Figure~\ref{fig:dipole}. The two proton beams circulate in opposite direction in separate pipes inside of the magnet. Through the use of a strong electric current in the coils around the beam pipe, magnetic fields are generated and cause the protons to bend in the required orbits. In order to get the coil to become superconducting and able to produce - with the aid of an iron return yoke - a strong magnetic field of 8.3\si{ \tesla}, the magnet structure is surrounded by a vessel. This vessel is filled with liquid Helium making it possible to cool down the magnet to 1.9\si{ \kelvin}. In order to get more focussed and stabilised proton beam, other higher-order multipole and corrector magnets are placed along the LHC tunnel.
 
  \begin{figure}[ht]
 	\centering
-	\includegraphics[width=0.5\textwidth]{2_ExperimentalSetup/Figures/lhc-pho-1998-341}
-	\caption{Schematic representation of the LHC dipole~\cite{Jean-Luc:841539}. Two beam pipes where the proton beams circulate around the LHC ring are shown. The superconducting coils generate a magnetic field of 8.3 \tesla that steer the protons in the circular path. }
+	\includegraphics[width=0.45\textwidth]{2_ExperimentalSetup/Figures/lhc-pho-1998-341}
+%	\includegraphics[width=0.45\textwidth]{2_ExperimentalSetup/Figures/1107167_03}
+	\caption{Schematic representation of the LHC dipole~\cite{Jean-Luc:841539} . Two beam pipes where the proton beams circulate around the LHC ring are shown. The superconducting coils generate a magnetic field of 8.3 \tesla that steer the protons in the circular path. }
 	\label{fig:dipole}
 \end{figure}
 
 
 
 
-
+%CMS collaboration http://cds.cern.ch/record/2195940?ln=en map

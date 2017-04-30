@@ -36,6 +36,8 @@
 \addbibresource{Bibliography/Chapter2.bib}
 \addbibresource{Bibliography/CMS.bib}
 
+
+\include{glossaries}
 % -------------------------------------------------- %
 %    title, TOC, ...                                 %
 % -------------------------------------------------- %
@@ -44,7 +46,7 @@
 \begin{document}
 \frontmatter
 
-%\include{glossaries}
+
 
 % the title page
 \input{_titlepage}
@@ -184,6 +186,7 @@
 \hypersetup{urlcolor=darkgreen}
 \printbibliography  % use with BibLaTeX
 \hypersetup{urlcolor=darkblue}
+%\printglossaries
 %\printglossary[type=\acronymtype, toctitle=\myacronymtitle, title=\myacronymtitle]  % print only one glossary, and define its title (\myacronymtitle is defined in _settings.tex)
 %\printglossaries  % print all glossaries available
 
