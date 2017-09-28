@@ -1,0 +1,177 @@
+The Standard Model (\SM)~\cite{Peskin:257493} 
+is a name given in 1970s to a theory describing the fundamental particles and their interactions. This quantum field theory describes the particles and their interactions as fields and has successfully incorporated three of the four fundamental forces in the universe. In \Sec{sec:SMcontent}, the particle content of the \SM\ is summarised, while \Sec{sec:SMlagr} describes  the \SM\ Lagrangian and its symmetries. 
+
+\section{Elementary particles and forces}
+\label{sec:SMcontent}
+The interactions in nature can be described by four forces, the strong force, the electromagnetic force, the weak force and the gravitational force, that are mediated by particles with an integer spin, bosons. The strong interaction is mediated by eight gluons \Pgluon, while the electromagnetic force is mediated by photons \Pphoton, and the weak force by \PZ and \PWpm bosons. In \tab{tab:forces}, the forces and their characteristics are shown. The gravitational force is the only force not included in the \SM\ and can be neglected for energies lower than the Planck scale (1.22 $10^{19}$ \GeV).
+\begin{table}[htbp]
+	\centering
+	\caption{The four forces of nature and their characteristics.}
+	\begin{tabular}{lcc}
+		\toprule
+		& Range & Mediator \\ 
+		\midrule
+		Strong force & $10^e{-15}$ \m & 8 gluons  \\ 
+	
+		Electromagnetic force & $\infty$ & photon  \\ 
+		 
+		Weak force & $10^{-18}$ \m & \PWpm, \PZ bosons \\ 
+		
+		Gravitational force & $\infty$ & unknown \\ 
+		\bottomrule
+	\end{tabular} 
+	\label{tab:forces}
+\end{table}
+
+The fermions are the particles that make up the visible matter in the universe. They carry half integer spin and can be subdivided into leptons and quarks, where leptons don't interact strongly. Each fermion has a corresponding anti-fermion which has the same mass and is oppositely charged. The electron \Pelectron is the first elementary particle discovered~\cite{electrondiscovery} and belongs to the first generation of leptons together with electron neutrino \Pnue. The second generation is made up of the muon \Pmuon and the muon neutrino \Pnum, whereas the third generation consists of the tau \Ptau and the tau neutrino \Pnut. The neutrino's are neutral particles, while the other leptons have charge $\pm \qe$ where \qe represents the elementary charge of 1.602 $10^{-19}$ C. The masses of the charged leptons differ by four orders of magnitude between the first and third generations.In the \SM\ the neutrino's are assumed to be massless, while it is experimentally established that neutrino do have a tiny non-zero mass. In \tab{tab:leptongen}, the leptons and their properties in the \SM\ are summarised. 
+\begin{table}[htbp]
+	\centering
+	\caption{The properties of the leptons in the three generations of the \SM~\cite{PDG}, where \qe represents the elementary  charge.}
+	\begin{tabular}{lccc}
+		\toprule
+		Generation & Particle  & Mass  & Charge \\ 
+		\midrule
+		\multirow{2}{*}{First} & \Pelectron & 0.511 \MeV & -\qe  \\ 
+		& \Pnue & $\approx$ 0 & 0\\
+		
+	\multirow{2}{*}{Second} & \Pmuon & 106 \MeV &-\qe  \\ 
+	& \Pnum & $\approx$ 0 & 0\\
+	
+	\multirow{2}{*}{Third} & \Ptau & 1 777 \MeV & -\qe  \\ 
+	& \Pnut & $\approx$ 0 & 0 \\
+	
+		
+		\bottomrule
+	\end{tabular} 
+	\label{tab:leptongen}
+\end{table}
+
+The quarks can also be divided into three generations. Unlike the leptons, they carry colour charge and can interact via the strong interaction. The top quark, discovered in 1995 at the Tevatron~\cite{observationtopD0,observationtopCDF} is the heaviest \SM\ particle with a mass close to 173.1 \GeV~\cite{PDG}. The quarks and their properties are summarized in \tab{tab:quarkgen}. 
+\begin{table}[htbp]
+	\centering
+	\caption{The properties of the quarks in the three generations of the \SM~\cite{PDG}, where \qe represents the elementary  charge.}
+	\begin{tabular}{lccc}
+		\toprule
+		Generation & Particle  & Mass  & Charge \\ 
+		\midrule
+		\multirow{2}{*}{First} & up \Pup &$2.2_{-0.4}^{+0.6}$ \MeV& $\textfrac{2}{3}$ \qe  \\ 
+		& down \Pdown & $4.7^{+0.5}_{-0.4}$ \MeV & $\textfrac{-1}{3}$ \qe\\
+		
+		\multirow{2}{*}{Second} & charm \Pcharm & 1.28 $\pm$ 0.03 \GeV &$\textfrac{2}{3}$ \qe  \\ 
+		& strange \Pstrange & $96^{+8}_{-4}$ \MeV & $\textfrac{-1}{3}$ \qe\\
+		
+		\multirow{2}{*}{Third} & top \Ptop & 173.1 $\pm$ 0.6 \GeV &$\textfrac{2}{3}$ \qe  \\ 
+		&bottom \Pbottom & $4.18^{+0.04}_{-0.03}$ \GeV & $\textfrac{-1}{3}$ \qe \\
+		
+		
+		\bottomrule
+	\end{tabular} 
+	\label{tab:quarkgen}
+\end{table}
+
+The scalar boson, commonly known as the Higgs boson, is the last piece of the \SM\ and is discovered in 2012~\cite{Chatrchyan:2012xdj,Aad:2012tfa}. It is responsible for the masses of the \PWpm and \PZ boson, and that of the fermions.
+
+
+\section{Standard Model Lagrangian}
+\label{sec:SMlagr}
+The \SM\ is a quantum field theory and thus describes the dynamics and kinematics of particles and forces by a Lagrangian \Lagr. The theory is based on the \SSU\ gauge symmetry, where \SU\ describes the electroweak interaction and \Sthree\ the strong coupling. The indices refer to colour C, the left chiral nature of the \Stwo\ coupling L, and the weak hypercharge Y. Its Lagrangian is constructed such that contains symmetries representing physics conservation laws such as conservation of energy, momentum and angular momentum. By imposing gauge invariance {\todo{should I explain gauge invariance or is a reference enough?}} the symmetries under local group transformations are sustained. 
+
+
+
+The \Uone\ group has one generator Y with an associated gauge field \Bfield. The three gauge fields \Wfieldone, \Wfieldtwo, and \Wfieldthree, are associated to \Stwo with three generators that can can  be written as half of the Pauli matrices: 
+\begin{equation}
+T_1 =  \frac{1}{2}
+\begin{pmatrix}
+0  &  1      \\
+1  & 0      
+\end{pmatrix}, \;
+T_2= \frac{1}{2}
+\begin{pmatrix}
+0  &  -i     \\
+i  &  0      
+\end{pmatrix},\;\mathrm{ and } \;
+ T_2= \frac{1}{2}
+ \begin{pmatrix}
+ 1  &  0     \\
+ 0  &  -1 
+ \end{pmatrix}.
+\end{equation}
+The generators $T^a$ satisfy the Lie algebra: 
+\begin{equation}
+ \left[T^a,T^b\right] = i \epsilon^{abc} T_c \; \mathrm{ and } \left[T^a, Y\right] = 0, 
+\end{equation}
+where $\epsilon^{abc}$ is an antisymmetric tensor. The gauge fields of \Stwo\ only couple to left-handed fermions as required by the observed parity violating nature of the weak force. The \Sthree\ group represents quantum chromodynamics (QCD). It  has eight generators corresponding to eight gluon fields \Gfields. Unlike \SU, \Sthree\ is not chiral. 
+
+Under \Sthree\, quarks are colour triplets while leptons are colour singlets. This implies that the quarks carry a colour index ranging between one and three, whereas leptons do not take part in strong interactions. Based on the chirality, the quarks and leptons are organized in doublets or singlets. Each generation $i$ of fermions consists of these left-handed doublets and right-handed singlets: 
+\begin{equation}
+\mathrm{l}_{\mathrm{L}} =  
+\begin{pmatrix}
+\Pelectron_{\mathrm{L}}       \\
+\Pneutrino_{\mathrm{L}}     
+\end{pmatrix}, \; \Pelectron_{\mathrm{R}}, \; \mathrm{q}_{\mathrm{L}} = 
+\begin{pmatrix}
+\Pup_{\mathrm{L}}       \\
+\Pdown_{\mathrm{L}}     
+\end{pmatrix}, \; \Pup_{\mathrm{R}}, \; \mathrm{and} \; \Pdown_{\mathrm{R}}
+\end{equation}
+
+The \SM\ Lagrangian can be decomposed as a sum of four terms
+\begin{equation}
+\lagr_{\mathrm{SM}} = \lagr_{\mathrm{gauge}} + \lagr_{\mathrm{f}} + \lagr_{\mathrm{Yuk}} + \lagr_{\phi}, 
+\end{equation}
+that are related to the gauge, fermion, Yukawa and scalar sectors. The gauge Lagrangian regroups the gauge fields of all three symmetry groups, and the fermionic part consists of kinetic energy terms for quarks and leptons. The interaction between fermions and the scalar doublet $\phi$ gives rise to fermion masses and is described by the Yukawa Lagrangian. The scalar part of the Lagrangian is composed of a kinematic and potential component related to the scalar boson. 
+%\begin{equation}
+% \lagr_{\mathrm{gauge}} = -\frac{-1}{4} \Gtensord \Gtensoru -\frac{-1}{4} \Wtensord \Wtensoru - -\frac{-1}{4} \Btensord \Btensoru, 
+%\end{equation}
+%where the tensors are
+%\begin{align}
+%\Gtensord &= \partial_{\mu}\mathrm{G}_{\nu}^i - \partial_{\nu}\mathrm{G}_{\mu}^i - g_s f_{ijk} \mathrm{G}_{\mu}^j \mathrm{G}_{\nu}^k, \; \mathrm{ with }\; i,j,k = 1,...,8 \\
+%\Wtensord &= \partial_{\mu}\mathrm{W}_{\nu}^i - \partial_{\nu}\mathrm{W}_{\mu}^i - g_s \epsilon_{ijk} \mathrm{W}_{\mu}^j \mathrm{G}_{\nu}^k, \; \mathrm{ with }\; i,j,k = 1,...,8 \\
+%\end{align}
+
+For the electroweak theory, two coupling constants are introduced, namely $g'$ for \Uone\ and $g$ for \Stwo. The physically observable gauge bosons of this theory are the photonfield \photonfield, the \Zfield, and \Wfield. These are a superposition of the four gauge fields of \SU: 
+\begin{equation}
+\photonfield = \sW \Wfieldone + \cW \Bfield, \; \Zfield = \cW \Wfieldthree - \sW \Bfield, \; \mathrm{ and } \; \Wfield = \sqrt{\frac{1}{2}}\left(\Wfieldone\mp \Wfieldtwo\right), 
+\end{equation}
+where $\theta_{\mathrm{W}}$ represents the weak mixing angle defined as $\mathrm{tan} \theta_{\mathrm{W}} = \frac{g'}{g}$.
+
+The coupling constant representing the strength of the QCD interactions is denoted as $g_s$. In QCD their is asymptotic freedom whereby the strong coupling constant becomes weaker as the energy with which the interaction between strongly interacting particles is probed increases, and stronger as the distance between the particles increases. A consequence of this is known as colour confinement. The quarks and gluons can not exist on their own and are not observed individually. They are bound in colour neutral states called hadrons, this process is known as hadronisation. 
+\subsection*{Electroweak symmetry breaking}
+In $\lagr_{\mathrm{gauge}}$ and $\lagr_{\mathrm{f}}$ are no mass terms for fermions present because only singlets under \SSU\ can acquire a mass with an interaction of the type $m^2\phi^{\dagger}\phi$ without breaking the gauge invariance. In order to accommodate mass terms for fermions and gauge fields, electroweak symmetry breaking, leading to $\lagr_{\phi}$ is introduced. 
+
+The scalar doublet is introduced in the \SM\ as 
+\begin{equation}
+\phi = \frac{1}{\sqrt{2}}
+\begin{pmatrix}
+\varphi_1 + i \varphi_2    \\
+\varphi_3 + i \varphi_4    
+\end{pmatrix}.
+\end{equation}
+Its field potential is of the form \todo{check if I need to add constants here}
+\begin{equation}
+V(\phi) = \mu^2 \phi^{\dagger}\phi + \lambda(\phi^{\dagger}\phi)^2, 
+\end{equation}
+with $\mu^{2} <0$ and $\lambda$ a positive integer. This choice of parameters gives the potential a "Mexican hat" shape. I has an infinite set of minima (ground states) and by expanding the field around an arbitrary choice of ground state, the electroweak symmetry is broken (\cancel{EW}): 
+\begin{equation}
+\phi = 
+\begin{pmatrix}
+0    \\
+\frac{v}{\sqrt{2}}    
+\end{pmatrix}
++ \hat{\phi}, 
+\end{equation}
+where $v$ is the vacuum expectation value (vev), measured to be around 245 \GeV\ and corresponds to $\sqrt{\frac{-\mu}{\lambda}}$. The scalar doublet's four degrees of freedom is reduced to three degrees of freedom that couple to the gauge fields and mix with the \PWp, \PWm and \PZ bosons. The remaining fourth degree of freedom has given rise ta physically observable particle , called the Brout-Englert-Higgs boson.
+This spontaneous symmetry breaking leaves the gauge invariance intact and gives masses to the \PWpm and \PZ bosons as:
+\begin{equation}
+m_{\PW} = \frac{1}{2}v|g| \quad \mathrm{and} \quad m_{\PZ} = \frac{1}{2}v \sqrt{g'^2 + g^2}.
+\end{equation}
+The Brout-Englert-Higgs field couples universally fermions with a strength proportional to their masses, and to gauge bosons with a strength proportional to the square of their masses. 
+
+
+\section{Flavour changing neutral currents in the \SM}
+
+\section{Motivations for new physics}
+\subsection{Searches beyond the Standard Model}
+\subsection{Experimental and theoretical constraints}
+\section{An effective approach beyond the \SM}
+\subsection{Experimental limits}

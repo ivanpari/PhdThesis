@@ -23,8 +23,8 @@
 \newcommand{\keywords}{LaTeX, template, CMS, FCNC, phd, thesis}
 \newcommand{\refereeOne}{Prof.~Dr.~J. D'Hondt}
 %\newcommand{\refereeTwo}{Prof.~Dr.~P. Thagoras}
-\newcommand{\dateHandIn}{1~June~2017}
-\newcommand{\dateDefense}{1~October~2017}
+\newcommand{\dateHandIDn}{10~November~2017}
+\newcommand{\dateDefense}{10~December~2017}
 
 
 % load the general configuration
@@ -33,6 +33,7 @@
 \input{_newcommands}
 
 %\addbibresource{references.bib}  % Use with BibLaTeX
+\addbibresource{Bibliography/Introduction.bib}
 \addbibresource{Bibliography/Chapter2.bib}
 \addbibresource{Bibliography/CMS.bib}
 
@@ -60,12 +61,13 @@
 
 % load glossaries
 
+
 % -------------------------------------------------- %
 %    the main content                                %
 % -------------------------------------------------- %
 
 \mainmatter
-\chapter[An introduction to the theory]{Theoretical bases}
+\chapter[An introduction to the theory]{Theoretical basis}
 % top quark 
 % http://www.slac.stanford.edu/pubs/slacreports/reports03/ssi95-001.pdf
 %https://d22izw7byeupn1.cloudfront.net/files/RevModPhys.69.137.pdf
@@ -83,21 +85,17 @@
 %eft interpretation 
 % https://mail.google.com/mail/u/0/?tab=wm#inbox/15b57592ac482483
 % https://twiki.cern.ch/twiki/bin/view/CMS/TopEFT
-\section{Elementary particles and forces}
-\section{Standard Model Lagrangian}
-\section{Physics beyond the standard model}
-\subsection{Effective field theory}
-\subsection{Motivations for new physics}
-\subsection{Searches beyond the Standard Model}
-\subsection{Experimental and theoretical constraints}
-\section{Statistics for a high energy particle physiscist}
+\input{1_Introduction/Standardmodel}
+
+
+\section{Statistics for a high energy particle physicist}
 \subsection{Boosted decision trees}
 \subsection{Confidence levels }
 
 %https://indico.cern.ch/event/614672/timetable/#20170907
 \subsection{Combine limit setting tool}
 
-\chapter{Experimental setup}
+\chapter{Experimental set-up}
 %\epigraph{The LHC rose from the dead on Easter. I've heard thats been done before... There is a place in human knowledge where here be dragons. That is the place where the ship that is the LHC  will be going.}
 %	{\textit{Don Lincoln, tedX}}
 
@@ -115,7 +113,7 @@ CERN ACC 2017 0007 --> beam energy uncertainty
 \section{Collision event generation}
 \subsection{Parton distribution functions and the hard interaction}
 \subsection{Parton showering}
-\subsection{Hadronization and decay}
+\subsection{Hadronisation and decay}
 explanation of jets https://profmattstrassler.com/articles-and-posts/particle-physics-basics/the-known-apparently-elementary-particles/jets-the-manifestation-of-quarks-and-gluons/
 \subsection{Underlying event}
 \begin{comment}

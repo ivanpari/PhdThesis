@@ -21,7 +21,11 @@
             \node[shape=circle,draw,inner sep=1.5pt] (char) {#1};}}
 
 % citation needed
-\newcommand{\todocite}[0]{\todo[color=green!40]{Source}}
+\newcommand{\todocite}[0]{\todo[color=green!40]{Add source}}
+
+
+%abbreviations
+\newcommand{\SM}{SM}
 
 % useful commands for equations
 \newcommand{\e}{\enspace}  % width of one digit
@@ -36,7 +40,7 @@
 \newcommand{\chindof}{\chi^2/\mathrm{ndof}}
 \newcommand{\com}{$\sqrt{s}$ }
 \newcommand{\impuls}{$\vec{p}$ }
-\newcommand{\trimpuls}{$\vec{p_T}$ }
+\newcommand{\trimpuls}{\ensuremath{\vec{p}_{\mathrm{T}}} }
 \newcommand{\psrap}{$\eta$ }
 \newcommand{\abspsrap}{$\left| \eta\right|$ }
 
@@ -44,6 +48,8 @@
 \newcommand{\orderof}[1]{$\xcal{O}\left( #1 \right)$}  % \orderof{\si{\metre}} now is more beautiful
 
 % new units for siunitx package
+\newcommand{\qe}{\ensuremath{q_{\mathrm{e}}}\xspace}
+
 \DeclareSIUnit\event{ev}
 \DeclareSIUnit\channel{ch}
 \DeclareSIUnit\MeV{MeV}
@@ -54,6 +60,34 @@
 \DeclareSIUnit{\ADC}{ADC}
 % particles
 
+\newcommand{\Lagr}{\ensuremath{\mathcal{L}}}
+\newcommand{\lagr}{\ensuremath{\mathcal{L}}}
+\newcommand{\SSU}{\ensuremath{\mathrm{SU}_{\mathrm{C}}(3) \times \mathrm{SU}_{\mathrm{L}}(2) \times \mathrm{U}_{\mathrm{Y}}(1)}}
+\newcommand{\Uone}{\ensuremath{\mathrm{U}_{\mathrm{Y}}(1)}}
+\newcommand{\SU}{\ensuremath{\mathrm{SU}_{\mathrm{L}}(2) \times \mathrm{U}_{\mathrm{Y}}(1)}}
+\newcommand{\Sthree}{\ensuremath{\mathrm{SU}_{\mathrm{C}}(3)}}
+\newcommand{\Stwo}{\ensuremath{ \mathrm{SU}_{\mathrm{L}}(2)}}
+\newcommand{\Bfield}{\ensuremath{ \mathrm{B}_{\mu}}}
+\newcommand{\Wfieldone}{\ensuremath{ \mathrm{W}_{\mu}^1}}
+\newcommand{\Wfieldtwo}{\ensuremath{ \mathrm{W}_{\mu}^2}}
+\newcommand{\Wfieldthree}{\ensuremath{ \mathrm{W}_{\mu}^3}}
+\newcommand{\Gfields}{\ensuremath{ \mathrm{G}_{\mu}^{1...8}}}
+\newcommand{\Gtensord}{\ensuremath{ \mathrm{G}_{\mu\nu}^{i}}}
+\newcommand{\Gtensoru}{\ensuremath{ \mathrm{G}^{\mu\nu i}}}
+\newcommand{\Wtensord}{\ensuremath{ \mathrm{W}_{\mu\nu}^{i}}}
+\newcommand{\Wtensoru}{\ensuremath{ \mathrm{W}^{\mu\nu i}}}
+\newcommand{\Btensord}{\ensuremath{ \mathrm{B}_{\mu\nu}^{i}}}
+\newcommand{\Btensoru}{\ensuremath{ \mathrm{B}^{\mu\nu i}}}
+\newcommand{\photonfield}{\ensuremath{ \mathrm{A}_{\mu}}}
+\newcommand{\Zfield}{\ensuremath{ \mathrm{Z}^0_{\mu}}}
+\newcommand{\Wfield}{\ensuremath{ \mathring{W}_{\mu}^{\pm}}}
+\newcommand{\sW}{\ensuremath{\mathrm{sin } \theta_{\mathrm{W}}}}
+\newcommand{\cW}{\ensuremath{\mathrm{cos } \theta_{\mathrm{W}}}}
+\newcommand{\mtw}{\ensuremath{m_{\mathrm{T}}(\W)}\xspace}
+
+\newcommand*\textfrac[2]{              % display fraction in textstyle
+	\frac{\text{#1}}{\text{#2}}
+}
 
 \newenvironment{chapquote}[2][2em]
 {\setlength{\@tempdima}{#1}%
