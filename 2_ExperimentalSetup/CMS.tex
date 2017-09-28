@@ -64,6 +64,8 @@ diameter gives the advantage of bending the particle trajectories in the transve
 \end{figure}
 
 \subsubsection{Muon system}
+% PHOTO https://cds.cern.ch/record/2016943
+% and http://cms.web.cern.ch/news/news-point-5-22-november-2013
 The outermost part of CMS consists of the muon system. The magnet return yoke is interleaved with gaseous detector chambers for muon identification and momentum measurement. The barrel contains muon stations arranged in five separate iron wheels, while in the end cap four muon stations are mounted onto three independent iron discs on each side. Each barrel wheel has 12 sectors in the azimuthal angle. 
 
 The muon system is divided into three parts, shown in \fig{fig:muonsys}\cite{Chatrchyan:1223944}. The muon rate and neutron induced backgrounds are small and the magnetic field is very low for the barrel, thus CMS can use drift tube (DT) chambers. For the end caps however, the muon and background flux is much higher and there is a need to use cathode strip chambers (CSC) which are able to provide a faster response, higher granularity and have a better resistance against radiation. In order to form a redundant trigger system, resistive plate chambers (RPC) are added. This makes a total of 250 DT chambers, 540 CSC and 610 RPC. In \fig{fig:CMSview} the arrangement is shown.
@@ -84,10 +86,10 @@ There are six layers of RPC in the barrel muon system and one layer into each of
 
 During the LS1, the  muon system underwent major upgrades~\cite{Guiducci:1966038,Battilana:2239185}. In the fourth station of each end cap, the outermost rings of CSC and RPC chambers were completed, providing an angular region of $1.2<$ \abspsrap $<1.8$ for Run II, increasing the system redundancy, and allowing tighter cuts on the trigger quality. In order te reduce the environmental noise, outer yoke discs have been placed on both sides for the end caps. 
 At the innermost rings of the first station, the CSC has been upgraded by refurbishing the readout electronics to make use of the full detector granularity instead of groups of three (Run I). 
-
+% also see https://indico.cern.ch/event/308134/sessions/59604/attachments/588148/809429/Lecture.pdf
 
 The muon system provides triggering on muons, identifying muons and improves the momentum measurement and charge determination of high $p_T$ muons. On top of the muon system, the muon energy is deposited in the electromagnetic calorimeter, the hadronic calorimeter, and outer calorimeter. 
-%(FIXME not tracker?) 
+%(FIXME not tracker? heel licht tov calos, gemaakt om deeltjes niet te hinderen, calos wel) 
 The high magnetic field enables an efficient first level trigger and allows a good momentum resolution of $\Delta p / p \approx 1\%$ for a $p_T$ of 100 \si{ \GeV} and $\approx 10\%$ for a $p_T$ of 1 \si{ \TeV} (FIXME). There is an efficient muon measurement up to \abspsrap $<2.4$.
 \subsubsection*{Muon reconstruction}
 % see http://www.bo.infn.it/sminiato/sm16/03_Mercoledi/Mattina/01_Battilana.pdf
@@ -117,6 +119,7 @@ The outside-in approach is referred to as Global Muon reconstruction.
 	\end{figure}	
 	
 \subsubsection{Hadronic calorimeter}
+% PHOTO http://cms.web.cern.ch/news/cms-prepares-pixel-and-hcal-upgrades
 % http://cds.cern.ch/record/2235509?ln=en peformance
 The hadronic calorimeter (HCAL) is dedicated to precisely measure the energy of charged and neutral hadrons via a succession of absorbers and scintillators. This makes it crucial for physics analyses with hadronic jets or missing transverse energy. The HCAL extends between 1.77 $<r<$ 2.95 \si{ \meter} where $r$ is the radius in the transverse plane with respect to the beam. Due to space limitations, the HCAL needs to be as small as possible and is made from materials with short interaction lengths - the length needed for absorbing 36.7\% of the hadrons. The quality of the energy measurements is dependant on the fraction of the hadronic shower that can be detected. Therefore, the HCAL barrel (HB) inside the solenoid is reinforced by an outer hadronic calorimeter between the solenoid and muon detectors (HO, see \fig{fig:HCAL}), using the solenoid as extra absorber. This increases the thickness to 12 interaction lengths. Furthermore, it should be as hermetic as possible and extend to large pseudo rapidity values. The HB and HO provide measurements for \abspsrap $<1.3$, while an end cap on each side (HE,$1.3<$ \abspsrap $<3$) and a forward calorimeter (HF, \abspsrap < 5.2) extend the pseudo rapidity range. 
 
@@ -172,6 +175,7 @@ The relative energy resolution of the ECAL for electrons is between 1.4-3\% in E
 \end{comment}
 
 \subsubsection{Inner tracking system and operations}
+% PHOTO https://cds.cern.ch/record/2253519 
 %https://indico.cern.ch/event/632928/
 %http://cds.cern.ch/search?ln=en&cc=CMS+Reports&sc=1&p=tracker&f=title&action_search=Search
 % comparison with atlas https://cds.cern.ch/record/1563583/files/ATL-PHYS-PROC-2013-206.pdf
@@ -250,6 +254,7 @@ The tracking system (tracker)~\cite{Chatrchyan:1704291} is the detecting unit cl
 % see also https://arxiv.org/pdf/physics/0512097.pdf
 % https://cds.cern.ch/record/1563583/files/ATL-PHYS-PROC-2013-206.pdf
 % http://cds.cern.ch/record/1704291
+
 An iterative tracking algorithm is responsible for the reconstruction of the tracks made by charged particles in the inner tracking system. Each iteration consists of four steps\cite{Bayatian:922757}: the track-seed generation, the pattern recognition algorithm, removal of track-hit ambiguities and a final track fit. 
 
 The seed generation is the first step. It consists of finding reconstructed hits that are usable for seeding the subsequent track-finding algorithm. They are identified from a group of at least three reconstructed hits in the tracker, or from a pair of hits while requiring the origin of the track segment to be compatible with the nominal beam-collision point. Since the pixel has a higher granularity compared to the strip tracker, its seed generation efficiency is higher. The overall efficiency exceeds 99\%.
@@ -285,7 +290,7 @@ The Level-1 trigger has to be a flexible, maintainable system, capable of adapti
 
 By buffering the raw data from the CMS subdetectors in front-end drivers, the level-1 trigger has a pipeline memory of 3.2 \si{ \micro \second} to decide whether to keep an event or reject it. 
 %In \fig{fig:level1} the structure of the trigger is shown. 
-The trigger primitives (TP) from the calorimeters and muon detectors are processed in several steps and combined into a global trigger. This information is then combined with the input from the other subsystems. The separate inputs are synchronized to each other and the LHC orbit clock and sent to the global trigger module. Here, level-1 trigger algorithms are performed within 1 \si{ \micro \second} to decide whether to  keep the event. 
+The trigger primitives (TP) from the calorimeters and muon detectors are processed in several steps and combined into a global trigger. This information is then combined with the input from the other subsystems for the HLT. The separate inputs are synchronized to each other and the LHC orbit clock and sent to the global trigger module. Here, level-1 trigger algorithms are performed within 1 \si{ \micro \second} to decide whether to  keep the event. 
 
 For run II, all hardware, software, databases and the timing control system have been replaced. The main changes are that the muon system now uses the redundancy of three muon detector system earlier to make a high resolution muon trigger. Other upgrades are that the calorimeter system isn't bound any more for streaming data the data and the global trigger has more level-1 trigger algorithms. 
 % see https://indico.cern.ch/event/432527/contributions/1072399/attachments/1320545/1980311/ichep2016.pdf
