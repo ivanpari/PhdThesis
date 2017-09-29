@@ -26,7 +26,7 @@
 
 %abbreviations
 \newcommand{\SM}{SM}
-
+\newcommand{\BSM}{BSM}
 % useful commands for equations
 \newcommand{\e}{\enspace}  % width of one digit
 \newcommand{\dd}{\,\mathrm{d}}
@@ -46,7 +46,8 @@
 
 \newcommand{\xcal}[1]{\text{\usefont{OMS}{cmsy}{m}{n}#1}}  % Use original mathcal font instead of charters mathcal version
 \newcommand{\orderof}[1]{$\xcal{O}\left( #1 \right)$}  % \orderof{\si{\metre}} now is more beautiful
-
+\newcommand{\BR}{\ensuremath{\mathcal{B}}\xspace}
+\newcommand{\FCNC}{FCNC}
 % new units for siunitx package
 \newcommand{\qe}{\ensuremath{q_{\mathrm{e}}}\xspace}
 
@@ -73,18 +74,32 @@
 \newcommand{\Wfieldthree}{\ensuremath{ \mathrm{W}_{\mu}^3}}
 \newcommand{\Gfields}{\ensuremath{ \mathrm{G}_{\mu}^{1...8}}}
 \newcommand{\Gtensord}{\ensuremath{ \mathrm{G}_{\mu\nu}^{i}}}
+\newcommand{\Gtensor}{\ensuremath{ \mathrm{G}_{\mu\nu}}}
+\newcommand{\Ztensor}{\ensuremath{ \mathrm{Z}_{\mu\nu}}}
 \newcommand{\Gtensoru}{\ensuremath{ \mathrm{G}^{\mu\nu i}}}
 \newcommand{\Wtensord}{\ensuremath{ \mathrm{W}_{\mu\nu}^{i}}}
 \newcommand{\Wtensoru}{\ensuremath{ \mathrm{W}^{\mu\nu i}}}
 \newcommand{\Btensord}{\ensuremath{ \mathrm{B}_{\mu\nu}^{i}}}
 \newcommand{\Btensoru}{\ensuremath{ \mathrm{B}^{\mu\nu i}}}
 \newcommand{\photonfield}{\ensuremath{ \mathrm{A}_{\mu}}}
+\newcommand{\photontensor}{\ensuremath{ \mathrm{A}_{\mu\nu}}}
 \newcommand{\Zfield}{\ensuremath{ \mathrm{Z}^0_{\mu}}}
 \newcommand{\Wfield}{\ensuremath{ \mathring{W}_{\mu}^{\pm}}}
 \newcommand{\sW}{\ensuremath{\mathrm{sin } \theta_{\mathrm{W}}}}
 \newcommand{\cW}{\ensuremath{\mathrm{cos } \theta_{\mathrm{W}}}}
 \newcommand{\mtw}{\ensuremath{m_{\mathrm{T}}(\W)}\xspace}
+\newcommand{\LSM}{\ensuremath{\Lagr_\mathrm{SM}}}
+\DeclareRobustCommand{\order}{\ensuremath{\mathcal{O}}}
 
+\newcommand{\kgqt}{\ensuremath{\kappa_{\Pgluon\Pquark\Ptop}}}
+\newcommand{\kZqt}{\ensuremath{\kappa_{\PZ\Pquark\Ptop}}}
+\newcommand{\kHqt}{\ensuremath{\kappa_{\PHiggs\Pquark\Ptop}}}
+\newcommand{\kfqt}{\ensuremath{\kappa_{\Pphoton\Pquark\Ptop}}}
+\newcommand{\zZqt}{\ensuremath{\zeta_{\mathrm{\Ptop\PZ\Pquark}}}\xspace}
+\newcommand{\zZut}{\ensuremath{\zeta_{\mathrm{\Ptop\PZ\Pup}}}\xspace}
+\newcommand{\zZct}{\ensuremath{\zeta_{\mathrm{\Ptop\PZ\Pcharm}}}\xspace} 
+\newcommand{\zWqt}{\ensuremath{\zeta_{\mathrm{\Ptop\PW\Pquark}}}\xspace} 
+\newcommand{\kxqt}{\ensuremath{\kappa_{\Ptop x \Pquark}}/\Lambda\xspace}
 \newcommand*\textfrac[2]{              % display fraction in textstyle
 	\frac{\text{#1}}{\text{#2}}
 }
