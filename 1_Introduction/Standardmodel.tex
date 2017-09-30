@@ -1,5 +1,5 @@
 The Standard Model (\SM)~\cite{Peskin:257493} 
-is a name given in 1970s to a theory describing the fundamental particles and their interactions. This quantum field theory describes the particles and their interactions as fields and has successfully incorporated three of the four fundamental forces in the universe. In \Sec{sec:SMcontent}, the particle content of the \SM\ is summarised, while \Sec{sec:SMlagr} describes  the \SM\ Lagrangian and its symmetries. In \Sec{sec:FCNC}, the flavour content of the \SM\ is highlighted. The successful theory of the \SM\ has some shortcomings which are discussed in \Sec{sec:BSM} and lead to searches for a more general theory. One of such a search approach is effective field theory (EFT), discussed in \Sec{sec:EFT} focussing on flavour changing neutral currents (FCNC) involving a top quark.
+is a name given in 1970s to a theory describing the fundamental particles and their interactions. This quantum field theory describes the particles and their interactions as fields and has successfully incorporated three of the four fundamental forces in the universe. In \Sec{sec:SMcontent}, the particle content of the \SM\ is summarised, while \Sec{sec:SMlagr} describes  the \SM\ Lagrangian and its symmetries. In \Sec{sec:FCNC}, the flavour content of the \SM\ is highlighted. The successful theory of the \SM\ has some shortcomings which are discussed in \Sec{sec:BSM} and lead to searches for a more general theory. One of such a search is using effective field theory (EFT). In \Sec{sec:EFT} an EFT model focussing on flavour changing neutral currents (FCNC) involving a top quark is presented. Its current experimental constraints are given in \Sec{sec:ExpConstr}.
 
 
 \section{Elementary particles and forces}
@@ -47,7 +47,7 @@ The fermions are the particles that make up the visible matter in the universe. 
 	\label{tab:leptongen}
 \end{table}
 
-The quarks can also be divided into three generations. Unlike the leptons, they carry colour charge and can interact via the strong interaction. The top quark, discovered in 1995 at the Tevatron~\cite{observationtopD0,observationtopCDF} is the heaviest \SM\ particle with a mass close to 173.1 \GeV~\cite{PDG}. The quarks and their properties are summarized in \tab{tab:quarkgen}. 
+The quarks can also be divided into three generations. Unlike the leptons, they carry colour charge and can interact via the strong interaction. The top quark, discovered in 1995 at the Tevatron~\cite{observationtopD0,observationtopCDF} is the heaviest \SM\ particle with a mass close to $173.1\pm0.6$ \GeV\footnote{In this thesis all masses and energies are expressed in natural units, where the speed of light and $\hbar$ are taken to be equal to one.}~\cite{PDG}. The quarks and their properties are summarized in \tab{tab:quarkgen}. 
 \begin{table}[htbp]
 	\centering
 	\caption{The properties of the quarks in the three generations of the \SM~\cite{PDG}, where \qe represents the elementary  charge.}
@@ -337,11 +337,15 @@ where the Wilson coefficients $\bar{c}_{\mathrm{i}}$ depend on the considered th
 &+\frac{\sqrt{2}}{4\cW} \zZqt \APtop \gamma^{\mu} \left(\tilde{f}^{\mathrm{L}}_{\Pquark} P_{\mathrm{L}} + \tilde{f}^{\mathrm{R}}_{\Pquark} P_{\mathrm{R}}\right) \Pquark \PZ_{\mu} \\
 &+ g_{\mathrm{S}} \frac{\kgqt}{\Lambda} \Ztensor \APtop \sigma^{\mu\nu}\left(f^{\mathrm{L}}_{\Pgluon\Pquark} P_{\mathrm{L}} + f^{\mathrm{R}}_{\Pgluon\Pquark} P_{\mathrm{R}}\right) \Pquark \Gtensor^{\mathrm{a}}\\
 &+ \left. \eta_{\PHiggs\Pquark\Ptop} \APtop\left(\hat{f}^{\mathrm{L}}_{\Pquark} P_{\mathrm{L}} + \hat{f}^{\mathrm{R}}_{\Pquark} P_{\mathrm{R}}\right) \Pquark \PHiggs + \mathrm{h.c.}\right],
+\label{eq:EFTlag}
 \end{align}
 where the the value of the \FCNC\ couplings at scale $\Lambda$ are represented by \kZqt,\kgqt,\kfqt,\zZqt, and ${ \eta_{{\PHiggs\Pquark \Ptop}}}$. These are assumed to be real and positive, with the unit of $\GeV^{-1}$ for $\kxqt$ and no unit for $\zeta_{xqt}$ and $\eta_{\mathrm{xqt}}$. In the equation $\sigma^{{\mu \nu}}$ equals to $\frac{i}{2}\left[\gamma^{{\mu}},\gamma^{\nu}\right]$,  and the left- and right-handed chirality projector operators are denoted by $P_{\mathrm{L}}$ and $P_{\mathrm{R}}$. The electromagnetic coupling constant is denoted by $g'$, the strong interaction coupling is denoted as $g_{\mathrm{s}}$, while the electroweak interaction is parametrised by the coupling constant $g$ and the electroweak mixing angle $\theta_{\mathrm{W}}$.  The complex chiral parameters are normalized according to
-$ |f_{\mathrm{xq}}^{\mathrm{L}}|^2 + |f_{\mathrm{xq}}^{\mathrm{R}}|^2 = 1 $, $|\tilde{f}_{\mathrm{q}}^{\mathrm{L}}|^2 + |\tilde{f}_{\mathrm{q}}^{\mathrm{R}}|^2 = 1$, and $|\hat{f}_{\mathrm{q}}^{\mathrm{L}}|^2 + |\hat{f}_{\mathrm{q}}^{\mathrm{R}}|^2 = 1$.
-
-
+$ |f_{\mathrm{xq}}^{\mathrm{L}}|^2 + |f_{\mathrm{xq}}^{\mathrm{R}}|^2 = 1 $, $|\tilde{f}_{\mathrm{q}}^{\mathrm{L}}|^2 + |\tilde{f}_{\mathrm{q}}^{\mathrm{R}}|^2 = 1$, and $|\hat{f}_{\mathrm{q}}^{\mathrm{L}}|^2 + |\hat{f}_{\mathrm{q}}^{\mathrm{R}}|^2 = 1$. In the expression for $\Lagr^{\Ptop}_{\mathrm{EFT}}$, the unitary gauge is adopted on the scalar field is expanded around its vacuum expectation value with \PHiggs being the \SM\ scalar boson, and the field strength tensors of the photon \photonfield, the gluon field \Gfields, and the \PZ\ boson \Zfield\ are defined as
+\begin{equation}
+	\photontensor = \partial_{\mu} \mathrm{A}_{\nu} -  \partial_{\nu} \mathrm{A}_{\mu}, \;  \PZ_{\mu\nu} = \partial_{\mu} \mathrm{Z}_{\nu} -  \partial_{\nu} \mathrm{Z}_{\mu},\: \mathrm{ and } \;
+	\Gtensor = \partial_{\mu} \mathrm{G}_{\nu}^{\mathrm{a}} -  \partial_{\nu}  \mathrm{G}_{\mu}^{\mathrm{a}} + g_{\mathrm{S}} f^{\mathrm{a}}_{\mathrm{bc}}   \mathrm{G}_{\mu}^{\mathrm{b}} \mathrm{G}_{\nu}^{\mathrm{c}}.
+\end{equation}
+Denoting the structure constant of the \Sthree\ group  as $f^{\mathrm{a}}_{\mathrm{bc}}$. Note that there are two coupling constants arising in $\Lagr^{\Ptop}_{\mathrm{EFT}}$, which is a residu of electroweak symmetry breaking. The massive \PZ\ boson will appear in both the \Zfield\ field as well as the covariant derivative, leading to an extra \PZ-vertex. 
 \begin{comment}
 \begin{linenomath}
 	\begin{equation}
@@ -364,6 +368,89 @@ $ \left(|f_{\mathrm{xq}}^{\mathrm{L}}|^2 + |f_{\mathrm{xq}}^{\mathrm{R}}|^2 \rig
 
 \end{comment}
 
+\section{Experimental constraints on top-FCNC}
+\label{sec:ExpConstr}
+Experiments commonly put limits on the branching ratio's which allow an easier interpretation across different EFT models as
+\begin{equation}
+	\BR(\Ptop \rightarrow \Pquark\mathrm{X}) = \frac{\delta^2_{\Ptop \mathrm{X}\Pquark}\Gamma_{\Ptop \rightarrow \Pquark\mathrm{X}}}{\Gamma_{\Ptop}},
+\end{equation}
+where $\Gamma_{\Ptop \rightarrow \Pquark\mathrm{X}}$ represents the \FCNC\ decay width\footnote{The decay width of a certain process represents the probability per unit time that a particle will decay. The total decay width, defined as all possible decay widths of a particle, is inversely proportional to its lifetime. } for a coupling strength $\delta^2_{\Ptop \mathrm{X}\Pquark}=1$, and $\Gamma_{\Ptop}$ the full decay width of the top quark. In the \SM, supposing a top quark mass of 172.5 \GeV, the full width becomes $\Gamma_{\Ptop}^{\mathrm{SM}} = 1.32$ \GeV~\cite{Gao:2012ja}. 
+
+% top fcnc vertex in feynman diagram -> matrix element maal kappa --> cross sectie maal kappa^2 --> cross sectie maal BR (lineair)
 
 
-\subsection{Experimental constraints}
+Searches for top-FCNC usually adopt a search strategy depending on the experimental setup and the FCNC interaction of interest,  looking either for \FCNC\ interactions in the production of a single top quark or in its decay for top pair interactions. In \fig{fig:Feynman}, these two cases are shown for the \tZq\ vertex.  \\
+
+\begin{figure}[hbtp]
+	\centering
+	\subbottom[]{
+			\begin{fmffile}{singletop}
+		\begin{fmfgraph*}(160,40) % width - height
+\fmfleft{i1,i2} 
+\fmfright{o1,o2}
+ \fmf{fermion}{i1,v1,v2,o2}
+  \fmf{boson}{v2,o1}
+   \fmf{gluon}{i2,v1}
+   \fmflabel{\Pgluon}{i2}
+   \fmflabel{\Pup,\Pcharm}{i1}
+   	\fmfv{label= ,decor.shape=circle,decor.filled=shaded,decor,size=0.5thick, label.angle=-90}{v2}
+  % \fmflabel{\Pup,\Pcharm}{i1}
+   \fmflabel{\PZ}{o1}
+   \fmflabel{\Ptop}{o2}
+    \fmf{fermion,label=\Pup,,\Pcharm,label.dist=10}{v1,v2}
+      \end{fmfgraph*}
+\end{fmffile}
+}
+\hspace*{1cm}
+\subbottom[]{
+	\begin{fmffile}{toppair}
+	\begin{fmfgraph*}(160,40) % width - height
+		\fmfleft{i1,i2} 
+		\fmfright{o1,o2,o3,o4}
+		\fmflabel{\Pgluon}{i1}
+		\fmflabel{\Pgluon}{i2}
+		\fmflabel{\APup,\APcharm}{o1}
+		\fmflabel{\PZ}{o2}
+		\fmflabel{\PWp}{o3}
+		\fmflabel{\Pbottom}{o4}
+		\fmf{gluon}{i1,v1,i2}
+		\fmf{gluon,label=\Pgluon,label.dist=10}{v1,v2}
+		\fmf{fermion}{o1,v4,v2,v3,o4}
+		\fmffreeze
+		\fmf{boson}{v3,o3}
+		\fmf{boson}{v4,o2}
+		\fmfv{label= ,decor.shape=circle,decor.filled=shaded,decor,size=0.2thick, label.angle=-90}{v4}
+		 \fmf{fermion,label=\Ptop,label.dist=5}{v2,v3}
+		 \fmf{fermion,label=\APtop,label.dist=-20}{v4,v2}
+		\fmflabel{}{v3}
+		\fmflabel{}{v2}
+		\fmflabel{}{v1}
+	\end{fmfgraph*}
+\end{fmffile}
+}
+\caption{Feynman diagrams for the \tZq\ \FCNC\ interaction, where the FCNC interaction is indicated with the shaded dot. Left: single top production through an \FCNC\ interaction. Right: top pair production with an \FCNC\ induced decay. }
+\label{fig:Feynman}
+\end{figure}
+
+
+The observation of top-FCNC interactions has yet to come and experiments have so far only been able to put upper bounds on the branching ratios. An overview of the best current limits is given in \tab{tab:FCNClimits} \todo{update  after TOP2017}. In \fig{fig:fcncupperlimits} \todo{update figure after TOP2017} a comparison is shown between the current best limits set by ATLAS and CMS with respect to several \BSM\ model benchmark predictions. From there one can see that \FCNC\ searches involving a \PZ\ or \PHiggs\ boson are close to excluding or confirming several \BSM\ theories.
+\begin{table}[htbp]
+	\centering
+	\caption{The four forces of nature and their characteristics.}
+	\begin{tabular}{lcccc}
+		\toprule
+		Process & Search mode & Observed \BR & Expected \BR & Reference \\ 
+		\midrule
+			\bottomrule
+	\end{tabular} 
+	\label{tab:FCNClimits}
+\end{table}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.7\linewidth]{1_Introduction/Figures/fcnc_upperlimits}
+	\caption{Current best limits set by CMS and ATLAS for top-FCNC interactions.}
+	\label{fig:fcncupperlimits}
+\end{figure}
+
+

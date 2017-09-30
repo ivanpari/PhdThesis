@@ -1,0 +1,16 @@
+This is MetaPost, version 1.999 (TeX Live 2015) (kpathsea version 6.2.1)  30 SEP 2017 14:36
+**toppair
+(/usr/local/texlive/2015/texmf-dist/metapost/base/mpost.mp
+(/usr/local/texlive/2015/texmf-dist/metapost/base/plain.mp
+Preloading the plain mem file, version 1.005) ) (./toppair.mp
+(/usr/local/texlive/2015/texmf-dist/metapost/feynmf/feynmp.mp)
+feynmf: ignoring option decor.
+feynmf: ignoring option size=0.2thick. [1] )
+ 
+Here is how much of MetaPost's memory you used:
+ 447 strings using 7356 characters
+ 1649160 bytes of node memory
+ 924 symbolic tokens
+ 14i,77n,33p,121b,3f stack positions out of 16i,96n,40p,200b,4f
+1 output file written: toppair.1
+
