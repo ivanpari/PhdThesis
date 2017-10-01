@@ -1,10 +1,12 @@
 The Standard Model (\SM)~\cite{Peskin:257493} 
 is a name given in 1970s to a theory describing the fundamental particles and their interactions. This quantum field theory describes the particles and their interactions as fields and has successfully incorporated three of the four fundamental forces in the universe. In \Sec{sec:SMcontent}, the particle content of the \SM\ is summarised, while \Sec{sec:SMlagr} describes  the \SM\ Lagrangian and its symmetries. In \Sec{sec:FCNC}, the flavour content of the \SM\ is highlighted. The successful theory of the \SM\ has some shortcomings which are discussed in \Sec{sec:BSM} and lead to searches for a more general theory. One of such a search is using effective field theory (EFT). In \Sec{sec:EFT} an EFT model focussing on flavour changing neutral currents (FCNC) involving a top quark is presented. Its current experimental constraints are given in \Sec{sec:ExpConstr}.
 
+The physics search presented in this thesis relies on statistical tools and interpretations. In \Sec{sec:Stat}, the notion of a likelihood is presented as well as maximum likelihood fits. To set upper limits on a signal process the confidence levels method is used. The background modelling is checked using goodness-of-fit tests. Furthermore, the search will use multivariate analysis methods which are also explained.
+
 
 \section{Elementary particles and forces}
 \label{sec:SMcontent}
-The interactions in nature can be described by four forces, the strong force, the electromagnetic (EM) force, the weak force and the gravitational force, that are mediated by particles with an integer spin, bosons. The strong interaction is mediated by eight gluons \Pgluon, while the electromagnetic force is mediated by photons \Pphoton, and the weak force by \PZ and \PWpm bosons. In \tab{tab:forces}, the forces and their characteristics are shown. The gravitational force is the only force not included in the \SM\ and can be neglected for energies lower than the Planck scale (1.22 $10^{19}$ \GeV).
+The interactions in nature can be described by four forces, the strong force, the electromagnetic (EM) force, the weak force and the gravitational force. These interactions happpen via particles with an integer spin known as bosons. The strong interaction is mediated by eight gluons \Pgluon, while the electromagnetic force is mediated by photons \Pphoton, and the weak force by \PZ and \PWpm bosons. In \tab{tab:forces}, the forces and their characteristics are shown. The gravitational force is the only force not included in the \SM\ and can be neglected for energies lower than the Planck scale (1.22 $10^{19}$ \GeV).
 \begin{table}[htbp]
 	\centering
 	\caption{The four forces of nature and their characteristics.}
@@ -47,7 +49,7 @@ The fermions are the particles that make up the visible matter in the universe. 
 	\label{tab:leptongen}
 \end{table}
 
-The quarks can also be divided into three generations. Unlike the leptons, they carry colour charge and can interact via the strong interaction. The top quark, discovered in 1995 at the Tevatron~\cite{observationtopD0,observationtopCDF} is the heaviest \SM\ particle with a mass close to $173.1\pm0.6$ \GeV\footnote{In this thesis all masses and energies are expressed in natural units, where the speed of light and $\hbar$ are taken to be equal to one.}~\cite{PDG}. The quarks and their properties are summarized in \tab{tab:quarkgen}. 
+The quarks can also be divided into three generations. Unlike the leptons, they carry colour charge and can interact via the strong interaction. The top quark, discovered in 1995 at the Tevatron~\cite{observationtopD0,observationtopCDF} is the heaviest \SM\ particle with a mass close to $173.1\pm0.6$ \GeV\footnote{In this thesis all masses and energies are expressed in natural units, where the speed of light and $\hbar$ are taken to be equal to one.}~\cite{PDG}. The quarks and their properties are summarized in \tab{tab:quarkgen}. In nature, only colour neutral objects can exist. This has as consequence that quarks are bound through gluons into mesons (quark+anti-quark) and baryons (three quarks). These mesons and baryons are mostly short-lived and unstable particle that rapidly decay through \PWpm\ and \PZ\ bosons, associated with a fermion. The only known stable baryon is the proton, made up of two up quarks and one down quark.  
 \begin{table}[htbp]
 	\centering
 	\caption{The properties of the quarks in the three generations of the \SM~\cite{PDG}, where \qe represents the elementary  charge.}
@@ -103,7 +105,7 @@ The generators $T^a$ satisfy the Lie algebra:
 \end{equation}
 where $\epsilon^{abc}$ is an antisymmetric tensor. The gauge fields of \Stwo\ only couple to left-handed fermions as required by the observed parity violating nature of the weak force. The \Sthree\ group represents quantum chromodynamics (QCD). It  has eight generators corresponding to eight gluon fields \Gfields. Unlike \SU, \Sthree\ is not chiral. 
 
-Under \Sthree\, quarks are colour triplets while leptons are colour singlets. This implies that the quarks carry a colour index ranging between one and three, whereas leptons do not take part in strong interactions. Based on the chirality, the quarks and leptons are organized in doublets or singlets. Each generation $i$ of fermions consists of these left-handed doublets and right-handed singlets: 
+Under \Sthree\, quarks are colour triplets while leptons are colour singlets. This implies that the quarks carry a colour index ranging between one and three, whereas leptons do not take part in strong interactions. Based on the chirality, the quarks and leptons are organized in doublets or singlets. Each generation $i$ of fermions consists of left-handed doublets and right-handed singlets: 
 \begin{equation}
 \mathrm{l}_{\mathrm{L}} =  
 \begin{pmatrix}
@@ -130,7 +132,7 @@ that are related to the gauge, fermion, Yukawa and scalar sectors. The gauge Lag
 %\Wtensord &= \partial_{\mu}\mathrm{W}_{\nu}^i - \partial_{\nu}\mathrm{W}_{\mu}^i - g_{\mathrm{s}} \epsilon_{ijk} \mathrm{W}_{\mu}^j \mathrm{G}_{\nu}^k, \; \mathrm{ with }\; i,j,k = 1,...,8 \\
 %\end{align}
 
-For the electroweak theory, two coupling constants are introduced, namely $g'$ for \Uone\ and $g$ for \Stwo. The physically observable gauge bosons of this theory are the photonfield \photonfield, the \Zfield, and \Wfield. These are a superposition of the four gauge fields of \SU: 
+For the electroweak theory, two coupling constants are introduced, namely $g'$ for \Uone\ and $g$ for \Stwo. The physically observable gauge bosons of this theory are the photon field \photonfield, the \PZ\ boson field \Zfield, and the \PW\ field \Wfield. These are a superposition of the four gauge fields of \SU: 
 \begin{equation}
 \photonfield = \sW \Wfieldone + \cW \Bfield, \; \Zfield = \cW \Wfieldthree - \sW \Bfield, \; \mathrm{ and } \; \Wfield = \sqrt{\frac{1}{2}}\left(\Wfieldone\mp \Wfieldtwo\right), 
 \end{equation}
@@ -173,7 +175,7 @@ The Brout-Englert-Higgs field couples universally fermions with a strength propo
 \label{sec:FCNC}
 %In the electroweak theory, the \PW boson is responsible for flavour changing charged currents, and the \PZ boson for 
 %lading W -> smamak veranderen -> niet voor Z , integendeel verboden op tree level onderdrukt op higher order
-Flavour changing charged currents are introduced in 1963 by Nicola Cabibbo \todocite. Via interaction with a \PW boson the flavour of the quarks is changed. At the time of the postulation, only up, down and strange quarks were known and the charged weak current was described as a coupling between the up quark and $\Pdown_{\mathrm{weak}}$, where $\Pdown_{\mathrm{weak}}$ is a linear combination of the down and strange quarks, $\Pdown_{\mathrm{weak}}= \mathrm{cos }\theta_{\mathrm{c}} \Pdown + \mathrm{sin }\theta_{\mathrm{c}} \Pstrange$. This linear combination is a direct consequence of the chosen rotation
+Flavour changing charged currents are introduced in 1963 by Nicola Cabibbo~\cite{PhysRevLett.10.531}. Via interaction with a \PW boson the flavour of the quarks is changed. At the time of the postulation, only up, down and strange quarks were known and the charged weak current was described as a coupling between the up quark and $\Pdown_{\mathrm{weak}}$, where $\Pdown_{\mathrm{weak}}$ is a linear combination of the down and strange quarks, $\Pdown_{\mathrm{weak}}= \mathrm{cos }\theta_{\mathrm{c}} \Pdown + \mathrm{sin }\theta_{\mathrm{c}} \Pstrange$. This linear combination is a direct consequence of the chosen rotation
 \begin{equation}
 \begin{pmatrix}
 \Pdown_{\mathrm{weak}} \\
@@ -197,7 +199,7 @@ where the rotation angle $\theta_{\mathrm{c}}$ is known as the Cabibbo angle. Th
 \begin{equation}
 J_{\mu} = \bar{\Pmu} \gamma_{\mu}\left(1+\gamma_5\right)\Pdown_{\mathrm{weak}}. 
 \end{equation} 
-A consequence of Cabibbo's approach is that the $\Pstrange_{\mathrm{weak}}$ is left uncoupled, leading to Glashow, Iliopoulos and Maiani (GIM) \todocite to require the existence of a fourth quark with charge $\textfrac{2}{3}$. This quark, known as the charm quark, couples to $\Pstrange_{\mathrm{weak}}$ and a new definition of the charged weak current is modified to 
+A consequence of Cabibbo's approach is that the $\Pstrange_{\mathrm{weak}}$ is left uncoupled, leading to Glashow, Iliopoulos and Maiani (GIM)~\cite{PhysRevD.2.1285,BJORKEN1964255,Maiani:2013fpa} to require the existence of a fourth quark with charge $\textfrac{2}{3}$. This quark, known as the charm quark, couples to $\Pstrange_{\mathrm{weak}}$ and a new definition of the charged weak current is modified to 
 \begin{equation}
 J_{\mu} = \begin{pmatrix}
 u & c
@@ -214,7 +216,7 @@ J_{3} = \bar{U} \gamma_{\mu}\left(1+\gamma_5\right)\left[\mathcal{R}, \mathcal{R
 and is diagonal in flavour space. This has as consequence that no flavour changing neutral currents occur at tree-level Feynmann diagrams\footnote{Feynmann diagrams are physical representation of interaction between particles. They are based on Feynmann rules~\cite{Peskin:257493}.} \todo{should I explain feynmann diagrams?}.
 
 
-Kobayashi and Maskawa \todocite generalised the Cabibbo rotation matrix to accommodate for a third generation of quarks. The result is a $3\times 3$ unitary matrix known as the CKM matrix, responsible for the mixing of weak interaction states of down-type quarks: 
+Kobayashi and Maskawa generalised the Cabibbo rotation matrix to accommodate for a third generation of quarks. The result is a $3\times 3$ unitary matrix known as the CKM matrix, responsible for the mixing of weak interaction states of down-type quarks: 
 \begin{equation}
 \begin{pmatrix}
 \Pdown_{\mathrm{weak}} \\
@@ -275,16 +277,17 @@ From  \eq{eq:CKM} follows that top quarks predominantly decay via charged weak c
 Many high energy experiments confirm the success of the \SM. In particular the scalar boson, the cornerstone of the \SM, has consecrated the theory. Unfortunately there are also strong indications that the \SM\ ought to be a lower energy expression of a more global theory. The existence of physics beyond the \SM (BSM)~\cite{BSMWiley} is strongly motivated. These motivations are based on direct evidence from observation such as the existence of neutrino masses, the existence of dark matter and dark energy, or the matter-antimatter asymmetry, and also from theoretical problems such as the hierarchy problem, the coupling unification or the large numbers of free parameters in the \SM. 
 
 
-In the \SM, the neutrino is assumed to be massless, whilst experiments with solar, atmospheric, reactor and accelerator neutrinos have established that neutrinos can oscillate and change flavour during flight \todocite. These oscillations are only possible when neutrino's have masses. The flavour neutrinos (\Pnue, \Pnum, \Pnut) are then linear expressions of the fields of at least three mass eigenstate neutrinos \Pnu$_1$, \Pnu$_2$, and \Pnu$_3$. 
+In the \SM, the neutrino is assumed to be massless, whilst experiments with solar, atmospheric, reactor and accelerator neutrinos have established that neutrinos can oscillate and change flavour during flight~\cite{Fukuda:1998mi,PhysRevLett.108.131801}. These oscillations are only possible when neutrino's have masses. The flavour neutrinos (\Pnue, \Pnum, \Pnut) are then linear expressions of the fields of at least three mass eigenstate neutrinos \Pnu$_1$, \Pnu$_2$, and \Pnu$_3$. 
 
-The ordinary or baryonic matter described by the \SM\ describes only 5\% of the mass (energy) content of the universe. Astrophysical evidence indicated that dark matter is contributing to approximately 27\%, and dark energy to 68\% of the content of the universe. From the measurements of the temperature and polarizations anisotropies of the cosmic microwave background by the Planck experiment \todocite, the density of cold non baryonic matter is determined. Dark energy is responsible for the acceleration with the expansion of the universe. 
-
+The ordinary or baryonic matter described by the \SM\ describes only 5\% of the mass (energy) content of the universe. Astrophysical evidence indicated that dark matter is contributing to approximately 27\%, and dark energy to 68\% of the content of the universe. From the measurements of the temperature and polarizations anisotropies of the cosmic microwave background by the Planck experiment~\cite{Ade:2015xua}, the density of cold non baryonic matter is determined. Cold dark matter is assumed to be only sensitive to the weak and gravitational force, leading to only one possible \SM\ candidate: the neutrino. However, these are too light to account for the vast amount of dark matter and other models are needed. Dark energy is assumed to be responsible for the acceleration in the expansion of the universe~\cite{Peebles:2002gy}. 
+%https://en.wikipedia.org/wiki/Accelerating_expansion_of_the_universe#Evidence_for_acceleration
 
 At the big bang matter and antimatter is assumed to be produced in equal quantities. However, it  is clear that we are surrounded by matter. So where did all the antimatter go? In 1967, Sakharov identified three mechanisms that are necessary to obtain a global matter antimatter asymmetry~\cite{Sakharov}. These mechanisms are baryon and lepton number violation, at a given moment in time there was a thermal imbalance for the interactions in the universe, and there is charge C and charge parity CP violation\footnote{The rate of a process $i\rightarrow f$ can be different from the CP-conjugate process: $\tilde i \rightarrow \tilde f$. The \SM\ includes sources of CP-violation through the residual phase of the CKM matrix. However, these could not account for the magnitude of the asymmetry observed.}.
 % infor CP viol http://pdg.lbl.gov/2017/reviews/rpp2016-rev-cp-violation.pdf
+% CP violation can occur in a filed theory when the lagrangian density involves more complex parameters than what can be removed by field redefinitions
 The large numbers of free parameters in the \SM\ are taken as nine fermion masses, three CKM mixing angles and one CP violating phase, one EM coupling constant $g'$, one weak coupling constant $g$, one strong coupling constant $g_{\mathrm{s}}$, one QCD vacuum angle, one vacuum expectation value, and one mass of the scalar boson. This large number of free parameters lead to the expectation of a more elegant, general theory beyond the \SM. 
 
-The hierarchy problem \todocite is related to the huge difference in energy between the weak scale and the Planck scale. The vev of the Brout-Englert-Higgs field determines the weak scale that is approximately 246 \GeV.  The radiative corrections to the scalar boson squared mass $m_{\PH}^2$, coming from its self couplings and couplings to fermions and gauge bosons, are quadratically proportional to the ultraviolet momentum cut-off $\Lambda_{\mathrm{UV}}$. This cut-off is at least equal to the energy to which the \SM\ is valid without the need of new physics. The \SM\ is valid up to the Planck mass making the correction to $m_{\PH}^2$ about thirty orders of magnitude larger than $m_{\PH}^2$. This implies that an extraordinary cancellation of terms should happen. This is also known as the naturalness problem of the \PH boson mass \todocite. 
+The hierarchy problem~\cite{Burdman:2007ck} is related to the huge difference in energy between the weak scale and the Planck scale. The vev of the Brout-Englert-Higgs field determines the weak scale that is approximately 246 \GeV.  The radiative corrections to the scalar boson squared mass $m_{\PH}^2$, coming from its self couplings and couplings to fermions and gauge bosons, are quadratically proportional to the ultraviolet momentum cut-off $\Lambda_{\mathrm{UV}}$. This cut-off is at least equal to the energy to which the \SM\ is valid without the need of new physics. The \SM\ is valid up to the Planck mass making the correction to $m_{\PH}^2$ about thirty orders of magnitude larger than $m_{\PH}^2$. This implies that an extraordinary cancellation of terms should happen. This is also known as the naturalness problem of the \PH boson mass. 
 
 The correction to the squared mass of the scalar boson coming from a fermion f, coupling to the scalar field $\phi$ with a coupling $\lambda_{\mathrm{f}}$ is given by
 \begin{equation}
@@ -294,18 +297,18 @@ while the correction to the mass from a scalar particle S with a mass $m_{\mathr
 \begin{equation}
 \Delta m_{\PH}^2 = -\frac{\left|\lambda_{\mathrm{S}}\right|^2}{16\pi^2}\left(\Lambda_{\mathrm{UV}}^2 - 2 m_{\mathrm{S}}^2 \mathrm{ln}\left(\frac{\Lambda_{\mathrm{UV}}}{m_{\mathrm{S}}}\right) + ...\right). 
 \end{equation}
-As one can see the correction term to $m_{\PH}^2$ is much larger than $m_{\PH}^2$ itself. By introducing BSM physic models that introduce new scalar particles at \TeV\ scale that couple to the scalar boson can cancels the $\Lambda_{\mathrm{UV}}^2$ divergence \todocite and avoid this fine-tuning. 
+As one can see the correction term to $m_{\PH}^2$ is much larger than $m_{\PH}^2$ itself. By introducing BSM physic models that introduce new scalar particles at \TeV\ scale that couple to the scalar boson can cancels the $\Lambda_{\mathrm{UV}}^2$ divergence and avoid this fine-tuning. 
 
-Also the large mass differences between the fermions related to the Yukawa couplings can go up to six order of magnitude in the case of the electron and the top quark and constitute the fermion mass hierarchy problem \todocite. 
+Also the large mass differences between the fermions related to the Yukawa couplings can go up to six order of magnitude in the case of the electron and the top quark and constitute the fermion mass hierarchy problem. 
 
 
-The choice of the \SSU\ symmetry group itself  as well as the seperate treatment of the three forces included in the \SM\ raises concern. The intensity of the forces show a large disparity around the electroweak scale, but have comparable strengths at higher energies. The electromagnetic and weak forces are unified in a electroweak interaction, but the strong coupling constant does not encounter the other coupling constants at high energies. In order to reach a grand unification, the running of couplings can be modified by the addition of new particles in \BSM\ models \todocite. 
+The choice of the \SSU\ symmetry group itself  as well as the separate treatment of the three forces included in the \SM\ raises concern. The intensity of the forces show a large disparity around the electroweak scale, but have comparable strengths at higher energies. The electromagnetic and weak forces are unified in a electroweak interaction, but the strong coupling constant does not encounter the other coupling constants at high energies. In order to reach a grand unification, the running of couplings can be modified by the addition of new particles in \BSM\ models. 
 
 
 \section{An effective approach beyond the \SM: FCNC involving a top quark}
 \label{sec:EFT}
 The closeness of the top mass to the electroweak scale led physicist to believe that it is a sensitive probe for new physics. Its property study is therefore an important topic of the experimental program at the LHC. Several extensions of the \SM\ enhance the FCNC branching ratios and can be probed at the LHC~\cite{AguilarSaavedra:2004wm}, from which some of them are shown in \tab{tab:FCNCBRnp}. Previous searches have been performed at the Fermilab Tevatron by the CDF \cite{PhysRevLett.101.192002} and D0 \cite{Abazov:2010qk} collaborations, 
-and at the LHC by the ATLAS \cite{Aad:2015uza,Aad:2015gea} and CMS \cite{Sirunyan:2017kkr,Chatrchyan:2013nwa,Khachatryan:2015att,Sirunyan:2017kkr}  collaborations\todo{check with references from TOP2017}.
+and at the LHC by the ATLAS \cite{Aad:2015uza,Aad:2015gea,Aad:2015pja,Aaboud:2017mfd} and CMS \cite{Sirunyan:2017kkr,Chatrchyan:2013nwa,Khachatryan:2015att,Sirunyan:2017kkr,Khachatryan:2016atv,CMS-PAS-TOP-17-003}  collaborations\todo{check with references from TOP2017}.
 \begin{table}[htbp]
 	\centering
 	\caption{The predicted branching ratios \BR\ for FCNC interactions involving the top quark in some  \BSM\ models~\cite{AguilarSaavedra:2004wm}: quark singlet (QS), generic two Higgs doublet model (2HDM) and the minimal super symmetric extensions to the \SM\ (MSSM);}
@@ -345,7 +348,7 @@ $ |f_{\mathrm{xq}}^{\mathrm{L}}|^2 + |f_{\mathrm{xq}}^{\mathrm{R}}|^2 = 1 $, $|\
 	\photontensor = \partial_{\mu} \mathrm{A}_{\nu} -  \partial_{\nu} \mathrm{A}_{\mu}, \;  \PZ_{\mu\nu} = \partial_{\mu} \mathrm{Z}_{\nu} -  \partial_{\nu} \mathrm{Z}_{\mu},\: \mathrm{ and } \;
 	\Gtensor = \partial_{\mu} \mathrm{G}_{\nu}^{\mathrm{a}} -  \partial_{\nu}  \mathrm{G}_{\mu}^{\mathrm{a}} + g_{\mathrm{S}} f^{\mathrm{a}}_{\mathrm{bc}}   \mathrm{G}_{\mu}^{\mathrm{b}} \mathrm{G}_{\nu}^{\mathrm{c}}.
 \end{equation}
-Denoting the structure constant of the \Sthree\ group  as $f^{\mathrm{a}}_{\mathrm{bc}}$. Note that there are two coupling constants arising in $\Lagr^{\Ptop}_{\mathrm{EFT}}$, which is a residu of electroweak symmetry breaking. The massive \PZ\ boson will appear in both the \Zfield\ field as well as the covariant derivative, leading to an extra \PZ-vertex. 
+Denoting the structure constant of the \Sthree\ group  as $f^{\mathrm{a}}_{\mathrm{bc}}$. Note that there are two coupling constants arising in $\Lagr^{\Ptop}_{\mathrm{EFT}}$, which is a residue of electroweak symmetry breaking. The massive \PZ\ boson will appear in both the \Zfield\ field as well as the covariant derivative, leading to an extra \PZ-vertex. 
 \begin{comment}
 \begin{linenomath}
 	\begin{equation}
@@ -379,7 +382,7 @@ where $\Gamma_{\Ptop \rightarrow \Pquark\mathrm{X}}$ represents the \FCNC\ decay
 % top fcnc vertex in feynman diagram -> matrix element maal kappa --> cross sectie maal kappa^2 --> cross sectie maal BR (lineair)
 
 
-Searches for top-FCNC usually adopt a search strategy depending on the experimental setup and the FCNC interaction of interest,  looking either for \FCNC\ interactions in the production of a single top quark or in its decay for top pair interactions. In \fig{fig:Feynman}, these two cases are shown for the \tZq\ vertex.  \\
+Searches for top-FCNC usually adopt a search strategy depending on the experimental set-up and the FCNC interaction of interest,  looking either for \FCNC\ interactions in the production of a single top quark or in its decay for top pair interactions. In \fig{fig:Feynman}, these two cases are shown for the \tZq\ vertex.  \\
 
 \begin{figure}[hbtp]
 	\centering
@@ -428,29 +431,38 @@ Searches for top-FCNC usually adopt a search strategy depending on the experimen
 	\end{fmfgraph*}
 \end{fmffile}
 }
-\caption{Feynman diagrams for the \tZq\ \FCNC\ interaction, where the FCNC interaction is indicated with the shaded dot. Left: single top production through an \FCNC\ interaction. Right: top pair production with an \FCNC\ induced decay. }
+\caption{Feynman diagrams for the \tZq\ \FCNC\ interaction, where the FCNC interaction is indicated with the shaded dot. (a) Single top production through an \FCNC\ interaction. (b) Top pair production with an \FCNC\ induced decay. }
 \label{fig:Feynman}
 \end{figure}
 
 
-The observation of top-FCNC interactions has yet to come and experiments have so far only been able to put upper bounds on the branching ratios. An overview of the best current limits is given in \tab{tab:FCNClimits} \todo{update  after TOP2017}. In \fig{fig:fcncupperlimits} \todo{update figure after TOP2017} a comparison is shown between the current best limits set by ATLAS and CMS with respect to several \BSM\ model benchmark predictions. From there one can see that \FCNC\ searches involving a \PZ\ or \PHiggs\ boson are close to excluding or confirming several \BSM\ theories.
+The observation of top-FCNC interactions has yet to come and experiments have so far only been able to put upper bounds on the branching ratios. An overview of the best current limits is given in \tab{tab:FCNClimits} \todo{Check atlas result for tZq from top2017 proceedings when they appear}. In \fig{fig:fcncupperlimits} a comparison is shown between the current best limits set by ATLAS and CMS with respect to several \BSM\ model benchmark predictions. From there one can see that \FCNC\ searches involving a \PZ\ or \PHiggs\ boson are close to excluding or confirming several \BSM\ theories.
 \begin{table}[htbp]
 	\centering
-	\caption{The four forces of nature and their characteristics.}
-	\begin{tabular}{lcccc}
+	\caption{Overview of the most stringent observed and expected experimental limits on top-FCNC branching ratios \BR\ at 95\% confidence level.}
+	\begin{tabular}{lllll}
 		\toprule
-		Process & Search mode & Observed \BR & Expected \BR & Reference \\ 
+		Process &Search mode & Observed \BR & Expected \BR & Experiment \\ 
 		\midrule
-			\bottomrule
+		$\Ptop \rightarrow \Pup\PZ$		     & \tt\ decay  and \st\ production & 2.2 $10^{-4}$& 2.7 $10^{-4}$   & CMS~\cite{Sirunyan:2017kkr}\\
+		$\Ptop \rightarrow \Pup\Pphoton$	 & \st\ production   & 1.3 $10^{-4}$& 1.9 $10^{-4}$& CMS~\cite{Khachatryan:2015att}     \\
+		$\Ptop \rightarrow \Pup\Pgluon$		 & \st\ production   & 4.0   $10^{-5}$& 3.5   $10^{-5}$& ATLAS~\cite{Aad:2015gea}   \\
+		$\Ptop \rightarrow \Pup\PHiggs$		 & \tt\ decay        & 2.4 $10^{-3}$& 1.7 $10^{-3}$& ATLAS~\cite{Aaboud:2017mfd}   \\
+		$\Ptop \rightarrow \Pcharm\PZ$		 & \tt\ decay  and \st\ production        & 4.9 $10^{-4}$& 12  $10^{-4}$& CMS~\cite{Sirunyan:2017kkr}\\
+		$\Ptop \rightarrow \Pcharm\Pphoton$  & \st\ production   & 2.0 $10^{-3}$& 1.7 $10^{-3}$& CMS~\cite{Khachatryan:2015att}     \\
+		$\Ptop \rightarrow \Pcharm\Pgluon$   & \st\ production   & 2.0   $10^{-4}$& 1.8 $10^{-4}$& ATLAS~\cite{Aad:2015gea}   \\
+		$\Ptop \rightarrow \Pcharm\PHiggs$   & \tt\ decay     & 2.2  $10^{-3}$& 1.6 $10^{-3}$& CMS~\cite{Aaboud:2017mfd}     \\
+		\bottomrule
 	\end{tabular} 
 	\label{tab:FCNClimits}
 \end{table}
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.7\linewidth]{1_Introduction/Figures/fcnc_upperlimits}
+	\includegraphics[width=0.7\linewidth]{1_Introduction/Figures/fcnc_summarybsm_sep17}
 	\caption{Current best limits set by CMS and ATLAS for top-FCNC interactions.}
 	\label{fig:fcncupperlimits}
 \end{figure}
+
 
 

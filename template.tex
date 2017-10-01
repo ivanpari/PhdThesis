@@ -23,7 +23,7 @@
 \newcommand{\keywords}{LaTeX, template, CMS, FCNC, phd, thesis}
 \newcommand{\refereeOne}{Prof.~Dr.~J. D'Hondt}
 %\newcommand{\refereeTwo}{Prof.~Dr.~P. Thagoras}
-\newcommand{\dateHandIDn}{10~November~2017}
+\newcommand{\dateHandIn}{10~November~2017}
 \newcommand{\dateDefense}{10~December~2017}
 
 
@@ -36,6 +36,7 @@
 \addbibresource{Bibliography/Introduction.bib}
 \addbibresource{Bibliography/Chapter2.bib}
 \addbibresource{Bibliography/CMS.bib}
+\addbibresource{Bibliography/analysistechniques.bib}
 
 
 \include{glossaries}
@@ -88,12 +89,7 @@
 \input{1_Introduction/Standardmodel}
 
 
-\section{Statistics for a high energy particle physicist}
-\subsection{Boosted decision trees}
-\subsection{Confidence levels }
 
-%https://indico.cern.ch/event/614672/timetable/#20170907
-\subsection{Combine limit setting tool}
 
 \chapter{Experimental set-up}
 %\epigraph{The LHC rose from the dead on Easter. I've heard thats been done before... There is a place in human knowledge where here be dragons. That is the place where the ship that is the LHC  will be going.}
@@ -109,27 +105,18 @@ CERN ACC 2017 0007 --> beam energy uncertainty
 \end{comment}
 \input{2_ExperimentalSetup/CMS}
 
-\chapter{Event generation, simulation and reconstruction}
-\section{Collision event generation}
-\subsection{Parton distribution functions and the hard interaction}
-\subsection{Parton showering}
-\subsection{Hadronisation and decay}
-explanation of jets https://profmattstrassler.com/articles-and-posts/particle-physics-basics/the-known-apparently-elementary-particles/jets-the-manifestation-of-quarks-and-gluons/
-\subsection{Underlying event}
-\begin{comment}
-%The draft document may be found at this URL: http://cds.cern.ch/record/2261310
-%It is version no. 1 entitled:
-%`Measurement of the underlying event using inclusive Z boson production in proton-proton collisions at sqrt(s) = 13 TeV`
-% http://cms.cern.ch/iCMS/analysisadmin/cadi?ancode=FSQ-16-008
-\end{comment}
-\subsection{Event reconstruction and identification}
-% ICHEP https://cds.cern.ch/record/2005743
+\chapter{Analysis techniques}
+\input{3_Analysis_techniques/techniques.tex}
 
-\section{Detector simulation}
+\input{1_Introduction/Feynmanndiagrams.tex}
+\begin{comment}
+\chapter{Event reconstruction}
+
+
 % Jet energy scale and resolution in the CMS experiment in pp collisions at 8 TeV
 % http://iopscience.iop.org/article/10.1088/1748-0221/12/02/P02014/meta
 % atlas http://inspirehep.net/record/1519834
-\section{Physics object reconstruction and identification}
+
 % photobn http://iopscience.iop.org/article/10.1088/1748-0221/10/08/P08010/pdf
 \subsection{The particle flow event reconstruction method}
 % https://cds.cern.ch/record/2237475?ln=en
@@ -142,7 +129,6 @@ explanation of jets https://profmattstrassler.com/articles-and-posts/particle-ph
 % https://cds.cern.ch/record/2255497/files/DP2017_004.pdf
 % https://cds.cern.ch/record/2255497?ln=en
 \subsubsection{Jet reco and ID of b quarks}
-\begin{comment}
 % jet algorithms 
 % http://cms.cern.ch/iCMS/analysisadmin/cadi?ancode=JME-16-003
 
@@ -154,7 +140,7 @@ explanation of jets https://profmattstrassler.com/articles-and-posts/particle-ph
 
 %Identification of c-quark jets at the CMS experiment
 %https://cds.cern.ch/record/2205149?ln=en
-\end{comment}
+
 \subsubsection{Missing transverse energy reconstruction}
 \subsection{Calibrations and corrections}
 %CMS has been taking collision data since the 13TeV startup of the LHC on 3 June. During this period, the CMS magnet has been kept off due to an issue with the cooling system, so the beams have been used to calibrate and time-in the electronics of the various parts of the detector. These operations, which are largely independent of the magnetic field, are now complete. Meanwhile, the data collected with zero magnetic field can be used for fundamental research, like the measurement of the multiplicity of charged particles produced at the new collision energy of 13 TeV. The issue with the magnet cooling system was identified in the final preparatory phase leading to collisions in the LHC. While preparing for beam in CMS, a problem was found in the system that feeds liquid helium to the CMS superconducting magnet. The problem was diagnosed to be due to oil, which is used in the initial compression stages, reaching the so-called 'cold-box’ of the cryogenic system. The cold-box is a complex system with several sets of filters protecting three turbines along the path of the helium towards the magnet. In order to clean the oil contamination essentially all components of the cold-box have been extracted and replaced. Analysis confirms that there is no oil contamination in the CMS magnet itself or risk to its operation during 2015. The cold-box of is now being stabilised after the cleaning intervention and is being brought back to operational conditions. CMS is confident that, following the LHC technical stop and the beam conditioning run that will start at the end of this week, after the low-intensity and commissioning period, the full magnetic field will be available for the 13 TeV LHC run.
@@ -164,7 +150,7 @@ explanation of jets https://profmattstrassler.com/articles-and-posts/particle-ph
 % implemented in Feynrules
 \section{Data and simulation}
 \subsection{Standard Model Background simulation}
-\begin{comment}
+
 % ZZ 4 l cross sec http://cms.cern.ch/iCMS/analysisadmin/cadi?ancode=SMP-16-017
 % ttH the PAS of HIG-17-004
 %http://cms.cern.ch/iCMS/analysisadmin/cadi?ancode=HIG-17-004
@@ -191,7 +177,7 @@ The corresponding documentation can be found on CADI at:
 http://cms.cern.ch/iCMS/analysisadmin/cadi?ancode=TOP-17-005
 
 
-\end{comment}
+
 \subsection{FCNC signal simulation}
 In this thesis, two scenarios are being studied: one being the top-up interactions and the second one being top-charm interactions. For a given flavour of light quark \Pquark, all left-handed chiral parameters were set to zero and all right-handed set to one
 \subsection{Trigger requirements}
@@ -207,9 +193,16 @@ In this thesis, two scenarios are being studied: one being the top-up interactio
 \section{Limit setting procedure}
 \section{Result and discussion}
 \chapter{Conclusion and outlook}
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\linewidth]{Future}
+	\caption{}
+	\label{fig:future}
+\end{figure}
+
 \label{s:showcase}
 %\input{1_Showcase/Showcase}
-
+\end{comment}
 
 % -------------------------------------------------- %
 %    appendix and stuff                              %
