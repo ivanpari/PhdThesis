@@ -11,12 +11,94 @@ The procedure of to generate $\Pproton\Pproton \rightarrow \mathrm{X}$ events ca
 
 Each proton consists of three valence quarks (\Pup\Pup\Pdown) and many sea quarks and gluons, called partons. These partons emerge from each proton within a certain probability density $f(x,Q^2)$, determined by the momentum fraction $x$ carried by the parton and the momentum transfer $Q^2$. The parton density functions (PDF)~\cite{Placakyte:2011az} give the momentum distribution of the proton amongst its partons.
 
-The interaction of two incoming protons is often soft and elastic leading to events that are not interesting in the framework of this thesis. More interesting are the hard interaction between two partons from the incoming protons. The matrix elements (MEs) of a hard scattering process of interest is the starting point of the generation of events. Monte Carlo techniques are used to sample the corresponding cross section integral and the resulting sample of events reflect the probability distribution of a process over its final state phase space. After obtaining the sample of events of the hard interaction, a parton shower (PS) program is used to simulate the hadronisation of final state partons into hadrons which then can also decay further. Additionally, radiation of soft gluons or quarks from initial or final state partons is simulated. These are respectively reffered to as initial state radiation (ISR) or final state radiation (FSR). Contributions from soft secondary interactions, the so-called underlying event (UE), and colour reconnection effects are also taken into account. \todo{Should I add more details?}
+The interaction of two incoming protons is often soft and elastic leading to events that are not interesting in the framework of this thesis. More interesting are the hard interaction between two partons from the incoming protons. The matrix elements (ME) of a hard scattering process of interest is the starting point of the generation of events. Monte Carlo techniques are used to sample the corresponding cross section integral and the resulting sample of events reflect the probability distribution of a process over its final state phase space. After obtaining the sample of events of the hard interaction, a parton shower (PS) program is used to simulate the hadronisation of final state partons into hadrons which then can also decay further. Additionally, radiation of soft gluons or quarks from initial or final state partons is simulated. These are respectively reffered to as initial state radiation (ISR) or final state radiation (FSR). Contributions from soft secondary interactions, the so-called underlying event (UE), and colour reconnection effects are also taken into account. \todo{Should I add more details?}
 A brief overview of the employed programs used for the event generation of the signal and main background processes used in the search presented in the thesis are given in \Sec{sec:programs}.
 
 \subsection{Programs for event generation}
 \label{sec:programs}
 
+The \aMCMG\ program combines the leading order\footnote{A leading order process is a process which involves the minimal amount of particles. This also indicated as a tree-level Feynman diagram. Every added interaction vertex increases the order. To obtain the highest precision of an observable quantity the process should consider an infinite amount of orders. Computational limitations limits the process usually the next to leading order.} (LO) and the \aMC\ program into a common framework. This combination supports the generation of samples at LO or next to leading order (NLO) together with a dedicated matching to parton showers  using the MLM or MC$@$NLO schemes respectively. The MC$@$NLO scheme produces a certain fraction of events with negative weights originating from the subtraction of amplitudes that contain additional emissions from the NLO matrix element to prevent double-counting.
+
+
+The \Powheg\ box (versions 1,2) contains predefined implementations of various processes at NLO. It applies the \Powheg\ method for ME- to PS- matching, where the hardest radiation generated from the ME has priority over subsequent PS emission to remove the overlap with the PS simulation.
+
+The generation of events from processes involving the production and decay of resonances creates a computational heavy load, especially at NLO. The narrow width approximation the resonant particle is assumed to be on-shell. This makes the production and decay amplitude factorize, allowing to perform the simulation of the production and decay of heavy resonances like top quarks or Higgs bosons to be performed in separate steps. The \MS\ program extends this approach and accounts for off-shell effects through a partial reweighting of the events. Additionally, spin correlation effects between production and decay products are taken into account. 
+
+The \Pythia\ program (versions 6,8) generates events of various processes at LO. Usually in the analysis, it is however only used for its PS simulation and it is interfaced with other LO and NLO event generators to perform subsequent parton showering, hadronisation, and simulation of the underlying event. 
+
+\subsection{Generating FCNC top-Z interactions}
+The FCNC processes are generated by interfacing the Lagrangian in \eq{eq:EFTlag} with \aMCMG\ by means of the \FR\ package and the \UFO\ format.  The complex chiral parameters are arbitrary chosen to be $f^{\mathrm{L}}_{\mathrm{X}\Pquark} = 0$ and  $f^{\mathrm{R}}_{\mathrm{X}\Pquark} = 1$. The signal rates are estimated by use of the \aMCMG\ program for estimating the partial widths. The anomalous couplings are left free to float for this estimation, and only one coupling allowed to be non-vanishing at a time. The results are presented in \tab{tab:partialwidths}.
+\begin{table}[htbp]
+	\centering
+	\caption{Leading order partial widths related to the anomalous decay modes of the top quark, where the new physics scale $\Lambda$ is given in \GeV.}
+	\begin{tabular}{ccll}
+		\toprule
+		Anomalous coupling & vertex & \multicolumn{2}{c}{Partial decay width  (\GeV) }\\ 
+		\midrule
+		\multirow{2}{*}{\kgqtl} & \Ptop\Pgluon\Pup      &  3.665220 $10^{5}$   & $\left( \kappa_{\Ptop\Pgluon\Pup} / \Lambda \right)^2$ \\
+		                    & \Ptop\Pgluon\Pcharm       &  3.664620 $10^{5}$   & $\left( \kappa_{\Ptop\Pgluon\Pcharm} / \Lambda \right)^2$ \\
+	    \multirow{2}{*}{\kfqtl} & \Ptop\Pphoton\Pup     &  1.989066 $10^{4}$   & $\left( \kappa_{\Ptop\Pphoton\Pup} / \Lambda \right)^2$ \\
+		                    & \Ptop\Pphoton\Pcharm      &  1.988904 $10^{4}$   & $\left( \kappa_{\Ptop\Pphoton\Pcharm} / \Lambda \right)^2$    \\
+		\multirow{2}{*}{\kZqtl} & \Ptop\PZ\Pup          &  1.637005 $10^4$     & $\left( \kappa_{\Ptop\PZ\Pup} / \Lambda \right)^2$     \\
+		                    & \Ptop\PZ\Pcharm           &   1.636554 $10^4$    & $\left( \kappa_{\Ptop\PZ\Pcharm} / \Lambda \right)^2$  \\
+		\multirow{2}{*}{\zZqt} & \Ptop\PZ\Pup           &   1.685134 $10^{-1}$ & $\left( \zeta_{\Ptop\PZ\Pup}  \right)^2$ \\
+		                    & \Ptop\PZ\Pcharm           &   1.684904 $10^{-1}$ & $\left( \zeta_{\Ptop\PZ\Pcharm} \right)^2$ \\
+	    \multirow{2}{*}{\eHqt} & \Ptop\PHiggs\Pup       &   1.904399 $10^{-1}$ & $\left( \eta_{\Ptop\PHiggs\Pup}  \right)^2$  \\
+		                    & \Ptop\PHiggs\Pcharm       &   1.904065 $10^{-1}$ & $\left( \eta_{\Ptop\PHiggs\Pcharm}  \right)^2$ \\
+			\bottomrule
+	\end{tabular} 
+	\label{tab:partialwidths}
+\end{table}
+The anomalous single top cross sections are calculated by convolution of the hard scattering matrix elements with the LO order set of \CTEQ 6 partons densities. The NLO effects are modelled by multiplying each LO cross section by a global $k$-factor. The LO single top production cross section and the global $k$-factors for the top-\PZ production are shown in \tab{tab:STx}. The hard scattering events are then matched to parton showers to \Pythia to account for the simulation of the QCD environment relevant for hadronic collisions. 
+\begin{table}[htbp]
+	\centering
+	\caption{Leading order single top production cross section for $\Pproton\Pproton \rightarrow \Ptop\PZ$ or \APtop\PZ, where the new physics scale is given in \GeV. The NLO $k-$factors are given in the last column.}
+	\begin{tabular}{cllc}
+		\toprule
+	   Anomalous coupling & \multicolumn{2}{c}{Cross section (\pb)} &  NLO $k-$factor \\ 
+		\midrule
+	    $\kappa_{\Ptop\Pgluon\Pup} / \Lambda $     &  3.272 $10^7$  & $\left( \kappa_{\Ptop\Pgluon\Pup} / \Lambda \right)^2$ & 1.00 \\
+	    $\kappa_{\Ptop\Pgluon\Pcharm} / \Lambda $  &  3.021 $10^6$  & $\left( \kappa_{\Ptop\Pgluon\Pcharm} / \Lambda \right)^2$ & 1.00 \\
+	    $\kappa_{\Ptop\Pphoton\Pup} / \Lambda $    &  2.260 $10^5$  & $\left( \kappa_{\Ptop\Pphoton\Pup} / \Lambda \right)^2$ & 1.00 \\
+	    $\kappa_{\Ptop\Pphoton\Pcharm} / \Lambda $ &  2.654 $10^4$  & $\left( \kappa_{\Ptop\Pphoton\Pcharm} / \Lambda \right)^2$ & 1.00 \\
+	    $\kappa_{\Ptop\PZ\Pup} / \Lambda $         &  1.728 $10^6$  & $\left( \kappa_{\Ptop\PZ\Pup} / \Lambda \right)^2$ & 1.40 \\
+	    $\kappa_{\Ptop\PZ\Pcharm} / \Lambda $      &  2.040 $10^5$  & $\left( \kappa_{\Ptop\PZ\Pcharm} / \Lambda \right)^2$ & 1.40 \\
+	    $\zeta_{\Ptop\PZ\Pup} $                    &  7.484         & $\left( \zeta_{\Ptop\PZ\Pup} \right)^2$ & 1.40 \\
+	    $\zeta_{\Ptop\PZ\Pcharm} $                 &  1.038         & $\left( \zeta_{\Ptop\PZ\Pcharm}  \right)^2$ & 1.40 \\
+       \bottomrule
+	\end{tabular} 
+	\label{tab:STx}
+\end{table}
+
+The top pair cross sections are derived from the \SM\ \ttbar\ cross section, calculated with \aMCMG\ at NLO ($\sigma_{\ttbar} = 6.741 \; 10^{2} \pb$), and considering the decay $\ttbar \rightarrow (\Pbottom \PWpm)(\mathrm{X}\Pquark\Ptop)$. The branching ratio $\BR(\Ptop \rightarrow \Pbottom\PWpm)$ is assumed to be equal to one and the FCNC branching ratio is calculated as 
+\begin{equation}
+ \BR(\Ptop \rightarrow \Pquark\mathrm{X}) = \frac{ \Gamma_{\Ptop \rightarrow \Pquark\mathrm{X}} }{\Gamma_{\Ptop}^{\mathrm{SM}} + \Gamma_{\Ptop}^{\mathrm{FCNC}} }
+ 		\approx  \frac{ \Gamma_{\Ptop \rightarrow \Pquark\mathrm{X}} }{\Gamma_{\Ptop}^{\mathrm{SM}}} , 
+\end{equation}
+where $\Gamma_{\Ptop \rightarrow \Pquark\mathrm{X}}$ is given in \tab{tab:partialwidths}, and the assumption $ \Gamma_{\Ptop}^{\mathrm{FCNC}} \ll \Gamma_{\Ptop}^{\mathrm{SM}}$ is made \todo{these partial widths are at LO, how does this relate to NLO that is used? Or is there no difference?}. In \tab{tab:TTx} \todo{put in right xsections} the resulting NLO cross sections for the top-Z FCNC interactions are given.  
+\begin{table}[htbp]
+	\centering
+	\caption{ Next to leading order top pair cross section for the top-Z FCNC interactions with with a full leptonic decay. }
+	\begin{tabular}{ccll}
+		\toprule
+		Anomalous coupling & Process &   \multicolumn{2}{c}{Cross section (\pb)}  \\ 
+		\midrule
+\multirow{2}{*}{$\kappa_{\Ptop\PZ\Pup}/\Lambda$} & $\ttbar \rightarrow (\Pbottom \Pleptonplus\Pneutrino) (\APup \Pleptonplus \Pleptonminus)$ & 1.728 $10^6$  & $\left( \kappa_{\Ptop\PZ\Pup}/\Lambda \right)^2$ \\
+& $\ttbar \rightarrow (\APbottom \Pleptonminus\Pneutrino) (\Pup \Pleptonplus \Pleptonminus)$ & 1.728 $10^6$  & $\left( \kappa_{\Ptop\PZ\Pup}/\Lambda \right)^2$ \\
+\multirow{2}{*}{$\kappa_{\Ptop\PZ\Pcharm}/\Lambda$} & $\ttbar \rightarrow (\Pbottom \Pleptonplus\Pneutrino) (\APcharm \Pleptonplus \Pleptonminus)$ & 1.728 $10^6$  & $\left( \kappa_{\Ptop\PZ\Pcharm}/\Lambda \right)^2$ \\
+ & $\ttbar \rightarrow (\APbottom \Pleptonminus\Pneutrino) (\Pcharm \Pleptonplus \Pleptonminus)$ & 1.728 $10^6$  & $\left( \kappa_{\Ptop\PZ\Pcharm}/\Lambda \right)^2$ \\
+\multirow{2}{*}{$\zeta_{\Ptop\PZ\Pup}$} & $\ttbar \rightarrow (\Pbottom \Pleptonplus\Pneutrino) (\APup \Pleptonplus \Pleptonminus)$ & 1.728 $10^6$  & $\left( \zeta_{\Ptop\PZ\Pup}\right)^2$ \\
+ & $\ttbar \rightarrow (\APbottom \Pleptonminus\Pneutrino) (\Pup \Pleptonplus \Pleptonminus)$ & 1.728 $10^6$  & $\left( \zeta_{\Ptop\PZ\Pup}\right)^2$ \\
+\multirow{2}{*}{$\zeta_{\Ptop\PZ\Pcharm}$} & $\ttbar \rightarrow (\Pbottom \Pleptonplus\Pneutrino) (\APcharm \Pleptonplus \Pleptonminus)$ & 1.728 $10^6$  & $\left( \zeta_{\Ptop\PZ\Pcharm}\right)^2$ \\
+& $\ttbar \rightarrow (\APbottom \Pleptonminus\Pneutrino) (\Pcharm \Pleptonplus \Pleptonminus)$ & 1.728 $10^6$  & $\left( \zeta_{\Ptop\PZ\Pcharm}\right)^2$ \\
+		\bottomrule
+	\end{tabular} 
+	\label{tab:TTx}
+\end{table}
+
+
+
+\subsection{Generating background events}
 
 %\subsection{Parton distribution functions and the hard interaction}
 %\subsection{Parton showering}

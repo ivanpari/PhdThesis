@@ -1,49 +1,53 @@
 
 \begin{fmffile}{singletopleptonic}
-		\begin{fmfgraph*}(160,40) % width - height
+ \begin{fmfgraph*}(160,40) % width - height
 \fmfleft{i1,i2} 
 \fmfright{o1,o2,o3,o4,o5}
- \fmf{fermion}{i1,v1,v2,v3,v4,o2}
+ \fmf{fermion}{i1,v1,v2,v4,o1}
   \fmf{boson,label=\PZ, label.dist=10}{v2,v6}
-  \fmf{fermion}{o4,v6,o3}
+  \fmf{fermion}{o5,v6,o4}
    \fmf{gluon}{i2,v1}
-   
    \fmflabel{\Pgluon}{i2}
    \fmflabel{\Pup,\Pcharm}{i1}
+   \fmf{boson,label=\PWp,label.dist=-10}{v4,v5}
    \fmffreeze
-   \fmf{boson}{v4,v5}
+   \fmf{fermion}{o3,v5,o2}
    	\fmfv{label= ,decor.shape=circle,decor.filled=shaded,decor,size=0.5thick, label.angle=-90}{v2}
-  % \fmflabel{\Pup,\Pcharm}{i1}
    \fmflabel{\Plepton}{o4}
    \fmflabel{\APlepton}{o5}
    \fmflabel{\Pbottom}{o3}
-   \fmflabel{\PW}{o1}
-    \fmf{fermion,label=\Pup,,\Pcharm,label.dist=10}{v1,v2}
-      \end{fmfgraph*}
+   \fmflabel{\Pneutrino}{o2}
+   \fmflabel{\APlepton}{o1}
+   \fmf{fermion,label=\Pup,,\Pcharm,label.dist=10}{v1,v2}
+   \end{fmfgraph*}
 \end{fmffile}
 
-%
-%	\begin{fmffile}{toppairglugluleptonic}
-%	\begin{fmfgraph*}(160,40) % width - height
-%		\fmfleft{i1,i2} 
-%		\fmfright{o1,o2,o3,o4}
-%		\fmflabel{\Pgluon}{i1}
-%		\fmflabel{\Pgluon}{i2}
-%		\fmflabel{\APup,\APcharm}{o1}
-%		\fmflabel{\PZ}{o2}
-%		\fmflabel{\PWp}{o3}
-%		\fmflabel{\Pbottom}{o4}
-%		\fmf{gluon}{i1,v1,i2}
-%		\fmf{gluon,label=\Pgluon,label.dist=10}{v1,v2}
-%		\fmf{fermion}{o1,v4,v2,v3,o4}
-%		\fmffreeze
-%		\fmf{boson}{v3,o3}
-%		\fmf{boson}{v4,o2}
-%		\fmfv{label= ,decor.shape=circle,decor.filled=shaded,decor,size=0.2thick, label.angle=-90}{v4}
-%		 \fmf{fermion,label=\Ptop,label.dist=5}{v2,v3}
-%		 \fmf{fermion,label=\APtop,label.dist=-20}{v4,v2}
-%		\fmflabel{}{v3}
-%		\fmflabel{}{v2}
-%		\fmflabel{}{v1}
-%	\end{fmfgraph*}
-%\end{fmffile}
+
+	\begin{fmffile}{toppairglugluleptonic}
+	\begin{fmfgraph*}(160,40) % width - height
+		\fmfleft{i1,i2} 
+		\fmfright{o1,o2,o3,o4,o5,o6}
+		\fmflabel{\Pgluon}{i1}
+		\fmflabel{\Pgluon}{i2}
+		\fmflabel{o1}{o1}
+		\fmflabel{o2}{o2}
+		\fmflabel{o3}{o3}
+		\fmflabel{o4}{o4}
+		\fmflabel{o5}{o5}
+		\fmflabel{o6}{o6}
+		\fmf{gluon}{i1,v1,i2}
+		\fmf{boson,tension=-1.5}{v3,v5}
+		\fmf{boson,tension=1.5}{v4,v6}
+		\fmf{fermion}{o1,v4,v2,v3,o6}
+		\fmffreeze
+		\fmf{fermion}{o4,v5,o5}
+		\fmf{fermion}{o2,v6,o3}
+		\fmf{gluon,label=\Pgluon,label.dist=10}{v1,v2}
+		\fmfv{label= ,decor.shape=circle,decor.filled=shaded,decor,size=0.2thick, label.angle=-90}{v4}
+		% \fmf{fermion,label=\Ptop,label.dist=5}{v2,v3}
+		% \fmf{fermion,label=\APtop,label.dist=-20}{v4,v2}
+		\fmflabel{}{v3}
+		\fmflabel{}{v2}
+		\fmflabel{}{v1}
+	\end{fmfgraph*}
+\end{fmffile}
