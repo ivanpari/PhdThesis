@@ -304,7 +304,7 @@ The gg$\rightarrow$\ttbar\ process contributes 80-90\% to the total top pair cro
 %\end{figure}
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.7\linewidth]{1_Introduction/Figures/toppair}
+%	\includegraphics[width=0.7\linewidth]{1_Introduction/Figures/toppair}
 	\caption{Leading order diagrams of the top pair production. Gluon fusion (right and middle)are the dominant processes at the LHC, while quark fusion (left) is the dominant one at Tevatron. }
 	\label{fig:toppairproduction}
 \end{figure}
@@ -331,7 +331,7 @@ The singly produced top quarks are produced via the electroweak interaction. The
 \end{comment}
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=1.\linewidth]{1_Introduction/Figures/single_Top_channels_0}
+%	\includegraphics[width=1.\linewidth]{1_Introduction/Figures/single_Top_channels_0}
 	\caption{Leading order Feynman diagrams of the electroweak production of single top quarks in the $s$-channel (left), $t$-channel (middle), and for the tW associated production. Figure taken from \cite{singletop}.}
 	\label{fig:singletop}
 \end{figure}
@@ -341,17 +341,17 @@ The $s$-channel is the production mechanism with the smallest cross section. Her
  
  \begin{table}[htbp]
  	\centering
- 	\caption{Predictions on the single top quark production cross sections at next-to-next-to-leading order per centre-of-mass energy~\cite{PDG}. The  uncertainties from scale dependence and from parton density functions are combined in quadrature. For the $t$-channel the relative proportions to \Ptop\ and \APtop\ are 65\% and 35\%. For the $s$-channel this respectively 69\% and 31\%. The tW-channel has an equal proportion of top and antitop quarks.}
+ 	\caption{Predictions on the single top quark production cross sections at next-to-leading order per centre-of-mass energy~\cite{PDG}. The  uncertainties from scale dependence and from parton density functions are combined in quadrature or given separately (scale + PDF). For the $t$-channel the relative proportions to \Ptop\ and \APtop\ are 65\% and 35\%. For the $s$-channel this respectively 69\% and 31\%. The tW-channel has an equal proportion of top and antitop quarks. For Tevatron, the top mass is assumed to be 173.3 \GeV, while for the LHC predictions $m_{\Ptop} = 172.5$ \GeV~\cite{PDG,stwiki}.} 
  	\begin{tabular}{lllll}
  		\toprule
- 		Experiment & Centre-of-mass energy& \multicolumn{3}{c}{Cross section (\pb)} \\ 
+ 		Experiment & Centre-of-mass energy& \multicolumn{3}{c}{Cross section $\sigma_{\Ptop+\APtop}$ (\pb)} \\ 
  		                     &                     &  $t$-channel & $s$-channel & tW-channel \\
  		\midrule
- 		{Tevatron} & {$\sqrt{s} = 1.96$ \TeV }& $\sigma_{\Ptop+\APtop} = 2.06^{+0.13}_{-0.13}$ &$ \sigma_{\Ptop+\APtop} = 1.03^{+0.05}_{-0.05}$  & - \\ 
+ 		{Tevatron} & {$\sqrt{s} = 1.96$ \TeV }& $ 2.06^{+0.13}_{-0.13}$ &$  1.03^{+0.05}_{-0.05}$  & - \\ 
  		                        
- 		{LHC} &{ $\sqrt{s} = 7$ \TeV }& $\sigma_{\Ptop+\APtop} = 65.7^{+1.9}_{-1.9}$ &$ \sigma_{\Ptop+\APtop} = 1.03^{+0.05}_{-0.05}$  & - \\ 
- 		{LHC} & { $\sqrt{s} = 8$ \TeV} & $\sigma_{\Ptop+\APtop} = 85.1^{+2.5}_{-1.4}$ &$ \sigma_{\Ptop+\APtop} = 1.03^{+0.05}_{-0.05}$  & -  \\
- 		{LHC} &  {$\sqrt{s} = 13$ \TeV }& $\sigma_{\Ptop+\APtop} = 2.06^{+0,13}_{-0,13}$ &$ \sigma_{\Ptop+\APtop} = 1.03^{+0.05}_{-0.05}$  & - \\ 
+ 		{LHC} &{ $\sqrt{s} = 7$ \TeV }& $ 63.89^{+2.91}_{-2.52}$ &$  4.29^{+0.19}_{-0.17}$  & $ 15.74^{+0.40+1.10}_{-0.40-1.14}$ \\ 
+ 		{LHC} & { $\sqrt{s} = 8$ \TeV} & $ 84.69^{+3.76}_{-3.23}$ &$  5.24^{+0.22}_{-0.20}$  &  $ 22.37^{+0.60+1.40}_{-0.60-1.40}$  \\
+ 		{LHC} &  {$\sqrt{s} = 13$ \TeV }& $ 216.99^{+9.04}_{-7.71}$ &$  10.32^{+0.40}_{-0.36}$  &  $ 71.7^{+1.80+3.40}_{-1.80-3.40}$  \\ 
  		\bottomrule
  		%http://pdg.lbl.gov/2017/reviews/rpp2016-rev-top-quark.pdf
  		%https://twiki.cern.ch/twiki/bin/view/LHCPhysics/SingleTopRefXsec#Predictions_at_7_8_13_and_14_TeV
@@ -359,7 +359,42 @@ The $s$-channel is the production mechanism with the smallest cross section. Her
  	\label{tab:singletopcros}
  \end{table}
 
-\subsection*{Experimental results on the \SM\ top quark}
+\section{Experimental results on the \SM\ top quark}
+In this section a selection of experimental results of measurements on the \SM\ are presented. In \fig{fig:sigmanewv0}, a summary plot of the CMS cross section measurements can be found. The estimations by the CMS and ATLAS collaborations of the CKM matrix element $v_{\Ptop\Pbottom}$ from single top quark measurement is given in \fig{fig:Vtb}. The most precise estimation of $V_{\Ptop\Pbottom}$ originates from a combination of $t$-channel cross section measurements at 7 and 8 \TeV\ by the CMS collaboration resulting in $|f_{\mathrm{L}}V_{\Ptop\Pbottom}| = 0.998 \pm 0.038$ (exp.) $\pm 0.016$ (theo.). Assuming the $f_{\mathrm{L}} = 1$ and $|V_{\Ptop\Pbottom}| < 1$, this result yields a limit of $|V_{\Ptop\Pbottom}| > 0.92$ at 95\% confidence level. The most recent top mass measurements are given in \fig{fig:lhctopmasssep2017}. The CMS combined amounts to is $m_{\Ptop} = 172.44 \pm 0.48$ \GeV\ from 7+8 \TeV\ data. 
+
+In general the various measurements show a good agreement with the \SM\ predictions and by lack of deviations of the \SM, limits on the anomalous couplings can be derived. The estimated coupling strengths per operator contributing to single top quark production obtained from various measurements at the LHC and Tevatron are shown in \fig{fig:anomlouscouplings}. These results are consistent with the \SM\ expectation for which those operators vanish.  
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=1.\linewidth]{1_Introduction/Figures/SigmaNew_v0}
+	\caption{Summary of the \SM\ cross section measurements performed by the CMS collaboration. Figure taken from \cite{summarywiki}}.
+	\label{fig:sigmanewv0}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=1.\linewidth]{1_Introduction/Figures/singletop_Vtb_may2017}
+	\caption{Estimations of the \SM\ $V_{\Ptop\Pbottom}$ CKM element from single top cross section measurements.Figure taken from \cite{summarytwiki}}.
+	\label{fig:Vtb}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\linewidth]{1_Introduction/Figures/LHC_topmass_sep2017}
+	\caption{Summary of the top mass direct measurements performed by CMS and ATLAS, and compared with the LHC and LHC+Tevatron combinations. The results below the line are produced after the LHC and LHC+Tevatron combinations. Figure taken from \cite{summarytwiki}.}
+	\label{fig:lhctopmasssep2017}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.6\linewidth]{1_Introduction/Figures/anomlouscouplings}
+	\caption{Global fit results of top quark effective field theory to experimental data including all constrainable operators at dimension six. For the operators, the Warsaw basis of \cite{Grzadkowski:2010es}is used. The bounds are set on the Wilson co\"efficients of various operators contributing to top quark production and decay in two cases (red) all other co\"efficients set to zero, or (blue) all other co\"efficient are marginalised over. Figure taken from \cite{Buckley:2015lku}. }
+	%https://arxiv.org/pdf/1512.03360.pdf conclusion section
+	\label{fig:anomlouscouplings}
+\end{figure}
+
+
+\clearpage
 \section{Motivations for new physics}
 \label{sec:BSM}
 Many high energy experiments confirm the success of the \SM. In particular the scalar boson, the cornerstone of the \SM, has consecrated the theory. Unfortunately there are also strong indications that the \SM\ ought to be a lower energy expression of a more global theory. The existence of physics beyond the \SM\ (BSM)~\cite{BSMWiley} is strongly motivated. These motivations are based on direct evidence from observation such as the existence of neutrino masses, the existence of dark matter and dark energy, or the matter-antimatter asymmetry, and also from theoretical problems such as the hierarchy problem, the coupling unification or the large numbers of free parameters in the \SM. 
