@@ -276,11 +276,92 @@ From  \eq{eq:CKM} follows that top quarks predominantly decay via charged weak c
 	\label{tab:FCNCBR}
 \end{table}
 
+\section{Top quark physics in the \SM}
+\label{sec:TopSM}
+Discovered in 1995 by the CDF and D0 \todocite collaborations at Tevatron with proton-antiproton data, the top quark plays an important role in studying high energy physics. Its Yukawa interaction is given by
+\begin{equation}
+\lagr_{\mathrm{top-Yukawa}} = -\frac{\lambda_t v}{\sqrt{2}} \APtop_{\mathrm{L}} \Ptop_{\mathrm{R}} -\frac{\lambda_{\Ptop} }{\sqrt{2}} \PHiggs \APtop_{\mathrm{L}} \Ptop_{\mathrm{R}} + \mathrm{h.c.},
+\end{equation}
+yielding a Yukawa coupling of 
+\begin{equation}
+ \lambda_{\mathrm{t}} = \frac{\sqrt{2}m_{\Ptop}}{v} = 0.991 \pm 0.003,
+\end{equation}
+with the top mass $m_{\Ptop}$ equal to $172.44 \pm 0.49$ \GeV~\cite{PDG}. This Yukawa coupling is very large compared to the other Yukawa couplings in the SM \order($10^{-2}$), leading to the belief that the top quark may have an important role in understanding the mechanism of electroweak symmetry breaking. On top of this, the very short lifetime of the top quark makes ir an excellent candidate for property studies. Its high mass, almost 40 times higher than the mass of the closest particle in mass, leads to a large coupling with the Higgs boson and makes the top quark an interesting candidate for the understanding of how particles acquire mass. 
 
 
+The CKM matrix element $V_{\Ptop\Pbottom}$, given in \eq{eq:CKM}, is experimentally found to be much larger than $V_{\Ptop\Pstrange}$, $V_{\Ptop\Pdown}$, and close to unity. The top quark decays through electroweak interactions since the  \PW\ boson mass is smaller than the top mass and the \PW\ boson can be on shell. A consequence of this is that the top quark has a very short lifetime of only $1/\Gamma_{\Ptop}\approx 5 \: 10^{-25}$ \s \todocite leading to the fact that the formation of bound states involving top quarks are not allowed \todocite. This lifetime is even shorter than the typical hadronisation timescale of $1/\Lambda_{\mathrm{QCD}}\approx 10^{-23}$ \s, prohibiting gluons to radiate from the top quark and keeping its spin coherent. Since the electroweak interactions have a V-A coupling structure, the top quark spin orientation can be derived from the angular distributions of its decay products. This makes it possible to study the polarisation of top quarks from the angular distributions in various processes. 
+
+
+The massiveness of the top quark leads to the fact that a large amount of energy is needed to create one. This is only the case for high energy collisions such as those in the Earth's upper atmosphere as cosmic rays collide with particles in air, or by particle accelerators. The production of top quarks happens in two ways: single via the electroweak interaction or in pairs via the strong interaction. At hadron colliders, the dominant production mechanism is top quark production via gluon (gg$\rightarrow$\ttbar) or quark fusion (\qqbar $\rightarrow$ \ttbar). In \fig{fig:toppairproduction}, the different top pair production mechanisms are shown. The production channel of gluon fusion is the main contributor to the top pair cross section the LHC compared to quark fusion at Tevatron. % because of the increasing gluon PDF towards smaller momentum fraction
+The gg$\rightarrow$\ttbar\ process contributes 80-90\% to the total top pair cross section in the LHC centre-of-mass energy regime of 7-14 \TeV~\cite{PDG}. In \tab{tab:toppaircros} the predicted top pair production cross sections are given for the LHC and Tevatron.
+%\begin{figure}[htbp]
+%	\centering
+%	\includegraphics[width=0.32\linewidth]{1_Introduction/Figures/Ttbar_production_via_gg_fusion}
+%	\includegraphics[width=0.32\linewidth]{1_Introduction/Figures/Ttbar_production_(t_channel)}
+%	\includegraphics[width=0.32\linewidth]{1_Introduction/Figures/Ttbar_production_via_qqbar_annihilation}
+%	\caption{Leading order diagrams of the top pair production. Gluon fusion (left and middle)are the dominant processes at the LHC, while quark fusion (right) is the dominant one at Tevatron. }
+%	\label{fig:toppairproduction}
+%\end{figure}
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.7\linewidth]{1_Introduction/Figures/toppair}
+	\caption{Leading order diagrams of the top pair production. Gluon fusion (right and middle)are the dominant processes at the LHC, while quark fusion (left) is the dominant one at Tevatron. }
+	\label{fig:toppairproduction}
+\end{figure}
+\begin{table}[htbp]
+	\centering
+	\caption{Predictions on the top quark pair production cross sections at next-to-next-to-leading order with next-to-next-to-leading log soft gluon resummation per centre-of-mass energy~\cite{PDG}. The first uncertainty is from scale dependence, while the second uncertainty originates from parton density functions.}
+	\begin{tabular}{llll}
+		\toprule
+	 Experiment & Top mass &Centre-of-mass energy& Cross section (\pb) \\ 
+		\midrule
+		Tevatron & $m_{\Ptop} = 173.3 \: \GeV$ & $\sqrt{s} = 1.96$ \TeV & $\sigma_{\ttbar} = 7.16^{+0.11+0.17}_{-0.20-0.12}$  \\ 
+		LHC & $m_{\Ptop} = 173.2 \: \GeV$ & $\sqrt{s} = 7$ \TeV & $\sigma_{\ttbar} =173.6^{+4.5+8.9}_{-5.9-8.9}$  \\
+		LHC & $m_{\Ptop} = 173.2 \: \GeV$ & $\sqrt{s} = 8$ \TeV & $\sigma_{\ttbar} =247.7^{+6.3+11.5}_{-8.5-11.5}$  \\
+		LHC & $m_{\Ptop} = 173.2 \: \GeV$ & $\sqrt{s} = 13$ \TeV & $\sigma_{\ttbar} =816.0^{+19.4+34.4}_{-28.6-34.4}$  \\
+	\bottomrule
+	%http://pdg.lbl.gov/2017/reviews/rpp2016-rev-top-quark.pdf
+	\end{tabular} 
+	\label{tab:toppaircros}
+\end{table}
+
+The singly produced top quarks are produced via the electroweak interaction. These production mechanisms are subdivided at leading order into three main channels based on the virtuality ($Q^2 = - p_{\mu}p^{\mu}$) of the exchanged \PW\ boson. In \fig{fig:singletop}, the corresponding Feynman diagrams are shown. The single top quark production cross section, given in \tab{tab:singletopcros}, are smaller than the top pair production cross sections since the electroweak coupling strength is smaller than the strong coupling strength. In addition, for the single top production, there the need of sea quarks (\Pbottom, \APquark) in the initial states for which the parton density functions increase less steeply at low momentum fractions compared to the gluon parton density functions. 
+\begin{comment}
+	Electroweak single top-quark production mechanisms, na- mely from qq′ → tb [4], qb → q′t [5], mediated by virtual s-channel and t-channel W-bosons, and Wt-associated pro- duction, through bg → W−t, lead to somewhat smaller cross sections. For example, t-channel production, while suppressed by the weak coupling with respect to the strong pair produc- tion, is kinematically enhanced, resulting in a sizable cross section both at Tevatron and LHC energies. At the Tevatron, the t- and s-channel cross sections of top and antitop are identical, while at the LHC they are not, due to the charge- asymmetric initial state. 
+\end{comment}
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=1.\linewidth]{1_Introduction/Figures/single_Top_channels_0}
+	\caption{Leading order Feynman diagrams of the electroweak production of single top quarks in the $s$-channel (left), $t$-channel (middle), and for the tW associated production. Figure taken from \cite{singletop}.}
+	\label{fig:singletop}
+\end{figure}
+
+The production via the $t$-channel has a virtuality of the \PW\ boson $Q^2>0$, making it space-like. It is produced via the scattering of the \PW\ boson of a bottom quark coming from a proton or from gluon splitting (\Pgluon$\rightarrow$\bbbar). This process is also known as W-gluon fusion production. It has the highest single top quark cross section in proton collisions and the top quark production is roughly twice more than the antitop quarks. This is a consequence of the up-down valence quark composition of the proton. This feature makes the $t$-channel sensitive to the parton density functions of the proton. %The ratio depends however on the center-of-mass energy since at higher energies lower momentum fractions are probed at which contributions from the valence quarks become less dominant.
+The $s$-channel is the production mechanism with the smallest cross section. Here the \PW\ boson is time-like ($Q^2 <0$) which requires the \PW\ boson to have a large virtuality to produce the heavier top quark. It is produced from two quarks belonging to the same isodoublet (e.g. \Pup\APdown) and subsequently decays to \Ptop\APbottom. This process get enhanced by many beyond the Standard Model scenarios via the addition of new heavy particles such as \PW\'. The tW-channel has a top quark produced in association with a \PW\ boson produced on shell $Q^2 = -m^2_{\PW}$. This mode is negligible at Tevatron, but of relevant size at the LHC. The tW-channel is sensitive to new physics affecting the Wtb vertex. 
+ 
+ \begin{table}[htbp]
+ 	\centering
+ 	\caption{Predictions on the single top quark production cross sections at next-to-next-to-leading order per centre-of-mass energy~\cite{PDG}. The  uncertainties from scale dependence and from parton density functions are combined in quadrature. For the $t$-channel the relative proportions to \Ptop\ and \APtop\ are 65\% and 35\%. For the $s$-channel this respectively 69\% and 31\%. The tW-channel has an equal proportion of top and antitop quarks.}
+ 	\begin{tabular}{lllll}
+ 		\toprule
+ 		Experiment & Centre-of-mass energy& \multicolumn{3}{c}{Cross section (\pb)} \\ 
+ 		                     &                     &  $t$-channel & $s$-channel & tW-channel \\
+ 		\midrule
+ 		{Tevatron} & {$\sqrt{s} = 1.96$ \TeV }& $\sigma_{\Ptop+\APtop} = 2.06^{+0.13}_{-0.13}$ &$ \sigma_{\Ptop+\APtop} = 1.03^{+0.05}_{-0.05}$  & - \\ 
+ 		                        
+ 		{LHC} &{ $\sqrt{s} = 7$ \TeV }& $\sigma_{\Ptop+\APtop} = 65.7^{+1.9}_{-1.9}$ &$ \sigma_{\Ptop+\APtop} = 1.03^{+0.05}_{-0.05}$  & - \\ 
+ 		{LHC} & { $\sqrt{s} = 8$ \TeV} & $\sigma_{\Ptop+\APtop} = 85.1^{+2.5}_{-1.4}$ &$ \sigma_{\Ptop+\APtop} = 1.03^{+0.05}_{-0.05}$  & -  \\
+ 		{LHC} &  {$\sqrt{s} = 13$ \TeV }& $\sigma_{\Ptop+\APtop} = 2.06^{+0,13}_{-0,13}$ &$ \sigma_{\Ptop+\APtop} = 1.03^{+0.05}_{-0.05}$  & - \\ 
+ 		\bottomrule
+ 		%http://pdg.lbl.gov/2017/reviews/rpp2016-rev-top-quark.pdf
+ 		%https://twiki.cern.ch/twiki/bin/view/LHCPhysics/SingleTopRefXsec#Predictions_at_7_8_13_and_14_TeV
+ 	\end{tabular} 
+ 	\label{tab:singletopcros}
+ \end{table}
+
+\subsection*{Experimental results on the \SM\ top quark}
 \section{Motivations for new physics}
 \label{sec:BSM}
-\todo{Reread and elaborate}
 Many high energy experiments confirm the success of the \SM. In particular the scalar boson, the cornerstone of the \SM, has consecrated the theory. Unfortunately there are also strong indications that the \SM\ ought to be a lower energy expression of a more global theory. The existence of physics beyond the \SM\ (BSM)~\cite{BSMWiley} is strongly motivated. These motivations are based on direct evidence from observation such as the existence of neutrino masses, the existence of dark matter and dark energy, or the matter-antimatter asymmetry, and also from theoretical problems such as the hierarchy problem, the coupling unification or the large numbers of free parameters in the \SM. 
 
 
