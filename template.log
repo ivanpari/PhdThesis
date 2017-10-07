@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.9.17)  2 OCT 2017 10:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.9.17)  6 OCT 2017 11:45
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -4032,7 +4032,7 @@ LaTeX Font Info:    Font shape `T1/cmtt/m/n' will be
 (Font)              scaled to size 6.43204pt on input line 48.
 
 (./_titlepage.tex
-<"VUB MONO positief/VUB MONO POSITIEF OUTLINE".png, id=103, 2297.9451pt x 1010.
+<"VUB MONO positief/VUB MONO POSITIEF OUTLINE".png, id=151, 2297.9451pt x 1010.
 8164pt>
 File: "VUB MONO positief/VUB MONO POSITIEF OUTLINE".png Graphic file (type png)
 
@@ -4227,25 +4227,18 @@ LaTeX Font Warning: Font shape `U/wasy/b/n' in size <8> not available
 LaTeX Font Warning: Font shape `U/wasy/b/n' in size <6> not available
 (Font)              Font shape `U/wasy/m/n' tried instead on input line 5.
 
-) [3
+[3
 
-] [4
-
-] (./1_Introduction/Standardmodel.tex
-
-LaTeX Warning: Hyper reference `sec:Stat' on page 1 undefined on input line 4.
-
-
-LaTeX Warning: Reference `sec:Stat' on page 1 undefined on input line 4.
-
+]) [4] (./1_Introduction/Standardmodel.tex
 LaTeX Font Info:    Font shape `T1/XCharter-TLF/b/n' will be
-(Font)              scaled to size 13.82408pt on input line 7.
+(Font)              scaled to size 13.82408pt on input line 8.
 LaTeX Font Info:    Try loading font information for OT1+XCharter-TLF on input 
-line 9.
-LaTeX Font Info:    No file OT1XCharter-TLF.fd. on input line 9.
+line 10.
+LaTeX Font Info:    No file OT1XCharter-TLF.fd. on input line 10.
+
 
 LaTeX Font Warning: Font shape `OT1/XCharter-TLF/m/n' undefined
-(Font)              using `OT1/cmr/m/n' instead on input line 9.
+(Font)              using `OT1/cmr/m/n' instead on input line 10.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/microtype/mt-cmr.cfg
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
@@ -4256,150 +4249,151 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `T1/XCharter-TLF/b/n' will be
-(Font)              scaled to size 9.60007pt on input line 12.
+(Font)              scaled to size 9.60007pt on input line 13.
  [1
+
 
 ]
 LaTeX Font Info:    Font shape `T1/XCharter-TLF/m/n' will be
-(Font)              scaled to size 7.68005pt on input line 52.
+(Font)              scaled to size 7.68005pt on input line 53.
 LaTeX Font Info:    Font shape `T1/XCharter-TLF/m/n' will be
-(Font)              scaled to size 8.64006pt on input line 52.
+(Font)              scaled to size 8.64006pt on input line 53.
 LaTeX Font Info:    Font shape `OT1/mdbch/m/n' will be
-(Font)              scaled to size 8.64006pt on input line 52.
+(Font)              scaled to size 8.64006pt on input line 53.
 LaTeX Font Info:    Font shape `OML/mdbch/m/it' will be
-(Font)              scaled to size 8.64006pt on input line 52.
+(Font)              scaled to size 8.64006pt on input line 53.
 LaTeX Font Info:    Font shape `OMS/mdbch/m/n' will be
-(Font)              scaled to size 8.64006pt on input line 52.
+(Font)              scaled to size 8.64006pt on input line 53.
 LaTeX Font Info:    Font shape `OMX/mdbch/m/n' will be
-(Font)              scaled to size 8.64006pt on input line 52.
+(Font)              scaled to size 8.64006pt on input line 53.
 LaTeX Font Info:    Font shape `T1/cmss/m/n' will be
-(Font)              scaled to size 9.35101pt on input line 52.
+(Font)              scaled to size 9.35101pt on input line 53.
 LaTeX Font Info:    Font shape `T1/cmtt/m/n' will be
-(Font)              scaled to size 9.64806pt on input line 52.
+(Font)              scaled to size 9.64806pt on input line 53.
 LaTeX Font Info:    Font shape `OML/mdbch/m/n' will be
-(Font)              scaled to size 8.64006pt on input line 52.
+(Font)              scaled to size 8.64006pt on input line 53.
 LaTeX Font Info:    Font shape `MDA/mdbch/m/n' will be
-(Font)              scaled to size 8.64006pt on input line 52.
+(Font)              scaled to size 8.64006pt on input line 53.
 LaTeX Font Info:    Font shape `MDB/mdbch/m/n' will be
-(Font)              scaled to size 8.64006pt on input line 52.
+(Font)              scaled to size 8.64006pt on input line 53.
 LaTeX Font Info:    Font shape `T1/XCharter-TLF/m/n' will be
-(Font)              scaled to size 5.76004pt on input line 52.
+(Font)              scaled to size 5.76004pt on input line 53.
 Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
-ine 80.
+ine 81.
 LaTeX Font Info:    Font shape `T1/XCharter-TLF/b/n' will be
-(Font)              scaled to size 7.68005pt on input line 80.
+(Font)              scaled to size 7.68005pt on input line 81.
 
-Underfull \vbox (badness 1460) has occurred while \output is active []
-
- [2]
+[2]
 LaTeX Font Info:    Font shape `T1/mdbch/m/it' will be
-(Font)              scaled to size 10.51207pt on input line 113.
+(Font)              scaled to size 10.51207pt on input line 114.
 LaTeX Font Info:    Font shape `T1/mdbch/m/it' will be
-(Font)              scaled to size 7.68005pt on input line 113.
+(Font)              scaled to size 7.68005pt on input line 114.
 LaTeX Font Info:    Font shape `T1/mdbch/m/it' will be
-(Font)              scaled to size 5.76004pt on input line 113.
-
-[3]
+(Font)              scaled to size 5.76004pt on input line 114.
+ [3]
 LaTeX Font Info:    Font shape `T1/mdbch/m/it' will be
-(Font)              scaled to size 4.80003pt on input line 153.
+(Font)              scaled to size 4.80003pt on input line 160.
  [4]
 LaTeX Font Info:    Font shape `T1/mdbch/m/it' will be
-(Font)              scaled to size 8.64006pt on input line 216.
+(Font)              scaled to size 8.64006pt on input line 223.
  [5]
 LaTeX Font Info:    Font shape `T1/mdbch/m/it' will be
-(Font)              scaled to size 9.60007pt on input line 258.
+(Font)              scaled to size 9.60007pt on input line 265.
 LaTeX Font Info:    Font shape `T1/mdbch/m/it' will be
-(Font)              scaled to size 6.72005pt on input line 258.
- [6] [7]
-Overfull \hbox (3.64099pt too wide) in paragraph at lines 315--326
+(Font)              scaled to size 6.72005pt on input line 265.
+ [6]
+
+LaTeX Warning: Marginpar on page 7 moved by 15.25397pt.
+
+<1_Introduction/Figures/toppair.png, id=327, 1674.255pt x 522.95375pt>
+File: 1_Introduction/Figures/toppair.png Graphic file (type png)
+
+<use 1_Introduction/Figures/toppair.png>
+Package pdftex.def Info: 1_Introduction/Figures/toppair.png used on input line 
+307.
+(pdftex.def)             Requested size: 298.75262pt x 93.31369pt.
+
+<1_Introduction/Figures/single_Top_channels_0.jpg, id=332, 6524.375pt x 1405.25
+pt>
+File: 1_Introduction/Figures/single_Top_channels_0.jpg Graphic file (type jpg)
+ <use 1_Introduction/Figures/single_Top_channels_0.jpg>
+Package pdftex.def Info: 1_Introduction/Figures/single_Top_channels_0.jpg used 
+on input line 334.
+(pdftex.def)             Requested size: 426.79134pt x 91.9234pt.
+
+
+LaTeX Warning: Citation 'singletop' on page 7 undefined on input line 335.
+
+
+LaTeX Warning: Citation 'singletop' on page 7 undefined on input line 335.
+
+[7 <./1_Introduction/Figures/toppair.png>]
+Underfull \vbox (badness 6300) has occurred while \output is active []
+
+ [8 <./1_Introduction/Figures/single_Top_channels_0.jpg>] [9]
+Overfull \hbox (3.64099pt too wide) in paragraph at lines 404--415
  [][] |
  []
 
-[8] [9]
-Underfull \hbox (badness 10000) in paragraph at lines 385--386
-
- []
-
+[10] [11]
 \openout6 = `singletop.mp'.
 
 File: singletop.1 Graphic file (type mps)
-[MP to PDF] (./singletop.1) (./singletop.t1)
+ [MP to PDF] (./singletop.1) (./singletop.t1)
 \openout6 = `toppair.mp'.
 
 File: toppair.1 Graphic file (type mps)
- [MP to PDF] (./toppair.1)
-(./toppair.t1)
-Overfull \hbox (22.22527pt too wide) in paragraph at lines 443--458
+ [MP to PDF] (./toppair.1) (./toppair.t1)
+Overfull \hbox (31.30293pt too wide) in paragraph at lines 531--546
  [][] |
  []
 
 
-<1_Introduction/Figures/fcnc_summarybsm_sep17.png, id=334, 1546.77875pt x 1385.
+<1_Introduction/Figures/fcnc_summarybsm_sep17.png, id=425, 1546.77875pt x 1385.
 175pt>
 File: 1_Introduction/Figures/fcnc_summarybsm_sep17.png Graphic file (type png)
  <use 1_Introduction/Figures/fcnc_summarybsm_sep17.png>
 Package pdftex.def Info: 1_Introduction/Figures/fcnc_summarybsm_sep17.png used 
-on input line 462.
+on input line 550.
 (pdftex.def)             Requested size: 298.75262pt x 267.54001pt.
-) [10] [11 <./1_Introduction/Figures/fcnc_summarybsm_sep17.png>] [12
+) [12] [13 <./1_Introduction/Figures/fcnc_summarybsm_sep17.png>] [14
 
 ]
-(./2_ExperimentalSetup/LHC.tex [13]
-<2_ExperimentalSetup/Figures/CCC-v2016.png, id=382, 341.5962pt x 196.8153pt>
+(./2_ExperimentalSetup/LHC.tex
+<2_ExperimentalSetup/Figures/CCC-v2016.png, id=467, 341.5962pt x 196.8153pt>
 File: 2_ExperimentalSetup/Figures/CCC-v2016.png Graphic file (type png)
 
 <use 2_ExperimentalSetup/Figures/CCC-v2016.png>
 Package pdftex.def Info: 2_ExperimentalSetup/Figures/CCC-v2016.png used on inpu
 t line 17.
-(pdftex.def)             Requested size: 320.09349pt x 184.42679pt.
+(pdftex.def)             Requested size: 426.79134pt x 245.9014pt.
+ [15] [16 <./2_ExperimentalSetup/Figures/CCC-v2016.png>]
 LaTeX Font Info:    Try loading font information for TS1+XCharter-TLF on input 
-line 24.
+line 28.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/xcharter/TS1XCharter-TLF.fd
 File: TS1XCharter-TLF.fd 2013/10/27 (autoinst) Font definitions for TS1/XCharte
 r-TLF.
 )
 LaTeX Font Info:    Font shape `TS1/XCharter-TLF/m/n' will be
-(Font)              scaled to size 10.51207pt on input line 24.
+(Font)              scaled to size 10.51207pt on input line 28.
 Package microtype Info: Loading generic settings for font family
 (microtype)             `XCharter-TLF' (encoding: TS1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
-[14 <./2_ExperimentalSetup/Figures/CCC-v2016.png>]
-<2_ExperimentalSetup/Figures/int_lumi_per_day_cumulative_pp_2016OnlineLumi.png,
- id=410, 578.16pt x 433.62pt>
-File: 2_ExperimentalSetup/Figures/int_lumi_per_day_cumulative_pp_2016OnlineLumi
-.png Graphic file (type png)
+<2_ExperimentalSetup/Figures/int_lumi_per_day_cumulative_pp_2016.pdf, id=504, 5
+78.16pt x 433.62pt>
+File: 2_ExperimentalSetup/Figures/int_lumi_per_day_cumulative_pp_2016.pdf Graph
+ic file (type pdf)
 
-<use 2_ExperimentalSetup/Figures/int_lumi_per_day_cumulative_pp_2016OnlineLumi.
-png>
+<use 2_ExperimentalSetup/Figures/int_lumi_per_day_cumulative_pp_2016.pdf>
 Package pdftex.def Info: 2_ExperimentalSetup/Figures/int_lumi_per_day_cumulativ
-e_pp_2016OnlineLumi.png used on input line 49.
-(pdftex.def)             Requested size: 170.71393pt x 128.03589pt.
+e_pp_2016.pdf used on input line 51.
+(pdftex.def)             Requested size: 298.75262pt x 224.06114pt.
 
-<2_ExperimentalSetup/Figures/sumLumiByDay.png, id=411, 798.985pt x 574.145pt>
-File: 2_ExperimentalSetup/Figures/sumLumiByDay.png Graphic file (type png)
-
-<use 2_ExperimentalSetup/Figures/sumLumiByDay.png>
-Package pdftex.def Info: 2_ExperimentalSetup/Figures/sumLumiByDay.png used on i
-nput line 54.
-(pdftex.def)             Requested size: 170.71393pt x 122.66782pt.
- [15]
-<2_ExperimentalSetup/Figures/lhc-pho-1998-341.jpg, id=427, 1038.88126pt x 610.2
-8pt>
-File: 2_ExperimentalSetup/Figures/lhc-pho-1998-341.jpg Graphic file (type jpg)
- <use 2_ExperimentalSetup/Figures/lhc-pho-1998-341.jpg>
-Package pdftex.def Info: 2_ExperimentalSetup/Figures/lhc-pho-1998-341.jpg used 
-on input line 67.
-(pdftex.def)             Requested size: 192.0548pt x 112.81622pt.
-)
-(./2_ExperimentalSetup/CMS.tex
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [16 <./2_ExperimentalSetup/Figures/int_lumi_per_day_cumulative_pp_2016OnlineLu
-mi.png> <./2_ExperimentalSetup/Figures/sumLumiByDay.png> <./2_ExperimentalSetup
-/Figures/lhc-pho-1998-341.jpg>]
+[17]) (./2_ExperimentalSetup/CMS.tex [18 <./2_ExperimentalSetup/Figures/int_lum
+i_per_day_cumulative_pp_2016.pdf>]
 Package epstopdf Info: Source file: <2_ExperimentalSetup/Figures/cms_complete_l
 abelled.eps>
 (epstopdf)                    date: 2017-09-28 12:54:42
@@ -4411,151 +4405,148 @@ abelled-eps-converted-to.pdf>
 (epstopdf)             Command: <epstopdf --outfile=2_ExperimentalSetup/Figures
 /cms_complete_labelled-eps-converted-to.pdf 2_ExperimentalSetup/Figures/cms_com
 plete_labelled.eps>
-(epstopdf)             \includegraphics on input line 26.
+(epstopdf)             \includegraphics on input line 27.
 Package epstopdf Info: Output file is already uptodate.
 
-<2_ExperimentalSetup/Figures/cms_complete_labelled-eps-converted-to.pdf, id=441
+<2_ExperimentalSetup/Figures/cms_complete_labelled-eps-converted-to.pdf, id=601
 , 786.94pt x 569.12625pt>
 File: 2_ExperimentalSetup/Figures/cms_complete_labelled-eps-converted-to.pdf Gr
 aphic file (type pdf)
 
 <use 2_ExperimentalSetup/Figures/cms_complete_labelled-eps-converted-to.pdf>
 Package pdftex.def Info: 2_ExperimentalSetup/Figures/cms_complete_labelled-eps-
-converted-to.pdf used on input line 26.
+converted-to.pdf used on input line 27.
 (pdftex.def)             Requested size: 426.79134pt x 308.66095pt.
 
-[17]
-<2_ExperimentalSetup/Figures/imageedit_1_9146672677.png, id=455, 720.6925pt x 2
+[19 <./2_ExperimentalSetup/Figures/cms_complete_labelled-eps-converted-to.pdf>]
+
+<2_ExperimentalSetup/Figures/imageedit_1_9146672677.png, id=623, 720.6925pt x 2
 73.02pt>
 File: 2_ExperimentalSetup/Figures/imageedit_1_9146672677.png Graphic file (type
  png)
  <use 2_ExperimentalSetup/Figures/imageedit_1_9146672677.png>
 Package pdftex.def Info: 2_ExperimentalSetup/Figures/imageedit_1_9146672677.png
- used on input line 47.
+ used on input line 48.
 (pdftex.def)             Requested size: 320.09349pt x 121.25813pt.
- [18 <./2_ExperimentalSetup/Figures/cms_complete_labelled-eps-converted-to.pdf>
-]
-<2_ExperimentalSetup/Figures/cmsview1.png, id=475, 656.4525pt x 368.37625pt>
+
+<2_ExperimentalSetup/Figures/cmsview1.png, id=626, 656.4525pt x 368.37625pt>
 File: 2_ExperimentalSetup/Figures/cmsview1.png Graphic file (type png)
 
 <use 2_ExperimentalSetup/Figures/cmsview1.png>
 Package pdftex.def Info: 2_ExperimentalSetup/Figures/cmsview1.png used on input
- line 60.
-(pdftex.def)             Requested size: 192.0548pt x 107.77069pt.
+ line 58.
+(pdftex.def)             Requested size: 426.79134pt x 239.50354pt.
 
-<2_ExperimentalSetup/Figures/cmsview.png, id=476, 845.1575pt x 597.23125pt>
+<2_ExperimentalSetup/Figures/cmsview.png, id=627, 845.1575pt x 597.23125pt>
 File: 2_ExperimentalSetup/Figures/cmsview.png Graphic file (type png)
 
 <use 2_ExperimentalSetup/Figures/cmsview.png>
 Package pdftex.def Info: 2_ExperimentalSetup/Figures/cmsview.png used on input 
-line 61.
-(pdftex.def)             Requested size: 192.0548pt x 135.71083pt.
- [19 <./2_ExperimentalSetup/Figures/imageedit_1_9146672677.png> <./2_Experiment
-alSetup/Figures/cmsview1.png (PNG copy)> <./2_ExperimentalSetup/Figures/cmsview
-.png (PNG copy)>]
-<2_ExperimentalSetup/Figures/muonsys.png, id=490, 1452.42625pt x 947.54pt>
+line 59.
+(pdftex.def)             Requested size: 426.79134pt x 301.59483pt.
+
+
+LaTeX Warning: Float too large for page by 27.4166pt on input line 62.
+
+[20] [21 <./2_ExperimentalSetup/Figures/imageedit_1_9146672677.png>] [22 <./2_E
+xperimentalSetup/Figures/cmsview1.png (PNG copy)> <./2_ExperimentalSetup/Figure
+s/cmsview.png (PNG copy)>]
+<2_ExperimentalSetup/Figures/muonsys.png, id=652, 1452.42625pt x 947.54pt>
 File: 2_ExperimentalSetup/Figures/muonsys.png Graphic file (type png)
 
 <use 2_ExperimentalSetup/Figures/muonsys.png>
 Package pdftex.def Info: 2_ExperimentalSetup/Figures/muonsys.png used on input 
-line 76.
-(pdftex.def)             Requested size: 256.0774pt x 167.05093pt.
- [20 <./2_ExperimentalSetup/Figures/muonsys.png>] [21]
-<2_ExperimentalSetup/Figures/solenoid.png, id=520, 555.07375pt x 553.06625pt>
+line 75.
+(pdftex.def)             Requested size: 426.79134pt x 278.42303pt.
+ [23
+
+ <./2_ExperimentalSetup/Figures/muonsys.png>] [24]
+<2_ExperimentalSetup/Figures/solenoid.png, id=680, 555.07375pt x 553.06625pt>
 File: 2_ExperimentalSetup/Figures/solenoid.png Graphic file (type png)
 
 <use 2_ExperimentalSetup/Figures/solenoid.png>
 Package pdftex.def Info: 2_ExperimentalSetup/Figures/solenoid.png used on input
- line 116.
-(pdftex.def)             Requested size: 192.0548pt x 191.3566pt.
+ line 115.
+(pdftex.def)             Requested size: 426.79134pt x 425.25471pt.
 
-<2_ExperimentalSetup/Figures/imageedit_12_3242046754.png, id=522, 1084.05pt x 6
+<2_ExperimentalSetup/Figures/imageedit_12_3242046754.png, id=682, 1084.05pt x 6
 62.475pt>
 File: 2_ExperimentalSetup/Figures/imageedit_12_3242046754.png Graphic file (typ
 e png)
  <use 2_ExperimentalSetup/Figures/imageedit_12_3242046754.png>
 Package pdftex.def Info: 2_ExperimentalSetup/Figures/imageedit_12_3242046754.pn
-g used on input line 129.
+g used on input line 128.
 (pdftex.def)             Requested size: 213.39566pt x 130.40018pt.
 
-[22 <./2_ExperimentalSetup/Figures/solenoid.png>]
-<2_ExperimentalSetup/Figures/imageedit_5_8264930617.png, id=534, 1084.05pt x 77
+[25] [26 <./2_ExperimentalSetup/Figures/solenoid.png> <./2_ExperimentalSetup/Fi
+gures/imageedit_12_3242046754.png>]
+<2_ExperimentalSetup/Figures/imageedit_5_8264930617.png, id=702, 1084.05pt x 77
 9.91376pt>
 File: 2_ExperimentalSetup/Figures/imageedit_5_8264930617.png Graphic file (type
  png)
  <use 2_ExperimentalSetup/Figures/imageedit_5_8264930617.png>
 Package pdftex.def Info: 2_ExperimentalSetup/Figures/imageedit_5_8264930617.png
- used on input line 143.
+ used on input line 142.
 (pdftex.def)             Requested size: 213.39566pt x 153.51659pt.
 
-[23 <./2_ExperimentalSetup/Figures/imageedit_12_3242046754.png> <./2_Experiment
-alSetup/Figures/imageedit_5_8264930617.png>]
-<2_ExperimentalSetup/Figures/imageedit_11_9317262269.png, id=550, 1210.5225pt x
+[27 <./2_ExperimentalSetup/Figures/imageedit_5_8264930617.png>]
+<2_ExperimentalSetup/Figures/imageedit_11_9317262269.png, id=720, 1210.5225pt x
  577.15625pt>
 File: 2_ExperimentalSetup/Figures/imageedit_11_9317262269.png Graphic file (typ
 e png)
  <use 2_ExperimentalSetup/Figures/imageedit_11_9317262269.png>
 Package pdftex.def Info: 2_ExperimentalSetup/Figures/imageedit_11_9317262269.pn
-g used on input line 187.
-(pdftex.def)             Requested size: 298.75262pt x 142.4393pt.
+g used on input line 186.
+(pdftex.def)             Requested size: 426.79134pt x 203.48723pt.
 
-[24]
-<2_ExperimentalSetup/Figures/cmspixel.jpg, id=568, 702.625pt x 378.41376pt>
+[28 <./2_ExperimentalSetup/Figures/imageedit_11_9317262269.png>]
+<2_ExperimentalSetup/Figures/cmspixel.jpg, id=736, 702.625pt x 378.41376pt>
 File: 2_ExperimentalSetup/Figures/cmspixel.jpg Graphic file (type jpg)
 
 <use 2_ExperimentalSetup/Figures/cmspixel.jpg>
 Package pdftex.def Info: 2_ExperimentalSetup/Figures/cmspixel.jpg used on input
- line 206.
-(pdftex.def)             Requested size: 170.71393pt x 91.94133pt.
+ line 205.
+(pdftex.def)             Requested size: 213.39566pt x 114.9281pt.
 
-Underfull \hbox (badness 3449) in paragraph at lines 207--207
-[]\T1/XCharter-TLF/b/n/10 Figure 2.13: []\T1/XCharter-TLF/m/n/10 (+20) The pixe
-l bar-rel be-ing
- []
-
-
-Underfull \hbox (badness 1028) in paragraph at lines 207--207
-\T1/XCharter-TLF/m/n/10 (+20) in 2015, around the beam pipe at
- []
-
-
-<2_ExperimentalSetup/Figures/cmsbarrel.jpg, id=571, 1621.05624pt x 1085.05376pt
+<2_ExperimentalSetup/Figures/cmsbarrel.jpg, id=739, 1621.05624pt x 1085.05376pt
 >
 File: 2_ExperimentalSetup/Figures/cmsbarrel.jpg Graphic file (type jpg)
  <use 2_ExperimentalSetup/Figures/cmsbarrel.jpg>
 Package pdftex.def Info: 2_ExperimentalSetup/Figures/cmsbarrel.jpg used on inpu
-t line 212.
+t line 211.
 (pdftex.def)             Requested size: 170.71393pt x 114.25685pt.
- [25 <./2_ExperimentalSetup/Figures/imageedit_11_9317262269.png>]
-<2_ExperimentalSetup/Figures/BHIsis.jpg, id=585, 1538.74875pt x 1802.735pt>
+ [29 <./2_ExperimentalSetup/Figures/cmspixel.jpg> <./2_ExperimentalSetup/Figure
+s/cmsbarrel.jpg>]
+<2_ExperimentalSetup/Figures/BHIsis.jpg, id=754, 1538.74875pt x 1802.735pt>
 File: 2_ExperimentalSetup/Figures/BHIsis.jpg Graphic file (type jpg)
 
 <use 2_ExperimentalSetup/Figures/BHIsis.jpg>
 Package pdftex.def Info: 2_ExperimentalSetup/Figures/BHIsis.jpg used on input l
-ine 236.
-(pdftex.def)             Requested size: 128.0387pt x 149.9983pt.
+ine 235.
+(pdftex.def)             Requested size: 170.71393pt x 199.97942pt.
 
-Underfull \hbox (badness 4291) in paragraph at lines 237--237
-\T1/XCharter-TLF/m/n/10 (+20) with in-su-la-tion pieces in-
- []
-
-<2_ExperimentalSetup/Figures/plant.jpg, id=586, 1606.0pt x 1063.975pt>
+<2_ExperimentalSetup/Figures/plant.jpg, id=755, 1606.0pt x 1063.975pt>
 File: 2_ExperimentalSetup/Figures/plant.jpg Graphic file (type jpg)
 
 <use 2_ExperimentalSetup/Figures/plant.jpg>
 Package pdftex.def Info: 2_ExperimentalSetup/Figures/plant.jpg used on input li
-ne 245.
-(pdftex.def)             Requested size: 213.39566pt x 141.37376pt.
- [26 <./2_ExperimentalSetup/Figures/cmspixel.jpg> <./2_ExperimentalSetup/Figure
-s/cmsbarrel.jpg> <./2_ExperimentalSetup/Figures/BHIsis.jpg> <./2_ExperimentalSe
-tup/Figures/plant.jpg>]
-Underfull \vbox (badness 2173) has occurred while \output is active []
+ne 244.
+(pdftex.def)             Requested size: 251.80531pt x 166.8139pt.
+ [30 <./2_ExperimentalSetup/Figures/BHIsis.jpg> <./2_ExperimentalSetup/Figures/
+plant.jpg>]
+Underfull \vbox (badness 4391) has occurred while \output is active []
 
- [27])
-[28] [29] [30
-
-] (./3_Analysis_techniques/techniques.tex
-LaTeX Font Info:    Try loading font information for T1+zi4 on input line 2.
+ [31])
+[32] (./3_Analysis_techniques/techniques.tex
+<3_Analysis_techniques/Figures/factoscale.png, id=796, 712.6625pt x 724.7075pt>
+File: 3_Analysis_techniques/Figures/factoscale.png Graphic file (type png)
+<use 3_Analysis_techniques/Figures/factoscale.png>
+Package pdftex.def Info: 3_Analysis_techniques/Figures/factoscale.png used on i
+nput line 15.
+(pdftex.def)             Requested size: 213.39566pt x 216.99371pt.
+LaTeX Font Info:    Font shape `T1/XCharter-TLF/m/n' will be
+(Font)              scaled to size 4.80003pt on input line 16.
+LaTeX Font Info:    Try loading font information for T1+zi4 on input line 24.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/inconsolata/t1zi4.fd
 File: t1zi4.fd 2014/06/22 T1/zi4 (Inconsolata)
@@ -4571,15 +4562,34 @@ Package microtype Info: Character `textemdash ' is missing
 (microtype)             in font `T1/zi4/m/n/10.95'.
 (microtype)             Ignoring protrusion settings for this character.
 
-<3_Analysis_techniques/Figures/MCeventwithlegend.png, id=642, 1630.09pt x 1016.
+<3_Analysis_techniques/Figures/NNPDF30.png, id=807, 1566.85374pt x 1009.7725pt>
+File: 3_Analysis_techniques/Figures/NNPDF30.png Graphic file (type png)
+<use 3_Analysis_techniques/Figures/NNPDF30.png>
+Package pdftex.def Info: 3_Analysis_techniques/Figures/NNPDF30.png used on inpu
+t line 30.
+(pdftex.def)             Requested size: 298.75262pt x 192.5213pt.
+Package microtype Info: Character `textendash ' is missing
+(microtype)             in font `T1/zi4/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `textemdash ' is missing
+(microtype)             in font `T1/zi4/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+ [33
+
+]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [34 <./3_Analysis_techniques/Figures/factoscale.png>] [35 <./3_Analysis_techni
+ques/Figures/NNPDF30.png>]
+<3_Analysis_techniques/Figures/MCeventwithlegend.png, id=856, 1630.09pt x 1016.
 79875pt>
 File: 3_Analysis_techniques/Figures/MCeventwithlegend.png Graphic file (type pn
 g)
  <use 3_Analysis_techniques/Figures/MCeventwithlegend.png>
 Package pdftex.def Info: 3_Analysis_techniques/Figures/MCeventwithlegend.png us
-ed on input line 7.
+ed on input line 64.
 (pdftex.def)             Requested size: 426.79134pt x 266.20773pt.
- [31]
+ [36 <./3_Analysis_techniques/Figures/MCeventwithlegend.png>]
 Package microtype Info: Character `textendash ' is missing
 (microtype)             in font `T1/zi4/m/n/8'.
 (microtype)             Ignoring protrusion settings for this character.
@@ -4592,45 +4602,103 @@ Package microtype Info: Character `textendash ' is missing
 Package microtype Info: Character `textemdash ' is missing
 (microtype)             in font `T1/zi4/m/n/6'.
 (microtype)             Ignoring protrusion settings for this character.
-
-[32 <./3_Analysis_techniques/Figures/MCeventwithlegend.png>]
-Overfull \hbox (42.74156pt too wide) in paragraph at lines 73--74
+ [37]
+Overfull \hbox (42.74156pt too wide) in paragraph at lines 144--145
 []\T1/XCharter-TLF/m/n/10.95 (-20) The top pair cross sec-tions are de-rived fr
 om the SM $\OML/mdbch/m/n/10.95 t[]$ \T1/XCharter-TLF/m/n/10.95 (-20) cross sec
 -tion, cal-cu-lated with \T1/zi4/m/n/10.95 MadGraph5$[]$aMC$\OT1/mdbch/m/n/10.9
 5 @$\T1/zi4/m/n/10.95 NLO|
  []
 
-[33]
+[38] [39] [40]
+Package microtype Info: Character `textendash ' is missing
+(microtype)             in font `T1/zi4/m/n/7'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `textemdash ' is missing
+(microtype)             in font `T1/zi4/m/n/7'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `textendash ' is missing
+(microtype)             in font `T1/zi4/m/n/5'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `textemdash ' is missing
+(microtype)             in font `T1/zi4/m/n/5'.
+(microtype)             Ignoring protrusion settings for this character.
+ [41]
+<3_Analysis_techniques/Figures/BDT.png, id=959, 1278.7775pt x 1059.96pt>
+File: 3_Analysis_techniques/Figures/BDT.png Graphic file (type png)
 
-LaTeX Warning: Marginpar on page 34 moved by 104.38165pt.
+<use 3_Analysis_techniques/Figures/BDT.png>
+Package pdftex.def Info: 3_Analysis_techniques/Figures/BDT.png used on input li
+ne 272.
+(pdftex.def)             Requested size: 213.39566pt x 176.87521pt.
+ [42
 
 
-Underfull \vbox (badness 1248) has occurred while \output is active []
+] [43 <./3_Analysis_techniques/Figures/BDT.png>]
+LaTeX Font Info:    Font shape `U/xmdeuf/m/n' will be
+(Font)              scaled to size 10.5886pt on input line 291.
+LaTeX Font Info:    Font shape `U/xmdeuf/m/n' will be
+(Font)              scaled to size 7.73596pt on input line 291.
+LaTeX Font Info:    Font shape `U/xmdeuf/m/n' will be
+(Font)              scaled to size 5.80197pt on input line 291.
 
- [34])
-[35] [36
+
+LaTeX Warning: Hyper reference `fig:ROC' on page 44 undefined on input line 291
+.
+
+
+LaTeX Warning: Reference `fig:ROC' on page 44 undefined on input line 291.
+
+<3_Analysis_techniques/Figures/ROC.png, id=982, 1117.17375pt x 1018.80624pt>
+File: 3_Analysis_techniques/Figures/ROC.png Graphic file (type png)
+
+<use 3_Analysis_techniques/Figures/ROC.png>
+Package pdftex.def Info: 3_Analysis_techniques/Figures/ROC.png used on input li
+ne 294.
+(pdftex.def)             Requested size: 213.39566pt x 194.60121pt.
+) [44 <./3_Analysis_techniques/Figures/ROC.png>]
+
+LaTeX Warning: Hyper reference `sec:Simulation' on page 45 undefined on input l
+ine 114.
+
+
+LaTeX Warning: Reference `sec:Simulation' on page 45 undefined on input line 11
+4.
+
+[45
+
+] [46
+
+] [47] [48
+
+] <Future.png, id=1010, 712.6625pt x 637.38126pt>
+File: Future.png Graphic file (type png)
+
+<use Future.png>
+Package pdftex.def Info: Future.png used on input line 210.
+(pdftex.def)             Requested size: 298.75262pt x 267.19257pt.
+ [49 <./Future.png>] [50
 
 ]
 LaTeX Font Info:    Font shape `T1/XCharter-TLF/m/sc' will be
-(Font)              scaled to size 10.51207pt on input line 215.
+(Font)              scaled to size 10.51207pt on input line 225.
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/XCharter-TLF/m/sc/10.95'.
 (microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `textendash ' is missing
-(microtype)             in font `T1/zi4/m/n/10'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `textemdash ' is missing
-(microtype)             in font `T1/zi4/m/n/10'.
-(microtype)             Ignoring protrusion settings for this character.
+LaTeX Font Info:    Font shape `U/xmdeuf/m/n' will be
+(Font)              scaled to size 9.66995pt on input line 225.
+LaTeX Font Info:    Font shape `U/xmdeuf/m/n' will be
+(Font)              scaled to size 6.76897pt on input line 225.
+LaTeX Font Info:    Font shape `U/xmdeuf/m/n' will be
+(Font)              scaled to size 4.83498pt on input line 225.
 LaTeX Font Info:    Font shape `T1/XCharter-TLF/m/it' will be
-(Font)              scaled to size 10.51207pt on input line 215.
- [37
+(Font)              scaled to size 10.51207pt on input line 225.
+ [51
 
 ]
 LaTeX Font Info:    Font shape `T1/XCharter-TLF/b/n' will be
-(Font)              scaled to size 5.76004pt on input line 215.
- [38]
+(Font)              scaled to size 5.76004pt on input line 225.
+ [52]
 
 ! Package inputenc Error: Unicode char \u8:  not set up for use with LaTeX.
 
@@ -4638,7 +4706,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.216 \hypersetup
+l.226 \hypersetup
                  {urlcolor=darkblue}
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -4651,29 +4719,45 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.216 \hypersetup
+l.226 \hypersetup
                  {urlcolor=darkblue}
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-[39] [40] [41] [42]
+[53] [54] [55]
+Overfull \hbox (5.02248pt too wide) in paragraph at lines 226--226
+\T1/XCharter-TLF/m/n/10.95 (-20) P01020. \T1/XCharter-TLF/m/sc/10.95 (-20) doi\
+T1/XCharter-TLF/m/n/10.95 (-20) : [][]$\T1/zi4/m/n/10 10 . 1088 / 1748 -[] 0221
+ / 12 / 01 / P01020$[][]\T1/XCharter-TLF/m/n/10.95 (-20) . arXiv: [][]$\T1/zi4/
+m/n/10 1609 . 02366$ \T1/zi4/m/n/10.95 [physics.ins-det][][]|
+ []
+
+[56] [57] [58] [59]
+Overfull \hbox (3.70924pt too wide) in paragraph at lines 226--226
+[]\T1/XCharter-TLF/m/sc/10.95 (-20) Olaf Behnke\T1/XCharter-TLF/m/n/10.95 (-20)
+ , \T1/XCharter-TLF/m/sc/10.95 (-20) Kevin Kro-ninger\T1/XCharter-TLF/m/n/10.95
+ (-20) , \T1/XCharter-TLF/m/sc/10.95 (-20) Gre-gory Schott\T1/XCharter-TLF/m/n/
+10.95 (-20) , and \T1/XCharter-TLF/m/sc/10.95 (-20) Thomas Schorner-Sadenius\T1
+/XCharter-TLF/m/n/10.95 (-20) :|
+ []
+
 
 Package glossaries Warning: No \printglossary or \printglossaries found.
 (Remove \makeglossaries if you don't want any glossaries.)
 This document will not have a glossary.
 
-[43]
+[60]
 \tf@toc=\write11
 \openout11 = `template.toc'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 221.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 221.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 231.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 231.
  (./template.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 221.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 221.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 231.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 231.
 Package rerunfilecheck Info: File `template.out' has not changed.
-(rerunfilecheck)             Checksum: 961C59EF39BDE0F9D9934D860BF9D47F;2203.
+(rerunfilecheck)             Checksum: 14C1F100B152D3BA03A6010083CEA7BD;3262.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -4681,19 +4765,24 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 221.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 231.
+
+Package biblatex Warning: Please (re)run Biber on the file:
+(biblatex)                template
+(biblatex)                and rerun LaTeX afterwards.
+
 Package logreq Info: Writing requests to 'template.run.xml'.
 \openout1 = `template.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 52190 strings out of 493089
- 955864 string characters out of 6134842
- 2300218 words of memory out of 5000000
- 54062 multiletter control sequences out of 15000+600000
- 251144 words of font info for 486 fonts, out of 8000000 for 9000
+ 52494 strings out of 493089
+ 961742 string characters out of 6134842
+ 2342649 words of memory out of 5000000
+ 54259 multiletter control sequences out of 15000+600000
+ 261261 words of font info for 504 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 68i,17n,76p,10468b,2528s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 68i,17n,76p,10468b,2529s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/ly1/texnansi.enc}{/usr/lo
 cal/texlive/2015/texmf-dist/fonts/enc/dvips/xcharter/xch_tuu2ww.enc}{/usr/local
 /texlive/2015/texmf-dist/fonts/enc/dvips/xcharter/xch_h3miu6.enc}{/usr/local/te
@@ -4709,23 +4798,26 @@ r/local/texlive/2015/texmf-dist/fonts/type1/bitstrea/charter/bchbi8a.pfb></usr/
 local/texlive/2015/texmf-dist/fonts/type1/bitstrea/charter/bchr8a.pfb></usr/loc
 al/texlive/2015/texmf-dist/fonts/type1/bitstrea/charter/bchri8a.pfb></usr/local
 /texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/t
-exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texl
-ive/2015/texmf-dist/fonts/type1/public/amsfonts/latxfont/line10.pfb></usr/local
-/texlive/2015/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chb7m.pfb></usr
-/local/texlive/2015/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chb7t.pfb
-></usr/local/texlive/2015/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chb
-7y.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/mathdesign/mdbch/
-md-chr7m.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/mathdesign/
-mdbch/md-chr7t.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/mathd
-esign/mdbch/md-chr7v.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public
-/mathdesign/mdbch/md-chr7y.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/
-public/mathdesign/mdbch/md-chri7m.pfb></usr/local/texlive/2015/texmf-dist/fonts
-/type1/public/mathdesign/mdbch/md-chrma.pfb></usr/local/texlive/2015/texmf-dist
-/fonts/type1/public/cm-super/sfss0700.pfb>
-Output written on template.pdf (47 pages, 6593278 bytes).
+exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texl
+ive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive
+/2015/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texli
+ve/2015/texmf-dist/fonts/type1/public/amsfonts/latxfont/line10.pfb></usr/local/
+texlive/2015/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chb7m.pfb></usr/
+local/texlive/2015/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chb7t.pfb>
+</usr/local/texlive/2015/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chb7
+y.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/mathdesign/mdbch/m
+d-chr7m.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/mathdesign/m
+dbch/md-chr7t.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/mathde
+sign/mdbch/md-chr7v.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/
+mathdesign/mdbch/md-chr7y.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/p
+ublic/mathdesign/mdbch/md-chri7m.pfb></usr/local/texlive/2015/texmf-dist/fonts/
+type1/public/mathdesign/mdbch/md-chrma.pfb></usr/local/texlive/2015/texmf-dist/
+fonts/type1/public/cm-super/sfss0700.pfb></usr/local/texlive/2015/texmf-dist/fo
+nts/type1/public/wasy2-ps/wasy10.pfb>
+Output written on template.pdf (64 pages, 8006112 bytes).
 PDF statistics:
- 1157 PDF objects out of 1200 (max. 8388607)
- 1027 compressed objects within 11 object streams
- 248 named destinations out of 1000 (max. 500000)
- 70449 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 1678 PDF objects out of 1728 (max. 8388607)
+ 1485 compressed objects within 15 object streams
+ 339 named destinations out of 1000 (max. 500000)
+ 72106 words of extra memory for PDF output out of 74296 (max. 10000000)
 
