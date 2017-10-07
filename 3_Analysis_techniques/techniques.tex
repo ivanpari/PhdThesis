@@ -1,5 +1,7 @@
-\todo{Write introduction to this chapter}
+In order to disentangle the collisions coming from high energy experiments, the hadron collisions are disentangled. In \Sec{sec:PSmuRmuF}, the predictions behind hadrong collision at high energies are presented. These are used to generate events via Monte Carlo event generators, explained in \Sec{sec:eventgeneration}. 
+ Machine learning helps to disentangle signal- and background like events. In \Sec{sec:BDT}, the multivariate technique of boosted decision trees is explained. This yields powerfull discriminants for seperating signal and background events and provides distributions that go through template-based maximum likelihood fits. The fitting method used in the search presented in this thesis is discussed in \Sec{sec:Stat}. 
 \section{Hadron collisions at high energies}
+\label{sec:PSmuRmuF}
 In hadron collisions at as sufficiently high momentum transfer, all partons can be approximated as free  making it possible to treat hadron-hadron scattering as a single parton-parton interaction. The momentum of the parton can then be expresses as a fraction of the hadron momentum 
 \begin{equation}
  \vec{p}_{\mathrm{parton}} = x \vec{p}_{\mathrm{hadron}}, 
@@ -27,7 +29,7 @@ In the framework of this thesis, the NLO \texttt{PDF4LHC}15\_100 set is used. Th
 The resolution scale $Q^2$ is typically taken to be the energy scale of the collision. For the top quark pair production a scale of $Q^2=(350\: \GeV)^2$ is chosen, meaning that the centre-of-mass energy of the hard interaction is about twice the top quark mass.
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.7\linewidth]{3_Analysis_techniques/Figures/NNPDF30}
+	\includegraphics[width=1.\linewidth]{3_Analysis_techniques/Figures/NNPDF30}
 	\caption{The momentum fraction $x$ times the parton distribution functions $f(x)$, where $f=\Pup_{\mathrm{v}}, \Pdown_{\mathrm{v}} ,\APup,\APdown,\Pstrange,\Pcharm,$ or \Pgluon\ as function of the momentum fraction obtained in the NNLO \texttt{NNPDF3.0} global analysis at factorisation scales $\mu^2 = 10 \: \GeV^2$ (left) and $\mu^2=10^4 \: \GeV^2$ (right), with $\alpha_{\mathrm{S}}(M^2_{\PZ}) = 0.118$. The gluon PDF has been scaled down by a factor of 0.1. Figure taken from \cite{PDG}.}
 	%http://pdg.lbl.gov/2017/reviews/rpp2016-rev-structure-functions.pdf
 	% The higher value of the resolution scale $Q^2$, the smaller distances that are probed in the proton.
@@ -56,6 +58,7 @@ Leading order (LO) accuracy contains the minimal amount of vertices in the proce
 % zie thesis matthias p 21 bovenaan
 
 \section{Event generation}
+\label{sec:eventgeneration}
 In order to compare reconstructed data with theoretical predictions, collision events are generated and passed through a simulation of the CMS detector and an emulation of its readout. For the detector simulation, a so-called Full Simulation package~\cite{1742-6596-396-2-022003,1742-6596-664-7-072022}  based on the \Geant4 toolkit~\cite{AGOSTINELLI2003250} is employed. It allows a detailed simulation of the interactions of the particles with the detector material. 
 \subsection{Fundamentals of simulating a proton collision}
 The procedure of to generate $\Pproton\Pproton \rightarrow \mathrm{X}$ events can be subdivided into sequential steps~\cite{Seymour:2013ega,Sjostrand:2009ad,Hoche:2014rga}, as shown in \fig{fig:ppcollision}.
@@ -248,6 +251,7 @@ The complete list of \SM\ samples is given in Table \ref{tab:samples} \todocite,
 % ICHEP https://cds.cern.ch/record/2005743
 %\section{Event reconstruction}
 \section{Multivariate analysis techniques: Boosted Decision Trees}
+\label{sec:BDT}
 The need of processing large quantities of data and discriminating between events with largely similar experimental signatures makes multivariate statistical analysis (MVA) a largely used method in the physics community. Multivariate classification methods based on machine learning techniques are a fundamental ingredient to most analyses. The advantage of using a MVA classifier is that it can achieve a better discrimination power with respect to a simple cut and count analysis with a poorly discriminating variables. These variables are referred to as weak variables and have similar distributions for signal and background samples. 
 A risk of using MVA classifiers is overtraining.  This happens when there are too many model parameters of an algorithm adjusted to too few data points. This leads to an increase in the classification performance over the objectively achievable one.
 
@@ -327,7 +331,7 @@ At the LHC, the test statistic is defined as
 \begin{equation}
 q_{\mu} = -2\: \mathrm{ln} \: \frac{\like(\mathrm{data}|\:\mu, \hat{\theta}_{\mu})}{\like(\mathrm{data}|\:\hat{\mu} , \hat{\theta}_{\mu})}, 
 \end{equation}
-where the likelihood is maximised in the numerator for a given $\mu$ and (pseudo) data at $\hat{\theta}_{\mu}$, while $\hat{\mu}$ combined with $\hat{\theta}$ defines the point for which the likelihood reaches its global maximum. The estimated signal strength modifier $\hat{\mu}$ can not become negative since a signal rate is positive defined by physics. Furthermore, an upper constraint $\hat{\mu} \leq \mu$ is imposed to guarantee a one sided confidence interval. This has as consequence that upward fluctuations of the data ($\hat{\mu}>\mu$) are not considered against the signal hypothesis\footnote{The signal hypothesis is data with a signal with strength $\mu$.}.  %Note that this definition of the test statistic differs from what has been used at LEP (where “profiling” of systematic errors was not used) and at Tevatron (where systematic errors were profiled, but μ in the denominator was fixed at zero). See Appendix A for details. CMS AN -2011/298
+where the likelihood is maximised in the numerator (maximum likelihood estimator, MLE) for a given $\mu$ and (pseudo) data at $\hat{\theta}_{\mu}$, while $\hat{\mu}$ combined with $\hat{\theta}$ defines the point for which the likelihood reaches its global maximum. The estimated signal strength modifier $\hat{\mu}$ can not become negative since a signal rate is positive defined by physics. Furthermore, an upper constraint on the MLE $\hat{\mu} \leq \mu$ is imposed to guarantee a one sided confidence interval. This has as consequence that upward fluctuations of the data ($\hat{\mu}>\mu$) are not considered against the signal hypothesis of data with a signal with strength $\mu$.  %Note that this definition of the test statistic differs from what has been used at LEP (where “profiling” of systematic errors was not used) and at Tevatron (where systematic errors were profiled, but μ in the denominator was fixed at zero). See Appendix A for details. CMS AN -2011/298
 
 The criterion for excluding the signal at $1-\alpha$ confidence level is the ratio of the probabilities to observe a value of the test statistic at least as large as the one observed in data $q_{\mu}^{\mathrm{obs}}$, under the signal plus background ($s+b$) and background only ($b$) hypothesis is defined as
 \begin{equation}
@@ -345,7 +349,7 @@ and are generated with nuisance parameters fixed to $\hat{\theta}_{\mu=0}^{\math
 These values of the nuisance parameters for the background only $\hat{\theta}_{\mu=0}^{\mathrm{obs}}$ and signal plus background  $\hat{\theta}_{\mu}^{\mathrm{obs}}$ hypothesis that best describe the data are found by maximising the likelihood from \eq{eq:like}. The 95\% CL level upper limit on $\mu$ is achieved by adjusting $\mu$ until CL$ = 0.05$
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.7\linewidth]{3_Analysis_techniques/Figures/teststat}
+	\includegraphics[width=0.5\linewidth]{3_Analysis_techniques/Figures/teststat}
 	\caption{Test statistic distributions for pseudo data generated for the signal plus background ($\mu=1$) and background only ($\mu=0$) hypothesis. Figure taken from \cite{CMS-NOTE-2011-005}.}
 	\label{fig:pdf}
 \end{figure}
@@ -375,8 +379,47 @@ The expected median upper limit and the $\pm 1\sigma$ and $\pm 2 \sigma$ bands f
 134 to be evaluated only once for each trial value of μ, and the total number of evaluations is
 135 proportionaltoN+MinsteadofN·M.
 \end{comment}
-\subsubsection{Adding sources of uncertainty}
+\subsection{Adding sources of uncertainty}
 \label{sec:Nuis}
+In this thesis, all sources of uncertainties are assumed to be either 100\% correlated or uncorrelated. Partially correlated uncertainties are broken down to subcomponents that fit those requirements, allowing to include all constraints in the likelihoods in a clean factorised form. 
+
+ A systematic uncertainty pdf $\rho(\theta|\tilde{\theta})$ for the nuisance $\theta$ with nominal value $\tilde{\theta}$ is used.
+ It reflects the degree of belief of what the true value of the $\theta$ is.  In this thesis, the approach from the \texttt{Higgs Combined Tool} is used where the pdfs $\rho(\theta|\tilde{\theta})$ are re-interpret as posteriors of real or imaginary measurements $\tilde{\theta}$
+ \begin{equation}
+ 	\rho(\theta|\tilde{\theta}) \sim p(\theta|\tilde{\theta}) \: \pi_{\theta}(\theta),
+ \end{equation}
+ where $\pi_{\theta}(\theta)$ is the hyper prior for the (imaginary) measurements. For the pdfs used by the \texttt{Higgs Combine Tool} (normal, log normal, gamma distribution), hyper priors can remain flat. This allows to use the pdf $p(\theta|\tilde{\theta})$ to constrain the likelihood of the main measurement in a frequentist calculation. Additionally this allows to build a sampling distribution of the test statistic~\cite{CMS-NOTE-2011-005}. 
+ 
+ The statistical uncertainties on the Monte Carlo predicition in each bin are obtained following the  Barlow-Beeston-light approach~\cite{Conway:2011in}. In this approach a single Gaussian constrained nuisance parameter is assigned to scale the sum of the process yields in each bin, constrained by the total uncertainty. This method has as advantage that it minimises the number of parameters required in the maximum likelihood fit.
+ Considering $n_{\mathrm{tot}}$ events in a bin with background process i in the bin
+ \begin{equation}
+ n_{\mathrm{tot}} = \sum \limits_{\mathrm{i} \:\in \:\mathrm{bkg}} n_{\mathrm{i}},
+ \end{equation}
+ the total uncertainty $e_{\mathrm{tot}}$ is given by 
+ \begin{equation}
+ e_{\mathrm{tot}} = \sqrt{ \sum \limits_{\mathrm{i}\: \in\: \mathrm{bkg}} e_{\mathrm{i}}^2}, 
+ \end{equation}
+ with $ e_{\mathrm{i}}$ the uncertainty on background i and is given by the sum of  squares of weights used to fill the bins. The Gaussian constrained parameter $x$ has then a nominal value of zero and scales the yield as $n_{\mathrm{tot}}+x\:e_{\mathrm{tot}}$. \todo{Hoe is de stat unc op data behandeld?}
+ %https://indico.cern.ch/event/107747/contributions/32677/attachments/24367/35056/Conway-PhyStat2011.pdf
+ %http://w3.iihe.ac.be/~pvanlaer/RooStats/statistics_2012_part3_v9.pdf
+ 
+\subsubsection*{Choices of systematic uncertainty density functions}
+For uncertainties that are unconstrained by a priori measurements that do not involve the data going into the statistical analysis, flat priors are used. When there are a priori measurements available such as those from control regions, one can use either a Gaussian pdf,  a log-normal pdf, or a  gamma distribution. The Gaussian pdf is suited for describing uncertainties on parameters with both positive and negative values. This prior is however not suitable for positively defined observables such as cross sections, cut efficiencies, luminosity, etc and is not used in this thesis. An alternative option is the log normal pdf which is used in the rest of this thesis
+\begin{equation}
+  \rho(\theta) = \frac{1}{\sqrt{2\pi} \:\mathrm{ln}\;(\kappa)} \mathrm{exp}\left(-\frac{(\mathrm{ln}\:(\theta/\tilde{\theta}))^2}{2 (\mathrm{ln}\: \kappa)^2}\right) \frac{1}{\theta}. 
+\end{equation}
+The parameter $\kappa$ characterises the width of the log normal pdf. For example $\kappa = 1.10$ implies that the observable can be larger or smaller by a factor 1.10, both deviation having a chance of 16\%. The gamma distribution is used for describing statistical uncertainties associated with a number of Monte Carlo events in simulation or a number of observed events in a data control sample. In this thesis, the gamma distribution is only used for the latter. The event rate in the signal region $n$ is related to the number of events in the control region $N$ as $n= \alpha N$. Ignoring the uncertainties on $\alpha$, the predicted rate follows 
+\begin{equation}
+	\rho(n) = \frac{1}{\alpha} \frac{n/\alpha)^N}{N!} \mathrm{exp}(-n/\alpha). 
+\end{equation}
+The mapping between the posteriors $\rho(\theta|\tilde{\theta})$ and the auxiliary measurement pdfs $p(\tilde{\theta}|\theta)$ are given in \cite{CMS-NOTE-2011-005}.
+
+%The \texttt{Higgs Combined Tool} allows the overall expected rate of a particular process to float and include a Gaussian constraint on them. 
+
+\subsection{Asymptotic approximation of the CL method}
+\label{sec:NuisAsym}
+In order to significantly reduce computing time, the Asymptotic CL method is used. This method  avoids an ensemble of toy Monte Carlo samples and instead replaces it by one representative dataset, called Asimov dataset. This dataset is constructed such that all observed quantities are set equal to their MLE values ($\hat{\theta}_{\mathrm{Asimov}}= \theta_0$). More information about this procedure can be found in Refs. \cite{Cowan:2010js}. \todo{Ask explenation at Denys}
+%https://indico.cern.ch/event/74940/contributions/2088584/attachments/1047729/1493442/Wald-Asimov.pdf
 \subsection{Extracting the signal model parameters}
 From a scan of the profile likelihood ratio, 
 \begin{equation}
@@ -388,7 +431,7 @@ the signal model parameters are evaluated.  The likelihood is maximised by the p
 \end{equation}
 is called the best-fit set. 
 
-The 68\% and 95\% CL on a given parameter of interest $a_{\mathrm{i}}$ is then evaluated from $q(a_{\mathrm{i}}) = 1$ or $q(a_{\mathrm{i}}) = 3.84$ respectively, where all other unconstrained model parameters are treated in the same way as the nuisance parameters~\cite{CMS-PAS-HIG-12-020}. 
+The 68\% and 95\% CL on a given parameter of interest $a_{\mathrm{i}}$ is then evaluated from $q(a_{\mathrm{i}}) = 1$ or $q(a_{\mathrm{i}}) = 3.84$ respectively, where all other unconstrained model parameters are treated in the same way as the nuisance parameters~\cite{CMS-PAS-HIG-12-020}.  \todo{Ask explenation at Denys}
 
 
 
