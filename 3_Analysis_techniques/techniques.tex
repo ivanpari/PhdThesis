@@ -301,19 +301,98 @@ The discriminating power of a BDT is assessed by analysing the receiver operatin
 
 \section{Statistical methodology}
 \label{sec:Stat}
-The search performed in the framework of this thesis requires the simultaneous analysis of data from different decay channels. The statistical methodology used for this search is developped by the ATLAS and CMS collaborations in the context of the LHC Higgs Combination group. The description of the methodology can be found in Refs.~\cite{Chatrchyan:2012tx,Cowan:2010js,CMS-PAS-HIG-12-020,}.The \texttt{Higgs Combined Tool}~\cite{HiggsCombine} is a 
-\texttt{RooStats}~\cite{Moneta:2010pm} framework which runs different statistical methods.   In this section, only the statistical tools necessary for the performed search are described. 
+The search performed in the framework of this thesis requires the simultaneous analysis of data from different decay channels. The statistical methodology used for this search is developped by the ATLAS and CMS collaborations in the context of the LHC Higgs Combination group. The description of the methodology can be found in Refs.~\cite{Chatrchyan:2012tx,Cowan:2010js,CMS-PAS-HIG-12-020,CMS-NOTE-2011-005}. The \texttt{Higgs Combined Tool}~\cite{HiggsCombine} is a 
+\texttt{RooStats}~\cite{Moneta:2010pm} framework which runs different statistical methods. In this section, only the statistical tools necessary for the performed search are described. The results presented in this thesis are obtained using the asymptotic formulae~\cite{CLs}.
+
+In general the event yields of signal and background processes are denoted as $s$ and $b$ respectively. These represent event counts in multiple bins or for unbinned probability density functions . By use of simulation, predictions on both signal and background yields are made. These predictions are subject to multiple uncertainties that are accounted for by introducing nuisance parameters $\theta$ such that $s = s(\theta)$ and $b=b(\theta)$. In the following, the actual observed events are denoted as data or observation.
 
 \subsection{The absence of signal: limits}
+The absence of a signal is characterised in high energy physics by the Bayesian and modified classical frequentist statistical approaches. They allow to quantify the level of incompatibility of data with a signal hypothesis is terms of confidence  levels (CL). The convention is to require a 95\% CL for excluding a signal. 
 
+An analysis targeting a certain signal production mechanism can either set approximate model-independent limits on signal cross sections times branching ratio ($\sigma \times \BR$) or on the signal cross section times branching ratio times detector acceptance ($\sigma \times \BR \times \accept$). In order to test various theories, the latter is not useful unless the acceptance \accept\ is provided. However, many analysis are not able to present result in a from of limits  on $\sigma \times \BR (\times \accept)$, therefore an alternative is adopted to set limits in the signal strength modifier $\mu$. The signal strength modifier is defined to equally change all the cross sections of all production mechanisms of the signal by the same scale.  sections. 
+
+
+In this thesis, the modified frequentist approach confidence levels are used~\cite{JUNK1999435,0954-3899-28-10-313}. The classical frequentist  uses a test statistic $q_{\mu}$ based on the profile likelihood ratio to determine how signal- or background-like the data is. However, it does not allow nuisance parameters and is modified to incorporate these.
+First a likelihood $\like(\mathrm{data}|\:\mu,\theta)$ is constructed as
+\begin{equation}
+ \like(\mathrm{data}|\:\mu,\theta) = \mathrm{Poisson}(\mathrm{data}|\:\mu s(\theta)+b(\theta)) \; p(\tilde{\theta}|\theta).
+ \label{eq:like}
+\end{equation}
+The probability density function (pdf) $p(\tilde{\theta}|\theta)$ describes all sources of uncertainty and is described in \Sec{sec:Nuis}. The data in \eq{eq:like} represents either the actual observation or pseudo-data to construct sampling distributions. For a binned likelihood, the Poisson probabilities to observe $n_{\mathrm{i}}$ events in bin i is given as
+\begin{equation}
+ \mathrm{Poisson}(\mathrm{data}|\:\mu s(\theta)+b(\theta)) = \prod \limits_{\mathrm{i}} \frac{(\mu s_{\mathrm{i}}(\theta) + b_{\mathrm{i}}(\theta))^{n_{\mathrm{i}}}}{n_{\mathrm{i}}!} e^{-\mu s_{\mathrm{i}}(\theta)- b_{\mathrm{i}}(\theta)}.
+\end{equation}
+
+At the LHC, the test statistic is defined as 
+\begin{equation}
+q_{\mu} = -2\: \mathrm{ln} \: \frac{\like(\mathrm{data}|\:\mu, \hat{\theta}_{\mu})}{\like(\mathrm{data}|\:\hat{\mu} , \hat{\theta}_{\mu})}, 
+\end{equation}
+where the likelihood is maximised in the numerator for a given $\mu$ and (pseudo) data at $\hat{\theta}_{\mu}$, while $\hat{\mu}$ combined with $\hat{\theta}$ defines the point for which the likelihood reaches its global maximum. The estimated signal strength modifier $\hat{\mu}$ can not become negative since a signal rate is positive defined by physics. Furthermore, an upper constraint $\hat{\mu} \leq \mu$ is imposed to guarantee a one sided confidence interval. This has as consequence that upward fluctuations of the data ($\hat{\mu}>\mu$) are not considered against the signal hypothesis\footnote{The signal hypothesis is data with a signal with strength $\mu$.}.  %Note that this definition of the test statistic differs from what has been used at LEP (where “profiling” of systematic errors was not used) and at Tevatron (where systematic errors were profiled, but μ in the denominator was fixed at zero). See Appendix A for details. CMS AN -2011/298
+
+The criterion for excluding the signal at $1-\alpha$ confidence level is the ratio of the probabilities to observe a value of the test statistic at least as large as the one observed in data $q_{\mu}^{\mathrm{obs}}$, under the signal plus background ($s+b$) and background only ($b$) hypothesis is defined as
+\begin{equation}
+\mathrm{CL} = \frac{\mathrm{P}\left(q_{\mu} \geq q_{\mu}^{\mathrm{obs}}|\: \mu s + b\right)}{\mathrm{P}\left(q_{\mu} \geq q_{\mu}^{\mathrm{obs}}| \:b\right)} \leq \alpha.
+\end{equation}
+These probabilities are defined as 
+\begin{equation}
+\begin{aligned}
+  p_{\mu} &= \mathrm{P}\left(q_{\mu} \geq q_{\mu}^{\mathrm{obs}}|\: \mu s + b\right) = \int \limits_{q^{\mathrm{obs}}_{\mu}}^{\infty} f(q_{\mu}|\: \mu, \hat{\theta_{\mu}^{\mathrm{obs}}}) \:dq_{\mu}, \\
+  1-p_{b} &= \mathrm{P}\left(q_{\mu} \geq q_{\mu}^{\mathrm{obs}}|\:  b\right) = \int \limits_{q^{\mathrm{obs}}_{\mu=0}}^{\infty} f(q_{\mu}|\: \mu=0, \hat{\theta_{\mu=0}^{\mathrm{obs}}}) \:dq_{\mu}, 
+\end{aligned}
+\end{equation}
+where $ p_{\mu}$ and $ p_{b}$ are called the p-values associated to the two hypothesis, and  $f(q_{\mu}|\: \mu, \hat{\theta_{\mu}^{\mathrm{obs}}})$ and $f(q_{\mu}|\: \mu=0, \hat{\theta_{\mu=0}^{\mathrm{obs}}})$ are the pdfs of the signal plus background and background only hypothesis constructed from toy Monte Carlo pseudo data. These pdfs are shown in \fig{fig:pdf}
+and are generated with nuisance parameters fixed to $\hat{\theta}_{\mu=0}^{\mathrm{obs}}$ and $\hat{\theta}_{\mu}^{\mathrm{obs}}$.
+These values of the nuisance parameters for the background only $\hat{\theta}_{\mu=0}^{\mathrm{obs}}$ and signal plus background  $\hat{\theta}_{\mu}^{\mathrm{obs}}$ hypothesis that best describe the data are found by maximising the likelihood from \eq{eq:like}. The 95\% CL level upper limit on $\mu$ is achieved by adjusting $\mu$ until CL$ = 0.05$
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.7\linewidth]{3_Analysis_techniques/Figures/teststat}
+	\caption{Test statistic distributions for pseudo data generated for the signal plus background ($\mu=1$) and background only ($\mu=0$) hypothesis. Figure taken from \cite{CMS-NOTE-2011-005}.}
+	\label{fig:pdf}
+\end{figure}
+\begin{comment}
+	Note,
+that for the purposes of generating a pseudo-dataset, the nuisance parameters are
+fixed to the values θˆobs or θˆobs obtained by fitting the observed data, but are allowed μ0
+to float in fits needed to evaluate the test statistic. This way, in which the nuisance parameters are fixed to their maximum likelihood estimates, has good coverage properties [12].
+Note that we define pb as pb = P ( q ̃μ < q ̃μ | background-only), excluding the point q ̃μ = q ̃μ . With
+these definitions one can identify pμ with CLs+b and pb with 1 − CLb.
+
+If, for μ = 1, CLs ≤ α, we would state that the SM Higgs boson is excluded with (1 − α) CLs confidence level (C.L.). It is known that the CLs method gives conservative limits, i.e. the actual confidence level is higher than (1 − α). See Appendix A for more details.
+
+\end{comment}
+
+The expected median upper limit and the $\pm 1\sigma$ and $\pm 2 \sigma$ bands for a hypothesis is generated by a large set of pseudo data and calculate the CLs and the value of $\mu$ at 95\% CL for each of them. A cumulative probability distribution can be build by starting the integration from the side corresponding to low event yields. The median expected value is where the cumulative distribution function crosses the 50\% quantile. The $\pm 1 \sigma$ (68\%)  and $\pm 2\sigma$ (95\%) bands are defined by the crossings of the 16\% and 84\%, and 2.5\% and 97.5\% quantiles.
+\begin{comment}
+	Despite being logically very straightforward, this prescription is not too practical from
+126 the computational point of view due to the high CPU demand. If N is the number of
+127 “toys” being generated in the internal loop of calculations of the desired quantity and
+128 M is a number of pseudo-data sets for which such computation is performed, then the
+129 number of times the likelihoods would have to be evaluated in such a linear procedure is
+130 N·M.
+131 To save on the CPU consumption, we use the fact that the distributions of the test
+132 statistic for a given μ do not depend on the pseudo-data, so they can be computed only
+133 once. The computation of the p-values for each pseudo-data then requires the test statistic
+134 to be evaluated only once for each trial value of μ, and the total number of evaluations is
+135 proportionaltoN+MinsteadofN·M.
+\end{comment}
+\subsubsection{Adding sources of uncertainty}
+\label{sec:Nuis}
 \subsection{Extracting the signal model parameters}
-Asymptoct \cite{CLs}
-%\section{Statistics for a high energy particle physicist}
-%
+From a scan of the profile likelihood ratio, 
+\begin{equation}
+q(a) = -2\: \mathrm{ln} \: \frac{\like(\mathrm{obs}|\:s(a) + b, \hat{\theta}_{a})}{\like(\mathrm{obs}|\:s(\hat{a})  + b, \hat{\theta})}, 
+\end{equation}
+the signal model parameters are evaluated.  The likelihood is maximised by the parameters $\hat{a}$ and $\hat{\theta}$. The likelihood 
+\begin{equation}
+ \like_{\mathrm{max}} = \like(\mathrm{obs}|\:s(\hat{a}) + b, \hat{\theta})
+\end{equation}
+is called the best-fit set. 
 
-%\subsection{Boosted decision trees}
+The 68\% and 95\% CL on a given parameter of interest $a_{\mathrm{i}}$ is then evaluated from $q(a_{\mathrm{i}}) = 1$ or $q(a_{\mathrm{i}}) = 3.84$ respectively, where all other unconstrained model parameters are treated in the same way as the nuisance parameters~\cite{CMS-PAS-HIG-12-020}. 
+
+
+
+%http://cds.cern.ch/record/1460438/files/HIG-12-020-pas.pdf
 %\subsection{Confidence levels }
 
 %https://indico.cern.ch/event/614672/timetable/#20170907
-%\subsection{Combine limit setting tool}
-%\section{Collision event generation}
