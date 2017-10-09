@@ -155,44 +155,58 @@ The relative energy resolution of the ECAL for electrons is between 1.4-3\% in E
 %https://indico.cern.ch/event/632928/
 %http://cds.cern.ch/search?ln=en&cc=CMS+Reports&sc=1&p=tracker&f=title&action_search=Search
 % comparison with atlas https://cds.cern.ch/record/1563583/files/ATL-PHYS-PROC-2013-206.pdf
-The tracking system (tracker)~\cite{Chatrchyan:1704291} is the detecting unit closest to the point of interaction. Responsible for the reconstruction of  trajectories from charged particles with \abspsrap $<2.5$ that are bent by the magnetic field, it provides a measurement of the momentum. The tracker is also responsible for the determination of the interaction point or vertex. It should be able to provide high granularity as well as speed, and be able to endure high radiation. For this reason, the CMS collaboration choose silicon detector technology.
+The tracking system (tracker)~\cite{Chatrchyan:1704291} is the detecting unit closest to the point of interaction. Responsible for the reconstruction of  trajectories from charged particles with \abspsrap $<2.5$ that are bent by the magnetic field, it provides a measurement of the momentum. The tracker is also responsible for the determination of the interaction point or vertex. It should be able to provide high granularity as well as fast read out, and be able to endure high radiation. For this reason, the CMS collaboration choose silicon detector technology.
+
+%\begin{figure}[htbp]
+%	\centering
+%%	\includegraphics[width=\textwidth]{2_ExperimentalSetup/Figures/imageedit_3_5170744545}
+%	\includegraphics[width=1.\textwidth]{2_ExperimentalSetup/Figures/imageedit_11_9317262269}
+%%	\caption{Schematic cross section through the CMS tracker. Each line represents a detector module. Double lines indicate back-to-back modules\cite{Chatrchyan:2008aa}.}
+%  \caption{Schematic cross section of the top half of the CMS tracker system in the $rz$ plane. The centre of tracker is shown with a star and corresponds to the approximate position of the proton collision point. The green dashed lines are an indication for each named tracker subsystem. The strip tracker modules that provide two-dimensional hits are shown by thin, black lines, while those able to reconstruct three-dimensional hit positions are shown by thick, blue lines. The pixel modules, shown in red, also provide three-dimensional hits. Figure taken from \cite{Bayatian:2006zz}. }
+%	\label{fig:Tracker}
+%\end{figure}
 
 \begin{figure}[htbp]
 	\centering
-%	\includegraphics[width=\textwidth]{2_ExperimentalSetup/Figures/imageedit_3_5170744545}
-	\includegraphics[width=1.\textwidth]{2_ExperimentalSetup/Figures/imageedit_11_9317262269}
-%	\caption{Schematic cross section through the CMS tracker. Each line represents a detector module. Double lines indicate back-to-back modules\cite{Chatrchyan:2008aa}.}
-  \caption{Schematic cross section of the top half of the CMS tracking system in the $rz$ plane. The centre of tracker is shown with a star and corresponds to the approximate position of the proton collision point. The green dashed lines are an indication for each named tracker subsystem. The strip tracker modules that provide two-dimensional hits are shown by thin, black lines, while those able to reconstruct three-dimensional hit positions are shown by thick, blue lines. The pixel modules, shown in red, also provide three-dimensional hits. \cite{Bayatian:2006zz} }
+	%	\includegraphics[width=\textwidth]{2_ExperimentalSetup/Figures/imageedit_3_5170744545}
+	\includegraphics[width=1.\textwidth]{2_ExperimentalSetup/Figures/TRK}
+	\caption{Schematic cross section through the CMS tracker. Each line represents a detector module. Double lines indicate back-to-back modules that deliver stereo hits. Figure taken from \cite{Chatrchyan:2008aa}.}
 	\label{fig:Tracker}
 \end{figure}
 
- The tracking system consists of a cylinder of 5.8 \si{ \meter} long and 2.5 \si{ \meter} in diameter. It is immersed in a co-axial magnetic field of 3.8 \si{ \Tesla} due to the solenoid.
- As shown \fig{fig:Tracker}, the tracker is built up from a large silicon strip tracker with a small silicon pixel inside. 
- The inner region, pixel ($4.4<r<10.2$ \si{ \cm}), gets the highest flux of particles. Therefore, pixel silicon sensors of $100 \times 150$ \si{ \squared \micro \meter} aree used. It consists of three cylindrical barrels that are complemented by two discs of pixel modules at each side.
- The silicon strip tracker ($20<r<116$ \si{ \cm} ) has three subdivisions. The Tracker Inner Barrel  and Discs (TIB, TID, see \fig{fig:Trackpics}) are composed of four barrel layers accompanied by three discs at each end. The outer part of the tracker - Tracker Outer Barrel (TOB) -  consists  of 6 barrel layers. In the outer discs, there are nine discs of silicon sensors, referred to as Tracker End Caps (TEC). 
-  
- 
- The pixel, shown in \fig{fig:pix} has 1440 modules that cover an area of about 1 \si{ \square \meter} and have 66 million pixels. It provides a three-dimensional position measurement of the hits arising from the interaction from charged particles with the sensors. In transverse coordinate ($r\phi$), the hit position resolution is about 10 \si{ \micro \meter}, while 20-40 \si{ \micro \meter} is obtained in the longitudinal coordinate ($z$). The sensor plane position provides the third coordinate. 
-  The silicon strip trackers consists of 15 148 single sided modules placed in the TIB, TID and the first four rings of the TEC. They provide 9.3 million readout channels. In the TOB and the outer three rings of the TEC, double sided modules are used. These modules are constructed from two back-to-back single sided modules, where one module is rotated through a stereo angle.  This covers an active area of about 198 \si{ \square  \meter}. The TIB and TID provide position measurements in $r\phi$ with a resolution of approximately 13-38 \si{ \micro \meter}, while the TOB provides a resolution of about 18-47 \si{ \micro \meter}. The resolution in the  $z$ direction is approximately 230  \si{ \micro \meter} in the TIB/TID and 530  \si{ \micro \meter} in the TOB. To allow overlay and avoid gaps in acceptance, each module is shifted slightly in $r$ or $z$ with respect to its neighbouring modules within a layer.  With this detector lay out, at least nine points per charged particle trajectory can be measured in an \abspsrap range up to 2.4.
-  
+
+
+ The tracking system consists of a cylinder of 5.8~\meter\ long and 2.5~\meter\ in diameter. It is immersed in a co-axial magnetic field of 3.8~\Tesla\ provided by the solenoid.
+ As shown in \fig{fig:Tracker}, the tracker is built up from a large silicon strip tracker with a small silicon pixel tracker inside. 
+ The inner pixel region ($4.4<r<10.2$~\cm), gets the highest flux of particles. Therefore, pixel silicon sensors of $100 \times 150~\micro \meter^2$ are used. It consists of three cylindrical barrels that are complemented by two discs of pixel modules at each side.
+ The silicon strip tracker ($20<r<116$\cm) has three subdivisions. The Tracker Inner Barrel  and Discs (TIB, TID, see \fig{fig:Trackpics}) are composed of four barrel layers accompanied by three discs at each end. The outer part of the tracker - Tracker Outer Barrel (TOB) -  consists  of 6 barrel layers. In the outer discs, there are nine discs of silicon sensors, referred to as Tracker End Caps (TEC). 
   
        \begin{figure}[htbp]
-  	\centering
-  	\begin{minipage}[t]{0.5\textwidth}
-  		\includegraphics[width=\textwidth]{2_ExperimentalSetup/Figures/cmspixel}
-  		\caption{The pixel barrel being re-installed after the Long Shutdown in 2015, around the beam pipe at CMS~\cite{Christine:2024986}}
-  		\label{fig:pix}
-  	\end{minipage}
-  	\hfill
-  	\begin{minipage}[t]{0.4\textwidth}
-  		\includegraphics[width=\textwidth]{2_ExperimentalSetup/Figures/cmsbarrel}
-  		\caption{First half of the inner tracker barrel, consisting of three layers of silicon modules~\cite{beautiful:1998635}.}
-  			\label{fig:Trackpics}
-  	\end{minipage}
+ 	\centering
+ 	\begin{minipage}[t]{0.5\textwidth}
+ 		\includegraphics[width=\textwidth]{2_ExperimentalSetup/Figures/cmspixel}
+ 		\caption{The pixel barrel being re-installed after the Long Shutdown in 2015, around the beam pipe at CMS~\cite{Christine:2024986}}
+ 		\label{fig:pix}
+ 	\end{minipage}
+ 	\hfill
+ 	\begin{minipage}[t]{0.4\textwidth}
+ 		\includegraphics[width=\textwidth]{2_ExperimentalSetup/Figures/cmsbarrel}
+ 		\caption{First half of the inner tracker barrel, consisting of three layers of silicon modules~\cite{beautiful:1998635}.}
+ 		\label{fig:Trackpics}
+ 	\end{minipage}
+ 	
+ 	%	(from https://twiki.cern.ch/twiki/bin/view/CMSPublic/LumiPublicResults#Online_Luminosity_AN2 )
+ \end{figure}
+ 
+ The pixel, shown in \fig{fig:pix}, has 1440 modules that cover an area of about 1~\meter$^2$ and have 66 million pixels. It provides a three-dimensional position measurement of the hits arising from the interaction from charged particles with the sensors. In transverse coordinate ($r\phi$), the hit position resolution is about 10~\micro \meter, while 20-40~\micro \meter\ is obtained in the longitudinal coordinate ($z$). The sensor plane position provides the third coordinate. 
+ The TIB/TID, shown in \fig{fig:Trackpics}, delivers up to four $r\phi$-measurements using a 320~\micro\meter\ thick silicon micro-strip sensors. These sensors are placed with their strips parallel to the beam axis in the barrel and radial in the discs. In the TIB, the first two layers have a strip pitch of 80\micro \meter, while the remaining to have a strip pitch of 120~\micro\meter. This leads to a respective single point resolution of 23~\micro\meter\ and 35~\micro\meter. For the TID, the pitch varies between 100~\micro\meter and 141~\micro\meter. 
+ The TOB provides six $r\phi$-measurements with a single point resolutions of 53~\micro\meter\ in the first four layers, and 35~\micro \meter\ in the last two layers. It consists of 500~\micro\meter thick micor strip sensors with strip pitches of 183~\micro\meter\ (first 4 layers) or 122~\micro\meter\ (last two layers). The TEC provides up to 9 $\phi$-measurements via 9 discs consisting of up to 7 rings of silicon microstrip sensor of 97~\micro\meter to 184~\micro\meter average pitch.
+ 
+ A second co-ordinate measurement ($z$ in the barrel, $r$ on the discs) is provided through the use of a second micro strip detector module mounted back-to-back with a stereo angle of 100 mrad. This is done on the modules in the first two layers and rigns of the TIB, TID, and TOB, as wel as rigns 1,2, and 5 of the TECs (blue line in \fig{fig:Tracker}). The resolution in the  $z$ direction is approximately 230~\micro \meter\ in the TIB and 530~\micro \meter\ in the TOB, and is varying with pitch in the TID and TEC.  To allow overlay and avoid gaps in acceptance, each module is shifted slightly in $r$ or $z$ with respect to its neighbouring modules within a layer.  With this detector lay out, at least nine points per charged particle trajectory can be measured in an \abspsrap range up to 2.4, where at least four of them being two dimensional.
+ The CMS silicon tracker provides 9.3 million readout channels and covers an active area of about 198~\meter$^2$.  
   
-  	%	(from https://twiki.cern.ch/twiki/bin/view/CMSPublic/LumiPublicResults#Online_Luminosity_AN2 )
-  \end{figure}
   
+   
   
   
   
