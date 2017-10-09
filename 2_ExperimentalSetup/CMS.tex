@@ -185,7 +185,7 @@ The tracking system (tracker)~\cite{Chatrchyan:1704291} is the detecting unit cl
  	\centering
  	\begin{minipage}[t]{0.5\textwidth}
  		\includegraphics[width=\textwidth]{2_ExperimentalSetup/Figures/cmspixel}
- 		\caption{The pixel barrel being re-installed after the Long Shutdown in 2015, around the beam pipe at CMS~\cite{Christine:2024986}}
+ 		\caption{The pixel barrel being re-installed after the Long Shutdown in 2015, around the beam pipe at CMS~\cite{Christine:2024986}.}
  		\label{fig:pix}
  	\end{minipage}
  	\hfill
@@ -214,31 +214,29 @@ The tracking system (tracker)~\cite{Chatrchyan:1704291} is the detecting unit cl
 \subsection{Data acquisition}
 \label{sec:DAQ}
 % event display https://cds.cern.ch/record/2242076/files/DP2017_001.pdf
-At a design luminosity of 10$^{34}$ \si{ \per \square \meter \per \second}, the proton interaction rate exceeds 1 \si{ \giga \hertz}. This makes it impossible for the CMS experiment to store all the data generated. For this, a two level trigger system has been put in place. The first level (Level-1) is a custom hardware system, while a second level (HLT) is software based running on a large farm of computers. 
-In run II, with the increase in centre of mass energy and a higher luminosity, a larger number of simultaneous inelastic collisions per crossing is expected with respect to run I. For this, the CMS Level-1 has been upgraded~\cite{1748-0221-12-03-C03021}. 
+At a design luminosity of 10$^{34}\:\meter^{-2}\second^{-1}$, the proton interaction rate exceeds 1~\giga \hertz.  Given the large size of an event (about 1 MB), the high crossing rate, and that typically tens of collisions happen at the same time, it is impossible for the CMS experiment to store all the data generated. In order to deal with the large amount of data, a two level trigger system has been put in place. The first level (Level-1) is a custom hardware system, while a second high level trigger (HLT) is software based running on a large farm of computers. 
 
-\subsubsection*{CMS Level-1 trigger}
-The Level-1 trigger has to be a flexible, maintainable system, capable of adapting to the evolving physics programme of CMS~\cite{Khachatryan:2016bia}. Its output rate is restricted to 100 \si{ \kilo \hertz} imposed by the CMS readout electronics. It is implemented by custom hardware and selects events containing candidate objects - eg ionization deposits consistent with a muon, or energy clusters corresponding to an electron / photon / tau lepton / missing transverse energy / jet. Collisions with large momenta can be selected by using scalar sum of the transverse momenta of the jets. 
+
+\subsubsection*{CMS Level-1 Trigger}
+The Level-1 Trigger has to be a flexible, maintainable system, capable of adapting to the evolving physics programme of CMS~\cite{Khachatryan:2016bia}. Its output rate is restricted to 100 \si{ \kilo \hertz} imposed by the CMS readout electronics. It is implemented by custom hardware and selects events containing candidate objects - e.g. ionization deposits consistent with a muon, or energy clusters corresponding to an electron / photon / tau lepton / missing transverse energy / jet. Collisions with large momenta can be selected by using scalar sum of the transverse momenta of the jets. 
 
 \begin{comment}
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.5\linewidth]{2_ExperimentalSetup/Figures/imageedit_13_6388071145}
-	\caption{The CMS level 1 trigger system for run I. Data from the calorimeters are processed regionally (RCT) ad the globally (GCT). Data from the muon chambers are processed via a global muon trigger (GMT). A global trigger (GT) combines the GCT and GMT, making a trigger decision. Th data acquisition system (DAQ) reads data from the tracker (TRK) via the trigger, timing  and control (TTC) system \cite{Khachatryan:2016bia}.}
+	\caption{The CMS level 1 trigger system for Run 1. Data from the calorimeters are processed regionally (RCT) ad the globally (GCT). Data from the muon chambers are processed via a global muon trigger (GMT). A global trigger (GT) combines the GCT and GMT, making a trigger decision. Th data acquisition system (DAQ) reads data from the tracker (TRK) via the trigger, timing  and control (TTC) system \cite{Khachatryan:2016bia}.}
 	\label{fig:level1}
 \end{figure}
 \end{comment}
 
-By buffering the raw data from the CMS subdetectors in front-end drivers, the level-1 trigger has a pipeline memory of 3.2 \si{ \micro \second} to decide whether to keep an event or reject it. 
+By buffering the raw data from the CMS subdetectors in front-end drivers, the Level-1 Trigger has a pipeline memory of 3.2 \si{ \micro \second} to decide whether to keep an event or reject it. 
 %In \fig{fig:level1} the structure of the trigger is shown. 
-The trigger primitives (TP) from the calorimeters and muon detectors are processed in several steps and combined into a global trigger. This information is then combined with the input from the other subsystems for the HLT. The separate inputs are synchronized to each other and the LHC orbit clock and sent to the global trigger module. Here, level-1 trigger algorithms are performed within 1 \si{ \micro \second} to decide whether to  keep the event. 
+The trigger primitives (TP) from the calorimeters and muon detectors are processed in several steps and combined into a global trigger. This information is then combined with the input from the other subsystems for the HLT. The separate inputs are synchronized to each other and the LHC orbit clock and sent to the global trigger module. Here, Level-1 Trigger algorithms are performed within 1 \si{ \micro \second} to decide whether to  keep the event. 
 
-For run II, all hardware, software, databases and the timing control system have been replaced. The main changes are that the muon system now uses the redundancy of three muon detector system earlier to make a high resolution muon trigger. Other upgrades are that the calorimeter system isn't bound any more for streaming data the data and the global trigger has more level-1 trigger algorithms. 
-% see https://indico.cern.ch/event/432527/contributions/1072399/attachments/1320545/1980311/ichep2016.pdf
 
-\subsubsection*{CMS HLT trigger}
-The HLT is an array of commercially available computers with programmable menu that has output rate of on average 400 \si{ \hertz} for off-line event storage.
-The data processing is based on a HLT path. This is a  set of algorithmic steps to reconstruct objects and make selections on them.  Here, the information of all sub detectors can be used to perform algorithms on higher level reconstructed objects. 
+\subsubsection*{CMS HLT Trigger}
+The HLT is an array of commercially available computers with a programmable menu that has an output rate of on average 400 \si{ \hertz} for off-line event storage.
+The data processing is based on an HLT path. This is a  set of algorithmic steps to reconstruct objects to define selection criteria.  Here, the information of all subdetectors can be used to perform algorithms on higher level reconstructed objects. 
 %(FIXME: tracker in hlt or already in L1? )
 
 \subsection{Phase 1 upgrades}
@@ -249,49 +247,59 @@ During the LS1, the  muon system underwent major upgrades~\cite{Guiducci:1966038
 At the innermost rings of the first station, the CSCs have been upgraded by refurbishing the readout electronics to make use of the full detector granularity instead of groups of three as was the case for Run 1. In \fig{fig:muonsys} (right), the refurbishing of the CSCs is shown.
 % also see https://indico.cern.ch/event/308134/sessions/59604/attachments/588148/809429/Lecture.pdf
 
-Since thee HF experiences intense particle fluxes, it became clear during Run 1 that the glass windows of the PMTs need replacing. For the ECAL in Run 1, the energy reconstruction happened  via a weighted sum of the digitized samples~\cite{Chatrchyan:2013dga}. For Run 2 however, the reconstruction had to be made more resistant for out of time pile up and a multi-fit approach has been set into place. In this approach, the pulse shape is modelled as a sum of one in-time pulse plus the out of time pulses \cite{1748-0221-12-01-C01069}. The energy resolution is better than 2\%  in the central barrel region and 2-5 \% elsewhere.
+Since the HF experiences intense particle fluxes, it became clear during Run 1 that the glass windows of the PMTs need replacing. For the ECAL in Run 1, the energy reconstruction happened  via a weighted sum of the digitized samples~\cite{Chatrchyan:2013dga}. For Run 2 however, the reconstruction had to be made more resistant for out of time pile up and a multi-fit approach has been set into place. In this approach, the pulse shape is modelled as a sum of one in-time pulse plus the out of time pulses~\cite{1748-0221-12-01-C01069}. The energy resolution is better than 2\%  in the central barrel region and 2-5 \% elsewhere.
 % https://indico.cern.ch/event/477407/contributions/2305075/attachments/1368970/2075215/hc16-edm.pdf
 % see http://iopscience.iop.org/article/10.1088/1748-0221/12/01/C01069/pdf at vub
 % http://www.bo.infn.it/sminiato/sm16/03_Mercoledi/Sera/08_Brianza.pdf
 % https://indico.cern.ch/event/472938/contributions/1150724/attachments/1273518/1888397/ECALEnergyOverview_CALOR.pdf
 %https://inspirehep.net/record/1344855/files/10.1088_1742-6596_587_1_012001.pdf
 
- During the first data taking period of the LHC (2010 to 2013), the tracker operated at +4\si{ \degree C}. With the higher LHC beam intensities from 2015 onwards, the tracker needs to be operated at much lower temperatures. This is due to the fact with intense irradiation, the doping concentration changes, the leakage current increases proportional to the fluence and the charge collection efficiency decreases due to charge trapping. Mostly the leakage current (I) is affected by the temperature change: 
+ During the first data taking period of the LHC (2010 to 2013), the tracker operated at +4\si{ \degree C}. With the higher LHC beam intensities from 2015 onwards, the tracker needs to be operated at much lower temperatures. The reason for this is that with intense irradiation, the doping concentration changes, the leakage current increases proportional to the fluence and the charge collection efficiency decreases due to charge trapping. Mostly the leakage current (I) is affected by the temperature change: 
 \begin{equation}
 I \propto T^2 e^{-\frac{E_g}{2kT}}, 
 \end{equation}
 where $T$ is the operating temperature, $E_g$ the band gap and $k$ the Boltzmann constant. There is approximately a factor 15 between the leakage currents at room temperatures and at $-10$ \si{ \degree C}. 
 % see http://www.hephy.at/user/friedl/diss/html/node14.html
 
-During the LS1, the CMS cooling plant was refurbished\cite{running:1998606}(\fig{fig:TrackLS1}) and the fluorocarbon cooling system overhauled. To help to suppress the humidity inside the tracker, new methods for vapour sealing and insulation were applied (\fig{fig:TrackLS11}. Furthermore, several hundred high-precision sensors are used to monitor the humidity and temperature. In order to get as dry air as possible, a new dry-gas plant provides eight times more dry gas (air or nitrogen) than during the first run, and allows regulation if the flow. As final addition, the cooling bundles outside the tracker are equipped with heater wires and temperature sensors in order to maintain safe operations above the cavern dew point For the data taking in 2015-2016, the tracker operated at $-15$\si{ \degree C}.
+During the LS1, the CMS cooling plant was refurbished~\cite{running:1998606} and the fluorocarbon cooling system overhauled. To help to suppress the humidity inside the tracker, new methods for vapour sealing and insulation were applied. Furthermore, several hundred high-precision sensors are used to monitor the humidity and temperature. In order to get as dry air as possible, a new dry-gas plant provides eight times more dry gas (air or nitrogen) than during the first run, and allows regulation of the flow. As a final addition, the cooling bundles outside the tracker are equipped with heater wires and temperature sensors in order to maintain safe operations above the cavern dew point. For the data taking in 2015-2016, the tracker operated at $-15$\si{ \degree C}.
 
-\begin{figure}[htbp]
-	\centering
-	\begin{minipage}[t]{0.4\textwidth}
-		%	\includegraphics[width=\textwidth]{2_ExperimentalSetup/Figures/Tracker_bulkhead}
-		\includegraphics[width=\textwidth]{2_ExperimentalSetup/Figures/BHIsis}
-		\caption{Tracker bulkhead being put into closed state with insulation pieces installed during an early trial in fall 2013}
-		\label{fig:TrackLS11}
-	\end{minipage}
-	\hfill
-	\begin{minipage}[t]{0.59\textwidth}
-		%		\includegraphics[width=\textwidth]{2_ExperimentalSetup/Figures/IMG_0138}
-		%	\caption{Tracker service racks containing the electronics coming from the tracking systems.}
-		
-		\includegraphics[width=\textwidth]{2_ExperimentalSetup/Figures/plant}
-		\caption{New Tracker high-capacity dry-gas plant with membrane separation system~\cite{Pralavorio:2024977}.}
-		\label{fig:TrackLS1}
-	\end{minipage}
-	
-	%	(from https://twiki.cern.ch/twiki/bin/view/CMSPublic/LumiPublicResults#Online_Luminosity_AN2 )
-\end{figure}
+%\begin{figure}[htbp]
+%	\centering
+%	\begin{minipage}[t]{0.4\textwidth}
+%		%	\includegraphics[width=\textwidth]{2_ExperimentalSetup/Figures/Tracker_bulkhead}
+%		\includegraphics[width=\textwidth]{2_ExperimentalSetup/Figures/BHIsis}
+%		\caption{Tracker bulkhead being put into closed state with insulation pieces installed during an early trial in fall 2013}
+%		\label{fig:TrackLS11}
+%	\end{minipage}
+%	\hfill
+%	\begin{minipage}[t]{0.59\textwidth}
+%		%		\includegraphics[width=\textwidth]{2_ExperimentalSetup/Figures/IMG_0138}
+%		%	\caption{Tracker service racks containing the electronics coming from the tracking systems.}
+%		
+%		\includegraphics[width=\textwidth]{2_ExperimentalSetup/Figures/plant}
+%		\caption{New Tracker high-capacity dry-gas plant with membrane separation system~\cite{Pralavorio:2024977}.}
+%		\label{fig:TrackLS1}
+%	\end{minipage}
+%	
+%	%	(from https://twiki.cern.ch/twiki/bin/view/CMSPublic/LumiPublicResults#Online_Luminosity_AN2 )
+%\end{figure}
+In Run 2, with the increase in centre of mass energy and a higher luminosity, a larger number of simultaneous inelastic collisions per crossing is expected with respect to Run 1. For this, the CMS Level-1 has been upgraded~\cite{1748-0221-12-03-C03021}. All hardware, software, databases and the timing control system have been replaced for Run 2, where the main changes are that the muon system now uses the redundancy of the muon detector system earlier to make a high resolution muon trigger. Other upgrades are that the calorimeter system isn't bound any more for streaming data  and the global trigger has more Level-1 Trigger algorithms. 
+% see https://indico.cern.ch/event/432527/contributions/1072399/attachments/1320545/1980311/ichep2016.pdf
 
 
-After the first half of Run 2, the innermost part of detection material in CMS (pixel) was upgraded by adding a fourth layer , enhancing the particle tracking capabilities of CMS. The data used in the framework of this thesis however is from before this upgrade. 
 
+After the first half of Run 2, the innermost part of detection material in CMS (pixel) was upgraded by adding a fourth layer , enhancing the particle tracking capabilities of CMS. The data used in the framework of this thesis however is from before this upgrade. More information on the Pixel upgrade can be found in Refs. \cite{CMS:2012sda,Perrey:1644757}.
+% http://cds.cern.ch/record/1644757/files/CR2014_005.pdf
+%http://inspirehep.net/record/1193236/files/CMS-TDR-011.pdf
 
 \subsection{CMS computing model}
 \label{sec:Computing}
-The selected data is stored, processed and dispersed via the Worldwide Large Hadron Collider GRID (WLCG)\cite{Grandi:814248,Eck:840543}. This has a tiered structure that function as a single, coherent system:. 
+The selected data is stored, processed and dispersed via the Worldwide Large Hadron Collider GRID (WLCG)~\cite{Grandi:814248,Eck:840543}. This has a tiered structure that functions as a single, coherent system. 
 
-At CERN, a single Tier-0 is located. The raw data collected by CMS is archived here, and a first reconstruction of the data is done. This data is then already in a file format usable for physics analysis. Furthermore, it is able to reprocess data when new calibrations are made available. The Tier-0 site distributes this data to a total of seven Tier-1 centres. They carry out data reprocessing and store real data as well as simulated  data. The Tier-1 further distribute the data to over 50 Tier-2 centres. These make the data accessible for physics analysis and are also being used for the production of simulated data. The data is made accessible for  physicists around the world. 
+At CERN and the Wigner Research Center for physics, a single Tier-0 is located. The raw data collected by CMS is archived here, and a first reconstruction of the data is done. This data is then already in a file format usable for physics analysis. Furthermore, it is able to reprocess data when new calibrations become available. The Tier-0 site distributes this data to a total of 14 Tier-1 centres. They carry out data reprocessing and store real data as well as simulated  data. The Tier-1 further distributes the data to over 150 Tier-2 centres. These make the data accessible for physics analysis and are also being used for the production of simulated data. The data is made accessible for  physicists around the world. 
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=1.\linewidth]{2_ExperimentalSetup/Figures/WLHCG}
+	\caption{Worldwide LHC Computing Grid in 2017~\cite{WLCG}.}
+	\label{fig:wlhcg}
+\end{figure}
