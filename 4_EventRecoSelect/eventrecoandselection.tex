@@ -1,4 +1,4 @@
-After the detector simulation described in \Sec{sec:eventgeneration}, the simulated data has the exact same format as the real collision data recorded at the CMS experiment. Therefore the same software can be used for the reconstruction of both simulation and real data. In \Sec{sec:reco}, the event reconstruction for physics analysis is shown. After reconstructing events, a basic event selection is made for selecting signal like events. The necesarry event requirement are discussed in \Sec{sec:selection}. 
+After the detector simulation described in \Sec{sec:eventgeneration}, the simulated data has the exact same format as the real collision data recorded at the CMS experiment. Therefore the same software can be used for the reconstruction of both simulation and real data. In \Sec{sec:reco}, the event reconstruction for physics analysis is shown. After reconstructing events, the objects need to be identified. This identification is explained in \Sec{sec:reco}. A basic event selection is made for selecting signal like events. The necessary event requirement are discussed in \Sec{sec:selection}. 
 
 The analysis uses signal and background regions to constrain the huge \SM\ background compared to the expected signal. \Sec{sec:regions} discusses each region that is entering the analysis. On top of the use of background estimation from control regions, backgrounds that have  prompt leptons  contaminated by real leptons either
 from decays of tau leptons or from hadronized mesons or baryons
@@ -7,28 +7,33 @@ hadrons or jets misidentified as leptons\footnote{These two classes
 of contamination will be referred to as not prompt-lepton (\NPL) samples.} are
 evaluated with a data-driven method discussed in \Sec{sec:NPL}.
 
-\section{Event reconstruction}
+\section{Event Reconstruction}
 \label{sec:reco}
 
+\subsection{Tracking the particles}
 %http://slideplayer.com/slide/2779564/
 %http://slideplayer.com/slide/4496166/
-\subsubsection*{Muon reconstruction}
+\subsubsection*{In the footsteps of the Muons}
 % see http://www.bo.infn.it/sminiato/sm16/03_Mercoledi/Mattina/01_Battilana.pdf
 % see https://arxiv.org/pdf/1510.05424.pdf
 % see https://twiki.cern.ch/twiki/bin/view/CMSPublic/MuonDPGPublic160729
-The muon reconstruction~\cite{Chatrchyan:2012xi} has three subdivisions: local reconstruction, regional reconstruction and global reconstruction. 
-The local reconstruction is performed on individual detector elements such as strip and pixel hits in the inner tracking system, and muon hits and/or segments in the muon chambers. Independent tracks are reconstructed in the inner tracker - called tracker tracks -  and in the muon system, called standalone tracks.
+The muon reconstruction~\cite{Chatrchyan:2012xi} has three subdivisions: local reconstruction, regional reconstruction and global reconstruction. The local reconstruction is performed on individual detector elements such as strip and pixel hits in the inner tracking system, and muon hits and/or segments in the muon chambers. Independent tracks are reconstructed in the inner tracker - called tracker tracks -  and in the muon system, called standalone tracks.
 Based on these tracks, two reconstructions are considered.
+
 The outside-in approach is referred to as Global Muon reconstruction. 
 For each standalone track, a tracker track is found by comparing the parameters of the two tracks propagated onto a common surface. Combining the hits from the tracker track and the standalone track, gives a fit via the Kalman filter technique~\cite{FRUHWIRTH1987444,Billoir:1989mh} for a global muon track. 
-The second approach is an inside-out reconstruction, creating tracker muons. 
-All candidate tracker tracks are extrapolated to the muon system taking into account the magnetic field, the average expected energy losses, and multiple Coulomb scattering in the detector material. When at least one muon segment - DT or CSC hits -  matches the extrapolated track, the corresponding tracker track is indicated as a tracker muon. 
 
-For low transverse momenta ($p_T \lesssim$ 5 \si{ \GeV}), the tracker muon reconstruction is  more efficient than the global muon approach. This is due to the fact that tracker muons only require a single muon  segment in muon system, while the global muon approach requires typically segments in at least two muon stations. The global muon approach typically improves the tracker reconstruction for $p_T\gtrsim$ 200 \si{ \GeV}.
-\subsubsection*{Track reconstruction}
+The second approach is an inside-out reconstruction, creating tracker muons. 
+All candidate tracker tracks with a \trimpuls$>0.5$ \GeV and total momentum p$>2.5$ \GeV are extrapolated to the muon system taking into account the magnetic field, the average expected energy losses, and multiple Coulomb scattering in the detector material. When at least one muon segment - DT or CSC hits -  matches the extrapolated track, the corresponding tracker track is indicated as a tracker muon. 
+
+For low transverse momenta ($\trimpuls \lesssim$ 5~\GeV), the tracker muon reconstruction is  more efficient than the global muon approach. This is due to the fact that tracker muons only require a single muon  segment in muon system, while the global muon approach requires typically segments in at least two muon stations. These tracker muons are used for identifying muons from the hadronisation of \Pbottom or \Pcharm  quarks. The global muon approach typically improves the tracker reconstruction for $\trimpuls\gtrsim$ 200~\GeV. These are labelled isolated when in a cone of $\Delta R = \sqrt{\Delta\phi^2 + \Delta \eta^2} = 0.3$ around the muon, the sum of the transverse momenta of additional tracker tracks and energy deposits in the calorimeter is less than 10\% of the muon's transverse momentum.
+\subsubsection*{The path of the Electron}
 % see also https://arxiv.org/pdf/physics/0512097.pdf
 % https://cds.cern.ch/record/1563583/files/ATL-PHYS-PROC-2013-206.pdf
 % http://cds.cern.ch/record/1704291
+
+The electrons in CMS radiate more than 70\% of their energy in the inner track through bremsstrahlung before reaching the ECAL. This has as consequence that the electron tracks are increasingly curved in the magnetic field as a function of its flight distance. Standard tracking algorithms are based and Kalman filtering where the assumed energy loss is Gaussian distributed, and are therefore not suitable to fit the electron tracks. A different filtering algorithm, the Gaussian sum filter (GSF) \todocite is used in the electron track reconstruction instead. 
+
 
 An iterative tracking algorithm is responsible for the reconstruction of the tracks made by charged particles in the inner tracking system. Each iteration consists of four steps~\cite{Bayatian:922757}: the track-seed generation, the pattern recognition algorithm, removal of track-hit ambiguities and a final track fit. 
 
@@ -42,12 +47,29 @@ For muons, this results in a global track reconstruction efficiency exceeding 98
 %Due to the lack of coverage of the two pixel discs in high \abspsrap range, the efficiency drops. 
 %The resolution on the transverse momentum for a 100 \si{ \GeV} charged particle is about 2.0\% (FIX ME). 
 % see https://twiki.cern.ch/twiki/bin/view/CMSPublic/TrackingPOGPlots2016
-\subsubsection*{Primary vertex reconstruction}
+\subsection{Primary Vertex Reconstruction}
 The primary vertex reconstruction should be able to measure the location of all proton interaction vertices in each event: the signal vertex an all vertices from pile up events. 
 It consists of a vertex finding and a vertex fitting algorithm and happens in three steps. Tracks are selected  to be consistent with being produced promptly in the primary interaction by imposing requirements on the track parameters~\cite{Chatrchyan:1704291}. By grouping reconstructed tracks according to the $z$ coordinate of their closest approach to the beam line, vertices for all interaction in the same beam crossing are found, at CMS this is done by a deterministic annealing algorithm~\cite{726788} . On top of this, a vertex fitting algorithm like the Adaptive Vertex fitter~\cite{Waltenberger:1166320}, is performed. This creates the three-dimensional primary-vertex position. With this fit, the contribution from long-lived hadron decays is reduced by down weighting the tracks with a larger distance to the vertex. The primary vertex corresponding to the highest sum of squared track transverse momenta is noted as the point of the main interaction. The resolution on the primary vertex is about 14 \si{ \micro \meter} in $r\phi$ and about 19 \si{ \micro \meter} in the $z$ direction for primary vertices with the sum of the track $p_T > 100$ \si{ \GeV} for 2016 data taking.
 % numbers from https://twiki.cern.ch/twiki/bin/view/CMSPublic/TrackingPOGPlotsICHEP2016
 
 
+\subsection{Particle Flow}
+
+\section{Event Identification}
+\label{sec:ID}
+\subsection{Muons}
+
+\subsection{Electrons}
+
+\subsection{Jets}
+
+\subsubsection*{Jets from b-quarks}
+
+\subsection{Missing transverse energy}
+
+\subsection{Luminosity}
+
+\subsection{Summary of corrections}
 
 \begin{comment}
 % Jet energy scale and resolution in the CMS experiment in pp collisions at 8 TeV
@@ -82,6 +104,8 @@ It consists of a vertex finding and a vertex fitting algorithm and happens in th
 \subsection{Calibrations and corrections}
 %CMS has been taking collision data since the 13TeV startup of the LHC on 3 June. During this period, the CMS magnet has been kept off due to an issue with the cooling system, so the beams have been used to calibrate and time-in the electronics of the various parts of the detector. These operations, which are largely independent of the magnetic field, are now complete. Meanwhile, the data collected with zero magnetic field can be used for fundamental research, like the measurement of the multiplicity of charged particles produced at the new collision energy of 13 TeV. The issue with the magnet cooling system was identified in the final preparatory phase leading to collisions in the LHC. While preparing for beam in CMS, a problem was found in the system that feeds liquid helium to the CMS superconducting magnet. The problem was diagnosed to be due to oil, which is used in the initial compression stages, reaching the so-called 'cold-box’ of the cryogenic system. The cold-box is a complex system with several sets of filters protecting three turbines along the path of the helium towards the magnet. In order to clean the oil contamination essentially all components of the cold-box have been extracted and replaced. Analysis confirms that there is no oil contamination in the CMS magnet itself or risk to its operation during 2015. The cold-box of is now being stabilised after the cleaning intervention and is being brought back to operational conditions. CMS is confident that, following the LHC technical stop and the beam conditioning run that will start at the end of this week, after the low-intensity and commissioning period, the full magnetic field will be available for the 13 TeV LHC run.
 \end{comment}
+
+
 
 
 
