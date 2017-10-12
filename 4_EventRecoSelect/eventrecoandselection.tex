@@ -1,4 +1,4 @@
-After the detector simulation described in \Sec{sec:eventgeneration}, the simulated data has the exact same format as the real collision data recorded at the CMS experiment. Therefore the same software can be used for the reconstruction of both simulation and real data. In \Sec{sec:reco}, the event reconstruction for physics analysis is shown. After reconstructing events, the objects need to be identified. This identification is explained in \Sec{sec:reco}. A basic event selection is made for selecting signal like events. The necessary event requirement are discussed in \Sec{sec:selection}. 
+After the detector simulation described in \Sec{sec:eventgeneration}, the simulated data has the exact same format as the real collision data recorded at the CMS experiment. Therefore the same software can be used for the reconstruction of both simulation and real data. In \Sec{sec:reco}, the object reconstruction for physics analysis is shown. After reconstructing the objects, the objects are connected to physics objects need to be identified. This identification is explained in \Sec{sec:id}. A basic event selection is made for selecting signal like events. The necessary event requirement are discussed in \Sec{sec:selection}. 
 
 The analysis uses signal and background regions to constrain the huge \SM\ background compared to the expected signal. \Sec{sec:regions} discusses each region that is entering the analysis. On top of the use of background estimation from control regions, backgrounds that have  prompt leptons  contaminated by real leptons either
 from decays of tau leptons or from hadronized mesons or baryons
@@ -7,7 +7,7 @@ hadrons or jets misidentified as leptons\footnote{These two classes
 of contamination will be referred to as not prompt-lepton (\NPL) samples.} are
 evaluated with a data-driven method discussed in \Sec{sec:NPL}.
 
-\section{Event Reconstruction}
+\section{Object Reconstruction}
 \label{sec:reco}
 In \fig{fig:transversecms}, the particle interaction in a transverse slice of the CMS detector is shown. The particles enter first the tracker where charged particle trajectories, so-called tracks, and origins or vertices are reconstructed from signals (hits) in the sensitive layers. Charged particles get bent by the magnetic field making it able to measure the electric charges and momenta of charged particles. In the ECAL, the electron and photons are absorbed and the corresponding electromagnetic showers are detected as clusters of energy in adjacent  cells.From this, the energy and the direction of the particles can be determined. The charged and neutral hadrons can initiate a hadronic shower in the ECAL that is fully absorbed in the HCAL. The clusters from these showers are also used to estimate the energy and direction. Muons and neutrino's pass through the calorimeters without little to no energy loss. The neutrino's escape the CMS detector undetected while muons produce hits in the muon detectors. 
 \begin{figure}
@@ -18,7 +18,7 @@ In \fig{fig:transversecms}, the particle interaction in a transverse slice of th
 \end{figure}
 
 The traditional hadron colliders reconstruction is as follows. The reconstruction of isolated photons and electrons is primarily done by the ECAL, while the identification of muons is based on the muon detectors. Hadrons and photons form jets which are measured by the calorimeters without any contribution from the tracker or muon detectors. Jets can be tagged using the tracker as coming from hadronic \Ptau\ decays or \Pbottom\ hadronisation based on the properties of the properties the relevant charged particle tracks. The missing transverse energy is defined as the vectorial sum of the undetectable particle transverse momenta, and can be reconstructed without any information from the tracker. 
-The particle flow (PF)~\cite{CMS-PRF-14-001} reconstruction correlates the tracks and clusters from all detector layers with the identification of each final state particle, and combining the corresponding measurements to reconstruct the properties. Here, the muon is identified by a track in the inner tracker connected to a track in the muon detector as described in \Sec{sec:MuonTrack}. The electrons are identified by a track and ECAL cluster, and not connected to an HCAL cluster as described in \Sec{sec:ElectronTrack}. The ECAL and HCAL clusters without a track link identify the photons and neutral hadrons, while the addition of the tracker determines the energy and direction of a charged hadron. The identification of hadrons and photons is described in \Sec{sec:Hadron}.
+The particle flow (PF)~\cite{CMS-PRF-14-001} reconstruction correlates the tracks and clusters from all detector layers with the identification of each final state particle, and combining the corresponding measurements to reconstruct the properties. Here, the muon is identified by a track in the inner tracker connected to a track in the muon detector as described in \Sec{sec:MuonTrack}. The electrons are identified by a track and ECAL cluster, and not connected to an HCAL cluster as described in \Sec{sec:ElectronTrack}. The ECAL and HCAL clusters without a track link identify the photons and neutral hadrons, while the addition of the tracker determines the energy and direction of a charged hadron. 
 
 
 Coarse-grained detectors can cause signals of different particles to merge and reduce the ability of identifying and reconstructing the particles. Therefore, particle flow identification requires sufficiently segmented subdetectors such that a global event description is possible. From a list of identified particles that are reconstructed from a combined fit of all relevant measurements, the physics objects are determined. The CMS detector is built to meet to requirements of the particle flow reconstruction. It has an efficient and pure muon identification system, a hermetic HCAL with coarse segmentation, a higher segmented ECAL, a fine-grained tracker and a large magnetic field to separate the calorimeter deposits of charged and neutral particles in jets. 
@@ -27,7 +27,6 @@ Coarse-grained detectors can cause signals of different particles to merge and r
 %http://slideplayer.com/slide/4496166/
 \subsection{Charged particle tracks}
 An iterative tracking algorithm is responsible for the reconstruction of the tracks made by charged particles in the inner tracking system. Each iteration consists of four steps~\cite{Bayatian:922757}: the track-seed generation, the pattern recognition algorithm, removal of track-hit ambiguities and a final track fit. 
-
 
 The seed generation is the first step. It consists of finding reconstructed hits that are usable for seeding the subsequent track-finding algorithm. They are identified from a group of at least three reconstructed hits in the tracker, or from a pair of hits while requiring the origin of the track segment to be compatible with the nominal beam-collision point. Since the pixel has a higher granularity compared to the strip tracker, its seed generation efficiency is higher. The overall efficiency exceeds 99\%.
 The second step of each iteration, the pattern recognition algorithm, uses the seeds as a starting point for a Kalman filter method~\cite{FRUHWIRTH1987444,Billoir:1989mh}. This algorithm extrapolates the seed trajectory towards the next tracker layer taking into account the magnetic field and multiple scattering effects. The track parameters are updated when a compatible hit in the next layer is found. This procedure continues until the outermost layer is reached.
@@ -57,9 +56,6 @@ For low transverse momenta ($\pt \lesssim$ 5~\GeV), the tracker muon reconstruct
 % see also https://arxiv.org/pdf/physics/0512097.pdf
 % https://cds.cern.ch/record/1563583/files/ATL-PHYS-PROC-2013-206.pdf
 % http://cds.cern.ch/record/1704291
-
-
-
 The electrons in CMS radiate more than 70\% of their energy in the inner track through bremsstrahlung before reaching the ECAL. This has as consequence that the electron tracks are increasingly curved in the magnetic field as a function of its flight distance. Standard tracking algorithms are based on Kalman filtering which assume that the energy loss is Gaussian distributed, and are therefore not suitable to fit the electron tracks. A different filtering algorithm, the Gaussian sum filter (GSF) \todocite is used in the electron track reconstruction instead. 
 
 In CMS, the electrons are reconstructed in two ways. The older ECAL based tracking is developed to identify high energy, isolated electrons. This tracking algorithm starts from ECAL clusters with a transverse energy above 4~\GeV\ and extrapolates from these cluster the position of the hits in the tracker. In order to account for bremsstrahlung, neighbouring clusters in $\eta$ and $\phi$
@@ -75,15 +71,32 @@ The electron efficiency is measured in 8~\TeV\ proton collision data to be bette
 %The resolution on the transverse momentum for a 100 \si{ \GeV} charged particle is about 2.0\% (FIX ME). 
 % see https://twiki.cern.ch/twiki/bin/view/CMSPublic/TrackingPOGPlots2016
 \subsection{Primary Vertex Reconstruction}
+\todo{Check text with PFlow paper!}
 The primary vertex reconstruction should be able to measure the location of all proton interaction vertices in each event: the signal vertex an all vertices from pile up events. 
 It consists of a vertex finding and a vertex fitting algorithm and happens in three steps. Tracks are selected  to be consistent with being produced promptly in the primary interaction by imposing requirements on the track parameters~\cite{Chatrchyan:1704291}. By grouping reconstructed tracks according to the $z$ coordinate of their closest approach to the beam line, vertices for all interaction in the same beam crossing are found, at CMS this is done by a deterministic annealing algorithm~\cite{726788} . On top of this, a vertex fitting algorithm like the Adaptive Vertex fitter~\cite{Waltenberger:1166320}, is performed. This creates the three-dimensional primary-vertex position. With this fit, the contribution from long-lived hadron decays is reduced by down weighting the tracks with a larger distance to the vertex. The primary vertex corresponding to the highest sum of squared track transverse momenta is noted as the point of the main interaction. The resolution on the primary vertex is about 14 \si{ \micro \meter} in $r\phi$ and about 19 \si{ \micro \meter} in the $z$ direction for primary vertices with the sum of the track $p_T > 100$ \si{ \GeV} for 2016 data taking.
 % numbers from https://twiki.cern.ch/twiki/bin/view/CMSPublic/TrackingPOGPlotsICHEP2016
 
+\subsection{Calorimeter clusters}
+The cluster algorithm in the calorimeter 
+\begin{enumerate}
+	\item detects and measures the energy and direction of stable neutral particles such as photons and neutral hadron, 
+	\item separates neutral particles from charged hadron energy deposits, 
+	/item reconstructs and identifies electrons and their bremsstrahlung photons, 
+	\item contributes to the energy measurements of charged hadrons that don't have accurate tracks parameters, e.g. for low quality and high transverse momentum tracks. 
+\end{enumerate}
+The clustering is performed separately in each subdetetector: ECAL barrel and endcaps, HCAL barrel and end caps, and the two preshower layers. The HF has no clustering algorithm since the electromagnetic or hadronic components give rise to an HF EM or HF HAD cluster. 
 
+The clustering algorithm consist of different steps. First seeds are identified when cells have an energy larger than the seeding threshold and lager than their neighbouring cells. Then topological clusters are made by accumulating cells that share at least a corner with a cell already in the cluster and an energy above a cell threshold set to twice the noise level. The third step is a expectation maximization algorithm that reconstructs the cluster~\cite{CMS-PRF-14-001}. This algorithm assumes that  the energy deposits are Gaussian distributed  and is an iterative algorithm with two steps at each iteration. A first step calculated the expected fraction if the energy in a certain step, while the second step performs a maximum likelihood fit. The positions and energies of the Gaussian functions are then taken as cluster parameters. 
 
+The calorimeter clusters are used for reconstructing photons and neutral hadrons. The  clusters that are not in the vicinity of the extrapolated charged tracks are easily identified as neutral hadrons or photons. For the energy deposits that overlap with charged hadrons however, the neutral particle energy deposit can only be detected as an excess over the charged particle deposit. For this reason, a good calibration of the electromagnetic and hadronic calorimeter is  vital. 
+
+The ECAL calibration is performed before the hadron cluster calibration or particle identification\footnote{Specifically electron and photon energy corrections are performed after the identification step.}. For Run 1, the ECAL response to electrons and photons as well as the cell-to-cell relative calibration is determined with test beam data, radio active sources, and cosmic ray measurements. For Run 2, the collision data collected at 7 and 8~\TeV\ was used to refine the calibration. The effect of the thresholds in the clustering algorithm are estimated from simulated single photons with energies varying from 0.25 to 100~\GeV. The photons used for the calibration should not have a conversion prior to their entrance to ensure the calibration of single clusters. In all ECAL regions and for all energies, the calibrated photon energies agree with the true photon energies within 1\%.
+
+In contrary to the photons, the hadrons deposit in general energy in both ECAL and HCAL. Since the calorimeter responce in the HCAL depends on the fraction of shower energy deposited in the ECAL, the ECAL and HCAl cluster energyes are recalibrated together to get an estimate of the true hadron energy. Since now the calibration is done for hadrons, single neutral hadrons such as $K_{\mathrm{L}}^0$ are used for determining the calibration constants. The hadrons interactiong with the tracker material are rejected for the calibration purposes. This calibration is checked with isolated charged hadron selected from early data recorded at $\sqrt{s}=0.9, 2.2$ and 7 \TeV.  
 
 \section{Event Identification}
-\label{sec:ID}
+\label{sec:id}
+A link algorithm connects the several PF elements from the various CMS subdetectors? 
 \subsection{Muons}
 
 \subsection{Electrons}
