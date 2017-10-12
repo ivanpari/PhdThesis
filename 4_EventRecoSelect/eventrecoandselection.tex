@@ -96,7 +96,14 @@ In contrary to the photons, the hadrons deposit in general energy in both ECAL a
 
 \section{Event Identification}
 \label{sec:id}
-A link algorithm connects the several PF elements from the various CMS subdetectors? 
+A link algorithm connects the several PF elements from the various CMS subdetectors. The amount of material encountered upstream of the calorimeters and  the muon detector may lead to trajectory bending and creation of secondary particles,  which limits the probability of linking all elements of a particle. 
+
+The linking algorithm tests any pair of elements in an event and is restricted to considering nearest neighbours in the $\eta\phi$-plane. The quality of the link is determined via the distance between the two elements and PF blocks of elements are formed from elements with a direct link or indirect link through common elements. \\
+The link between a central tracker track and a calorimeter clusters is made by extrapolating the tracker track to the two layers of the preshower, the ECAL, and the HCAL. If this extrapolated position is within the cluster area, the two are linked. When there are several ECAL or HCAL clusters for the same track, the link with the smallest distance is kept. A dedicated cluster algorithm accounts for the energy of the photons emitted through bremsstrahlung ar for photons that have converted to an \Pelectron\APelectron pair. \\
+
+
+
+
 \subsection{Muons}
 
 \subsection{Electrons}
