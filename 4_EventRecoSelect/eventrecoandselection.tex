@@ -127,6 +127,14 @@ Hadron interactions can result in the creation of extra particles originating fr
 After identification and reconstruction of all particles as described above. An artificial large missing transverse momentum \ptmisvec\ can be reconstructed. The cause of the \ptmisvec\ is mostly misidentified or misreconstructed high-\pt\ muons originating from cosmic rays, misconstruction of the muon's momentum, or punch-throuvh charged hadrons. A post processing step is applied to solve this \ptmisvec. Events with genuine large \ptmisvec\ due to the presence of neutrino's are unaffected by this post processing.
 
 \newpage
+\section{Pile up mitigation}
+\label{sec:pileup}
+The particle flow algorithm is design without taking pile up into account. For the 8 \TeV\ dataset, an avarage of about 21 pile up interactions of pile up interactions happened per bunch cross section. For the dataset taken at 13 \TeV, the number of pile up interactions increased to about 27 interactions per bunch crossing.  THese interactions are spread around the beam axis around the centre of the CMS coordinate system and follow a normal distribution with a standard deviation of about 5 \cm~\cite{CMS-PRF-14-001}.  The number of pile up interactions is iestimated from th enumber of interaction vertices reconstructed from charged particle tracks \todocite, or from the instantaneous luminosity of the given bunch crossing with dedicated detectors an the inelastic proton-proton crossing \todocite. The pile up vertices are seperated from the primary vertex by requiring that the primary vertex is the vertex with the highest quadratic sum of the transverse momenta of the corresponding tracks. The charged hadrons coming from these pile up vertices are identified via their tracks and are removed from the list of reconstructed particles to be used for physics analysis. This method is the so-called pile up charged hadron subtraction and denoted as CHS. 
+
+For the reconstructed particles outside the tracker acceptance as well as photons and neutral hadrons, the CHS method doesn't work. Therefore, the transverse density from pile up interactions is estimated using jet clustering techniques \todocite and their effect is subtracted from the particles transverse momenta. Additionally, the pile up contribution can be estimated locally as described for the Muons and electrons described in \Sec{sec:MuonID} and \Sec{sec:ElectronID}. 
+
+
+
 \section{Physics object reconstruction and identification}
 \label{sec:PhysicsObject}
 The particle flow objects are used for building physics objects that are used for analysis. These objects are jets, muons, electrons, photons, taus and missing transverse momentum \ptmisvec. They are used to compute other quantities such as particle isolation and have extra requirements that are analysis dependent. In the following section, only the physics objects used throughout this thesis are discussed. 
@@ -268,8 +276,9 @@ The efficiency of electron identification is estimated from $\PZ \rightarrow \Pe
 	\label{tab:ElecReq}
 \end{table}
 \newpage
+
 \subsection{Jets}
-Jets are reconstructed using the \antikt\ algorithm \todocite. Based on the clustering used by this algorithm, the jets are denoted as
+Jets are reconstructed using either all reconstructed particles (PF jets) or from all reconstructed particles without the charged hadrons associated to pile up vertices (PF+CHS jets). This recontruction is done via the \antikt\ algorithm \todocite with a radius parameter of 0.5.  Based on the clustering used by this algorithm, the jets are denoted as
 \begin{enumerate}
  \item PF jets containing all particles reconstructed by the PF algorithm, 
  \item  Calo jets made from the sum of the ECAL and HCAL energy deposits in the calorimeter towers, 
