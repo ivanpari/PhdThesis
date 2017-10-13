@@ -72,7 +72,7 @@ The electron efficiency is measured in 8~\TeV\ proton collision data to be bette
 % see https://twiki.cern.ch/twiki/bin/view/CMSPublic/TrackingPOGPlots2016
 \subsection{Primary Vertex Reconstruction}
 \todo{Check text with PFlow paper!}
-The primary vertex reconstruction should be able to measure the location of all proton interaction vertices in each event: the signal vertex an all vertices from pile up events. 
+The primary vertex (PV) reconstruction should be able to measure the location of all proton interaction vertices in each event: the signal vertex an all vertices from pile up events. 
 It consists of a vertex finding and a vertex fitting algorithm and happens in three steps. Tracks are selected  to be consistent with being produced promptly in the primary interaction by imposing requirements on the track parameters~\cite{Chatrchyan:1704291}. By grouping reconstructed tracks according to the $z$ coordinate of their closest approach to the beam line, vertices for all interaction in the same beam crossing are found, at CMS this is done by a deterministic annealing algorithm~\cite{726788} . On top of this, a vertex fitting algorithm like the Adaptive Vertex fitter~\cite{Waltenberger:1166320}, is performed. This creates the three-dimensional primary-vertex position. With this fit, the contribution from long-lived hadron decays is reduced by down weighting the tracks with a larger distance to the vertex. The primary vertex corresponding to the highest sum of squared track transverse momenta is noted as the point of the main interaction. The resolution on the primary vertex is about 14 \si{ \micro \meter} in $r\phi$ and about 19 \si{ \micro \meter} in the $z$ direction for primary vertices with the sum of the track $p_T > 100$ \si{ \GeV} for 2016 data taking.
 % numbers from https://twiki.cern.ch/twiki/bin/view/CMSPublic/TrackingPOGPlotsICHEP2016
 
@@ -131,9 +131,9 @@ The particle flow objects are used for building physics objects that are used fo
 
 \subsection{Muons}
 \label{sec:MuonID}
-The muon candidates used for analysis in this thesis correspond to the tight working point. This working point yields the most genuine muons and rejects falsely reconstructed ones. Detail reports on the performance can be found in \todocite.
+The muon candidates used for analysis in this thesis correspond to the tight and loose working points. The tight working point yields the most genuine muons and rejects falsely reconstructed ones. While the loose working point yields as many reconstructed muons as possible. Detailed reports on the performance can be found in \todocite.
 
-In order to reject objects wrongly reconstructed as muons from hadron showers that reach he muon system (punch-throughs), the global muon fit is required to include at least one valid hit in the muon chambers and for which at least two muon segments in two muon stations is present. Additionally, the muon tracks should have a global fit yielding a goodness-of-fit of $\chi^2 / \mathrm{ndof} < 10$. The decay of muons in flight is suppressed by requiring at least one pixel hit in the muon track. Furthermore, a minimum of five hits in the tracker is required. Cosmic muons and muons originating from pile up interactions are rejected by constricting the distance of the muon with respect to the primary vertex by putting limits on $d_{\mathrm{x,y}}< 2$ \mm\ and $d_{\mathrm{z}}<5$ \mm. In \fig{fig:tightid}, the muon efficiencies for data and simulation is presented. These efficiencies are estimated from tag-and-probe methods that select $\PZ \rightarrow \Pmuon \APmuon$ and tag one muon that passes the identification criteria. The other muon is used as probe and one measures how many times it passes the identification criteria to get the efficiency. Overall, the efficiency is about 95-100\%, with two drops due to the crack between the wheels of the DT system. The differences between data and simulation are corrected by applying \pt- and $\eta$-dependent scale factors ($\epsilon_{\mathrm{data}/\epsilon_{\mathrm{MC}}}$) to simulated events. 
+In order to reject objects wrongly reconstructed as muons from hadron showers that reach he muon system (punch-throughs), the global muon fit is required to include at least one valid hit in the muon chambers and for which at least two muon segments in two muon stations is present. Additionally, the muon tracks should have a global fit yielding a goodness-of-fit of $\chi^2 / \mathrm{ndof} < 10$. The decay of muons in flight is suppressed by requiring at least one pixel hit in the muon track. Furthermore, a minimum of five hits in the tracker is required. Cosmic muons and muons originating from pile up interactions are rejected by constricting the distance of the muon with respect to the primary vertex by putting limits on $d_{\mathrm{x,y}}< 2$ \mm\ and $d_{\mathrm{z}}<5$ \mm. Also muons according to the loose muon ID will be used in the thesis. These are either global muons or tracker muons reconstructed from the particle flow muon object. In \fig{fig:tightid}, the muon efficiencies for data and simulation is presented. These efficiencies are estimated from tag-and-probe methods that select $\PZ \rightarrow \Pmuon \APmuon$ and tag one muon that passes the identification criteria. The other muon is used as probe and one measures how many times it passes the identification criteria to get the efficiency. Overall, the efficiency is about 95-100\%, with two drops due to the crack between the wheels of the DT system. The differences between data and simulation are corrected by applying \pt- and $\eta$-dependent scale factors ($\epsilon_{\mathrm{data}/\epsilon_{\mathrm{MC}}}$) to simulated events. In \tab{tab:MuonReq}, the muon requirements for the muons used throughout this theses are summarised. 
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.495\linewidth]{4_EventRecoSelect/Figures/TightIDvseta}
@@ -144,17 +144,130 @@ In order to reject objects wrongly reconstructed as muons from hadron showers th
 
 In addition to the identification criteria, the muons are required to be spatially isolated from EM and hadronic activity.  The lepton isolation is defined as estimating the total transverse energy of the particles emitted around the  direction of the lepton by defining a cone of radius $\Delta R$ in $\eta\phi$ plane around the lepton direction. Then a summed energy is calculated from the charged hadrons (CH), neutral hadrons (NH), photons (\Pphoton), excluding the lepton itself. This sum is then corrected to remove the enrgy coming from pile up interactions. The relative isolation for muons \iso\ is defined as \todocite
 \begin{equation}
- \iso_{\Pmu} = \frac{\sum \pt(CH) + \mathrm{max}\left(0., \sum \Et(NH), \sum \Et(\Pphoton) - 0.5 \times \sum \Et (CH)\right)}{\pt(\Pmu)},
+ \iso_{\Pmu} = \frac{\sum \pt(\mathrm{CH}) + \mathrm{max}\left(0., \sum \Et(\mathrm{NH}), \sum \Et(\Pphoton) - 0.5 \times \sum \Et (\mathrm{CH})\right)}{\pt(\Pmu)},
 \end{equation}
-where a cone of $\Delta R = 0.4$ is adopted and the pile up mitigation is based on the  \dbeta\  correction. The \dbeta correction estimates the pile up energy as half of the contribution coming from charged hadrons. For tight ID muons, this relative isolation should $\iso_{\Pmu} \leq 0.15$, while for loose muons this should be $\iso_{\Pmu} \leq0.25$ % The chosen value for β is motivated by assuming equal production rates for the (π+,π0,π−) isospin triplet leading to a ratio of 1/2 for the production of neutral pions over charged ones. 
-In \fig{fig:muoniso}, the isolation efficiencies as a function of the pseudo rapidties using the tag and probe method are shown. The efficiencies are 85-100\% with a decline for low-\pt\ muons since they are most likely coming from hadronic or heavy flavour decays. The differences between data and simulation are accounted for by apply $\eta$- and \pt-dependent scale factors on the simulation. 
-\begin{figure}
+where a cone of $\Delta R = 0.4$ is adopted and the pile up mitigation is based on the  \dbeta\  correction. The \dbeta\ correction estimates the pile up energy as half of the contribution coming from charged hadrons. For tight ID muons, this relative isolation should $\iso_{\Pmu} <0.15$, while for loose muons this should be $\iso_{\Pmu} <0.25$. % The chosen value for β is motivated by assuming equal production rates for the (π+,π0,π−) isospin triplet leading to a ratio of 1/2 for the production of neutral pions over charged ones. 
+In \fig{fig:muoniso}, the isolation efficiencies as a function of the pseudo rapidities using the tag and probe method are shown for the tight muon ID. The efficiencies are 85-100\% with a decline for low-\pt\ muons since they are most likely coming from hadronic or heavy flavour decays. The differences between data and simulation are accounted for by applying $\eta$- and \pt-dependent scale factors on the simulation. 
+\begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.494\linewidth]{4_EventRecoSelect/Figures/TightIsovsot}
 	\includegraphics[width=0.494\linewidth]{4_EventRecoSelect/Figures/TightIsovseta}
 	\caption{Comparison of the muon tight isolation requirement with the muon tight ID  efficiencies in data and simulation as a function of the transvers emomentum (left) or  pseudorapidity (right) of the muon using the full 2016 dataset. Figure taken from \cite{CMS-DP-2017-007}.}
 	\label{fig:muoniso}
 \end{figure}
+\begin{table}[htbp]
+	\centering
+	\caption{Muon requirements for the tight and loose working points, used throughout this thesis.}
+	\begin{tabular}{ccc}
+		\toprule
+		Property & Loose Muons & Tight Muons \\ 
+		\midrule 
+		Global muon or Tracker Muon & One or the other & Both \\ 
+	
+		Particle Flow muon & Y & Y \\ 
+		
+		$\chi^2/ndof$ of global muon track fit & N/A & $<$ 10 \\ 
+	
+		Nb. of hit muon chambers & N/A & $>$ 0 \\ 
+		
+		Nb. of muon stations contained in the segment & N/A & $>$ 1  \\ 
+		
+		 Size of the transverse impact parameter  & \multirow{2}{*}{N/A }& \multirow{2}{*}{$d_{xy} < 2$ \mm} \\ 
+	 of the track wrt. to the PV & & \\
+		Longitudinal distance wrt. the PV & N/A & $d_z < 5$ \mm \\ 
+		
+		Nb. of pixel hits & N/A & $>$ 0 \\ 
+		
+		Nb. of tracker layers with hits & N/A & $>$ 5 \\ 
+	
+		Relative Isolation & $<$0.25 & $<$0.15 \\
+		\bottomrule
+	\end{tabular} 
+	
+	\label{tab:MuonReq}
+\end{table}
+
+
+
+\subsection{Electrons}
+\label{sec:ElectronID}
+The electrons candidates used correspond to the tight and veto working points.  The study of the electron reconstruction and identification performance can be found in \cite{CMS-DP-2017-004}.
+
+Starting from an electron PF candidate with a GSF track that is outside the barrel-endcap transition region ($1.4443 < |\eta| <1.5660$), several requirements are set. The electrons from photon conversions are dismissed by requiring the electron track to have not have more than one (two or three) missing hit in the innermost layer for the tight (veto) working point. Additionally, a photon conversion veto is applied by testing if a pair of electron tracks is originating from a common displaced vertex. For the 8 \TeV\ datasets more refined cuts are placed on the electron object using a multivariate analysis. For the 13 \TeV\ dataset this is replaced with more refined cuts on the shower shape variables such as the difference in $\eta$ or $\phi$ between the energy weighted supercluster position in the ECAL and the track direction in at the innermost tracker position ($\Delta \eta_{\mathrm{in}}$, $\Delta \phi_{\mathrm{in}}$), and the ECAL crystal based shower covariance in the $\eta$ direction ($\sigma_{\eta \eta}$). These cuts also include energy related variables such as the absolute difference between the inverse electron energy measured in the ECAL and the inverse momentum measured in the tracker ($|1/E-1/p|$), and the ratio of the energy measured in the HCAL and ECAL (H/E). Unlike the muon case, the identification criteria also contain requirements on the isolation of the electrons.
+
+Similar to the muons, the electron  relative isolation is determined from the sum of the particles in a cone around the electron itself. The cone radius used for electrons is $\Delta R=0.3$ and a $\rho$ correction for pile up mitigation is applied. For this correction, the expected pile up energy inside the isolation cone is estimated from the median density energy per area of pile up contamination ($\rho$), computed event by event, and the effective area ($A_{\mathrm{eff}}$) \todocite. This effective area is estimated from simulation and denotes the expected amount of neutral energy from pile up interactions per $\rho$ within the isolation cone as a function of the pseudo rapidity of the associated ECAL superclustes. Table \ref{tab:EAeff} shows the values used for 13 \TeV\ data. The relative electron isolation $\iso_{\Pe}$  is calculated as
+\begin{equation}
+\iso_{\Pe} =  \frac{\sum \pt(\mathrm{CH}) + \max\left(0., \sum \Et(\mathrm{NH}), \sum \Et (\gamma) - \rho \times A_{\mathrm{eff}}\right)}{\pt(\Pe)}.
+\label{eq:drho}
+\end{equation}
+\begin{table}[htbp]
+	\centering 
+	\caption{The effective areas  $A_{\mathrm{eff}}$ used for the electron relative isolation~\cite{ilya}.}
+	\begin{tabular}{c|c}
+		\hline 
+		$\eta$ region  & $A_{\mathrm{eff}}$ \\ 
+		\hline 
+		$0<|\eta| < 0.1752$ & 0.1703 \\ 
+		\hline 
+		$1.0<|\eta| < 0.1479$ & 0.1715 \\ 
+		\hline 
+		$1.479<|\eta| < 2.0$ & 0.1213 \\ 
+		\hline 
+		$2.0<|\eta| < 2.2$ & 0.1230 \\ 
+		\hline 
+		$2.2<|\eta| < 2.3$ & 0.1635 \\ 
+		\hline 
+		$2.3<|\eta| < 2.4$ & 0.1937 \\ 
+		\hline 
+		$2.4<|\eta| < 2.5$ & 0.2393 \\ 
+		\hline 
+	\end{tabular} 
+	\label{tab:EAeff}
+\end{table}
+
+The efficiency of electron identification is estimated from $\PZ \rightarrow \Pelectron \APelectron$ events via the tag-and-probe method and is shown in \fig{fig:electrontightidvspt} for the tight working point. The efficiencies reach $\approx 95-100$\%.  The difference between  data and  simulation are corrected by dedicated $\pt$- and $\eta$ dependent scale factors as well. 
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\linewidth]{4_EventRecoSelect/Figures/ElectronTightIDvsPt}
+	\caption{Electron identification efficiency as function of the electron transverse momentum from the full 2016 dataset. Figure taken from \cite{CMS-DP-2017-004}.}
+	\label{fig:electrontightidvspt}
+\end{figure}
+
+
+
+
+\begin{table}[htbp]
+	\centering
+	
+	\caption{Electron requirements used in this analysis. The requirements are set in the barrel ($|\eta_{supercluster}| \leq 1.479$)
+		and the end caps ($|\eta_{supercluster}| > 1.479$). }
+	\begin{tabular}{ccccc}
+		\toprule
+		Properties & \multicolumn{2}{c}{$|\eta_{supercluster}| \leq 1.479$ } & \multicolumn{2}{c}{$|\eta_{supercluster}| > 1.479$ } \\
+		
+		& Veto electron & Tight electron & Veto electron & Tight electron \\ 
+	  \midrule
+		$ \sigma_{\eta \eta}$ & $<$ 0.0115 & $<$ 0.00998 & $<$ 0.037 & $<$ 0.0292 \\ 
+	
+		$|\Delta \eta_{\mathrm{in}}|$ & $<$ 0.00749 & $<$ 0.00308 & $<$ 0.00895& $<$ 0.00605\\ 
+	 
+		$|\Delta \phi_{\mathrm{in}}|$ & $<$ 0.228 & $<$ 0.0816 & $<$ 0.213& $<$ 0.0394 \\ 
+		
+		H/E & $<$ 0.356 & $<$ 0.0414 & $<$ 0.211& $<$ 0.0641 \\ 
+		
+		relative isolation & $<$ 0.175 & $<$ 0.0588  & $<$ 0.159& $<$ 0.0571\\ 
+	
+		$|1/E-1/p|$ & $<$ 0.299 \GeVinv& $<$ 0.0129 \GeVinv& $<$ 0.15 \GeVinv&$<$ 0.0129 \GeVinv\\ 
+	
+		expected missing inner hits & $\leq $ 2 & $\leq $ 1 &  $\leq $ 3 &  $\leq $ 1\\ 
+		%		\hline
+		%		d0 - dz & 0.05 cm & 0.05 cm & 0.10 cm & 0.10 cm \\
+		
+		pass conversion veto & Y & Y & Y & Y\\ 
+		\bottomrule
+	\end{tabular} 
+	\label{tab:ElecReq}
+\end{table}
 
 \subsection{Jets}
 Jets are reconstructed using the \antikt\ algorithm \todocite. Based on the clustering used by this algorithm, the jets are denoted as
@@ -166,7 +279,7 @@ Jets are reconstructed using the \antikt\ algorithm \todocite. Based on the clus
 
 \subsection{Jets with displaced vertices }
 
-\subsection{Electrons}
+
 \section{Summary of corrections}
 \begin{enumerate}
 	\item Muon ID, Iso see \Sec{sec:MuonID}
