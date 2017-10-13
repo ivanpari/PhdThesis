@@ -113,18 +113,64 @@ A set of selection requirements based on the global and tracker muon properties 
 \subsection{Electrons and isolated photons}
 \label{sec:Electron}
 The electrons and photons are reconstructed together as discussed before. An electron candidate seeded from a GFS track is considered an electron when the linked ECAL cluster is not linked to three or more additional tracks. The photon seeds are ECAL superclusters with transverse energies above 10\GeV\ that have no links with a GSF track. After associating photons from brehmstrahung with the associated electrons, the remaining energy is associated to the photons and the photon direction is taken to be that of the supercluster. The electron direction is chosen to be that of the GSF track and its energy is a combination of the ECAL energy with the momentum of the GSF track. Photons are retained if they are isolated, while electrons should satfisy additional criteria based on a multivariate analysis for isolated and non-isolated electrons. 
-\subsection{Hadrons (jets) and non-isolated photons}
+\subsection{Hadrons and non-isolated photons}
 \label{sec:Hadron}
-\subsection{Jets from b-quarks}
-\label{sec:bJets}
+After muon, electron and isolated photon identification, the remaining particles are hadrons from jet fragmentation and hadronisation. These can show up ad charged hadrons (e.g. $\pi{\pm}$, $\mathrm{K}^{\pm}$, or protons), netutral hadrons (e.g. $\mathrm{K}^{0}_{\mathrm{L}}$ or neutrons), non isolated photons (e.g. from $\pi^0$ decays), and additional muons from early decays of charged hadrons. 
+
+The photons and neutral hadrons are assigned to calorimeter clusters without any link to tracks. When the calorimeter clusters between the ECAL and HCAL are linked, the clusters are assumed to aris from the same hadron shower. if their is not such a link, HCAL clusters are assigned to neutral hadrons, while the ECAL clusters are assigned to photons based on the fact that neutral hadrons leave only 3\% of their energy in the ECAL.Then the HCAL clusters linked with tracks, that are not linked with other HCAL clusters, are assigned to charged hadrons. These tracks can be linked with remaining ECAL clusters. 
+
+Hadron interactions can result in the creation of extra particles originating from a secondary vertex. These extra particles are identified by having a common secondary vertex and replaced in the PF list as one single primary charged hadron. 
+
+
 \subsection{Post processing}
 \label{sec:Postprocess}
-\subsection{Missing transverse energy}
+After identification and reconstruction of all particles as described above. An artificial large missing transverse momentum \ptmisvec\ can be reconstructed. The cause of the \ptmisvec\ is mostly misidentified or misreconstructed high-\pt\ muons originating from cosmic rays, misconstruction of the muon's momentum, or punch-throuvh charged hadrons. A post processing step is applied to solve this \ptmisvec. Events with genuine large \ptmisvec\ due to the presence of neutrino's are unaffected by this post processing.
+\section{Physics object reconstruction and identification}
+\label{sec:PhysicsObject}
+The particle flow objects are used for building physics objects that are used for analysis. These objects are jets, muons, electrons, photons, taus and missing transverse momentum \ptmisvec. They are used to compute other quantities such as particle isolation and have extra requirements that are analysis dependent. In the following section, only the physics objects used throughout this thesis are discussed. 
 
-\subsection{Luminosity}
+\subsection{Muons}
+\label{sec:MuonID}
+The muon candidates used for analysis in this thesis correspond to the tight working point. This working point yields the most genuine muons and rejects falsely reconstructed ones. Detail reports on the performance can be found in \todocite.
 
-\subsection{Summary of corrections}
+In order to reject objects wrongly reconstructed as muons from hadron showers that reach he muon system (punch-throughs), the global muon fit is required to include at least one valid hit in the muon chambers and for which at least two muon segments in two muon stations is present. Additionally, the muon tracks should have a global fit yielding a goodness-of-fit of $\chi^2 / \mathrm{ndof} < 10$. The decay of muons in flight is suppressed by requiring at least one pixel hit in the muon track. Furthermore, a minimum of five hits in the tracker is required. Cosmic muons and muons originating from pile up interactions are rejected by constricting the distance of the muon with respect to the primary vertex by putting limits on $d_{\mathrm{x,y}}< 2$ \mm\ and $d_{\mathrm{z}}<5$ \mm. In \fig{fig:tightid}, the muon efficiencies for data and simulation is presented. These efficiencies are estimated from tag-and-probe methods that select $\PZ \rightarrow \Pmuon \APmuon$ and tag one muon that passes the identification criteria. The other muon is used as probe and one measures how many times it passes the identification criteria to get the efficiency. Overall, the efficiency is about 95-100\%, with two drops due to the crack between the wheels of the DT system. The differences between data and simulation are corrected by applying \pt- and $\eta$-dependent scale factors ($\epsilon_{\mathrm{data}/\epsilon_{\mathrm{MC}}}$) to simulated events. 
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.495\linewidth]{4_EventRecoSelect/Figures/TightIDvseta}
+	\includegraphics[width=0.495\linewidth]{4_EventRecoSelect/Figures/LooseIDvseta}
+	\caption{Comparison of the muon tight ID (left) and loose ID (right) efficiencies in data and simulation as a function of the pseudorapidity of the muon using the full 2016 dataset. Figure taken from \cite{CMS-DP-2017-007}.}
+	\label{fig:tightid}
+\end{figure}
 
+In addition to the identification criteria, the muons are required to be spatially isolated from EM and hadronic activity.  The lepton isolation is defined as estimating the total transverse energy of the particles emitted around the  direction of the lepton by defining a cone of radius $\Delta R$ in $\eta\phi$ plane around the lepton direction. Then a summed energy is calculated from the charged hadrons (CH), neutral hadrons (NH), photons (\Pphoton), excluding the lepton itself. This sum is then corrected to remove the enrgy coming from pile up interactions. The relative isolation for muons \iso\ is defined as \todocite
+\begin{equation}
+ \iso_{\Pmu} = \frac{\sum \pt(CH) + \mathrm{max}\left(0., \sum \Et(NH), \sum \Et(\Pphoton) - 0.5 \times \sum \Et (CH)\right)}{\pt(\Pmu)},
+\end{equation}
+where a cone of $\Delta R = 0.4$ is adopted and the pile up mitigation is based on the  \dbeta\  correction. The \dbeta correction estimates the pile up energy as half of the contribution coming from charged hadrons. For tight ID muons, this relative isolation should $\iso_{\Pmu} \leq 0.15$, while for loose muons this should be $\iso_{\Pmu} \leq0.25$ % The chosen value for β is motivated by assuming equal production rates for the (π+,π0,π−) isospin triplet leading to a ratio of 1/2 for the production of neutral pions over charged ones. 
+In \fig{fig:muoniso}, the isolation efficiencies as a function of the pseudo rapidties using the tag and probe method are shown. The efficiencies are 85-100\% with a decline for low-\pt\ muons since they are most likely coming from hadronic or heavy flavour decays. The differences between data and simulation are accounted for by apply $\eta$- and \pt-dependent scale factors on the simulation. 
+\begin{figure}
+	\centering
+	\includegraphics[width=0.494\linewidth]{4_EventRecoSelect/Figures/TightIsovsot}
+	\includegraphics[width=0.494\linewidth]{4_EventRecoSelect/Figures/TightIsovseta}
+	\caption{Comparison of the muon tight isolation requirement with the muon tight ID  efficiencies in data and simulation as a function of the transvers emomentum (left) or  pseudorapidity (right) of the muon using the full 2016 dataset. Figure taken from \cite{CMS-DP-2017-007}.}
+	\label{fig:muoniso}
+\end{figure}
+
+\subsection{Jets}
+Jets are reconstructed using the \antikt\ algorithm \todocite. Based on the clustering used by this algorithm, the jets are denoted as
+\begin{enumerate}
+ \item PF jets containing all particles reconstructed by the PF algorithm, 
+ \item  Calo jets made from the sum of the ECAL and HCAL energy deposits in the calorimeter towers, 
+ \item Ref jets made from all stable particles produced by the event generator with the exclusion of neutrinos. 
+\end{enumerate}
+
+\subsection{Jets with displaced vertices }
+
+\subsection{Electrons}
+\section{Summary of corrections}
+\begin{enumerate}
+	\item Muon ID, Iso see \Sec{sec:MuonID}
+\end{enumerate}
 \begin{comment}
 % Jet energy scale and resolution in the CMS experiment in pp collisions at 8 TeV
 % http://iopscience.iop.org/article/10.1088/1748-0221/12/02/P02014/meta
