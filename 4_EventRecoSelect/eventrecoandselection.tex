@@ -125,6 +125,8 @@ Hadron interactions can result in the creation of extra particles originating fr
 \subsection{Post processing}
 \label{sec:Postprocess}
 After identification and reconstruction of all particles as described above. An artificial large missing transverse momentum \ptmisvec\ can be reconstructed. The cause of the \ptmisvec\ is mostly misidentified or misreconstructed high-\pt\ muons originating from cosmic rays, misconstruction of the muon's momentum, or punch-throuvh charged hadrons. A post processing step is applied to solve this \ptmisvec. Events with genuine large \ptmisvec\ due to the presence of neutrino's are unaffected by this post processing.
+
+\newpage
 \section{Physics object reconstruction and identification}
 \label{sec:PhysicsObject}
 The particle flow objects are used for building physics objects that are used for analysis. These objects are jets, muons, electrons, photons, taus and missing transverse momentum \ptmisvec. They are used to compute other quantities such as particle isolation and have extra requirements that are analysis dependent. In the following section, only the physics objects used throughout this thesis are discussed. 
@@ -226,15 +228,12 @@ Similar to the muons, the electron  relative isolation is determined from the su
 \end{table}
 
 The efficiency of electron identification is estimated from $\PZ \rightarrow \Pelectron \APelectron$ events via the tag-and-probe method and is shown in \fig{fig:electrontightidvspt} for the tight working point. The efficiencies reach $\approx 95-100$\%.  The difference between  data and  simulation are corrected by dedicated $\pt$- and $\eta$ dependent scale factors as well. 
-\begin{figure}
+\begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.7\linewidth]{4_EventRecoSelect/Figures/ElectronTightIDvsPt}
+	\includegraphics[width=0.5\linewidth]{4_EventRecoSelect/Figures/ElectronTightIDvsPt}
 	\caption{Electron identification efficiency as function of the electron transverse momentum from the full 2016 dataset. Figure taken from \cite{CMS-DP-2017-004}.}
 	\label{fig:electrontightidvspt}
 \end{figure}
-
-
-
 
 \begin{table}[htbp]
 	\centering
@@ -268,7 +267,7 @@ The efficiency of electron identification is estimated from $\PZ \rightarrow \Pe
 	\end{tabular} 
 	\label{tab:ElecReq}
 \end{table}
-
+\newpage
 \subsection{Jets}
 Jets are reconstructed using the \antikt\ algorithm \todocite. Based on the clustering used by this algorithm, the jets are denoted as
 \begin{enumerate}
