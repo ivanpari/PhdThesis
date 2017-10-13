@@ -129,9 +129,9 @@ After identification and reconstruction of all particles as described above. An 
 \newpage
 \section{Pile up mitigation}
 \label{sec:pileup}
-The particle flow algorithm is design without taking pile up into account. For the 8 \TeV\ dataset, an avarage of about 21 pile up interactions of pile up interactions happened per bunch cross section. For the dataset taken at 13 \TeV, the number of pile up interactions increased to about 27 interactions per bunch crossing.  THese interactions are spread around the beam axis around the centre of the CMS coordinate system and follow a normal distribution with a standard deviation of about 5 \cm~\cite{CMS-PRF-14-001}.  The number of pile up interactions is iestimated from th enumber of interaction vertices reconstructed from charged particle tracks \todocite, or from the instantaneous luminosity of the given bunch crossing with dedicated detectors an the inelastic proton-proton crossing \todocite. The pile up vertices are seperated from the primary vertex by requiring that the primary vertex is the vertex with the highest quadratic sum of the transverse momenta of the corresponding tracks. The charged hadrons coming from these pile up vertices are identified via their tracks and are removed from the list of reconstructed particles to be used for physics analysis. This method is the so-called pile up charged hadron subtraction and denoted as CHS. 
+The particle flow algorithm is design without taking pile up into account. For the 8 \TeV\ dataset, an avarage of about 21 pile up interactions of pile up interactions happened per bunch cross section. For the dataset taken at 13 \TeV, the number of pile up interactions increased to about 27 interactions per bunch crossing.  THese interactions are spread around the beam axis around the centre of the CMS coordinate system and follow a normal distribution with a standard deviation of about 5 \cm~\cite{CMS-PRF-14-001}.  The number of pile up interactions is iestimated from th enumber of interaction vertices reconstructed from charged particle tracks \todocite, or from the instantaneous luminosity of the given bunch crossing with dedicated detectors and the inelastic proton-proton crossing \todocite. This minimum bias cross section is measured to be 69.2 mb $\pm$ 4.6\% \cite{CMS-PAS-LUM-17-001}. The distribution of the number of pile up interaction is reweighted to take care of discrepancies. The uncertainty on the minimum bias cross section measurement results in  a systematic shift in the \pu\ distribution. 
 
-For the reconstructed particles outside the tracker acceptance as well as photons and neutral hadrons, the CHS method doesn't work. Therefore, the transverse density from pile up interactions is estimated using jet clustering techniques \todocite and their effect is subtracted from the particles transverse momenta. Additionally, the pile up contribution can be estimated locally as described for the Muons and electrons described in \Sec{sec:MuonID} and \Sec{sec:ElectronID}. 
+The pile up vertices are seperated from the primary vertex by requiring that the primary vertex is the vertex with the highest quadratic sum of the transverse momenta of the corresponding tracks. The charged hadrons coming from these pile up vertices are identified via their tracks and are removed from the list of reconstructed particles to be used for physics analysis. This method is the so-called pile up charged hadron subtraction and denoted as CHS~\cite{CMS-PAS-JME-14-001}. For the reconstructed particles outside the tracker acceptance as well as photons and neutral hadrons, the CHS method doesn't work. Therefore, the transverse density from pile up interactions is estimated using jet clustering techniques \todocite and their effect is subtracted from the particles transverse momenta. Additionally, the pile up contribution can be estimated locally as described for the Muons and electrons described in \Sec{sec:MuonID} and \Sec{sec:ElectronID}. 
 
 
 
@@ -278,12 +278,45 @@ The efficiency of electron identification is estimated from $\PZ \rightarrow \Pe
 \newpage
 
 \subsection{Jets}
-Jets are reconstructed using either all reconstructed particles (PF jets) or from all reconstructed particles without the charged hadrons associated to pile up vertices (PF+CHS jets). This recontruction is done via the \antikt\ algorithm \todocite with a radius parameter of 0.5.  Based on the clustering used by this algorithm, the jets are denoted as
-\begin{enumerate}
- \item PF jets containing all particles reconstructed by the PF algorithm, 
- \item  Calo jets made from the sum of the ECAL and HCAL energy deposits in the calorimeter towers, 
- \item Ref jets made from all stable particles produced by the event generator with the exclusion of neutrinos. 
-\end{enumerate}
+Jets are reconstructed  from all reconstructed particles without the charged hadrons associated to pile up vertices (PF+CHS jets). The clustering is done via the \antikt\ algorithm~\cite{Cacciari:2008gp} with a radius parameter for the cone size of the resulting jet of $R=0.5$ for 8 \TeV\ data and $R=0.4$ for the more boosted 13 \TeV\ dataset. The initial step of the \antikt\ algorithm considers all candidates as protojets and starts to calculate the distances for protojets i and j as
+\begin{equation}
+\begin{aligned}
+   d_{\mathrm{ij}} &= \mathrm{min}\left(\frac{1}{p_{\mathrm{T,i}}^2}, \frac{1}{p_{\mathrm{T,j}}^2}\right), \\
+   d_{\mathrm{i}} &= \frac{1}{p_{\mathrm{T,i}}^2}.
+ \end{aligned}
+\end{equation}
+For each iteration the two distances are calculated. When $d_{\mathrm{ij}} < d_{\mathrm{i}}$, the two protojets are merged and their four momentum is summed. If $d_{\mathrm{i}}$ is the smallest distance, the protojet is renamed as final jet and ignored in the subsequent steps. 
+
+The jets used for the analysis discussed in this thesis uses the loose identification working point given. The criteria on the constituents of the jets are given in Table \ref{tab:jetID}. These requirements find their origin on the assumption that a proper jet originating from the hardonisation of a quark or gluon consists of multiple PF particles and types. The jet should consists of more than one constituent and the neutral hadron fraction and neutral EM energy fractions should be less than 99\%. For the jets within the tracker acceptance ($|\eta|<2.4$), at least one constituent has to be a charged hadron resulting in a charged hadron energy fraction above 0\%. Additionally the charged EM energy fraction should be less than 99\%. On top of these requirements, objects that are labelled as jets and found in vicinity of any isolated lepton, $\Delta R < 0.3$, are removed from the jet collection in that event. 
+
+\begin{table}[h]
+	\centering
+	\caption{Jet criteria used throughout the thesis. The last three requirements are only for jets within the tracker acceptance.}
+	\begin{tabular}{cc}
+		\toprule 
+		& Loose Jet Id \\ 
+		\midrule
+		Neutral hadron fraction & $<$ 0.99 \\ 
+		
+		Neutral EM fraction & $<$ 0.99 \\ 
+		
+		Number of constituents & $>$ 1 \\ 
+		 		
+		Charged hadron fraction & $>$ 0 \\ 
+	 
+		Charged multiplicity & $>$ 0 \\ 
+		
+		Charged EM fraction & $<$ 0.99 \\ 
+		\bottomrule
+	\end{tabular} 
+	\label{tab:jetID}
+\end{table}
+
+
+
+
+
+
 
 \subsection{Jets with displaced vertices }
 
