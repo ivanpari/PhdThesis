@@ -285,7 +285,7 @@ Jets are reconstructed  from all reconstructed particles without the charged had
    d_{\mathrm{i}} &= \frac{1}{p_{\mathrm{T,i}}^2}.
  \end{aligned}
 \end{equation}
-For each iteration the two distances are calculated. When $d_{\mathrm{ij}} < d_{\mathrm{i}}$, the two protojets are merged and their four momentum is summed. If $d_{\mathrm{i}}$ is the smallest distance, the protojet is renamed as final jet and ignored in the subsequent steps. 
+For each iteration the two distances are calculated. When $d_{\mathrm{ij}} < d_{\mathrm{i}}$, the two protojets are merged and their four momentum is summed. If $d_{\mathrm{i}}$ is the smallest distance, the protojet is renamed as final jet and ignored in the subsequent steps. More information about the jet algorithm performance can be found in \cite{CMS-PAS-JME-16-003}.
 
 The jets used for the analysis discussed in this thesis uses the loose identification working point given. The criteria on the constituents of the jets are given in Table \ref{tab:jetID}. These requirements find their origin on the assumption that a proper jet originating from the hadronisation of a quark or gluon consists of multiple PF particles and types. The jet should consists of more than one constituent and the neutral hadron fraction and neutral EM energy fractions should be less than 99\%. For the jets within the tracker acceptance ($|\eta|<2.4$), at least one constituent has to be a charged hadron resulting in a charged hadron energy fraction above 0\%. Additionally the charged EM energy fraction should be less than 99\%. On top of these requirements, objects that are labelled as jets and found in vicinity of any isolated lepton, $\Delta R < 0.3$, are removed from the jet collection in that event. 
 
@@ -319,6 +319,27 @@ The jets used for the analysis discussed in this thesis uses the loose identific
 
 
 \subsection{Jets with displaced vertices }
+ The jets originating from b hadron are tagged using the CSVv2 algorithm \todocite, which combines the information of displaced tracks with information of secondary vertices associated to the jet using a multivariate technique. The jets are tagged as a jet coming from a b quark (b-tagged) if the CSVv2 discriminator is above a certain threshold. These thresholds define working points and are given in Table \ref{tab:bctag} \todocite. This analysis uses the loose working point which has an average efficiency of 83\% and a misidentification rate of 10\%. \\
+
+
+
+\begin{table}[h]
+	\centering
+	\caption{Working points used for tagging jets as coming from b quarks.}
+	\begin{tabular}{cc}
+		\toprule
+		WP id & WP discr cut \\ 
+		& \\
+		\midrule
+		Loose & $>$ 0.5426 \\ 
+		\hline 
+		Medium & $>$ 0.8484 \\ 
+		\hline 
+		Tight & $>$ 0.9535 \\ 
+		\bottomrule
+	\end{tabular} 
+	\label{tab:bctag}	
+\end{table}
 
 
 \section{Summary of corrections}
