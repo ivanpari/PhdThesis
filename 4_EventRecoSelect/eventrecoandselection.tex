@@ -312,8 +312,31 @@ The jets used for the analysis discussed in this thesis uses the loose identific
 	\label{tab:jetID}
 \end{table}
 
+The energy of the reconstructed jets deviate from the energies of the corresponding jets clustered from the hadronisation products of true partons from simulations due to non linear subdetetector response and efficiencies. The jet energy corrections (JEC) calibrate the jets in order to have the correct energy scale.
+Jet energy scale corrections (JES) are determined as a function of pseudorapidity ant the transverse momentum from data and simulated events by combining several channels and methods. This is extensively described in \cite{1748-0221-12-02-P02014}. These corrections account for the effects of pile up, the uniformity of the detector response, and residual data-simulation jet energy scale differences. Furthermore, the jet energy resolution (JER) is measured in data and simulation as function of pile up, jet size and jet flavour.  A detailed understanding of both the energy scale and the transverse momentum resolution of the jets is crucial for many physics analysis, and these are commonly the main source of systematic uncertainty. The performance of the jet energy corrections for the 13 \TeV\ dataset can be found in \cite{CMS-DP-2016-020}.
 
 
+The JEC are factorised and subsequently correct for the offset energy due to pile up, the detector response to hadrons, and residual differences between data and simulation as a function of the jet pseudorapidity and transverse momentum.  The consecutive steps of JEC are shown in \fig{fig:jes}. 
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=1.\linewidth]{4_EventRecoSelect/Figures/JES}
+	\caption{The sequence of the JEC for data and simulations The corrections marked with MC are derived from simulation studies, while RC stands for random cone, and MJB for the analysis of multi-jet events. Figure taken from \cite{1748-0221-12-02-P02014}.}
+	\label{fig:jes}
+\end{figure}
+The off set corrections remove the dependence of the jet energy response of additional pile up activity. It is based on the jet area method, which uses the effective area of the jets multiplied by the average density in the event to calculated the offset energy to be subtracted of the jets.  The correction factors are derived by comparing the jet response with and without pile up events overlaid. The residual differences between data and detector simulation are determined using the random cone method (RC). For this method, many jets are reconstructed in each event by clustering particles through placing  random cones. This provides a mapping of the $\eta\phi$-space and the average \pt\ of those jets gives the average energy offset due to pile up~\cite{1748-0221-12-02-P02014}. 
+The next level of corrections have as goal to have an uniform energy response independent of the transverse momentum or pseudorapidity of the jet.  These corrections are determined from simulated events by matching the reconstructed to true particle jets and comparing there momenta. 
+The residual corrections between data and simulation are determined by comparing the transverse momentum balance in various types of events (multi-jet, \Zjets, and \pjets), using a reference jet in the barrel region.  
+The jet flavour corrections are optional and not used for this thesis More information on the jet flavour corrections can be found in \cite{1748-0221-12-02-P02014}. For jets with a transverse momentum above 30~\GeV, the uncertainties from the various corrections are 3-5\% for the 13 \TeV\ dataset~\cite{CMS-DP-2016-020}.
+
+
+After applying JEC, the transverse momentum resolution of the jet is extracted from data and simulated events. There are two methods used to rescale the reconstructed four momentum chosen based on whether or not the simulated jet can be matched to a true jet  in simulation. The factors are defined as
+\begin{equation}
+\begin{aligned}
+c_{\mathrm{matched}} &= 1 + \frac{\pt^{\mathrm{reco.}}-\pt^{\mathrm{true}}}{\pt^{\mathrm{reco.}}} \left(s_{\mathrm{JER}} -1\right), \\
+c_{\mathrm{unmatched}} &= 1 + \mathrm{N}(0, \sigma_{\mathrm{JER}})\sqrt{\mathrm{max}\left(s^2_{\mathrm{JER}}-1, 0\right)},
+\end{aligned}
+\end{equation}
+where $ \mathrm{N}(0, \sigma_{\mathrm{JER}})$ denotes a sample value from a normal distribution centred at zero with as standard deviation the relative resolution in simulation $\sigma_{\mathrm{JER}}$, and $s_{\mathrm{JER}}$ the $\eta$-dependent resolution scale factors. These scale factors are derived  from data from di-jet or \pjets\ events and analyzing the \pt\ balance. The resolution scale factors are found to be 1.1-1.2 except for the transition regions around $|\eta| =3$ and $|\eta| = 1.4$~\cite{CMS-DP-2016-020}.
 
 
 
