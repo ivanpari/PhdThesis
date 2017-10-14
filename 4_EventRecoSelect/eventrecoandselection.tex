@@ -1,11 +1,4 @@
-After the detector simulation described in \Sec{sec:eventgeneration}, the simulated data has the exact same format as the real collision data recorded at the CMS experiment. Therefore the same software can be used for the reconstruction of both simulation and real data. In \Sec{sec:reco}, the object reconstruction for physics analysis is shown. After reconstructing the objects, the objects are connected to physics objects need to be identified. This identification is explained in \Sec{sec:id}. A basic event selection is made for selecting signal like events. The necessary event requirement are discussed in \Sec{sec:selection}. 
-
-The analysis uses signal and background regions to constrain the huge \SM\ background compared to the expected signal. \Sec{sec:regions} discusses each region that is entering the analysis. On top of the use of background estimation from control regions, backgrounds that have  prompt leptons  contaminated by real leptons either
-from decays of tau leptons or from hadronized mesons or baryons
-(collectively commonly referred as ``non-prompt leptons") as well as by
-hadrons or jets misidentified as leptons\footnote{These two classes
-of contamination will be referred to as not prompt-lepton (\NPL) samples.} are
-evaluated with a data-driven method discussed in \Sec{sec:NPL}.
+After the detector simulation described in \Sec{sec:eventgeneration}, the simulated data has the exact same format as the real collision data recorded at the CMS experiment. Therefore the same software can be used for the reconstruction of both simulation and real data. In \Sec{sec:reco}, the object reconstruction for physics analysis is shown. After reconstructing the objects, the objects are connected (\Sec{sec:id}) to physics objects need to be identified (\Sec{sec:PF}) and corrected for pile up (\Sec{sec:pileup}). The objects used for phyiscs analysis have extra requirements as shown in \Sec{sec:PhysicsObject}. A summary of all the corrections applied to data and simulation is given in \Sec{sec:SummaryCor}.
 
 \section{Object Reconstruction}
 \label{sec:reco}
@@ -105,6 +98,7 @@ The link between a track and the muon detectors is done via local, regional, and
 
 
 \section{Particle flow identification}
+\label{sec:PF}
 In each PF block the identification and reconstruction follows a particular order where after each identification and reconstruction the corresponding PF elements (tracks and clusters) are removed from the PF block The muons are the first to be identified and reconstructed. These are reconstructed if their momenta are compatible with corresponding track only momenta. Then the electron and its corresponding brehmstrahung photons, are identified and reconstructed by using of the GSF tracking. At the same time, the energetic and isolated photons are identified as well. The remaining element in the PF block are subjected to a cross identification of charged hadrons, neutral hadrons, and photons that arise from parton fragmentation, hadronisation, and decays in jets. The charged hadron candidate is made from the remaining candidates that have a charged particle track associated with them. Then the charged particle energy fraction is subtracted from the calibrated energy of the linked calorimeter clusters and the remaining energy is assigned to the neutral energy. Depending on the excess of neutral energy in the ECAL and HCAL clusters, a photon or a neutral hadron is assigned respectively. The pseudorapidity range of the inner tracker limits the information on the particles charge to $|\eta| < 2.4$. Outside this range a simplified identification is done for hadronic and electromagnetic candidates only. 
 
 \subsection{Muons}
@@ -126,7 +120,7 @@ Hadron interactions can result in the creation of extra particles originating fr
 \label{sec:Postprocess}
 After identification and reconstruction of all particles as described above. An artificial large missing transverse momentum \ptmisvec\ can be reconstructed. The cause of the \ptmisvec\ is mostly misidentified or misreconstructed high-\pt\ muons originating from cosmic rays, misconstruction of the muon's momentum, or punch-throuvh charged hadrons. A post processing step is applied to solve this \ptmisvec. Events with genuine large \ptmisvec\ due to the presence of neutrino's are unaffected by this post processing.
 
-\newpage
+
 \section{Pile up mitigation}
 \label{sec:pileup}
 The particle flow algorithm is design without taking pile up into account. For the 8 \TeV\ dataset, an avarage of about 21 pile up interactions of pile up interactions happened per bunch cross section. For the dataset taken at 13 \TeV, the number of pile up interactions increased to about 27 interactions per bunch crossing.  THese interactions are spread around the beam axis around the centre of the CMS coordinate system and follow a normal distribution with a standard deviation of about 5 \cm~\cite{CMS-PRF-14-001}.  The number of pile up interactions is iestimated from th enumber of interaction vertices reconstructed from charged particle tracks \todocite, or from the instantaneous luminosity of the given bunch crossing with dedicated detectors and the inelastic proton-proton crossing \todocite. This minimum bias cross section is measured to be 69.2 mb $\pm$ 4.6\% \cite{CMS-PAS-LUM-17-001}. The distribution of the number of pile up interaction is reweighted to take care of discrepancies. The uncertainty on the minimum bias cross section measurement results in  a systematic shift in the \pu\ distribution. 
@@ -198,7 +192,7 @@ In \fig{fig:muoniso}, the isolation efficiencies as a function of the pseudo rap
 \end{table}
 
 
-
+\newpage
 \subsection{Electrons}
 \label{sec:ElectronID}
 The electrons candidates used correspond to the tight and veto working points.  The study of the electron reconstruction and identification performance can be found in \cite{CMS-DP-2017-004}.
@@ -278,6 +272,7 @@ The efficiency of electron identification is estimated from $\PZ \rightarrow \Pe
 \newpage
 
 \subsection{Jets}
+%https://twiki.cern.ch/twiki/bin/view/CMS/IntroToJEC
 Jets are reconstructed  from all reconstructed particles without the charged hadrons associated to pile up vertices (PF+CHS jets). The clustering is done via the \antikt\ algorithm~\cite{Cacciari:2008gp} with a radius parameter for the cone size of the resulting jet of $R=0.5$ for 8 \TeV\ data and $R=0.4$ for the more boosted 13 \TeV\ dataset. The initial step of the \antikt\ algorithm considers all candidates as protojets and starts to calculate the distances for protojets i and j as
 \begin{equation}
 \begin{aligned}
@@ -336,39 +331,109 @@ c_{\mathrm{matched}} &= 1 + \frac{\pt^{\mathrm{reco.}}-\pt^{\mathrm{true}}}{\pt^
 c_{\mathrm{unmatched}} &= 1 + \mathrm{N}(0, \sigma_{\mathrm{JER}})\sqrt{\mathrm{max}\left(s^2_{\mathrm{JER}}-1, 0\right)},
 \end{aligned}
 \end{equation}
-where $ \mathrm{N}(0, \sigma_{\mathrm{JER}})$ denotes a sample value from a normal distribution centred at zero with as standard deviation the relative resolution in simulation $\sigma_{\mathrm{JER}}$, and $s_{\mathrm{JER}}$ the $\eta$-dependent resolution scale factors. These scale factors are derived  from data from di-jet or \pjets\ events and analyzing the \pt\ balance. The resolution scale factors are found to be 1.1-1.2 except for the transition regions around $|\eta| =3$ and $|\eta| = 1.4$~\cite{CMS-DP-2016-020}.
+where $ \mathrm{N}(0, \sigma_{\mathrm{JER}})$ denotes a sample value from a normal distribution centred at zero with as standard deviation the relative resolution in simulation $\sigma_{\mathrm{JER}}$, and $s_{\mathrm{JER}}$ the $\eta$-dependent resolution scale factors. These scale factors are derived  from data from di-jet or \pjets\ events and analysing the \pt\ balance. The resolution scale factors (data/simulation) are found to be 1.1-1.2 except for the transition regions around $|\eta| =3$ and $|\eta| = 1.4$~\cite{CMS-DP-2016-020}.
+
+\subsection{Jets from b fragmentation}
+Jets originating from the hadronisation of bottom quarks can be discriminated from jets from gluons and light-flavour quarks as well as charm quark fragmentation through the use of b-tagging. There are a multitude of algorithms developed within CMS to perform b-tagging~\cite{1748-0221-8-04-P04013,CMS-PAS-BTV-15-001} on jets that fall within the pseudorapidity acceptance of the trackers. These algorithms exploit the properties of the \Pbottom\ quark to identify the jets formed by its fragmentation. These hadrons have relative large masses, long lifetimes and daughter particles with hard momentum spectra. Additionally, their semi-leptonic decays can be exploited as well.  To use b-jet identification in an analysis, one needs to know its efficiency and misidentification probability. In general these are function of the pseudorapidity and transverse momentum of the considered jet. Their performances are directly measured from data by use of b-jet enriched jet samples (multi-jet or top-quark decays). 
 
 
-
-
-\subsection{Jets with displaced vertices }
- The jets originating from b hadron are tagged using the CSVv2 algorithm \todocite, which combines the information of displaced tracks with information of secondary vertices associated to the jet using a multivariate technique. The jets are tagged as a jet coming from a b quark (b-tagged) if the CSVv2 discriminator is above a certain threshold. These thresholds define working points and are given in Table \ref{tab:bctag} \todocite. This analysis uses the loose working point which has an average efficiency of 83\% and a misidentification rate of 10\%. \\
-
-
-
-\begin{table}[h]
+This thesis uses b-jets identified by the Combined Secondary Vertex version 2 (CSVv2) algorithm~\cite{1748-0221-8-04-P04013}. This algorithm combines secondary vertices together with track based lifetime information by use of a multivariate technique. The secondary vertex is reconstructed from diplaced tracks within a jet, as illustrated in \fig{fig:btaggingdiagram}. The final state b quark is encapsulated in a B meson (e;g. B$^{\pm}$, B$_0$, B$_{\mathrm{S}}$) after the hadronisation. This B meson has relatively long lifetime and can travel a measurable distance from the primary vertex before decaying\footnote{For example, B$^{\pm}$ mesons have a lifetime of about 1.6 ps~\cite{PDG} and travel 4-9 mm before decaying if their momenta is 40-100 \GeV.}. After reconstruction, the seondary vertices are required to be in accordance with the B meson hypothesis bases an the amount of shared tracks with the primary vertex, the invariant vertex mass to reject kaon decays, and the direction of the tracks compared to the jet axis. 
+\begin{figure}[htbp]
 	\centering
-	\caption{Working points used for tagging jets as coming from b quarks.}
-	\begin{tabular}{cc}
+	\includegraphics[width=.5\linewidth]{4_EventRecoSelect/Figures/B-tagging_diagram}
+	\caption{Sketch showing the common principle of the identification of b-jets. Figure taken from \cite{btagjet}}
+	\label{fig:btaggingdiagram}
+\end{figure}
+
+The b-tagging algorithm performances are evaluated taking into account two cases: discrimination of b-tagged jets originating from charm quarks, and discrimination of b-tagged jets against jets coming from gluons or light (\Pup, \Pdown, \Pstrange) quarks.In \fig{fig:figure008}, the misidentification probabilities for different b-tagging algorithms within CMS are shown.
+Based on the misidentification probabilities for a certain threshold on the CSVv2 discriminator, different working points (WP) are defined. These are shown in \tab{tab:bctag}. The analysis presented in this thesis uses the loose working point which has an average efficiency of 81\% and a misidentification rate of 10\%. \todo{Find reason why I am not using cMVA, omdat CVSv2 op ttbar events is gemeten en cMVA op multijet?}
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.7\linewidth]{4_EventRecoSelect/Figures/Figure_008}
+	\caption{Misidentification probabilities of various b-tagging algorithm in simulation. Figure taken from \cite{CMS-PAS-BTV-15-001}. }
+	\label{fig:figure008}
+\end{figure}
+\begin{table}[htbp]
+	\centering
+	\caption{Working points used for tagging jets as coming from b quarks for the CSVv2 discriminant.}
+	\begin{tabular}{cccc}
 		\toprule
-		WP id & WP discr cut \\ 
-		& \\
+		WP id & CSVv2 discr cut & b-tag eff. & misid. prob \\ 
 		\midrule
-		Loose & $>$ 0.5426 \\ 
+		Loose (L) & $>$ 0.5426 & $\approx 81\%$ &  $\approx 10\%$ \\ 
 		\hline 
-		Medium & $>$ 0.8484 \\ 
+		Medium (M)& $>$ 0.8484 & $\approx 66\%$ &  $\approx 1\%$\\ 
 		\hline 
-		Tight & $>$ 0.9535 \\ 
+		Tight (T) & $>$ 0.9535 & $\approx 46\%$ &  $\approx 0.1\%$\\ 
 		\bottomrule
 	\end{tabular} 
+% see http://cms.cern.ch/iCMS/analysisadmin/cadilines?line=BTV-16-002
 	\label{tab:bctag}	
 \end{table}
 
+The efficiency of tagging a jet as coming from a bottom quark in simulation typically deviates somewhat from data. Efficiency scale factors $\epsilon^{\mathrm{data}}_{\Pbottom}/\epsilon^{\mathrm{MC}}_{\Pbottom}$ are derived from data to account for those differences. These scale factors are $\eta$-, $\pt$-, and flavour dependent, where the flavour of the jet is determined from matched generated hadrons. For cut based analyses these scale factors are applied to the b-tagging efficiencies and mistag rates according to the chosen working point~\cite{CMS-PAS-BTV-15-001}. For shape based analysis however, such as the one presented in this thesis, the scale factor are applied on the distribution of the b-tagging discriminator. This is the so-called IterativeFit method~\cite{CMS-PAS-BTV-16-001}. It uses a tag and probe method to measure the scale factors for both b, c, and  light flavoured jets simultaneously. The scale factors to account for the differences in simulation and data for the probe jet are determined iteratively to account for the impact of the b-, c-flavour, and light flavour scale factors on eachother. In a fist step, no scale factors are applied. Then the scale factor is measured by applying the scale factors af the previous iteration to simulation until the scale factors become stable. Throughout the procedure, the scale factor for charm jets are set unity with an uncertainty that is twice the one of the b scale factor. The scale factors obtained in $\eta$-, \pt-, and CSVv2 discriminant values are determined with the bin content N of the considered ($\eta$,\pt,discriminant) bin as
+\begin{equation}
+\begin{aligned}
+\mathrm{SF}_{\Pbottom} &= \frac{N_{\Pbottom}^{\mathrm{data}} - N_{\Pbottom}^{\mathrm{MC}}}{N_{\Pbottom}^{\mathrm{MC}}}, \\
+\mathrm{SF}_{\Pgluon, \Pup,\Pdown, \Pstrange} &= \frac{N_{\Pgluon, \Pup,\Pdown, \Pstrange}^{\mathrm{data}} - N_{\Pgluon, \Pup,\Pdown, \Pstrange}^{\mathrm{MC}}}{N_{\Pgluon, \Pup,\Pdown, \Pstrange}^{\mathrm{MC}}}, \\
+\mathrm{SF}_{\Pcharm} &= 1. 
+\end{aligned}
+\end{equation}
 
+ The uncertainties related to the IterativeFit method cover possible shape discrepancies between data and simulation.  The purity of the sample on which the scale factors are determined has an influence on the scale factors. The uncertainty coming from the purity of the sample is subdivided into two uncorrelated uncertainties based on the purity of the light flavoured (lf) and heavy flavoured (hf) jet contributions in the sample. Furthermore, the jet energy scale results in jets migrating from one \pt\ bin to an other, having an influence on bin dependent scale factors. The statistical fluctuations of the limited amount of entries in each bin are also accounted for and have an influence on the scale factor uncertainties. These have four uncorrelated sources: 
+  two for heavy flavour and two for light flavour jets.   Since the uncertainty on the scale factors for the jets originating from a charm quark (cf) is determined from the uncertainty on the b scale factors resulting in two independent uncertainties~\cite{CMS-PAS-BTV-16-001}.
+
+
+\subsection{Missing transverse energy}
+The missing transverse momentum \ptmisvec\ and energy \Etmis\ resulting from particles that do not interact with the detecor material, are calculated to balance the vectorial sum of the transverse momenta of all particles: 
+\begin{equation}
+\begin{aligned}
+	\Et &= \left|\ptmisvec\right|, \\
+	\ptmisvec &= - \sum \limits_{\mathrm{i} = 1}^{\mathrm{N}_{\mathrm{particles}}} \vec{p}_{\mathrm{T,i}}.
+\end{aligned}	
+\end{equation}
+The $z$-component can noy be calculated from the momentum imbalance since the boost along the $z$-axis, determined by the momentum fraction, can not be reconstructed. 
+
+The missing transverse energy is influenced by the minimum tresholds in calorimeters, the inefficiencies in the tarcker, and the nonlinear response of the calorimeter to hadronic particles. Ths bias is reduced by correctiong the trannsverse momentum of the jets too partcle jet \pt\ via the JEC and propagating it to the  missing transverse momentum taking into account the energy 
+\begin{equation}
+\begin{aligned}
+\ptmisvec^{\mathrm{corr}} &= - \sum \limits_{\mathrm{i} = 1}^{\mathrm{N}_{\mathrm{jets}}} \vec{p}_{\mathrm{T,i}}^{\mathrm{corr.}}  - \sum \limits_{\mathrm{i} = 1}^{\mathrm{N}_{\mathrm{unlustered}}} \vec{p}_{\mathrm{T,i}}^{\mathrm{raw}}, \\
+\ptmisvec^{\mathrm{corr}} &= \ptmisvec^{\mathrm{raw}} - \sum \limits_{\mathrm{i} = 1}^{\mathrm{N}_{\mathrm{jets}}} \left( \vec{p}_{\mathrm{T,i}}^{\mathrm{JEC}}  - \vec{p}_{\mathrm{T,i}}^{\mathrm{PU-only}}\right). 
+\end{aligned}
+\end{equation}
+The $ \vec{p}_{\mathrm{T,i}}^{\mathrm{PU-only}}$ denotes the transverse momentum of the jet, where only the pile up related corrections are applied. The performance of the missing transverse energy reconstruction can be found in \cite{CMS-PAS-JME-16-004}. 
+\section{Luminosity}
+\label{sec:Lumi}
+The luminsity of the CMS interaction point is estimated from measuring certain process rates with luminometers such as the pixel detector, HF calorimeter, and the pixel luminosity telescope~\cite{Kornmayer:2039978}. The instantaneous luminosity from recorded process rate $R$ is then determined as 
+\begin{equation}
+	\lumi dt = \frac{R dt }{\sigma_{\mathrm{fid}}}, 
+\end{equation} 
+where $\sigma_{\mathrm{fid}}= \sigma \times A$ corresponds to the fiducial cross  section recorded in the luminometer acceptance $A$ which is determined using van der Meer scans~\cite{CMS-PAS-LUM-17-001}. The overall uncertainty on the luminosity measurement is estimated to be 2.5\%.  
+
+The luminosity is used to infer to number of pile up interactions in data, which can be used to corrected the predefined pile up interactions in simulation. The average number of pile up interactions in data is estimated per luminosity section by multiplying the luminosity times the total inelastic cross section. Then an event weight can be derived from the ratio of the distributions of pile up interactions in data and simulation. For 13 \TeV\ collisions, the inelastic cross section is measured to be $71.3\pm3.5$ mb~\cite{CMS-PAS-LUM-17-001}. However a better agreement in data and simulation for the pile up sensitive variables, such as the number of primary vertices, is found with a lower cross section of 69 mb.
+\newpage
 \section{Summary of corrections}
-\begin{enumerate}
-	\item Muon ID, Iso see \Sec{sec:MuonID}
-\end{enumerate}
+\label{sec:SummaryCor}
+Throughout the chapter several corrections are introduced to improve the agreement between data and simulation. These corrections are sources of systematic uncertainties for the analysis presented in this thesis. Therefore a summary of the corrections and their associated uncertainties is provided. 
+
+
+\begin{description}
+  		\item[Lepton scale factors] The systematic uncertainty on the lepton scale factors consist of three sources: identification, isolation and tracking.	The applied scale factors are varied independently within one standard deviation of their measured uncertainties to account for their systematic impact on the measurements. 
+
+	\item[Jet energy corrections] The momenta of the reconstructed jets are corrected to match the expected true energy derived friom the hadrinzation products of partons in simulation. Furthermore, resiudal corrections and smearing is applied to match the overall energy scale and resolution for simulation and data. These corrections are also propagated to the missing transverse energy. The systematic uncertainties due to these scale factors are estimated by varying them within their uncertainties and repeating the measurements with recalibrated jets and missing transverse energy. 
+	
+
+	
+	\item[CSVv2 discriminant shape reweighting] There are three sources of uncertainty contributing to the measurement of the scale factors: statistical uncertainties, jet energy scale and the purity of the sample. The jet energy scale uncertainty is 100\% correlated to the jet energy uncertainties and is evaluated simultaneously. The uncertainty coming from the purity of the sample is subdivided into two uncorrelated uncertainties based on the purity of the light flavoured (lf) and heavy flavoured (hf) jet contributions in the sample. A one sigma shift in each of the two purity contributions corresponds to a higher/lower contribution in the purity of the considered flavours. The statistical uncertainties has four uncorrelated sources, two for heavy flavour and two for light flavour jets. One of the uncertainties correspond to the shift consistent with the statistical uncertainties of the sample, while the other is propagated in a way that the upper and lower ends of the distribution are affected with respect to the centre of the distribution.   The uncertainty on the charm jet scale factors (cf)   is obtained from the uncertainty on the heavy flavour scale factors, doubling it in size and constructing two nuisance parameters to control the charm flavour scale factors and treating them as independent uncertainties. 
+	
+	
+		\item[Pile up] Varying the minimum bias cross section, used to calculate the pile up distribution by $\pm$ 4.6\%, results in a systematic shift in the pile up distribution. The uncertainty is estimated by  recalculating the pile up weights to the distributions associated to the minimum bias cross sections. 
+		
+		
+		\item[Luminosity] The luminosity  is measured with a global uncertainty of 2.5\%, affecting the expected number of events. 
+	
+\end{description}
+
 \begin{comment}
 % Jet energy scale and resolution in the CMS experiment in pp collisions at 8 TeV
 % http://iopscience.iop.org/article/10.1088/1748-0221/12/02/P02014/meta
@@ -408,9 +473,3 @@ where $ \mathrm{N}(0, \sigma_{\mathrm{JER}})$ denotes a sample value from a norm
 
 
 
-\section{Event selection}
-\label{sec:selection}
-\section{Regions and channels}
-\label{sec:regions}
-\section{Data driven background simulation}
-\label{sec:NPL}
