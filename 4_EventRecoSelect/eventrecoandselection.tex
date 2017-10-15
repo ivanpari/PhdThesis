@@ -273,6 +273,7 @@ The efficiency of electron identification is estimated from $\PZ \rightarrow \Pe
 \newpage
 
 \subsection{Jets}
+\label{sec:JetID}
 %https://twiki.cern.ch/twiki/bin/view/CMS/IntroToJEC
 Jets are reconstructed  from all reconstructed particles without the charged hadrons associated to pile up vertices (PF+CHS jets). The clustering is done via the \antikt\ algorithm~\cite{Cacciari:2008gp} with a radius parameter for the cone size of the resulting jet of $R=0.5$ for 8 \TeV\ data and $R=0.4$ for the more boosted 13 \TeV\ dataset. The initial step of the \antikt\ algorithm considers all candidates as protojets and starts to calculate the distances for protojets i and j as
 \begin{equation}
@@ -335,6 +336,7 @@ c_{\mathrm{unmatched}} &= 1 + \mathrm{N}(0, \sigma_{\mathrm{JER}})\sqrt{\mathrm{
 where $ \mathrm{N}(0, \sigma_{\mathrm{JER}})$ denotes a sample value from a normal distribution centred at zero with as standard deviation the relative resolution in simulation $\sigma_{\mathrm{JER}}$, and $s_{\mathrm{JER}}$ the $\eta$-dependent resolution scale factors. These scale factors are derived  from data from di-jet or \pjets\ events and analysing the \pt\ balance. The resolution scale factors (data/simulation) are found to be 1.1-1.2 except for the transition regions around $|\eta| =3$ and $|\eta| = 1.4$~\cite{CMS-DP-2016-020}.
 
 \subsection{Jets from b fragmentation}
+\label{sec:BJetID}
 Jets originating from the hadronisation of bottom quarks can be discriminated from jets from gluons and light-flavour quarks as well as charm quark fragmentation through the use of b-tagging. There are a multitude of algorithms developed within CMS to perform b-tagging~\cite{1748-0221-8-04-P04013,CMS-PAS-BTV-15-001} on jets that fall within the pseudorapidity acceptance of the trackers. These algorithms exploit the properties of the \Pbottom\ quark to identify the jets formed by its fragmentation. These hadrons have relative large masses, long lifetimes and daughter particles with hard momentum spectra. Additionally, their semi-leptonic decays can be exploited as well.  To use b-jet identification in an analysis, one needs to know its efficiency and misidentification probability. In general these are function of the pseudorapidity and transverse momentum of the considered jet. Their performances are directly measured from data by use of b-jet enriched jet samples (multi-jet or top-quark decays). 
 
 
@@ -386,6 +388,7 @@ The efficiency of tagging a jet as coming from a bottom quark in simulation typi
 
 
 \subsection{Missing transverse energy}
+\label{sec:MET}
 The missing transverse momentum \ptmisvec\ and energy \Etmis\ resulting from particles that do not interact with the detector material, are calculated to balance the vectorial sum of the transverse momenta of all particles: 
 \begin{equation}
 \begin{aligned}
