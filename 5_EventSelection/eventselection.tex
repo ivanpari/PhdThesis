@@ -140,9 +140,27 @@ On top of leptons, jets and missing transverse energy are expected from the sign
 The jets originating from b quarks are tagged using the CSVv2 algorithm, which combines the information of displaced tracks with information of secondary vertices associated with the jet using a multivariate technique. The jets are tagged as a jet coming from a b quark (b-tagged) if the CSVv2 discriminator is above a certain threshold.  This analysis uses a threshold that results in an average b-tagging efficiency of 81\% and a misidentification rate of 10\%. More information about b-tagging can be found in \Sec{sec:BJetID}.
 
 The missing transverse momentum vector \ptmisvec\ is defined as the projection on the plane perpendicular to the beams of the negative vector sum of the momenta of all reconstructed particles in an event. Its magnitude is denoted by \Etmis as shown in \Sec{sec:MET}. Its longitudinal component is calculated by limiting the lepton + neutrino to the \PW\ boson mass. In case two solutions arise, the mass closest to the known top quark mass is used. 
-
+The events and their corresponding object collections reconstructed using the reconstruction criteria described in Section \ref{sec:reco}, are used as input for the analysis. Further requirements on the momenta and the pseudo rapidities are made to fulfil the trigger requirements and reconstruction algorithms. %These are given in Table \ref{tab:pteta}.
+%\begin{table}[h]
+%	\centering
+%	\caption{Momentum and pseudo rapidity requirements on the reconstructed objects.}
+%	\begin{tabular}{c|c|c}
+%		\hline 
+%		& \pt$>$ & $|\eta|<$ \\ 
+%		\hline 
+%		muons & 30 \GeV & 2.4 \\ 
+%		\hline 
+%		electrons & 35 \GeV & 2.1 \\ 
+%		\hline 
+%		jets & 30 \GeV & 2.4 \\ 
+%		\hline 
+%	\end{tabular} 
+%	\label{tab:pteta}
+%\end{table}
 \subsection{Event cleaning}
 \label{sec:Filters}
+REWRITE %%met filter %http://cds.cern.ch/record/2205284/files/JME-16-004-pas.pdf
+
 Some events arising from instrumental noise and beam backgrounds might end up in the data. By use of filters, such non collision events are omitted~\cite{Filters}. 
 \begin{description}
 	\item [Beam halo] The machine induced particles, via beam-gas / beam-pipe/... interactions, that are flying with the beam affect the physics analysis. Therefore, events containing such beam halo particles are removed from the selection with the CSC Beam Halo Filter. 
@@ -293,34 +311,7 @@ c_{\mathrm{JER}} = 1 + (s_{\mathrm{JER}}-1)\frac{\pt -\pt^{ptcl}}{\pt}.
 \end{equation}
 With \pt\ the reconstructed transverse momentum, \pt$^{ptcl}$ the transverse momentum of the corresponding jet clustered from generator level particles, and $s_{\mathrm{JER}}$ the resolution scale factor. The resolution scale factor is measured in $\eta$ bins and given in Table \ref{tab:JER}. The effect of the jet energy corrections can be found in Figure \ref{fig:jesSF} and \ref{fig:jerSF}.
 
-\begin{table}[h]
-	\centering
-	\caption{Jet energy scale factors in bins of $\eta$ with uncertainty}
-	\begin{tabular}{c|c|c}
-		\hline 
-		$|\eta|$ & SF & Uncertainty ($\pm$) \\ 
-		\hline 
-		0-0.5 & 1.109 & 0.008 \\ 
-		\hline 
-		0.5-0.8 & 1.138 & 0.013 \\ 
-		\hline 
-		0.8-1.1 & 1.114 & 0.013 \\ 
-		\hline 
-		1.1-1.3 & 1.123 & 0.024 \\ 
-		\hline 
-		1.3-1.7 & 1.084 & 0.011 \\ 
-		\hline 
-		1.7-1.9 & 1.082 & 0.035 \\ 
-		\hline 
-		1.9-2.1 & 1.140 & 0.047 \\ 
-		\hline 
-		2.1-2.3 & 1.067 & 0.053 \\ 
-		\hline 
-		2.3-2.5 & 1.177 & 0.041 \\ 
-		\hline 
-	\end{tabular} 
-	\label{tab:JER}
-\end{table}
+
 
 %
 %\begin{figure}[h]
@@ -343,7 +334,11 @@ With \pt\ the reconstructed transverse momentum, \pt$^{ptcl}$ the transverse mom
 \subsection*{Missing transverse energy}
 The energy scale and resolution corrections applied to the jets are propagated back to the  missing transverse energy (smeared Type I correction). This rebalances the transverse net momentum of the event and improves the missing transverse energy resolution itself.
 
+\section{Analysis Strategy}
+\label{sec:selection}
 
+
+The analysis strategy uses five statistically independent regions to extract limits using a likelihood fit of various observables. Two signal regions, the \tZ\ (\STSR) and \tZq\ (\TTSR) signal region, are constructed using the jet multiplicity,  focussed on each signal signature (see Tab. \ref{tab:Regions}).  In order to constrain the rate of \WZ+jet events as well as that of nonprompt lepton backgrounds three control regions are defined. The \WZ\ control region (\WZCR) focusses on nonprompt leptons originating from \DY\ and simultaneously constrains the \WZ+jets background rate. The nonprompt lepton backgrounds coming from \ttbar, are constrained by two control regions, \TTCR\ and \STCR, one for each signal region (\TTSR\ and \STSR).  In the \STSR\ and \TTSR\, multivariate discriminants based on Boosted Decision Trees (BDT) are used to respectively discriminate \FCNC\ \tZ\ and \FCNC\ \tZq\ from backgrounds. In the \WZCR\ a  discriminating variable between the two backgrounds, \WZ+jets and nonprompt leptons, is used. In \TTCR\ and \STCR\, the dominating process is \ttbar\, and its rate is estimated by subtracting all other background predictions from data. A simultaneous global fit is performed taking into account each region (\STSR, \TTSR, \WZCR, \TTCR\ and \STCR) for the four different leptonic channels. 
 
 \section{Data driven background simulation}
 \label{sec:NPL}
@@ -359,21 +354,81 @@ The nonprompt lepton sources are
 \end{itemize}
 that pass the identification and isolation requirements. The dominant source of these nonprompt leptons depend on the flavour of the lepton and therefore the events with a nonprompt muon are treated differently than those with a nonprompt electron. For muons, the dominant source is the semi leptonic decay of heavy flavour hadrons. For electrons, the dominant sources are hadrons and photon conversions. 
 
-The backgrounds causing nonprompt lepton contributions are mostly Drell--Yan (\DY) and \ttbar\ dilepton processes, and in a smaller amount \WW. All of these backgrounds contain two real leptons and one nonprompt lepton. Due to the fact that the probability for a lepton to be a nonprompt lepton is small, backgrounds containing two or more nonprompt leptons are neglected. The assumption is made that for DY the two leptons compatible with a \PZ\ boson decay are the real leptons, and the additional lepton is coming from a nonprompt lepton source, while for \ttbar\ the nonprompt lepton is associated to the Z boson. 
+The backgrounds causing nonprompt lepton contributions are mostly Drell--Yan (\DY) and \ttbar\ dilepton processes, and in a smaller amount \WW\ and \tWZ. All of these backgrounds contain two real leptons and one nonprompt lepton. Due to the fact that the probability for a lepton to be a nonprompt lepton is small, backgrounds containing two or more nonprompt leptons are neglected. The assumption is made that for DY the two leptons compatible with a \PZ\ boson decay are the real leptons, and the additional lepton is coming from a nonprompt lepton source, while for \ttbar\ the nonprompt lepton is associated to the Z boson. 
 
-The nonprompt lepton sample is constructed from data by requiring exactly three leptons, from which two are considered real, isolated leptons and the third is a nonprompt lepton. This nonprompt lepton is created by loosening its identification and inverting its isolation criteria. The full requirements on the (nonprompt) leptons are given in Section \ref{sec:sel}. 
-For nonprompt electrons, a large fraction is coming from misidentified photons. These are removed by applying a tighter cut on the $1/E-1/p$ variable, and by limiting the isolation values to be smaller than one (see Table \ref{tab:nonpromptel}). 
+The nonprompt lepton sample is constructed from data by requiring exactly three leptons, from which two are considered real, isolated leptons and the third is a nonprompt lepton. This nonprompt lepton is created by loosening its identification and inverting its isolation criteria. The full requirements on the (nonprompt) leptons are given in  \tab{tab:nonpromptel} and \tab{tab:nonpromptmu}.  For nonprompt electrons, a large fraction is coming from misidentified photons. These are removed by applying a tighter cut on the $1/E-1/p$ variable, and by limiting the isolation values to be smaller than one. 
+\begin{table}[htbp]
+	\centering
+	
+	\caption{Non prompt electron requirements used in this analysis. The requirements are set in the barrel ($|\eta_{supercluster}| \leq 1.479$)
+		and the end caps ($|\eta_{supercluster}| > 1.479$). }
+	\begin{tabular}{ccc}
+		\toprule
+		& \multicolumn{1}{c|}{$|\eta_{supercluster}| \leq 1.479$ } & \multicolumn{1}{c}{$|\eta_{supercluster}| > 1.479$ } \\
+		\midrule
+		$\sigma_{\eta \eta}$ & $<$ 0.011 & $<$ 0.0314 \\ 
+		
+		$|\Delta\eta_{\mathrm{in}}|$ & $<$ 0.00477& $<$ 0.00868\\ 
+		
+		$|\Delta\phi_{\mathrm{in}}|$ & $<$ 0.222 &  $<$ 0.212 \\ 
+		 
+		H/E & $<$ 0.298& $<$ 0.101 \\ 
+		
+		relative isolation & $\geq$ 0.0588 \&\& $<$ 1 &  $\geq$ 0.0571 \&\& $<$ 1\\ 
+	
+		$|1/E-1/p|$ & $<$ 0.0129 \GeVinv & $<$ 0.0129 \GeVinv \\ 
+		
+		expected missing inner hits & $\leq $ 1 &  $\leq $ 1\\ 
+	
+		pass conversion veto & Y & Y \\ 
+	
+		\pt &$>$ 35 \GeV & $>$ 35 \GeV \\
+		\bottomrule
+	\end{tabular} 
+	\label{tab:nonpromptel}
+\end{table}
+
+\begin{table}[htbp]
+	\centering
+	\caption{Non prompt muon requirements used in the analysis. }
+	
+	\begin{tabular}{cc}
+		\toprule
+		& modified Loose Muon WP \\ 
+		\midrule 
+		Global muon or Tracker Muon & Both  \\ 
+		
+		Particle Flow muon & Y  \\ 
+		
+		$\chi^2/ndof$ of global muon track fit & N/A \\  
+		
+		Nb. of hit muon chambers & N/A \\ 
+		 
+		Nb. of muon stations contained in the segment & N/A   \\ 
+		
+		Size of the transverse impact parameter  of the track wrt. PV & N/A  \\ 
+		 
+		Longitudinal distance wrt. PV & N/A \\ 
+		
+		Nb. of pixel hits & N/A \\ 
+		
+		Nb. of tracker layers with hits & N/A  \\ 
+		
+		Relative Isolation & $\geq$ 0.15 \\
+		
+		\pt &$>$ 30 \GeV  \\
+		\bottomrule
+	\end{tabular} 
+	
+	\label{tab:nonpromptmu}
+\end{table}
+
 
 The nonprompt leptons samples are defined in a given control region and are used to describe their contribution in the other regions. 
 
-\section{Event selection}
-\label{sec:selection}
-%met filter %http://cds.cern.ch/record/2205284/files/JME-16-004-pas.pdf
-
-\section{Signal and control regions}
-The analysis strategy uses five statistically independent regions to extract limits using a likelihood fit of various observables. Two signal regions, the \tZ\ (\STSR) and \tZq\ (\TTSR) signal region, are constructed using the jet multiplicity,  focussed on each signal signature (see Tab. \ref{tab:Regions}).  In order to constrain the rate of \WZ+jet events as well as that of nonprompt lepton backgrounds three control regions are defined. The \WZ\ control region (\WZCR) focusses on nonprompt leptons originating from \DY\ and simultaneously constrains the \WZ+jets background rate. The nonprompt lepton backgrounds coming from \ttbar, are constrained by two control regions, \TTCR\ and \STCR, one for each signal region (\TTSR\ and \STSR).  In the \STSR\ and \TTSR\, multivariate discriminants based on Boosted Decision Trees (BDT) are used to respectively discriminate \FCNC\ \tZ\ and \FCNC\ \tZq\ from backgrounds. In the \WZCR\ a  discriminating variable between the two backgrounds, \WZ+jets and nonprompt leptons, is used. In \TTCR\ and \STCR\, the dominating process is \ttbar\, and its rate is estimated by subtracting all other background predictions from data. A simultaneous global fit is performed taking into account each region (\STSR, \TTSR, \WZCR, \TTCR\ and \STCR) for the four different leptonic channels. 
-
-
+\newpage
+\section{Regions and channels}
+\label{sec:regions}
 The regions are defined as in Table \ref{tab:Regions} after a common selection of
 \begin{itemize}
 	\item exactly 3 leptons containing one opposite sign, same flavour pair,
@@ -386,21 +441,7 @@ The transverse mass $\mtw$ is reconstructed using
 \mtw = \sqrt{(\pt(l_{\W}) + \pt(\nu_{\W}) ) ^2 - (p_{\mathrm{x}}(l_{\W}) + p_{\mathrm{x}}(\nu_{\W}))^2  - (p_{\mathrm{y}}(l_{\W}) + p_{\mathrm{y}}(\nu_{\W}))^2    }
 \end{equation}
 
-
-
-Additional leptons are vetoed in order to reduce the contamination of backgrounds with four or more leptons in the final state, e.g. \ZZ, \ttZ, and \ttH. The most important backgrounds are the ones that contain three prompt leptons in the final state. These are mainly \WZ +jets, \ttZ and SM \tZq. For these backgrounds, the three lepton topology is identical to the \FCNC\ signal: two opposite sign leptons of the same flavour decaying from the \PZ\ boson, and a third additional, high \pt\ lepton coming from the \PW\ boson decay.
-
-For the FCNC \tZ\ final state, one b jet coming from the SM top decay is expected. For the FCNC \tZq, an additional light jet is expected. In the \ttZ\ final state, two b jets are present in the final state. However, due to inefficiencies of the b-tagging algorithm, one of the two b jets may be identified as a light quark jet, giving the same final state as the FCNC \tZq\ final state. For the \WZ+jets final states, one of the b jets produced by gluon splitting can be b-tagged or light flavour jets coming from the \WZ+jets production can be mis-tagged as b jets. The SM \tZq\ final state expects the same signal as FCNC \tZq.
-% (\FIXME recheck all leading bkg in STSR). 
-
-As mentioned in Section \ref{sec:nonprompt}, the nonprompt  lepton distribution gives a significant background contribution. This background is coming mainly from \DY+jets and \ttbar\ processes (in a less significant way, also \WW\ contributes), which have very high cross sections and causes a large number of nonprompt  background events, compared to signal.
-
-In order to reduce the large uncertainties in backgrounds, five independent regions are used as defined in Table  \ref{tab:Regions}. 
-\section{Regions and channels}
-\label{sec:regions}
-
-
-\begin{table}[ht]
+\begin{table}[htbp]
 	\centering
 	\caption{The statistically independent regions used in the analysis.}
 	\begin{tabular}{c|c|c|c|c|c}
@@ -420,9 +461,18 @@ In order to reduce the large uncertainties in backgrounds, five independent regi
 	\label{tab:Regions}
 \end{table}
 
+Additional leptons are vetoed in order to reduce the contamination of backgrounds with four or more leptons in the final state, e.g. \ZZ, \ttZ, and \ttH. The most important backgrounds are the ones that contain three prompt leptons in the final state. These are mainly \WZ +jets, \ttZ and SM \tZq. For these backgrounds, the three lepton topology is identical to the \FCNC\ signal: two opposite sign leptons of the same flavour decaying from the \PZ\ boson, and a third additional, high \pt\ lepton coming from the \PW\ boson decay.
+
+For the FCNC \tZ\ final state, one b jet coming from the SM top decay is expected. For the FCNC \tZq, an additional light jet is expected. In the \ttZ\ final state, two b jets are present in the final state. However, due to inefficiencies of the b-tagging algorithm, one of the two b jets may be identified as a light quark jet, giving the same final state as the FCNC \tZq\ final state. For the \WZ+jets final states, one of the b jets produced by gluon splitting can be b-tagged or light flavour jets coming from the \WZ+jets production can be mis-tagged as b jets. The SM \tZq\ final state expects the same signal as FCNC \tZq.
+% (\FIXME recheck all leading bkg in STSR). 
+
+The \NPL\ lepton distribution gives a significant background contribution. This background is coming mainly from \DY\ and \ttbar\ processes (in a less significant way, also \WW\ and \tWZ\ contributes), which have very high cross sections and causes a large number of nonprompt  background events, compared to signal.
+
+In order to reduce the large uncertainties in backgrounds, five independent regions are used as defined in Table  \ref{tab:Regions}. 
+
 
 \subsection{WZ control region}
-In this region, a fit is performed on the transverse mass of the \PW\ boson, in order to estimate the nonprompt  lepton yield coming from \DY+jets and the \WZ+jets backgrounds. 
+In this region, a fit is performed on the transverse mass of the \PW\ boson, in order to estimate the nonprompt  lepton yield coming from \DY\ and the \WZ+jets backgrounds. 
 
 A transfer factor has to be used to account for going from a region with 0 b jets to a region with exactly one jet, or at least one jets. For this the probability of tagging at least one jet with the CSVv2 loose working point is used to calculate the expected number of events, Nb, after b tagging: 
 \begin{align}
@@ -453,14 +503,14 @@ The resulting transfer factors are given in Appendix \ref{app:tablestr}. The exp
 %\begin{figure}[ht]
 %	\centering
 %	\includegraphics[width=0.47\linewidth]{ZbosonMass/3lepcontrol_afterAtLeast1Jet_3lep__ZbosonMass_all_Normalized}
-%	\caption{The normalized distribution for \DY+jets and \ttbar\ events before dividing the events in to regions, after $|M(Z_{\mathrm{reco}}) - M(Z)| < 30$ GeV. All leptonic channels combined.}
+%	\caption{The normalized distribution for \DY\ and \ttbar\ events before dividing the events in to regions, after $|M(Z_{\mathrm{reco}}) - M(Z)| < 30$ GeV. All leptonic channels combined.}
 %	\label{fig:3lepcontrolafteratleast1jet3lepzbosonmassallnormalized}
 %\end{figure}
 
 \subsection{\TTSR\ and \STSR}
-The \TTSR\ is defined to target top quark pair FCNC (\tZq), while the \STSR\ focusses on single top quark FCNC (\tZ). They have nonprompt  lepton contributions coming from \DY+jets and \ttbar\ events. In this region, the data driven nonprompt  lepton template is split into two templates based on the presence of the non isolated lepton in the Z boson: 
+The \TTSR\ is defined to target top quark pair FCNC (\tZq), while the \STSR\ focusses on single top quark FCNC (\tZ). They have nonprompt  lepton contributions coming from \DY\ and \ttbar\ events. In this region, the data driven nonprompt  lepton template is split into two templates based on the presence of the non isolated lepton in the Z boson: 
 \begin{itemize}
-	\item Non prompt lepton associated with \PW\ boson is assigned to \DY+jets and estimated in the \WZCR.
+	\item Non prompt lepton associated with \PW\ boson is assigned to \DY\ and estimated in the \WZCR.
 	\item Non prompt lepton associated with \PZ\ boson is assigned to \ttbar\ and estimated in the \TTCR\ and \STCR.
 \end{itemize}
 It is shown in Appendix \ref{app:BDTnp}, that these two templates have the same shape within the limited statistics, not assuming any systematic uncertainties. 
