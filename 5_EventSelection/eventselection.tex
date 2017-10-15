@@ -159,16 +159,23 @@ The events and their corresponding object collections reconstructed using the re
 %\end{table}
 \subsection{Event cleaning}
 \label{sec:Filters}
-REWRITE %%met filter %http://cds.cern.ch/record/2205284/files/JME-16-004-pas.pdf
+ %%met filter %http://cds.cern.ch/record/2205284/files/JME-16-004-pas.pdf
 
-Some events arising from instrumental noise and beam backgrounds might end up in the data. By use of filters, such non collision events are omitted~\cite{Filters}. 
-\begin{description}
-	\item [Beam halo] The machine induced particles, via beam-gas / beam-pipe/... interactions, that are flying with the beam affect the physics analysis. Therefore, events containing such beam halo particles are removed from the selection with the CSC Beam Halo Filter. 
-	\item [HBHE nois] The HB and HE are known to record sporadic anomalous signals (noise) at a fixed rate independent of the beam conditions. The events are cleaned for this noise by use of algorithms that exploit the geometrical patterns and pulse shape information of the known noise. 
-	\item 	[ee badSC noise]  There are two supercrystal regions that give anomalous high energies and events suffering from this problem have to be removed. This affects only data and is therefore not applied on simulation. 
-	\item [ECAL TP] The ECAL dead cell trigger primitive filter is used to correct for channels where the primary data links were down during data taking. It also corrects for ECAL noisy crystals that were masked during the reconstruction of the event. 
-	\item [Bad Muons] There is a reconstruction issue leading to high \pt\ muons at $\abs{\eta}>2.3$. This causes artificial multi-\TeV\ tails in the distribution of the missing transverse energy for both MC and data. If the muons are low quality, they will be mislabelled as charged hadrons. By investigation the compatibility between non particle flow muon candidates and particle flow charged hadrons, these events can be filtered out. 
-\end{description}
+Some events arising from instrumental noise and beam backgrounds might end up in the data~\cite{Filters,CMS-PAS-JME-16-004}. Spurious deposits may appear in the ECAL from non collision origins such as beam halo particles, or from particles striking the sensors in the ECAL photo detectors. Conjointly, dead ECAL cells can cause artificial missing transverse energy. The HCAL can cause spurious energy from particle interactions with the light guides and the photomultiplier tubes of the HF, as well as noisy hybrid photo diodes. In CMS, different algorithms, so-called filters, are developed to identify and suppress these events. 
+
+
+The ECAL electronics noise and spurious signals from particle interactions with photo detectors are mostly removed via topological and timings based selection using  ECAL information only. THe remaining effects such as anomalously high energy crystals and the lack of information for channels due to inefficiencies in the read out are removed through dedicated events filters. Five ECAL endcap supercrystal have been identified for giving anomalously high energies due to high amplitude pulses in several channels at once, and are masked. Furthermore, the crystal read out from a small amount of ECAL towers is not available. However, their trigger primitive information is still available making it possible to estimate the magnitude of unmeasured energy and when the value is too large, the event is filtered out. 
+
+The machine induced particles, via beam-gas / beam-pipe/... interactions, that are flying with the beam affect the physics analysis. They leave a calorimeter deposit along a line at constant $\phi$ in the calorimeter, and interactions in the CSCs will often line up with this deposit. This can be seen in \fig{fig:beamhalo}. Therefore, events containing such beam halo particles are removed from the selection with the CSC Beam Halo Filter. This filter uses information related to the geometric quantities, energy deposits, and timing signatures. For 2016, the filter rejects 85\% in a halo-enriched sample, whereas the mistag probability determined from simulation if found te  be less than 0.01\%.  
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=1.\linewidth]{5_EventSelection/Figures/Figure_004}
+	\caption{Event display of a beam halo event with collinear hits in the CSC (black), missing transverse energy of 250 \GeV\, and a jet of 232 \GeV. The hadronic deposit is spread in $\eta$, but narrow in $\phi$. Figure taken from~\cite{CMS-PAS-JME-16-004}. }
+	\label{fig:beamhalo}
+\end{figure}
+
+Furthermore, there is anomalous high missing transverse energy coming from low quality muons that lead to high-\pt\ tracks, but are considered not good by the particle flow algorithm. These low quality tracks will be  mislabelled as charged hadrons and will therefore be used in the calculation of the missing transverse energy. By investigation the purity of the reconstructed tracks and the relative transverse momentum error of the muons, these events can be filtered out. 
+
 
 % see https://indico.cern.ch/event/591506/contributions/2387636/attachments/1381281/2099935/2016_12_01_MET_Scanning_Report_PPD.pdf
 % see https://indico.cern.ch/event/537458/contributions/2184619/attachments/1281045/1903148/met_scanner_report_may30.pdf
@@ -176,7 +183,8 @@ Some events arising from instrumental noise and beam backgrounds might end up in
 %see https://indico.cern.ch/event/518559/contributions/2132815/attachments/1264581/1871184/beamhalostatus.pdf
 % see https://twiki.cern.ch/twiki/bin/viewauth/CMS/MissingETOptionalFiltersRun2
 
-Additionally, only events with where the first primary vertex is a well reconstructed primary vertex are selected. The reconstructed primary vertex should have at least five degrees of freedom, the longitudinal distance from the beam spot is maximally 24 cm ($d_z < 24$ cm), and the transversal distance from the beam spot is maximally 2 cm ($d_{xy}<2$ cm ). 
+
+Supplementary to previous filters, only events with where the first primary vertex is a well reconstructed primary vertex are selected. The reconstructed primary vertex should have at least five degrees of freedom, the longitudinal distance from the beam spot is maximally 24 cm ($d_z < 24$ cm), and the transversal distance from the beam spot is maximally 2 cm ($d_{xy}<2$ cm). 
 \subsection{Estimation of the trigger efficiency}
 \label{sec:triggereff}
 The trigger efficiency in data is estimated using a data sample collected using unprescaled MET triggers, following the approach of \cite{CMSAN2016276}. The events passing the trigger paths:
