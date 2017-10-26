@@ -15,7 +15,7 @@
 \newcommand{\tab}[1]{\hyperref[#1]{Table \ref*{#1}}}
 \newcommand{\eq}[1]{\hyperref[#1]{Equation \ref*{#1}}}
 \newcommand{\Sec}[1]{\hyperref[#1]{Section \ref*{#1}}}
-
+\newcommand{\App}[1]{\hyperref[#1]{Appendix \ref*{#1}}}
 % circled numbers
 \newcommand*\circled[1]{\tikz[baseline=(char.base)]{
             \node[shape=circle,draw,inner sep=1.5pt] (char) {#1};}}
@@ -77,20 +77,22 @@
 \DeclareSIUnit{\pb}{pb}
 % particles
 \newcommand{\NPL}{\ensuremath{\mathrm{NPL}}}
+\newcommand{\NPE}{\ensuremath{\mathrm{NPE}}}
+\newcommand{\NPM}{\ensuremath{\mathrm{NP}\mu}}
 \newcommand{\muR}{\ensuremath{\mu_{\mathrm{R}}}}
 \newcommand{\muF}{\ensuremath{\mu_{\mathrm{F}}}}
 \newcommand{\accept}{\ensuremath{\mathfrak{A}}}
-\newcommand{\st}{single top}
-\renewcommand{\tt}{top pair }
+\newcommand{\st}{single top quark}
+\renewcommand{\tt}{top quark pair}
 \newcommand{\Lagr}{\ensuremath{\mathcal{L}}}
 \newcommand{\lagr}{\ensuremath{\mathcal{L}}}
 \newcommand{\like}{\ensuremath{\mathfrak{L}}}
 \newcommand{\lumi}{\ensuremath{\mathrm{L}}}
-\newcommand{\SSU}{\ensuremath{\mathrm{SU}_{\mathrm{C}}(3) \times \mathrm{SU}_{\mathrm{L}}(2) \times \mathrm{U}_{\mathrm{Y}}(1)}}
-\newcommand{\Uone}{\ensuremath{\mathrm{U}_{\mathrm{Y}}(1)}}
-\newcommand{\SU}{\ensuremath{\mathrm{SU}_{\mathrm{L}}(2) \times \mathrm{U}_{\mathrm{Y}}(1)}}
-\newcommand{\Sthree}{\ensuremath{\mathrm{SU}_{\mathrm{C}}(3)}}
-\newcommand{\Stwo}{\ensuremath{ \mathrm{SU}_{\mathrm{L}}(2)}}
+\newcommand{\SSU}{\ensuremath{\mathrm{SU}(3)_{\mathrm{C}} \times \mathrm{SU}(2)_{\mathrm{L}} \times \mathrm{U}(1)_{\mathrm{Y}}}}
+\newcommand{\Uone}{\ensuremath{\mathrm{U}(1)_{\mathrm{Y}}}}
+\newcommand{\SU}{\ensuremath{\mathrm{SU}(2)_{\mathrm{L}} \times \mathrm{U}(1)_{\mathrm{Y}}}}
+\newcommand{\Sthree}{\ensuremath{\mathrm{SU}(3)_{\mathrm{C}}}}
+\newcommand{\Stwo}{\ensuremath{ \mathrm{SU}(2)_{\mathrm{L}}}}
 \newcommand{\Bfield}{\ensuremath{ \mathrm{B}_{\mu}}}
 \newcommand{\Wfieldone}{\ensuremath{ \mathrm{W}_{\mu}^1}}
 \newcommand{\Wfieldtwo}{\ensuremath{ \mathrm{W}_{\mu}^2}}
@@ -115,7 +117,7 @@
 \newcommand{\LSM}{\ensuremath{\Lagr_\mathrm{SM}}}
 \DeclareRobustCommand{\order}{\ensuremath{\mathcal{O}}}
 \newcommand{\tZq}{\ensuremath{\mathrm{tZ}\Pquark}}
-\newcommand{\kgqt}{\ensuremath{\kappa_{\Pgluon\Pquark\Ptop}}}
+\newcommand{\kgqt}{\ensuremath{\kappa_{\Ptop\Pgluon\Pquark}}}
 \newcommand{\kZqt}{\ensuremath{\kappa_{\Ptop\PZ\Pquark}}}
 \newcommand{\eHqt}{\ensuremath{\eta_{\Ptop\PHiggs\Pquark}}}
 \newcommand{\kfqt}{\ensuremath{\kappa_{\Ptop\Pphoton\Pquark}}}
@@ -153,6 +155,7 @@
 \renewcommand{\APbottom}{\ensuremath{\bar{\mathrm{b}}}}
 \renewcommand{\Ptop}{\ensuremath{\mathrm{t}}}
 \renewcommand{\APtop}{\ensuremath{\bar{\mathrm{t}}}}
+\renewcommand{\Pnu}{\ensuremath{\nu}}
 \newcommand{\ttbar}{\ensuremath{\mathrm{t}\bar{\mathrm{t}}}}
 \newcommand{\qqbar}{\ensuremath{\mathrm{q}\bar{\mathrm{q}}}}
 \newcommand{\tZ}{\ensuremath{\mathrm{tZ}}}
