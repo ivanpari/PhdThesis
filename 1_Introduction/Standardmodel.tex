@@ -99,6 +99,7 @@ i  &  0
  1  &  0     \\
  0  &  -1 
  \end{pmatrix}.
+ \label{eq:Stwee}
 \end{equation}
 The generators $T^a$ satisfy the Lie algebra: 
 \begin{equation}
@@ -129,15 +130,15 @@ that are related to the gauge, fermion, Yukawa and scalar sectors. The gauge Lag
 %\end{equation}
 %where the tensors are
 %\begin{align}
-%\Gtensord &= \partial_{\mu}\mathrm{G}_{\nu}^i - \partial_{\nu}\mathrm{G}_{\mu}^i - g_{\mathrm{s}} f_{ijk} \mathrm{G}_{\mu}^j \mathrm{G}_{\nu}^k, \; \mathrm{ with }\; i,j,k = 1,...,8 \\
-%\Wtensord &= \partial_{\mu}\mathrm{W}_{\nu}^i - \partial_{\nu}\mathrm{W}_{\mu}^i - g_{\mathrm{s}} \epsilon_{ijk} \mathrm{W}_{\mu}^j \mathrm{G}_{\nu}^k, \; \mathrm{ with }\; i,j,k = 1,...,8 \\
+%\Gtensord &= \partial_{\mu}\mathrm{G}_{\nu}^{\mathrm{i}} - \partial_{\nu}\mathrm{G}_{\mu}^{\mathrm{i}} - g_{\mathrm{s}} f_{ijk} \mathrm{G}_{\mu}^j \mathrm{G}_{\nu}^k, \; \mathrm{ with }\; i,j,k = 1,...,8 \\
+%\Wtensord &= \partial_{\mu}\mathrm{W}_{\nu}^{\mathrm{i}} - \partial_{\nu}\mathrm{W}_{\mu}^{\mathrm{i}} - g_{\mathrm{s}} \epsilon_{ijk} \mathrm{W}_{\mu}^j \mathrm{G}_{\nu}^k, \; \mathrm{ with }\; i,j,k = 1,...,8 \\
 %\end{align}
 
 For the electroweak theory, two coupling constants are introduced, namely $g'$ for \Uone\ and $g$ for \Stwo. The physically observable gauge bosons of this theory are the photon field \photonfield, the \PZ\ boson field \Zfield, and the \PW\ boson fields \Wfield. These are a superposition of the four gauge fields of \SU: 
 \begin{equation}
 \photonfield = \sW \Wfieldthree + \cW \Bfield, \; \Zfield = \cW \Wfieldthree - \sW \Bfield, \; \mathrm{ and } \; \Wfield = \sqrt{\frac{1}{2}}\left(\Wfieldone\mp i \Wfieldtwo\right), 
 \end{equation}
-where $\theta_{\mathrm{W}}$ represents the weak mixing angle defined as $\mathrm{tan} \theta_{\mathrm{W}} = \frac{g'}{g}$.
+where $\theta_{\mathrm{W}}$ represents the weak mixing angle defined as $\mathrm{tan}\; \theta_{\mathrm{W}} = \frac{g'}{g}$.
 
 The coupling constant representing the strength of the QCD interactions is denoted as $g_{\mathrm{s}}$. In QCD their is asymptotic freedom whereby the strong coupling constant becomes weaker as the energy with which the interaction between strongly interacting particles is probed increases, and stronger as the distance between the particles increases. A consequence of this is known as colour confinement, the quarks and gluons can not exist on their own and are not observed individually. They are bound in colour neutral states called hadrons, this process is known as hadronisation. 
 
@@ -252,9 +253,9 @@ Each element $V_{\mathrm{ij}}$ of $ \mathcal{V}_{\mathrm{CKM}}$ represents the t
 \begin{equation}
 \mathcal{V}_{\mathrm{CKM}} =
 \begin{pmatrix}
-0.97425 \pm 0.00022  & 0.2253 \pm 0.0008      & (4.13 \pm 0.49)\; 10^{-3} \\
-0.225 \pm 0.008      & 0.986 \pm 0.016        & (41.1 \pm 1.3)\; 10^{-3} \\
-(8.4\pm 0.6)\; 10^{-3} & (40.0 \pm 2.7) \;10^{-3} & 1.021 \pm 0.032
+0.97425 \pm 0.00022  & 0.2253 \pm 0.0008      & (4.13 \pm 0.49) \times 10^{-3} \\
+0.225 \pm 0.008      & 0.986 \pm 0.016        & (41.1 \pm 1.3) \times 10^{-3} \\
+(8.4\pm 0.6) \times 10^{-3} & (40.0 \pm 2.7) \;10^{-3} & 1.021 \pm 0.032
 \end{pmatrix}.
 \label{eq:CKM}
 \end{equation}
@@ -267,10 +268,10 @@ From  \eq{eq:CKM} follows that top quarks predominantly decay via charged weak c
 		\toprule
 	    Process	& \BR\ in the \SM  &  Process	& \BR\ in the \SM \\ 
 		\midrule
-		$ \Ptop \rightarrow \Pup \PZ $         & $8 \; 10^{-17}$  &	$ \Ptop \rightarrow \Pcharm \PZ $      & $1 \; 10^{-14}$   \\
-		$ \Ptop \rightarrow \Pup \Pphoton $    & $4 \; 10^{-16}$  & $ \Ptop \rightarrow \Pcharm \Pphoton $ & $5 \; 10^{-14}$   \\
-		$ \Ptop \rightarrow \Pup \Pgluon $     & $4 \; 10^{-14}$  & $ \Ptop \rightarrow \Pcharm \Pgluon $  & $5 \; 10^{-12}$  \\
-		$ \Ptop \rightarrow \Pup \PHiggs $     & $2 \; 10^{-17}$  & $ \Ptop \rightarrow \Pcharm \PHiggs $  & $3 \; 10^{-15}$ \\
+		$ \Ptop \rightarrow \Pup \PZ $         & $8  \times 10^{-17}$  &	$ \Ptop \rightarrow \Pcharm \PZ $      & $1  \times 10^{-14}$   \\
+		$ \Ptop \rightarrow \Pup \Pphoton $    & $4  \times 10^{-16}$  & $ \Ptop \rightarrow \Pcharm \Pphoton $ & $5  \times 10^{-14}$   \\
+		$ \Ptop \rightarrow \Pup \Pgluon $     & $4  \times 10^{-14}$  & $ \Ptop \rightarrow \Pcharm \Pgluon $  & $5  \times 10^{-12}$  \\
+		$ \Ptop \rightarrow \Pup \PHiggs $     & $2  \times 10^{-17}$  & $ \Ptop \rightarrow \Pcharm \PHiggs $  & $3  \times 10^{-15}$ \\
 		\bottomrule
 	\end{tabular} 
 	\label{tab:FCNCBR}
@@ -296,7 +297,7 @@ The CKM matrix element $V_{\Ptop\Pbottom}$, given in \eq{eq:CKM}, is experimenta
 
 
 The massiveness of the top quark leads to the fact that a large amount of energy is needed to create one. This is only the case for high energy collisions such as those happening in the Earth's upper atmosphere when cosmic rays collide with particles in air, or by particle accelerators. The production of top quarks happens in two ways: single via the electroweak interaction or in pairs via the strong interaction. At hadron colliders, the dominant production mechanism is top quark production via gluon (gg$\rightarrow$\ttbar) or quark fusion (\qqbar $\rightarrow$ \ttbar). In \fig{fig:toppairproduction}, the different top quark pair production mechanisms are shown. The production channel of gluon fusion is the main contributor to the top quark pair cross section the LHC compared to quark fusion at the Tevatron. % because of the increasing gluon PDF towards smaller momentum fraction
-The gg$\rightarrow$\ttbar\ process contributes 80-90\% to the total top quark pair cross section in the LHC centre-of-mass energy regime of 7-14~\TeV~\cite{PDG}. In \tab{tab:toppaircros} the predicted top quark pair production cross sections are given for the LHC and the Tevatron.
+The gg$\rightarrow$\ttbar\ process contributes 80-90\% to the total top quark pair cross section in the LHC centre-of-mass energy regime of 7-14~\TeV~\cite{PDG}. In \tab{tab:toppaircros} the predicted top quark pair production cross sections are given for the LHC and the Tevatron, while in \fig{fig:ttcross}, a summary plot of the LHC and Tevatron top quark pair cross section measurements as a function of the centre-of-mass energy can be found.
 %\begin{figure}[htbp]
 %	\centering
 %	\includegraphics[width=0.32\linewidth]{1_Introduction/Figures/Ttbar_production_via_gg_fusion}
@@ -328,6 +329,13 @@ The gg$\rightarrow$\ttbar\ process contributes 80-90\% to the total top quark pa
 	\label{tab:toppaircros}
 \end{table}
 
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=1.\linewidth]{1_Introduction/Figures/tt_xsec_vsroots.pdf}
+	\caption{Summary of the LHC and the Tevatron measurements of the top quark pair production cross section as function of the centre-of-mass energy compared with the next-to-next-to-leading order QCD calculation. The theory bands are the uncertainties due to renormalization and factorisation scales, parton density functions and the strong coupling. The mass of the top quark is assumed to be 172.5 \GeV. Measurements for the same centre-of-mass energy are slightly off-set for clarity.  Figure taken from \cite{summarywikiatlas}.}
+		\label{fig:ttcross}
+\end{figure}
+
 The singly produced top quarks are produced via the electroweak interaction. These production mechanisms are subdivided at leading order into three main channels based on the virtuality ($Q^2 = - p_{\mu}p^{\mu}$) of the exchanged \PW\ boson. In \fig{fig:singletop}, the corresponding Feynman diagrams are shown. The single top quark production cross sections, given in \tab{tab:singletopcros}, are smaller than the top quark pair production cross sections since the electroweak coupling strength is smaller than the strong coupling strength. In addition, for the single top quark production, there is the need of sea quarks (\Pbottom, \APquark) in the initial states for which the parton density functions increase less steeply at low momentum fractions compared to the gluon parton density functions. 
 \begin{comment}
 	Electroweak single top-quark production mechanisms, na- mely from qq′ → tb [4], qb → q′t [5], mediated by virtual s-channel and t-channel W-bosons, and Wt-associated pro- duction, through bg → W−t, lead to somewhat smaller cross sections. For example, t-channel production, while suppressed by the weak coupling with respect to the strong pair produc- tion, is kinematically enhanced, resulting in a sizable cross section both at Tevatron and LHC energies. At the Tevatron, the t- and s-channel cross sections of top and antitop are identical, while at the LHC they are not, due to the charge- asymmetric initial state. 
@@ -340,7 +348,7 @@ The singly produced top quarks are produced via the electroweak interaction. The
 \end{figure}
 
 The production via the $t$-channel has a virtuality of the \PW\ boson $Q^2>0$, making it space-like. It is produced via the scattering of the \PW\ boson of a bottom quark coming from a proton or from gluon splitting (\Pgluon$\rightarrow$\bbbar). It has the highest single top quark cross section in proton collisions and the top quark production is roughly twice as large than the antitop quark. This is a consequence of the up-down valence quark composition of the proton. This feature makes the $t$-channel sensitive to the parton density functions of the proton. %The ratio depends however on the center-of-mass energy since at higher energies lower momentum fractions are probed at which contributions from the valence quarks become less dominant.
-The $s$-channel is the production mechanism with the smallest cross section. Here the \PW\ boson is time-like ($Q^2 <0$) which requires the \PW\ boson to have a large virtuality to produce the heavier top quark. It is produced from two quarks belonging to the same isodoublet (e.g. \Pup\APdown) and subsequently decays to \Ptop\APbottom. This process get enhanced by many beyond the Standard Model scenarios via the addition of new heavy particles such as \PW'. The tW-channel has a top quark produced in association with a \PW\ boson produced on shell $Q^2 = -m^2_{\PW}$. This mode is negligible at the Tevatron, but of relevant size at the LHC. The tW-channel is sensitive to new physics affecting the Wtb vertex. 
+The $s$-channel is the production mechanism with the smallest cross section. Here the \PW\ boson is time-like ($Q^2 <0$) which requires the \PW\ boson to have a large virtuality to produce the heavier top quark. It is produced from two quarks belonging to the same isodoublet (e.g. \Pup\APdown) and subsequently decays to \Ptop\APbottom. This process get enhanced by many beyond the Standard Model scenarios via the addition of new heavy particles such as \PW'. The tW-channel has a top quark produced in association with a \PW\ boson produced on shell $Q^2 = -m^2_{\PW}$. This mode is negligible at the Tevatron, but of relevant size at the LHC. The tW-channel is sensitive to new physics affecting the Wtb vertex.  The single top quark production cross section measurements by the CMS collaboration can be found in \fig{fig:stcross}.
  
  \begin{table}[htbp]
  	\centering
@@ -362,41 +370,90 @@ The $s$-channel is the production mechanism with the smallest cross section. Her
  	\label{tab:singletopcros}
  \end{table}
 
-\section{Experimental results on the \SM\ top quark}
-\label{sec:topexp}
-\todo{REWRITE}
-In this section a selection of experimental results of measurements of the \SM\ is presented. In \fig{fig:sigmanewv0}, a summary plot of the CMS cross section measurements can be found. The estimations by the CMS and ATLAS collaborations of the CKM matrix element $V_{\Ptop\Pbottom}$ from single top quark measurement are given in \fig{fig:Vtb}. The most precise estimation of $V_{\Ptop\Pbottom}$ originates from a combination of $t$-channel cross section measurements at 7 and 8~\TeV\ by the CMS collaboration resulting in $|f_{\mathrm{L}}V_{\Ptop\Pbottom}| = 0.998 \pm 0.038$ (exp.) $\pm 0.016$ (theo.). Assuming the $f_{\mathrm{L}} = 1$ and $|V_{\Ptop\Pbottom}| < 1$, this result yields a limit of $|V_{\Ptop\Pbottom}| > 0.92$ at 95\% confidence level. The most recent top quark mass measurements are given in \fig{fig:lhctopmasssep2017}. The CMS combined top quark mass measurement is $m_{\Ptop} = 172.44 \pm 0.48$~\GeV\ from 7 and 8~\TeV\ data. 
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=1.\linewidth]{1_Introduction/Figures/singletop_sqrts.pdf}
+	\caption{Summary of the measurements of the single top top quark production cross section as function of the centre-of-mass energy. Figure taken from \cite{summarywiki}.}
+	\label{fig:stcross}
+\end{figure}
+\newpage
+\section{Effective field theories}
+%https://cp3.irmp.ucl.ac.be/upload/theses/phd/degrande.pdf
+%http://www.physi.uni-heidelberg.de/Forschung/he/LHCb/documents/WorkshopNeckarzMarz08/TF_OPE.pdf
+Problems can be simplified if one looks at the relevant scale of the process that one want to investigate, for example the chemical properties of an hydrogen atom can be described without any knowledge of quark interactions inside the proton. In this case, the proton can be considered the elementary object (indivisible) due to the fact that the binding energy of the constituents is much bigger than the energy of the electron in orbit around the proton. Effective field theories are based on this kind of separation of different energy scales in a system~\cite{thesisDeg}. Effective field theories can be used for theories where the perturbative expansion cannot be trusted, e.g. QCD at low energy, or as bottom up approach to look for new physics in a model independent way. The latter is the way effective field theory will be used throughout this thesis. 
 
-In general the various measurements show a good agreement with the \SM\ predictions and by lack of deviations from the \SM, limits on the anomalous couplings can be derived. The estimated coupling strengths per operator contributing to single top quark production obtained from various measurements at the LHC and Tevatron are shown in \fig{fig:anomlouscouplings}. These results are consistent with the \SM\ expectation for which those operators vanish. \todo{Explain Wilson coeff and Wrasaw basis!}  
+
+The main idea behind effective field theory is easily explained via the example of the Fermi theory. Fermi explained in 1933~\cite{Fermi2008} the $\beta$-decay as a product of currents: 
+\begin{equation}
+\Lagr^{\mathrm{Fermi}}_{\mathrm{EFT}} = - \frac{G_{\mathrm{F}}}{\sqrt{2}} J^{\mu}J_{\mu}^{\dagger},
+\label{eq:EFTfermi}
+\end{equation}
+where $G_{\mathrm{F}}$ is the Fermi coupling constant, measured to be $G_{\mathrm{F}} \approx 1.17 \times 10^{-5}~\GeV^{-2}$. The current $J_{\mu}$ can written as the sum of an hadronic $J_{\mu}^h$ and leptonic $J_{\mu}^l$ current, where for simplicity only the leptonic current will be used further. 
+\begin{equation}
+	J_{\mu}^l = \sum \limits_{\mathrm{l}} \APnu_{\mathrm{l}} \gamma_{\mu} \left(1-\gamma_5\right) \mathrm{l}.
+\end{equation}
+Historically, charged currents were flavour universal and the later discovered parity violation of the weak interaction led to the V-A structure. After this the \Stwo\ symmetry was postulated and the existence of neutral currents was predicted. The effective Lagrangian used then (given in \eq{eq:EFTfermi}), could nowadays be build starting from \Stwo\ symmetries only. 
+
+The muon decay can be computed from two different starting points. The effective Fermi Lagrangian provides the decay width of the muon into an electron and two neutrinos 
+\begin{equation}
+	\Gamma(\Pmu \rightarrow \Pe\APnue\Pnum) \approx \frac{1}{96\pi^3} \frac{m_{\Pmu}^2}{\Lambda_{\mathrm{F}}^4},
+	\label{eq:mudecay}
+\end{equation}
+where $\Lambda_{\mathrm{F}}$ is the energy scale defined as
+\begin{equation}
+	\frac{G_{\mathrm{F}}}{\sqrt{2}} = \frac{1}{\Lambda_{\mathrm{F}}^2}. 
+\end{equation}
+From muon decay measurements, the value of $\Lambda_{\mathrm{F}}$ is determined to be $\Lambda_{\mathrm{F}} \approx 348 \GeV$ \cite{thesisDeg}. 
+From the \SM\ Lagrangian, one could also calculate the muon decay. Considering that the momenta involved are small compared to the \PW\ boson mass, the propagator's denominator can be expanded as~\cite{Peskin:257493} %zie http://rjs.phys.uvic.ca/sites/rjs.phys.uvic.ca/files/lec14.pdf
+\begin{equation}
+	\frac{1}{p^2 - m^2_{\PW}} = -\frac{1}{ m^2_{\PW}} - \frac{p^2}{ m^4_{\PW}} + ...
+\end{equation}
+Looking at the first term, and identifying 
+\begin{equation}
+	\frac{g^2}{8 m_{\PW}} = \frac{1}{\Lambda_{\mathrm{F}}}^2, 
+\end{equation}
+one sees that this corresponds with \eq{eq:mudecay}, thus the effective Lagrangian in \eq{eq:EFTfermi} is the first term of the expansion in $ \frac{1}{ m^2_{\PW}}$ applied on the full Lagrangian. 
+
+An effective theory is thus a Taylor expansion in the ratio of two scales and the only remnants of the full theory at low energies are the symmetries and the values of the coupling constants. If the expansion parameter is small, one can truncate the series leading to the Lagrangian containing a a finite number of free coefficients, making predictions possible. The error on these predictions are then of the order as the truncated piece. 
+
+
+The \SM\ can be seen as an effective theory applicable up to energies not exceeding a scale $\Lambda$. Therefore, remnants should still be valid and the theory above that scale should have a gauge group containing \SSU\ and  all the \SM\ degrees of freedom, as well as reduce to the \SM\ at lower energies. The general \SM\ Lagrangian becomes then 
+\begin{equation}
+	\Lagr_\mathrm{SM+EFT} = \Lagr_\mathrm{SM}^{(4)} + \frac{1}{\Lambda} \sum \limits_{\mathrm{k}} C_{\mathrm{k}}^{(5)} Q_{\mathrm{k}}^{(5)} + \frac{1}{\Lambda^2} \sum \limits_{\mathrm{k}} C_{\mathrm{k}}^{(6)} Q_{\mathrm{k}}^{(6)} + \order\left(\frac{1}{\Lambda^3}\right), 
+	\label{eq:eft}
+\end{equation}
+where $ Q_{\mathrm{k}}^{(n)}$ are dimension-$n$ operators (currents) and $C_{\mathrm{k}}^{(n)}$ the corresponding dimensionless coupling constants, so-called Wilson coefficients. The Wilson coefficients are determined by the underlying high energy theory. 
+
+In the Warsaw basis~\cite{Grzadkowski:2010es}, a set of independent operators of dimension 5 and 6 are built out of the \SM\ fields and are consistent with the \SM\ gauge symmetries and is fully derived in Ref. \cite{Grzadkowski:2010es}. In general the various measurements show a good agreement with the \SM\ predictions and by lack of deviations from the \SM, limits on the anomalous couplings can be derived. The estimated coupling strengths per operator contributing to single top quark production obtained from various measurements at the LHC and Tevatron are shown in \fig{fig:anomlouscouplings} for which the conventions are discussed in Ref. \cite{durieuxEFT}. These results are consistent with the \SM\ expectation for which those operators vanish. 
+
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=1.\linewidth]{1_Introduction/Figures/SigmaNew_v0}
-	\caption{Summary of the \SM\ cross section measurements performed by the CMS collaboration. Figure taken from \cite{summarywiki}}.
-	\label{fig:sigmanewv0}
-\end{figure}
-
-\begin{figure}[htbp]
-	\centering
-	\includegraphics[width=1.\linewidth]{1_Introduction/Figures/singletop_Vtb_may2017}
-	\caption{Estimations of the \SM\ $V_{\Ptop\Pbottom}$ CKM element from single top cross section measurements. Figure taken from \cite{summarytwiki}.}
-	\label{fig:Vtb}
-\end{figure}
-
-\begin{figure}
-	\centering
-	\includegraphics[width=0.7\linewidth]{1_Introduction/Figures/LHC_topmass_sep2017}
-	\caption{Summary of the top mass direct measurements performed by CMS and ATLAS, and compared with the LHC and LHC+Tevatron combinations. The results below the line are produced after the LHC and LHC+Tevatron combinations. Figure taken from \cite{summarytwiki}.}
-	\label{fig:lhctopmasssep2017}
-\end{figure}
-
-\begin{figure}[htbp]
-	\centering
-	\includegraphics[width=0.6\linewidth]{1_Introduction/Figures/anomlouscouplings}
-	\caption{Global fit results of top quark effective field theory to experimental data including all constrained operators at dimension six. For the operators, the Warsaw basis of~\cite{Grzadkowski:2010es} is used. The bounds are set on the Wilson co\"efficients of various operators contributing to top quark production and decay in two cases (red) all other co\"efficients set to zero, or (blue) all other co\"efficient are marginalised over. Figure taken from \cite{Buckley:2015lku}. }
+	\includegraphics[width=1.0\linewidth]{1_Introduction/Figures/anomlouscouplings}
+	\caption{Global fit results of top quark effective field theory to experimental data including all constrained operators at dimension six. For the operators, the Warsaw basis of~\cite{Grzadkowski:2010es} is used. The bounds are set on the Wilson coefficients of various operators contributing to top quark production and decay in two cases (red) all other coefficients set to zero, or (blue) all other co\"efficient are marginalised over. Figure taken from \cite{Buckley:2015lku}. }
 	%https://arxiv.org/pdf/1512.03360.pdf conclusion section
 	\label{fig:anomlouscouplings}
 \end{figure}
+
+%\section{Experimental results on the \SM\ top quark}
+%\label{sec:topexp}
+%In this section a selection of experimental results of measurements of the \SM\ is presented.  
+
+%The estimations by the CMS and ATLAS collaborations of the CKM matrix element $V_{\Ptop\Pbottom}$ from single top quark measurement are given in \fig{fig:Vtb}. The most precise estimation of $V_{\Ptop\Pbottom}$ originates from a combination of $t$-channel cross section measurements at 7 and 8~\TeV\ by the CMS collaboration resulting in $|f_{\mathrm{L}}V_{\Ptop\Pbottom}| = 0.998 \pm 0.038$ (exp.) $\pm 0.016$ (theo.). Assuming the $f_{\mathrm{L}} = 1$ and $|V_{\Ptop\Pbottom}| < 1$, this result yields a limit of $|V_{\Ptop\Pbottom}| > 0.92$ at 95\% confidence level. The most recent top quark mass measurements are given in \fig{fig:lhctopmasssep2017}. The CMS combined top quark mass measurement is $m_{\Ptop} = 172.44 \pm 0.48$~\GeV\ from 7 and 8~\TeV\ data. 
+
+%\begin{figure}[htbp]
+%	\centering
+%	\includegraphics[width=1.\linewidth]{1_Introduction/Figures/singletop_Vtb_may2017}
+%	\caption{Estimations of the \SM\ $V_{\Ptop\Pbottom}$ CKM element from single top cross section measurements. Figure taken from \cite{summarytwiki}.}
+%	\label{fig:Vtb}
+%\end{figure}
+%\begin{figure}
+%	\centering
+%	\includegraphics[width=0.7\linewidth]{1_Introduction/Figures/LHC_topmass_sep2017}
+%	\caption{Summary of the top mass direct measurements performed by CMS and ATLAS, and compared with the LHC and LHC+Tevatron combinations. The results below the line are produced after the LHC and LHC+Tevatron combinations. Figure taken from \cite{summarytwiki}.}
+%	\label{fig:lhctopmasssep2017}
+%\end{figure}
+
 
 
 \clearpage
@@ -447,23 +504,68 @@ and at the LHC by the ATLAS \cite{Aad:2015uza,Aad:2015gea,Aad:2015pja,Aaboud:201
 		\toprule
 		Process	& QS & 2HDM & MSSM &  Process	&  QS & 2HDM & MSSM\\ 
 		\midrule
-		$ \Ptop \rightarrow \Pup \PZ $     & $\leq 1.1 \; 10^{-4}$&$-$&$\leq 2 \; 10^{-6}$&$ \Ptop \rightarrow \Pcharm \PZ $      & $\leq 1.1 \; 10^{-4}$& $\leq 10^{-7}$& $\leq 2 \; 10^{-6}$\\
-		$ \Ptop \rightarrow \Pup \Pphoton $& $\leq 7.5 \; 10^{-9}$&$-$&$\leq 2 \; 10^{-6}$&$ \Ptop \rightarrow \Pcharm \Pphoton $ & $\leq 7.5 \; 10^{-9}$& $\leq 10^{-6}$ &$\leq 2 \; 10^{-6}$\\
-		$ \Ptop \rightarrow \Pup \Pgluon $ & $\leq 1.5 \; 10^{-7}$&$-$&$\leq 8 \; 10^{-5}$&$ \Ptop \rightarrow \Pcharm \Pgluon $  & $\leq 1.5 \; 10^{-7}$&  $\leq 10^{-4}$&$\leq 8 \; 10^{-5}$\\
-		$ \Ptop \rightarrow \Pup \PHiggs $ & $\leq 4.1 \; 10^{-5}$&$\leq 5.5\;10^{-6}$&$\leq 10^{-5}$     &$ \Ptop \rightarrow \Pcharm \PHiggs $  & $\leq 4.1 \; 10^{-5}$& $\leq 10^{-3}$&$\leq 10^{-5}$\\
+		$ \Ptop \rightarrow \Pup \PZ $     & $\leq 1.1  \times 10^{-4}$&$-$&$\leq 2  \times 10^{-6}$&$ \Ptop \rightarrow \Pcharm \PZ $      & $\leq 1.1  \times 10^{-4}$& $\leq 10^{-7}$& $\leq 2  \times 10^{-6}$\\
+		$ \Ptop \rightarrow \Pup \Pphoton $& $\leq 7.5  \times 10^{-9}$&$-$&$\leq 2  \times 10^{-6}$&$ \Ptop \rightarrow \Pcharm \Pphoton $ & $\leq 7.5  \times 10^{-9}$& $\leq 10^{-6}$ &$\leq 2  \times 10^{-6}$\\
+		$ \Ptop \rightarrow \Pup \Pgluon $ & $\leq 1.5  \times 10^{-7}$&$-$&$\leq 8  \times 10^{-5}$&$ \Ptop \rightarrow \Pcharm \Pgluon $  & $\leq 1.5  \times 10^{-7}$&  $\leq 10^{-4}$&$\leq 8  \times 10^{-5}$\\
+		$ \Ptop \rightarrow \Pup \PHiggs $ & $\leq 4.1  \times 10^{-5}$&$\leq 5.5\;10^{-6}$&$\leq 10^{-5}$     &$ \Ptop \rightarrow \Pcharm \PHiggs $  & $\leq 4.1  \times 10^{-5}$& $\leq 10^{-3}$&$\leq 10^{-5}$\\
 		\bottomrule
 	\end{tabular} 
 	\label{tab:FCNCBRnp}
 \end{table}
 
-The impact of \BSM\ models can be written in a model independent way by means of an effective field theory valid up to an energy scale $\Lambda$.  The leading effects are parametrized by a set of  fully gauge symmetric dimension-6 operators that are added to the \SM\ Lagrangian and can be reduced to a minimal set of operators as discussed in~\cite{AguilarSaavedra:2008zc,AguilarSaavedra:2009mx}.  The full Lagrangian, neglecting neutrino physics, in the fully gauge symmetric case is given by 
+The impact of \BSM\ models can be written in a model independent way by means of an effective field theory valid up to an energy scale $\Lambda$.  The leading effects are parametrized by a set of  fully gauge symmetric operators that are added to the \SM\ Lagrangian and can be reduced to a minimal set of operators as seen in \eq{eq:eft}. For simplicity, the assumption is made that new physics effects are exclusively described by dimension-6 operators, thus neglecting neutrino physics. In the fully gauge symmetric case, the EFT Lagrangian is then given by 
 \begin{linenomath}
 	\begin{equation}
-	\Lagr_{\mathrm{SM+EFT}} = \LSM + \sum \limits_{\mathrm{i}} \frac{\bar{c}_{\mathrm{i}}}{\Lambda^2}\order_{\mathrm{i}} + \order \left(\frac{1}{\Lambda^3} \right),
+	\Lagr_{\mathrm{SM+EFT}} = \LSM + \sum \limits_{\mathrm{i}} \frac{\bar{c}_{\mathrm{i}}}{\Lambda^2}O_{\mathrm{i}} + \order \left(\frac{1}{\Lambda^3} \right),
 	\label{eq:EFTlagrangianf}
 	\end{equation}
 \end{linenomath}
-where the Wilson coefficients $\bar{c}_{\mathrm{i}}$ depend on the considered theory and on the way that new physics couples to the \SM\ particles. Considering that $\Lambda$ is large, contributions suppressed by powers of $\Lambda$ greater than two are neglected. Moreover, all four fermion operators are omitted for the rest of this thesis. After electroweak symmetry breaking the operators induce~\cite{AguilarSaavedra:2004wm,Beneke:2000hk} both corrections to the \SM\ couplings and new interactions at tree level such as FCNC interactions. The FCNC interactions of the top quark that are not present in the \SM\ are given by \todo{At something about Warsaw basis}
+where the Wilson coefficients $\bar{c}_{\mathrm{i}}$ depend on the considered theory and on the way that new physics couples to the \SM\ particles. Considering that $\Lambda$ is large, contributions suppressed by powers of $\Lambda$ greater than two are neglected. Moreover, all four fermion operators are omitted for the rest of this thesis. The Warsaw basis is adpoted for the independent effective operators~\cite{Grzadkowski:2010es}, parametrising the new physics effects relevant for the flavour changing neutral current interactions of the top quark as, all flavour indices understood, 
+\begin{equation}
+	\begin{aligned}
+	\Lagr^{\Ptop}_{\mathrm{EFT}}  &= 
+	\frac{\bar{c}_{ uG}}{\Lambda^2}
+	\Phi^{\dagger} \!\cdot\!
+	\left[ \bar{Q}_{\mathrm{L}} \sigma^{\mu\nu} \mathcal{T}_a u_{\mathrm{R}}\right] G^a_{\mu\nu} +
+	\frac{\bar{c}_{ uB}}{\Lambda^2}
+	\Phi^{\dagger} \!\cdot\!
+	\left[ \bar{Q}_{\mathrm{L}} \sigma^{\mu\nu} u_{\mathrm{R}}\right] B_{\mu\nu} +
+	\frac{2 \bar{c}_{ uW}}{\Lambda^2}
+	\Phi^{\dagger} {T}_{\mathrm{i}} \!\cdot\!
+	\left[ \bar{Q}_{\mathrm{L}} \sigma^{\mu\nu} u_{\mathrm{R}}\right] W^{\mathrm{i}}_{\mu\nu} \\
+    &  +\ i \frac{\bar{c}_{ hu}}{\Lambda^2}
+	\left[ \Phi^{\dagger} \overleftrightarrow{D}_\mu \Phi \right]
+	\left[ \bar{u}_{\mathrm{R}} \gamma^\mu u_{\mathrm{R}}\right] 
+	+ i \frac{\bar{c}_{ hq}^{(1)}}{\Lambda^2}
+	\left[ \Phi^{\dagger} \overleftrightarrow{D}_\mu \Phi \right] 
+	\left[ \bar{Q}_{\mathrm{L}} \gamma^{\mu} Q_{\mathrm{L}} \right] \\
+	&\ +  \ i \frac{4 \bar{c}_{\PH\Pquark}^{(3)}}{\Lambda^2}
+	\left[ \Phi^{\dagger} {T}_{i} \overleftrightarrow{D}_\mu \Phi \right]
+	\left[ \bar{Q}_{\mathrm{L}} \gamma^\mu { T}^{\mathrm{i}} Q_{\mathrm{L}}\right]
+	+  \frac{\bar{c}_{uh}}{\Lambda^2} \Phi^{\dagger}\Phi\ 
+	\Phi^{\dagger} \cdot \left[ \bar{Q}_{\mathrm{L}} u_{\mathrm{R}}\right]
+	+ \mathrm{ h.c.} \ ,
+	\end{aligned}
+	\label{eq:Wil}
+\end{equation}
+where the left handed \Stwo\ doublet of the quark fields is denoted by $Q_{\mathrm{L}}$, the up-type right handed fields by $u_{\mathrm{R}}$, the down-type right handed fields by $d_{\mathrm{R}}$, the \Stwo\ doublet of the Higgs field by $\Phi$, the field strength tensors as 
+\begin{equation}
+	\begin{aligned}
+	B_{\mu\nu} &= \partial_{\mu} B_{\nu} - \partial_{\nu} B_{\mu}, \\
+	W_{\mu\nu}^{\mathrm{k}} &= \partial_{\mu} W_{\nu}^{\mathrm{k}} - \partial_{\nu} W_{\mu}^{\mathrm{k}}-g\epsilon_{\mathrm{ij}}^{\mathrm{k}}W_{\mu}^{\mathrm{i}}W_{\nu}^{\mathrm{j}},\\
+    	\Gtensor &= \partial_{\mu} \mathrm{G}_{\nu}^{\mathrm{a}} -  \partial_{\nu}  \mathrm{G}_{\mu}^{\mathrm{a}} + g_{\mathrm{s}} f^{\mathrm{a}}_{\mathrm{bc}}   \mathrm{G}_{\mu}^{\mathrm{b}} \mathrm{G}_{\nu}^{\mathrm{c}} , 
+	\end{aligned}
+\end{equation}
+denoting the structure constant of the \Sthree\ group  as $f^{\mathrm{a}}_{\mathrm{bc}}$ and the structure constant of the \Stwo\ group as $\epsilon_{\mathrm{ij}}^{\mathrm{k}}$. The gauge covariant derivatives are also standard defined as 
+\begin{equation}
+D_{\mu} \Phi   = \partial_{\mu} \Phi - \frac{1}{2}ig'B_{\mu}\Phi - igT_{\mathrm{k}}W_{\mu}^{\mathrm{k}}\Phi
+\end{equation}
+with the conventions of \Sec{sec:SMlagr}. The representation matrices $T$ of \Stwo\ are defined in \eq{eq:Stwee}, while the representation matrices $\mathcal{T}$ of \Sthree\ are the Gell-Mann matrices~\cite{Peskin:257493}. The hermiatian derivative operator is defined as 
+\begin{equation}
+	\Phi{\dagger}\overleftrightarrow{D}\Phi = \Phi^{\dagger}D^{\mu}\Phi - D_{\mu}\Phi^{\dagger}\Phi.
+\end{equation}
+
+ After electroweak symmetry breaking the operators induce~\cite{AguilarSaavedra:2004wm,Beneke:2000hk} both corrections to the \SM\ couplings and new interactions at tree level such as FCNC interactions. The FCNC interactions of the top quark that are not present in the \SM\ are given by
 \begin{align}
 \Lagr^{\Ptop}_{\mathrm{EFT}} =\frac{\sqrt{2}}{2}\sum\limits_{\Pquark = \Pup,\Pcharm} &\left[g'
 \frac{\kfqt}{\Lambda} \photontensor \APtop \sigma^{\mu\nu}\left(f^{\mathrm{L}}_{\Pphoton\Pquark} P_{\mathrm{L}} + f^{\mathrm{R}}_{\Pphoton\Pquark} P_{\mathrm{R}}\right) \Pquark \right. \\
@@ -474,12 +576,58 @@ where the Wilson coefficients $\bar{c}_{\mathrm{i}}$ depend on the considered th
 \label{eq:EFTlag}
 \end{align}
 where the value of the \FCNC\ couplings at scale $\Lambda$ are represented by \kZqt,\kgqt,\kfqt,\zZqt, and ${ \eta_{{\PHiggs\Pquark \Ptop}}}$. These are assumed to be real and positive, with the unit of $\GeV^{-1}$ for $\kxqt$ and no unit for $\zeta_{xqt}$ and $\eta_{\mathrm{xqt}}$. In the equation $\sigma^{{\mu \nu}}$ equals to $\frac{i}{2}\left[\gamma^{{\mu}},\gamma^{\nu}\right]$,  and the left- and right-handed chirality projector operators are denoted by $P_{\mathrm{L}}$ and $P_{\mathrm{R}}$. The electromagnetic coupling constant is denoted by $g'$, the strong interaction coupling is denoted as $g_{\mathrm{s}}$, while the electroweak interaction is parametrised by the coupling constant $g$ and the electroweak mixing angle $\theta_{\mathrm{W}}$.  The complex chiral parameters are normalized according to
-$ |f_{\mathrm{xq}}^{\mathrm{L}}|^2 + |f_{\mathrm{xq}}^{\mathrm{R}}|^2 = 1 $, $|\tilde{f}_{\mathrm{q}}^{\mathrm{L}}|^2 + |\tilde{f}_{\mathrm{q}}^{\mathrm{R}}|^2 = 1$, and $|\hat{f}_{\mathrm{q}}^{\mathrm{L}}|^2 + |\hat{f}_{\mathrm{q}}^{\mathrm{R}}|^2 = 1$. In the expression for $\Lagr^{\Ptop}_{\mathrm{EFT}}$, the unitary gauge is adopted and the scalar field is expanded around its vacuum expectation value with \PHiggs being the \SM\ scalar boson, and the field strength tensors of the photon \photonfield, the gluon field \Gfields, and the \PZ\ boson \Zfield\ are defined as
+$ |f_{\mathrm{xq}}^{\mathrm{L}}|^2 + |f_{\mathrm{xq}}^{\mathrm{R}}|^2 = 1 $, $|\tilde{f}_{\mathrm{q}}^{\mathrm{L}}|^2 + |\tilde{f}_{\mathrm{q}}^{\mathrm{R}}|^2 = 1$, and $|\hat{f}_{\mathrm{q}}^{\mathrm{L}}|^2 + |\hat{f}_{\mathrm{q}}^{\mathrm{R}}|^2 = 1$. In the expression for $\Lagr^{\Ptop}_{\mathrm{EFT}}$, the unitary gauge is adopted and the scalar field is expanded around its vacuum expectation value $v$ with \PHiggs being the \SM\ scalar boson, and the field strength tensors of the photon \photonfield, the gluon field \Gfields, and the \PZ\ boson \Zfield\ are defined as
 \begin{equation}
-	\photontensor = \partial_{\mu} \mathrm{A}_{\nu} -  \partial_{\nu} \mathrm{A}_{\mu}, \;  \PZ_{\mu\nu} = \partial_{\mu} \mathrm{Z}_{\nu} -  \partial_{\nu} \mathrm{Z}_{\mu},\: \mathrm{ and } \;
-	\Gtensor = \partial_{\mu} \mathrm{G}_{\nu}^{\mathrm{a}} -  \partial_{\nu}  \mathrm{G}_{\mu}^{\mathrm{a}} + g_{\mathrm{s}} f^{\mathrm{a}}_{\mathrm{bc}}   \mathrm{G}_{\mu}^{\mathrm{b}} \mathrm{G}_{\nu}^{\mathrm{c}}.
+\begin{aligned}
+	\photontensor &= \partial_{\mu} \mathrm{A}_{\nu} -  \partial_{\nu} \mathrm{A}_{\mu}, \\
+	  \PZ_{\mu\nu} &= \partial_{\mu} \mathrm{Z}_{\nu} -  \partial_{\nu} \mathrm{Z}_{\mu},\: \mathrm{ and } \\
+	\Gtensor &= \partial_{\mu} \mathrm{G}_{\nu}^{\mathrm{a}} -  \partial_{\nu}  \mathrm{G}_{\mu}^{\mathrm{a}} + g_{\mathrm{s}} f^{\mathrm{a}}_{\mathrm{bc}}   \mathrm{G}_{\mu}^{\mathrm{b}} \mathrm{G}_{\nu}^{\mathrm{c}}.
+	\end{aligned}
 \end{equation}
-Denoting the structure constant of the \Sthree\ group  as $f^{\mathrm{a}}_{\mathrm{bc}}$. Note that there are two coupling constants arising in $\Lagr^{\Ptop}_{\mathrm{EFT}}$, which is a residue of electroweak symmetry breaking. The massive \PZ\ boson will appear in both the \Zfield\ field as well as the covariant derivative, leading to an extra \PZ-vertex. 
+ Note that there are two coupling constants arising in $\Lagr^{\Ptop}_{\mathrm{EFT}}$, which is a residue of electroweak symmetry breaking. The massive \PZ\ boson will appear in both the \Zfield\ field as well as the covariant derivative, leading to an extra \PZ-vertex. 
+ 
+ 
+ \newpage
+ The relations between the Wilson coefficients in \eqref{eq:Wil} and the coupling strengths of the interactions in \eq{eq:EFTlag} can be derived. The 14 effective operators are mapped onto 10 free parameters providing a more minimal parametrisation of the anomalous interactions of the top quark. 
+ 
+ 
+ \renewcommand{\arraystretch}{1.5}
+\begin{equation}
+\begin{array}{l l}
+ 	\kgqt f^{\mathrm{L}}_{\Pgluon\Pquark} = \frac{v}{g_{\mathrm{s}} \Lambda}
+ 	\left[\bar{c}_{ uG}\right]_{i3}^\ast\ ,
+ 	\ \   &
+ 	\kgqt f^{\mathrm{R}}_{\Pgluon\Pquark} \!=\! \frac{v}{g_{\mathrm{s}} \Lambda}
+ 	\left[\bar{c}_{ uG}\right]_{3i}\ , \\
+ 	%
+ 	\kfqt f^{\mathrm{L}}_{\Pphoton\Pquark} = \frac{v}{g' \Lambda}
+ 	\left[\cw \bar{c}_{ uB} - \sw \bar{c}_{ uW}\right]_{i3}^\ast\ ,
+ 	\ \   &
+ 	\kfqt f^{\mathrm{R}}_{\Pphoton\Pquark} \!=\! \frac{v}{g' \Lambda}
+ 	\left[\sw \bar{c}_{ uB} - \cw \bar{c}_{ uW}\right]_{3i} \ ,\\
+ 	%
+ 	\kZqt f^{\mathrm{L}}_{\PZ\Pquark} = -\frac{2 \cw v}{g \Lambda}
+ 	\left[\sw \bar{c}_{ uB} + \cw \bar{c}_{ uW}\right]_{i3}^\ast\ ,
+ 	\ \   &
+ 	\kZqt f^{\mathrm{R}}_{\PZ\Pquark} \!=\! -\frac{2 \cw v}{g \Lambda}
+ 	\left[\cw \bar{c}_{ uB} \!+\! \sw \bar{c}_{ uW}\right]_{3i} \ ,\\
+ 	%
+ 	\zZqt \tilde f^{\mathrm{L}}_{\PZ\Pquark} = - \frac{2 v^2}{\Lambda^2}
+ 	\left[\big(\bar{c}_{ hq}^{(1)}\!-\!\bar{c}_{ hq}^{(3)}\big)_{i3} \!+\!
+ 	\big(\bar{c}_{ hq}^{(1)}\!-\!\bar{c}_{ hq}^{(3)}\big)_{3i}^\ast\right]\ ,
+ 	\ &
+ 	\zZqt \tilde f^{\mathrm{R}}_{\PZ\Pquark} \!=\! - \frac{2 v^2}{\Lambda^2}
+ 	\left[(\bar{c}_{ hu})_{i3} + (\bar{c}_{ hu})_{3i}^\ast\right] \ ,\\
+ 	%
+ 	\eta_{\Ptop\PH\Pquark} \hat f^{\mathrm{L}}_{\PH\Pquark} = \frac{3 v^2}{2 \Lambda^2}
+ 	\left[\bar{c}_{ uh}\right]_{3i}^\ast\ ,
+ 	\ &
+ 	\eta_{\Ptop\PH\Pquark} \hat f^{\mathrm{R}}_{\PH\Pquark} \!=\! \frac{3 v^2}{2 \Lambda^2}
+ 	\left[\bar{c}_{ uh}\right]_{i3} .\\
+ \end{array}
+\end{equation}
+
+ 
 \begin{comment}
 \begin{linenomath}
 	\begin{equation}
@@ -566,7 +714,7 @@ Searches for top-FCNC usually adopt a search strategy depending on the experimen
 \end{figure}
 
 
-The observation of top-FCNC interactions has yet to come and experiments have so far only been able to put upper bounds on the branching ratios. An overview of the best current limits is given in \tab{tab:FCNClimits}. In \fig{fig:fcncupperlimits} a comparison is shown between the current best limits set by ATLAS and CMS with respect to several \BSM\ model benchmark predictions. From there one can see that \FCNC\ searches involving a \PZ\ or \PHiggs\ boson are close to excluding or confirming several \BSM\ theories. In \fig{fig:summaryfcnc}, the searches performed by CMS are summarised. For the tZq vertex, the best limit from CMS comes from Ref. \cite{Sirunyan:2017kkr} where both single top quark and top quark pair is studied. The observed (expected) limits 95\% CL at 8 \TeV\ for the FCNC tZq interaction by CMS are $\BR(\Ptop \rightarrow \Pup\PZ) <  2.2~10^{-4} (2.7 ~10^{-4})$ and  $\BR(\Ptop \rightarrow \Pcharm\PZ) < 4.9~10^{-4} (12~10^{-4})$.
+The observation of top-FCNC interactions has yet to come and experiments have so far only been able to put upper bounds on the branching ratios. An overview of the best current limits is given in \tab{tab:FCNClimits}. In \fig{fig:fcncupperlimits} a comparison is shown between the current best limits set by ATLAS and CMS with respect to several \BSM\ model benchmark predictions. From there one can see that \FCNC\ searches involving a \PZ\ or \PHiggs\ boson are close to excluding or confirming several \BSM\ theories. In \fig{fig:summaryfcnc}, the searches performed by CMS are summarised. For the tZq vertex, the best limit from CMS comes from Ref. \cite{Sirunyan:2017kkr} where both single top quark and top quark pair is studied. The observed (expected) limits 95\% CL at 8 \TeV\ for the FCNC tZq interaction by CMS are $\BR(\Ptop \rightarrow \Pup\PZ) <  2.2 \times 10^{-4} (2.7  \times 10^{-4})$ and  $\BR(\Ptop \rightarrow \Pcharm\PZ) < 4.9 \times 10^{-4} (12 \times 10^{-4})$. In \fig{fig:FCNCATLASCMS}, the summary of the 95\% confidence level observed limits on the branching ratios of the top quark decays to a charm or up quark and a neutral boson is given, considering the results from the HERA, the LEP, the Tevatron, and the the LHC.
 \begin{table}[htbp]
 	\centering
 	\caption{Overview of the most stringent observed and expected experimental limits on top-FCNC branching ratios \BR\ at 95\% confidence level.}
@@ -591,16 +739,24 @@ The observation of top-FCNC interactions has yet to come and experiments have so
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.7\linewidth]{1_Introduction/Figures/fcnc_summarybsm_sep17}
-	\caption{Current best limits set by CMS and ATLAS for top-FCNC interactions.  Figure taken from \cite{summarywiki}. Remake with new atlas resuls}
+	\includegraphics[width=0.7\linewidth]{1_Introduction/Figures/fcnc_summarybsm_sep17.pdf}
+	\caption{Current best limits set by CMS and ATLAS for top-FCNC interactions.  Figure taken from \cite{summarywiki}. (TO DO Remake with new atlas results)}
 	\label{fig:fcncupperlimits}
 \end{figure}
-\begin{figure}
+\begin{figure}[htbp]
 	\centering
-	\includegraphics[width=1.\linewidth]{1_Introduction/Figures/summary_FCNC}
+	\includegraphics[width=0.49\linewidth]{1_Introduction/Figures/fcnc_tXc_sep17.pdf}
+	\includegraphics[width=0.49\linewidth]{1_Introduction/Figures/fcnc_tXu_sep17.pdf}
+	\caption{Summary of the current 95\% confidence level observed limits on the branching ratios of the top quark decays via flavour changing neutral currents to a charm (left) or up (right) quark and a neutral boson. The coloured lines represent the results from HERA (the most stringent limits between the ones obtained by the H1 and ZEUS collaborations, in brown), LEP (combined ALEPH, DELPHI, L3 and OPAL collaborations result, in green), TEVATRON (the most stringent limits between the ones obtained by the CDF and D0 collaborations, in grey). The yellow area represents the region excluded by the ATLAS and the CMS Collaborations. Figure taken from \cite{summarytwiki}.}
+	\label{fig:FCNCATLASCMS}
+\end{figure}
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=1.\linewidth]{1_Introduction/Figures/summary_FCNC.pdf}
 	\caption{Summary of the FCNC branching ratios from CMS searches at 8 \TeV. Figure taken from \cite{summarywiki}.}
 	\label{fig:summaryfcnc}
 \end{figure}
+
 
 
 
