@@ -1,8 +1,8 @@
-In order to disentangle the collisions coming from high energy experiments, many tools have been developed. In \Sec{sec:PSmuRmuF}, the predictions behind hadron collision at high energies are presented. These are used to generate events via Monte Carlo event generators, explained in \Sec{sec:eventgeneration}. 
- Machine learning helps to differentiate between signal- and background like events. In \Sec{sec:BDT}, the multivariate technique of boosted decision trees is explained. This yields powerful discriminants for separating signal and background events and provides distributions that go through template-based maximum likelihood fits. The fitting method used in the search presented in this thesis is discussed in \Sec{sec:Stat}. 
+In order to study the collisions coming from high energy experiments, many tools have been developed. In \Sec{sec:PSmuRmuF}, the physics of hadron collision at high energies are presented. These insights are used to generate events via Monte Carlo event generators, explained in \Sec{sec:eventgeneration}. 
+ Machine learning helps to differentiate between signal- and background like events. In \Sec{sec:BDT}, the multivariate technique of boosted decision trees is explained. This yields powerful discriminants for separating signal and background events and provides distributions  for template-based maximum likelihood fits. The fitting method used in the search presented in this thesis is discussed in \Sec{sec:Stat}. 
 \section{Hadron collisions at high energies}
 \label{sec:PSmuRmuF}
-In hadron collisions at  sufficiently high momentum transfer, all partons can be approximated as free  making it possible to treat hadron-hadron scattering as a single parton-parton interaction. The momentum of the parton can then be expressed as a fraction of the hadron momentum 
+All partons can be approximated as free when there is sufficiently high momentum transfer in hadron collisions. The makes it possible to treat a hadron-hadron scattering as a single parton-parton interaction. The momentum of the parton can then be expressed as a fraction of the hadron momentum 
 \begin{equation}
  \vec{p}_{\mathrm{parton}} = x \vec{p}_{\mathrm{hadron}}, 
 \end{equation}
@@ -11,7 +11,7 @@ where $x$ is referred to as the Bj\"orken scaling variable. The interaction $\Pp
  \sigma_{\mathrm{p}_{\mathrm{A}}\mathrm{p}_{\mathrm{B}}\rightarrow\mathrm{X}} = \sum \limits_{\mathrm{ij}} \iint dx_1 dx_2  \: f_{\mathrm{i}}^{\mathrm{A}}(x_{\mathrm{1}},Q^2)f_{\mathrm{j}}^{\mathrm{B}}(x_{\mathrm{2}},Q^2) {d\hat{\sigma}_{\mathrm{ij}\rightarrow\mathrm{X}}}, 
  \label{eq:cross}
  \end{equation}
-where i and j are the partons resolved from protons A and B,  $f_{\mathrm{i}}(x_{\mathrm{i}},Q^2)$ the parton density functions (PDF), and $Q^2$ the factorisation scale more commonly denoted as \muF. The factorisation scale is the scale at which the hadronic interaction can be expressed as a product of the partonic cross section and the process independent PDF. In \fig{fig:factoscale}, the kinematic regions in $x$ and \muF\ are shown for fixed target and collider experiments.
+where i and j are the partons resolved from protons A and B. The parton density functions (PDF) are denoted as  $f_{\mathrm{i}}(x_{\mathrm{j}},Q^2)$, and $Q^2$ is the factorisation scale more commonly denoted as \muF. This factorisation scale  represents the energy at which the hadronic interaction can be expressed as a product of the partonic cross section and the process independent PDF. In \fig{fig:factoscale}, the kinematic regions in $x$ and \muF\ are shown for fixed target and collider experiments.
 \begin{figure}
 	\centering
 	\includegraphics[width=0.5\linewidth]{3_Analysis_techniques/Figures/factoscale}
@@ -21,16 +21,13 @@ where i and j are the partons resolved from protons A and B,  $f_{\mathrm{i}}(x_
 %https://arxiv.org/pdf/1206.7024.pdf voor goede info
 
 
-
- The parton density functions (PDF)~\cite{Placakyte:2011az,Ball2015,Butterworth:2015oua} give the momentum distribution of the proton amongst its partons at an energy scale \muF.  
-  These function can not be determined from first principles and have to obtained from global fits to data. The PDFs are obtained from measurements on deep inelastic scattering using lepton-proton collision by the HERA collider~\cite{Abramowicz:1998ii}, supplemented with proton-antiproton collisions from Tevatron at Fermi lab~\cite{Holmes:2011ey}, and proton collision data from the ATLAS, CMS and LHCb collaborations at the LHC (Run 1)~\cite{Rojo:2015acz}. These measurements are included in global PDF sets known as the \texttt{PDF4LHC} recommendation~\cite{Butterworth:2015oua}. From their measurement at scale \muF\ these PDFs can be extrapolated using the DGLAP equations~\cite{Martin:2008cn}. The PDFs are used to calculate the cross section of a certain process and are therefore used as input for the Monte Carlo generators used to make the simulated data samples at the LHC. 
+ The parton density functions (PDF)~\cite{Placakyte:2011az,Ball2015,Butterworth:2015oua} represent the momentum distribution of the proton amongst its partons at an energy scale \muF.  These functions are obtained from gloabl fits to data since the can not be determined from first principles. From measurements on deep inelastic scattering using lepton-proton collision by the HERA collider~\cite{Abramowicz:1998ii}, supplemented with proton-antiproton collisions from the Tevatron~\cite{Holmes:2011ey}, and proton collision data from the ATLAS, CMS and LHCb collaborations at the LHC (Run 1)~\cite{Rojo:2015acz} the PDFs are determined and included in global PDF sets known as the \texttt{PDF4LHC} recommendation~\cite{Butterworth:2015oua}. Their measurement at scale \muF\ is extrapolated to higher energies by use of the DGLAP equations~\cite{Martin:2008cn}. Once these PDFs are known, the cross section of a certain process can be calculated and used as input for the Monte Carlo generators used to make the simulated data samples at the LHC. 
 %https://amva4newphysics.wordpress.com/2016/03/10/the-inner-life-of-protons-and-artificial-neural-networks/
-In the framework of this thesis, the NLO \texttt{PDF4LHC}15\_100 set is used. This set is an envelope of three sets, \texttt{CT14}, \texttt{MMHT2014} and \texttt{NNPDF3.0}~\cite{Butterworth:2015oua}. In \fig{fig:nnpdf30} the dependency of the PDFs on the momentum fraction $x$ is shown for the \texttt{NNPDF3.0} set on hadronic scale ($\muF^2 = (10\GeV)^2$ and LHC scale ($\muF^2 = (10^4\GeV)^2$. For most values of the momentum fraction, the gluon density dominates, meaning that it is easier to probe muons than the quarks. For $x$ close to one, the parton densities of the up and down quarks (the valence quarks of the proton) dominate over the gluon density. The charm, anti-up, and anti-down quarks have lower densities in general since those are sea quarks which originate in the proton only through gluon splitting. 
-The resolution scale $Q^2$ is typically taken to be the energy scale of the collision. For the top quark pair production a scale of $Q^2=(350\: \GeV)^2$ is chosen, meaning that the centre-of-mass energy of the hard interaction is about twice the top quark mass.
+In the framework of this thesis,  the NLO \texttt{PDF4LHC}15\_100 set is used. This set is an envelope of three sets: \texttt{CT14}, \texttt{MMHT2014} and \texttt{NNPDF3.0}~\cite{Butterworth:2015oua}. As illustration, the dependency of the PDFs on the momentum fraction $x$ is shown for the \texttt{NNPDF3.0} set on hadronic scale $\muF^2 = 10\GeV^2$ and LHC scale $\muF^2 = 10^4\GeV^2$ in \fig{fig:nnpdf30}.  The gluon density dominated for most values of the momentum fraction, implying that it is easier to probe gluons than the quarks. When the Bj\"orken scale is to one, the parton densities of the valence quarks of the proton, up and down quarks,dominate over the gluon density. The sea quarks originating from gluon splitting, the charm, anti-up, and anti-down quarks, have lower densities in general for the proton. The resolution scale $Q^2$ is typically taken to be the energy scale of the collision. For the top quark pair production a scale of $Q^2=(350\: \GeV)^2$ is chosen, meaning that the centre-of-mass energy of the hard interaction is about twice the top quark mass.
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=1.\linewidth]{3_Analysis_techniques/Figures/NNPDF30}
-	\caption{The momentum fraction $x$ times the parton distribution functions $f(x)$, where $f=\Pup_{\mathrm{v}}, \Pdown_{\mathrm{v}} ,\APup,\APdown,\Pstrange,\Pcharm,$ or \Pgluon\ as function of the momentum fraction obtained in the NNLO \texttt{NNPDF3.0} global analysis at factorisation scales $\mu^2 = 10 \: \GeV^2$ (left) and $\mu^2=10^4 \: \GeV^2$ (right), with $\alpha_{\mathrm{S}}(M^2_{\PZ}) = 0.118$. The gluon PDF has been scaled down by a factor of 0.1. Figure taken from \cite{PDG}.}
+	\caption{The momentum fraction $x$ times the parton distribution functions $f(x)$, where $f=\Pup_{\mathrm{v}}, \Pdown_{\mathrm{v}} ,\APup,\APdown,\Pstrange,\Pcharm,$ or \Pgluon\ as a function of the momentum fraction obtained in the NNLO \texttt{NNPDF3.0} global analysis at factorisation scales $\mu^2 = 10 \: \GeV^2$ (left) and $\mu^2=10^4 \: \GeV^2$ (right), with $\alpha_{\mathrm{S}}(M^2_{\PZ}) = 0.118$. The gluon PDF has been scaled down by a factor of 0.1. Figure taken from \cite{PDG}.}
 	%http://pdg.lbl.gov/2017/reviews/rpp2016-rev-structure-functions.pdf
 	% The higher value of the resolution scale $Q^2$, the smaller distances that are probed in the proton.
 	\label{fig:nnpdf30}
@@ -39,12 +36,12 @@ The uncertainty on the parton distributions is evaluated using the Hessian techn
 %https://www.hep.ucl.ac.uk/pdf4lhc/LesHouches2016-PDF4LHC.pdf
 %https://indico.cern.ch/event/525605/contributions/2152733/attachments/1267702/1877336/TOP_PAG_3_05_16_PDFs.pdf
 
-At high energies, divergences can appear from quantum fluctuations. For the theory still to be able to describe the experimental regime, a renormalization scale \muR\ is used to redefine physical quantities A consequence of this method is that the coupling constants will run as function of \muR. Beyond this scale, the high energy effects such as the loop corrections to propagators (self energy) are absorbed in the physical quantities through a renormalization of the fields. In particular the running behaviour of the strong coupling constant\footnote{The strong coupling constant is defined as $\alpha_{\mathrm{S}} = \frac{g_\mathrm{S}^2}{4\pi}$. } $\alpha_{\mathrm{S}}$ is found to be 
+Quantum fluctuations can cause divergences at high energies. This is solved by introducing a a renormalization scale \muR\ to redefine physical quantities, making the theory still able to describe the experimental regime. A consequence of this method is that the coupling constants will run as a function of \muR. Beyond the renormalization  scale, the high energy effects such as the loop corrections to propagators (self energy) are absorbed in the physical quantities through a renormalization of the fields. In particular the running behaviour of the strong coupling constant\footnote{The strong coupling constant is defined as $\alpha_{\mathrm{S}} = \frac{g_\mathrm{S}^2}{4\pi}$. } $\alpha_{\mathrm{S}}$ is found to be 
 \begin{equation}
 	\alpha_{\mathrm{S}} = \frac{\alpha_{\mathrm{S}}(\mu_0^2)}{1 + \alpha_{\mathrm{S}}(\mu_0^2) \frac{33 - 2 n_{\mathrm{f}}}{12 \pi}\mathrm{ln}\left(\frac{|\muR^2|}{\mu_0^2}\right)}, 
 	\label{eq:couplingstrength}
 \end{equation}
-with $n_{\mathrm{f}}$ the number of quarks and $\mu_0$ the reference scale on which the coupling is known. The current world average of the strong coupling constant at the \PZ boson mass is $\alpha_{\mathrm{S}}(\muR = \mZ) = 0.1181 \pm 0.0011$~\cite{PDG}. From  \eq{eq:couplingstrength} one can see easily that the coupling strength decreases with increasing renormalization scale, this known as asymptotic freedom. Additionally, following the behaviour of $\alpha_{\mathrm{S}}(\muR^2)$, a limit $\Lambda_{\mathrm{QCD}} \approx 200 \: \MeV$ is found for which $\alpha_{\mathrm{S}}$ becomes larger than one. Under this limit, the perturbative calculations of observables can no longer be done.
+with $n_{\mathrm{f}}$ the number of quarks and $\mu_0$ the reference scale at which the coupling is known. The current world average of the strong coupling constant at the \PZ\ boson mass is $\alpha_{\mathrm{S}}(\muR = \mZ) = 0.1181 \pm 0.0011$~\cite{PDG}. From  \eq{eq:couplingstrength} one can see easily that the coupling strength decreases with increasing renormalization scale, this is known as asymptotic freedom. Additionally, following the behaviour of $\alpha_{\mathrm{S}}(\muR^2)$, a limit $\Lambda_{\mathrm{QCD}} \approx 200 \: \MeV$ is found for which $\alpha_{\mathrm{S}}$ becomes larger than one. Under this limit, the perturbative calculations of observables can no longer be done.
 % Mandl and shaw pagina 352!
 
 
@@ -54,14 +51,14 @@ Cross sections can be written in terms of interacting vertices contributing to t
 \begin{equation}
  \sigma  = \sigma_{\mathrm{LO}} \left(1 + \left(\frac{\alpha}{2\pi}\right)\sigma_1  + \left(\frac{\alpha}{2\pi}\right)^2\sigma_2 + ...\right).
 \end{equation}
-Leading order (LO) accuracy contains the minimal amount of vertices in the process, then depending on where the series is cut off one speaks of next-to-leading order (NLO), or next-to-next-to-leading order (NNLO) accuracy in $\alpha$. Predictions including higher order correction tend to be less affected by theoretical uncertainties originating from a variation of the chosen renormalization and factorisation scales. 
+Leading order (LO) accuracy contains the minimal amount of vertices in the process, then depending on where the series is cut off one speaks of next-to-leading order (NLO), or next-to-next-to-leading order (NNLO) accuracy in $\alpha$. Predictions including higher order corrections tend to be less affected by theoretical uncertainties originating from a variation of the chosen renormalization and factorisation scales. 
 % zie thesis matthias p 21 bovenaan
 
 \section{Event generation}
 \label{sec:eventgeneration}
-In order to compare reconstructed data with theoretical predictions, collision events are generated and passed through a simulation of the CMS detector and an emulation of its readout. For the detector simulation, a so-called Full Simulation package~\cite{1742-6596-396-2-022003,1742-6596-664-7-072022}  based on the \Geant4 toolkit~\cite{AGOSTINELLI2003250} is employed. It allows a detailed simulation of the interactions of the particles with the detector material. 
+In order to compare reconstructed data with theoretical predictions, collision events are generated and passed through a simulation of the CMS detector and an emulation of its readout. For the detector simulation, a so-called Full Simulation package~\cite{1742-6596-396-2-022003,1742-6596-664-7-072022}  based on the \Geant4 toolkit~\cite{AGOSTINELLI2003250} is employed. This allows detailed simulations of the interactions of the particles with the detector material. 
 \subsection{Fundamentals of simulating a proton collision}
-The procedure of to generate $\Pproton\Pproton \rightarrow \mathrm{X}$ events can be subdivided into sequential steps~\cite{Seymour:2013ega,Sjostrand:2009ad,Hoche:2014rga}, as shown in \fig{fig:ppcollision}.
+The generation of  $\Pproton\Pproton \rightarrow \mathrm{X}$ events is subdivided into sequential steps~\cite{Seymour:2013ega,Sjostrand:2009ad,Hoche:2014rga}, as shown in \fig{fig:ppcollision}.
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=1.\linewidth]{3_Analysis_techniques/Figures/MCeventwithlegend}
@@ -69,12 +66,12 @@ The procedure of to generate $\Pproton\Pproton \rightarrow \mathrm{X}$ events ca
 	\label{fig:ppcollision}
 \end{figure}
 
-The interaction of two incoming protons is often soft and elastic leading to events that are not interesting in the framework of this thesis. More intriguing are the hard interaction between two partons from the incoming protons. The matrix elements   of a hard scattering process of interest is the starting point of the generation of events. Monte Carlo techniques are used to sample the corresponding cross section integral and the resulting sample of events reflect the probability distribution of a process over its final state phase space. After obtaining the sample of events of the hard interaction, a parton shower (PS) program is used to simulate the hadronisation of final state partons into hadrons which then  decay further. Additionally, radiation of soft gluons or quarks from initial or final state partons is simulated. These are respectively referred to as initial state radiation (ISR) or final state radiation (FSR). Contributions from soft secondary interactions, the so-called underlying event (UE), and colour reconnection effects are also taken into account. \todo{Should I add more details?}
-A brief overview of the employed programs used for the event generation of the signal and main background processes used in the search presented in the thesis are given in \Sec{sec:programs}.
+The interaction of two incoming protons is often soft and elastic leading to events that are not interesting in the framework of this thesis. More intriguing are the hard interactions between two partons from the incoming protons. The event generation starts from the matrix elements of a hard scattering process of interest. The corresponding cross section integral is sampled using Monte Carlo techniques and the resulting sample of events reflect the probability distribution of a process over its final state phase space. A parton shower (PS) program is then used to simulate the hadronisation of final state partons,  coming from the sample of events of the hard interaction, into hadrons which then decay further. On top of this,  radiation of soft gluons or quarks from initial or final state partons is simulated. These are respectively referred to as initial state radiation (ISR) or final state radiation (FSR). The contributions from soft secondary interactions, the so-called underlying event (UE), and colour reconnection effects are also taken into account. 
+A brief overview of the employed programs used for the event generation of the signal and main background processes used in the search presented in the thesis is given in \Sec{sec:programs}.
 
 \subsection{Programs for event generation}
 \label{sec:programs}
-The \texttt{FEYNRULES} package~\cite{Alloul:2013bka} allows the calculation of  the Feynman rules in momentum space for any quantum field theory model. By use of a Lagrangian, the set of Feynman rules associated with this Lagrangian are calculated. Via the \UFO\ (UFO)~\cite{Degrande:2011ua} the results are then passed to matrix element generators. 
+The \texttt{FEYNRULES} package~\cite{Alloul:2013bka} allows for the calculation of  the Feynman rules in momentum space for any quantum field theory model. By use of a Lagrangian, the set of Feynman rules associated with this Lagrangian is calculated. Via the \UFO\ (UFO)~\cite{Degrande:2011ua} the results are then passed to matrix element generators. 
 
 
 The \MG\  program~\cite{Alwall:2011uj} is used to interpret the physics model and calculate the corresponding Feynman diagrams and matrix elements. After this, \ME~\cite{Mangano:2006rw} is used to calculate the corresponding partons. These generated parton configurations are then merged with \Pythia~\cite{Sjostrand2015159,Sjostrand:2006za,Sjostrand:2014zea} parton showers using the MLM merging scheme~\cite{Alwall:2007fs}. 
@@ -84,13 +81,13 @@ The \aMCMG\ program~\cite{Alwall:2014hca} combines the LO \MG~\cite{Alwall:2011u
 
 
 
-The \Powheg\ box (versions 1,2)~\cite{Alioli2010,1126-6708-2009-09-111,1126-6708-2007-11-070,Alioli:2010xd,Frixione:2007vw,Nason:2004rx} contains predefined implementations of various processes at NLO. It applies the \Powheg\ method for ME- to PS- matching, where the hardest radiation generated from the ME has priority over subsequent PS emission to remove the overlap with the PS simulation.
+The \Powheg\ box (versions 1 and 2)~\cite{Alioli2010,1126-6708-2009-09-111,1126-6708-2007-11-070,Alioli:2010xd,Frixione:2007vw,Nason:2004rx} contains predefined implementations of various processes at NLO. It applies the \Powheg\ method for ME- to PS- matching, where the hardest radiation generated from the ME has priority over subsequent PS emission to remove the overlap with the PS simulation.
 
-The \JHU\ generator (version 7.02)~\cite{Gritsan:2016hjl,Anderson:2013afp,Bolognesi:2012mm,Gao:2010qx} is used to generate the parton level information including full spin and polarization correlations. It is commonly used for studying the spin an parity properties of new resonances such as $\mathrm{ab}\rightarrow\mathrm{X}\rightarrow \mathrm{VV}$, where $\mathrm{V} = \PZ, \PW, \Pphoton)$. 
+The \JHU\ generator (version 7.02)~\cite{Gritsan:2016hjl,Anderson:2013afp,Bolognesi:2012mm,Gao:2010qx} is used to generate the parton level information including full spin and polarization correlations. It is commonly used for studying the spin and parity properties of new resonances such as $\mathrm{ab}\rightarrow\mathrm{X}\rightarrow \mathrm{VV}$, where $\mathrm{V} = \PZ, \PW, \Pphoton)$. 
 
-The generation of events from processes involving the production and decay of resonances creates a computational heavy load, especially at NLO. The narrow width approximation assumes that the resonant particle is on-shell. This makes the production and decay amplitude factorize, allowing to perform the simulation of the production and decay of heavy resonances like top quarks or Higgs bosons to be performed in separate steps. The \MS\ program~\cite{Artoisenet:2012st} extends this approach and accounts for off-shell effects through a partial reweighting of the events. Additionally, spin correlation effects between production and decay products are taken into account. 
+The generation of events from processes involving the production and decay of resonances creates a computational heavy load, especially at NLO. The narrow width approximation assumes that the resonant particle is on-shell. This factorizes the production and decay amplitude, allowing to perform the simulation of the production and decay of heavy resonances like top quarks or Higgs bosons to be performed in separate steps. The \MS\ program~\cite{Artoisenet:2012st} extends this approach and accounts for off-shell effects through a partial reweighting of the events. Additionally, spin correlation effects between production and decay products are taken into account. 
 
-The \Pythia\ program (versions 6,8)~\cite{Sjostrand2015159,Sjostrand:2006za,Sjostrand:2014zea} generates events of various processes at LO. However more commonly it is only used for its PS simulation and is then interfaced with other LO and NLO event generators to perform subsequent parton showering, hadronisation, and simulation of the underlying event.  In this thesis the underlying event tunes~\cite{Khachatryan2016}  are the CUETP8M2T4, CUETP8M1 and CUETP8M2. 
+The \Pythia\ program (versions 6,8)~\cite{Sjostrand2015159,Sjostrand:2006za,Sjostrand:2014zea} generates events of various processes at LO. However more commonly it is only used for its PS simulation and is then  used after other LO and NLO event generators to perform subsequent parton showering, hadronisation, and simulation of the underlying event.  In this thesis the underlying event tunes~\cite{Khachatryan2016}  are the CUETP8M2T4, CUETP8M1 and CUETP8M2. 
 
 
 
@@ -101,7 +98,7 @@ In addition, the response of the detector electronics to these hits are simulate
 
 
 \subsection{Generating FCNC top-Z interactions}
-The FCNC processes are generated by interfacing the Lagrangian in \eq{eq:EFTlag} with \aMCMG\ by means of the \FR\ package and its  \UFO\ format.  The complex chiral parameters are arbitrary chosen to be $f^{\mathrm{L}}_{\mathrm{X}\Pquark} = 0$ \todo{Why RH and not LH?} and  $f^{\mathrm{R}}_{\mathrm{X}\Pquark} = 1$. The signal rates are estimated by use of the \aMCMG\ program for estimating the partial widths. The anomalous couplings are left free to float for this estimation, and only one coupling allowed to be non-vanishing at a time. The results are presented in \tab{tab:partialwidths}.
+The FCNC processes are generated by interfacing the Lagrangian in \eq{eq:EFTlag} with \aMCMG\ by means of the \FR\ package and its  \UFO\ format.  The complex chiral parameters are arbitrary chosen to be $f^{\mathrm{L}}_{\mathrm{X}\Pquark} = 0$ \todo{RH and LH gave the same resulting variables and RH is easier to simulate since those are singlets under SU2 (no doublet with b)} and  $f^{\mathrm{R}}_{\mathrm{X}\Pquark} = 1$. The signal rates are estimated by use of the \aMCMG\ program for estimating the partial widths. The anomalous couplings are left free to float for this estimation, and only one coupling allowed to be non-vanishing at a time. The results are presented in \tab{tab:partialwidths}.
 \begin{table}[htbp]
 	\centering
 	\caption{Leading order partial widths related to the anomalous decay modes of the top quark, where the new physics scale $\Lambda$ is given in \GeV.}
@@ -124,11 +121,11 @@ The FCNC processes are generated by interfacing the Lagrangian in \eq{eq:EFTlag}
 	\label{tab:partialwidths}
 \end{table}
 
-The anomalous single top cross sections are calculated by convolution of the hard scattering matrix elements with the LO order set of \texttt{NN2.3LO}~\cite{Ball:2012cx} % \CTEQ 6 for pheno~\cite{Pumplin:2002vw}
-partons densities. The NLO effects are modelled by multiplying each LO cross section by a global $k$-factor. The LO single top production cross section and the global $k$-factors for the top-\PZ production are shown in \tab{tab:STx}. The hard scattering events are then matched to parton showers to \Pythia\ to account for the simulation of the QCD environment relevant for hadronic collisions. 
+The anomalous single top quark cross sections are calculated by convolution of the hard scattering matrix elements with the LO order set of \texttt{NN23LO1}~\cite{Ball:2012cx} % \CTEQ 6 for pheno~\cite{Pumplin:2002vw}
+partons densities. The NLO effects are modelled by multiplying each LO cross section by a global $k$-factor. The LO single top quark production cross section and the global $k$-factors for the top-\PZ production are shown in \tab{tab:STx}. The hard scattering events are then matched to parton showers to \Pythia\ to account for the simulation of the QCD environment relevant for hadronic collisions. 
 \begin{table}[htbp]
 	\centering
-	\caption{Leading order single top production cross section for $\Pproton\Pproton \rightarrow \tZ$ or \tbarZ, where the new physics scale is given in \GeV. The NLO $k-$factors~\cite{Zhang:2011gh} are given in the last column.}
+	\caption{Leading order single top quark production cross section for $\Pproton\Pproton \rightarrow \tZ$ or \tbarZ, where the new physics scale is given in \GeV. The NLO $k-$factors~\cite{Zhang:2011gh} are given in the last column.}
 	\begin{tabular}{cllc}
 		\toprule
 	   Anomalous coupling & \multicolumn{2}{c}{Cross section (\pb)} &  NLO $k-$factor \\ 
@@ -146,7 +143,7 @@ partons densities. The NLO effects are modelled by multiplying each LO cross sec
 	\label{tab:STx}
 \end{table}
 
-The top pair cross sections are derived from the \SM\ \ttbar\ cross section, calculated with \aMCMG\ at NLO ($\sigma_{\ttbar} = 6.741 \; 10^{2} \pb$), and considering the decay $\ttbar \rightarrow (\Pbottom \PWpm)(\mathrm{X}\Pquark\Ptop)$. The branching ratio $\BR(\Ptop \rightarrow \Pbottom\PWpm)$ is assumed to be equal to one and the FCNC branching ratio is calculated as 
+The top quark pair cross sections are derived from the \SM\ \ttbar\ cross section, calculated with \aMCMG\ at NLO ($\sigma_{\ttbar} = 6.741 \; 10^{2} \pb$), and considering the decay $\ttbar \rightarrow (\Pbottom \PWpm)(\mathrm{X}\Pquark\Ptop)$. The branching ratio $\BR(\Ptop \rightarrow \Pbottom\PWpm)$ is assumed to be equal to one and the FCNC branching ratio is calculated as 
 \begin{equation}
  \BR(\Ptop \rightarrow \Pquark\mathrm{X}) = \frac{ \Gamma_{\Ptop \rightarrow \Pquark\mathrm{X}} }{\Gamma_{\Ptop}^{\mathrm{SM}} + \Gamma_{\Ptop}^{\mathrm{FCNC}} }
  		\approx  \frac{ \Gamma_{\Ptop \rightarrow \Pquark\mathrm{X}} }{\Gamma_{\Ptop}^{\mathrm{SM}}} , 
@@ -154,7 +151,7 @@ The top pair cross sections are derived from the \SM\ \ttbar\ cross section, cal
 where $\Gamma_{\Ptop \rightarrow \Pquark\mathrm{X}}$ is given in \tab{tab:partialwidths}, and the assumption $ \Gamma_{\Ptop}^{\mathrm{FCNC}} \ll \Gamma_{\Ptop}^{\mathrm{SM}}$ is made \todo{these partial widths are at LO, how does this relate to NLO that is used? Or is there no difference?}. In \tab{tab:TTx}  the resulting NLO cross sections for the top-Z FCNC interactions are given.  
 \begin{table}[htbp]
 	\centering
-	\caption{ Next to leading order top pair cross section for the top-Z FCNC interactions with with a full leptonic decay. }
+	\caption{ Next to leading order top quark pair cross section for the top-Z FCNC interactions with with a full leptonic decay. }
 	\begin{tabular}{ccll}
 		\toprule
 		Anomalous coupling & Process &   \multicolumn{2}{c}{Cross section (\pb)}  \\ 
@@ -172,7 +169,7 @@ where $\Gamma_{\Ptop \rightarrow \Pquark\mathrm{X}}$ is given in \tab{tab:partia
 	\label{tab:TTx}
 \end{table}
 
-The generation at leading order of the single top FCNC process \tZ + 0,1 jet including a merging technique can not be done since the \tZ+1 jet also contains contribution of top pair where one quark is decaying in \tZ. Therefore, single top and top pair processes must be made independently though this violates gauge invariance. In the official release of \aMCMG\ this is not allowed and the generator experts bypassed this by creating the single top process without the extra hard jet. Since cross section for \tZ\ + 1 jet is relatively small, these contributions are neglected and the single top signal is generated without any extra jets, while top pair is generated up to two extra jets.
+The generation at leading order of the single top quark FCNC process \tZ + 0,1 jet including a merging technique can not be done since the \tZ+1 jet also contains contribution of top quark pair where one quark is decaying in \tZ. Therefore, single top  quark and top quark pair processes must be made independently though this violates gauge invariance. In the official release of \aMCMG\ this is not allowed and the generator experts bypassed this by creating the single top quark process without the extra hard jet. Since cross section for \tZ\ + 1 jet is relatively small, these contributions are neglected and the single top quark signal is generated without any extra jets, while top quark pair is generated up to two extra jets.
 
 \subsection{Generating \SM\  background events}
 The SM \tZq\ events were generated using the \aMCMG\ generator, interfaced with \Pythia\ version 8.2~\cite{Sjostrand:2014zea}  for parton showering and hadronisation. The \WZ+jets, \ttZ, \tZq, and \ttW\ samples are produced using the \aMCMG (version 5.222)~\cite{Alwall:2014hca}, which includes up to one hadronic jet at next to leading order (NLO) QCD accuracy. Other minor background (e.g. \WW, \ZZ, \tWZ\ and \ttH) are simulated using different generators such as \MG~\cite{Alwall:2011uj},\MS~\cite{Artoisenet:2012st} and \JHU~\cite{Gritsan:2016hjl,Anderson:2013afp,Bolognesi:2012mm,Gao:2010qx}. All events are interfaced to \Pythia\ for parton shower and hadronisation. 
