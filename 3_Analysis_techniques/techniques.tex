@@ -293,18 +293,18 @@ The decision tree is constructed by training on a dataset for which the outcome 
 %	\label{fig:BDTexample}
 %\end{figure}
 
-% Different trees can be combined into a forest where the final output is determined by the majority vote of all trees, forming the sum of so-called weak learners into one strong learner.   From one training collection, trees are derived by reweighting events, and combined into a single classifier as the  weighted average of each individual decision tree. A method for  making such forests is  boosting a tree. In this method, misclassified events are weighted higher so that future learner concentrate on these events. This has as advantage that the response of the decision trees are stabilised against fluctuations in the training sample which enhances the performance. Additionally, the trees can be kept very shallow, in this thesis the maximal number of nodes is set the three, which improves the robustness against overtraining. Examples of such boosting algorithms are Adaptive Boosting (AdaBoost) and Gradient Boosting~\cite{2014arXiv1403.1452M}. In AdaBoost, each weight of the misclassified events are enhanced while reducing the weight of correctly classified events after each training such that  future events learn those better
+% Different trees can be combined into a forest where the final output is determined by the majority vote of all trees, forming the sum of so-called weak learners into one strong learner.   From one training collection, trees are derived by reweighting events, and combined into a single classifier as the  weighted average of each individual decision tree. A method for  making such forests is  boosting a tree. In this method, misclassified events are weighted higher so that future learner concentrate on these events. This has as advantage that the response of the decision trees are stabilised against fluctuations in the training sample which enhances the performance. Additionally, the trees can be kept very shallow, in this thesis the maximal number of nodes is set to three, which improves the robustness against overtraining. Examples of such boosting algorithms are Adaptive Boosting (AdaBoost) and Gradient Boosting~\cite{2014arXiv1403.1452M}. In AdaBoost, each weight of the misclassified events is enhanced while reducing the weight of correctly classified events after each training such that  future events learn those better
 %\begin{equation}
 % \alpha_{\mathrm{n+1}} = \left(\frac{1-\epsilon_{\mathrm{n}}}{\epsilon_{\mathrm{n}}}\right)^{\beta}, 
 %\end{equation}
-%where $\epsilon_{\mathrm{n}}$ denotes the misclassification error of the current tree n and $\beta$ is a learning rate. The weight $w_{\mathrm{i}}$ at node i is then equal to $w_{\mathrm{i}} = \mathrm{ln}\:\alpha_{\mathrm{i}}$. The final weight is the sum of all classifiers weighted by their errors. The learning rate is typically chosen to be $\beta\leqslant 0.5$ to allow more boosting steps. Gradient boosting has a similar approach and combines a gradient descent with boosting. Instead of fitting the base-learner to the reweighted data as in AdaBoost, it is fitted to the negative gradient vector of the loss function evaluated at the previous node. Misclassified events will result in a majority vote with large gradients of the loss function. Also for the Gradient boost, the learning rate is typically slow, this also known as shrinkage. In this thesis Gradient boost is used with a shrinkage of 0.2-0.3.
+%where $\epsilon_{\mathrm{n}}$ denotes the misclassification error of the current tree n and $\beta$ is a learning rate. The weight $w_{\mathrm{i}}$ at node i is then equal to $w_{\mathrm{i}} = \mathrm{ln}\:\alpha_{\mathrm{i}}$. The final weight is the sum of all classifiers weighted by their errors. The learning rate is typically chosen to be $\beta\leqslant 0.5$ to allow more boosting steps. Gradient boosting has a similar approach and combines a gradient descent with boosting. Instead of fitting the base-learner to the reweighted data as in AdaBoost, it is fitted to the negative gradient vector of the loss function evaluated at the previous node. Misclassified events will result in a majority vote with large gradients of the loss function. Also for the Gradient boost, the learning rate or shrinkage is typically slow. In this thesis Gradient boost is used with a shrinkage of 0.2-0.3.
 %http://www.ccs.neu.edu/home/vip/teach/MLcourse/4_boosting/slides/gradient_boosting.pdf
 %https://indico.scc.kit.edu/indico/event/48/session/4/contribution/35/material/slides/0.pdf
 %https://arxiv.org/pdf/1403.1452.pdf
 %https://www.quora.com/What-is-the-difference-between-gradient-boosting-and-adaboost
 % https://people.phys.ethz.ch/~pheno/Lectures2012_StatisticalTools/slides/Chanon2.pdf
 %
-%Additionally, the Gradient boost is used in combination with bagging, so-called stochastic gradient boosting. Bagging is a resampling technique draws a subset of events is  from the training data where the same event is allowed to be randomly picked several times from the parent sample. The tree is then trained on this subset and this is repeated many times. It is based on the assumption that sampling from a dataset that follows a distribution is the same as sampling from the distribution itself~\cite{Behnke:2013:DAH:2564838}. If one draws an event out of the parent sample, it is more likely to draw an event out of the phase space that has a high probability density, as the original dataset will have more events in the regions. Since the selected event is kept in the original sample, the parent sample stays unchanged so that randomly extracted samples have the same parent distribution, albeit statistically fluctuated.  Bagging smears  the statistical fluctuations in the training data, making it suitable for stabilising the response of the classifier and increasing the performance by eliminating overtraining.  In stochastic gradient boosting the bagging resampling procedure uses random sub-samples of the training events for growing the trees. 
+%Additionally, the Gradient boost is used in combination with bagging, so-called stochastic gradient boosting. Bagging is a resampling technique taking a subset of events  from the training data where the same event is allowed to be randomly picked several times from the parent sample. The tree is then trained on this subset and this is repeated many times. It is based on the assumption that sampling from a dataset that follows a distribution is the same as sampling from the distribution itself~\cite{Behnke:2013:DAH:2564838}. If one draws an event out of the parent sample, it is more likely to draw an event out of the phase space that has a high probability density, as the original dataset will have more events in these regions. Since the selected event is kept in the original sample, the parent sample stays unchanged so that randomly extracted samples have the same parent distribution, albeit statistically fluctuated.  Bagging smears  the statistical fluctuations in the training data, making it suitable for stabilising the response of the classifier and increasing the performance by eliminating overtraining.  In stochastic gradient boosting the bagging resampling procedure uses random sub-samples of the training events for growing the trees. 
 
 
 The discriminating power of a BDT is assessed by analysing the receiver operating characteristic (ROC) curve. This curve represents the background rejection over the signal efficiency of the remaining sample. The area under the curve (AUC) is compared to  random guessing in order to identify the best classifier can be identified. 
@@ -368,7 +368,7 @@ where the likelihood is maximised in the numerator (maximum likelihood estimator
 
 The signal is excluded at $1-\alpha$ confidence level when 
 \begin{equation}
-\mathrm{CL} = \frac{\mathrm{P}\left(q_{\mu} \geq q_{\mu}^{\mathrm{obs}}|\: \mu s + b\right)}{\mathrm{P}\left(q_{\mu} \geq q_{\mu}^{\mathrm{obs}}| \:b\right)} \leq \alpha, 
+\mathrm{CLs} = \frac{\mathrm{P}\left(q_{\mu} \geq q_{\mu}^{\mathrm{obs}}|\: \mu s + b\right)}{\mathrm{P}\left(q_{\mu} \geq q_{\mu}^{\mathrm{obs}}| \:b\right)} \leq \alpha, 
 \end{equation}
 with $ \mathrm{P}\left(q_{\mu} \geq q_{\mu}^{\mathrm{obs}}|\: \mu s + b\right)$ the probability to observe a value of the test statistic at least as large as the one observed in data $q_{\mu}^{\mathrm{obs}}$, under the signal plus background ($s+b$) hypothesis, and $\mathrm{P}\left(q_{\mu} \geq q_{\mu}^{\mathrm{obs}}|\:  b\right)$ for the background only ($b$) hypothesis. 
 These probabilities are defined as 
@@ -441,11 +441,11 @@ The 95\% CL level upper limit on $\mu$ is achieved by adjusting $\mu$ until CL$ 
 %\subsubsection*{Choices of systematic uncertainty density functions}
 %For uncertainties that are unconstrained by a priori measurements that do not involve the data going into the statistical analysis, flat priors are used. When there are a priori measurements available such as those from control regions, one can use either a Gaussian pdf,  a log-normal pdf, or a  gamma distribution. The Gaussian pdf is suited for describing uncertainties on parameters with both positive and negative values. This prior is however not suitable for positively defined observables such as cross sections, cut efficiencies, luminosity, etc. and is not used in this thesis. An alternative option is the log normal pdf which is used in the rest of this thesis
 %\begin{equation}
-%  \rho(\theta) = \frac{1}{\sqrt{2\pi} \:\mathrm{ln}\;(\kappa)} \mathrm{exp}\left(-\frac{(\mathrm{ln}\:(\theta/\tilde{\theta}))^2}{2 (\mathrm{ln}\: \kappa)^2}\right) \frac{1}{\theta}. 
+%  \rho(\theta|\tilde{\theta}) = \frac{1}{\sqrt{2\pi} \:\mathrm{ln}\;(\kappa)} \mathrm{exp}\left(-\frac{(\mathrm{ln}\:(\theta/\tilde{\theta}))^2}{2 (\mathrm{ln}\: \kappa)^2}\right) \frac{1}{\theta}. 
 %\end{equation}
 %The parameter $\kappa$ characterises the width of the log normal pdf. For example $\kappa = 1.10$ implies that the observable can be larger or smaller by a factor 1.10, both deviation having a chance of 16\%. The gamma distribution is used for describing statistical uncertainties associated with a number of Monte Carlo events in simulation or a number of observed events in a data control sample. In this thesis, the gamma distribution is only used for the latter. The event rate in the signal region $n$ is related to the number of events in the control region $N$ as $n= \alpha N$. Ignoring the uncertainties on $\alpha$, the predicted rate follows 
 %\begin{equation}
-%	\rho(n) = \frac{1}{\alpha} \frac{n/\alpha)^N}{N!} \mathrm{exp}(-n/\alpha). 
+%	\rho(n|N) = \frac{1}{\alpha} \frac{n/\alpha)^N}{N!} \mathrm{exp}(-n/\alpha). 
 %\end{equation}
 %The mapping between the posteriors $\rho(\theta|\tilde{\theta})$ and the auxiliary measurement pdfs $p(\tilde{\theta}|\theta)$ are given in \cite{CMS-NOTE-2011-005}.
 
@@ -458,15 +458,15 @@ In order to significantly reduce computing time, the Asymptotic CL method is use
 %\subsection{Extracting the signal model parameters}
 %From a scan of the profile likelihood ratio, 
 %\begin{equation}
-%q(a) = -2\: \mathrm{ln} \: \frac{\like(\mathrm{obs}|\:s(a) + b, \hat{\theta}_{a})}{\like(\mathrm{obs}|\:s(\hat{a})  + b, \hat{\theta})}, 
+%q(\mu) = -2\: \mathrm{ln} \: \frac{\like(\mathrm{obs}|\:s(/mu) + b, \hat{\theta}_{\mu})}{\like(\mathrm{obs}|\:s(\hat{\mu})  + b, \hat{\theta})}, 
 %\end{equation}
-%the signal model parameters are evaluated.  The likelihood is maximised by the parameters $\hat{a}$ and $\hat{\theta}$. The likelihood 
+%the signal model parameters are evaluated.  The likelihood is maximised by the parameters $\hat{\mu}$ and $\hat{\theta}$. The likelihood 
 %\begin{equation}
-% \like_{\mathrm{max}} = \like(\mathrm{obs}|\:s(\hat{a}) + b, \hat{\theta})
+% \like_{\mathrm{max}} = \like(\mathrm{obs}|\:s(\hat{\mu}) + b, \hat{\theta})
 %\end{equation}
 %is called the best-fit set. 
 %
-%The 68\% and 95\% CL on a given parameter of interest $a_{\mathrm{i}}$ is then evaluated from $q(a_{\mathrm{i}}) = 1$ or $q(a_{\mathrm{i}}) = 3.84$ respectively, where all other unconstrained model parameters are treated in the same way as the nuisance parameters~\cite{CMS-PAS-HIG-12-020}. 
+%The 68\% and 95\% CL on a given parameter of interest $\mu_{\mathrm{i}}$ is then evaluated from $q(\mu_{\mathrm{i}}) = 1$ or $q(\mu_{\mathrm{i}}) = 3.84$ respectively, where all other unconstrained model parameters are treated in the same way as the nuisance parameters~\cite{CMS-PAS-HIG-12-020}. 
 %
 
 
