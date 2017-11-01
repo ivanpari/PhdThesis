@@ -122,15 +122,15 @@ The systematic uncertainties entering the analysis are coming from different sou
 		 
 		nonprompt electron norm. & 50\% & normalisation \\ 
 		 
-		background \ttZ\ norm & 30\% & normalisation \\ 
+		background \ttZ\ norm. & 30\% & normalisation \\ 
 		 
-		background \WZ\ norm & 30\% & normalisation \\ 
+		background \WZ\ norm. & 30\% & normalisation \\ 
 		 
-		background \tZq\ norm & 30\% & normalisation \\ 
+		background \tZq\ norm. & 30\% & normalisation \\ 
 		 
-		background \ZZ\ norm & 30\% & normalisation \\ 
+		background \ZZ\ norm.& 30\% & normalisation \\ 
 		 
-		background other MC norm & 30\% & normalisation \\ 
+		background other MC norm. & 30\% & normalisation \\ 
 		 
 		trigger & 1\% (5\%) & normalisation \\ 
 		 
@@ -659,42 +659,38 @@ The systematic uncertainties entering the analysis are coming from different sou
 The analysis strategy has been established using a blinded strategy. Through the use of a pseudo dataset, the limit setting procedure has been validated. Signal injection tests for which the signal strength from a pseudo dataset with a pre-set  signal strength is estimated are perfomed and shown in \fig{fig:plotzut}.
 \begin{figure}[ht]
 	\centering
-	% % \includegraphics[width=0.5\linewidth]{plotZut}
-	 % \includegraphics[width=0.5\linewidth]{plotZct}
+	 \includegraphics[width=0.49\linewidth]{6_Search/Figures/SignalInjection/plotZut}
+	 \includegraphics[width=0.49\linewidth]{6_Search/Figures/SignalInjection/plotZct}
 	\caption{The  obtained signal strength with the Maximum Likelihood method is in agreement with the signal strength used to generate the Asimov data set for the \Zut\ (left) and \Zct\ (right) couplings.}
 	\label{fig:plotzut}
 \end{figure}
 
 Another validation has been done by performing a Maximum Likelihood fit in the \WZCR\ only, considering all lepton channels. A simultaneous fit of the signal strength of the \NPE, \NPM\ and the \WZ+jets backgrounds is done by using the multi-dimensional fit in \texttt{Higgs} \texttt{Combine} \texttt{Tool}. The resulting signal strengths with their maximum and minimum value in the 68\% CL interval according to a one-dimensional chi-square are: 
 \begin{align}
-\mu_{FakeMu} &= 1.825  \quad -0.807/+0.757 \\
-\mu_{FakeEl} &= 1.321  \quad -0.501/+0.323 \\
+\mu_{\NPM} &= 1.825  \quad -0.807/+0.757 \\
+\mu_{\NPE} &= 1.321  \quad -0.501/+0.323 \\
 \mu_{\WZ} &= 1.235      \quad-0.301/+0.401
 \end{align}
-When applying these signal strengths as scale factors, the data agrees with simulation as can be seen in Fig. \ref{fig:mtwstack}. Furthermore, a goodness of fit test using the saturated model in combine, resulting in a p-value of 0.3 (see Fig. \ref{fig:gof} ) .
+When applying these signal strengths as scale factors, the data agrees with simulation as can be seen in Fig. \ref{fig:mtwstack}. Furthermore, a goodness of fit test is performed, resulting in a p-value of 0.3 (see Fig. \ref{fig:gof} ) .
 
 \begin{figure}[htbp]
 	\centering
-	% % \includegraphics[width=0.7\linewidth]{IniFitMTW/GOF_1000toys}
-	\caption{Goodness of fit testing in the \WZCR\ using the saturated model with 1000 toys.}
+	 \includegraphics[width=0.7\linewidth]{6_Search/Figures/GOF/GOF_1000toys}
+	\caption{Goodness of fit testing in the \WZCR\  with 1000 toys. The likelihood ration is denoted as $\lambda$.}
 	\label{fig:gof}
 \end{figure}
 
 \begin{figure}[htbp]
 	\centering
-	%	% % \includegraphics[width=0.47\linewidth]{Figures/tempfix/LepChan_3mu_WZCR_postfit/error_trial}
-	%	% % \includegraphics[width=0.47\linewidth]{Figures/tempfix/LepChan_1e2mu_WZCR_postfit/error_trial}
-	%	% % \includegraphics[width=0.47\linewidth]{Figures/tempfix/LepChan_2e1mu_WZCR_postfit/error_trial}
-	%	% % \includegraphics[width=0.47\linewidth]{Figures/tempfix/LepChan_3e_WZCR_postfit/error_trial}
-	% % \includegraphics[width=0.47\linewidth]{Figures/WZcontrol/wzcontrol_MVA_mWt_uuu_Stack}
-	% % \includegraphics[width=0.47\linewidth]{Figures/WZcontrol/wzcontrol_MVA_mWt_uue_Stack}
-	% % \includegraphics[width=0.47\linewidth]{Figures/WZcontrol/wzcontrol_MVA_mWt_eeu_Stack}
-	% % \includegraphics[width=0.47\linewidth]{Figures/WZcontrol/wzcontrol_MVA_mWt_eee_Stack}
+ \includegraphics[width=0.49\linewidth]{6_Search/Figures/WZcontrol/wzcontrol_MVA_mWt_uuu_Stack}
+	 \includegraphics[width=0.49\linewidth]{6_Search/Figures/WZcontrol/wzcontrol_MVA_mWt_uue_Stack}
+ \includegraphics[width=0.49\linewidth]{6_Search/Figures/WZcontrol/wzcontrol_MVA_mWt_eeu_Stack}
+	 \includegraphics[width=0.49\linewidth]{6_Search/Figures/WZcontrol/wzcontrol_MVA_mWt_eee_Stack}
 	\caption{The transverse mass of the \PW\ boson in the \WZCR\ for the \mumumu\ channel (left, upper), \emumu\ channel (right, upper), \eemu\ channel (left, lower), and 3 electrons channel (right, lower).}
 	\label{fig:mtwstack}
 \end{figure}
-
-Using the normalisations obtained by fitting the \WZCR\ only,  one can look at the data/MC  agreement in the \WZCR\ for all the variables used to create the BDT variables. These show good agreement and is illustrated in \fig{fig:agreement}
+\newpage
+Using the normalisations obtained by fitting the \WZCR\ only,  one can look at the data/MC  agreement in the \WZCR\ for all the variables used to create the BDT variables. These show good agreement as illustrated in \fig{fig:agreement}.
 
 \begin{comment}
 %\begin{figure}[htbp]
@@ -1090,11 +1086,18 @@ The limit settig procedure explained in \Sec{sec:Stat} is applied and results ar
 \subsection{One dimensional limits}
 The limit setting procedure used in this search returns  limits on the signal strength modifier which can be translated to signal cross sections. These limits are translated to a limit on the branching fraction using \eq{eq:BR}. Additionally, the limit on the couplings are extracted using the fact that the cross sections are quadratically dependent on the couplings. In  \fig{fig:exclusionlimitbrfcnczut}, the resulting limits at 95\% CL on the branching fraction and couplings related to the \Zut\ vertex is shown. This observed (expected) limit amounts to $\BR < \BRZuto\: (\BRZut)$ when $\kZut \neq 0$ and$ \kZct = 0$.The expected limit surpasses the CMS search at a centre-of-mass of 8 \TeV\ expected limits of 0.027\% \cite{Sirunyan:2017kkr}. The observed limit of  \BRZuto\ for the \Zut\ interaction doesn't surpass the CMS 8 \TeV\ observed limit of 0.022\%~\cite{Sirunyan:2017kkr}. The ATLAS collaboration has set limits 95\% CL at a centre-of-mass of 13 \TeV~\cite{ATLAS-CONF-2017-070} with
 observed (expected) limits of 0.017\% (0.024\%) for the \Zut\ coupling. The expected limit presented in this analysis surpasses the expected limit for \Zut.
+ \begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.49\linewidth]{6_Search/Figures/ExclusionPlots1D_2017_10_25/ExclusionLimit_BR_FCNC_Zut.pdf}
+	\includegraphics[width=0.49\linewidth]{6_Search/Figures/ExclusionPlots1D_2017_10_25/ExclusionLimit_Kappa_FCNC_Zut.pdf}
+	\caption{Exclusion limits at 95\% CL on the FCNC branching fractions (left) and couplings (right) as a function of the cross section of the FCNC process,  considering only the \Zut\ vertex. The CMS observed (expected) limit at 95\% CL at a centre-of-mass of 8 \TeV~\cite{Sirunyan:2017kkr} is given with a blue line (dashed line).}
+	\label{fig:exclusionlimitbrfcnczut}
+\end{figure}
 
-In \fig{} and \tab{tab:ResultsTZU}, the limits for each leptonic channel separate as well as their combined limits are shown for the \Zut\ vertex. The leptonic channels are in agreement with eachother, where the presence of a muon helps pushing the limit further. The \STSR\ is the most sensitive region because of the higher presence of the targeted single top quark signal. Further, one can see that by combining signle top quark and top quark pair signals, one gains in sensitivity. 
+In \fig{fig:exclusionlimitbrcomp} and \tab{tab:ResultsTZU}, the limits for each leptonic channel separate as well as their combined limits are shown for the \Zut\ vertex. The leptonic channels are in agreement with eachother, where the presence of a muon helps pushing the limit further. The \STSR\ is the most sensitive region because of the higher presence of the targeted single top quark signal. Further, one can see that by combining signle top quark and top quark pair signals, one gains in sensitivity. 
 \begin{table}[htbp]
 	\centering
-	\caption{Expected limits on the branching ratios at 95\% CL for the tZu coupling~\cite{Sirunyan:2017kkr,ATLAS-CONF-2017-070}.}
+	\caption{Expected limits on the branching fractions at 95\% CL for the tZu coupling~\cite{Sirunyan:2017kkr,ATLAS-CONF-2017-070}.}
 	\begin{tabular}{ccccccc}
 		\toprule
 		& expected & $+2\sigma$ & $+1\sigma$ & $-1\sigma$ & $-2\sigma$ & observed \\ 
@@ -1121,14 +1124,29 @@ In \fig{} and \tab{tab:ResultsTZU}, the limits for each leptonic channel separat
 	\end{tabular} 
 	\label{tab:ResultsTZU}
 \end{table}
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.7\linewidth]{6_Search/Figures/TOP-17-017_limitsZut.pdf}
+%	\includegraphics[width=0.49\linewidth]{Figures/TOP-17-017_limitsZct.pdf}
+	\caption{Exclusion limits at 95\% CL for each leptonic channel and signal region on the FCNC \Zut\ branching fractions considering one non-vanishing coupling at a time. The CMS observed (expected) limit at 95\% CL at a centre-of-mass of 8 \TeV~\cite{Sirunyan:2017kkr} is given with a blue line (dashed line).}	
+	\label{fig:exclusionlimitbrcomp}
+\end{figure}
 
  In  \fig{fig:exclusionlimitbrfcnczct}, the resulting limits at 95\% CL on the branching fraction and couplings related to the \Zct\ vertex is shown. or this coupling, the observed (expected) limit at 95\% CL is $\BR < \BRZcto\: (\BRZct)$ when $\kZct \neq 0$ and$ \kZut = 0$. The expected limit surpasses the CMS search at a centre-of-mass of 8 \TeV\ expected limits of 0.118\% \cite{Sirunyan:2017kkr}. This also the case for the observed limit of  \BRZcto\ for the \Zct\ interaction, which surpasses the CMS 8 \TeV\ observed limit of 0.049\%~\cite{Sirunyan:2017kkr}. The observed (expected) limits set by the ATLAS collaboration at a centre-of-mass of 13 \TeV~\cite{ATLAS-CONF-2017-070} are  0.023\% (0.032\%) for the \Zct\ coupling. The expected limit presented in this analysis is in accordance with this limit.
+ \begin{figure}[htbp]
+ 	\centering
+ 	\includegraphics[width=0.49\linewidth]{6_Search/Figures/ExclusionPlots1D_2017_10_25/ExclusionLimit_BR_FCNC_Zct.pdf}
+ 	\includegraphics[width=0.49\linewidth]{6_Search/Figures/ExclusionPlots1D_2017_10_25/ExclusionLimit_Kappa_FCNC_Zct.pdf}
+ 	\caption{Exclusion limits at 95\% CL on the FCNC branching fractions (left) and couplings (right) as a function of the cross section of the FCNC process,  considering only the \Zct\ vertex. The CMS observed (expected) limit at 95\% CL at a centre-of-mass of 8 \TeV~\cite{Sirunyan:2017kkr} is given with a blue line (dashed line).}
+ 	\label{fig:exclusionlimitbrfcnczct}
+ \end{figure}
+ 
 
-The limits for each leptonic channel separate as well as their combined limits are shown for the \Zct\ vertex in  \fig{} and \tab{tab:ResultsTZC}. Also here, the leptonic channels are in agreement with eachother, and the presence of a muon helps the sensitivity. For the \Zut\ vertex, the \TTSR\ is the most sensitive region  and by combining single top quark and top quark pair signals, one also gains in sensitivity. 
+The limits for each leptonic channel separate as well as their combined limits are shown for the \Zct\ vertex in  \fig{fig:exclusionlimitbrcompc} and \tab{tab:ResultsTZC}. Also here, the leptonic channels are in agreement with eachother, and the presence of a muon helps the sensitivity. For the \Zut\ vertex, the \TTSR\ is the most sensitive region  and by combining single top quark and top quark pair signals, one also gains in sensitivity. 
 
 \begin{table}[htbp]
 	\centering
-	\caption{Expected limits on the branching ratios at 95\% CL for the \Zct\ coupling~\cite{Sirunyan:2017kkr,ATLAS-CONF-2017-070}.}
+	\caption{Expected limits on the branching fractions at 95\% CL for the \Zct\ coupling~\cite{Sirunyan:2017kkr,ATLAS-CONF-2017-070}.}
 	\begin{tabular}{ccccccc}
 		\toprule
 		& expected & $+2\sigma$ & $+1\sigma$ & $-1\sigma$ & $-2\sigma$ & observed \\ 
@@ -1154,12 +1172,32 @@ The limits for each leptonic channel separate as well as their combined limits a
 	\end{tabular} 
 	\label{tab:ResultsTZC}
 \end{table}
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.7\linewidth]{6_Search/Figures/TOP-17-017_limitsZct.pdf}
+	%	\includegraphics[width=0.49\linewidth]{Figures/TOP-17-017_limitsZct.pdf}
+	\caption{Exclusion limits at 95\% CL for each leptonic channel and signal region on the FCNC \Zct\ branching fractions considering one non-vanishing coupling at a time. The CMS observed (expected) limit at 95\% CL at a centre-of-mass of 8 \TeV~\cite{Sirunyan:2017kkr} is given with a blue line (dashed line).}	
+	\label{fig:exclusionlimitbrcompc}
+\end{figure}
 
 \subsection{Two-dimensional limits}
+One can interpolate the one dimensional limits $\pisces_{\tZq}^{\mathrm{1D}}$ to a scenario where both couplings are on-vanishing. The interpolation is taken from Ref. \todocite, where an experimental extrapolation formulae
+\begin{equation}
+ \kZct =  \pisces_{\Zct}^{\mathrm{1D}} \sqrt{1 - \frac{\kZut} {\pisces_{\Zut}^{\mathrm{1D}}}}, 
+\end{equation}
+is found from 100 benchmark scenarios. These scenarios are constructed from existing signal samples as
+\begin{equation}
+	\mathrm{Signal\: yield} = (\kZut)^2 (\mathrm{ST\: Zut \: yield + TT\: Zut \: yield }) + (\kZct)^2 (\mathrm{ST\: Zct \: yield + TT\: Zct \: yield }). 
+\end{equation}
+For each scenario a dedicated BDT training is performed and the expected limit at 95\% CL are calculated. The resulting two-dimensional limits are shown in \fig{fig:exclusionlimitbrfcnc}. 
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.49\linewidth]{6_Search/Figures/ExclusionPlots2D_2017_10_25/ExclusionLimit_BR_FCNC.pdf}
+	\includegraphics[width=0.49\linewidth]{6_Search/Figures/ExclusionPlots2D_2017_10_25/ExclusionLimit_Kappa_FCNC.pdf}
+	\caption{Two-dimensional limits on the branching fractions (left) and couplings (right) for FCNC interactions involving a tZq vertex.  The CMS observed (expected) limit at 95\% CL at a centre-of-mass of 8 \TeV~\cite{Sirunyan:2017kkr} is given with a blue line (dashed line).}
+	\label{fig:exclusionlimitbrfcnc}
+\end{figure}
 
-
-The expected limits at 95\% CL on the BR of \BRZut\ for \Zut\ and \BRZct\ for \Zct\ surpass the expected limits of 0.027\% for \Zut\ and 0.118\% for \Zct\ from the 8 \TeV\ analysis. The observed limit at 95\% CL on the BR for \Zut\ is \BRZuto\ and isn't improving the current best limit of 0.022\%. For \Zct\ the observed limit 95\% CL is \BRZcto\ and is improving the current best limit of 0.049\%.  The latest result on 13 \TeV\ from ATLAS~\cite{ATLAS-CONF-2017-070} set limits at 95\% CL of 
-observed (expected) limits of 0.017\% (0.024\%) for \Zut\ and 0.023\% (0.032\%) for \Zct. 
 
 
 
