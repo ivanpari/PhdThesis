@@ -1066,278 +1066,100 @@ Using the normalisations obtained by fitting the \WZCR\ only,  one can look at t
 
 
 \section{Result and discussion}
-\subsection{Resulting limits on tZu}
+The limit settig procedure explained in \Sec{sec:Stat} is applied and results are obtained for each lepton channel separately as well as the combination. For both the \Zut\ and \Zct\ coupling, the maximum likelihood estimator of their signal strengths $\hat{\mu}$ is compatible with zero. \todo{MAKE THIS plot}. The maximum likelihood estimators for the nuisance parameters $\hat{\theta}$ are shown in \todo{MAKE THIS PLOT}. Their values obtained from the signal plus background or background only fits are in agreement. Furthermore, the pulls on each of the nuisance parameters are shown in \todo{MAKE THIS PLOT}. Here one can see that the nuisance parameters related to the \NPL\ normalisations are shifted with respect to their initial values. This is to be expected since their initial  normalisation is arbitrary. The distributions of multivariate discriminating  variables as well as the distribution of the transverse mass of the \PW\ boson are recreated with the maximum likelihood estimations of the nuisance parameters. The resulting distributions are shown in \todo{MAKE PLOTS}. The post fit event yields are given in \todo{MAKE TABLE}. 
+
+%\begin{figure}[h] 
+%	\centering
+%	% % \includegraphics[width=.99\linewidth]{FiguresAfterUnblinding/impact/impacts_170919Zut_datacar18_noMCpage1.pdf}
+%	% % \includegraphics[width=.99\linewidth]{FiguresAfterUnblinding/impact/impacts_170919Zut_datacar18_noMCpage2.pdf}
+%	\caption{tZu coupling}
+%	\label{fig:impacts170901zutnomcc}
+%\end{figure}
+%\begin{figure}[h] 
+%	\centering
+%	% % \includegraphics[width=.99\linewidth]{FiguresAfterUnblinding/impact/impacts_170919Zct_datacar18_noMCpage1.pdf}
+%	% % \includegraphics[width=.99\linewidth]{FiguresAfterUnblinding/impact/impacts_170919Zct_datacar18_noMCpage2.pdf}
+%	\caption{tZc coupling}
+%	\label{fig:impacts170901zctnomcc}
+%\end{figure}
 
 
 
-\begin{table}[ht]
+
+
+\subsection{One dimensional limits}
+The limit setting procedure used in this search returns  limits on the signal strength modifier which can be translated to signal cross sections. These limits are translated to a limit on the branching fraction using \eq{eq:BR}. Additionally, the limit on the couplings are extracted using the fact that the cross sections are quadratically dependent on the couplings. In  \fig{fig:exclusionlimitbrfcnczut}, the resulting limits at 95\% CL on the branching fraction and couplings related to the \Zut\ vertex is shown. This observed (expected) limit amounts to $\BR < \BRZuto\: (\BRZut)$ when $\kZut \neq 0$ and$ \kZct = 0$.The expected limit surpasses the CMS search at a centre-of-mass of 8 \TeV\ expected limits of 0.027\% \cite{Sirunyan:2017kkr}. The observed limit of  \BRZuto\ for the \Zut\ interaction doesn't surpass the CMS 8 \TeV\ observed limit of 0.022\%~\cite{Sirunyan:2017kkr}. The ATLAS collaboration has set limits 95\% CL at a centre-of-mass of 13 \TeV~\cite{ATLAS-CONF-2017-070} with
+observed (expected) limits of 0.017\% (0.024\%) for the \Zut\ coupling. The expected limit presented in this analysis surpasses the expected limit for \Zut.
+
+In \fig{} and \tab{tab:ResultsTZU}, the limits for each leptonic channel separate as well as their combined limits are shown for the \Zut\ vertex. The leptonic channels are in agreement with eachother, where the presence of a muon helps pushing the limit further. The \STSR\ is the most sensitive region because of the higher presence of the targeted single top quark signal. Further, one can see that by combining signle top quark and top quark pair signals, one gains in sensitivity. 
+\begin{table}[htbp]
 	\centering
 	\caption{Expected limits on the branching ratios at 95\% CL for the tZu coupling~\cite{Sirunyan:2017kkr,ATLAS-CONF-2017-070}.}
-	\begin{tabular}{|c|c|c|c|c|c|c|}
-		\hline 
+	\begin{tabular}{ccccccc}
+		\toprule
 		& expected & $+2\sigma$ & $+1\sigma$ & $-1\sigma$ & $-2\sigma$ & observed \\ 
-		\hline 
+		\midrule
 		\mumumu\ & 0.032\% & 0.074\% & 0.050\% & 0.021\% & 0.014\% & 0.053\% \\ 
-		\hline 
+	
 		\emumu\ & 0.032\% & 0.074\% & 0.050\% & 0.021\% & 0.014\% & 0.064\% \\ 
-		\hline 
-		\eemu\ & 0.036\% & 0.084\% & 0.056\% & 0.023\% & 0.016\% & 0.056\% \\ 
-		\hline 
-		\eee\ & 0.050\% & 0.13\% & 0.082\% & 0.031\% & 0.021\% & 0.038\% \\ 
-		\hline 
-		ST only & 0.020\% & 0.049\% & 0.032\% & 0.013\% & 0.0086\% & 0.025\% \\ 
-		\hline 
-		TT only & 0.025\% & 0.054\% & 0.038\% & 0.025\% & 0.017\% & 0.039\% \\ 
-		\hline 
-		combined & 0.015\% & 0.033\% & 0.023\% & 0.0097\% & 0.0068\% & 0.024\% \\ 
-		\hline
-		8 \TeV\  (19.7 \fbinv)    & -\% &0.027\% & 0.42\% & 0.018\% & -\% & 0.022\% \\
-		\hline
-		13 \TeV\ ATLAS (36 \fbinv)    & 0.024\% & -\% & 0.35\% & 0.017\%& -\% & 0.017\%\\
 		
-		\hline
+		\eemu\ & 0.036\% & 0.084\% & 0.056\% & 0.023\% & 0.016\% & 0.056\% \\ 
+		
+		\eee\ & 0.050\% & 0.13\% & 0.082\% & 0.031\% & 0.021\% & 0.038\% \\ 
+		\hdashline
+		\STSR\ only & 0.020\% & 0.049\% & 0.032\% & 0.013\% & 0.0086\% & 0.025\% \\ 
+		
+		\TTSR\ only & 0.025\% & 0.054\% & 0.038\% & 0.025\% & 0.017\% & 0.039\% \\ 
+		\hdashline
+		combined & 0.015\% & 0.033\% & 0.023\% & 0.0097\% & 0.0068\% & 0.024\% \\ 
+		\hdashline
+		8 \TeV\ CMS (19.7 \fbinv)   &0.027\% & -\%  & 0.42\% & 0.018\% & -\% & 0.022\% \\
+		\hdashline
+		13 \TeV\ ATLAS (36 \fbinv)   & 0.024\% & -\% &   0.35\% & 0.017\%& -\% & 0.017\%\\
+		
+		\bottomrule
 	\end{tabular} 
 	\label{tab:ResultsTZU}
 \end{table}
-\begin{figure}[ht]
+
+ In  \fig{fig:exclusionlimitbrfcnczct}, the resulting limits at 95\% CL on the branching fraction and couplings related to the \Zct\ vertex is shown. or this coupling, the observed (expected) limit at 95\% CL is $\BR < \BRZcto\: (\BRZct)$ when $\kZct \neq 0$ and$ \kZut = 0$. The expected limit surpasses the CMS search at a centre-of-mass of 8 \TeV\ expected limits of 0.118\% \cite{Sirunyan:2017kkr}. This also the case for the observed limit of  \BRZcto\ for the \Zct\ interaction, which surpasses the CMS 8 \TeV\ observed limit of 0.049\%~\cite{Sirunyan:2017kkr}. The observed (expected) limits set by the ATLAS collaboration at a centre-of-mass of 13 \TeV~\cite{ATLAS-CONF-2017-070} are  0.023\% (0.032\%) for the \Zct\ coupling. The expected limit presented in this analysis is in accordance with this limit.
+
+The limits for each leptonic channel separate as well as their combined limits are shown for the \Zct\ vertex in  \fig{} and \tab{tab:ResultsTZC}. Also here, the leptonic channels are in agreement with eachother, and the presence of a muon helps the sensitivity. For the \Zut\ vertex, the \TTSR\ is the most sensitive region  and by combining single top quark and top quark pair signals, one also gains in sensitivity. 
+
+\begin{table}[htbp]
 	\centering
-	% % \includegraphics[width=0.42\linewidth]{FiguresAfterUnblinding/limits/ExclusionPlots1D_2017_09_19/ExclusionLimit_BR_FCNC_Zut_3mu.png}
-	% % \includegraphics[width=0.42\linewidth]{FiguresAfterUnblinding/limits/ExclusionPlots1D_2017_09_19/ExclusionLimit_BR_FCNC_Zut_1e2mu.png}
-	% % \includegraphics[width=0.42\linewidth]{FiguresAfterUnblinding/limits/ExclusionPlots1D_2017_09_19/ExclusionLimit_BR_FCNC_Zut_2e1mu.png}
-	% % \includegraphics[width=0.42\linewidth]{FiguresAfterUnblinding/limits/ExclusionPlots1D_2017_09_19/ExclusionLimit_BR_FCNC_Zut_3e.png}
-	\caption{Resulting limits considering the tZu coupling on the BR at 95\%  CL for the different lepton channels: \mumumu\ (left, top), \emumu\ (right,top), \eee\ (left, bottom), \eemu\ (right,bottom). The current observed (expected) best limit of CMS is given in blue.}
-	\label{fig:exclusionlimitbrfcnczutchannels}
-\end{figure}
-
-\begin{figure}[ht]
-	\centering
-	% % \includegraphics[width=0.42\linewidth]{FiguresAfterUnblinding/limits/ExclusionPlots1D_2017_09_19/ExclusionLimit_BR_FCNC_Zut_TTOnly.png}
-	% % \includegraphics[width=0.42\linewidth]{FiguresAfterUnblinding/limits/ExclusionPlots1D_2017_09_19/ExclusionLimit_BR_FCNC_Zut_STOnly.png}
-	\caption{Resulting limits considering the tZu coupling on the BR at 95\%  CL for the different signal regions: TTSR (left) and STSR (right). The current observed (expected) best limit of CMS is given in blue.}
-	\label{fig:exclusionlimitbrfcnczutttst}
-\end{figure}
-
-
-\begin{figure}[ht]
-	\centering
-	% % \includegraphics[width=0.75\linewidth]{FiguresAfterUnblinding/limits/ExclusionPlots1D_2017_09_19/ExclusionLimit_BR_FCNC_Zut.png}
-	\caption{Resulting limits considering the tZu coupling on the BR at 95\%  CL. The current observed (expected) best limit of CMS is given in blue.}
-	\label{fig:exclusionlimitbrfcnczut}
-\end{figure}
-
-
-\begin{figure}[ht]
-	\centering
-	% % \includegraphics[width=0.42\linewidth]{FiguresAfterUnblinding/limits/ExclusionPlots1D_2017_09_19/ExclusionLimit_Kappa_FCNC_Zut_3mu.png}
-	% % \includegraphics[width=0.42\linewidth]{FiguresAfterUnblinding/limits/ExclusionPlots1D_2017_09_19/ExclusionLimit_Kappa_FCNC_Zut_1e2mu.png}
-	% % \includegraphics[width=0.42\linewidth]{FiguresAfterUnblinding/limits/ExclusionPlots1D_2017_09_19/ExclusionLimit_Kappa_FCNC_Zut_2e1mu.png}
-	% % \includegraphics[width=0.42\linewidth]{FiguresAfterUnblinding/limits/ExclusionPlots1D_2017_09_19/ExclusionLimit_Kappa_FCNC_Zut_3e.png}
-	\caption{Resulting limits considering the tZu coupling on the coupling at 95\%  CL for the different lepton channels: \mumumu\ (left, top), \emumu\ (right,top), \eee\ (left, bottom), \eemu\ (right,bottom). The current observed (expected) best limit of CMS is given in blue.}
-	\label{fig:exclusionlimitbrfcnczutchannelsc}
-\end{figure}
-
-\begin{figure}[ht]
-	\centering
-	% % \includegraphics[width=0.42\linewidth]{FiguresAfterUnblinding/limits/ExclusionPlots1D_2017_09_19/ExclusionLimit_Kappa_FCNC_Zut_TTOnly.png}
-	% % \includegraphics[width=0.42\linewidth]{FiguresAfterUnblinding/limits/ExclusionPlots1D_2017_09_19/ExclusionLimit_Kappa_FCNC_Zut_STOnly.png}
-	\caption{Resulting limits considering the tZu coupling on the coupling at 95\%  CL for the different signal regions: TTSR (left) and STSR (right). The current observed (expected) best limit of CMS is given in blue.}
-	\label{fig:exclusionlimitbrfcnczutttstc}
-\end{figure}
-
-
-\begin{figure}[ht]
-	\centering
-	% % \includegraphics[width=0.75\linewidth]{FiguresAfterUnblinding/limits/ExclusionPlots1D_2017_09_19/ExclusionLimit_Kappa_FCNC_Zut.png}
-	\caption{Resulting limits considering the tZu coupling on the coupling at 95\%  CL. The current observed (expected) best limit of CMS is given in blue.}
-	\label{fig:exclusionlimitbrfcnczutc}
-\end{figure}
-
-
-\subsection{Resulting limits on tZc}
-\begin{table}[ht]
-	\centering
-	\caption{Expected limits on the branching ratios at 95\% CL for the tZc coupling~\cite{Sirunyan:2017kkr,ATLAS-CONF-2017-070}.}
-	\begin{tabular}{|c|c|c|c|c|c|c|}
-		\hline 
+	\caption{Expected limits on the branching ratios at 95\% CL for the \Zct\ coupling~\cite{Sirunyan:2017kkr,ATLAS-CONF-2017-070}.}
+	\begin{tabular}{ccccccc}
+		\toprule
 		& expected & $+2\sigma$ & $+1\sigma$ & $-1\sigma$ & $-2\sigma$ & observed \\ 
-		\hline 
+		\midrule
 		\mumumu\ & 0.070\% & 0.15\% & 0.10\% & 0.046\% & 0.032\% & 0.12\% \\ 
-		\hline 
+		
 		\emumu\ & 0.079\% & 0.18\% & 0.12\% & 0.052\% & 0.036\% & 0.096\% \\ 
-		\hline 
+		
 		\eemu\ & 0.089\% & 0.20\% & 0.14\% & 0.058\% & 0.040\% & 0.099\% \\ 
-		\hline 
+		
 		\eee\ & 0.12\% & 0.29\% & 0.19\% & 0.075\% & 0.050\% & 0.095\% \\ 
-		\hline 
-		ST only & 0.10\% & 0.23\% & 0.16\% & 0.066\% & 0.045\% & 0.17\% \\ 
-		\hline 
-		TT only & 0.044\% & 0.094\% & 0.066\% & 0.029\% & 0.020\% & 0.043\% \\ 
-		\hline 
+		\hdashline
+		\STSR\ only & 0.10\% & 0.23\% & 0.16\% & 0.066\% & 0.045\% & 0.17\% \\ 
+		
+		\TTSR\ only & 0.044\% & 0.094\% & 0.066\% & 0.029\% & 0.020\% & 0.043\% \\ 
+		\hdashline 
 		combined & 0.037\% & 0.081\% & 0.056\% & 0.025\% & 0.017\% & 0.045\% \\ 
-		\hline
+		\hdashline
 		8 \TeV\ CMS (19.7 \fbinv)    & 0.118\% & -\% &0.222\% & 0.071\% & -\% & 0.049\%\\
-		\hline
+		\hdashline
 		13 \TeV\ ATLAS (36 \fbinv)    & 0.032\% & -\% & 0.046\% & 0.022\%& -\% & 0.023\%\\
 		\hline
 	\end{tabular} 
 	\label{tab:ResultsTZC}
 \end{table}
-\begin{figure}[ht]
-	\centering
-	% % \includegraphics[width=0.42\linewidth]{FiguresAfterUnblinding/limits/ExclusionPlots1D_2017_09_19/ExclusionLimit_BR_FCNC_Zct_3mu.png}
-	% % \includegraphics[width=0.42\linewidth]{FiguresAfterUnblinding/limits/ExclusionPlots1D_2017_09_19/ExclusionLimit_BR_FCNC_Zct_1e2mu.png}
-	% % \includegraphics[width=0.42\linewidth]{FiguresAfterUnblinding/limits/ExclusionPlots1D_2017_09_19/ExclusionLimit_BR_FCNC_Zct_2e1mu.png}
-	% % \includegraphics[width=0.42\linewidth]{FiguresAfterUnblinding/limits/ExclusionPlots1D_2017_09_19/ExclusionLimit_BR_FCNC_Zct_3e.png}
-	\caption{Resulting limits considering the tZc coupling on the BR at 95\%  CL for the different lepton channels: \mumumu\ (left, top), \emumu\ (right,top), \eee\ (left, bottom), \eemu\ (right,bottom). The current observed (expected) best limit is given in blue.}
-	\label{fig:exclusionlimitbrfcnczctchannels}
-\end{figure}
 
-\begin{figure}[ht]
-	\centering
-	% % \includegraphics[width=0.42\linewidth]{FiguresAfterUnblinding/limits/ExclusionPlots1D_2017_09_19/ExclusionLimit_BR_FCNC_Zct_TTOnly.png}
-	% % \includegraphics[width=0.42\linewidth]{FiguresAfterUnblinding/limits/ExclusionPlots1D_2017_09_19/ExclusionLimit_BR_FCNC_Zct_STOnly.png}
-	\caption{Resulting limits considering the tZc coupling on the BR at 95\%  CL for the different signal regions: TTSR (left) and STSR (right). The current observed (expected) best limit is given in blue.}
-	\label{fig:exclusionlimitbrfcnczctttst}
-\end{figure}
+\subsection{Two-dimensional limits}
 
 
-\begin{figure}[ht]
-	\centering
-	% % \includegraphics[width=0.75\linewidth]{FiguresAfterUnblinding/limits/ExclusionPlots1D_2017_09_19/ExclusionLimit_BR_FCNC_Zct.png}
-	\caption{Resulting limits considering the tZc coupling on the BR at 95\%  CL. The current observed (expected) best limit is given in blue.}
-	\label{fig:exclusionlimitbrfcnczct}
-\end{figure}
-
-\begin{figure}[ht]
-	\centering
-	% % \includegraphics[width=0.42\linewidth]{FiguresAfterUnblinding/limits/ExclusionPlots1D_2017_09_19/ExclusionLimit_Kappa_FCNC_Zct_3mu.png}
-	% % \includegraphics[width=0.42\linewidth]{FiguresAfterUnblinding/limits/ExclusionPlots1D_2017_09_19/ExclusionLimit_Kappa_FCNC_Zct_1e2mu.png}
-	% % \includegraphics[width=0.42\linewidth]{FiguresAfterUnblinding/limits/ExclusionPlots1D_2017_09_19/ExclusionLimit_Kappa_FCNC_Zct_2e1mu.png}
-	% % \includegraphics[width=0.42\linewidth]{FiguresAfterUnblinding/limits/ExclusionPlots1D_2017_09_19/ExclusionLimit_Kappa_FCNC_Zct_3e.png}
-	\caption{Resulting limits considering the tZc coupling on the coupling at 95\%  CL for the different lepton channels: \mumumu\ (left, top), \emumu\ (right,top), \eee\ (left, bottom), \eemu\ (right,bottom). The current observed (expected) best limit is given in blue.}
-	\label{fig:exclusionlimitbrfcnczctchannelsc}
-\end{figure}
-
-\begin{figure}[ht]
-	\centering
-	% % \includegraphics[width=0.42\linewidth]{FiguresAfterUnblinding/limits/ExclusionPlots1D_2017_09_19/ExclusionLimit_Kappa_FCNC_Zct_TTOnly.png}
-	% % \includegraphics[width=0.42\linewidth]{FiguresAfterUnblinding/limits/ExclusionPlots1D_2017_09_19/ExclusionLimit_Kappa_FCNC_Zct_STOnly.png}
-	\caption{Resulting limits considering the tZc coupling on the coupling at 95\%  CL for the different signal regions: TTSR (left) and STSR (right). The current observed (expected) best limit is given in blue.}
-	\label{fig:exclusionlimitbrfcnczctttstc}
-\end{figure}
-
-
-\begin{figure}[ht]
-	\centering
-	% % \includegraphics[width=0.75\linewidth]{FiguresAfterUnblinding/limits/ExclusionPlots1D_2017_09_19/ExclusionLimit_Kappa_FCNC_Zct.png}
-	\caption{Resulting limits considering the tZc coupling on the coupling at 95\%  CL. The current observed (expected) best limit is given in blue.}
-	\label{fig:exclusionlimitbrfcnczctc}
-\end{figure}
-
-
-
-
-\subsection{Resulting limits where both couplings are non-vanishing}
-\begin{figure}[ht]
-	\centering
-	% % \includegraphics[width=0.65\linewidth]{FiguresAfterUnblinding/limits/ExclusionPlots2D_2017_09_19/ExclusionLimit_BR_FCNC.png}
-	\caption{Resulting limits considering the tZc and tZu couplings on the BR at 95\%  CL in the 2D plane. The current observed (expected) best limit is given in blue.}
-	\label{fig:exclusionlimitbrfcnc}
-\end{figure}
-
-\begin{figure}[ht]
-	\centering
-	% % \includegraphics[width=0.65\linewidth]{FiguresAfterUnblinding/limits/ExclusionPlots2D_2017_09_19/ExclusionLimit_Kappa_FCNC.png}
-	\caption{Resulting limits considering the tZc and tZu vertices on the couplings at 95\%  CL in the 2D plane. The current observed (expected) best limit is given in blue.}
-	\label{fig:exclusionlimitbrfcncc}
-\end{figure}
-\subsection{Post fit distributions}
-\begin{figure}[h]
-	\centering
-	% % \includegraphics[width=0.49\linewidth]{FiguresAfterUnblinding/Postfit/ZutFit/shapes_fit_s_LepChan_3mu_TTSR_error_trial.pdf}
-	% % \includegraphics[width=0.49\linewidth]{FiguresAfterUnblinding/Postfit/ZctFit/shapes_fit_s_LepChan_3mu_TTSR_error_trial.pdf}	
-	% % \includegraphics[width=0.49\linewidth]{FiguresAfterUnblinding/Postfit/ZutFit/shapes_fit_s_LepChan_3mu_STSR_error_trial.pdf}
-	% % \includegraphics[width=0.49\linewidth]{FiguresAfterUnblinding/Postfit/ZctFit/shapes_fit_s_LepChan_3mu_STSR_error_trial.pdf}
-	\caption{The discriminating variable distribution after the fit for the \mumumu\ leptonic channel. Upper left: top pair \Zut; upper right: top pair \Zct; lower left: single top \Zut; lower right: single top \Zct.}
-	\label{fig:shapesfitslepchan3mustcrerrortrialSTSR}
-\end{figure}
-
-\begin{figure}[h]
-	\centering
-	% % \includegraphics[width=0.49\linewidth]{FiguresAfterUnblinding/Postfit/ZutFit/shapes_fit_s_LepChan_1e2mu_TTSR_error_trial.pdf}
-	% % \includegraphics[width=0.49\linewidth]{FiguresAfterUnblinding/Postfit/ZctFit/shapes_fit_s_LepChan_1e2mu_TTSR_error_trial.pdf}	
-	% % \includegraphics[width=0.49\linewidth]{FiguresAfterUnblinding/Postfit/ZutFit/shapes_fit_s_LepChan_1e2mu_STSR_error_trial.pdf}
-	% % \includegraphics[width=0.49\linewidth]{FiguresAfterUnblinding/Postfit/ZctFit/shapes_fit_s_LepChan_1e2mu_STSR_error_trial.pdf}
-	\caption{The discriminating variable distribution after the fit for the \emumu\ leptonic channel. Upper left: top pair \Zut; upper right: top pair \Zct; lower left: single top \Zut; lower right: single top \Zct.}
-	\label{fig:shapesfitslepchan1e2mustcrerrortrialSTSR}
-\end{figure}
-
-\begin{figure}[h]
-	\centering
-	% % \includegraphics[width=0.49\linewidth]{FiguresAfterUnblinding/Postfit/ZutFit/shapes_fit_s_LepChan_2e1mu_TTSR_error_trial.pdf}
-	% % \includegraphics[width=0.49\linewidth]{FiguresAfterUnblinding/Postfit/ZctFit/shapes_fit_s_LepChan_2e1mu_TTSR_error_trial.pdf}	
-	% % \includegraphics[width=0.49\linewidth]{FiguresAfterUnblinding/Postfit/ZutFit/shapes_fit_s_LepChan_2e1mu_STSR_error_trial.pdf}
-	% % \includegraphics[width=0.49\linewidth]{FiguresAfterUnblinding/Postfit/ZctFit/shapes_fit_s_LepChan_2e1mu_STSR_error_trial.pdf}
-	\caption{The discriminating variable distribution after the fit for the \eemu\ leptonic channel. Upper left: top pair \Zut; upper right: top pair \Zct; lower left: single top \Zut; lower right: single top \Zct.}
-	\label{fig:shapesfitslepchan2e1mustcrerrortrialSTSR}
-\end{figure}
-
-
-\begin{figure}[h]
-	\centering
-	% % \includegraphics[width=0.49\linewidth]{FiguresAfterUnblinding/Postfit/ZutFit/shapes_fit_s_LepChan_3e_TTSR_error_trial.pdf}
-	% % \includegraphics[width=0.49\linewidth]{FiguresAfterUnblinding/Postfit/ZctFit/shapes_fit_s_LepChan_3e_TTSR_error_trial.pdf}	
-	% % \includegraphics[width=0.49\linewidth]{FiguresAfterUnblinding/Postfit/ZutFit/shapes_fit_s_LepChan_3e_STSR_error_trial.pdf}
-	% % \includegraphics[width=0.49\linewidth]{FiguresAfterUnblinding/Postfit/ZctFit/shapes_fit_s_LepChan_3e_STSR_error_trial.pdf}
-	\caption{The discriminating variable distribution after the fit for the \eee\ leptonic channel. Upper left: top pair \Zut; upper right: top pair \Zct; lower left: single top \Zut; lower right: single top \Zct.}
-	\label{fig:shapesfitslepchan3estcrerrortrialSTSR}
-\end{figure}
-
-\subsection{Nuisance parameters}
-\begin{figure}[h] 
-	\centering
-	% % \includegraphics[width=.99\linewidth]{FiguresAfterUnblinding/impact/impacts_170919Zut_datacar18_noMCpage1.pdf}
-	% % \includegraphics[width=.99\linewidth]{FiguresAfterUnblinding/impact/impacts_170919Zut_datacar18_noMCpage2.pdf}
-	\caption{tZu coupling}
-	\label{fig:impacts170901zutnomcc}
-\end{figure}
-\begin{figure}[h] 
-	\centering
-	% % \includegraphics[width=.99\linewidth]{FiguresAfterUnblinding/impact/impacts_170919Zct_datacar18_noMCpage1.pdf}
-	% % \includegraphics[width=.99\linewidth]{FiguresAfterUnblinding/impact/impacts_170919Zct_datacar18_noMCpage2.pdf}
-	\caption{tZc coupling}
-	\label{fig:impacts170901zctnomcc}
-\end{figure}
-The expected limits at 95\% CL on the BR of \BRZut\ for \Zut\ and \BRZct\ for \Zct\ surpass the expected limits of 0.027\% for \Zut\ and 0.118\% for \Zct\ from the 8 \TeV\ analysis. The observed limit at 95\% CL on the BR for \Zut\ is \BRZutobs\ and isn't improving the current best limit of 0.022\%. For \Zct\ the observed limit 95\% CL is \BRZctobs\ and is improving the current best limit of 0.049\%.  The latest result on 13 \TeV\ from ATLAS~\cite{ATLAS-CONF-2017-070} set limits at 95\% CL of 
+The expected limits at 95\% CL on the BR of \BRZut\ for \Zut\ and \BRZct\ for \Zct\ surpass the expected limits of 0.027\% for \Zut\ and 0.118\% for \Zct\ from the 8 \TeV\ analysis. The observed limit at 95\% CL on the BR for \Zut\ is \BRZuto\ and isn't improving the current best limit of 0.022\%. For \Zct\ the observed limit 95\% CL is \BRZcto\ and is improving the current best limit of 0.049\%.  The latest result on 13 \TeV\ from ATLAS~\cite{ATLAS-CONF-2017-070} set limits at 95\% CL of 
 observed (expected) limits of 0.017\% (0.024\%) for \Zut\ and 0.023\% (0.032\%) for \Zct. 
-\begin{figure}[ht]
-	\centering
-	% % \includegraphics[width=0.45\linewidth]{FiguresAfterUnblinding/limits/ExclusionPlots1D_2017_09_19/ExclusionLimit_BR_FCNC_Zut.png}
-	% % \includegraphics[width=0.45\linewidth]{FiguresAfterUnblinding/limits/ExclusionPlots1D_2017_09_19//ExclusionLimit_BR_FCNC_Zct.png}
-	\caption{Exclusion limits at 95\% CL on the FCNC branching ratios as a function of the cross section of the FCNC process,  considering only the \Zct\ (right) or \Zut\ (left) coupling. The current observed (expected) best limit for CMS is given in blue.}
-	\label{fig:exclusionlimitbr}
-\end{figure}
-\begin{figure}[ht]
-	\centering
-	% % \includegraphics[width=0.45\linewidth]{FiguresAfterUnblinding/limits/ExclusionPlots1D_2017_09_19//ExclusionLimit_Kappa_FCNC_Zut.png}
-	% % \includegraphics[width=0.45\linewidth]{FiguresAfterUnblinding/limits/ExclusionPlots1D_2017_09_19//ExclusionLimit_Kappa_FCNC_Zct.png}
-	\caption{Exclusion limits at 95\% CL on the FCNC couplings as a function of the cross section of the FCNC process,  considering only the \Zct\ (right) or \Zut\ (left) coupling. The current observed (expected) best limit for CMS is given in blue.}
-	\label{fig:exclusionlimitbrc}
-\end{figure}
 
-\begin{figure}[ht]
-	\centering
-	% % \includegraphics[width=0.45\linewidth]{FiguresAfterUnblinding/limits/ExclusionPlots2D_2017_09_19/ExclusionLimit_BR_FCNC.png}
-	% % \includegraphics[width=0.45\linewidth]{FiguresAfterUnblinding/limits/ExclusionPlots2D_2017_09_19/ExclusionLimit_Kappa_FCNC.png}
-	\caption{Exclusion regions at 95\% CL on the FCNC branching ratios (right) and couplings (left) in the 2D plane of the two variables. The current observed (expected) best limit for CMS is given in blue.}
-	\label{fig:exclusionlimitbrfcnconc}
-\end{figure}
 
-%The best limits, and the limit expected for this search are summarized in Figure \ref{fig:fcncupperlimits}.
-%
-%\begin{figure}[h]
-%	\centering
-%	% % \includegraphics[width=0.7\linewidth]{fcnc_upperlimits}
-%	\caption{The best limits up to date for FCNC searches. In violet the expected limits for this search. Latest update: July 2017\cite{CMSpub}}
-%	\label{fig:fcncupperlimits}
-%\end{figure}
+
