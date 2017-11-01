@@ -291,7 +291,7 @@ The energy scale and resolution corrections applied to the jets are propagated b
 
 \subsection{Reconstruction of kinematic variables}
 The variables used for  the training are related to the reconstructed leptons, jets, \PZ\ boson and top quark candidates. The \PZ\ boson is reconstructed as the sum of the four vectors of the two same flavour leptons of opposite sign giving the closest value to the \PZ\ mass. The third remaining lepton is assigned as the lepton coming from the \PW\ boson decay.
-The reconstruction of the \SM\ top quark candidate is more difficult and done by summing the third lepton, the \SM\ b-jet and the neutrino (\Etmiss). The \SM\ b jet is assigned to the jet with the highest CSVv2 discriminant. The longitudinal momentum of the neutrino is calculated by putting a constraint on the lepton+neutrino system with the \PW\ mass. In case two solutions are found for the $p_z^{\nu}$ component, the one that gives the reconstructed mass (lepton + neutrino + b jet) to  the known top quark mass is used. 
+The reconstruction of the \SM\ top quark candidate is more difficult and done by summing the third lepton, the \SM\ b-jet and the neutrino (\Etmis). The \SM\ b jet is assigned to the jet with the highest CSVv2 discriminant. The longitudinal momentum of the neutrino is calculated by putting a constraint on the lepton+neutrino system with the \PW\ mass. In case two solutions are found for the $p_z^{\nu}$ component, the one that gives the reconstructed mass (lepton + neutrino + b jet) to  the known top quark mass is used. 
 The FCNC top quark is reconstructed by summing the reconstructed Z boson and the jet giving the mass closest to the top mass, from the jet collection from which the \SM\ b jet is removed. 
 
 The reconstructed objects are validated using simulation by matching the reconstructed objects to their generated counterpart by minimizing $\Delta R$. The efficiencies derived for the simulated signal samples and the \SM\ \tZq\ background process can be found in \tab{tab:matching} and \tab{tab:matching2}. 
@@ -459,28 +459,28 @@ In order to reduce the large uncertainties in backgrounds, five independent regi
 
 
 \subsection{WZCR}
-In this region, a fit is performed on the transverse mass of the \PW\ boson, in order to estimate the \NPL\ yield coming from \DY\ and the \WZ+jets backgrounds. 
+The \WZCR\ is constructed by vetoing events with jets tagged as being a b-jet, making it statistically independent from the signal regions where at least one b-tagged jet is required. In this region, a fit is performed on the transverse mass of the \PW\ boson, in order to estimate the \NPL\ yield coming from \DY\ and the \WZ+jets backgrounds. 
 
-A transfer factor is used to account for going from a region without b-tagged jets to a region with exactly one b-tagged jet, or at least one b-tagged jet. For this the probability of tagging at least one jet with the CSVv2 loose working point is used to calculate the expected number of events, $N_b$, after b tagging: 
+A transfer factor is used to account for going from a region without b-tagged jets to a region with exactly or at least one  b-tagged jet. For this the probability of tagging at least one jet with the CSVv2 algorithm at the loose working point is used to calculate the expected number of events, $N_b$, after b-tagging: 
 \begin{equation}
-	N_b = \frac{\sum \limits_{\mathrm{events}}\mathcal{P}_b}{\text{total nb of events}},
+	N_{\mathrm{b}} = \frac{\sum \limits_{\mathrm{events}}\mathcal{P}_b}{\text{total nb of events}},
 \end{equation}
-where $\mathcal{P}_b$ is the probability that an event survives the b-tagging requirement
+where $\mathcal{P}_{\mathrm{b}}$ is the probability that an event survives the b-tagging requirement
 \begin{equation}
 \begin{aligned}
-	\mathcal{P}_b =& 1 - \text{P(event doesn't survive b tag)}\\
-	 =& 1 - \left(\prod_{b} \text{P(b not tagged)} \prod_{c} \text{P(c not tagged)} \prod_{udsg} \text{P(light not tagged)}\right)
+	\mathcal{P}_{\mathrm{b}} =& 1 - \text{P(event doesn't survive b tag)}\\
+	 =& 1 - \left(\prod_{\Pbottom} \text{P(b not tagged)} \prod_{\Pcharm} \text{P(c not tagged)} \prod_{\mathrm{udsg}} \text{P(light not tagged)}\right)
 %	& = 1 - \left(\prod_{b} 0.10 \prod_{c} 0.40 \prod_{udsg} 0.90\right)
 \end{aligned}
 \end{equation}
-with the products going over all b-, c-, and light jets. The jet flavour is determined by means of matching the reconstructed jet to the generated quark based on the distance in the $\eta\phi$ plane. In order to estimate the probablity for exactly one b-tagged jet, the expected number of events is corrected by the fraction of events with exactly  one jet in the \WZCR. The resulting transfer factors are given in \App{app:tablestr} \todo{make appendix}. One can see  that the yield of \WZ+jets events in the signal region estimated using the above described transfer factor and the yield calculated with simulated events are in agreement. 
+with the products going over all b-, c-, and light jets. The jet flavour is determined by means of matching the reconstructed jet to the generated quark based on the distance in the $\eta\phi$ plane. In order to estimate the probability for exactly one b-tagged jet, the expected number of events is corrected by the fraction of events with exactly  one jet in the \WZCR. The resulting transfer factors are given in \App{app:tablestr}. The yield of \WZ+jets events in the signal region estimated using the above described transfer factor and the yield calculated with simulated events are in agreement. 
 
 \subsection{\TTCR\ and \STCR}
-The \TTCR\ and \STCR have the same selection criteria as \TTSR\ and \STSR\, but are outside the \PZ\ mass window (sidebands): 
+The \TTCR\ and \STCR have are constructed with the same selection criteria as \TTSR\ and \STSR\, but are outside the \PZ\ mass window (sidebands): 
 \begin{equation}
-7.5 \: GeV < |\mZ^{\mathrm{reco}} - \mZ| < 30 \:GeV. 
+7.5 \:\GeV < |\mZ^{\mathrm{reco}} - \mZ| < 30 \:\GeV. 
 \end{equation}
-where $M(Z_{reco})$ is the reconstructed mass of the \PZ\ boson in the event, and $M(Z)$ the mass of the \PZ\ boson.
+where $\mZ^{\mathrm{reco}}$ is the reconstructed mass of the \PZ\ boson in the event, and $\mZ$ the mass of the \PZ\ boson.
 These regions are dominated by \ttbar+jets (see \App{app:tablestr}) and are used to estimate the \NPL\ coming from \ttbar+jets in the \STSR\ and \TTSR. Since there aren't enough events entering these regions, no shapes are used in the fit. The distribution of the mass of the Z boson is flat for \ttbar+jets events, as shown in Fig. \fig{fig:3lepcontrolafteratleast1jet3lepzbosonmassallnormalized},  and thus the number of expected events, $N_s$, in the signal regions estimated from the number of expected events, $N_c$, in the control region is obtained as
 \begin{equation}
 N_s = \frac{15}{60-15} N_c.
@@ -492,12 +492,11 @@ The resulting transfer factors are given in \App{app:tablestr}. The expected yie
 	\caption{The normalized distribution for \DY\ and \ttbar+jets events before dividing the events in to regions, after $|\mZ^{\mathrm{reco}} - \mZ| < 30$ GeV. All leptonic channels combined.}
 	\label{fig:3lepcontrolafteratleast1jet3lepzbosonmassallnormalized}
 \end{figure}
-\newpage
+
 \subsection{\TTSR\ and \STSR}
-The \TTSR\ is defined to target top quark pair FCNC (\tZq), while the \STSR\ focusses on single top quark FCNC (\tZ). They have \NPL\ contributions coming from \DY\ and \ttbar+jets events. In this region, the data driven \NPL\ template is split into two templates based on the presence of the \NPL\ in the Z boson: 
-\begin{itemize}
-	\item \NPL\ associated with \PW\ boson is assigned to \DY\ and estimated in the \WZCR.
-	\item\NPL\ associated with \PZ\ boson is assigned to \ttbar+jets and estimated in the \TTCR\ and \STCR.
-\end{itemize}
+The \TTSR\ is defined to target top quark pair FCNC (\tZq), while the \STSR\ focusses on single top quark FCNC (\tZ). They have \NPL\ contributions coming from \DY\ and \ttbar+jets events. In this region, the data driven \NPL\ template is split into two templates based on the presence of the \NPL\ in the Z boson. The \NPL\ associated with \PW\ boson is assigned to \DY\ and estimated in the \WZCR, while  the \NPL\ associated with \PZ\ boson is assigned to \ttbar+jets and estimated in the \TTCR\ and \STCR.
 %It is shown in \App{app:BDTnp}, that these two templates have the same shape within the limited statistics, not assuming any systematic uncertainties. 
+
+
+
 
