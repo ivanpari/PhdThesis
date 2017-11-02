@@ -665,13 +665,7 @@ The analysis strategy has been established using a blinded strategy. Through the
 	\label{fig:plotzut}
 \end{figure}
 
-Another validation has been done by performing a Maximum Likelihood fit in the \WZCR\ only, considering all lepton channels. A simultaneous fit of the signal strength of the \NPE, \NPM\ and the \WZ+jets backgrounds is done by using the multi-dimensional fit in \texttt{Higgs} \texttt{Combine} \texttt{Tool}. The resulting signal strengths with their maximum and minimum value in the 68\% CL interval according to a one-dimensional chi-square are: 
-\begin{align}
-\mu_{\NPM} &= 1.825  \quad -0.807/+0.757 \\
-\mu_{\NPE} &= 1.321  \quad -0.501/+0.323 \\
-\mu_{\WZ} &= 1.235      \quad-0.301/+0.401
-\end{align}
-When applying these signal strengths as scale factors, the data agrees with simulation as can be seen in Fig. \ref{fig:mtwstack}. Furthermore, a goodness of fit test is performed, resulting in a p-value of 0.3 (see Fig. \ref{fig:gof} ) .
+Another validation has been done by performing a Maximum Likelihood fit in the \WZCR\ only, considering all lepton channels. A simultaneous fit of the signal strength of the \NPE, \NPM\ and the \WZ+jets backgrounds is done by using the multi-dimensional fit in \texttt{Higgs} \texttt{Combine} \texttt{Tool}. The resulting signal strengths can then be applied on the distribution o f the transverse mass of the \PW\ boson to verify data/MC agreement, as can be seen in Fig. \ref{fig:mtwstack}. Furthermore, a goodness of fit test is performed, resulting in a p-value of 0.3 (see Fig. \ref{fig:gof} ) .
 
 \begin{figure}[htbp]
 	\centering
@@ -1062,27 +1056,118 @@ Using the normalisations obtained by fitting the \WZCR\ only,  one can look at t
 
 
 \section{Result and discussion}
-The limit settig procedure explained in \Sec{sec:Stat} is applied and results are obtained for each lepton channel separately as well as the combination. For both the \Zut\ and \Zct\ coupling, the maximum likelihood estimator of their signal strengths $\hat{\mu}$ is compatible with zero. \todo{MAKE THIS plot}. The maximum likelihood estimators for the nuisance parameters $\hat{\theta}$ are shown in \todo{MAKE THIS PLOT}. Their values obtained from the signal plus background or background only fits are in agreement. Furthermore, the pulls on each of the nuisance parameters are shown in \todo{MAKE THIS PLOT}. Here one can see that the nuisance parameters related to the \NPL\ normalisations are shifted with respect to their initial values. This is to be expected since their initial  normalisation is arbitrary. The distributions of multivariate discriminating  variables as well as the distribution of the transverse mass of the \PW\ boson are recreated with the maximum likelihood estimations of the nuisance parameters. The resulting distributions are shown in \todo{MAKE PLOTS}. The post fit event yields are given in \todo{MAKE TABLE}. 
+The limit settig procedure explained in \Sec{sec:Stat} is applied and results are obtained for each lepton channel separately as well as the combination. For both the \Zut\ and \Zct\ coupling, the maximum likelihood estimator of their signal strengths $\hat{\mu}$ is compatible with zero. \todo{MAKE THIS plot}. The maximum likelihood estimators for the nuisance parameters $\hat{\theta}$ are shown in \\fig{fig:171102zctmle} and fig{fig:171102zutmle}. Their values obtained from the signal plus background or background only fits are in agreement. Furthermore, the pulls on each of the nuisance parameters are shown in \fig{fig:impactsZut1}, \fig{fig:impactsZut}. \fig{fig:impactsZct1}, and \fig{fig:impactsZct}. Here one can see that the nuisance parameters related to the \NPL\ normalisations are shifted with respect to their initial values. This is to be expected since their initial  normalisation is arbitrary. The distributions of multivariate discriminating  variables as well as the distribution of the transverse mass of the \PW\ boson are recreated with the maximum likelihood estimations of the nuisance parameters. The resulting distributions are shown in \fig{fig:shapesfitALL,fig:shapesfit3mu}, \fig{fig:shapesfit1e2mu}, \fig{fig:shapesfit2e1mu}, and \fig{fig:shapesfit3e}. The post fit event yields are given in  \todo{MAKE TABLE}. 
 
-%\begin{figure}[h] 
-%	\centering
-%	% % \includegraphics[width=.99\linewidth]{FiguresAfterUnblinding/impact/impacts_170919Zut_datacar18_noMCpage1.pdf}
-%	% % \includegraphics[width=.99\linewidth]{FiguresAfterUnblinding/impact/impacts_170919Zut_datacar18_noMCpage2.pdf}
-%	\caption{tZu coupling}
-%	\label{fig:impacts170901zutnomcc}
-%\end{figure}
-%\begin{figure}[h] 
-%	\centering
-%	% % \includegraphics[width=.99\linewidth]{FiguresAfterUnblinding/impact/impacts_170919Zct_datacar18_noMCpage1.pdf}
-%	% % \includegraphics[width=.99\linewidth]{FiguresAfterUnblinding/impact/impacts_170919Zct_datacar18_noMCpage2.pdf}
-%	\caption{tZc coupling}
-%	\label{fig:impacts170901zctnomcc}
-%\end{figure}
+\begin{figure}
+	\centering
+	\includegraphics[width=1.\linewidth]{6_Search/Figures/impact/171102ZctMLE.pdf}
+	\caption{Maximum likelihood estimators for the \Zct\ vertex.}
+	\label{fig:171102zctmle}
+\end{figure}
+\begin{figure}
+	\centering
+	\includegraphics[width=1.\linewidth]{6_Search/Figures/impact/171102ZutMLE.pdf}
+	\caption{Maximum likelihood estimators for the \Zut\ vertex.}
+	\label{fig:171102zutmle}
+\end{figure}
+\newpage
+\begin{figure}[htbp] 
+	\centering
+	  \includegraphics[page=1,width=.99\linewidth,keepaspectratio]{6_Search/Figures/impact/171102Zut.pdf}
+	\caption{The pulls of each nuisance parameter and the influence of their uncertainty on the maximum likelihood estimation of the signal strength $\hat{r}$ for the \Zut\ vertex, part one.}
+	\label{fig:impactsZut1}
+\end{figure}
+
+\begin{figure}[htbp] 
+	\centering
+	\includegraphics[page=2,width=.99\linewidth,keepaspectratio]{6_Search/Figures/impact/171102Zut.pdf}
+	\caption{The pulls of each nuisance parameter and the influence of their uncertainty on the maximum likelihood estimation of the signal strength $\hat{r}$ for the \Zut\ vertex, part two.}
+	\label{fig:impactsZut}
+\end{figure}
+
+\newpage
+
+\begin{figure}[htbp] 
+	\centering
+	\includegraphics[page=1,width=.99\linewidth,keepaspectratio]{6_Search/Figures/impact/171102Zct.pdf}
+	\caption{The pulls of each nuisance parameter and the influence of their uncertainty on the maximum likelihood estimation of the signal strength $\hat{r}$ for the \Zct\ vertex, part one.}
+	\label{fig:impactsZct1}
+\end{figure}
+
+\begin{figure}[htbp] 
+	\centering
+	\includegraphics[page=2,width=.99\linewidth,keepaspectratio]{6_Search/Figures/impact/171102Zct.pdf}
+	\caption{The pulls of each nuisance parameter and the influence of their uncertainty on the maximum likelihood estimation of the signal strength $\hat{r}$ for the \Zct\ vertexg, part two.}
+	\label{fig:impactsZct}
+\end{figure}
+
+\newpage
 
 
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.32\linewidth]{6_Search/Figures/ZutFit/shapes_fit_s_0_all_error_trial.pdf}
+	\includegraphics[width=0.32\linewidth]{6_Search/Figures/ZutFit/shapes_fit_s_3_all_error_trial.pdf}
+	\includegraphics[width=0.32\linewidth]{6_Search/Figures/ZutFit/shapes_fit_s_4_all_error_trial.pdf}
+	\includegraphics[width=0.32\linewidth]{6_Search/Figures/ZctFit/shapes_fit_s_0_all_error_trial.pdf}
+	\includegraphics[width=0.32\linewidth]{6_Search/Figures/ZctFit/shapes_fit_s_3_all_error_trial.pdf}
+	\includegraphics[width=0.32\linewidth]{6_Search/Figures/ZctFit/shapes_fit_s_4_all_error_trial.pdf}
+	\caption{Post fit distributions for the all leptonic channels of the transverse mass of the \PW\ boson in the \WZCR\ (left), the multivariate discriminating variable in the \STSR\ (middle), and the multivariate discriminating variable in the \TTSR\ (right) for the \Zut\ (top) and \Zct\ (bottom) couplings. }
+	\label{fig:shapesfitALL}
+\end{figure}
 
 
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.32\linewidth]{6_Search/Figures/ZutFit/shapes_fit_s_LepChan_3mu_WZCR_error_trial.pdf}
+	\includegraphics[width=0.32\linewidth]{6_Search/Figures/ZutFit/shapes_fit_s_LepChan_3mu_STSR_error_trial.pdf}
+	\includegraphics[width=0.32\linewidth]{6_Search/Figures/ZutFit/shapes_fit_s_LepChan_3mu_TTSR_error_trial.pdf}
+	\includegraphics[width=0.32\linewidth]{6_Search/Figures/ZctFit/shapes_fit_s_LepChan_3mu_WZCR_error_trial.pdf}
+	\includegraphics[width=0.32\linewidth]{6_Search/Figures/ZctFit/shapes_fit_s_LepChan_3mu_STSR_error_trial.pdf}
+	\includegraphics[width=0.32\linewidth]{6_Search/Figures/ZctFit/shapes_fit_s_LepChan_3mu_TTSR_error_trial.pdf}
+	\caption{Post fit distributions for the \mumumu\ leptonic channel of the transverse mass of the \PW\ boson in the \WZCR\ (left), the multivariate discriminating variable in the \STSR\ (middle), and the multivariate discriminating variable in the \TTSR\ (right) for the \Zut\ (top) and \Zct\ (bottom) couplings. }
+	\label{fig:shapesfit3mu}
+\end{figure}
 
+\newpage
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.32\linewidth]{6_Search/Figures/ZutFit/shapes_fit_s_LepChan_1e2mu_WZCR_error_trial.pdf}
+	\includegraphics[width=0.32\linewidth]{6_Search/Figures/ZutFit/shapes_fit_s_LepChan_1e2mu_STSR_error_trial.pdf}
+	\includegraphics[width=0.32\linewidth]{6_Search/Figures/ZutFit/shapes_fit_s_LepChan_1e2mu_TTSR_error_trial.pdf}
+	\includegraphics[width=0.32\linewidth]{6_Search/Figures/ZctFit/shapes_fit_s_LepChan_1e2mu_WZCR_error_trial.pdf}
+	\includegraphics[width=0.32\linewidth]{6_Search/Figures/ZctFit/shapes_fit_s_LepChan_1e2mu_STSR_error_trial.pdf}
+	\includegraphics[width=0.32\linewidth]{6_Search/Figures/ZctFit/shapes_fit_s_LepChan_1e2mu_TTSR_error_trial.pdf}
+	\caption{Post fit distributions for the \emumu\ leptonic channel of the transverse mass of the \PW\ boson in the \WZCR\ (left), the multivariate discriminating variable in the \STSR\ (middle), and the multivariate discriminating variable in the \TTSR\ (right) for the \Zut\ (top) and \Zct\ (bottom) couplings. }
+	\label{fig:shapesfit1e2mu}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.32\linewidth]{6_Search/Figures/ZutFit/shapes_fit_s_LepChan_2e1mu_WZCR_error_trial.pdf}
+	\includegraphics[width=0.32\linewidth]{6_Search/Figures/ZutFit/shapes_fit_s_LepChan_2e1mu_STSR_error_trial.pdf}
+	\includegraphics[width=0.32\linewidth]{6_Search/Figures/ZutFit/shapes_fit_s_LepChan_2e1mu_TTSR_error_trial.pdf}
+	\includegraphics[width=0.32\linewidth]{6_Search/Figures/ZctFit/shapes_fit_s_LepChan_2e1mu_WZCR_error_trial.pdf}
+	\includegraphics[width=0.32\linewidth]{6_Search/Figures/ZctFit/shapes_fit_s_LepChan_2e1mu_STSR_error_trial.pdf}
+	\includegraphics[width=0.32\linewidth]{6_Search/Figures/ZctFit/shapes_fit_s_LepChan_2e1mu_TTSR_error_trial.pdf}
+	\caption{Post fit distributions for the \eemu\ leptonic channel of the transverse mass of the \PW\ boson in the \WZCR\ (left), the multivariate discriminating variable in the \STSR\ (middle), and the multivariate discriminating variable in the \TTSR\ (right) for the \Zut\ (top) and \Zct\ (bottom) couplings. }
+	\label{fig:shapesfit2e1mu}
+\end{figure}
+
+\newpage
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.32\linewidth]{6_Search/Figures/ZutFit/shapes_fit_s_LepChan_3e_WZCR_error_trial.pdf}
+	\includegraphics[width=0.32\linewidth]{6_Search/Figures/ZutFit/shapes_fit_s_LepChan_3e_STSR_error_trial.pdf}
+	\includegraphics[width=0.32\linewidth]{6_Search/Figures/ZutFit/shapes_fit_s_LepChan_3e_TTSR_error_trial.pdf}
+	\includegraphics[width=0.32\linewidth]{6_Search/Figures/ZctFit/shapes_fit_s_LepChan_3e_WZCR_error_trial.pdf}
+	\includegraphics[width=0.32\linewidth]{6_Search/Figures/ZctFit/shapes_fit_s_LepChan_3e_STSR_error_trial.pdf}
+	\includegraphics[width=0.32\linewidth]{6_Search/Figures/ZctFit/shapes_fit_s_LepChan_3e_TTSR_error_trial.pdf}
+	\caption{Post fit distributions for the 3e leptonic channel of the transverse mass of the \PW\ boson in the \WZCR\ (left), the multivariate discriminating variable in the \STSR\ (middle), and the multivariate discriminating variable in the \TTSR\ (right) for the \Zut\ (top) and \Zct\ (bottom) couplings. }
+	\label{fig:shapesfit3e}
+\end{figure}
+
+\clearpage
 \subsection{One dimensional limits}
 The limit setting procedure used in this search returns  limits on the signal strength modifier which can be translated to signal cross sections. These limits are translated to a limit on the branching fraction using \eq{eq:BR}. Additionally, the limit on the couplings are extracted using the fact that the cross sections are quadratically dependent on the couplings. In  \fig{fig:exclusionlimitbrfcnczut}, the resulting limits at 95\% CL on the branching fraction and couplings related to the \Zut\ vertex is shown. This observed (expected) limit amounts to $\BR < \BRZuto\: (\BRZut)$ when $\kZut \neq 0$ and$ \kZct = 0$.The expected limit surpasses the CMS search at a centre-of-mass of 8 \TeV\ expected limits of 0.027\% \cite{Sirunyan:2017kkr}. The observed limit of  \BRZuto\ for the \Zut\ interaction doesn't surpass the CMS 8 \TeV\ observed limit of 0.022\%~\cite{Sirunyan:2017kkr}. The ATLAS collaboration has set limits 95\% CL at a centre-of-mass of 13 \TeV~\cite{ATLAS-CONF-2017-070} with
 observed (expected) limits of 0.017\% (0.024\%) for the \Zut\ coupling. The expected limit presented in this analysis surpasses the expected limit for \Zut.
