@@ -1055,12 +1055,12 @@ Using the normalisations obtained by fitting the \WZCR\ only,  one can look at t
 \end{comment}
 
 \newpage
-\section{Result and discussion}
+\section{Results and discussion}
 The limit setting procedure explained in \Sec{sec:Stat} is applied and results are obtained for each lepton channel separately as well as the combination. For both the \Zut\ and \Zct\ coupling, the maximum likelihood estimator of their signal strengths $\hat{\mu}$ is compatible with zero. This is shown in \fig{fig:mlezut}. One can see that the \eee\ leptonic channel has the largest uncertainty. This is due to the fact that this channel is the most influences by the lack of statistics for this search.
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.49\linewidth]{6_Search/Figures/MLE/MLEZut}
-	\includegraphics[width=0.49\linewidth]{6_Search/Figures/MLE/MLEZct}
+	\includegraphics[width=0.49\linewidth]{6_Search/Figures/MLE/MLEZut.pdf}
+	\includegraphics[width=0.49\linewidth]{6_Search/Figures/MLE/MLEZct.pdf}
 	\caption{The maximum likelihood estimators for the signal strengths for the \Zut\ vertex (right) and \Zct\ vertex (left) per lepton channel as well as the combination in the \STSR, \TTSR, and all regions combined. }
 	\label{fig:mlezut}
 \end{figure}
@@ -1081,7 +1081,8 @@ and follows a standard Gaussian with mean zero and unit width. This property can
 \newpage
  The nuisance parameters causing the tails in the pull distributions are the ones related to the \NPL\ background as can be seen in \fig{fig:impactsZut1}, \fig{fig:impactsZut}. \fig{fig:impactsZct1}, and \fig{fig:impactsZct}. Here one can see that the nuisance parameters related to the \NPL\ normalisations are shifted with respect to their initial values. This is to be expected since their initial  normalisation is arbitrary. Furthermore, the effect of the uncertainties on the maximum likelihood estimate of the signal strength is shown. \todo{Zeg welke sys de grootste invl hebben} 
  
-  The distributions of multivariate discriminating  variables as well as the distribution of the transverse mass of the \PW\ boson are recreated with the maximum likelihood estimations of the nuisance parameters. The resulting distributions are shown in \fig{fig:shapesfitALL,fig:shapesfit3mu}, \fig{fig:shapesfit1e2mu}, \fig{fig:shapesfit2e1mu}, and \fig{fig:shapesfit3e}. The post fit event yields are given in  \todo{MAKE TABLE}. 
+  The distributions of multivariate discriminating  variables as well as the distribution of the transverse mass of the \PW\ boson are recreated with the maximum likelihood estimations of the nuisance parameters. The resulting distributions are shown in \fig{fig:shapesfitALL},\figref{fig:shapesfit3mu}, \fig{fig:shapesfit1e2mu}, \fig{fig:shapesfit2e1mu}, and \fig{fig:shapesfit3e}. %The post fit event yields are given in \Sec{sec:PostFitYields}. 
+
 
 
 
@@ -1197,6 +1198,12 @@ and follows a standard Gaussian with mean zero and unit width. This property can
 	\label{fig:shapesfit3e}
 \end{figure}
 
+%\clearpage
+%\subsection{Postfit yields}
+%\label{sec:postfityields}
+%\input{6_Search/tables.tex}
+
+
 \clearpage
 \subsection{One dimensional limits}
 The limit setting procedure used in this search returns  limits on the signal strength modifier which can be translated to signal cross sections. These limits are translated to a limit on the branching fraction using \eq{eq:BR}. Additionally, the limit on the couplings are extracted using the fact that the cross sections are quadratically dependent on the couplings. In  \fig{fig:exclusionlimitbrfcnczut}, the resulting limits at 95\% CL on the branching fraction and couplings related to the \Zut\ vertex is shown. This observed (expected) limit amounts to $\BR < \BRZuto\: (\BRZut)$ when $\kZut \neq 0$ and$ \kZct = 0$.The expected limit surpasses the CMS search at a centre-of-mass of 8 \TeV\ expected limits of 0.027\% \cite{Sirunyan:2017kkr}. The observed limit of  \BRZuto\ for the \Zut\ interaction doesn't surpass the CMS 8 \TeV\ observed limit of 0.022\%~\cite{Sirunyan:2017kkr}. The ATLAS collaboration has set limits 95\% CL at a centre-of-mass of 13 \TeV~\cite{ATLAS-CONF-2017-070} with
@@ -1295,6 +1302,7 @@ The limits for each leptonic channel separate as well as their combined limits a
 	\label{fig:exclusionlimitbrcompc}
 \end{figure}
 
+\newpage
 \subsection{Two-dimensional limits}
 One can interpolate the one dimensional limits $\pisces_{\tZq}^{\mathrm{1D}}$ to a scenario where both couplings are on-vanishing. The interpolation is taken from Ref. \todocite, where an experimental extrapolation formulae
 \begin{equation}
