@@ -1054,26 +1054,47 @@ Using the normalisations obtained by fitting the \WZCR\ only,  one can look at t
 
 \end{comment}
 
-
+\newpage
 \section{Result and discussion}
-The limit settig procedure explained in \Sec{sec:Stat} is applied and results are obtained for each lepton channel separately as well as the combination. For both the \Zut\ and \Zct\ coupling, the maximum likelihood estimator of their signal strengths $\hat{\mu}$ is compatible with zero. \todo{MAKE THIS plot}. The maximum likelihood estimators for the nuisance parameters $\hat{\theta}$ are shown in \\fig{fig:171102zctmle} and fig{fig:171102zutmle}. Their values obtained from the signal plus background or background only fits are in agreement. The transfer factors have an initial value different than one and have small uncertainties. The normalisation uncertainties on the yields of the simulated backgrounds get constrained by the fit. Furthermore, the pulls \todo{define pull} on each of the nuisance parameters are shown in \fig{fig:pullsZct} and \fig{fig:pullsZut}. These are peaking at zero with tails going to $\pm2.5$. The nuisance parameters causing these tails are the ones related to the \NPL\ background as can be seen in \fig{fig:impactsZut1}, \fig{fig:impactsZut}. \fig{fig:impactsZct1}, and \fig{fig:impactsZct}. Here one can see that the nuisance parameters related to the \NPL\ normalisations are shifted with respect to their initial values. This is to be expected since their initial  normalisation is arbitrary. Furthermore, the effect of the uncertainties on the maximum likelihood estimate of the signal strength is shown. \todo{Zeg welke sys de grootste invl hebben}  The distributions of multivariate discriminating  variables as well as the distribution of the transverse mass of the \PW\ boson are recreated with the maximum likelihood estimations of the nuisance parameters. The resulting distributions are shown in \fig{fig:shapesfitALL,fig:shapesfit3mu}, \fig{fig:shapesfit1e2mu}, \fig{fig:shapesfit2e1mu}, and \fig{fig:shapesfit3e}. The post fit event yields are given in  \todo{MAKE TABLE}. 
+The limit setting procedure explained in \Sec{sec:Stat} is applied and results are obtained for each lepton channel separately as well as the combination. For both the \Zut\ and \Zct\ coupling, the maximum likelihood estimator of their signal strengths $\hat{\mu}$ is compatible with zero. This is shown in \fig{fig:mlezut}. One can see that the \eee\ leptonic channel has the largest uncertainty. This is due to the fact that this channel is the most influences by the lack of statistics for this search.
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.49\linewidth]{6_Search/Figures/MLE/MLEZut}
+	\includegraphics[width=0.49\linewidth]{6_Search/Figures/MLE/MLEZct}
+	\caption{The maximum likelihood estimators for the signal strengths for the \Zut\ vertex (right) and \Zct\ vertex (left) per lepton channel as well as the combination in the \STSR, \TTSR, and all regions combined. }
+	\label{fig:mlezut}
+\end{figure}
 
-\begin{figure}
+The maximum likelihood estimators for the nuisance parameters $\hat{\theta}$ are shown in \fig{fig:171102zctmle} and \fig{fig:171102zutmle}. Their values obtained from the signal plus background or background only fits are in agreement. The transfer factors have an initial value different than one and have small uncertainties. The normalisation uncertainties on the yields of the simulated backgrounds get constrained by the fit.  A well known verification of the error coverage for the fit is the pull distribution. For a random variable $x$ following a Gaussian distribution of mean $m$ and width $w$, the pull $g$ is defined as
+\begin{equation}
+ g = \frac{x - m}{w},
+\end{equation}
+and follows a standard Gaussian with mean zero and unit width. This property can be applied to our case of parameter estimation due to the central limit theorem~\cite{CDF:AN5776}. The pull distributions are shown in \fig{fig:pulls}. These are peaking at zero with tails going to $\pm2.5$.
+\begin{figure}[htbp]
 	\centering
 	\includegraphics[width=.49\linewidth]{6_Search/Figures/impact/pullsZutwithMC.pdf}
 	\includegraphics[width=.49\linewidth]{6_Search/Figures/impact/pullsZctwithMC.pdf}
 	\caption{Post-fit distribution of the pulls for the \Zut\ (left) and \Zct\ (right) vertex.}
-	\label{fig:171102zctmle}
+	\label{fig:pulls}
 \end{figure}
 
+\newpage
+ The nuisance parameters causing the tails in the pull distributions are the ones related to the \NPL\ background as can be seen in \fig{fig:impactsZut1}, \fig{fig:impactsZut}. \fig{fig:impactsZct1}, and \fig{fig:impactsZct}. Here one can see that the nuisance parameters related to the \NPL\ normalisations are shifted with respect to their initial values. This is to be expected since their initial  normalisation is arbitrary. Furthermore, the effect of the uncertainties on the maximum likelihood estimate of the signal strength is shown. \todo{Zeg welke sys de grootste invl hebben} 
+ 
+  The distributions of multivariate discriminating  variables as well as the distribution of the transverse mass of the \PW\ boson are recreated with the maximum likelihood estimations of the nuisance parameters. The resulting distributions are shown in \fig{fig:shapesfitALL,fig:shapesfit3mu}, \fig{fig:shapesfit1e2mu}, \fig{fig:shapesfit2e1mu}, and \fig{fig:shapesfit3e}. The post fit event yields are given in  \todo{MAKE TABLE}. 
 
-\begin{figure}
+
+
+
+
+
+\begin{figure}[htbp]
 	\centering
 	\includegraphics[width=1.\linewidth]{6_Search/Figures/impact/171102ZctMLE.pdf}
 	\caption{Maximum likelihood estimators for the \Zct\ vertex.}
 	\label{fig:171102zctmle}
 \end{figure}
-\begin{figure}
+\begin{figure}[htbp]
 	\centering
 	\includegraphics[width=1.\linewidth]{6_Search/Figures/impact/171102ZutMLE.pdf}
 	\caption{Maximum likelihood estimators for the \Zut\ vertex.}
