@@ -106,7 +106,7 @@ The trigger scale factors measured as a function of lepton \pt, using the datase
 	\end{tabular} 
 	\label{tab:trigSF}
 \end{table}
-
+\begin{comment}
 
 \begin{figure}[tb]
 	[In function of lepton \pt]{
@@ -327,7 +327,7 @@ The trigger scale factors measured as a function of lepton \pt, using the datase
 	\caption{The trigger scale factors measured as a function of lepton \pt, using the dataset collected by \Etmis\ triggers and \WZ\ simulation, after a 3 lepton and jets selection, in the Z mass window. All corrections to simulation are applied. All channel.}
 	\label{image:FigurestriggerScaleFactorsall}
 \end{figure}
-
+\end{comment}
 
 \chapter{Dilepton controlplots}
 \label{app:controldilep}
@@ -360,3 +360,374 @@ The trigger scale factors measured as a function of lepton \pt, using the datase
 	
 	
 \end{landscape}
+\chapter{Details about the BDTs}
+\label{app:BDTtechnics}
+The boosted decision are trained without the \NPL\ background.
+\section*{Boosted Decision Tree Factory in \STSR}
+In the TMVA factory, 
+\begin{description}
+	\item[]\textcolor{ForestGreen}{
+		TMVA::Factory(bdt\_type.Data(), output\_file, \\
+		''!V:!Silent:Color:!DrawProgressBar:Transformations=I:AnalysisType=Classification``)},
+\end{description}
+the trees are trained and tested by 
+\begin{description}
+	\item[] \textcolor{ForestGreen}{factory$\rightarrow$PrepareTrainingAndTestTree( mycuts, mycutb,\\ ''nTrain\_Signal=0:nTrain\_Background=0:SplitMode=Random:NormMode=NumEvents:!V``)},
+\end{description}
+and the BDT is constructed as:
+\begin{description}
+	\item[] \textcolor{ForestGreen}{factory$\rightarrow$BookMethod( TMVA::Types::kBDT,method\_title.Data(),\\''!H:!V:NTrees=25:MinNodeSize=15\%:BoostType=Grad:Shrinkage=0.3:\\SeparationType=GiniIndex:nCuts=15:MaxDepth=3:NegWeightTreatment=Pray:\\PruneMethod=NoPruning:UseBaggedBoost:BaggedSampleFrcation=0.5`` )}.
+\end{description}
+
+
+\section*{Boosted Decision Tree Factory in \TTSR}
+In the TMVA factory, 
+\begin{description}
+	\item[]\textcolor{ForestGreen}{
+		TMVA::Factory(bdt\_type.Data(), output\_file, \\
+		''!V:!Silent:Color:!DrawProgressBar:Transformations=I;D;P;G,D:AnalysisType=Classification``)},
+\end{description}
+the trees are trained and tested by 
+\begin{description}
+	\item[] \textcolor{ForestGreen}{factory$\rightarrow$PrepareTrainingAndTestTree( mycuts, mycutb,\\ ''nTrain\_Signal=0:nTrain\_Background=0:SplitMode=Random:NormMode=NumEvents:!V``)},
+\end{description}
+and the BDT is constructed as:
+\begin{description}
+	\item[] \textcolor{ForestGreen}{factory$\rightarrow$BookMethod( TMVA::Types::kBDT,method\_title.Data(),\\''!H:!V:NTrees=225:MinNodeSize=5\%:BoostType=Grad:Shrinkage=0.2:\\UseBaggedBoost:BaggedSampleFraction=0.8:SeparationType=GiniIndex:nCuts=15:\\MaxDepth=3:NegWeightTreatment=Pray`` )}.
+\end{description}
+
+\section*{BDT control distributions}
+
+\begin{figure}[htbp]
+	\includegraphics[width=0.48\textwidth]{6_Search/Figures/MVAtechnics/toppairzct/eee/CorrelationMatrixB.png}
+	\includegraphics[width=0.48\textwidth]{6_Search/Figures/MVAtechnics/toppairzct/eee/CorrelationMatrixS.png}
+	\includegraphics[width=0.48\textwidth]{6_Search/Figures/MVAtechnics/toppairzct/eee/mva_eee_MVA_regionEq1.png}
+	\includegraphics[width=0.48\textwidth]{6_Search/Figures/MVAtechnics/toppairzct/eee/rejBvsS.png}
+	\includegraphics[width=0.48\textwidth]{6_Search/Figures/MVAtechnics/toppairzct/eee/variables_id_c1.png}
+	\includegraphics[width=0.48\textwidth]{6_Search/Figures/MVAtechnics/toppairzct/eee/variables_id_c2.png}
+	\caption{\eee\ channel. \TTSR: \Zct\ vertex }
+	\label{image:Figures3etoppairzct}
+\end{figure}
+
+\begin{figure}[htbp]
+	\includegraphics[width=0.48\textwidth]{6_Search/Figures/MVAtechnics/toppairzct/eeu/CorrelationMatrixB.png}
+	\includegraphics[width=0.48\textwidth]{6_Search/Figures/MVAtechnics/toppairzct/eeu/CorrelationMatrixS.png}
+	\includegraphics[width=0.48\textwidth]{6_Search/Figures/MVAtechnics/toppairzct/eeu/mva_eeu_MVA_regionEq1.png}
+	\includegraphics[width=0.48\textwidth]{6_Search/Figures/MVAtechnics/toppairzct/eeu/rejBvsS.png}
+	\includegraphics[width=0.48\textwidth]{6_Search/Figures/MVAtechnics/toppairzct/eeu/variables_id_c1.png}
+	\includegraphics[width=0.48\textwidth]{6_Search/Figures/MVAtechnics/toppairzct/eeu/variables_id_c2.png}
+	\caption{\eemu\ channel. \TTSR: \Zct\ vertex }
+	\label{image:Figureseeutoppairzct}
+\end{figure}
+
+
+\begin{figure}[htbp]
+	\includegraphics[width=0.48\textwidth]{6_Search/Figures/MVAtechnics/toppairzct/uue/CorrelationMatrixB.png}
+	\includegraphics[width=0.48\textwidth]{6_Search/Figures/MVAtechnics/toppairzct/uue/CorrelationMatrixS.png}
+	\includegraphics[width=0.48\textwidth]{6_Search/Figures/MVAtechnics/toppairzct/uue/mva_uue_MVA_regionEq1.png}
+	\includegraphics[width=0.48\textwidth]{6_Search/Figures/MVAtechnics/toppairzct/uue/rejBvsS.png}
+	\includegraphics[width=0.48\textwidth]{6_Search/Figures/MVAtechnics/toppairzct/uue/variables_id_c1.png}
+	\includegraphics[width=0.48\textwidth]{6_Search/Figures/MVAtechnics/toppairzct/uue/variables_id_c2.png}
+	\caption{\emumu\ channel. \TTSR: \Zct\ vertex }
+	\label{image:Figuresuuetoppairzct}
+\end{figure}
+
+
+\begin{figure}[htbp]
+	\includegraphics[width=0.48\textwidth]{6_Search/Figures/MVAtechnics/toppairzct/uuu/CorrelationMatrixB.png}
+	\includegraphics[width=0.48\textwidth]{6_Search/Figures/MVAtechnics/toppairzct/uuu/CorrelationMatrixS.png}
+	\includegraphics[width=0.48\textwidth]{6_Search/Figures/MVAtechnics/toppairzct/uuu/mva_uuu_MVA_regionEq1.png}
+	\includegraphics[width=0.48\textwidth]{6_Search/Figures/MVAtechnics/toppairzct/uuu/rejBvsS.png}
+	\includegraphics[width=0.48\textwidth]{6_Search/Figures/MVAtechnics/toppairzct/uuu/variables_id_c1.png}
+	\includegraphics[width=0.48\textwidth]{6_Search/Figures/MVAtechnics/toppairzct/uuu/variables_id_c2.png}
+	\caption{\mumumu\ channel. \TTSR: \Zct\ vertex }
+	\label{image:Figuresuuutoppairzct}
+\end{figure}
+
+\begin{figure}[htbp]
+	\includegraphics[width=0.48\textwidth]{6_Search/Figures/MVAtechnics/toppairzut/eee/CorrelationMatrixB.png}
+	\includegraphics[width=0.48\textwidth]{6_Search/Figures/MVAtechnics/toppairzut/eee/CorrelationMatrixS.png}
+	\includegraphics[width=0.48\textwidth]{6_Search/Figures/MVAtechnics/toppairzut/eee/mva_eee_MVA_regionEq1.png}
+	\includegraphics[width=0.48\textwidth]{6_Search/Figures/MVAtechnics/toppairzut/eee/rejBvsS.png}
+	\includegraphics[width=0.48\textwidth]{6_Search/Figures/MVAtechnics/toppairzut/eee/variables_id_c1.png}
+	\includegraphics[width=0.48\textwidth]{6_Search/Figures/MVAtechnics/toppairzut/eee/variables_id_c2.png}
+	\caption{\eee\ channel. \TTSR: \Zut\ vertex }
+	\label{image:Figureseeetoppairzut}
+\end{figure}
+
+\begin{figure}[htbp]
+	\includegraphics[width=0.48\textwidth]{6_Search/Figures/MVAtechnics/toppairzut/eeu/CorrelationMatrixB.png}
+	\includegraphics[width=0.48\textwidth]{6_Search/Figures/MVAtechnics/toppairzut/eeu/CorrelationMatrixS.png}
+	\includegraphics[width=0.48\textwidth]{6_Search/Figures/MVAtechnics/toppairzut/eeu/mva_eeu_MVA_regionEq1.png}
+	\includegraphics[width=0.48\textwidth]{6_Search/Figures/MVAtechnics/toppairzut/eeu/rejBvsS.png}
+	\includegraphics[width=0.48\textwidth]{6_Search/Figures/MVAtechnics/toppairzut/eeu/variables_id_c1.png}
+	\includegraphics[width=0.48\textwidth]{6_Search/Figures/MVAtechnics/toppairzut/eeu/variables_id_c2.png}
+	\caption{\eemu\ channel. \TTSR: \Zut\ vertex }
+	\label{image:Figureseeutoppairzut}
+\end{figure}
+
+
+\begin{figure}[htbp]
+	\includegraphics[width=0.48\textwidth]{6_Search/Figures/MVAtechnics/toppairzut/uue/CorrelationMatrixB.png}
+	\includegraphics[width=0.48\textwidth]{6_Search/Figures/MVAtechnics/toppairzut/uue/CorrelationMatrixS.png}
+	\includegraphics[width=0.48\textwidth]{6_Search/Figures/MVAtechnics/toppairzut/uue/mva_uue_MVA_regionEq1.png}
+	\includegraphics[width=0.48\textwidth]{6_Search/Figures/MVAtechnics/toppairzut/uue/rejBvsS.png}
+	\includegraphics[width=0.48\textwidth]{6_Search/Figures/MVAtechnics/toppairzut/uue/variables_id_c1.png}
+	\includegraphics[width=0.48\textwidth]{6_Search/Figures/MVAtechnics/toppairzut/uue/variables_id_c2.png}
+	\caption{\emumu\ channel. \TTSR: \Zut\ vertex }
+	\label{image:Figuresuuetoppairzut}
+\end{figure}
+
+
+\begin{figure}[htbp]
+	\includegraphics[width=0.48\textwidth]{6_Search/Figures/MVAtechnics/toppairzut/uuu/CorrelationMatrixB.png}
+	\includegraphics[width=0.48\textwidth]{6_Search/Figures/MVAtechnics/toppairzut/uuu/CorrelationMatrixS.png}
+	\includegraphics[width=0.48\textwidth]{6_Search/Figures/MVAtechnics/toppairzut/uuu/mva_uuu_MVA_regionEq1.png}
+	\includegraphics[width=0.48\textwidth]{6_Search/Figures/MVAtechnics/toppairzut/uuu/rejBvsS.png}
+	\includegraphics[width=0.48\textwidth]{6_Search/Figures/MVAtechnics/toppairzut/uuu/variables_id_c1.png}
+	\includegraphics[width=0.48\textwidth]{6_Search/Figures/MVAtechnics/toppairzut/uuu/variables_id_c2.png}
+	\caption{\mumumu\ channel. \TTSR: \Zut\ vertex }
+	\label{image:Figuresuuutoppairzut}
+\end{figure}
+
+\begin{figure}[htbp]
+	\includegraphics[width=0.48\textwidth]{6_Search/Figures/MVAtechnics/singletopzct/eee/CorrelationMatrixB.png}
+	\includegraphics[width=0.48\textwidth]{6_Search/Figures/MVAtechnics/singletopzct/eee/CorrelationMatrixS.png}
+	\includegraphics[width=0.48\textwidth]{6_Search/Figures/MVAtechnics/singletopzct/eee/mva_eee_MVA_regionEq0.png}
+	\includegraphics[width=0.48\textwidth]{6_Search/Figures/MVAtechnics/singletopzct/eee/rejBvsS.png}
+	\includegraphics[width=0.48\textwidth]{6_Search/Figures/MVAtechnics/singletopzct/eee/variables_id_c1.png}
+	%	\includegraphics[width=0.48\textwidth]{6_Search/Figures/MVAtechnics/singletopzct/eee/variables_id_c2.png}
+	\caption{\eee\ channel. \STSR: \Zct\ vertex }
+	\label{image:Figures3esingletopzct}
+\end{figure}
+
+\begin{figure}[htbp]
+	\includegraphics[width=0.48\textwidth]{6_Search/Figures/MVAtechnics/singletopzct/eeu/CorrelationMatrixB.png}
+	\includegraphics[width=0.48\textwidth]{6_Search/Figures/MVAtechnics/singletopzct/eeu/CorrelationMatrixS.png}
+	\includegraphics[width=0.48\textwidth]{6_Search/Figures/MVAtechnics/singletopzct/eeu/mva_eeu_MVA_regionEq0.png}
+	\includegraphics[width=0.48\textwidth]{6_Search/Figures/MVAtechnics/singletopzct/eeu/rejBvsS.png}
+	\includegraphics[width=0.48\textwidth]{6_Search/Figures/MVAtechnics/singletopzct/eeu/variables_id_c1.png}
+	%	\includegraphics[width=0.48\textwidth]{6_Search/Figures/MVAtechnics/singletopzct/eeu/variables_id_c2.png}
+	\caption{\eemu\ channel. \STSR: \Zct\ vertex }
+	\label{image:Figureseeusingletopzct}
+\end{figure}
+
+
+\begin{figure}[htbp]
+	\includegraphics[width=0.48\textwidth]{6_Search/Figures/MVAtechnics/singletopzct/uue/CorrelationMatrixB.png}
+	\includegraphics[width=0.48\textwidth]{6_Search/Figures/MVAtechnics/singletopzct/uue/CorrelationMatrixS.png}
+	\includegraphics[width=0.48\textwidth]{6_Search/Figures/MVAtechnics/singletopzct/uue/mva_uue_MVA_regionEq0.png}
+	\includegraphics[width=0.48\textwidth]{6_Search/Figures/MVAtechnics/singletopzct/uue/rejBvsS.png}
+	\includegraphics[width=0.48\textwidth]{6_Search/Figures/MVAtechnics/singletopzct/uue/variables_id_c1.png}
+	%	\includegraphics[width=0.48\textwidth]{6_Search/Figures/MVAtechnics/singletopzct/uue/variables_id_c2.png}
+	\caption{\emumu\ channel. \STSR: \Zct\ vertex }
+	\label{image:Figuresuuesingletopzct}
+\end{figure}
+
+
+\begin{figure}[htbp]
+	\includegraphics[width=0.48\textwidth]{6_Search/Figures/MVAtechnics/singletopzct/uuu/CorrelationMatrixB.png}
+	\includegraphics[width=0.48\textwidth]{6_Search/Figures/MVAtechnics/singletopzct/uuu/CorrelationMatrixS.png}
+	\includegraphics[width=0.48\textwidth]{6_Search/Figures/MVAtechnics/singletopzct/uuu/mva_uuu_MVA_regionEq0.png}
+	\includegraphics[width=0.48\textwidth]{6_Search/Figures/MVAtechnics/singletopzct/uuu/rejBvsS.png}
+	\includegraphics[width=0.48\textwidth]{6_Search/Figures/MVAtechnics/singletopzct/uuu/variables_id_c1.png}
+	%	\includegraphics[width=0.48\textwidth]{6_Search/Figures/MVAtechnics/singletopzct/uuu/variables_id_c2.png}
+	\caption{\mumumu\ channel. \STSR: \Zct\ vertex }
+	\label{image:Figuresuuusingletopzct}
+\end{figure}
+
+\begin{figure}[htbp]
+	\includegraphics[width=0.48\textwidth]{6_Search/Figures/MVAtechnics/singletopzut/eee/CorrelationMatrixB.png}
+	\includegraphics[width=0.48\textwidth]{6_Search/Figures/MVAtechnics/singletopzut/eee/CorrelationMatrixS.png}
+	\includegraphics[width=0.48\textwidth]{6_Search/Figures/MVAtechnics/singletopzut/eee/mva_eee_MVA_regionEq0.png}
+	\includegraphics[width=0.48\textwidth]{6_Search/Figures/MVAtechnics/singletopzut/eee/rejBvsS.png}
+	\includegraphics[width=0.48\textwidth]{6_Search/Figures/MVAtechnics/singletopzut/eee/variables_id_c1.png}
+	\includegraphics[width=0.48\textwidth]{6_Search/Figures/MVAtechnics/singletopzut/eee/variables_id_c2.png}
+	\caption{\eee\ channel. \STSR: \Zut\ vertex }
+	\label{image:Figureseeesingletopzut}
+\end{figure}
+
+\begin{figure}[htbp]
+	\includegraphics[width=0.48\textwidth]{6_Search/Figures/MVAtechnics/singletopzut/eeu/CorrelationMatrixB.png}
+	\includegraphics[width=0.48\textwidth]{6_Search/Figures/MVAtechnics/singletopzut/eeu/CorrelationMatrixS.png}
+	\includegraphics[width=0.48\textwidth]{6_Search/Figures/MVAtechnics/singletopzut/eeu/mva_eeu_MVA_regionEq0.png}
+	\includegraphics[width=0.48\textwidth]{6_Search/Figures/MVAtechnics/singletopzut/eeu/rejBvsS.png}
+	\includegraphics[width=0.48\textwidth]{6_Search/Figures/MVAtechnics/singletopzut/eeu/variables_id_c1.png}
+	\includegraphics[width=0.48\textwidth]{6_Search/Figures/MVAtechnics/singletopzut/eeu/variables_id_c2.png}
+	\caption{\eemu\ channel. \STSR: \Zut\ vertex }
+	\label{image:Figureseeusingletopzut}
+\end{figure}
+
+
+\begin{figure}[htbp]
+	\includegraphics[width=0.48\textwidth]{6_Search/Figures/MVAtechnics/singletopzut/uue/CorrelationMatrixB.png}
+	\includegraphics[width=0.48\textwidth]{6_Search/Figures/MVAtechnics/singletopzut/uue/CorrelationMatrixS.png}
+	\includegraphics[width=0.48\textwidth]{6_Search/Figures/MVAtechnics/singletopzut/uue/mva_uue_MVA_regionEq0.png}
+	\includegraphics[width=0.48\textwidth]{6_Search/Figures/MVAtechnics/singletopzut/uue/rejBvsS.png}
+	\includegraphics[width=0.48\textwidth]{6_Search/Figures/MVAtechnics/singletopzut/uue/variables_id_c1.png}
+	\includegraphics[width=0.48\textwidth]{6_Search/Figures/MVAtechnics/singletopzut/uue/variables_id_c2.png}
+	\caption{\emumu\ channel. \STSR: \Zut\ vertex }
+	\label{image:Figuresuuesingletopzut}
+\end{figure}
+
+
+\begin{figure}[htbp]
+	\includegraphics[width=0.48\textwidth]{6_Search/Figures/MVAtechnics/singletopzut/uuu/CorrelationMatrixB.png}
+	\includegraphics[width=0.48\textwidth]{6_Search/Figures/MVAtechnics/singletopzut/uuu/CorrelationMatrixS.png}
+	\includegraphics[width=0.48\textwidth]{6_Search/Figures/MVAtechnics/singletopzut/uuu/mva_uuu_MVA_regionEq0.png}
+	\includegraphics[width=0.48\textwidth]{6_Search/Figures/MVAtechnics/singletopzut/uuu/rejBvsS.png}
+	\includegraphics[width=0.48\textwidth]{6_Search/Figures/MVAtechnics/singletopzut/uuu/variables_id_c1.png}
+	\includegraphics[width=0.48\textwidth]{6_Search/Figures/MVAtechnics/singletopzut/uuu/variables_id_c2.png}
+	\caption{\mumumu\ channel. \STSR: \Zut\ vertex }
+	\label{image:Figuresuuusingletopzut}
+\end{figure}
+\chapter{Prefit distributions}
+\label{app:Prefit}
+%\section{BDT input variables}
+%\label{app:BDTdis}
+\section{BDT distributions}
+\label{app:BDT}
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.49\linewidth]{6_Search/Figures/BDTdistributions/toppair_Zut_BDT_all_Stack}
+	\includegraphics[width=0.49\linewidth]{6_Search/Figures/BDTdistributions/toppair_Zct_BDT_all_Stack}
+	\includegraphics[width=0.49\linewidth]{6_Search/Figures/BDTdistributions/singletop_Zut_BDT_all_Stack}
+	\includegraphics[width=0.49\linewidth]{6_Search/Figures/BDTdistributions/singletop_Zct_BDT_all_Stack}
+	\caption{Distributions of the discriminating variable before the fit, all different leptonic channels together. Upper left: \TTSR: \Zut\ vertex , upper right: \TTSR: \Zct\ vertex ; lower left: \STSR: \Zut\ vertex , lower right: \STSR: \Zct\ vertex .}
+	\label{fig:bdtallstack}
+\end{figure}	
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.49\linewidth]{6_Search/Figures/BDTdistributions/toppair_Zut_BDT_uuu_Stack}
+	\includegraphics[width=0.49\linewidth]{6_Search/Figures/BDTdistributions/toppair_Zct_BDT_uuu_Stack}
+	\includegraphics[width=0.49\linewidth]{6_Search/Figures/BDTdistributions/singletop_Zut_BDT_uuu_Stack}
+	\includegraphics[width=0.49\linewidth]{6_Search/Figures/BDTdistributions/singletop_Zct_BDT_uuu_Stack}
+	\caption{Distributions of the discriminating variable before the fit, \mumumu\  channel. Upper left: \TTSR: \Zut\ vertex , upper right: \TTSR: \Zct\ vertex ; lower left: \STSR: \Zut\ vertex , lower right: \STSR: \Zct\ vertex .}
+	\label{fig:bdtuuustack}
+\end{figure}
+
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.39\linewidth]{6_Search/Figures/BDTdistributions/toppair_Zut_BDT_uue_Stack}
+	\includegraphics[width=0.39\linewidth]{6_Search/Figures/BDTdistributions/toppair_Zct_BDT_uue_Stack}
+	\includegraphics[width=0.39\linewidth]{6_Search/Figures/BDTdistributions/singletop_Zut_BDT_uue_Stack}
+	\includegraphics[width=0.39\linewidth]{6_Search/Figures/BDTdistributions/singletop_Zct_BDT_uue_Stack}
+	\caption{Distributions of the discriminating variable before the fit, \emumu\  channel. Upper left: \TTSR: \Zut\ vertex , upper right: \TTSR: \Zct\ vertex ; lower left: \STSR: \Zut\ vertex , lower right: \STSR: \Zct\ vertex .}
+	\label{fig:bdtuuestack}
+\end{figure}
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.39\linewidth]{6_Search/Figures/BDTdistributions/toppair_Zut_BDT_eeu_Stack}
+	\includegraphics[width=0.39\linewidth]{6_Search/Figures/BDTdistributions/toppair_Zct_BDT_eeu_Stack}
+	\includegraphics[width=0.39\linewidth]{6_Search/Figures/BDTdistributions/singletop_Zut_BDT_eeu_Stack}
+	\includegraphics[width=0.39\linewidth]{6_Search/Figures/BDTdistributions/singletop_Zct_BDT_eeu_Stack}
+	\caption{Distributions of the discriminating variable before the fit, \eemu\  channel. Upper left: \TTSR: \Zut\ vertex , upper right: \TTSR: \Zct\ vertex ; lower left: \STSR: \Zut\ vertex , lower right: \STSR: \Zct\ vertex .}
+	\label{fig:bdteeustack}
+\end{figure}
+
+
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.39\linewidth]{6_Search/Figures/BDTdistributions/toppair_Zut_BDT_eee_Stack}
+	\includegraphics[width=0.39\linewidth]{6_Search/Figures/BDTdistributions/toppair_Zct_BDT_eee_Stack}
+	\includegraphics[width=0.39\linewidth]{6_Search/Figures/BDTdistributions/singletop_Zut_BDT_eee_Stack}
+	\includegraphics[width=0.39\linewidth]{6_Search/Figures/BDTdistributions/singletop_Zct_BDT_eee_Stack}
+	\caption{Distributions of the discriminating variable before the fit, \eee\  channel. Upper left: \TTSR: \Zut\ vertex , upper right: \TTSR: \Zct\ vertex ; lower left: \STSR: \Zut\ vertex , lower right: \STSR: \Zct\ vertex .}
+	\label{fig:bdteeestack}
+\end{figure}
+\clearpage
+\section{Transverse W boson mass distributions}
+\label{app:MTW}
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.49\linewidth]{6_Search/Figures/MTWstack/AllBkg/MTW_all_Stack}
+	\caption{Distributions of the transverse mass of the \PW\ boson before the fit, all different leptonic channels together. Upper left: \TTSR: \Zut\ vertex , upper right: \TTSR: \Zct\ vertex ; lower left: \STSR: \Zut\ vertex , lower right: \STSR: \Zct\ vertex .}
+	\label{fig:mtwallstack}
+\end{figure}
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.49\linewidth]{6_Search/Figures/MTWstack/AllBkg/MTW_uuu_Stack}
+	\includegraphics[width=0.49\linewidth]{6_Search/Figures/MTWstack/AllBkg/MTW_uue_Stack}
+	\includegraphics[width=0.49\linewidth]{6_Search/Figures/MTWstack/AllBkg/MTW_eeu_Stack}
+	\includegraphics[width=0.49\linewidth]{6_Search/Figures/MTWstack/AllBkg/MTW_eee_Stack}
+	\caption{Distributions of the transverse mass of the \PW\ boson before the fit, all different leptonic channels together. Upper left: \TTSR: \Zut\ vertex , upper right: \TTSR: \Zct\ vertex ; lower left: \STSR: \Zut\ vertex , lower right: \STSR: \Zct\ vertex .}
+	\label{fig:mtwallstac}
+\end{figure}
+\clearpage
+\section{Input variables of the BDT}
+\label{app:prefitBDTvar}
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.25\linewidth]{6_Search/Figures/BDTinputvars/Zut/Stack/toppair_MVA_SMtop_Eta_all_Stack}
+	\includegraphics[width=0.25\linewidth]{6_Search/Figures/BDTinputvars/Zut/Stack/toppair_MVA_mlb_all_Stack}
+	\includegraphics[width=0.25\linewidth]{6_Search/Figures/BDTinputvars/Zut/Stack/toppair_MVA_dPhiWlepb_all_Stack}
+	\includegraphics[width=0.25\linewidth]{6_Search/Figures/BDTinputvars/Zut/Stack/toppair_MVA_deltaRWlepJet_min_all_Stack}
+	\includegraphics[width=0.25\linewidth]{6_Search/Figures/BDTinputvars/Zut/Stack/toppair_MVA_Zboson_M_all_Stack}
+	\includegraphics[width=0.25\linewidth]{6_Search/Figures/BDTinputvars/Zut/Stack/toppair_MVA_dPhiZWlep_all_Stack}
+	\includegraphics[width=0.25\linewidth]{6_Search/Figures/BDTinputvars/Zut/Stack/toppair_MVA_dRWlepb_all_Stack}
+	\includegraphics[width=0.25\linewidth]{6_Search/Figures/BDTinputvars/Zut/Stack/toppair_MVA_NJets_CSVv2M_all_Stack}
+	\includegraphics[width=0.25\linewidth]{6_Search/Figures/BDTinputvars/Zut/Stack/toppair_MVA_FCNCtop_M_all_Stack}
+	\includegraphics[width=0.25\linewidth]{6_Search/Figures/BDTinputvars/Zut/Stack/toppair_MVA_dRZc_all_Stack}
+	\includegraphics[width=0.25\linewidth]{6_Search/Figures/BDTinputvars/Zut/Stack/toppair_MVA_dRSMjetLightjet_all_Stack}
+	\caption{The normalised input variables for reconstructing the multivariate discriminator in the \TTSR\ for the \Zut\ vertex.}
+	\label{fig:toppairZutprefitstack}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.25\linewidth]{6_Search/Figures/BDTinputvars/Zut/Stack/singletop_MVA_SMtop_Eta_all_Stack}
+	\includegraphics[width=0.25\linewidth]{6_Search/Figures/BDTinputvars/Zut/Stack/singletop_MVA_mlb_all_Stack}
+	\includegraphics[width=0.25\linewidth]{6_Search/Figures/BDTinputvars/Zut/Stack/singletop_MVA_dPhiWlepb_all_Stack}
+	\includegraphics[width=0.25\linewidth]{6_Search/Figures/BDTinputvars/Zut/Stack/singletop_MVA_dPhiZWlep_all_Stack}
+	\includegraphics[width=0.25\linewidth]{6_Search/Figures/BDTinputvars/Zut/Stack/singletop_MVA_dRWlepb_all_Stack}
+	\includegraphics[width=0.25\linewidth]{6_Search/Figures/BDTinputvars/Zut/Stack/singletop_MVA_dRWlepb_all_Stack}
+	\includegraphics[width=0.25\linewidth]{6_Search/Figures/BDTinputvars/Zut/Stack/singletop_MVA_charge_asym_all_Stack}
+	\includegraphics[width=0.25\linewidth]{6_Search/Figures/BDTinputvars/Zut/Stack/singletop_MVA_bdiscCSVv2_jet_0_all_Stack}
+	\includegraphics[width=0.25\linewidth]{6_Search/Figures/BDTinputvars/Zut/Stack/singletop_MVA_TotalHt_lep_all_Stack}
+	\includegraphics[width=0.25\linewidth]{6_Search/Figures/BDTinputvars/Zut/Stack/singletop_MVA_ptWQ_all_Stack}
+	\caption{The normalised input variables for reconstructing the multivariate discriminator in the \STSR\ for the \Zut\ vertex.}
+	\label{fig:singletopZutprefitstack}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+%	\includegraphics[width=0.25\linewidth]{6_Search/Figures/BDTinputvars/Zct/Stack/toppair_MVA_mlb_all_Stack}
+%	\includegraphics[width=0.25\linewidth]{6_Search/Figures/BDTinputvars/Zct/Stack/toppair_MVA_Zboson_M_all_Stack}
+%	\includegraphics[width=0.25\linewidth]{6_Search/Figures/BDTinputvars/Zct/Stack/toppair_MVA_dPhiZWlep_all_Stack}
+%	\includegraphics[width=0.25\linewidth]{6_Search/Figures/BDTinputvars/Zct/Stack/toppair_MVA_dRWlepb_all_Stack}
+%	\includegraphics[width=0.25\linewidth]{6_Search/Figures/BDTinputvars/Zct/Stack/toppair_MVA_NJets_CSVv2M_all_Stack}
+%	\includegraphics[width=0.25\linewidth]{6_Search/Figures/BDTinputvars/Zct/Stack/toppair_MVA_FCNCtop_M_all_Stack}
+%	\includegraphics[width=0.25\linewidth]{6_Search/Figures/BDTinputvars/Zct/Stack/toppair_MVA_dRZc_all_Stack}
+%	\includegraphics[width=0.25\linewidth]{6_Search/Figures/BDTinputvars/Zct/Stack/toppair_MVA_dRSMjetLightjet_all_Stack}
+%	\includegraphics[width=0.25\linewidth]{6_Search/Figures/BDTinputvars/Zct/Stack/toppair_MVA_TotalInvMass_all_Stack}
+%	\includegraphics[width=0.25\linewidth]{6_Search/Figures/BDTinputvars/Zct/Stack/toppair_MVA_dRZWlep_all_Stack}
+%	\includegraphics[width=0.25\linewidth]{6_Search/Figures/BDTinputvars/Zct/Stack/toppair_MVA_Bdis_Lightjet_all_Stack}
+%	\includegraphics[width=0.25\linewidth]{6_Search/Figures/BDTinputvars/Zct/Stack/toppair_MVA_dRZb_all_Stack}
+	\caption{The normalised input variables for reconstructing the multivariate discriminator in the \TTSR\ for the \Zct\ vertex.}
+	\label{fig:toppairZctprefitstack}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+%	\includegraphics[width=0.25\linewidth]{6_Search/Figures/BDTinputvars/Zct/Stack/singletop_MVA_SMtop_Eta_all_Stack}
+%	\includegraphics[width=0.25\linewidth]{6_Search/Figures/BDTinputvars/Zct/Stack/singletop_MVA_mlb_all_Stack}
+%	\includegraphics[width=0.25\linewidth]{6_Search/Figures/BDTinputvars/Zct/Stack/singletop_MVA_dPhiWlepb_all_Stack}
+%	\includegraphics[width=0.25\linewidth]{6_Search/Figures/BDTinputvars/Zct/Stack/singletop_MVA_bdiscCSVv2_jet_0_all_Stack}
+%	\includegraphics[width=0.25\linewidth]{6_Search/Figures/BDTinputvars/Zct/Stack/singletop_MVA_TotalInvMass_lep_all_Stack}
+%	\includegraphics[width=0.25\linewidth]{6_Search/Figures/BDTinputvars/Zct/Stack/singletop_MVA_dRZWlep_all_Stack}   
+	\caption{The normalised input variables for reconstructing the multivariate discriminator in the \STSR\ for the \Zct\ vertex.}
+	\label{fig:singletopZctprefitstack}
+\end{figure}
+
+
+\chapter{Limit setting validations}
+\section{Blinded initial fit, postfit distributions}
+\label{app:IniFitDis}
+
+\clearpage
+\section{Post fit distributions of the BDT input vars}
+\label{app:PostFit}

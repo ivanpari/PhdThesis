@@ -2,6 +2,11 @@
 There were no selection criteria found to make a clear rejection of the background events without sacrificing a significant amount of signal. For this reason, a multivariate approach using Boosted Decision Trees that combines several discriminating variables in the TMVA framework is used. For the training, the BDTs are trained against all backgrounds, where the \NPL\ background is not taken into account. The BDT settings  avoid over-training and  maintain a good discriminating power against all backgrounds. The background and signal yields follow the relative fractions predicted by the simulation. 
 
 
+
+The pre fit distributions of the variables used for creating the multivariate discriminator are given in \Sec{sec:BDTvars}. The resulting multivariate discriminator are shown in \Sec{sec:BDTs}.  The technical details of the BDTs can be found in \App{app:BDTtechnics}.
+
+\subsection{Distributions of the BDT variables}
+\label{sec:BDTvars}
 The variables used to construct the BDTs include the angles, distances, masses and transverse momenta:
 \begin{enumerate}
 	\item pseudo rapidity of the SM top: TT+ST \Zut  , ST \Zct 
@@ -25,90 +30,142 @@ The variables used to construct the BDTs include the angles, distances, masses a
 	\item b discriminant of the FCNC light jet: TT \Zct\ 
 	\item $\Delta R$ between the SM b jet and Z boson: TT \Zct\ 
 \end{enumerate}
-The pre fit distributions of the variables used for creating the multivariate discriminator are given in \Sec{sec:BDTvars}. The resulting multivariate discriminator are shown in \Sec{sec:BDTs}. 
 
-\subsection{Distributions of the BDT variables}
-\label{sec:BDTvars}
-\todo{include distributions of the vars}
-
-
-\subsection{BDTs}
-\label{sec:BDTs}
-\todo{better to do normalised? }
+The normalised distributions of the BDT input variables for the \Zut\ vertex in the \TTSR\ and \STSR\ are shown. Their prefit distributions can be found in \App{app:prefitBDTvar}.% Other distributions canbe found in \App{app:BDTdis}.
 \begin{figure}[htbp]
 	\centering
-	  \includegraphics[width=0.49\linewidth]{6_Search/Figures/BDTunweighted/toppair_Zut_BDT_all_Stack}
-	  \includegraphics[width=0.49\linewidth]{6_Search/Figures/BDTunweighted/toppair_Zct_BDT_all_Stack}
-	  \includegraphics[width=0.49\linewidth]{6_Search/Figures/BDTunweighted/singletop_Zut_BDT_all_Stack}
-	  \includegraphics[width=0.49\linewidth]{6_Search/Figures/BDTunweighted/singletop_Zct_BDT_all_Stack}
-	\caption{Distributions of the discriminating variable before the fit, all different leptonic channels together. Upper left: \TTSR\ \Zut , upper right: \TTSR\ \Zct ; lower left: \STSR\  \Zut , lower right: \STSR\  \Zct .}
-	\label{fig:bdtallstack}
+	\includegraphics[width=0.25\linewidth]{6_Search/Figures/BDTinputvars/Zut/toppair_MVA_SMtop_Eta_all_Normalized}
+	\includegraphics[width=0.25\linewidth]{6_Search/Figures/BDTinputvars/Zut/toppair_MVA_mlb_all_Normalized}
+	\includegraphics[width=0.25\linewidth]{6_Search/Figures/BDTinputvars/Zut/toppair_MVA_dPhiWlepb_all_Normalized}
+	\includegraphics[width=0.25\linewidth]{6_Search/Figures/BDTinputvars/Zut/toppair_MVA_deltaRWlepJet_min_all_Normalized}
+	\includegraphics[width=0.25\linewidth]{6_Search/Figures/BDTinputvars/Zut/toppair_MVA_Zboson_M_all_Normalized}
+	\includegraphics[width=0.25\linewidth]{6_Search/Figures/BDTinputvars/Zut/toppair_MVA_dPhiZWlep_all_Normalized}
+	\includegraphics[width=0.25\linewidth]{6_Search/Figures/BDTinputvars/Zut/toppair_MVA_dRWlepb_all_Normalized}
+	\includegraphics[width=0.25\linewidth]{6_Search/Figures/BDTinputvars/Zut/toppair_MVA_NJets_CSVv2M_all_Normalized}
+	\includegraphics[width=0.25\linewidth]{6_Search/Figures/BDTinputvars/Zut/toppair_MVA_FCNCtop_M_all_Normalized}
+	\includegraphics[width=0.25\linewidth]{6_Search/Figures/BDTinputvars/Zut/toppair_MVA_dRZc_all_Normalized}
+	\includegraphics[width=0.25\linewidth]{6_Search/Figures/BDTinputvars/Zut/toppair_MVA_dRSMjetLightjet_all_Normalized}
+	\caption{The normalised input variables for reconstructing the multivariate discriminator in the \TTSR\ for the \Zut\ vertex.}
+	\label{fig:toppairZutnormalized}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.25\linewidth]{6_Search/Figures/BDTinputvars/Zut/singletop_MVA_SMtop_Eta_all_Normalized}
+	\includegraphics[width=0.25\linewidth]{6_Search/Figures/BDTinputvars/Zut/singletop_MVA_mlb_all_Normalized}
+	\includegraphics[width=0.25\linewidth]{6_Search/Figures/BDTinputvars/Zut/singletop_MVA_dPhiWlepb_all_Normalized}
+	\includegraphics[width=0.25\linewidth]{6_Search/Figures/BDTinputvars/Zut/singletop_MVA_dPhiZWlep_all_Normalized}
+	\includegraphics[width=0.25\linewidth]{6_Search/Figures/BDTinputvars/Zut/singletop_MVA_dRWlepb_all_Normalized}
+    \includegraphics[width=0.25\linewidth]{6_Search/Figures/BDTinputvars/Zut/singletop_MVA_dRWlepb_all_Normalized}
+    \includegraphics[width=0.25\linewidth]{6_Search/Figures/BDTinputvars/Zut/singletop_MVA_charge_asym_all_Normalized}
+    \includegraphics[width=0.25\linewidth]{6_Search/Figures/BDTinputvars/Zut/singletop_MVA_bdiscCSVv2_jet_0_all_Normalized}
+    \includegraphics[width=0.25\linewidth]{6_Search/Figures/BDTinputvars/Zut/singletop_MVA_TotalHt_lep_all_Normalized}
+    \includegraphics[width=0.25\linewidth]{6_Search/Figures/BDTinputvars/Zut/singletop_MVA_ptWQ_all_Normalized}
+ 	\caption{The normalised input variables for reconstructing the multivariate discriminator in the \STSR\ for the \Zut\ vertex.}
+	\label{fig:singletopZutnormalized}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.25\linewidth]{6_Search/Figures/BDTinputvars/Zct/toppair_MVA_mlb_all_Normalized}
+	\includegraphics[width=0.25\linewidth]{6_Search/Figures/BDTinputvars/Zct/toppair_MVA_Zboson_M_all_Normalized}
+	\includegraphics[width=0.25\linewidth]{6_Search/Figures/BDTinputvars/Zct/toppair_MVA_dPhiZWlep_all_Normalized}
+	\includegraphics[width=0.25\linewidth]{6_Search/Figures/BDTinputvars/Zct/toppair_MVA_dRWlepb_all_Normalized}
+	\includegraphics[width=0.25\linewidth]{6_Search/Figures/BDTinputvars/Zct/toppair_MVA_NJets_CSVv2M_all_Normalized}
+	\includegraphics[width=0.25\linewidth]{6_Search/Figures/BDTinputvars/Zct/toppair_MVA_FCNCtop_M_all_Normalized}
+	\includegraphics[width=0.25\linewidth]{6_Search/Figures/BDTinputvars/Zct/toppair_MVA_dRZc_all_Normalized}
+	\includegraphics[width=0.25\linewidth]{6_Search/Figures/BDTinputvars/Zct/toppair_MVA_dRSMjetLightjet_all_Normalized}
+	\includegraphics[width=0.25\linewidth]{6_Search/Figures/BDTinputvars/Zct/toppair_MVA_TotalInvMass_all_Normalized}
+	\includegraphics[width=0.25\linewidth]{6_Search/Figures/BDTinputvars/Zct/toppair_MVA_dRZWlep_all_Normalized}
+	\includegraphics[width=0.25\linewidth]{6_Search/Figures/BDTinputvars/Zct/toppair_MVA_Bdis_Lightjet_all_Normalized}
+	\includegraphics[width=0.25\linewidth]{6_Search/Figures/BDTinputvars/Zct/toppair_MVA_dRZb_all_Normalized}
+	\caption{The normalised input variables for reconstructing the multivariate discriminator in the \TTSR\ for the \Zct\ vertex.}
+	\label{fig:toppairZctnormalized}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.25\linewidth]{6_Search/Figures/BDTinputvars/Zct/singletop_MVA_SMtop_Eta_all_Normalized}
+	\includegraphics[width=0.25\linewidth]{6_Search/Figures/BDTinputvars/Zct/singletop_MVA_mlb_all_Normalized}
+	\includegraphics[width=0.25\linewidth]{6_Search/Figures/BDTinputvars/Zct/singletop_MVA_dPhiWlepb_all_Normalized}
+      \includegraphics[width=0.25\linewidth]{6_Search/Figures/BDTinputvars/Zct/singletop_MVA_bdiscCSVv2_jet_0_all_Normalized}
+   \includegraphics[width=0.25\linewidth]{6_Search/Figures/BDTinputvars/Zct/singletop_MVA_TotalInvMass_lep_all_Normalized}
+   \includegraphics[width=0.25\linewidth]{6_Search/Figures/BDTinputvars/Zct/singletop_MVA_dRZWlep_all_Normalized}   
+	\caption{The normalised input variables for reconstructing the multivariate discriminator in the \STSR\ for the \Zct\ vertex.}
+	\label{fig:singletopZctnormalized}
+\end{figure}
+
+
+
+
+
+\clearpage
+\subsection{BDTs}
+\label{sec:BDTs}
+In \App{app:BDT}, one can find the prefit BDT distributions with data, while the normalised distributions are shown in \fig{fig:bdtallnorm} and \fig{fig:bdtuuunorm}.
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.49\linewidth]{6_Search/Figures/BDTdistributionsNorm/toppair_Zut_BDT_all_Normalized}
+	\includegraphics[width=0.49\linewidth]{6_Search/Figures/BDTdistributionsNorm/toppair_Zct_BDT_all_Normalized}
+	\includegraphics[width=0.49\linewidth]{6_Search/Figures/BDTdistributionsNorm/singletop_Zut_BDT_all_Normalized}
+	\includegraphics[width=0.49\linewidth]{6_Search/Figures/BDTdistributionsNorm/singletop_Zct_BDT_all_Normalized}
+	\caption{Normalised distributions of the discriminating variable before the fit, all different leptonic channels together. Upper left: \TTSR\ \Zut , upper right: \TTSR\ \Zct ; lower left: \STSR\  \Zut , lower right: \STSR\  \Zct .}
+	\label{fig:bdtallnorm}
 \end{figure}	
 
-\begin{figure}[ht]
+\begin{figure}[htbp]
 	\centering
-	  \includegraphics[width=0.49\linewidth]{6_Search/Figures/BDTunweighted/toppair_Zut_BDT_uuu_Stack}
-	  \includegraphics[width=0.49\linewidth]{6_Search/Figures/BDTunweighted/toppair_Zct_BDT_uuu_Stack}
-	  \includegraphics[width=0.49\linewidth]{6_Search/Figures/BDTunweighted/singletop_Zut_BDT_uuu_Stack}
-	  \includegraphics[width=0.49\linewidth]{6_Search/Figures/BDTunweighted/singletop_Zct_BDT_uuu_Stack}
-	\caption{Distributions of the discriminating variable before the fit, \mumumu\  channel. Upper left: \TTSR\ \Zut , upper right: \TTSR\ \Zct ; lower left: \STSR\  \Zut , lower right: \STSR\  \Zct .}
-	\label{fig:bdtuuustack}
-\end{figure}
-
-
-\begin{figure}[ht]
-	\centering
-	  \includegraphics[width=0.39\linewidth]{6_Search/Figures/BDTunweighted/toppair_Zut_BDT_uue_Stack}
-	  \includegraphics[width=0.39\linewidth]{6_Search/Figures/BDTunweighted/toppair_Zct_BDT_uue_Stack}
-	  \includegraphics[width=0.39\linewidth]{6_Search/Figures/BDTunweighted/singletop_Zut_BDT_uue_Stack}
-	  \includegraphics[width=0.39\linewidth]{6_Search/Figures/BDTunweighted/singletop_Zct_BDT_uue_Stack}
-	\caption{Distributions of the discriminating variable before the fit, \emumu\  channel. Upper left: \TTSR\ \Zut , upper right: \TTSR\ \Zct ; lower left: \STSR\  \Zut , lower right: \STSR\  \Zct .}
-	\label{fig:bdtuuestack}
-\end{figure}
-
-\begin{figure}[ht]
-	\centering
-	  \includegraphics[width=0.39\linewidth]{6_Search/Figures/BDTunweighted/toppair_Zut_BDT_eeu_Stack}
-	  \includegraphics[width=0.39\linewidth]{6_Search/Figures/BDTunweighted/toppair_Zct_BDT_eeu_Stack}
-	  \includegraphics[width=0.39\linewidth]{6_Search/Figures/BDTunweighted/singletop_Zut_BDT_eeu_Stack}
-	  \includegraphics[width=0.39\linewidth]{6_Search/Figures/BDTunweighted/singletop_Zct_BDT_eeu_Stack}
-	\caption{Distributions of the discriminating variable before the fit, \eemu\  channel. Upper left: \TTSR\ \Zut , upper right: \TTSR\ \Zct ; lower left: \STSR\  \Zut , lower right: \STSR\  \Zct .}
-	\label{fig:bdteeustack}
-\end{figure}
-
-
-
-\begin{figure}[ht]
-	\centering
-	  \includegraphics[width=0.39\linewidth]{6_Search/Figures/BDTunweighted/toppair_Zut_BDT_eee_Stack}
-	  \includegraphics[width=0.39\linewidth]{6_Search/Figures/BDTunweighted/toppair_Zct_BDT_eee_Stack}
-	  \includegraphics[width=0.39\linewidth]{6_Search/Figures/BDTunweighted/singletop_Zut_BDT_eee_Stack}
-	  \includegraphics[width=0.39\linewidth]{6_Search/Figures/BDTunweighted/singletop_Zct_BDT_eee_Stack}
-	\caption{Distributions of the discriminating variable before the fit, \eee\  channel. Upper left: \TTSR\ \Zut , upper right: \TTSR\ \Zct ; lower left: \STSR\  \Zut , lower right: \STSR\  \Zct .}
-	\label{fig:bdteeestack}
-\end{figure}
+	\includegraphics[width=0.24\linewidth]{6_Search/Figures/BDTdistributionsNorm/toppair_Zut_BDT_uuu_Normalized}
+	\includegraphics[width=0.24\linewidth]{6_Search/Figures/BDTdistributionsNorm/toppair_Zct_BDT_uuu_Normalized}
+	\includegraphics[width=0.24\linewidth]{6_Search/Figures/BDTdistributionsNorm/singletop_Zut_BDT_uuu_Normalized}
+	\includegraphics[width=0.24\linewidth]{6_Search/Figures/BDTdistributionsNorm/singletop_Zct_BDT_uuu_Normalized}
+	\includegraphics[width=0.24\linewidth]{6_Search/Figures/BDTdistributionsNorm/toppair_Zut_BDT_uue_Normalized}
+	\includegraphics[width=0.24\linewidth]{6_Search/Figures/BDTdistributionsNorm/toppair_Zct_BDT_uue_Normalized}
+	\includegraphics[width=0.24\linewidth]{6_Search/Figures/BDTdistributionsNorm/singletop_Zut_BDT_uue_Normalized}
+	\includegraphics[width=0.24\linewidth]{6_Search/Figures/BDTdistributionsNorm/singletop_Zct_BDT_uue_Normalized}
+	\includegraphics[width=0.24\linewidth]{6_Search/Figures/BDTdistributionsNorm/toppair_Zut_BDT_eeu_Normalized}
+	\includegraphics[width=0.24\linewidth]{6_Search/Figures/BDTdistributionsNorm/toppair_Zct_BDT_eeu_Normalized}
+	\includegraphics[width=0.24\linewidth]{6_Search/Figures/BDTdistributionsNorm/singletop_Zut_BDT_eeu_Normalized}
+	\includegraphics[width=0.24\linewidth]{6_Search/Figures/BDTdistributionsNorm/singletop_Zct_BDT_eeu_Normalized}
+		\includegraphics[width=0.24\linewidth]{6_Search/Figures/BDTdistributionsNorm/toppair_Zut_BDT_eee_Normalized}
+	\includegraphics[width=0.24\linewidth]{6_Search/Figures/BDTdistributionsNorm/toppair_Zct_BDT_eee_Normalized}
+	\includegraphics[width=0.24\linewidth]{6_Search/Figures/BDTdistributionsNorm/singletop_Zut_BDT_eee_Normalized}
+	\includegraphics[width=0.24\linewidth]{6_Search/Figures/BDTdistributionsNorm/singletop_Zct_BDT_eee_Normalized}
+	
+	\caption{Normalised distributions of the discriminating variable before the fit. Each row contains: left: \TTSR\ \Zut , left-middle: \TTSR\ \Zct ; right-middle: \STSR\  \Zut , right: \STSR\  \Zct.  First row: \mumumu\ leptonic channel, second row: \emumu, third row: \eemu, and last row: \eee\ leptonic channel.}
+	\label{fig:bdtuuunorm}
+\end{figure}	
+	
+	
 
 \clearpage
 \subsection{Transverse mass in \WZCR}
-The \WZCR\ is used to estimate the contribution from \WZ+jets and \NPL\ background. In this region, a fit is performed on the transverse mass distribution of the \PW\ boson. The pre-fit templates are given in \fig{fig:mtwallstack}. 
+The \WZCR\ is used to estimate the contribution from \WZ+jets and \NPL\ background. In this region, a fit is performed on the transverse mass distribution of the \PW\ boson. The pre-fit normalised templates are given in \fig{fig:mtwallnorm} and \fig{fig:mtwnorm}, while the the templates with data are shown in \App{ap:MTW}.
 
 \begin{figure}[htbp]
 	\centering
-	  \includegraphics[width=0.39\linewidth]{6_Search/Figures/MSPlotMTW/MTW_all_Stack}
-	  \includegraphics[width=0.37\linewidth]{6_Search/Figures/MSPlotMTW/MTW_all_Normalized}
-	\caption{The transverse mass of the W boson in the \WZCR, before the fit. All different leptonic channels together. Left: scaled to the data, right: normalized.}
-	\label{fig:mtwallstack}
+	\includegraphics[width=0.49\linewidth]{6_Search/Figures/MTWnormalised/MTW_all_Normalized}
+	\caption{The normalised distribution of the transverse mass of the W boson in the \WZCR, before the fit. All different leptonic channels together. }
+	\label{fig:mtwallnorm}
 \end{figure}
 
-
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.24\linewidth]{6_Search/Figures/MTWnormalised/MTW_uuu_Normalized}
+	\includegraphics[width=0.24\linewidth]{6_Search/Figures/MTWnormalised/MTW_uue_Normalized}
+	\includegraphics[width=0.24\linewidth]{6_Search/Figures/MTWnormalised/MTW_eeu_Normalized}
+	\includegraphics[width=0.24\linewidth]{6_Search/Figures/MTWnormalised/MTW_eee_Normalized}
+	\caption{The normalised distribution of the transverse mass of the W boson in the \WZCR, before the fit. Left: \mumumu, left-middle: \emumu, right-middle: \eemu, and right: \eee\ leptonic channel.  }
+	\label{fig:mtwnorm}
+\end{figure}
 
 \section{Systematic uncertainties}
-The systematic uncertainties entering the analysis are coming from different sources. The experimental uncertainties arise from the reconstruction of the objects and are discussed in \Sec{{sec:PhysicsObject}}. These influence the number of events passing the selection, so-called normalisation uncertainties, or the relative occupancies of the distributions, so-called shape
+The systematic uncertainties entering the analysis are coming from different sources. The experimental uncertainties arise from the reconstruction of the objects and are discussed in \Sec{sec:PhysicsObject}. These influence the number of events passing the selection, so-called normalisation uncertainties, or the relative occupancies of the distributions, so-called shape
  uncertainties. The normalisation uncertainties coming from reconstruction include the uncertainty of 2.5\% on the measured integrated luminosity and the efficiency of the trigger logic used for the analysis which has a 1\% (5\%) uncertainty on the 
- \mumumu\ and \emumu (\eemu\ and \eee) channels. The  pileup distribution is calculated via the minimum bias cross section which has a 4.6\% uncertainty. This uncertainty results in a systematic shift in the pileup distribution and its shape effect is estimated by recalculating the pileup distribution for each variation of the minimum bias cross section. The effect of the systematic upwards and downwards shift on the pileup distribution is demonstrated in \Sec{pileupsys}. The shape uncertainties also include the uncertainties coming from the applied lepton scale factors. Their systematic uncertainty originates from three sources: identification, isolation and tracking. The effect of systematic upwards or downwards shift on shapes is demonstrated
- in \Sec{sec:electronsys} and \Sec{sec:muonsys}. The uncertainties arising from jet energy corrections require a recalculation of all jet related kinematic observables and its effect is propagated to the missing transverse energy. The resulting effect of the systematic upwards or downwards shift on shapes is demonstrated in \Sec{sec:JESsys} and \Sec{sec:JERsys}. The reweighting of the CSVv2 discriminant is also a source of uncertainty. There are three sources of uncertainty contributing to the measurement of the b-tag related scale factors: statistical uncertainties, jet energy scale and the purity of the sample. These result in eight uncorrelated contributions for which the effects on the shapes are shown in \Sec{sec:btagsys}. 
+ \mumumu\ and \emumu\ (\eemu\ and \eee) channels. The  pileup distribution is calculated via the minimum bias cross section which has a 4.6\% uncertainty. This uncertainty results in a systematic shift in the pileup distribution and its shape effect is estimated by recalculating the pileup distribution for each variation of the minimum bias cross section. The shape uncertainties also include the uncertainties coming from the applied lepton scale factors. Their systematic uncertainty originates from three sources: identification, isolation and tracking.  The uncertainties arising from jet energy corrections require a recalculation of all jet related kinematic observables and its effect is propagated to the missing transverse energy.  The reweighting of the CSVv2 discriminant is also a source of uncertainty. There are three sources of uncertainty contributing to the measurement of the b-tag related scale factors: statistical uncertainties, jet energy scale and the purity of the sample. These result in eight uncorrelated contributions. 
  
- Since the \NPL\ sample is artificially made from data by inverting the isolation of the third lepton. Its effect has to be estimated. The shape uncertainty one the \NPL\ processes is obtained by varying the isolation inversion with respect to tight working point to the loose working point for electrons and muons at the same time. This found to have negligible effect. The uncertainty on the normalisation of the overall \NPL\ yield is taken as 50\% in accordance the the \SM\ \tZq\ search\todocite.
+ Since the \NPL\ sample is artificially made from data by inverting the isolation of the third lepton. Its effect has to be estimated. The shape uncertainty one the \NPL\ processes is obtained by varying the isolation inversion with respect to tight working point to the loose working point for electrons and muons at the same time. This found to have negligible effect. The uncertainty on the normalisation of the overall \NPL\ yield is taken as 50\% in accordance the the \SM\ \tZq\ search~\cite{CMS-PAS-TOP-16-020}.
  
  The uncertainty on the expected yield of the simulated backgrounds is taken to be 30\% of the yield such that it covers all uncertainties at next to leading order accuracy. Theory uncertainties  originating from the modelling of the main backgrounds are estimated to account for the effect on the shape of the distributions from the choice of parton density funnctions, and renormalization (\muR) and factorization (\muF) scales. The effect of the  renormalization (\muR) and factorization (\muF) scales is estimated by varying each independently and correlated up and down by a factor of two, where the anti-correlated variations are dropped. The envelope of these variations is used as an uncertainty. The uncertainties coming from the parton density functions  used for simulation are estimated using the PDF4LHC recipe~\cite{Ball:2017nwa}, which combines the MMHT14, CT14, and NNPDF3.0 PDF sets~\cite{Ball:2017nwa}. The theory uncertainties are considered for the main backgrounds coming from simulation: \WZ+jets, \ZZ+jets, \ttZ, and \tZq. This is found to have a negligible effect.
 
@@ -156,49 +213,49 @@ The systematic uncertainties entering the analysis are coming from different sou
 	\end{tabular} 
 	\label{tab:nuis}
 \end{table}
-\newpage
+\clearpage
 \subsection{Effect of systematic uncertainties on the transverse mass distribution}
 \label{sec:MTW}
 \begin{figure}[htbp] 
 	\centering 
 	\subbottom[Pileup uncertainty]{
-	    \includegraphics[width=0.23\linewidth]{6_Search/Figures/SystematicEffect/MTWsys/hist_mWt_puSF_nom_bkg}
+	    \includegraphics[width=0.24\linewidth]{6_Search/Figures/SystematicEffect/MTWsys/MWT_pileupBKG}
     }
     \subbottom[Electron identification  uncertainty]{
-    	\includegraphics[width=0.23\linewidth]{6_Search/Figures/SystematicEffect/MTWsys/hist_mWt_electronSF_nom_bkg}
+    	\includegraphics[width=0.24\linewidth]{6_Search/Figures/SystematicEffect/MTWsys/MWT_electronBKG}
     }
     \subbottom[Muon identification uncertainty]{
-    	\includegraphics[width=0.23\linewidth]{6_Search/Figures/SystematicEffect/MTWsys/hist_mWt_muonSF_nom_bkg}
+    	\includegraphics[width=0.24\linewidth]{6_Search/Figures/SystematicEffect/MTWsys/MWT_muonBKG}
     }
 	\subbottom[Jet energy scale uncertainty]{
-		\includegraphics[width=0.23\linewidth]{6_Search/Figures/SystematicEffect/MTWsys/hist_mWt_JES_nom_bkg}
+		\includegraphics[width=0.24\linewidth]{6_Search/Figures/SystematicEffect/MTWsys/MTW_JESBKG}
 	}
 	\subbottom[Jet energy resolution uncertainty]{
-		\includegraphics[width=0.23\linewidth]{6_Search/Figures/SystematicEffect/MTWsys/hist_mWt_JER_nom_bkg}
+		\includegraphics[width=0.24\linewidth]{6_Search/Figures/SystematicEffect/MTWsys/MTW_JERBKG}
 	}
 	\subbottom[CSVv2: cf uncertainty~(1)]{
-		\includegraphics[width=0.23\linewidth]{6_Search/Figures/SystematicEffect/MTWsys/hist_mWt_btagSF_cferr1_nom_bkg}
+		\includegraphics[width=0.24\linewidth]{6_Search/Figures/SystematicEffect/MTWsys/MWT_btagSF_cferr1BKG}
 	}
     \subbottom[CSVv2: cf uncertainty~(2)]{
-    	\includegraphics[width=0.23\linewidth]{6_Search/Figures/SystematicEffect/MTWsys/hist_mWt_btagSF_cferr2_nom_bkg}
+    	\includegraphics[width=0.24\linewidth]{6_Search/Figures/SystematicEffect/MTWsys/MWT_btagSF_cferr2BKG}
     }
     \subbottom[CSVv2: hf uncertainty]{
-     	\includegraphics[width=0.23\linewidth]{6_Search/Figures/SystematicEffect/MTWsys/hist_mWt_btagSF_hf_nom_bkg}
+     	\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/MTWsys/MWT_btagSF_hfBKG}
     }
     \subbottom[CSVv2: lf uncertainty ]{
-    	\includegraphics[width=0.23\linewidth]{6_Search/Figures/SystematicEffect/MTWsys/hist_mWt_btagSF_lf_nom_bkg}
+    	\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/MTWsys/MWT_btagSF_lfBKG}
     }
     \subbottom[CSVv2: hf statistical uncertainty~(1) ]{
-    	\includegraphics[width=0.23\linewidth]{6_Search/Figures/SystematicEffect/MTWsys/hist_mWt_btagSF_hfstats1_nom_bkg}
+    	\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/MTWsys/MWT_btagSF_hfstats1BKG}
     }
     \subbottom[CSVv2: hf statistical uncertainty~(2) ]{
-		\includegraphics[width=0.23\linewidth]{6_Search/Figures/SystematicEffect/MTWsys/hist_mWt_btagSF_hfstats2_nom_bkg}
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/MTWsys/MWT_btagSF_hfstats2BKG}
     }
     \subbottom[CSVv2: lf statistical uncertainty~(1) ]{
-    	\includegraphics[width=0.23\linewidth]{6_Search/Figures/SystematicEffect/MTWsys/hist_mWt_btagSF_lfstats1_nom_bkg}
+    	\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/MTWsys/MWT_btagSF_lfstats1BKG}
     }
     \subbottom[CSVv2: lf statistical uncertainty~(2) ]{
-		\includegraphics[width=0.23\linewidth]{6_Search/Figures/SystematicEffect/MTWsys/hist_mWt_btagSF_lfstats2_nom_bkg}
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/MTWsys/MWT_btagSF_lfstats2BKG}
 	}
 	\caption{Distribution of the nominal values and shift due to systematic uncertainties for the transverse mass of the \PW\ boson in the \WZCR\ for the \WZ\ process. All leptonic channels summed.}
 	\label{fig:shiftMTW}
@@ -209,236 +266,254 @@ The systematic uncertainties entering the analysis are coming from different sou
 \begin{figure}[htbp] 
 	\centering 
 	\subbottom[Pileup uncertainty]{
-		\includegraphics[width=0.23\linewidth]{6_Search/Figures/SystematicEffect/singletopzct/systematics/hist_BDT_puSF_nom_bkg}
-		\includegraphics[width=0.23\linewidth]{6_Search/Figures/SystematicEffect/singletopzct/systematics/hist_BDT_puSF_nom_sig}
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/toppairzct/pileupBKG}
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/toppairzct/pileupSIG}
 	}
-	\subbottom[Electron identification uncertainty]{
-		\includegraphics[width=0.23\linewidth]{6_Search/Figures/SystematicEffect/singletopzct/systematics/hist_BDT_electronSF_nom_bkg}
-		\includegraphics[width=0.23\linewidth]{6_Search/Figures/SystematicEffect/singletopzct/systematics/hist_BDT_electronSF_nom_sig}
+	\subbottom[Electron identification  uncertainty]{
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/toppairzct/electronBKG}
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/toppairzct/electronSIG}
 	}
 	\subbottom[Muon identification uncertainty]{
-		\includegraphics[width=0.23\linewidth]{6_Search/Figures/SystematicEffect/singletopzct/systematics/hist_BDT_muonSF_nom_bkg}
-		\includegraphics[width=0.23\linewidth]{6_Search/Figures/SystematicEffect/singletopzct/systematics/hist_BDT_muonSF_nom_sig}
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/toppairzct/muonBKG}
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/toppairzct/muonSIG}
 	}
 	\subbottom[Jet energy scale uncertainty]{
-		\includegraphics[width=0.23\linewidth]{6_Search/Figures/SystematicEffect/singletopzct/systematics/hist_BDT_JES_nom_bkg}
-		\includegraphics[width=0.23\linewidth]{6_Search/Figures/SystematicEffect/singletopzct/systematics/hist_BDT_JES_nom_sig}
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/toppairzct/JESBKG}
+			\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/toppairzct/JESSIG}
 	}
 	\subbottom[Jet energy resolution uncertainty]{
-		\includegraphics[width=0.23\linewidth]{6_Search/Figures/SystematicEffect/singletopzct/systematics/hist_BDT_JER_nom_bkg}
-		\includegraphics[width=0.23\linewidth]{6_Search/Figures/SystematicEffect/singletopzct/systematics/hist_BDT_JER_nom_sig}
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/toppairzct/JERBKG}
+			\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/toppairzct/JERSIG}
 	}
+		\caption{Distribution of the nominal values and shift due to systematic uncertainties for the transverse mass of the \PW\ boson in the \TTSR\ for the \WZ\ process and FCNC signal involving a \Zct\ vertex. All leptonic channels summed. Part one.}
+\label{fig:shiftBDTTTZct1}
+\end{figure}
+\begin{figure}[htbp] 
+	\centering 
 	\subbottom[CSVv2: cf uncertainty~(1)]{
-		\includegraphics[width=0.23\linewidth]{6_Search/Figures/SystematicEffect/singletopzct/systematics/hist_BDT_btagSF_cferr1_nom_bkg}
-         	\includegraphics[width=0.23\linewidth]{6_Search/Figures/SystematicEffect/singletopzct/systematics/hist_BDT_btagSF_cferr1_nom_sig}
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/toppairzct/btagSF_cferr1BKG}
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/toppairzct/btagSF_cferr1SIG}
 	}
 	\subbottom[CSVv2: cf uncertainty~(2)]{
-		\includegraphics[width=0.23\linewidth]{6_Search/Figures/SystematicEffect/singletopzct/systematics/hist_BDT_btagSF_cferr2_nom_bkg}
-		\includegraphics[width=0.23\linewidth]{6_Search/Figures/SystematicEffect/singletopzct/systematics/hist_BDT_btagSF_cferr2_nom_sig}
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/toppairzct/btagSF_cferr2BKG}
+			\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/toppairzct/btagSF_cferr2SIG}
 	}
-	\subbottom[CSVv2: hf uncertainty ]{
-		\includegraphics[width=0.23\linewidth]{6_Search/Figures/SystematicEffect/singletopzct/systematics/hist_BDT_btagSF_hf_nom_bkg}
-			\includegraphics[width=0.23\linewidth]{6_Search/Figures/SystematicEffect/singletopzct/systematics/hist_BDT_btagSF_hf_nom_sig}
+	\subbottom[CSVv2: hf uncertainty]{
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/toppairzct/btagSF_hfBKG}
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/toppairzct/btagSF_hfSIG}
 	}
 	\subbottom[CSVv2: lf uncertainty ]{
-		\includegraphics[width=0.23\linewidth]{6_Search/Figures/SystematicEffect/singletopzct/systematics/hist_BDT_btagSF_lf_nom_bkg}
-		\includegraphics[width=0.23\linewidth]{6_Search/Figures/SystematicEffect/singletopzct/systematics/hist_BDT_btagSF_lf_nom_sig}
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/toppairzct/btagSF_lfBKG}
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/toppairzct/btagSF_lfSIG}
 	}
 	\subbottom[CSVv2: hf statistical uncertainty~(1) ]{
-		\includegraphics[width=0.23\linewidth]{6_Search/Figures/SystematicEffect/singletopzct/systematics/hist_BDT_btagSF_hfstats1_nom_bkg}
-		\includegraphics[width=0.23\linewidth]{6_Search/Figures/SystematicEffect/singletopzct/systematics/hist_BDT_btagSF_hfstats1_nom_sig}
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/toppairzct/btagSF_hfstats1BKG}
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/toppairzct/btagSF_hfstats1SIG}
 	}
 	\subbottom[CSVv2: hf statistical uncertainty~(2) ]{
-		\includegraphics[width=0.23\linewidth]{6_Search/Figures/SystematicEffect/singletopzct/systematics/hist_BDT_btagSF_hfstats2_nom_bkg}
-		\includegraphics[width=0.23\linewidth]{6_Search/Figures/SystematicEffect/singletopzct/systematics/hist_BDT_btagSF_hfstats2_nom_sig}
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/toppairzct/btagSF_hfstats2BKG}
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/toppairzct/btagSF_hfstats2SIG}
 	}
 	\subbottom[CSVv2: lf statistical uncertainty~(1) ]{
-		\includegraphics[width=0.23\linewidth]{6_Search/Figures/SystematicEffect/singletopzct/systematics/hist_BDT_btagSF_lfstats1_nom_bkg}
-		\includegraphics[width=0.23\linewidth]{6_Search/Figures/SystematicEffect/singletopzct/systematics/hist_BDT_btagSF_lfstats1_nom_sig}
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/toppairzct/btagSF_lfstats1BKG}
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/toppairzct/btagSF_lfstats1SIG}
 	}
 	\subbottom[CSVv2: lf statistical uncertainty~(2) ]{
-		\includegraphics[width=0.23\linewidth]{6_Search/Figures/SystematicEffect/singletopzct/systematics/hist_BDT_btagSF_lfstats2_nom_bkg}
-		\includegraphics[width=0.23\linewidth]{6_Search/Figures/SystematicEffect/singletopzct/systematics/hist_BDT_btagSF_lfstats2_nom_sig}
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/toppairzct/btagSF_lfstats2BKG}
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/toppairzct/btagSF_lfstats2SIG}
 	}
-	\caption{Distribution of the nominal values and shift due to systematic uncertainties for the transverse mass of the \PW\ boson in the \STSR\ for the \WZ\ process and FCNC signal involving a \Zct\ vertex. All leptonic channels summed.}
+		\caption{Distribution of the nominal values and shift due to systematic uncertainties for the transverse mass of the \PW\ boson in the \TTSR\ for the \WZ\ process and FCNC signal involving a \Zct\ vertex. All leptonic channels summed. Part two.}
+	\label{fig:shiftBDTTTZct}
+\end{figure}
+\newpage %./BDTAnalyzer Ntup MVAinput/BDT_toppair_Zct/Reader_BDT_toppair_Zct_MVA_regionEq1.root Zct  toppair  PlotJeSystematics doSystematics
+\begin{figure}[htbp] 
+	\centering 
+	\subbottom[Pileup uncertainty]{
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/toppairzut/pileupBKG}
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/toppairzut/pileupSIG}
+	}
+	\subbottom[Electron identification  uncertainty]{
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/toppairzut/electronBKG}
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/toppairzut/electronSIG}
+	}
+	\subbottom[Muon identification uncertainty]{
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/toppairzut/muonBKG}
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/toppairzut/muonSIG}
+	}
+	\subbottom[Jet energy scale uncertainty]{
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/toppairzut/JESBKG}
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/toppairzut/JESSIG}
+	}
+	\subbottom[Jet energy resolution uncertainty]{
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/toppairzut/JERBKG}
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/toppairzut/JERSIG}
+	}
+	\caption{Distribution of the nominal values and shift due to systematic uncertainties for the transverse mass of the \PW\ boson in the \TTSR\ for the \WZ\ process and FCNC signal involving a \Zut\ vertex. All leptonic channels summed. Part one.}
+\label{fig:shiftBDTTTZut1}
+\end{figure}
+\begin{figure}[htbp] 
+	\centering 
+	\subbottom[CSVv2: cf uncertainty~(1)]{
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/toppairzut/btagSF_cferr1BKG}
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/toppairzut/btagSF_cferr1SIG}
+	}
+	\subbottom[CSVv2: cf uncertainty~(2)]{
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/toppairzut/btagSF_cferr2BKG}
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/toppairzut/btagSF_cferr2SIG}
+	}
+	\subbottom[CSVv2: hf uncertainty]{
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/toppairzut/btagSF_hfBKG}
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/toppairzut/btagSF_hfSIG}
+	}
+	\subbottom[CSVv2: lf uncertainty ]{
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/toppairzut/btagSF_lfBKG}
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/toppairzut/btagSF_lfSIG}
+	}
+	\subbottom[CSVv2: hf statistical uncertainty~(1) ]{
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/toppairzut/btagSF_hfstats1BKG}
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/toppairzut/btagSF_hfstats1SIG}
+	}
+	\subbottom[CSVv2: hf statistical uncertainty~(2) ]{
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/toppairzut/btagSF_hfstats2BKG}
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/toppairzut/btagSF_hfstats2SIG}
+	}
+	\subbottom[CSVv2: lf statistical uncertainty~(1) ]{
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/toppairzut/btagSF_lfstats1BKG}
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/toppairzut/btagSF_lfstats1SIG}
+	}
+	\subbottom[CSVv2: lf statistical uncertainty~(2) ]{
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/toppairzut/btagSF_lfstats2BKG}
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/toppairzut/btagSF_lfstats2SIG}
+	}
+	\caption{Distribution of the nominal values and shift due to systematic uncertainties for the transverse mass of the \PW\ boson in the \TTSR\ for the \WZ\ process and FCNC signal involving a \Zut\ vertex. All leptonic channels summed. Part two.}
+	\label{fig:shiftBDTTTZut}
+\end{figure}
+\newpage
+\begin{figure}[htbp] 
+	\centering 
+	\subbottom[Pileup uncertainty]{
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/singletopzct/pileupBKG}
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/singletopzct/pileupSIG}
+	}
+	\subbottom[Electron identification  uncertainty]{
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/singletopzct/electronBKG}
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/singletopzct/electronSIG}
+	}
+	\subbottom[Muon identification uncertainty]{
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/singletopzct/muonBKG}
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/singletopzct/muonSIG}
+	}
+	\subbottom[Jet energy scale uncertainty]{
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/singletopzct/JESBKG}
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/singletopzct/JESSIG}
+	}
+	\subbottom[Jet energy resolution uncertainty]{
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/singletopzct/JERBKG}
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/singletopzct/JERSIG}
+	}
+	\caption{Distribution of the nominal values and shift due to systematic uncertainties for the transverse mass of the \PW\ boson in the \STSR\ for the \WZ\ process and FCNC signal involving a \Zct\ vertex. All leptonic channels summed. Part one.}
+\label{fig:shiftBDTSTZct1}
+\end{figure}
+\begin{figure}[htbp] 
+	\centering 
+	\subbottom[CSVv2: cf uncertainty~(1)]{
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/singletopzct/btagSF_cferr1BKG}
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/singletopzct/btagSF_cferr1SIG}
+	}
+	\subbottom[CSVv2: cf uncertainty~(2)]{
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/singletopzct/btagSF_cferr2BKG}
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/singletopzct/btagSF_cferr2SIG}
+	}
+	\subbottom[CSVv2: hf uncertainty]{
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/singletopzct/btagSF_hfBKG}
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/singletopzct/btagSF_hfSIG}
+	}
+	\subbottom[CSVv2: lf uncertainty ]{
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/singletopzct/btagSF_lfBKG}
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/singletopzct/btagSF_lfSIG}
+	}
+	\subbottom[CSVv2: hf statistical uncertainty~(1) ]{
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/singletopzct/btagSF_hfstats1BKG}
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/singletopzct/btagSF_hfstats1SIG}
+	}
+	\subbottom[CSVv2: hf statistical uncertainty~(2) ]{
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/singletopzct/btagSF_hfstats2BKG}
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/singletopzct/btagSF_hfstats2SIG}
+	}
+	\subbottom[CSVv2: lf statistical uncertainty~(1) ]{
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/singletopzct/btagSF_lfstats1BKG}
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/singletopzct/btagSF_lfstats1SIG}
+	}
+	\subbottom[CSVv2: lf statistical uncertainty~(2) ]{
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/singletopzct/btagSF_lfstats2BKG}
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/singletopzct/btagSF_lfstats2SIG}
+	}
+	\caption{Distribution of the nominal values and shift due to systematic uncertainties for the transverse mass of the \PW\ boson in the \STSR\ for the \WZ\ process and FCNC signal involving a \Zct\ vertex. All leptonic channels summed. Part two.}
 	\label{fig:shiftBDTSTZct}
 \end{figure}
 \newpage
 \begin{figure}[htbp] 
 	\centering 
 	\subbottom[Pileup uncertainty]{
-		\includegraphics[width=0.23\linewidth]{6_Search/Figures/SystematicEffect/toppairzct/systematics/hist_BDT_puSF_nom_bkg}
-		\includegraphics[width=0.23\linewidth]{6_Search/Figures/SystematicEffect/toppairzct/systematics/hist_BDT_puSF_nom_sig}
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/pileupBKG}
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/pileupSIG}
 	}
-	\subbottom[Electron identification uncertainty]{
-		\includegraphics[width=0.23\linewidth]{6_Search/Figures/SystematicEffect/toppairzct/systematics/hist_BDT_electronSF_nom_bkg}
-		\includegraphics[width=0.23\linewidth]{6_Search/Figures/SystematicEffect/toppairzct/systematics/hist_BDT_electronSF_nom_sig}
+	\subbottom[Electron identification  uncertainty]{
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/electronBKG}
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/electronSIG}
 	}
 	\subbottom[Muon identification uncertainty]{
-		\includegraphics[width=0.23\linewidth]{6_Search/Figures/SystematicEffect/toppairzct/systematics/hist_BDT_muonSF_nom_bkg}
-		\includegraphics[width=0.23\linewidth]{6_Search/Figures/SystematicEffect/toppairzct/systematics/hist_BDT_muonSF_nom_sig}
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/muonBKG}
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/muonSIG}
 	}
 	\subbottom[Jet energy scale uncertainty]{
-		\includegraphics[width=0.23\linewidth]{6_Search/Figures/SystematicEffect/toppairzct/systematics/hist_BDT_JES_nom_bkg}
-		\includegraphics[width=0.23\linewidth]{6_Search/Figures/SystematicEffect/toppairzct/systematics/hist_BDT_JES_nom_sig}
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/JESBKG}
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/JESSIG}
 	}
 	\subbottom[Jet energy resolution uncertainty]{
-		\includegraphics[width=0.23\linewidth]{6_Search/Figures/SystematicEffect/toppairzct/systematics/hist_BDT_JER_nom_bkg}
-		\includegraphics[width=0.23\linewidth]{6_Search/Figures/SystematicEffect/toppairzct/systematics/hist_BDT_JER_nom_sig}
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/JERBKG}
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/JERSIG}
 	}
-	\subbottom[CSVv2: cf uncertainty~(1)]{
-		\includegraphics[width=0.23\linewidth]{6_Search/Figures/SystematicEffect/toppairzct/systematics/hist_BDT_btagSF_cferr1_nom_bkg}
-		\includegraphics[width=0.23\linewidth]{6_Search/Figures/SystematicEffect/toppairzct/systematics/hist_BDT_btagSF_cferr1_nom_sig}
-	}
-	\subbottom[CSVv2: cf uncertainty~(2)]{
-		\includegraphics[width=0.23\linewidth]{6_Search/Figures/SystematicEffect/toppairzct/systematics/hist_BDT_btagSF_cferr2_nom_bkg}
-		\includegraphics[width=0.23\linewidth]{6_Search/Figures/SystematicEffect/toppairzct/systematics/hist_BDT_btagSF_cferr2_nom_sig}
-	}
-	\subbottom[CSVv2: hf uncertainty ]{
-		\includegraphics[width=0.23\linewidth]{6_Search/Figures/SystematicEffect/toppairzct/systematics/hist_BDT_btagSF_hf_nom_bkg}
-		\includegraphics[width=0.23\linewidth]{6_Search/Figures/SystematicEffect/toppairzct/systematics/hist_BDT_btagSF_hf_nom_sig}
-	}
-	\subbottom[CSVv2: lf uncertainty ]{
-		\includegraphics[width=0.23\linewidth]{6_Search/Figures/SystematicEffect/toppairzct/systematics/hist_BDT_btagSF_lf_nom_bkg}
-		\includegraphics[width=0.23\linewidth]{6_Search/Figures/SystematicEffect/toppairzct/systematics/hist_BDT_btagSF_lf_nom_sig}
-	}
-	\subbottom[CSVv2: hf statistical uncertainty~(1) ]{
-		\includegraphics[width=0.23\linewidth]{6_Search/Figures/SystematicEffect/toppairzct/systematics/hist_BDT_btagSF_hfstats1_nom_bkg}
-		\includegraphics[width=0.23\linewidth]{6_Search/Figures/SystematicEffect/toppairzct/systematics/hist_BDT_btagSF_hfstats1_nom_sig}
-	}
-	\subbottom[CSVv2: hf statistical uncertainty~(2) ]{
-		\includegraphics[width=0.23\linewidth]{6_Search/Figures/SystematicEffect/toppairzct/systematics/hist_BDT_btagSF_hfstats2_nom_bkg}
-		\includegraphics[width=0.23\linewidth]{6_Search/Figures/SystematicEffect/toppairzct/systematics/hist_BDT_btagSF_hfstats2_nom_sig}
-	}
-	\subbottom[CSVv2: lf statistical uncertainty~(1) ]{
-		\includegraphics[width=0.23\linewidth]{6_Search/Figures/SystematicEffect/toppairzct/systematics/hist_BDT_btagSF_lfstats1_nom_bkg}
-		\includegraphics[width=0.23\linewidth]{6_Search/Figures/SystematicEffect/toppairzct/systematics/hist_BDT_btagSF_lfstats1_nom_sig}
-	}
-	\subbottom[CSVv2: lf statistical uncertainty~(2) ]{
-		\includegraphics[width=0.23\linewidth]{6_Search/Figures/SystematicEffect/toppairzct/systematics/hist_BDT_btagSF_lfstats2_nom_bkg}
-		\includegraphics[width=0.23\linewidth]{6_Search/Figures/SystematicEffect/toppairzct/systematics/hist_BDT_btagSF_lfstats2_nom_sig}
-	}
-	\caption{Distribution of the nominal values and shift due to systematic uncertainties for the transverse mass of the \PW\ boson in the \TTSR\ for the \WZ\ process and FCNC signal involving a \Zct\ vertex. All leptonic channels summed.}
-	\label{fig:shiftBDTTTZct}
+	\caption{Distribution of the nominal values and shift due to systematic uncertainties for the transverse mass of the \PW\ boson in the \STSR\ for the \WZ\ process and FCNC signal involving a \Zut\ vertex. All leptonic channels summed. Part one.}
+\label{fig:shiftBDTSTZut1}
 \end{figure}
-\newpage
 \begin{figure}[htbp] 
 	\centering 
-	\subbottom[Pileup uncertainty]{
-		\includegraphics[width=0.23\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/systematics/hist_BDT_puSF_nom_bkg}
-		\includegraphics[width=0.23\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/systematics/hist_BDT_puSF_nom_sig}
-	}
-	\subbottom[Electron identification uncertainty]{
-		\includegraphics[width=0.23\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/systematics/hist_BDT_electronSF_nom_bkg}
-		\includegraphics[width=0.23\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/systematics/hist_BDT_electronSF_nom_sig}
-	}
-	\subbottom[Muon identification uncertainty]{
-		\includegraphics[width=0.23\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/systematics/hist_BDT_muonSF_nom_bkg}
-		\includegraphics[width=0.23\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/systematics/hist_BDT_muonSF_nom_sig}
-	}
-	\subbottom[Jet energy scale uncertainty]{
-		\includegraphics[width=0.23\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/systematics/hist_BDT_JES_nom_bkg}
-		\includegraphics[width=0.23\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/systematics/hist_BDT_JES_nom_sig}
-	}
-	\subbottom[Jet energy resolution uncertainty]{
-		\includegraphics[width=0.23\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/systematics/hist_BDT_JER_nom_bkg}
-		\includegraphics[width=0.23\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/systematics/hist_BDT_JER_nom_sig}
-	}
 	\subbottom[CSVv2: cf uncertainty~(1)]{
-		\includegraphics[width=0.23\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/systematics/hist_BDT_btagSF_cferr1_nom_bkg}
-		\includegraphics[width=0.23\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/systematics/hist_BDT_btagSF_cferr1_nom_sig}
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/btagSF_cferr1BKG}
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/btagSF_cferr1SIG}
 	}
 	\subbottom[CSVv2: cf uncertainty~(2)]{
-		\includegraphics[width=0.23\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/systematics/hist_BDT_btagSF_cferr2_nom_bkg}
-		\includegraphics[width=0.23\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/systematics/hist_BDT_btagSF_cferr2_nom_sig}
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/btagSF_cferr2BKG}
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/btagSF_cferr2SIG}
 	}
-	\subbottom[CSVv2: hf uncertainty ]{
-		\includegraphics[width=0.23\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/systematics/hist_BDT_btagSF_hf_nom_bkg}
-		\includegraphics[width=0.23\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/systematics/hist_BDT_btagSF_hf_nom_sig}
+	\subbottom[CSVv2: hf uncertainty]{
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/btagSF_hfBKG}
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/btagSF_hfSIG}
 	}
 	\subbottom[CSVv2: lf uncertainty ]{
-		\includegraphics[width=0.23\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/systematics/hist_BDT_btagSF_lf_nom_bkg}
-		\includegraphics[width=0.23\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/systematics/hist_BDT_btagSF_lf_nom_sig}
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/btagSF_lfBKG}
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/btagSF_lfSIG}
 	}
 	\subbottom[CSVv2: hf statistical uncertainty~(1) ]{
-		\includegraphics[width=0.23\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/systematics/hist_BDT_btagSF_hfstats1_nom_bkg}
-		\includegraphics[width=0.23\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/systematics/hist_BDT_btagSF_hfstats1_nom_sig}
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/btagSF_hfstats1BKG}
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/btagSF_hfstats1SIG}
 	}
 	\subbottom[CSVv2: hf statistical uncertainty~(2) ]{
-		\includegraphics[width=0.23\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/systematics/hist_BDT_btagSF_hfstats2_nom_bkg}
-		\includegraphics[width=0.23\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/systematics/hist_BDT_btagSF_hfstats2_nom_sig}
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/btagSF_hfstats2BKG}
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/btagSF_hfstats2SIG}
 	}
 	\subbottom[CSVv2: lf statistical uncertainty~(1) ]{
-		\includegraphics[width=0.23\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/systematics/hist_BDT_btagSF_lfstats1_nom_bkg}
-		\includegraphics[width=0.23\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/systematics/hist_BDT_btagSF_lfstats1_nom_sig}
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/btagSF_lfstats1BKG}
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/btagSF_lfstats1SIG}
 	}
 	\subbottom[CSVv2: lf statistical uncertainty~(2) ]{
-		\includegraphics[width=0.23\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/systematics/hist_BDT_btagSF_lfstats2_nom_bkg}
-		\includegraphics[width=0.23\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/systematics/hist_BDT_btagSF_lfstats2_nom_sig}
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/btagSF_lfstats2BKG}
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/btagSF_lfstats2SIG}
 	}
-	\caption{Distribution of the nominal values and shift due to systematic uncertainties for the transverse mass of the \PW\ boson in the \STSR\ for the \WZ\ process and FCNC signal involving a \Zut\ vertex. All leptonic channels summed.}
+	\caption{Distribution of the nominal values and shift due to systematic uncertainties for the transverse mass of the \PW\ boson in the \STSR\ for the \WZ\ process and FCNC signal involving a \Zut\ vertex. All leptonic channels summed. Part two.}
 	\label{fig:shiftBDTSTZut}
 \end{figure}
-\newpage
-\begin{figure}[htbp] 
-	\centering 
-	\subbottom[Pileup uncertainty]{
-		\includegraphics[width=0.23\linewidth]{6_Search/Figures/SystematicEffect/toppairzut/systematics/hist_BDT_puSF_nom_bkg}
-		\includegraphics[width=0.23\linewidth]{6_Search/Figures/SystematicEffect/toppairzut/systematics/hist_BDT_puSF_nom_sig}
-	}
-	\subbottom[Electron identification uncertainty]{
-		\includegraphics[width=0.23\linewidth]{6_Search/Figures/SystematicEffect/toppairzut/systematics/hist_BDT_electronSF_nom_bkg}
-		\includegraphics[width=0.23\linewidth]{6_Search/Figures/SystematicEffect/toppairzut/systematics/hist_BDT_electronSF_nom_sig}
-	}
-	\subbottom[Muon identification uncertainty]{
-		\includegraphics[width=0.23\linewidth]{6_Search/Figures/SystematicEffect/toppairzut/systematics/hist_BDT_muonSF_nom_bkg}
-		\includegraphics[width=0.23\linewidth]{6_Search/Figures/SystematicEffect/toppairzut/systematics/hist_BDT_muonSF_nom_sig}
-	}
-	\subbottom[Jet energy scale uncertainty]{
-		\includegraphics[width=0.23\linewidth]{6_Search/Figures/SystematicEffect/toppairzut/systematics/hist_BDT_JES_nom_bkg}
-		\includegraphics[width=0.23\linewidth]{6_Search/Figures/SystematicEffect/toppairzut/systematics/hist_BDT_JES_nom_sig}
-	}
-	\subbottom[Jet energy resolution uncertainty]{
-		\includegraphics[width=0.23\linewidth]{6_Search/Figures/SystematicEffect/toppairzut/systematics/hist_BDT_JER_nom_bkg}
-		\includegraphics[width=0.23\linewidth]{6_Search/Figures/SystematicEffect/toppairzut/systematics/hist_BDT_JER_nom_sig}
-	}
-	\subbottom[CSVv2: cf uncertainty~(1)]{
-		\includegraphics[width=0.23\linewidth]{6_Search/Figures/SystematicEffect/toppairzut/systematics/hist_BDT_btagSF_cferr1_nom_bkg}
-		\includegraphics[width=0.23\linewidth]{6_Search/Figures/SystematicEffect/toppairzut/systematics/hist_BDT_btagSF_cferr1_nom_sig}
-	}
-	\subbottom[CSVv2: cf uncertainty~(2)]{
-		\includegraphics[width=0.23\linewidth]{6_Search/Figures/SystematicEffect/toppairzut/systematics/hist_BDT_btagSF_cferr2_nom_bkg}
-		\includegraphics[width=0.23\linewidth]{6_Search/Figures/SystematicEffect/toppairzut/systematics/hist_BDT_btagSF_cferr2_nom_sig}
-	}
-	\subbottom[CSVv2: hf uncertainty ]{
-		\includegraphics[width=0.23\linewidth]{6_Search/Figures/SystematicEffect/toppairzut/systematics/hist_BDT_btagSF_hf_nom_bkg}
-		\includegraphics[width=0.23\linewidth]{6_Search/Figures/SystematicEffect/toppairzut/systematics/hist_BDT_btagSF_hf_nom_sig}
-	}
-	\subbottom[CSVv2: lf uncertainty ]{
-		\includegraphics[width=0.23\linewidth]{6_Search/Figures/SystematicEffect/toppairzut/systematics/hist_BDT_btagSF_lf_nom_bkg}
-		\includegraphics[width=0.23\linewidth]{6_Search/Figures/SystematicEffect/toppairzut/systematics/hist_BDT_btagSF_lf_nom_sig}
-	}
-	\subbottom[CSVv2: hf statistical uncertainty~(1) ]{
-		\includegraphics[width=0.23\linewidth]{6_Search/Figures/SystematicEffect/toppairzut/systematics/hist_BDT_btagSF_hfstats1_nom_bkg}
-		\includegraphics[width=0.23\linewidth]{6_Search/Figures/SystematicEffect/toppairzut/systematics/hist_BDT_btagSF_hfstats1_nom_sig}
-	}
-	\subbottom[CSVv2: hf statistical uncertainty~(2) ]{
-		\includegraphics[width=0.23\linewidth]{6_Search/Figures/SystematicEffect/toppairzut/systematics/hist_BDT_btagSF_hfstats2_nom_bkg}
-		\includegraphics[width=0.23\linewidth]{6_Search/Figures/SystematicEffect/toppairzut/systematics/hist_BDT_btagSF_hfstats2_nom_sig}
-	}
-	\subbottom[CSVv2: lf statistical uncertainty~(1) ]{
-		\includegraphics[width=0.23\linewidth]{6_Search/Figures/SystematicEffect/toppairzut/systematics/hist_BDT_btagSF_lfstats1_nom_bkg}
-		\includegraphics[width=0.23\linewidth]{6_Search/Figures/SystematicEffect/toppairzut/systematics/hist_BDT_btagSF_lfstats1_nom_sig}
-	}
-	\subbottom[CSVv2: lf statistical uncertainty~(2) ]{
-		\includegraphics[width=0.23\linewidth]{6_Search/Figures/SystematicEffect/toppairzut/systematics/hist_BDT_btagSF_lfstats2_nom_bkg}
-		\includegraphics[width=0.23\linewidth]{6_Search/Figures/SystematicEffect/toppairzut/systematics/hist_BDT_btagSF_lfstats2_nom_sig}
-	}
-	\caption{Distribution of the nominal values and shift due to systematic uncertainties for the transverse mass of the \PW\ boson in the \TTSR\ for the \WZ\ process and FCNC signal involving a \Zut\ vertex. All leptonic channels summed.}
-	\label{fig:shiftBDTTTZut}
-\end{figure}
-
-
 \clearpage
 \section{Limit setting procedure validation}
 The analysis strategy has been established using a blinded strategy. Through the use of a pseudo dataset, the limit setting procedure has been validated. Signal injection tests for which the signal strength from a pseudo dataset with a pre-set  signal strength is estimated are perfomed and shown in \fig{fig:plotzut}.
@@ -461,383 +536,14 @@ Another validation has been done by performing a Maximum Likelihood fit in the \
 
 \begin{figure}[htbp]
 	\centering
- \includegraphics[width=0.49\linewidth]{6_Search/Figures/WZcontrol/wzcontrol_MVA_mWt_uuu_Stack}
-	 \includegraphics[width=0.49\linewidth]{6_Search/Figures/WZcontrol/wzcontrol_MVA_mWt_uue_Stack}
- \includegraphics[width=0.49\linewidth]{6_Search/Figures/WZcontrol/wzcontrol_MVA_mWt_eeu_Stack}
-	 \includegraphics[width=0.49\linewidth]{6_Search/Figures/WZcontrol/wzcontrol_MVA_mWt_eee_Stack}
-	\caption{The transverse mass of the \PW\ boson in the \WZCR\ for the \mumumu\ channel (left, upper), \emumu\ channel (right, upper), \eemu\ channel (left, lower), and 3 electrons channel (right, lower).}
+	\includegraphics[width=0.49\linewidth]{6_Search/Figures/InitialFit/vars/wzcontrol_MVA_mWt_uuu_Stack}
+	\includegraphics[width=0.49\linewidth]{6_Search/Figures/InitialFit/vars/wzcontrol_MVA_mWt_uue_Stack}
+	\includegraphics[width=0.49\linewidth]{6_Search/Figures/InitialFit/vars/wzcontrol_MVA_mWt_eeu_Stack}
+	\includegraphics[width=0.49\linewidth]{6_Search/Figures/InitialFit/vars/wzcontrol_MVA_mWt_eee_Stack}
+	\caption{The transverse mass of the \PW\ boson in the \WZCR\ for the \mumumu\ channel (left, upper), \emumu\ channel (right, upper), \eemu\ channel (left, lower), and 3 electrons channel (right, lower). The uncertainty band does not include theoretical uncertainties.}
 	\label{fig:mtwstack}
 \end{figure}
-\newpage
-Using the normalisations obtained by fitting the \WZCR\ only,  one can look at the data/MC  agreement in the \WZCR\ for all the variables used to create the BDT variables. These show good agreement as illustrated in \fig{fig:agreement}.
 
-\begin{comment}
-%\begin{figure}[htbp]
-%	\centering \begin{minipage}{0.45\linewidth} \centering
-%		% % \includegraphics[width=1.\linewidth]{FiguresAfterUnblinding/WZcontrol/wzcontrol_MVA_SMtop_eta_all_Stack}
-%		\caption{Pseudo rapidity of the \SM\ top in the \WZCR\ for the sum of the different lepton channels after the initial normalization fit. }
-%		\label{fig:allwzcontrolmvasmtopeta}
-%	\end{minipage} 
-%	\hfill
-%	\begin{minipage}{0.45\linewidth} \centering
-%		% % \includegraphics[width=1.\linewidth]{FiguresAfterUnblinding/WZcontrol/wzcontrol_MVA_mlb_all_Stack}
-%		\caption{Invariant mass of the \SM\ \Pbottom\ jet and \PW\ lepton in the \WZCR\ for the sum of the different lepton channels after the initial normalization fit.}
-%		\label{fig:allwzcontrolmvamlb}
-%	\end{minipage} 
-%	\hfill
-%	\begin{minipage}{0.45\linewidth} \centering
-%		% % \includegraphics[width=1.\linewidth]{FiguresAfterUnblinding/WZcontrol/wzcontrol_MVA_dPhiWlepb_all_Stack}
-%		\caption{$\Delta \Phi$ between the \PW\ lepton and the \SM\ \Pbottom\ jet in the \WZCR\ for the sum of the different lepton channels after the initial normalization fit.}
-%		\label{fig:allwzcontrolmvadPhiWlepb}
-%	\end{minipage} 
-%	\hfill
-%	\begin{minipage}{0.45\linewidth} \centering
-%		% % \includegraphics[width=1.\linewidth]{FiguresAfterUnblinding/WZcontrol/wzcontrol_MVA_deltaRWlepJet_min_all_Stack}
-%		\caption{minimal $\Delta R$ between the \PW\ lepton and jets in the \WZCR\ for the sum of the different lepton channels after the initial normalization fit.}
-%		\label{fig:allwzcontrolmvaMVA_deltaRWlepJet_min}
-%	\end{minipage}
-%\end{figure}
-%
-%\begin{figure}[ht]
-%	\centering 
-%	\begin{minipage}{0.45\linewidth} \centering
-%		% % \includegraphics[width=1.\linewidth]{FiguresAfterUnblinding/WZcontrol/wzcontrol_MVA_Zboson_M_all_Stack}
-%		\caption{Invariant mass of the \PZ\ boson in the \WZCR\ for the sum of the different lepton channels after the initial normalization fit.}
-%		\label{fig:allwzcontrolmvaZbosonM}
-%	\end{minipage} 
-%	\hfill
-%	\begin{minipage}{0.45\linewidth} \centering
-%		% % \includegraphics[width=1.\linewidth]{FiguresAfterUnblinding/WZcontrol/wzcontrol_MVA_dPhiZWlep_all_Stack}
-%		\caption{$\Delta \Phi$ between the \PW\ lepton and the \PZ\ boson in the \WZCR\ for the sum of the different lepton channels after the initial normalization fit.}
-%		\label{fig:allwzcontrolmvadPhiZWlep}
-%	\end{minipage} 
-%	
-%	\hfill
-%	\begin{minipage}{0.45\linewidth} \centering
-%		% % \includegraphics[width=1.\linewidth]{FiguresAfterUnblinding/WZcontrol/wzcontrol_MVA_dRWlepb_all_Stack}
-%		\caption{$\Delta R$ between the \PW\ lepton and the \SM\ \Pbottom\ jet in the \WZCR\ for the sum of the different lepton channels after the initial normalization fit.}
-%		\label{fig:allwzcontrolmvadRWlepb}
-%	\end{minipage} 
-%	\hfill
-%	\begin{minipage}{0.45\linewidth} \centering
-%		% % \includegraphics[width=1.\linewidth]{FiguresAfterUnblinding/WZcontrol/wzcontrol_MVA_NJets_CSVv2M_all_Stack}
-%		\caption{Number of b jets according to the CSVv2 medium working point in the \WZCR\ for the sum of the different lepton channels after the initial normalization fit.}
-%		\label{fig:allwzcontrolmvaNJets_CSVv2M}
-%	\end{minipage}
-%\end{figure}
-%\newpage
-%\begin{figure}[ht]
-%	\centering \begin{minipage}{0.45\linewidth} \centering
-%		% % \includegraphics[width=1.\linewidth]{FiguresAfterUnblinding/WZcontrol/wzcontrol_MVA_FCNCtop_M_all_Stack}
-%		\caption{Invariant mass of the FCNC top in the \WZCR\ for the sum of the different lepton channels after the initial normalization fit. }
-%		\label{fig:allwzcontrolmvaFCNCtop_M}
-%	\end{minipage} \hfill
-%	\begin{minipage}{0.45\linewidth} \centering
-%		% % \includegraphics[width=1.\linewidth]{FiguresAfterUnblinding/WZcontrol/wzcontrol_MVA_dRZc_all_Stack}
-%		\caption{$\Delta R$ between the \PZ\ boson and the FCNC light jet in the \WZCR\ for the sum of the different lepton channels after the initial normalization fit. }
-%		\label{fig:allwzcontrolmvadRZc}
-%	\end{minipage} \hfill
-%	\begin{minipage}{0.45\linewidth} \centering
-%		% % \includegraphics[width=1.\linewidth]{FiguresAfterUnblinding/WZcontrol/wzcontrol_MVA_dRSMjetLightjet_all_Stack}
-%		\caption{$\Delta R$ between the \SM\ jet and the FCNC jet in the \WZCR\ for the sum of the different lepton channels after the initial normalization fit. }
-%		\label{fig:allwzcontrolmvadRSMjetLightjet}
-%	\end{minipage} \hfill
-%	\begin{minipage}{0.45\linewidth} \centering
-%		% % \includegraphics[width=1.\linewidth]{FiguresAfterUnblinding/WZcontrol/wzcontrol_MVA_charge_asym_all_Stack}
-%		\caption{Charge of the \PW\ lepton times the absolute pseudo rapidity of the \PW\ lepton in the \WZCR\ for the sum of the different lepton channels after the initial normalization fit. }
-%		\label{fig:allwzcontrolmvachargeasym}
-%	\end{minipage} 
-%\end{figure}
-%\begin{figure}[ht]
-%	\centering \begin{minipage}{0.45\linewidth} \centering
-%		% % \includegraphics[width=1.\linewidth]{FiguresAfterUnblinding/WZcontrol/wzcontrol_MVA_bdiscCSVv2_jet_0_all_Stack}
-%		\caption{b discriminant of the highest $p_T$ jet in the \WZCR\ for the sum of the different lepton channels after the initial normalization fit.}
-%		\label{fig:allwzcontrolmvabdis}
-%	\end{minipage} \hfill
-%	\begin{minipage}{0.45\linewidth} \centering
-%		% % \includegraphics[width=1.\linewidth]{FiguresAfterUnblinding/WZcontrol/wzcontrol_MVA_TotalHt_lep_all_Stack}
-%		\caption{Total Ht of the leptons in the \WZCR\ for the sum of the different lepton channels after the initial normalization fit.}
-%		\label{fig:allwzcontrolmvaht}
-%	\end{minipage} \hfill
-%	\begin{minipage}{0.45\linewidth} \centering
-%		% % \includegraphics[width=1.\linewidth]{FiguresAfterUnblinding/WZcontrol/wzcontrol_MVA_ptWQ_all_Stack}
-%		\caption{The $p_T$ of the \PW\ lepton times its charge in the \WZCR\ for the sum of the different lepton channels after the initial normalization fit. }
-%		\label{fig:allwzcontrolmvaptwq}
-%	\end{minipage} \hfill
-%	\begin{minipage}{0.45\linewidth} \centering
-%		% % \includegraphics[width=1.\linewidth]{FiguresAfterUnblinding/WZcontrol/wzcontrol_MVA_TotalInvMass_lep_all_Stack}
-%		\caption{The total invariant mass of the leptons in the \WZCR\ for the sum of the different lepton channels after the initial normalization fit. }
-%		\label{fig:allwzcontrolmvam3l}
-%	\end{minipage} 
-%\end{figure}
-%\begin{figure}[ht]
-%	\centering \begin{minipage}{0.45\linewidth} \centering
-%		% % \includegraphics[width=1.\linewidth]{FiguresAfterUnblinding/WZcontrol/wzcontrol_MVA_dRZWlep_all_Stack}
-%		\caption{$\Delta R$ between the \PW\ lepton and the \PZ\ boson in the \WZCR\ for the sum of the different lepton channels after the initial normalization fit.}
-%		\label{fig:allwzcontrolmvadRZWlep}
-%	\end{minipage} \hfill
-%	\begin{minipage}{0.45\linewidth} \centering
-%		% % \includegraphics[width=1.\linewidth]{FiguresAfterUnblinding/WZcontrol/wzcontrol_MVA_TotalInvMass_all_Stack}
-%		\caption{The total invariant mass of the event in the \WZCR\ for the sum of the different lepton channels after the initial normalization fit. }
-%		\label{fig:allwzcontrolmvainvmass}
-%	\end{minipage} \hfill
-%	\begin{minipage}{0.45\linewidth} \centering
-%		% % \includegraphics[width=1.\linewidth]{FiguresAfterUnblinding/WZcontrol/wzcontrol_MVA_Bdis_LightJet_all_Stack}
-%		\caption{The b discriminant of the FCNC jet in the \WZCR\ for the sum of the different lepton channels after the initial normalization fit. }
-%		\label{fig:allwzcontrolmvabdislightjet}
-%	\end{minipage} \hfill
-%	\begin{minipage}{0.45\linewidth} \centering
-%		% % \includegraphics[width=1.\linewidth]{FiguresAfterUnblinding/WZcontrol/wzcontrol_MVA_dRZb_all_Stack}
-%		\caption{$\Delta R$ between the \PZ\ boson and the \SM\ \Pbottom\ jet in the \WZCR\ for the sum of the different lepton channels after the initial normalization fit. }
-%		\label{fig:allwzcontrolmvadRZb}
-%	\end{minipage} 
-%\end{figure}
-
-%\subsection*{\STSR}
-%\begin{figure}[ht]
-%	\centering \begin{minipage}{0.45\linewidth} \centering
-%		% % \includegraphics[width=1.\linewidth]{FiguresAfterUnblinding/STSR/singletop_MVA_SMtop_eta_all_Stack}
-%		\caption{Pseudo rapidity of the \SM\ top in the \STSR\ for the sum of the different lepton channels after the initial normalization fit. }
-%		\label{fig:allsingletopmvasmtopeta}
-%	\end{minipage} 
-%	\hfill
-%	\begin{minipage}{0.45\linewidth} \centering
-%		% % \includegraphics[width=1.\linewidth]{FiguresAfterUnblinding/STSR/singletop_MVA_mlb_all_Stack}
-%		\caption{Invariant mass of the \SM\ \Pbottom\ jet and \PW\ lepton in the \STSR\ for the sum of the different lepton channels after the initial normalization fit.}
-%		\label{fig:allsingletopmvamlb}
-%	\end{minipage} 
-%	\hfill
-%	\begin{minipage}{0.45\linewidth} \centering
-%		% % \includegraphics[width=1.\linewidth]{FiguresAfterUnblinding/STSR/singletop_MVA_dPhiWlepb_all_Stack}
-%		\caption{$\Delta \Phi$ between the \PW\ lepton and the \SM\ \Pbottom\ jet in the \STSR\ for the sum of the different lepton channels after the initial normalization fit.}
-%		\label{fig:allsingletopmvadPhiWlepb}
-%	\end{minipage} 
-%	\hfill
-%	\begin{minipage}{0.45\linewidth} \centering
-%		% % \includegraphics[width=1.\linewidth]{FiguresAfterUnblinding/STSR/singletop_MVA_deltaRWlepJet_min_all_Stack}
-%		\caption{minimal $\Delta R$ between the \PW\ lepton and jets in the \STSR\ for the sum of the different lepton channels after the initial normalization fit.}
-%		\label{fig:allsingletopmvaMVA_deltaRWlepJet_min}
-%	\end{minipage}
-%\end{figure}
-%\newpage
-%\begin{figure}[ht]
-%	\centering 
-%	\begin{minipage}{0.45\linewidth} \centering
-%		% % \includegraphics[width=1.\linewidth]{FiguresAfterUnblinding/STSR/singletop_MVA_Zboson_M_all_Stack}
-%		\caption{Invariant mass of the \PZ\ boson in the \STSR\ for the sum of the different lepton channels after the initial normalization fit.}
-%		\label{fig:allsingletopmvaZbosonM}
-%	\end{minipage} 
-%	\hfill
-%	\begin{minipage}{0.45\linewidth} \centering
-%		% % \includegraphics[width=1.\linewidth]{FiguresAfterUnblinding/STSR/singletop_MVA_dPhiZWlep_all_Stack}
-%		\caption{$\Delta \Phi$ between the \PW\ lepton and the \PZ\ boson in the \STSR\ for the sum of the different lepton channels after the initial normalization fit.}
-%		\label{fig:allsingletopmvadPhiZWlep}
-%	\end{minipage} 
-%	
-%	\hfill
-%	\begin{minipage}{0.45\linewidth} \centering
-%		% % \includegraphics[width=1.\linewidth]{FiguresAfterUnblinding/STSR/singletop_MVA_dRWlepb_all_Stack}
-%		\caption{$\Delta R$ between the \PW\ lepton and the \SM\ \Pbottom\ jet in the \STSR\ for the sum of the different lepton channels after the initial normalization fit.}
-%		\label{fig:allsingletopmvadRWlepb}
-%	\end{minipage} 
-%	\hfill
-%	\begin{minipage}{0.45\linewidth} \centering
-%		% % \includegraphics[width=1.\linewidth]{FiguresAfterUnblinding/STSR/singletop_MVA_NJets_CSVv2M_all_Stack}
-%		\caption{Number of b jets according to the CSVv2 medium working point in the \STSR\ for the sum of the different lepton channels after the initial normalization fit.}
-%		\label{fig:allsingletopmvaNJets_CSVv2M}
-%	\end{minipage}
-%\end{figure}
-%\newpage
-%\begin{figure}[ht]
-%	\centering \begin{minipage}{0.45\linewidth} \centering
-%		% % \includegraphics[width=1.\linewidth]{FiguresAfterUnblinding/STSR/singletop_MVA_FCNCtop_M_all_Stack}
-%		\caption{Invariant mass of the FCNC top in the \STSR\ for the sum of the different lepton channels after the initial normalization fit. }
-%		\label{fig:allsingletopmvaFCNCtop_M}
-%	\end{minipage} \hfill
-%	\begin{minipage}{0.45\linewidth} \centering
-%		% % \includegraphics[width=1.\linewidth]{FiguresAfterUnblinding/STSR/singletop_MVA_dRZc_all_Stack}
-%		\caption{$\Delta R$ between the \PZ\ boson and the FCNC light jet in the \STSR\ for the sum of the different lepton channels after the initial normalization fit. }
-%		\label{fig:allsingletopmvadRZc}
-%	\end{minipage} \hfill
-%	\begin{minipage}{0.45\linewidth} \centering
-%		% % \includegraphics[width=1.\linewidth]{FiguresAfterUnblinding/STSR/singletop_MVA_dRSMjetLightjet_all_Stack}
-%		\caption{$\Delta R$ between the \SM\ jet and the FCNC jet in the \STSR\ for the sum of the different lepton channels after the initial normalization fit. }
-%		\label{fig:allsingletopmvadRSMjetLightjet}
-%	\end{minipage} \hfill
-%	\begin{minipage}{0.45\linewidth} \centering
-%		% % \includegraphics[width=1.\linewidth]{FiguresAfterUnblinding/STSR/singletop_MVA_charge_asym_all_Stack}
-%		\caption{Charge of the \PW\ lepton times the absolute pseudo rapidity of the \PW\ lepton in the \STSR\ for the sum of the different lepton channels after the initial normalization fit. }
-%		\label{fig:allsingletopmvachargeasym}
-%	\end{minipage} 
-%\end{figure}
-%\begin{figure}[ht]
-%	\centering \begin{minipage}{0.45\linewidth} \centering
-%		% % \includegraphics[width=1.\linewidth]{FiguresAfterUnblinding/STSR/singletop_MVA_bdiscCSVv2_jet_0_all_Stack}
-%		\caption{b discriminant of the highest $p_T$ jet in the \STSR\ for the sum of the different lepton channels after the initial normalization fit.}
-%		\label{fig:allsingletopmvabdis}
-%	\end{minipage} \hfill
-%	\begin{minipage}{0.45\linewidth} \centering
-%		% % \includegraphics[width=1.\linewidth]{FiguresAfterUnblinding/STSR/singletop_MVA_TotalHt_lep_all_Stack}
-%		\caption{Total Ht of the leptons in the \STSR\ for the sum of the different lepton channels after the initial normalization fit.}
-%		\label{fig:allsingletopmvaht}
-%	\end{minipage} \hfill
-%	\begin{minipage}{0.45\linewidth} \centering
-%		% % \includegraphics[width=1.\linewidth]{FiguresAfterUnblinding/STSR/singletop_MVA_ptWQ_all_Stack}
-%		\caption{The $p_T$ of the \PW\ lepton times its charge in the \STSR\ for the sum of the different lepton channels after the initial normalization fit. }
-%		\label{fig:allsingletopmvaptwq}
-%	\end{minipage} \hfill
-%	\begin{minipage}{0.45\linewidth} \centering
-%		% % \includegraphics[width=1.\linewidth]{FiguresAfterUnblinding/STSR/singletop_MVA_TotalInvMass_lep_all_Stack}
-%		\caption{The total invariant mass of the leptons in the \STSR\ for the sum of the different lepton channels after the initial normalization fit. }
-%		\label{fig:allsingletopmvam3l}
-%	\end{minipage} 
-%\end{figure}
-%\begin{figure}[ht]
-%	\centering \begin{minipage}{0.45\linewidth} \centering
-%		% % \includegraphics[width=1.\linewidth]{FiguresAfterUnblinding/STSR/singletop_MVA_dRZWlep_all_Stack}
-%		\caption{$\Delta R$ between the \PW\ lepton and the \PZ\ boson in the \STSR\ for the sum of the different lepton channels after the initial normalization fit.}
-%		\label{fig:allsingletopmvadRZWlep}
-%	\end{minipage} \hfill
-%	\begin{minipage}{0.45\linewidth} \centering
-%		% % \includegraphics[width=1.\linewidth]{FiguresAfterUnblinding/STSR/singletop_MVA_TotalInvMass_all_Stack}
-%		\caption{The total invariant mass of the event in the \STSR\ for the sum of the different lepton channels after the initial normalization fit. }
-%		\label{fig:allsingletopmvainvmass}
-%	\end{minipage} \hfill
-%	\begin{minipage}{0.45\linewidth} \centering
-%		% % \includegraphics[width=1.\linewidth]{FiguresAfterUnblinding/STSR/singletop_MVA_Bdis_LightJet_all_Stack}
-%		\caption{The b discriminant of the FCNC jet in the \STSR\ for the sum of the different lepton channels after the initial normalization fit. }
-%		\label{fig:allsingletopmvabdislightjet}
-%	\end{minipage} \hfill
-%	\begin{minipage}{0.45\linewidth} \centering
-%		% % \includegraphics[width=1.\linewidth]{FiguresAfterUnblinding/STSR/singletop_MVA_dRZb_all_Stack}
-%		\caption{$\Delta R$ between the \PZ\ boson and the \SM\ \Pbottom\ jet in the \STSR\ for the sum of the different lepton channels after the initial normalization fit. }
-%		\label{fig:allsingletopmvadRZb}
-%	\end{minipage} 
-%\end{figure}
-%
-%\subsection*{\TTSR}
-%\begin{figure}[ht]
-%	\centering \begin{minipage}{0.45\linewidth} \centering
-%		% % \includegraphics[width=1.\linewidth]{FiguresAfterUnblinding/TTSR/toppair_MVA_SMtop_eta_all_Stack}
-%		\caption{Pseudo rapidity of the \SM\ top in the \TTSR\ for the sum of the different lepton channels after the initial normalization fit. }
-%		\label{fig:alltoppairmvasmtopeta}
-%	\end{minipage} 
-%	\hfill
-%	\begin{minipage}{0.45\linewidth} \centering
-%		% % \includegraphics[width=1.\linewidth]{FiguresAfterUnblinding/TTSR/toppair_MVA_mlb_all_Stack}
-%		\caption{Invariant mass of the \SM\ \Pbottom\ jet and \PW\ lepton in the \TTSR\ for the sum of the different lepton channels after the initial normalization fit.}
-%		\label{fig:alltoppairmvamlb}
-%	\end{minipage} 
-%	\hfill
-%	\begin{minipage}{0.45\linewidth} \centering
-%		% % \includegraphics[width=1.\linewidth]{FiguresAfterUnblinding/TTSR/toppair_MVA_dPhiWlepb_all_Stack}
-%		\caption{$\Delta \Phi$ between the \PW\ lepton and the \SM\ \Pbottom\ jet in the \TTSR\ for the sum of the different lepton channels after the initial normalization fit.}
-%		\label{fig:alltoppairmvadPhiWlepb}
-%	\end{minipage} 
-%	\hfill
-%	\begin{minipage}{0.45\linewidth} \centering
-%		% % \includegraphics[width=1.\linewidth]{FiguresAfterUnblinding/TTSR/toppair_MVA_deltaRWlepJet_min_all_Stack}
-%		\caption{minimal $\Delta R$ between the \PW\ lepton and jets in the \TTSR\ for the sum of the different lepton channels after the initial normalization fit.}
-%		\label{fig:alltoppairmvaMVA_deltaRWlepJet_min}
-%	\end{minipage}
-%\end{figure}
-%\newpage
-%\begin{figure}[ht]
-%	\centering 
-%	\begin{minipage}{0.45\linewidth} \centering
-%		% % \includegraphics[width=1.\linewidth]{FiguresAfterUnblinding/TTSR/toppair_MVA_Zboson_M_all_Stack}
-%		\caption{Invariant mass of the \PZ\ boson in the \TTSR\ for the sum of the different lepton channels after the initial normalization fit.}
-%		\label{fig:alltoppairmvaZbosonM}
-%	\end{minipage} 
-%	\hfill
-%	\begin{minipage}{0.45\linewidth} \centering
-%		% % \includegraphics[width=1.\linewidth]{FiguresAfterUnblinding/TTSR/toppair_MVA_dPhiZWlep_all_Stack}
-%		\caption{$\Delta \Phi$ between the \PW\ lepton and the \PZ\ boson in the \TTSR\ for the sum of the different lepton channels after the initial normalization fit.}
-%		\label{fig:alltoppairmvadPhiZWlep}
-%	\end{minipage} 
-%	
-%	\hfill
-%	\begin{minipage}{0.45\linewidth} \centering
-%		% % \includegraphics[width=1.\linewidth]{FiguresAfterUnblinding/TTSR/toppair_MVA_dRWlepb_all_Stack}
-%		\caption{$\Delta R$ between the \PW\ lepton and the \SM\ \Pbottom\ jet in the \TTSR\ for the sum of the different lepton channels after the initial normalization fit.}
-%		\label{fig:alltoppairmvadRWlepb}
-%	\end{minipage} 
-%	\hfill
-%	\begin{minipage}{0.45\linewidth} \centering
-%		% % \includegraphics[width=1.\linewidth]{FiguresAfterUnblinding/TTSR/toppair_MVA_NJets_CSVv2M_all_Stack}
-%		\caption{Number of b jets according to the CSVv2 medium working point in the \TTSR\ for the sum of the different lepton channels after the initial normalization fit.}
-%		\label{fig:alltoppairmvaNJets_CSVv2M}
-%	\end{minipage}
-%\end{figure}
-%\newpage
-%\begin{figure}[ht]
-%	\centering \begin{minipage}{0.45\linewidth} \centering
-%		% % \includegraphics[width=1.\linewidth]{FiguresAfterUnblinding/TTSR/toppair_MVA_FCNCtop_M_all_Stack}
-%		\caption{Invariant mass of the FCNC top in the \TTSR\ for the sum of the different lepton channels after the initial normalization fit. }
-%		\label{fig:alltoppairmvaFCNCtop_M}
-%	\end{minipage} \hfill
-%	\begin{minipage}{0.45\linewidth} \centering
-%		% % \includegraphics[width=1.\linewidth]{FiguresAfterUnblinding/TTSR/toppair_MVA_dRZc_all_Stack}
-%		\caption{$\Delta R$ between the \PZ\ boson and the FCNC light jet in the \TTSR\ for the sum of the different lepton channels after the initial normalization fit. }
-%		\label{fig:alltoppairmvadRZc}
-%	\end{minipage} \hfill
-%	\begin{minipage}{0.45\linewidth} \centering
-%		% % \includegraphics[width=1.\linewidth]{FiguresAfterUnblinding/TTSR/toppair_MVA_dRSMjetLightjet_all_Stack}
-%		\caption{$\Delta R$ between the \SM\ jet and the FCNC jet in the \TTSR\ for the sum of the different lepton channels after the initial normalization fit. }
-%		\label{fig:alltoppairmvadRSMjetLightjet}
-%	\end{minipage} \hfill
-%	\begin{minipage}{0.45\linewidth} \centering
-%		% % \includegraphics[width=1.\linewidth]{FiguresAfterUnblinding/TTSR/toppair_MVA_charge_asym_all_Stack}
-%		\caption{Charge of the \PW\ lepton times the absolute pseudo rapidity of the \PW\ lepton in the \TTSR\ for the sum of the different lepton channels after the initial normalization fit. }
-%		\label{fig:alltoppairmvachargeasym}
-%	\end{minipage} 
-%\end{figure}
-%\begin{figure}[ht]
-%	\centering \begin{minipage}{0.45\linewidth} \centering
-%		% % \includegraphics[width=1.\linewidth]{FiguresAfterUnblinding/TTSR/toppair_MVA_bdiscCSVv2_jet_0_all_Stack}
-%		\caption{b discriminant of the highest $p_T$ jet in the \TTSR\ for the sum of the different lepton channels after the initial normalization fit.}
-%		\label{fig:alltoppairmvabdis}
-%	\end{minipage} \hfill
-%	\begin{minipage}{0.45\linewidth} \centering
-%		% % \includegraphics[width=1.\linewidth]{FiguresAfterUnblinding/TTSR/toppair_MVA_TotalHt_lep_all_Stack}
-%		\caption{Total Ht of the leptons in the \TTSR\ for the sum of the different lepton channels after the initial normalization fit.}
-%		\label{fig:alltoppairmvaht}
-%	\end{minipage} \hfill
-%	\begin{minipage}{0.45\linewidth} \centering
-%		% % \includegraphics[width=1.\linewidth]{FiguresAfterUnblinding/TTSR/toppair_MVA_ptWQ_all_Stack}
-%		\caption{The $p_T$ of the \PW\ lepton times its charge in the \TTSR\ for the sum of the different lepton channels after the initial normalization fit. }
-%		\label{fig:alltoppairmvaptwq}
-%	\end{minipage} \hfill
-%	\begin{minipage}{0.45\linewidth} \centering
-%		% % \includegraphics[width=1.\linewidth]{FiguresAfterUnblinding/TTSR/toppair_MVA_TotalInvMass_lep_all_Stack}
-%		\caption{The total invariant mass of the leptons in the \TTSR\ for the sum of the different lepton channels after the initial normalization fit. }
-%		\label{fig:alltoppairmvam3l}
-%	\end{minipage} 
-%\end{figure}
-%\begin{figure}[ht]
-%	\centering \begin{minipage}{0.45\linewidth} \centering
-%		% % \includegraphics[width=1.\linewidth]{FiguresAfterUnblinding/TTSR/toppair_MVA_dRZWlep_all_Stack}
-%		\caption{$\Delta R$ between the \PW\ lepton and the \PZ\ boson in the \TTSR\ for the sum of the different lepton channels after the initial normalization fit.}
-%		\label{fig:alltoppairmvadRZWlep}
-%	\end{minipage} \hfill
-%	\begin{minipage}{0.45\linewidth} \centering
-%		% % \includegraphics[width=1.\linewidth]{FiguresAfterUnblinding/TTSR/toppair_MVA_TotalInvMass_all_Stack}
-%		\caption{The total invariant mass of the event in the \TTSR\ for the sum of the different lepton channels after the initial normalization fit. }
-%		\label{fig:alltoppairmvainvmass}
-%	\end{minipage} \hfill
-%	\begin{minipage}{0.45\linewidth} \centering
-%		% % \includegraphics[width=1.\linewidth]{FiguresAfterUnblinding/TTSR/toppair_MVA_Bdis_LightJet_all_Stack}
-%		\caption{The b discriminant of the FCNC jet in the \TTSR\ for the sum of the different lepton channels after the initial normalization fit. }
-%		\label{fig:alltoppairmvabdislightjet}
-%	\end{minipage} \hfill
-%	\begin{minipage}{0.45\linewidth} \centering
-%		% % \includegraphics[width=1.\linewidth]{FiguresAfterUnblinding/TTSR/toppair_MVA_dRZb_all_Stack}
-%		\caption{$\Delta R$ between the \PZ\ boson and the \SM\ \Pbottom\ jet in the \TTSR\ for the sum of the different lepton channels after the initial normalization fit. }
-%		\label{fig:alltoppairmvadRZb}
-%	\end{minipage} 
-%\end{figure}
-
-\end{comment}
 
 \newpage
 \section{Results and discussion}
@@ -864,15 +570,9 @@ and follows a standard Gaussian with mean zero and unit width. This property can
 \end{figure}
 
 \newpage
- The nuisance parameters causing the tails in the pull distributions are the ones related to the \NPL\ background as can be seen in \fig{fig:impactsZut1}, \fig{fig:impactsZut}. \fig{fig:impactsZct1}, and \fig{fig:impactsZct}. Here one can see that the nuisance parameters related to the \NPL\ normalisations are shifted with respect to their initial values. This is to be expected since their initial  normalisation is arbitrary. Furthermore, the effect of the uncertainties on the maximum likelihood estimate of the signal strength is shown. \todo{Zeg welke sys de grootste invl hebben} 
+ The nuisance parameters causing the tails in the pull distributions are the ones related to the \NPL\ background as can be seen in \fig{fig:impactsZut1}, \fig{fig:impactsZut}. \fig{fig:impactsZct1}, and \fig{fig:impactsZct}. Here one can see that the nuisance parameters related to the \NPL\ normalisations are shifted with respect to their initial values. This is to be expected since their initial  normalisation is arbitrary. Furthermore, the effect of the uncertainties on the maximum likelihood estimate of the signal strength is shown. The search is limited by lack of data, as can be seen from \fig{fig:exclusionlimitbrcomp} and \fig{fig:exclusionlimitbrfcnczct}. After the limited data statistics, the most important systematic uncertainty are the \ttZ\ normalisation, JES uncertainty and the \NPL\ normalisation uncertainty. 
  
-  The distributions of multivariate discriminating  variables as well as the distribution of the transverse mass of the \PW\ boson are recreated with the maximum likelihood estimations of the nuisance parameters. The resulting distributions are shown in \fig{fig:shapesfitALL},\figref{fig:shapesfit3mu}, \fig{fig:shapesfit1e2mu}, \fig{fig:shapesfit2e1mu}, and \fig{fig:shapesfit3e}. %The post fit event yields are given in \Sec{sec:PostFitYields}. 
-
-
-
-
-
-
+  The distributions of multivariate discriminating  variables as well as the distribution of the transverse mass of the \PW\ boson are recreated with the maximum likelihood estimations of the nuisance parameters. The resulting distributions are shown in \fig{fig:shapesfitALL},\figref{fig:shapesfit3mu}, \fig{fig:shapesfit1e2mu}, \fig{fig:shapesfit2e1mu}, and \fig{fig:shapesfit3e}. The pre fit distribuions are given in \App{app:Prefit}. The postfit distributions of the inputvariables for the BDTs are given in \App{app:PostFit}. \todo{MAKE THESE}
 
 \begin{figure}[htbp]
 	\centering
@@ -1033,7 +733,7 @@ In \fig{fig:exclusionlimitbrcomp} and \tab{tab:ResultsTZU}, the limits for each 
 \end{table}
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.7\linewidth]{6_Search/Figures/TOP-17-017_limitsZut.pdf}
+	\includegraphics[width=0.7\linewidth]{6_Search/Figures/TOP-17-017_limitsZutStat.pdf}
 %	\includegraphics[width=0.49\linewidth]{Figures/TOP-17-017_limitsZct.pdf}
 	\caption{Exclusion limits at 95\% CL for each leptonic channel and signal region on the FCNC \Zut\ branching fractions considering one non-vanishing coupling at a time. The CMS observed (expected) limit at 95\% CL at a centre-of-mass of 8 \TeV~\cite{Sirunyan:2017kkr} is given with a blue line (dashed line).}	
 	\label{fig:exclusionlimitbrcomp}
@@ -1066,7 +766,7 @@ The limits for each leptonic channel separate as well as their combined limits a
 		
 		\eee\ & 0.12\% & 0.29\% & 0.19\% & 0.075\% & 0.050\% & 0.095\% \\ 
 		\hdashline
-		\STSR\ only & 0.10\% & 0.23\% & 0.16\% & 0.066\% & 0.045\% & 0.17\% \\ 
+		\STSR\ only & 0.10\% & 0.2\% & 0.16\% & 0.066\% & 0.045\% & 0.17\% \\ 
 		
 		\TTSR\ only & 0.044\% & 0.094\% & 0.066\% & 0.029\% & 0.020\% & 0.043\% \\ 
 		\hdashline 
@@ -1081,7 +781,7 @@ The limits for each leptonic channel separate as well as their combined limits a
 \end{table}
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.7\linewidth]{6_Search/Figures/TOP-17-017_limitsZct.pdf}
+	\includegraphics[width=0.7\linewidth]{6_Search/Figures/TOP-17-017_limitsZctStat.pdf}
 	%	\includegraphics[width=0.49\linewidth]{Figures/TOP-17-017_limitsZct.pdf}
 	\caption{Exclusion limits at 95\% CL for each leptonic channel and signal region on the FCNC \Zct\ branching fractions considering one non-vanishing coupling at a time. The CMS observed (expected) limit at 95\% CL at a centre-of-mass of 8 \TeV~\cite{Sirunyan:2017kkr} is given with a blue line (dashed line).}	
 	\label{fig:exclusionlimitbrcompc}
@@ -1089,7 +789,7 @@ The limits for each leptonic channel separate as well as their combined limits a
 
 \newpage
 \subsection{Two-dimensional limits}
-One can interpolate the one dimensional limits $\pisces_{\tZq}^{\mathrm{1D}}$ to a scenario where both couplings are on-vanishing. The interpolation is taken from Ref. \todocite, where an experimental extrapolation formulae
+One can interpolate the one dimensional limits $\pisces_{\tZq}^{\mathrm{1D}}$ to a scenario where both couplings are on-vanishing. The interpolation is taken from Ref.~\cite{CMS-PAS-TOP-17-003}, where an experimental extrapolation formulae
 \begin{equation}
  \kZct =  \pisces_{\Zct}^{\mathrm{1D}} \sqrt{1 - \frac{\kZut} {\pisces_{\Zut}^{\mathrm{1D}}}}, 
 \end{equation}
