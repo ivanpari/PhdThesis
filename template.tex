@@ -40,7 +40,7 @@
 \addbibresource{Bibliography/reconstruction.bib}
 \addbibresource{Bibliography/eventselection.bib}
 \addbibresource{Bibliography/search.bib}
-
+\addbibresource{Bibliography/conclusion.bib}
 \include{glossaries}
 % -------------------------------------------------- %
 %    title, TOC, ...                                 %
@@ -62,6 +62,7 @@
 \microtypesetup{protrusion=true}  % enables protrusion again
 \newpage
 
+\input{_introduction.tex}
 % load glossaries
 
 
@@ -167,13 +168,8 @@ In this thesis, two scenarios are being studied: one being the top-up interactio
 \section{Limit setting procedure}
 \section{Result and discussion}
 \end{comment}
-\chapter{Denouement of the top-Z FCNC hunt at 13 TeV}
-\begin{figure}
-	\centering
-	\includegraphics[width=0.7\linewidth]{Future}
-	\caption{}
-	\label{fig:future}
-\end{figure}
+\chapter{Conclusion and prospects}
+\input{7_Conclusion/conclusion.tex}
 
 
 
@@ -195,5 +191,5 @@ In this thesis, two scenarios are being studied: one being the top-up interactio
 %\printglossaries
 %\printglossary[type=\acronymtype, toctitle=\myacronymtitle, title=\myacronymtitle]  % print only one glossary, and define its title (\myacronymtitle is defined in _settings.tex)
 %\printglossaries  % print all glossaries available
-
+%\input{_summary.tex}
 \end{document}

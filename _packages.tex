@@ -15,10 +15,12 @@
                               % (encoding which is used for saving)
 \usepackage[TS1,T1]{fontenc}  % Output-Encoding
                               % (Latin1 [T1] with additional sepecial characters [TS1])
+\usepackage{collcell}
 
-% \usepackage[ngerman]{babel}   % German language package
+% \usepackage[dutch]{babel}   % German language package
 \usepackage[english]{babel}   % English language package
-
+\usepackage{array}
+\newcolumntype{H}{>{\iffalse}c<{\fi}@{}}
 % image stuff
 \usepackage[final]{graphicx}  % include graphics
 \usepackage{rotating}         % rotate images
