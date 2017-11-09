@@ -329,8 +329,8 @@ The trigger scale factors measured as a function of lepton \pt, using the datase
 \end{figure}
 \end{comment}
 
-\chapter{Dilepton controlplots}
-\label{app:controldilep}
+%\chapter{Dilepton controlplots}
+%\label{app:controldilep}
 
 
 \chapter{Transfer factors}
@@ -378,7 +378,7 @@ The trigger scale factors measured as a function of lepton \pt, using the datase
 	\end{table}
 \begin{landscape}
 
-	\begin{table}
+	\begin{table}[htbp]
 	\begin{center}
 		\begin{tabular} {l ccccc|cc}
 			\toprule
@@ -586,6 +586,7 @@ The boosted decision are trained without the \NPL\ background. In the following 
 	\caption{\mumumu\ channel. \STSR: \Zut\ vertex }
 	\label{image:Figuresuuusingletopzut}
 \end{figure}
+\begin{comment}
 \chapter{Prefit distributions}
 \label{app:Prefit}
 %\section{BDT input variables}
@@ -728,11 +729,416 @@ The boosted decision are trained without the \NPL\ background. In the following 
 	\label{fig:singletopZctprefitstack}
 \end{figure}
 
+\end{comment}
+\chapter{Limit setting details}
+%\section{Blinded initial fit, postfit distributions}
+%\label{app:IniFitDis}
 
-\chapter{Limit setting validations}
-\section{Blinded initial fit, postfit distributions}
-\label{app:IniFitDis}
+%\clearpage
+\section{BDT input variables for the \Zct\ interaction}
+\label{app:BDTinput}
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.25\linewidth]{6_Search/Figures/BDTinputvars/Zct/toppair_MVA_mlb_all_Normalized}
+	\includegraphics[width=0.25\linewidth]{6_Search/Figures/BDTinputvars/Zct/toppair_MVA_Zboson_M_all_Normalized}
+	\includegraphics[width=0.25\linewidth]{6_Search/Figures/BDTinputvars/Zct/toppair_MVA_dPhiZWlep_all_Normalized}
+	\includegraphics[width=0.25\linewidth]{6_Search/Figures/BDTinputvars/Zct/toppair_MVA_dRWlepb_all_Normalized}
+	\includegraphics[width=0.25\linewidth]{6_Search/Figures/BDTinputvars/Zct/toppair_MVA_NJets_CSVv2M_all_Normalized}
+	\includegraphics[width=0.25\linewidth]{6_Search/Figures/BDTinputvars/Zct/toppair_MVA_FCNCtop_M_all_Normalized}
+	\includegraphics[width=0.25\linewidth]{6_Search/Figures/BDTinputvars/Zct/toppair_MVA_dRZc_all_Normalized}
+	\includegraphics[width=0.25\linewidth]{6_Search/Figures/BDTinputvars/Zct/toppair_MVA_dRSMjetLightjet_all_Normalized}
+	\includegraphics[width=0.25\linewidth]{6_Search/Figures/BDTinputvars/Zct/toppair_MVA_TotalInvMass_all_Normalized}
+	\includegraphics[width=0.25\linewidth]{6_Search/Figures/BDTinputvars/Zct/toppair_MVA_dRZWlep_all_Normalized}
+	\includegraphics[width=0.25\linewidth]{6_Search/Figures/BDTinputvars/Zct/toppair_MVA_Bdis_Lightjet_all_Normalized}
+	\includegraphics[width=0.25\linewidth]{6_Search/Figures/BDTinputvars/Zct/toppair_MVA_dRZb_all_Normalized}
+	\caption{The normalised input variables for reconstructing the multivariate discriminator in the \TTSR\ for the \Zct\ vertex.}
+	\label{fig:toppairZctnormalized}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.25\linewidth]{6_Search/Figures/BDTinputvars/Zct/singletop_MVA_SMtop_Eta_all_Normalized}
+	\includegraphics[width=0.25\linewidth]{6_Search/Figures/BDTinputvars/Zct/singletop_MVA_mlb_all_Normalized}
+	\includegraphics[width=0.25\linewidth]{6_Search/Figures/BDTinputvars/Zct/singletop_MVA_dPhiWlepb_all_Normalized}
+	\includegraphics[width=0.25\linewidth]{6_Search/Figures/BDTinputvars/Zct/singletop_MVA_bdiscCSVv2_jet_0_all_Normalized}
+	\includegraphics[width=0.25\linewidth]{6_Search/Figures/BDTinputvars/Zct/singletop_MVA_TotalInvMass_lep_all_Normalized}
+	\includegraphics[width=0.25\linewidth]{6_Search/Figures/BDTinputvars/Zct/singletop_MVA_dRZWlep_all_Normalized}   
+	\caption{The normalised input variables for reconstructing the multivariate discriminator in the \STSR\ for the \Zct\ vertex.}
+	\label{fig:singletopZctnormalized}
+\end{figure}
+
+\section{Effect of the systematic uncertainties}
+\label{app:sys}
+\begin{figure}[htbp] 
+	\centering 
+	\subbottom[Pileup uncertainty]{
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/toppairzut/pileupBKG}
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/toppairzut/pileupSIG}
+	}
+	\subbottom[Electron identification  uncertainty]{
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/toppairzut/electronBKG}
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/toppairzut/electronSIG}
+	}
+	\subbottom[Muon identification uncertainty]{
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/toppairzut/muonBKG}
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/toppairzut/muonSIG}
+	}
+	\subbottom[Jet energy scale uncertainty]{
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/toppairzut/JESBKG}
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/toppairzut/JESSIG}
+	}
+	\subbottom[Jet energy resolution uncertainty]{
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/toppairzut/JERBKG}
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/toppairzut/JERSIG}
+	}
+	\caption{Distribution of the nominal values and shift due to systematic uncertainties for the transverse mass of the \PW\ boson in the \TTSR\ for the \WZ\ process and FCNC signal involving a \Zut\ vertex. All leptonic channels summed. Part one.}
+	\label{fig:shiftBDTTTZut1}
+\end{figure}
+\begin{figure}[htbp] 
+	\centering 
+	\subbottom[CSVv2: cf uncertainty~(1)]{
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/toppairzut/btagSF_cferr1BKG}
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/toppairzut/btagSF_cferr1SIG}
+	}
+	\subbottom[CSVv2: cf uncertainty~(2)]{
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/toppairzut/btagSF_cferr2BKG}
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/toppairzut/btagSF_cferr2SIG}
+	}
+	\subbottom[CSVv2: hf uncertainty]{
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/toppairzut/btagSF_hfBKG}
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/toppairzut/btagSF_hfSIG}
+	}
+	\subbottom[CSVv2: lf uncertainty ]{
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/toppairzut/btagSF_lfBKG}
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/toppairzut/btagSF_lfSIG}
+	}
+	\subbottom[CSVv2: hf statistical uncertainty~(1) ]{
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/toppairzut/btagSF_hfstats1BKG}
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/toppairzut/btagSF_hfstats1SIG}
+	}
+	\subbottom[CSVv2: hf statistical uncertainty~(2) ]{
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/toppairzut/btagSF_hfstats2BKG}
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/toppairzut/btagSF_hfstats2SIG}
+	}
+	\subbottom[CSVv2: lf statistical uncertainty~(1) ]{
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/toppairzut/btagSF_lfstats1BKG}
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/toppairzut/btagSF_lfstats1SIG}
+	}
+	\subbottom[CSVv2: lf statistical uncertainty~(2) ]{
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/toppairzut/btagSF_lfstats2BKG}
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/toppairzut/btagSF_lfstats2SIG}
+	}
+	\caption{Distribution of the nominal values and shift due to systematic uncertainties for the transverse mass of the \PW\ boson in the \TTSR\ for the \WZ\ process and FCNC signal involving a \Zut\ vertex. All leptonic channels summed. Part two.}
+	\label{fig:shiftBDTTTZut}
+\end{figure}
+\newpage
+\begin{figure}[htbp] 
+	\centering 
+	\subbottom[Pileup uncertainty]{
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/singletopzct/pileupBKG}
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/singletopzct/pileupSIG}
+	}
+	\subbottom[Electron identification  uncertainty]{
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/singletopzct/electronBKG}
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/singletopzct/electronSIG}
+	}
+	\subbottom[Muon identification uncertainty]{
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/singletopzct/muonBKG}
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/singletopzct/muonSIG}
+	}
+	\subbottom[Jet energy scale uncertainty]{
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/singletopzct/JESBKG}
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/singletopzct/JESSIG}
+	}
+	\subbottom[Jet energy resolution uncertainty]{
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/singletopzct/JERBKG}
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/singletopzct/JERSIG}
+	}
+	\caption{Distribution of the nominal values and shift due to systematic uncertainties for the transverse mass of the \PW\ boson in the \STSR\ for the \WZ\ process and FCNC signal involving a \Zct\ vertex. All leptonic channels summed. Part one.}
+	\label{fig:shiftBDTSTZct1}
+\end{figure}
+\begin{figure}[htbp] 
+	\centering 
+	\subbottom[CSVv2: cf uncertainty~(1)]{
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/singletopzct/btagSF_cferr1BKG}
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/singletopzct/btagSF_cferr1SIG}
+	}
+	\subbottom[CSVv2: cf uncertainty~(2)]{
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/singletopzct/btagSF_cferr2BKG}
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/singletopzct/btagSF_cferr2SIG}
+	}
+	\subbottom[CSVv2: hf uncertainty]{
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/singletopzct/btagSF_hfBKG}
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/singletopzct/btagSF_hfSIG}
+	}
+	\subbottom[CSVv2: lf uncertainty ]{
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/singletopzct/btagSF_lfBKG}
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/singletopzct/btagSF_lfSIG}
+	}
+	\subbottom[CSVv2: hf statistical uncertainty~(1) ]{
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/singletopzct/btagSF_hfstats1BKG}
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/singletopzct/btagSF_hfstats1SIG}
+	}
+	\subbottom[CSVv2: hf statistical uncertainty~(2) ]{
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/singletopzct/btagSF_hfstats2BKG}
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/singletopzct/btagSF_hfstats2SIG}
+	}
+	\subbottom[CSVv2: lf statistical uncertainty~(1) ]{
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/singletopzct/btagSF_lfstats1BKG}
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/singletopzct/btagSF_lfstats1SIG}
+	}
+	\subbottom[CSVv2: lf statistical uncertainty~(2) ]{
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/singletopzct/btagSF_lfstats2BKG}
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/singletopzct/btagSF_lfstats2SIG}
+	}
+	\caption{Distribution of the nominal values and shift due to systematic uncertainties for the transverse mass of the \PW\ boson in the \STSR\ for the \WZ\ process and FCNC signal involving a \Zct\ vertex. All leptonic channels summed. Part two.}
+	\label{fig:shiftBDTSTZct}
+\end{figure}
+\newpage
+\begin{figure}[htbp] 
+	\centering 
+	\subbottom[Pileup uncertainty]{
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/toppairzct/pileupBKG}
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/toppairzct/pileupSIG}
+	}
+	\subbottom[Electron identification  uncertainty]{
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/toppairzct/electronBKG}
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/toppairzct/electronSIG}
+	}
+	\subbottom[Muon identification uncertainty]{
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/toppairzct/muonBKG}
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/toppairzct/muonSIG}
+	}
+	\subbottom[Jet energy scale uncertainty]{
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/toppairzct/JESBKG}
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/toppairzct/JESSIG}
+	}
+	\subbottom[Jet energy resolution uncertainty]{
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/toppairzct/JERBKG}
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/toppairzct/JERSIG}
+	}
+	\caption{Distribution of the nominal values and shift due to systematic uncertainties for the transverse mass of the \PW\ boson in the \TTSR\ for the \WZ\ process and FCNC signal involving a \Zct\ vertex. All leptonic channels summed. Part one.}
+	\label{fig:shiftBDTTTZct1}
+\end{figure}
+\begin{figure}[htbp] 
+	\centering 
+	\subbottom[CSVv2: cf uncertainty~(1)]{
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/toppairzct/btagSF_cferr1BKG}
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/toppairzct/btagSF_cferr1SIG}
+	}
+	\subbottom[CSVv2: cf uncertainty~(2)]{
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/toppairzct/btagSF_cferr2BKG}
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/toppairzct/btagSF_cferr2SIG}
+	}
+	\subbottom[CSVv2: hf uncertainty]{
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/toppairzct/btagSF_hfBKG}
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/toppairzct/btagSF_hfSIG}
+	}
+	\subbottom[CSVv2: lf uncertainty ]{
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/toppairzct/btagSF_lfBKG}
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/toppairzct/btagSF_lfSIG}
+	}
+	\subbottom[CSVv2: hf statistical uncertainty~(1) ]{
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/toppairzct/btagSF_hfstats1BKG}
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/toppairzct/btagSF_hfstats1SIG}
+	}
+	\subbottom[CSVv2: hf statistical uncertainty~(2) ]{
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/toppairzct/btagSF_hfstats2BKG}
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/toppairzct/btagSF_hfstats2SIG}
+	}
+	\subbottom[CSVv2: lf statistical uncertainty~(1) ]{
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/toppairzct/btagSF_lfstats1BKG}
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/toppairzct/btagSF_lfstats1SIG}
+	}
+	\subbottom[CSVv2: lf statistical uncertainty~(2) ]{
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/toppairzct/btagSF_lfstats2BKG}
+		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/toppairzct/btagSF_lfstats2SIG}
+	}
+	\caption{Distribution of the nominal values and shift due to systematic uncertainties for the transverse mass of the \PW\ boson in the \TTSR\ for the \WZ\ process and FCNC signal involving a \Zct\ vertex. All leptonic channels summed. Part two.}
+	\label{fig:shiftBDTTTZct}
+\end{figure}
 
 \clearpage
-\section{Post fit distributions of the BDT input vars}
+\section{Post fit distributions}
 \label{app:PostFit}
+
+\subsection{Nuisance parameters}
+\begin{figure}[htbp] 
+	\centering
+	\includegraphics[page=1,width=.99\linewidth,keepaspectratio]{6_Search/Figures/impact/171102Zut.pdf}
+	\caption{The pulls of each nuisance parameter and the influence of their uncertainty on the maximum likelihood estimation of the signal strength $\hat{r}$ for the \Zut\ vertex, part one.}
+	\label{fig:impactsZut11}
+\end{figure}
+
+\begin{figure}[htbp] 
+	\centering
+	\includegraphics[page=2,width=.99\linewidth,keepaspectratio]{6_Search/Figures/impact/171102Zut.pdf}
+	\caption{The pulls of each nuisance parameter and the influence of their uncertainty on the maximum likelihood estimation of the signal strength $\hat{r}$ for the \Zut\ vertex, part two.}
+	\label{fig:impactsZut}
+\end{figure}
+
+\newpage
+
+\begin{figure}[htbp] 
+	\centering
+	\includegraphics[page=1,width=.99\linewidth,keepaspectratio]{6_Search/Figures/impact/171102Zct.pdf}
+	\caption{The pulls of each nuisance parameter and the influence of their uncertainty on the maximum likelihood estimation of the signal strength $\hat{r}$ for the \Zct\ vertex, part one.}
+	\label{fig:impactsZct11}
+\end{figure}
+
+\begin{figure}[htbp] 
+	\centering
+	\includegraphics[page=2,width=.99\linewidth,keepaspectratio]{6_Search/Figures/impact/171102Zct.pdf}
+	\caption{The pulls of each nuisance parameter and the influence of their uncertainty on the maximum likelihood estimation of the signal strength $\hat{r}$ for the \Zct\ vertexg, part two.}
+	\label{fig:impactsZct}
+\end{figure}
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=1.\linewidth]{6_Search/Figures/impact/171102ZutMLE.pdf}
+	\caption{Maximum likelihood estimators for the \Zut\ vertex.}
+	\label{fig:171102zutmle}
+\end{figure}
+\clearpage
+\subsection{Post fit yields}
+  \begin{table}[htbp]
+	\centering
+		\begin{tabular} {l c c c }
+			\toprule
+			Process & Prefit yield & Post fit yield & Factor (Post/pre) \\
+			\midrule
+			NPL \DY-like & 204 & 413.95 & 2.02917\\
+			ttZ & 9.57253 & 9.97492 & 1.04204\\
+			WZ & 551.632 & 589.05 & 1.06783\\
+			ZZ & 46.1866 & 44.253 & 0.958136\\
+			other & 6.74842 & 6.86255 & 1.01691\\
+			tZq & 7.29717 & 7.35863 & 1.00842\\
+			\kZct & 26.3444 & 0.336093 & 0.0127577\\
+			Data & 1053 & 1053 & 1\\
+			Total Bkg. & 825.436 & 1071.45 & 1.29804\\
+			\bottomrule
+		\end{tabular}
+		\caption{Event yields for the \Zct\ vertex in the \WZCR. }
+	\end{table}
+
+  \begin{table}[htbp]
+	\centering
+		\begin{tabular} {l c c c }
+			\toprule
+			Process & Prefit yield & Post fit yield & Factor (Post/pre) \\
+			\midrule
+			NPL \DY-like & 9.36 & 134.878 & 14.4101\\
+			ttZ & 42.5511 & 47.7908 & 1.12314\\
+			WZ & 12.4617 & 14.1988 & 1.1394\\
+			ZZ & 4.84287 & 5.05337 & 1.04347\\
+			other & 5.61771 & 5.62205 & 1.00077\\
+			tZq & 16.9259 & 17.567 & 1.03788\\
+			NPL \ttbar-like & 8 & 17.4521 & 2.18151\\
+			\kZct & 56.8543 & 0.723401 & 0.0127238\\
+			Data & 243 & 243 & 1\\
+			Total Bkg. & 99.7592 & 242.563 & 2.43148\\
+			\bottomrule
+		\end{tabular}
+		\caption{Event yields for the \Zct\ vertex in the \TTSR. }
+	\end{table}
+  \begin{table}[htbp]
+	\centering
+		\begin{tabular} {l c c c }
+			\toprule
+			Process & Prefit yield & Post fit yield & Factor (Post/pre) \\
+			\midrule
+			NPL \DY-like & 6.12 & 92.81 & 15.165\\
+			ttZ & 3.51296 & 3.69852 & 1.05282\\
+			WZ & 6.09877 & 7.01688 & 1.15054\\
+			ZZ & 4.60353 & 5.56077 & 1.20794\\
+			other & 1.24547 & 1.24726 & 1.00144\\
+			tZq & 8.02537 & 8.73149 & 1.08799\\
+			NPL \ttbar-like & 9.33333 & 11.3109 & 1.21189\\
+			\kZct & 18.5188 & 0.239653 & 0.012941\\
+			Data & 138 & 138 & 1\\
+			Total Bkg. & 38.9394 & 130.376 & 3.34817\\
+			\bottomrule
+		\end{tabular}
+		\caption{Event yields for the \Zct\ vertex in the \STSR. }
+	\end{table}
+
+
+  \begin{table}[htbp]
+	\centering
+	\begin{tabular} {l c c c }
+			\toprule
+			Process & Prefit yield & Post fit yield & Factor (Post/pre) \\
+			\midrule
+			NPL \DY-like & 204 & 408.844 & 2.00414\\
+			ttZ & 9.57253 & 10.2232 & 1.06797\\
+			WZ & 551.632 & 591.516 & 1.0723\\
+			ZZ & 46.1866 & 44.4627 & 0.962676\\
+			other & 6.74842 & 7.39559 & 1.0959\\
+			tZq & 7.29717 & 7.46504 & 1.02301\\
+			\kZut & 14.1223 & 2.96617 & 0.210034\\
+			Data & 1053 & 1053 & 1\\
+			Total Bkg. & 825.436 & 1069.91 & 1.29617\\
+			\bottomrule
+		\end{tabular}
+		\caption{Event yields for the \Zut\ vertex in the \WZCR. }
+	\end{table}
+  \begin{table}[htbp]
+	\centering
+	\begin{tabular} {l c c c }
+		\toprule
+		Process & Prefit yield & Post fit yield & Factor (Post/pre) \\
+		\midrule
+		NPL \DY-like & 9.36 & 113.234 & 12.0977\\
+		ttZ & 42.5579 & 62.2324 & 1.4623\\
+		WZ & 12.4479 & 15.6974 & 1.26105\\
+		ZZ & 4.84287 & 5.49082 & 1.13379\\
+		other & 5.61771 & 5.88677 & 1.0479\\
+		tZq & 16.9237 & 18.5424 & 1.09564\\
+		NPL \ttbar-like & 8 & 10.9313 & 1.36641\\
+		\kZut & 21.7644 & 4.65597 & 0.213925\\
+		Data & 243 & 243 & 1\\
+		Total Bkg. & 99.75 & 232.015 & 2.32597\\
+		\bottomrule
+	\end{tabular}
+	\caption{Event yields for the \Zut\ vertex in the \TTSR. }
+\end{table}
+  \begin{table}[htbp]
+	\centering
+	\begin{tabular} {l c c c }
+		\toprule
+		Process & Prefit yield & Post fit yield & Factor (Post/pre) \\
+		\midrule
+		NPL \DY-like & 6.12 & 80.6426 & 13.1769\\
+		ttZ & 3.52806 & 3.9142 & 1.10945\\
+		WZ & 6.10297 & 7.79124 & 1.27663\\
+		ZZ & 4.60353 & 6.20837 & 1.34861\\
+		other & 1.25195 & 1.30643 & 1.04351\\
+		tZq & 8.0263 & 8.91527 & 1.11076\\
+		NPL \ttbar-like & 9.33333 & 16.133 & 1.72853\\
+		\kZut & 11.2471 & 2.43263 & 0.216291\\
+		Data & 138 & 138 & 1\\
+		Total Bkg. & 38.9661 & 124.911 & 3.20563\\
+		\bottomrule
+	\end{tabular}
+	\caption{Event yields for the \Zut\ vertex in the \STSR. }
+\end{table}
+  \begin{table}
+	\centering
+	\begin{tabular} {l c c c }
+		\toprule
+		Process & Prefit yield & Post fit yield & Factor (Post/pre) \\
+		\midrule
+		\NPL\ \DY-like & 6.12 $\pm$1.58427 & 80.6426 $\pm$4.44105 & 13.1769\\
+		\ttZ & 3.52806 $\pm$0.367394 & 3.9142 $\pm$0.2254 & 1.10945\\
+		\WZ & 6.10297 $\pm$0.713296 & 7.79124 $\pm$0.148784 & 1.27663\\
+		\ZZ & 4.60353 $\pm$0.600913 & 6.20837 $\pm$0.402623 & 1.34861\\
+		Other backgrounds & 1.25195 $\pm$0.304137 & 1.30643 $\pm$0.078206 & 1.04351\\
+		\tZq & 8.0263 $\pm$0.452366 & 8.91527 $\pm$0.270025 & 1.11076\\
+		NPL \ttbar-like & 9.33333 $\pm$1.39288 & 16.133 $\pm$0.884255 & 1.72853\\
+		\kZut  & 11.2471 $\pm$0.170017 & 2.43263 $\pm$0.0936527 & 0.216291\\
+		\hdashline
+		Data & 138 $\pm$14.1941 & 138 $\pm$14.1941 & 1\\
+		Total background. & 38.9661 $\pm$2.84078 & 124.911 $\pm$4.61027 & 3.20563\\
+		\bottomrule
+	\end{tabular}
+	\caption{Event yields for the \Zut\ vertex in the \STSR\   all leptonic channels summed. }
+\end{table}

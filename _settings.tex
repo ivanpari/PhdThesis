@@ -185,4 +185,15 @@ prepend, caption={\textbf{\textcolor{red}{NOTE}}}}{}
 %\makeatother
 
 \usepackage{lineno}
-\linenumbers
+%\linenumbers  % show line numbers
+
+\AtEveryBibitem{\clearfield{pages}}
+\AtEveryCitekey{\clearfield{pages}}
+%\AtEveryBibitem{\clearfield{month}}
+%\AtEveryCitekey{\clearfield{month}}
+%\AtEveryBibitem{\clearfield{note}}
+%\AtEveryCitekey{\clearfield{note}}
+%\AtEveryBibitem{\clearfield{abstract}}
+%\AtEveryCitekey{\clearfield{abstract}}
+%\AtEveryBibitem{\clearfield{address}}
+%\AtEveryCitekey{\clearfield{address}}

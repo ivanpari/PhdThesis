@@ -16,9 +16,8 @@
 \usepackage[TS1,T1]{fontenc}  % Output-Encoding
                               % (Latin1 [T1] with additional sepecial characters [TS1])
 \usepackage{collcell}
-
 % \usepackage[dutch]{babel}   % German language package
-\usepackage[english]{babel}   % English language package
+\usepackage[dutch,english]{babel}   % English language package
 \usepackage{array}
 \newcolumntype{H}{>{\iffalse}c<{\fi}@{}}
 % image stuff
@@ -48,6 +47,22 @@
 \usepackage[makeroom]{cancel}  % strikout text for EW symmetry breaking
 % references
 \usepackage[backend=biber,style=numeric-comp]{biblatex}
+\DeclareSourcemap{
+	\maps[datatype=bibtex,overwrite=true]{
+		\map{
+			\step[fieldsource=Collaboration, final=true]
+			\step[fieldset=usera, origfieldval, final=true]
+		}
+	}
+}
+
+\renewbibmacro*{author}{%
+	\iffieldundef{usera}{%
+		\printnames{author}%
+	}{%
+		\printfield{usera}, \printnames{author}%
+	}%
+}%
 \usepackage[nameinlink]{cleveref}
 \newcommand\crefrangeconjunction{--}
 \Crefname{figure}{Figure}{Figures}

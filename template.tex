@@ -17,14 +17,15 @@
 % If the draft option is passed to the package, all micro-typographic extensions will be disabled, which may lead to different line, and hence page, breaks. The draft and final options may also be inherited from the class options; of course, you can override them in the package options. E. g., if you are using the class option draft to show any overfull boxes, you should load microtype with the final option.
 
 % The most general information for this document
-\newcommand{\Title}{A search for flavour changing neutral currents involving a top quark and a Z boson, using the data collected by the CMS collaboration at a centre-of-mass energy of 13 TeV}
+\newcommand{\Title}{A search for flavour changing neutral currents involving a top quark and a Z boson, using the data collected by the CMS experiment at a centre-of-mass energy of 13 TeV}
+\newcommand{\Titledutch}{Een zoektocht naar smaak-veranderende neutrale stromen gerelateerd met een top quark en een Z boson, gebruik makend van de data gecollecteerd door het CMS experiment met een middelpuntsmassa energie van 13 TeV.}
 \newcommand{\Pdftitle}{\Title}  % For if you want to have a different title in the pdf document (e.g. special characters removed)
 \newcommand{\Author}{Isis Van Parijs}
 \newcommand{\keywords}{LaTeX, template, CMS, FCNC, phd, thesis}
 \newcommand{\refereeOne}{Prof.~Dr.~J. D'Hondt}
 %\newcommand{\refereeTwo}{Prof.~Dr.~P. Thagoras}
-\newcommand{\dateHandIn}{10~November~2017}
-\newcommand{\dateDefense}{10~December~2017}
+\newcommand{\dateHandIn}{13~November~2017}
+\newcommand{\dateDefense}{21~December~2017}
 
 
 % load the general configuration
@@ -32,7 +33,8 @@
 \input{_settings}
 \input{_newcommands}
 
-%\addbibresource{references.bib}  % Use with BibLaTeX
+%\addbibresource{Biblography/lib.bib}  % Use with BibLaTeX
+\addbibresource{Bibliography/intr.bib}
 \addbibresource{Bibliography/Introduction.bib}
 \addbibresource{Bibliography/Chapter2.bib}
 \addbibresource{Bibliography/CMS.bib}
@@ -60,8 +62,21 @@
 \microtypesetup{protrusion=false} % disables protrusion locally in the document
 \tableofcontents*
 \microtypesetup{protrusion=true}  % enables protrusion again
-\newpage
+\cleardoublepage
 
+
+\thispagestyle{empty}
+\newpage
+\null
+\vfill
+\begin{figure*}[tbph]
+	\centering
+	\includegraphics[width=0.7\textwidth,angle =-90]{calvin-and-hobbes}
+%	\caption{}
+%	\label{fig:calvin-and-hobbes}
+\end{figure*}
+\vfill
+\newpage
 \input{_introduction.tex}
 % load glossaries
 
@@ -181,8 +196,17 @@ In this thesis, two scenarios are being studied: one being the top-up interactio
 %\appendixname
 \addappheadtotoc
 \input{Appendix/appendix.tex}
-
+\clearpage
 \backmatter
+\addcontentsline{toc}{chapter}{Summary}
+\chapter*{Summary}
+\input{_summary.tex}
+\addcontentsline{toc}{chapter}{Samenvatting}
+\begin{otherlanguage}{dutch}
+\chapter*{Samenvatting}
+\input{_samenvatting.tex}
+\end{otherlanguage}
+
 
 %\bibliography{Bibliography/Chapter2_references}  % use with BibTeX
 \hypersetup{urlcolor=darkgreen}
@@ -191,5 +215,5 @@ In this thesis, two scenarios are being studied: one being the top-up interactio
 %\printglossaries
 %\printglossary[type=\acronymtype, toctitle=\myacronymtitle, title=\myacronymtitle]  % print only one glossary, and define its title (\myacronymtitle is defined in _settings.tex)
 %\printglossaries  % print all glossaries available
-%\input{_summary.tex}
+%
 \end{document}
