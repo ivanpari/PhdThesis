@@ -766,9 +766,10 @@ The boosted decision are trained without the \NPL\ background. In the following 
 	\caption{The normalised input variables for reconstructing the multivariate discriminator in the \STSR\ for the \Zct\ vertex.}
 	\label{fig:singletopZctnormalized}
 \end{figure}
-
+\newpage
 \section{Effect of the systematic uncertainties}
 \label{app:sys}
+
 \begin{figure}[htbp] 
 	\centering 
 	\subbottom[Pileup uncertainty]{
@@ -791,6 +792,13 @@ The boosted decision are trained without the \NPL\ background. In the following 
 		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/toppairzut/JERBKG}
 		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/toppairzut/JERSIG}
 	}
+\subbottom[Factorisation and renormalization scale normalised uncertainty ]{
+	\includegraphics[width=0.22\linewidth]{6_Search/Figures/theorysys/factrenotoppairzutbdtall}
+}
+\subbottom[PDF normalised uncertainty ]{
+	\includegraphics[width=0.22\linewidth]{6_Search/Figures/theorysys/pdftoppairzutbdtall}
+}
+
 	\caption{Distribution of the nominal values and shift due to systematic uncertainties for the transverse mass of the \PW\ boson in the \TTSR\ for the \WZ\ process and FCNC signal involving a \Zut\ vertex. All leptonic channels summed. Part one.}
 	\label{fig:shiftBDTTTZut1}
 \end{figure}
@@ -854,6 +862,13 @@ The boosted decision are trained without the \NPL\ background. In the following 
 		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/singletopzct/JERBKG}
 		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/singletopzct/JERSIG}
 	}
+\subbottom[Factorisation and renormalization scale normalised uncertainty ]{
+	\includegraphics[width=0.22\linewidth]{6_Search/Figures/theorysys/factrenosinglezctbdtall}
+}
+\subbottom[PDF normalised uncertainty ]{
+	\includegraphics[width=0.22\linewidth]{6_Search/Figures/theorysys/pdfsinglezctbdtall}
+}
+
 	\caption{Distribution of the nominal values and shift due to systematic uncertainties for the transverse mass of the \PW\ boson in the \STSR\ for the \WZ\ process and FCNC signal involving a \Zct\ vertex. All leptonic channels summed. Part one.}
 	\label{fig:shiftBDTSTZct1}
 \end{figure}
@@ -917,6 +932,13 @@ The boosted decision are trained without the \NPL\ background. In the following 
 		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/toppairzct/JERBKG}
 		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/toppairzct/JERSIG}
 	}
+\subbottom[Factorisation and renormalization scale normalised uncertainty ]{
+	\includegraphics[width=0.22\linewidth]{6_Search/Figures/theorysys/factrenotoppairzctbdtall}
+}
+\subbottom[PDF normalised uncertainty ]{
+	\includegraphics[width=0.22\linewidth]{6_Search/Figures/theorysys/pdftoppairzctbdtall}
+}
+
 	\caption{Distribution of the nominal values and shift due to systematic uncertainties for the transverse mass of the \PW\ boson in the \TTSR\ for the \WZ\ process and FCNC signal involving a \Zct\ vertex. All leptonic channels summed. Part one.}
 	\label{fig:shiftBDTTTZct1}
 \end{figure}
@@ -1000,145 +1022,208 @@ The boosted decision are trained without the \NPL\ background. In the following 
 \end{figure}
 \clearpage
 \subsection{Post fit yields}
-  \begin{table}[htbp]
-	\centering
-		\begin{tabular} {l c c c }
-			\toprule
-			Process & Prefit yield & Post fit yield & Factor (Post/pre) \\
-			\midrule
-			NPL \DY-like & 204 & 413.95 & 2.02917\\
-			ttZ & 9.57253 & 9.97492 & 1.04204\\
-			WZ & 551.632 & 589.05 & 1.06783\\
-			ZZ & 46.1866 & 44.253 & 0.958136\\
-			other & 6.74842 & 6.86255 & 1.01691\\
-			tZq & 7.29717 & 7.35863 & 1.00842\\
-			\kZct & 26.3444 & 0.336093 & 0.0127577\\
-			Data & 1053 & 1053 & 1\\
-			Total Bkg. & 825.436 & 1071.45 & 1.29804\\
-			\bottomrule
-		\end{tabular}
-		\caption{Event yields for the \Zct\ vertex in the \WZCR. }
-	\end{table}
-
-  \begin{table}[htbp]
-	\centering
-		\begin{tabular} {l c c c }
-			\toprule
-			Process & Prefit yield & Post fit yield & Factor (Post/pre) \\
-			\midrule
-			NPL \DY-like & 9.36 & 134.878 & 14.4101\\
-			ttZ & 42.5511 & 47.7908 & 1.12314\\
-			WZ & 12.4617 & 14.1988 & 1.1394\\
-			ZZ & 4.84287 & 5.05337 & 1.04347\\
-			other & 5.61771 & 5.62205 & 1.00077\\
-			tZq & 16.9259 & 17.567 & 1.03788\\
-			NPL \ttbar-like & 8 & 17.4521 & 2.18151\\
-			\kZct & 56.8543 & 0.723401 & 0.0127238\\
-			Data & 243 & 243 & 1\\
-			Total Bkg. & 99.7592 & 242.563 & 2.43148\\
-			\bottomrule
-		\end{tabular}
-		\caption{Event yields for the \Zct\ vertex in the \TTSR. }
-	\end{table}
-  \begin{table}[htbp]
-	\centering
-		\begin{tabular} {l c c c }
-			\toprule
-			Process & Prefit yield & Post fit yield & Factor (Post/pre) \\
-			\midrule
-			NPL \DY-like & 6.12 & 92.81 & 15.165\\
-			ttZ & 3.51296 & 3.69852 & 1.05282\\
-			WZ & 6.09877 & 7.01688 & 1.15054\\
-			ZZ & 4.60353 & 5.56077 & 1.20794\\
-			other & 1.24547 & 1.24726 & 1.00144\\
-			tZq & 8.02537 & 8.73149 & 1.08799\\
-			NPL \ttbar-like & 9.33333 & 11.3109 & 1.21189\\
-			\kZct & 18.5188 & 0.239653 & 0.012941\\
-			Data & 138 & 138 & 1\\
-			Total Bkg. & 38.9394 & 130.376 & 3.34817\\
-			\bottomrule
-		\end{tabular}
-		\caption{Event yields for the \Zct\ vertex in the \STSR. }
-	\end{table}
-
-
-  \begin{table}[htbp]
-	\centering
-	\begin{tabular} {l c c c }
-			\toprule
-			Process & Prefit yield & Post fit yield & Factor (Post/pre) \\
-			\midrule
-			NPL \DY-like & 204 & 408.844 & 2.00414\\
-			ttZ & 9.57253 & 10.2232 & 1.06797\\
-			WZ & 551.632 & 591.516 & 1.0723\\
-			ZZ & 46.1866 & 44.4627 & 0.962676\\
-			other & 6.74842 & 7.39559 & 1.0959\\
-			tZq & 7.29717 & 7.46504 & 1.02301\\
-			\kZut & 14.1223 & 2.96617 & 0.210034\\
-			Data & 1053 & 1053 & 1\\
-			Total Bkg. & 825.436 & 1069.91 & 1.29617\\
-			\bottomrule
-		\end{tabular}
-		\caption{Event yields for the \Zut\ vertex in the \WZCR. }
-	\end{table}
+\label{app:postfityields}
   \begin{table}[htbp]
 	\centering
 	\begin{tabular} {l c c c }
 		\toprule
 		Process & Prefit yield & Post fit yield & Factor (Post/pre) \\
 		\midrule
-		NPL \DY-like & 9.36 & 113.234 & 12.0977\\
-		ttZ & 42.5579 & 62.2324 & 1.4623\\
-		WZ & 12.4479 & 15.6974 & 1.26105\\
-		ZZ & 4.84287 & 5.49082 & 1.13379\\
-		other & 5.61771 & 5.88677 & 1.0479\\
-		tZq & 16.9237 & 18.5424 & 1.09564\\
-		NPL \ttbar-like & 8 & 10.9313 & 1.36641\\
-		\kZut & 21.7644 & 4.65597 & 0.213925\\
-		Data & 243 & 243 & 1\\
-		Total Bkg. & 99.75 & 232.015 & 2.32597\\
-		\bottomrule
-	\end{tabular}
-	\caption{Event yields for the \Zut\ vertex in the \TTSR. }
-\end{table}
-  \begin{table}[htbp]
-	\centering
-	\begin{tabular} {l c c c }
-		\toprule
-		Process & Prefit yield & Post fit yield & Factor (Post/pre) \\
-		\midrule
-		NPL \DY-like & 6.12 & 80.6426 & 13.1769\\
-		ttZ & 3.52806 & 3.9142 & 1.10945\\
-		WZ & 6.10297 & 7.79124 & 1.27663\\
-		ZZ & 4.60353 & 6.20837 & 1.34861\\
-		other & 1.25195 & 1.30643 & 1.04351\\
-		tZq & 8.0263 & 8.91527 & 1.11076\\
-		NPL \ttbar-like & 9.33333 & 16.133 & 1.72853\\
-		\kZut & 11.2471 & 2.43263 & 0.216291\\
-		Data & 138 & 138 & 1\\
-		Total Bkg. & 38.9661 & 124.911 & 3.20563\\
-		\bottomrule
-	\end{tabular}
-	\caption{Event yields for the \Zut\ vertex in the \STSR. }
-\end{table}
-  \begin{table}
-	\centering
-	\begin{tabular} {l c c c }
-		\toprule
-		Process & Prefit yield & Post fit yield & Factor (Post/pre) \\
-		\midrule
-		\NPL\ \DY-like & 6.12 $\pm$1.58427 & 80.6426 $\pm$4.44105 & 13.1769\\
-		\ttZ & 3.52806 $\pm$0.367394 & 3.9142 $\pm$0.2254 & 1.10945\\
-		\WZ & 6.10297 $\pm$0.713296 & 7.79124 $\pm$0.148784 & 1.27663\\
-		\ZZ & 4.60353 $\pm$0.600913 & 6.20837 $\pm$0.402623 & 1.34861\\
-		Other backgrounds & 1.25195 $\pm$0.304137 & 1.30643 $\pm$0.078206 & 1.04351\\
-		\tZq & 8.0263 $\pm$0.452366 & 8.91527 $\pm$0.270025 & 1.11076\\
-		NPL \ttbar-like & 9.33333 $\pm$1.39288 & 16.133 $\pm$0.884255 & 1.72853\\
-		\kZut  & 11.2471 $\pm$0.170017 & 2.43263 $\pm$0.0936527 & 0.216291\\
+		\NPL\ \ttbar-like & 33.00 $ \pm $ 8.48 & 23.60 $ \pm $ 3.11 & 0.72 \\ 
+		\ttZ & 0.18 $ \pm $ 0.21 & 0.24 $ \pm $ 1.66 & 1.36 \\ 
+		\WZ & 3.52 $ \pm $ 0.25 & 3.66 $ \pm $ 0.26 & 1.04 \\ 
+		\ZZ & 0.31 $ \pm $ 0.10 & 0.34 $ \pm $ 0.07 & 1.09 \\ 
+		Other backgrounds & 1.66 $ \pm $ 0.91 & 1.95 $ \pm $ 1.01 & 1.17 \\ 
+		\tZq & 0.31 $ \pm $ 0.06 & 0.30 $ \pm $ 0.04 & 0.95 \\ 
+		\kZct  & 0.32 $ \pm $ 0.03 & 0.00 $ \pm $ 0.03 & 0.01\\
 		\hdashline
-		Data & 138 $\pm$14.1941 & 138 $\pm$14.1941 & 1\\
-		Total background. & 38.9661 $\pm$2.84078 & 124.911 $\pm$4.61027 & 3.20563\\
+		Data & 32.00 $ \pm $ 3.28 & 32.00 $ \pm $ 3.28 & 1.00\\
+		Total background. & 38.98 $ \pm $ 8.67 & 30.09 $ \pm $ 3.76 & 0.77\\
+		\bottomrule
+	\end{tabular}
+	\caption{Event yields for the \Zct\ vertex in the \STCR\   all leptonic channels summed. }
+\end{table}
+\begin{table}[htbp]
+	\centering
+	\begin{tabular} {l c c c }
+		\toprule
+		Process & Prefit yield & Post fit yield & Factor (Post/pre) \\
+		\midrule
+		\NPL\ \DY-like & 6.12 $ \pm $ 1.41 & 92.81 $ \pm $ 4.27 & 15.17 \\ 
+		\ttZ & 3.51 $ \pm $ 0.34 & 3.70 $ \pm $ 0.25 & 1.05 \\ 
+		\WZ & 6.10 $ \pm $ 0.66 & 7.02 $ \pm $ 0.35 & 1.15 \\ 
+		\ZZ & 4.60 $ \pm $ 0.53 & 5.56 $ \pm $ 0.47 & 1.21 \\ 
+		Other backgrounds & 1.25 $ \pm $ 0.25 & 1.25 $ \pm $ 0.13 & 1.00 \\ 
+		\tZq & 8.03 $ \pm $ 0.47 & 8.73 $ \pm $ 0.28 & 1.09 \\ 
+		NPL \ttbar-like & 9.33 $ \pm $ 1.55 & 11.31 $ \pm $ 0.61 & 1.21\\
+		\kZct  & 18.52 $ \pm $ 0.30 & 0.24 $ \pm $ 0.46 & 0.01\\
+		\hdashline
+		Data & 138.00 $ \pm $ 14.97 & 138.00 $ \pm $ 14.97 & 1.00\\
+		Total background. & 38.94 $ \pm $ 2.70 & 130.38 $ \pm $ 4.38 & 3.35\\
+		\bottomrule
+	\end{tabular}
+	\caption{Event yields for the \Zct\ vertex in the \STSR\   all leptonic channels summed. }
+\end{table}
+\begin{table}[htbp]
+	\centering
+	\begin{tabular} {l c c c }
+		\toprule
+		Process & Prefit yield & Post fit yield & Factor (Post/pre) \\
+		\midrule
+		\NPL\ \ttbar-like & 29.00 $ \pm $ 9.62 & 31.71 $ \pm $ 4.07 & 1.09 \\ 
+		\ttZ & 2.85 $ \pm $ 0.44 & 2.85 $ \pm $ 0.27 & 1.00 \\ 
+		\WZ & 3.98 $ \pm $ 0.63 & 4.24 $ \pm $ 0.69 & 1.07 \\ 
+		\ZZ & 0.32 $ \pm $ 0.08 & 0.33 $ \pm $ 0.05 & 1.05 \\ 
+		Other backgrounds & 3.88 $ \pm $ 0.66 & 3.79 $ \pm $ 0.80 & 0.98 \\ 
+		\tZq & 0.79 $ \pm $ 0.13 & 0.78 $ \pm $ 0.07 & 1.00 \\ 
+		\kZct  & 0.59 $ \pm $ 0.05 & 0.01 $ \pm $ 0.05 & 0.01\\
+		\hdashline
+		Data & 43.50 $ \pm $ 3.28 & 43.50 $ \pm $ 3.28 & 1.00\\
+		Total background. & 40.81 $ \pm $ 9.87 & 43.72 $ \pm $ 4.15 & 1.07\\
+		\bottomrule
+	\end{tabular}
+	\caption{Event yields for the \Zct\ vertex in the \TTCR\   all leptonic channels summed. }
+\end{table}
+\begin{table}[htbp]
+	\centering
+	\begin{tabular} {l c c c }
+		\toprule
+		Process & Prefit yield & Post fit yield & Factor (Post/pre) \\
+		\midrule
+		\NPL\ \DY-like & 9.36 $ \pm $ 1.62 & 134.88 $ \pm $ 5.19 & 14.41 \\ 
+		\ttZ & 42.55 $ \pm $ 2.28 & 47.79 $ \pm $ 1.40 & 1.12 \\ 
+		\WZ & 12.46 $ \pm $ 1.12 & 14.20 $ \pm $ 0.62 & 1.14 \\ 
+		\ZZ & 4.84 $ \pm $ 0.35 & 5.05 $ \pm $ 0.26 & 1.04 \\ 
+		Other backgrounds & 5.62 $ \pm $ 0.82 & 5.62 $ \pm $ 0.85 & 1.00 \\ 
+		\tZq & 16.93 $ \pm $ 0.89 & 17.57 $ \pm $ 0.51 & 1.04 \\ 
+		NPL \ttbar-like & 8.00 $ \pm $ 1.07 & 17.45 $ \pm $ 0.91 & 2.18\\
+		\kZct  & 56.85 $ \pm $ 0.57 & 0.72 $ \pm $ 1.32 & 0.01\\
+		\hdashline
+		Data & 243.00 $ \pm $ 19.21 & 243.00 $ \pm $ 19.21 & 1.00\\
+		Total background. & 99.76 $ \pm $ 4.05 & 242.56 $ \pm $ 5.58 & 2.43\\
+		\bottomrule
+	\end{tabular}
+	\caption{Event yields for the \Zct\ vertex in the \TTSR\   all leptonic channels summed. }
+\end{table}
+\begin{table}[htbp]
+	\centering
+	\begin{tabular} {l c c c }
+		\toprule
+		Process & Prefit yield & Post fit yield & Factor (Post/pre) \\
+		\midrule
+		\NPL\ \DY-like & 204.00 $ \pm $ 22.12 & 413.95 $ \pm $ 12.56 & 2.03 \\ 
+		\ttZ & 9.57 $ \pm $ 0.69 & 9.97 $ \pm $ 0.55 & 1.04 \\ 
+		\WZ & 551.63 $ \pm $ 29.26 & 589.05 $ \pm $ 12.67 & 1.07 \\ 
+		\ZZ & 46.19 $ \pm $ 2.40 & 44.25 $ \pm $ 1.59 & 0.96 \\ 
+		Other backgrounds & 6.75 $ \pm $ 0.99 & 6.86 $ \pm $ 0.85 & 1.02 \\ 
+		\tZq & 7.30 $ \pm $ 0.45 & 7.36 $ \pm $ 0.21 & 1.01 \\ 
+		\kZct  & 26.34 $ \pm $ 0.51 & 0.34 $ \pm $ 0.64 & 0.01\\
+		\hdashline
+		Data & 1053.00 $ \pm $ 34.45 & 1053.00 $ \pm $ 34.45 & 1.00\\
+		Total background. & 825.44 $ \pm $ 37.24 & 1071.45 $ \pm $ 20.64 & 1.30\\
+		\bottomrule
+	\end{tabular}
+	\caption{Event yields for the \Zct\ vertex in the \WZCR\   all leptonic channels summed. }
+\end{table}
+\begin{table}[htbp]
+	\centering
+	\begin{tabular} {l c c c }
+		\toprule
+		Process & Prefit yield & Post fit yield & Factor (Post/pre) \\
+		\midrule
+		\NPL\ \ttbar-like & 33.00 $ \pm $ 9.88 & 25.33 $ \pm $ 3.66 & 0.77 \\ 
+		\ttZ & 0.18 $ \pm $ 0.23 & 0.38 $ \pm $ 0.59 & 2.12 \\ 
+		\WZ & 3.52 $ \pm $ 0.27 & 3.82 $ \pm $ 0.20 & 1.09 \\ 
+		\ZZ & 0.31 $ \pm $ 0.08 & 0.38 $ \pm $ 0.05 & 1.22 \\ 
+		Other backgrounds & 1.66 $ \pm $ 1.05 & 2.50 $ \pm $ 0.42 & 1.51 \\ 
+		\tZq & 0.31 $ \pm $ 0.05 & 0.29 $ \pm $ 0.04 & 0.92 \\ 
+		\kZut  & 0.42 $ \pm $ 0.03 & 0.09 $ \pm $ 0.01 & 0.20\\
+		\hdashline
+		Data & 32.00 $ \pm $ 3.28 & 32.00 $ \pm $ 3.28 & 1.00\\
+		Total background. & 38.98 $ \pm $ 10.28 & 32.70 $ \pm $ 3.78 & 0.84\\
+		\bottomrule
+	\end{tabular}
+	\caption{Event yields for the \Zut\ vertex in the \STCR\   all leptonic channels summed. }
+\end{table}
+\begin{table}[htbp]
+	\centering
+	\begin{tabular} {l c c c }
+		\toprule
+		Process & Prefit yield & Post fit yield & Factor (Post/pre) \\
+		\midrule
+		\NPL\ \DY-like & 6.12 $ \pm $ 1.58 & 80.64 $ \pm $ 4.44 & 13.18 \\ 
+		\ttZ & 3.53 $ \pm $ 0.37 & 3.91 $ \pm $ 0.23 & 1.11 \\ 
+		\WZ & 6.10 $ \pm $ 0.71 & 7.79 $ \pm $ 0.15 & 1.28 \\ 
+		\ZZ & 4.60 $ \pm $ 0.60 & 6.21 $ \pm $ 0.40 & 1.35 \\ 
+		Other backgrounds & 1.25 $ \pm $ 0.30 & 1.31 $ \pm $ 0.08 & 1.04 \\ 
+		\tZq & 8.03 $ \pm $ 0.45 & 8.92 $ \pm $ 0.27 & 1.11 \\ 
+		NPL \ttbar-like & 9.33 $ \pm $ 1.39 & 16.13 $ \pm $ 0.88 & 1.73\\
+		\kZut  & 11.25 $ \pm $ 0.17 & 2.43 $ \pm $ 0.09 & 0.22\\
+		\hdashline
+		Data & 138.50 $ \pm $ 14.19 & 138.50 $ \pm $ 14.19 & 1.00\\
+		Total background. & 38.97 $ \pm $ 2.84 & 124.91 $ \pm $ 4.61 & 3.21\\
 		\bottomrule
 	\end{tabular}
 	\caption{Event yields for the \Zut\ vertex in the \STSR\   all leptonic channels summed. }
+\end{table}
+\begin{table}[htbp]
+	\centering
+	\begin{tabular} {l c c c }
+		\toprule
+		Process & Prefit yield & Post fit yield & Factor (Post/pre) \\
+		\midrule
+		\NPL\ \ttbar-like & 29.00 $ \pm $ 9.99 & 28.92 $ \pm $ 3.47 & 1.00 \\ 
+		\ttZ & 2.85 $ \pm $ 0.48 & 2.93 $ \pm $ 0.25 & 1.03 \\ 
+		\WZ & 3.98 $ \pm $ 0.65 & 4.71 $ \pm $ 0.43 & 1.18 \\ 
+		\ZZ & 0.32 $ \pm $ 0.07 & 0.36 $ \pm $ 0.04 & 1.14 \\ 
+		Other backgrounds & 3.88 $ \pm $ 0.81 & 4.05 $ \pm $ 0.31 & 1.04 \\ 
+		\tZq & 0.79 $ \pm $ 0.13 & 0.79 $ \pm $ 0.07 & 1.01 \\ 
+		\kZut  & 0.61 $ \pm $ 0.05 & 0.13 $ \pm $ 0.01 & 0.22\\
+		\hdashline
+		Data & 44.00 $ \pm $ 3.28 & 44.00 $ \pm $ 3.28 & 1.00\\
+		Total background. & 40.81 $ \pm $ 10.34 & 41.76 $ \pm $ 3.44 & 1.02\\
+		\bottomrule
+	\end{tabular}
+	\caption{Event yields for the \Zut\ vertex in the \TTCR\   all leptonic channels summed. }
+\end{table}
+\begin{table}[htbp]
+	\centering
+	\begin{tabular} {l c c c }
+		\toprule
+		Process & Prefit yield & Post fit yield & Factor (Post/pre) \\
+		\midrule
+		\NPL\ \DY-like & 9.36 $ \pm $ 1.67 & 113.23 $ \pm $ 5.31 & 12.10 \\ 
+		\ttZ & 42.56 $ \pm $ 2.31 & 62.23 $ \pm $ 1.23 & 1.46 \\ 
+		\WZ & 12.45 $ \pm $ 1.06 & 15.70 $ \pm $ 0.27 & 1.26 \\ 
+		\ZZ & 4.84 $ \pm $ 0.38 & 5.49 $ \pm $ 0.12 & 1.13 \\ 
+		Other backgrounds & 5.62 $ \pm $ 0.99 & 5.89 $ \pm $ 0.44 & 1.05 \\ 
+		\tZq & 16.92 $ \pm $ 0.87 & 18.54 $ \pm $ 0.24 & 1.10 \\ 
+		NPL \ttbar-like & 8.00 $ \pm $ 1.03 & 10.93 $ \pm $ 0.54 & 1.37\\
+		\kZut  & 21.76 $ \pm $ 0.25 & 4.66 $ \pm $ 0.15 & 0.21\\
+		\hdashline
+		Data & 244.00 $ \pm $ 19.96 & 244.00 $ \pm $ 19.96 & 1.00\\
+		Total background. & 99.75 $ \pm $ 4.05 & 232.02 $ \pm $ 5.65 & 2.33\\
+		\bottomrule
+	\end{tabular}
+	\caption{Event yields for the \Zut\ vertex in the \TTSR\   all leptonic channels summed. }
+\end{table}
+\begin{table}[htbp]
+	\centering
+	\begin{tabular} {l c c c }
+		\toprule
+		Process & Prefit yield & Post fit yield & Factor (Post/pre) \\
+		\midrule
+		\NPL\ \DY-like & 204.00 $ \pm $ 23.02 & 408.84 $ \pm $ 13.11 & 2.00 \\ 
+		\ttZ & 9.57 $ \pm $ 0.72 & 10.22 $ \pm $ 0.36 & 1.07 \\ 
+		\WZ & 551.63 $ \pm $ 27.62 & 591.52 $ \pm $ 11.22 & 1.07 \\ 
+		\ZZ & 46.19 $ \pm $ 2.42 & 44.46 $ \pm $ 1.25 & 0.96 \\ 
+		Other backgrounds & 6.75 $ \pm $ 1.11 & 7.40 $ \pm $ 0.47 & 1.10 \\ 
+		\tZq & 7.30 $ \pm $ 0.44 & 7.47 $ \pm $ 0.20 & 1.02 \\ 
+		\kZut  & 14.12 $ \pm $ 0.23 & 2.97 $ \pm $ 0.13 & 0.21\\
+		\hdashline
+		Data & 1053.00 $ \pm $ 34.45 & 1053.00 $ \pm $ 34.45 & 1.00\\
+		Total background. & 825.44 $ \pm $ 36.98 & 1069.91 $ \pm $ 20.08 & 1.30\\
+		\bottomrule
+	\end{tabular}
+	\caption{Event yields for the \Zut\ vertex in the \WZCR\   all leptonic channels summed. }
 \end{table}
