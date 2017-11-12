@@ -1,6 +1,6 @@
 \section{The Compact Muon Solenoid}
 \label{sec:CMS}
-At one of the collision points of the LHC, the CMS detector~\cite{CMS, Bayatian:2006zz,Bayatian:922757} is placed. Weighing 14 000~\tonne, this cylindrical detector is about 28.7~\meter\ long and 15~\meter\ in diameter. It has an onion like structure of several specialised detectors and contains a superconducting solenoid with a magnetic field of 3.8~\Tesla. Living in a hadronic environment, multi-jet processes produced by the strong interaction are the main source of background for rare physics processes. Therefore, good identification, momentum resolution, and charge determination of muons, electrons and photons are one of the main goals of the CMS detector. Additionally, a good charged particle momentum resolution and reconstruction efficiency in the inner tracker provides identification for jets coming from \Pbottom\ quarks or tau particles. Also the electromagnetic resolution for an efficient photon and lepton isolation as well as a good hadronic calorimeter for the missing transverse energy\footnote{The missing transverse energy comes from an imbalance in the transverse plane. This will be discussed in Chapter 4.} were kept into account while designing CMS. In \fig{fig:CMS}, an overview of the CMS detector is shown. 
+At one of the collision points of the LHC, the CMS detector~\cite{CMS, Bayatian:2006zz,Bayatian:922757} is placed. Weighing 14 000~\tonne, this cylindrical detector is about 28.7~\meter\ long and 15~\meter\ in diameter. It has an onion like structure of several specialised detectors and contains a superconducting solenoid with a magnetic field of 3.8~\Tesla. Since the LHC produces collisions in a hadronic environment,  the main backgrounds of rare physics processes are  multi-jet processes produced by the strong interaction. Therefore, good identification, momentum resolution, and charge determination of muons, electrons and photons are one of the main goals of the CMS detector. Additionally, a good charged particle momentum resolution and reconstruction efficiency in the inner tracker provides identification for jets coming from \Pbottom\ quarks or tau particles. Also the electromagnetic resolution for an efficient photon and lepton isolation as well as a good hadronic calorimeter for the missing transverse energy\footnote{The missing transverse energy comes from an imbalance in the transverse plane. This will be discussed in Chapter 4.} were kept into account while designing CMS. In \fig{fig:CMS}, an overview of the CMS detector is shown. 
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=\linewidth]{2_ExperimentalSetup/Figures/cms_complete_labelled}
@@ -8,7 +8,7 @@ At one of the collision points of the LHC, the CMS detector~\cite{CMS, Bayatian:
 	\label{fig:CMS}
 \end{figure}
 
-
+\newpage
 \subsection{CMS coordinate system}
 The coordinate system used by CMS can be found in \fig{fig:CMScoord}. The origin of the right handed orthogonal coordinate system is chosen to be the point of collisions. The x-axis points towards the centre of the LHC ring such that the y-axis points towards the sky, and the z-axis lies tangent to the beam axis. Since the experiment has a cylindrical shape, customary coordinates are used to describe the momentum \impuls: the distance $p=|\vec{p}|$, the azimuthal angle\footnote{The azimuthal angle is the angle between the x-axis and the projection in the transverse plane of the momentum \impuls, denoted as \trimpuls. } $\phi \in \left[-\pi,\pi\right]$, the pseudo-rapidity\footnote{The pseudo rapidity  is expressed by the polar angle $\theta$ between the direction of \impuls and the beam.} \psrap: 
 \begin{equation}
@@ -21,13 +21,13 @@ y = \frac{1}{2} \ln \left(\frac{E + p_z}{E - p_z}\right),
 where the difference of rapidities of two particles is invariant under a Lorentz boost in the z-direction.
  \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=1.\textwidth]{2_ExperimentalSetup/Figures/imageedit_1_9146672677}
+	\includegraphics[width=1.\linewidth]{2_ExperimentalSetup/Figures/imageedit_1_9146672677}
 	\caption{Representation of the coordinate system used by CMS. The point of origin is put at the collision point. The x-axis points towards the centre of the LHC ring such that the z-axis lies tangent to the beam axis. }
 	\label{fig:CMScoord}
 \end{figure}
-
+\newpage
 \subsection{Towards the heart of CMS}
-The CMS detector can be divided into two parts. A central barrel is placed around the beam pipe $ \left(\abspsrap <1.4\right)$, and two plugs (endcaps) ensure the hermeticity of the detector. In \fig{fig:CMS} and \fig{fig:CMSview} the onion like structure of the CMS detector is visible. The choice of a solenoid of 12.9\meter  long and 5.9~\meter\
+The CMS detector can be divided into two parts. A central barrel is placed around the beam pipe $ \left(\abspsrap <1.4\right)$, and two plugs (endcaps) ensure the hermeticity of the detector. In \fig{fig:CMS} and \fig{fig:CMSview} the onion like structure of the CMS detector is visible. The choice of a solenoid of 12.9~\meter\ long and 5.9~\meter\
 diameter gives the advantage of bending the particle trajectories in the transverse plane. The hadronic calorimeter (\Sec{sec:HCAL}),  the electromagnetic calorimeter (\Sec{sec:ECAL}) and the tracker (\Sec{sec:TRK}) are within the solenoid (\Sec{sec:SOL}), while the muon chambers (\Sec{sec:MUO}) are placed outside the solenoid. The data used for the search presented in this thesis is collected after the long shutdown 1. After discussing each part of CMS in their Run 1 configuration, \Sec{sec:Phase1} elaborates on their different upgrades for the data collected in Run 2. 
 \begin{figure}[htbp]
 	\centering
@@ -47,17 +47,17 @@ The outermost part of CMS consists of the muon system. The magnet return yoke is
 The muon system is divided into three parts, shown in \fig{fig:muonsys}. The muon rate and neutron induced backgrounds are small and the magnetic field is very low for the barrel, thus CMS can use drift tube (DT) chambers. For the endcaps however, the muon and background flux is much higher and there is a need to use cathode strip chambers (CSC) which are able to provide a faster response, higher granularity and have a better resistance against radiation. In order to form a redundant trigger system, resistive plate chambers (RPC) are added. This makes a total of 250 DT, 540 CSC and 610 RPC chambers. In \fig{fig:CMSview} the arrangement is shown.
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=.69\textwidth]{2_ExperimentalSetup/Figures/muonsys}
+	\includegraphics[width=.69\linewidth]{2_ExperimentalSetup/Figures/muonsys}
 	\includegraphics[width=0.3\linewidth]{2_ExperimentalSetup/Figures/NfP5131122image6}
 	\caption{(Left) Schematic view of one quarter of the CMS muon system in the Run 1 configuration. The cathode strip chambers (CSC) are shown in green, the drift tubes (DT) are shown in yellow, while the resistive plate chambers (RPC) are shown in blue. Figure  taken from \cite{Chatrchyan:1223944}. (Right) Cathode strip chambers (ME+4/2 chambers on YE+3). Photo taken from \cite{muon}.}
 	\label{fig:muonsys}
 \end{figure}
 
 
-Providing a measurement for \abspsrap $<1.2$, the DT chambers in the barrel are on average $2 \times 2.5\:\meter^2$ in size and consist of 12 layers of DT cells\footnote{The DT cells are 4~\centi \meter\ wide gas tubes with positively charged stretched wires inside.} arranged in three groups of four. The $r\phi$ coordinate is provided by the two outside groups, while the middle group measures the $z$ coordinate. %For each $\phi$ sector, the DT chamber is mixed with the flux return yoke. 
+Providing a measurement for \abspsrap $<1.2$, the DT chambers in the barrel are on average $2 \times 2.5~\meter^2$ in size and consist of 12 layers of DT cells\footnote{The DT cells are 4~\centi \meter\ wide gas tubes with positively charged stretched wires inside.} arranged in three groups of four. The $r\phi$ coordinate is provided by the two outside groups, while the middle group measures the $z$ coordinate. %For each $\phi$ sector, the DT chamber is mixed with the flux return yoke. 
 For the outer muon station, the DT chambers contain only 8 layers of DT cells, providing a muon position in the $r\phi$ plane.
-There are four CSC stations in each endcap, providing muon measurements for $0.9<$ \abspsrap $<2.4$ (Run 1 configuration). These CSCs are multi-wired proportional chambers that consist of 6 anode wire planes crossed by 7 copper strips cathode panels in a gas volume. The $r$ coordinate is provided by the copper strips, while the $\phi$ coordinate comes from the anode wires, giving a two dimensional position measurement. 
-There are six layers of RPCs in the barrel muon system and one layer into each of the first three stations of the endcap. They are made from two high resistive plastic plates with an applied voltage and separated by a gas volume. Read-out strips mounted on top of the plastic plates detect the signal generated by a muon passing through the gas volume. The RPCs provide a fast response with a time resolution of 1~\nano \second\ and cover a range of \abspsrap $<1.8$ for the Run 1 configuration. 
+There are four CSC stations in each endcap, providing muon measurements for $0.9<$ \abspsrap $<2.4$. These CSCs are multi-wired proportional chambers that consist of 6 anode wire planes crossed by 7 copper strips cathode panels in a gas volume. The $r$ coordinate is provided by the copper strips, while the $\phi$ coordinate comes from the anode wires, giving a two dimensional position measurement. 
+There are six layers of RPCs in the barrel muon system and one layer into each of the first three stations of the endcap. They are made from two high resistive plastic plates with an applied voltage and separated by a gas volume. Read-out strips mounted on top of the plastic plates detect the signal generated by a muon passing through the gas volume. The RPCs provide a fast response with a time resolution of 1~\nano \second\ and cover a range of \abspsrap $<1.8$. 
 
 The muon system provides triggering on muons, identifying muons and improves the momentum measurement and charge determination of high $\pt$ muons. On top of the muon system, a fraction of the muon energy is deposited in the electromagnetic calorimeter, the hadronic calorimeter, and outer calorimeter. 
 %(FIXME not tracker? heel licht tov calos, gemaakt om deeltjes niet te hinderen, calos wel) 
@@ -70,12 +70,12 @@ The high magnetic field enables an efficient first level trigger and allows a go
 	The solenoid uses a high-purity aluminium stabilised conductor with indirect cooling from liquid helium, together with full epoxy impregnation. A four-layer winding is implemented that can withstand an outward pressure of 64~atm. The NbTi cable is co-extruded by pure aluminium that acts as a thermal stabilizer and has an aluminium alloy for mechanical reinforcement. The return of the magnetic field is done by five wheels, noted by YB in \fig{fig:CMSview}.
 	\begin{figure}[htbp]
 		\centering
-		\begin{minipage}{0.6\textwidth}
-		\includegraphics[width=1.\textwidth]{2_ExperimentalSetup/Figures/solenoid.png}
+		\begin{minipage}{0.6\linewidth}
+		\includegraphics[width=1.\linewidth]{2_ExperimentalSetup/Figures/solenoid.png}
 	\end{minipage}
-		\begin{minipage}{0.39\textwidth}
-		\includegraphics[width=\textwidth]{2_ExperimentalSetup/Figures/839_1a}
-		\includegraphics[width=\textwidth]{2_ExperimentalSetup/Figures/CMS-solenoid-magneta}
+		\begin{minipage}{0.39\linewidth}
+		\includegraphics[width=\linewidth]{2_ExperimentalSetup/Figures/839_1a}
+		\includegraphics[width=\linewidth]{2_ExperimentalSetup/Figures/CMS-solenoid-magneta}
 	\end{minipage}
 		\caption{(Left) CMS solenoid during the long shutdown in 2013. (Right) An impression of the solenoid magnet taken from \cite{solenoid}.}
 	%http://slideplayer.com/slide/10648021/
@@ -97,10 +97,10 @@ The quality of the energy measurements is dependent on the fraction of the hadro
 
 \begin{figure}[htbp]
 	\centering
-	%\includegraphics[width=0.59\textwidth]{2_ExperimentalSetup/Figures/imageedit_12_3242046754}hcalquarter
-	%\includegraphics[width=0.59\textwidth]{2_ExperimentalSetup/Figures/hcalquarter}
-	\includegraphics[width=0.6\textwidth]{2_ExperimentalSetup/Figures/HCAL2.png}
-	\includegraphics[width=0.39\textwidth]{2_ExperimentalSetup/Figures/HCAL.png}
+	%\includegraphics[width=0.59\linewidth]{2_ExperimentalSetup/Figures/imageedit_12_3242046754}hcalquarter
+	%\includegraphics[width=0.59\linewidth]{2_ExperimentalSetup/Figures/hcalquarter}
+	\includegraphics[width=0.6\linewidth]{2_ExperimentalSetup/Figures/HCAL2.png}
+	\includegraphics[width=0.39\linewidth]{2_ExperimentalSetup/Figures/HCAL.png}
 	%\caption{(Left) Tower segmentation for one quarter of the HCAL displayed in the $rz$ plane. Figure taken from \cite{Chatrchyan:2008aa}. (Right) CMS barrel calorimeter. Photo taken from \cite{HCAL}.}
  %\caption{(Left) Location of the HCAL detectors (blue) displayed in the $rz$ plane. Figure taken from \cite{Baiatian:1049915}. (Right) CMS barrel calorimeter. Photo taken from \cite{HCAL}.}
  \caption{(Left) Longitudinal view of the CMS detector showing the locations of the HB, HE, HO, and HF calorimeters. Figure taken from \cite{Chatrchyan:2008aa}. (Right) CMS barrel calorimeter. Photo taken from \cite{HCAL}.}
@@ -109,21 +109,21 @@ The quality of the energy measurements is dependent on the fraction of the hadro
 
 The HB is made of 16 absorber plates where most of them are built from brass and others are made from stainless steal and is about five to ten interaction lengths thick. It is divided in $\eta \times \phi$ towers and contains 2592 read-out channels. The HO complements the HB and extends the reach up to twelve interaction lengths. This subsystem contains 2160 read-out channels. The HE is also composed of brass absorber plates and has a thickness corresponding to approximately ten interaction lengths, with 2592 read-out channels.
 The HF experiences intense particle fluxes with an expected energy of 760~\GeV\ deposited on average in a proton interaction at a centre-of-mass of 14~\TeV, compared to 100~\GeV\ in the rest of the detector. Therefore, these are Cherenkov light detectors made of radiation hard quartz fibres.
-The main causes of such large energy events are high energy muons and charged particles from late showering hadrons. During  Run 1, it became clear that the glass windows of the photon multiplier tubes (PMTs) had to be replace,  which was done during LS1~\cite{Tiras:2016ghv}. The HF represents 1728 read-out channels. 
+The main causes of such large energy events are high energy muons and charged particles from late showering hadrons. The HF represents 1728 read-out channels. 
 
 The HCAL and electromagnetic calorimeter combined,  can measure the hadron energy with a resolution $\Delta E /E \approx 100\% \sqrt{E[\GeV]} + 5\%$. 	
 \subsubsection{Electromagnetic calorimeter}
 \label{sec:ECAL}
-The electromagnetic calorimeter (ECAL) is designed to measure the energy of photons and electrons and covers \abspsrap $<3$. It is an hermetic, homogeneous detector and consists of 75 848 lead tungstate (PbW$O_4$) crystals. These crystals have a fast response time - 80\% of the light is emitted within 25~\nano \second - and are radiation hard. The electromagnetic showers produced by passing electrons or photons, ionize the crystal atoms which emit a blue-green scintillation light, that is collected by silicon avalanche photodiodes (APDs) in the barrel and vacuum phototriodes (VPTs) in the endcaps. The crystals and the APD response are sensitive to temperature changes and require a stable temperature. 
+The electromagnetic calorimeter (ECAL) is designed to measure the energy of photons and electrons and covers \abspsrap $<3$. It is an hermetic, homogeneous detector and consists of 75 848 lead tungstate (PbWO$_4$) crystals. These crystals have a fast response time - 80\% of the light is emitted within 25~\nano \second - and are radiation hard. The electromagnetic showers produced by passing electrons or photons, ionize the crystal atoms which emit a blue-green scintillation light, that is collected by silicon avalanche photodiodes (APDs) in the barrel and vacuum phototriodes (VPTs) in the endcaps. The crystals and the APD response are sensitive to temperature changes and require a stable temperature. 
 
 \begin{figure}[htbp]
 	\centering
-	\begin{minipage}{0.5\textwidth}
-		\includegraphics[width=\textwidth]{2_ExperimentalSetup/Figures/imageedit_5_8264930617}
+	\begin{minipage}{0.5\linewidth}
+		\includegraphics[width=\linewidth]{2_ExperimentalSetup/Figures/imageedit_5_8264930617}
 	\end{minipage}
-\begin{minipage}{0.39\textwidth}
-	\includegraphics[width=\textwidth]{2_ExperimentalSetup/Figures/ECAL}
-	\includegraphics[width=\textwidth]{2_ExperimentalSetup/Figures/EE-in-frame}
+\begin{minipage}{0.39\linewidth}
+	\includegraphics[width=\linewidth]{2_ExperimentalSetup/Figures/ECAL}
+	\includegraphics[width=\linewidth]{2_ExperimentalSetup/Figures/EE-in-frame}
 	%http://slideplayer.com/slide/8696989/
 \end{minipage}
 	\caption{(Left) Schematic cross section of the electromagnetic calorimeter taken from \cite{Chatrchyan:2008aa}. (Right top) The ECAL barrel during construction~\cite{ECAL}. (Right bottom) One half of an EE~\cite{EE}.}
@@ -144,7 +144,7 @@ in the absence of a magnetic field, where the contributions come from the stocha
 The relative energy resolution of the ECAL for electrons is between 1.4-3\% in EB and 3-4\% for EE. In Figure \ref{fig:ECALres}, the resolutions for low and high bremsstrahlung electrons are shown. 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=\textwidth]{2_ExperimentalSetup/Figures/imageedit_7_5931623976}
+	\includegraphics[width=\linewidth]{2_ExperimentalSetup/Figures/imageedit_7_5931623976}
 	\caption{Relative energy resolution in bins of pseudo rapidity for the barrel and endcaps using electrons from $Z \rightarrow ee$. Left: low bremsstrahlung electrons, Right: high bremsstrahlung electrons\cite{Sun:2233637}.}
 	\label{fig:ECALres}
 \end{figure}
@@ -160,38 +160,34 @@ The tracking system (tracker)~\cite{Chatrchyan:1704291} is the detecting unit cl
 
 %\begin{figure}[htbp]
 %	\centering
-%%	\includegraphics[width=\textwidth]{2_ExperimentalSetup/Figures/imageedit_3_5170744545}
-%	\includegraphics[width=1.\textwidth]{2_ExperimentalSetup/Figures/imageedit_11_9317262269}
+%%	\includegraphics[width=\linewidth]{2_ExperimentalSetup/Figures/imageedit_3_5170744545}
+%	\includegraphics[width=1.\linewidth]{2_ExperimentalSetup/Figures/imageedit_11_9317262269}
 %%	\caption{Schematic cross section through the CMS tracker. Each line represents a detector module. Double lines indicate back-to-back modules\cite{Chatrchyan:2008aa}.}
 %  \caption{Schematic cross section of the top half of the CMS tracker system in the $rz$ plane. The centre of tracker is shown with a star and corresponds to the approximate position of the proton collision point. The green dashed lines are an indication for each named tracker subsystem. The strip tracker modules that provide two-dimensional hits are shown by thin, black lines, while those able to reconstruct three-dimensional hit positions are shown by thick, blue lines. The pixel modules, shown in red, also provide three-dimensional hits. Figure taken from \cite{Bayatian:2006zz}. }
 %	\label{fig:Tracker}
 %\end{figure}
-
-\begin{figure}[htbp]
+ \begin{figure}[htbp]
 	\centering
-	%	\includegraphics[width=\textwidth]{2_ExperimentalSetup/Figures/imageedit_3_5170744545}
-	\includegraphics[width=1.\textwidth]{2_ExperimentalSetup/Figures/TRK}
-	\caption{Schematic cross section through the CMS tracker. Each line represents a detector module. Double lines indicate back-to-back modules that deliver stereo hits. Figure taken from \cite{Chatrchyan:2008aa}.}
+	%	\includegraphics[width=\linewidth]{2_ExperimentalSetup/Figures/imageedit_3_5170744545}
+	\includegraphics[width=1.\linewidth]{2_ExperimentalSetup/Figures/TRK}
+	\caption{Schematic cross section through the CMS tracker. Each line represents a detector module. Double lines indicate back-to-back modules that deliver stereo hits. The tracker inner barrel (TIB) and inner discs (TID) are set around the pixel detector. The tracker outer Barrel (TOB) and endcaps (TEC) form the outer layers. Figure taken from~\cite{Chatrchyan:2008aa}.}
 	\label{fig:Tracker}
-\end{figure}
-
-
-
+\end{figure} 
  The tracking system consists of a cylinder of 5.8~\meter\ long and 2.5~\meter\ in diameter. It is immersed in a co-axial magnetic field of 3.8~\Tesla\ provided by the solenoid.
  As shown in \fig{fig:Tracker}, the tracker is built up from a large silicon strip tracker with a small silicon pixel tracker inside. 
  The inner pixel region ($4.4<r<10.2$~\cm), gets the highest flux of particles. Therefore, pixel silicon sensors of $100 \times 150~\micro \meter^2$ are used. It consists of three cylindrical barrels that are complemented by two discs of pixel modules at each side.
- The silicon strip tracker ($20<r<116$\cm) has three subdivisions. The Tracker Inner Barrel  and Discs (TIB, TID, see \fig{fig:Trackpics}) are composed of four barrel layers accompanied by three discs at each end. The outer part of the tracker - Tracker Outer Barrel (TOB) -  consists  of 6 barrel layers. In the outer discs, there are nine discs of silicon sensors, referred to as Tracker End Caps (TEC). 
-  
+ The silicon strip tracker ($20<r<116$~\cm) has three subdivisions. The Tracker Inner Barrel  and Discs (TIB, TID, see \fig{fig:Trackpics}) are composed of four barrel layers accompanied by three discs at each end. The outer part of the tracker - Tracker Outer Barrel (TOB) -  consists  of 6 barrel layers. In the outer discs, there are nine discs of silicon sensors, referred to as Tracker End Caps (TEC).
+ 
        \begin{figure}[htbp]
  	\centering
- 	\begin{minipage}[t]{0.5\textwidth}
- 		\includegraphics[width=\textwidth]{2_ExperimentalSetup/Figures/cmspixel}
+ 	\begin{minipage}[t]{0.5\linewidth}
+ 		\includegraphics[width=\linewidth]{2_ExperimentalSetup/Figures/cmspixel}
  		\caption{The pixel barrel being re-installed after the Long Shutdown in 2015, around the beam pipe at CMS~\cite{Christine:2024986}.}
  		\label{fig:pix}
  	\end{minipage}
  	\hfill
- 	\begin{minipage}[t]{0.4\textwidth}
- 		\includegraphics[width=\textwidth]{2_ExperimentalSetup/Figures/cmsbarrel}
+ 	\begin{minipage}[t]{0.4\linewidth}
+ 		\includegraphics[width=\linewidth]{2_ExperimentalSetup/Figures/cmsbarrel}
  		\caption{First half of the inner tracker barrel, consisting of three layers of silicon modules~\cite{beautiful:1998635}.}
  		\label{fig:Trackpics}
  	\end{minipage}
@@ -200,10 +196,10 @@ The tracking system (tracker)~\cite{Chatrchyan:1704291} is the detecting unit cl
  \end{figure}
  
  The pixel detector, shown in \fig{fig:pix}, has 1440 modules that cover an area of about 1~\meter$^2$ and have 66 million pixels. It provides a three-dimensional position measurement of the hits arising from the interaction from charged particles with the sensors. In transverse coordinate ($r\phi$), the hit position resolution is about 10~\micro \meter, while 20-40~\micro \meter\ is obtained in the longitudinal coordinate ($z$). The sensor plane position provides the third coordinate. 
- The TIB/TID, shown in \fig{fig:Trackpics}, delivers up to four $r\phi$-measurements using  320~\micro\meter\ thick silicon micro-strip sensors. These sensors are placed with their strips parallel to the beam axis in the barrel and radial in the discs. In the TIB, the first two layers have a strip pitch of 80\micro \meter, while the remaining two have a strip pitch of 120~\micro\meter. This leads to a respective single point resolution of 23~\micro\meter\ and 35~\micro\meter. For the TID, the pitch varies between 100~\micro\meter\ and 141~\micro\meter. 
- The TOB provides six $r\phi$-measurements with a single point resolution of 53~\micro\meter\ in the first four layers, and 35~\micro \meter\ in the last two layers. It consists of 500~\micro\meter\ thick microstrip sensors with strip pitches of 183~\micro\meter\ (first 4 layers) or 122~\micro\meter\ (last two layers). The TEC provides up to 9 $\phi$-measurements via 9 discs consisting of up to 7 rings of silicon microstrip sensors of 97~\micro\meter to 184~\micro\meter\ average pitch.
+ The TIB/TID, shown in \fig{fig:Trackpics}, delivers up to four $r\phi$-measurements using  320~\micro\meter\ thick silicon micro-strip sensors. These sensors are placed with their strips parallel to the beam axis in the barrel and radial in the discs. In the TIB, the first two layers have a strip pitch of 80~\micro \meter, while the remaining two have a strip pitch of 120~\micro\meter. This leads to a respective single point resolution of 23~\micro\meter\ and 35~\micro\meter. For the TID, the pitch varies between 100~\micro\meter\ and 141~\micro\meter. 
+ The TOB provides six $r\phi$-measurements with a single point resolution of 53~\micro\meter\ in the first four layers, and 35~\micro \meter\ in the last two layers. It consists of 500~\micro\meter\ thick microstrip sensors with strip pitches of 183~\micro\meter\ (first 4 layers) or 122~\micro\meter\ (last two layers). The TEC provides up to 9 $\phi$-measurements via 9 discs consisting of up to 7 rings of silicon microstrip sensors of 97~\micro\meter\ to 184~\micro\meter\ average pitch.
  
- A second co-ordinate measurement ($z$ in the barrel, $r$ on the discs) is provided through the use of a second micro strip detector module mounted back-to-back with a stereo angle of 100 mrad. This is done on the modules in the first two layers and rings of the TIB, TID, and TOB, as well as rings 1,2, and 5 of the TECs (blue line in \fig{fig:Tracker}). The resolution in the  $z$ direction is approximately 230~\micro \meter\ in the TIB and 530~\micro \meter\ in the TOB, and is varying with pitch in the TID and TEC.  To allow overlay and avoid gaps in acceptance, each module is shifted slightly in $r$ or $z$ with respect to its neighbouring modules within a layer.  With this detector lay-out, at least nine points per charged particle trajectory can be measured in an \abspsrap range up to 2.4, where at least four of them being two dimensional.
+ A second coordinate measurement ($z$ in the barrel, $r$ on the discs) is provided through the use of a second micro strip detector module mounted back-to-back with a stereo angle of 100~mrad. This is done on the modules in the first two layers and rings of the TIB, TID, and TOB, as well as rings 1, 2, and 5 of the TECs (double lines in \fig{fig:Tracker}). The resolution in the  $z$ direction is approximately 230~\micro \meter\ in the TIB and 530~\micro \meter\ in the TOB, and is varying with pitch in the TID and TEC.  To allow overlay and avoid gaps in acceptance, each module is shifted slightly in $r$ or $z$ with respect to its neighbouring modules within a layer.  With this detector lay-out, at least nine points per charged particle trajectory can be measured in an \abspsrap range up to 2.4, where at least four of them being two dimensional.
  The CMS silicon tracker provides 9.3 million read-out channels and covers an active area of about 198~\meter$^2$.  
   
   
@@ -215,7 +211,7 @@ The tracking system (tracker)~\cite{Chatrchyan:1704291} is the detecting unit cl
 \subsection{Data acquisition}
 \label{sec:DAQ}
 % event display https://cds.cern.ch/record/2242076/files/DP2017_001.pdf
-At a design luminosity of 10$^{34}\:\centi\meter^{-2}\second^{-1}$, the proton interaction rate exceeds 1~\giga \hertz.  Given the large size of an event (about 1 MB), the high crossing rate, and that typically tens of collisions happen at the same time, it is impossible for the CMS experiment to store all the data generated. In order to deal with the large amount of data, a two level trigger system has been put in place. The first level (Level-1) is a custom hardware system, while a second high level trigger (HLT) is software based, running on a large farm of computers. 
+At a design luminosity of 10$^{34}\:\centi\meter^{-2}\second^{-1}$, the proton interaction rate exceeds 1~\giga \hertz.  Given the large size of an event (about 1~MB), the high crossing rate, and that typically tens of collisions happen at the same time, it is impossible for the CMS experiment to store all the data generated. In order to deal with the large amount of data, a two level trigger system has been put in place. The first level (Level-1) is a custom hardware system, while a second high level trigger (HLT) is software based, running on a large farm of computers. 
 
 
 \subsubsection*{CMS Level-1 Trigger}
@@ -245,7 +241,7 @@ The data processing is based on an HLT path. This is a  set of algorithmic steps
 Before the start of taking collision data for 13~\TeV\ operations on 3 June 2015, CMS had a long shutdown (LS1)~\cite{Pralavorio:2024977}. During this shutdown, the section of the beryllium beam pipe within CMS was replaced by a narrower one. This operation required the pixel detector to be  removed and reinserted into CMS. During Run 2, higher particle fluxes with respect to Run 1 are expected. To avoid longterm damage caused by the intense particle flux at the heart of CMS, the tracker has been made ready to operate at much lower temperature than during Run 1.  The electromagnetic calorimeter preshower system was damaged during Run 1, therefore the preshower discs were removed, repaired and reinstalled successfully inside CMS in 2014. To help the discrimination between interesting low momentum muons coming from collisions and muons caused by backgrounds, a fourth triggering and measurement station for muons was added in each of the endcaps. Several new detectors were installed into CMS for measuring the collision rate within the detector and to monitor beam related backgrounds. 
 
 During the LS1, the  muon system underwent major upgrades~\cite{Guiducci:1966038,Battilana:2239185}. In the fourth station of each endcap, the outermost rings of CSC and RPC chambers were completed, providing an angular coverage of $1.2<$ \abspsrap $<1.8$ for Run 2, increasing the system redundancy, and allowing tighter cuts on the trigger quality. In order to reduce the environmental noise, outer yoke discs have been placed on both sides for the endcaps. 
-At the innermost rings of the first station, the CSCs have been upgraded by refurbishing the read-out electronics to make use of the full detector granularity instead of groups of three as was the case for Run 1. In \fig{fig:muonsys} (right), the refurbishing of the CSCs is shown.
+At the innermost rings of the first station, the CSCs have been upgraded by refurbishing the read-out electronics to make use of the full detector granularity instead of groups of three as was the case for Run 1. 
 % also see https://indico.cern.ch/event/308134/sessions/59604/attachments/588148/809429/Lecture.pdf
 
 Since the HF experiences intense particle fluxes, it became clear during Run 1 that the glass windows of the PMTs need replacing. For the ECAL in Run 1, the energy reconstruction happened  via a weighted sum of the digitized samples~\cite{Chatrchyan:2013dga}. For Run 2 however, the reconstruction had to be made more resistant for out-of-time pileup and a multi-fit approach has been set into place. In this approach, the pulse shape is modelled as a sum of one in-time pulse plus the out-of-time pulses~\cite{1748-0221-12-01-C01069}. The energy resolution is better than 2\%  in the central barrel region and 2-5 \% elsewhere.
@@ -262,7 +258,7 @@ I \propto T^2 e^{-\frac{E_g}{2kT}},
 where $T$ is the operating temperature, $E_g$ the band gap and $k$ the Boltzmann constant. There is approximately a factor 15 between the leakage currents at room temperatures and at $-10$~\degree C. 
 % see http://www.hephy.at/user/friedl/diss/html/node14.html
 
-During the LS1, the CMS cooling plant was refurbished~\cite{running:1998606} and the fluorocarbon cooling system overhauled. To help suppressing the humidity inside the tracker, new methods for vapour sealing and insulation were applied. Furthermore, several hundred high-precision sensors are used to monitor the humidity and temperature. In order to get as dry air as possible, a new dry-gas plant provides eight times more dry gas (air or nitrogen) than during the first run, and allows regulation of the flow. As a final addition, the cooling bundles outside the tracker are equipped with heater wires and temperature sensors in order to maintain safe operations above the cavern dew point. For the data taking in 2015-2016, the tracker operated at $-15$~\degree C.
+During the LS1, the CMS cooling plant was refurbished~\cite{running:1998606} and the fluorocarbon cooling system overhauled. To help suppressing the humidity inside the tracker, new methods for vapour sealing and insulation were applied. Furthermore, several hundred high-precision sensors are used to monitor the humidity and temperature. In order to get as dry air as possible, a new dry-gas plant provides eight times more dry gas (air or nitrogen) than during the first run, and allows regulation of the flow. As a final addition, the cooling bundles outside the tracker are equipped with heater wires and temperature sensors in order to maintain safe operations above the cavern dew point. For the data taking during Run 2, the tracker is operated at $-15$~\degree C.
 
 %\begin{figure}[htbp]
 %	\centering
@@ -289,7 +285,7 @@ In Run 2, with the increase in centre-of-mass energy and a higher luminosity, a 
 
 
 
-After the first half of Run 2, the innermost part of detection in CMS (pixel detector) was replaced, enhancing the particle tracking capabilities of CMS. The data used in the framework of this thesis however is from before this upgrade. More information on the Pixel upgrade can be found in Refs. \cite{CMS:2012sda,Perrey:1644757}.
+After the first half of Run 2, during EYETS, the innermost part of detection in CMS (pixel detector) was replaced, enhancing the particle tracking capabilities of CMS. The data used in the framework of this thesis however is from before this upgrade. More information on the Pixel upgrade can be found in Refs. \cite{CMS:2012sda,Perrey:1644757}.
 % http://cds.cern.ch/record/1644757/files/CR2014_005.pdf
 %http://inspirehep.net/record/1193236/files/CMS-TDR-011.pdf
 
