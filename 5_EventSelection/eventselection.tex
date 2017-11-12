@@ -1,9 +1,9 @@
- A basic event selection is made for selecting signal like events and is discussed in \Sec{sec:trig}. Also the effect corrections applied to simulation and data, summarised in \Sec{sec:SummaryCor} is shown. The analysis strategy is presented in \Sec{sec:selection}, defining the signal and background regions to constrain the huge \SM\ background compared to the expected signal. \Sec{sec:regions} discusses each region that is entering the analysis. On top of the use of background estimation from control regions, backgrounds that have  prompt leptons  contaminated by real leptons either
+ A basic event selection is made for selecting signal like events and is discussed in \Sec{sec:trig}. Also the effect of the corrections applied to simulation and data, summarised in \Sec{sec:SummaryCor} is shown. The analysis strategy is presented in \Sec{sec:selection}, defining the signal and background regions to constrain the huge \SM\ background compared to the expected signal. \Sec{sec:regions} discusses each region that is entering the analysis. On top of the use of background estimation from control regions, backgrounds that have  prompt leptons  contaminated by real leptons either
 from decays of tau leptons or from hadronized mesons or baryons
 (collectively commonly referred as ``non-prompt leptons") as well as by
-hadrons or jets misidentified as leptons\footnote{These two classes
-	of contamination will be referred to as not prompt-lepton (\NPL) samples.} are
-evaluated with a data-driven method discussed in \Sec{sec:NPL}.
+hadrons or jets misidentified as leptons are
+evaluated with a data-driven method discussed in \Sec{sec:NPL}. These two classes
+	of contamination will be referred to as not prompt-lepton (\NPL) samples.
 
 \section{Baseline event selection and filters}
 \label{sec:trig}
@@ -25,7 +25,7 @@ evaluated with a data-driven method discussed in \Sec{sec:NPL}.
 \end{figure}
   
 
-The CMS collaboration recorded in the course of 2016 proton  collisions data at a centre-of-mass of 13 \TeV\ with a total recorded integrated luminosity of $35.9~\fbinv$. The baseline event selection has as goal to substantially reject \SM\ background events, whilst maintaining a high signal efficiency. The CMS trigger system, described in \Sec{sec:DAQ}, filters out the main of the collision events from uninteresting processes, and dedicated trigger paths are defined to single out the events with our required detector signature. The trigger paths are chosen based on online triggering objects with at least one muon (M), at least one electron (E), at least two muons (MM), at least two electrons (EE), at least one muon and an electron (ME), at least three muons (MMM), at least three electrons (EEE), at least two muons and one electron (MME), or at least two electrons and one muon (EEM). For the MC simulation a simple $or$ of all triggers is taken and the event is considered when it passes one of the trigger paths. For data however, double counting of the same event has to be taken into account and a procedure to avoid double counting has been put into place. It consists of vetoing in a given dataset the events that are already selected in another, as given in Table \ref{tab:triggerlogic}. 
+The CMS collaboration recorded in the course of 2016 proton  collisions data at a centre-of-mass of 13 \TeV\ with a total recorded integrated luminosity of $35.9~\fbinv$. The baseline event selection has as goal to substantially reject \SM\ background events, whilst maintaining a high signal efficiency. The CMS trigger system, described in \Sec{sec:DAQ}, filters out the main of the collision events from uninteresting processes, and dedicated trigger paths are defined to single out the events with our required detector signature. The trigger paths are chosen based on online triggering objects with at least one muon (M), at least one electron (E), at least two muons (MM), at least two electrons (EE), at least one muon and an electron (ME), at least three muons (MMM), at least three electrons (EEE), at least two muons and one electron (MME), or at least two electrons and one muon (EEM). For the MC simulation a simple $or$ of all triggers is taken and the event is considered when it passes one of the trigger paths. For data however, double counting of the same event has to be taken into account and a procedure to avoid double counting has been put into place. It consists of vetoing in a given dataset the events that are already selected in another, as given in \tab{tab:triggerlogic}. 
 \begin{table}[htbp]
 	\centering
 	\caption{Trigger logic used to select data events in order to avoid double counting.}
@@ -65,15 +65,15 @@ The CMS collaboration recorded in the course of 2016 proton  collisions data at 
 		%		\hline 
 		HLT\_DiMu9\_Ele9\_CaloIdL\_TrackIdL\_v &  MME \\ 
 		%		\hline 
-		HLT\_Mu8\_DiEle12\_CaloIdL\_TrackIdL\_v &  EEM \\ 
+		HLT\_Mu8\_DiEle12\_CaloIdL\_TrackIdL\_v &  EEM \B \\ 
 		\hdashline
-		HLT\_IsoMu24\_v &  M \\ 
+		HLT\_IsoMu24\_v &  M \T  \\ 
 		%		\hline 
-		HLT\_IsoTkMu24\_v &  M \\ 
+		HLT\_IsoTkMu24\_v &  M \B \\ 
 		\hdashline
-		HLT\_Ele32\_eta2p1\_WPTight\_Gsf\_v &  E \\ 
+		HLT\_Ele32\_eta2p1\_WPTight\_Gsf\_v &  E \T \B  \\ 
 		\hdashline
-		HLT\_Mu17\_TrkIsoVVL\_Mu8\_TrkIsoVVL\_v &  MM \\ 
+		HLT\_Mu17\_TrkIsoVVL\_Mu8\_TrkIsoVVL\_v &  MM \T \\ 
 		%		\hline 
 		HLT\_Mu17\_TrkIsoVVL\_TkMu8\_TrkIsoVVL\_v &  MM \\ 
 		%		\hline 
@@ -81,9 +81,9 @@ The CMS collaboration recorded in the course of 2016 proton  collisions data at 
 		%		\hline 
 		HLT\_Mu17\_TrkIsoVVL\_TkMu8\_TrkIsoVVL\_DZ\_v &  MM \\ 
 		%		\hline 
-		HLT\_TripleMu\_12\_10\_5\_v &  MMM \\ 
+		HLT\_TripleMu\_12\_10\_5\_v &  MMM \B \\ 
 		\hdashline
-		HLT\_Ele23\_Ele12\_CaloIdL\_TrackIdL\_IsoVL\_DZ\_v &  EE \\ 
+		HLT\_Ele23\_Ele12\_CaloIdL\_TrackIdL\_IsoVL\_DZ\_v &  EE \T \\ 
 		HLT\_Ele16\_Ele12\_Ele8\_CaloIdL\_TrackIdL\_v &  EEE \\ 
 		\bottomrule 
 	\end{tabular} 
@@ -91,9 +91,9 @@ The CMS collaboration recorded in the course of 2016 proton  collisions data at 
 \end{table}
 
 In order to ensure a full trigger efficiency, the off-line \pt\ thresholds are set higher than the online trigger thresholds. 
-Selected electrons (muons) are required to have \pt $>$ 35 (30)~\GeV\ and $|\eta| < 2.1 (2.4)$. The electrons and muons corresponding to a tight working point, as discussed in \Sec{sec:MuonID} (\tab{tab:MuonReq}) and \Sec{sec:ElectronID} (\tab{tab:ElecReq}), are used for analysis. Only events with exaclty three leptons are being considered. Events with extra leptons according to looser working points are vetoed. The trigger efficiency estimation is described in Section \ref{sec:triggereff} and is approximately 100\%. To ensure that all reconstructed particles considered for the analysis are corresponding to a proton interaction and remove signals from beam halo particles as well as detector noise, several filters are used. These are described in \Sec{sec:Filters}.
+Selected electrons (muons) are required to have $\pt > 35~(30)~\GeV$ and $|\eta| < 2.1~(2.4)$. The electrons and muons corresponding to a tight working point, as discussed in \Sec{sec:MuonID} (\tab{tab:MuonReq}) and \Sec{sec:ElectronID} (\tab{tab:ElecReq}), are used for analysis. Only events with exactly three leptons are being considered. Events with extra leptons according to looser working points are vetoed. The trigger efficiency estimation is described in \Sec{sec:triggereff} and is approximately 100\%. To ensure that all reconstructed particles considered for the analysis are corresponding to a proton interaction and remove signals from beam halo particles as well as detector noise, several filters are used. These are described in \Sec{sec:Filters}.
 
-In addition to three leptons, jets and missing transverse energy are expected from the signal signature. The jets are reconstructed using the \antikt\ algorithm with a distance parameter of 0.4, using the particle flow particles that are not identified as isolated leptons as input. The jet momentum is determined as the vectorial sum of the particles contained in the jet. Additional selection criteria are applied to each event to remove spurious jet-like features originating from isolated noise patterns in certain hadron calorimeter regions. The jet requirements are discussed \Sec{sec:JetID}. The jets are calibrated in simulation and in data separately, accounting for deposits from \pu\ and the non-linear detector response. Calibrated jets with \pt $> 30$~\GeV\ and $|\eta| < 2.4$ are selected for the analysis.  A selected jet may still overlap with the selected leptons, leading to a double-counting of reconstructed objects. To prevent such cases, jets that are found within a cone of  $R = 0.3$ around any of the signal electrons (muons) are removed from the collection of selected jets. The jets originating from b quarks are tagged using the CSVv2 algorithm, which combines the information of displaced tracks with information of secondary vertices associated with the jet using a multivariate technique. The jets are tagged as a jet coming from a b quark (b-tagged) if the CSVv2 discriminator is above a certain threshold.  This analysis uses a threshold that results in an average b-tagging efficiency of 81\% and a misidentification rate of 10\%. More information about b-tagging can be found in \Sec{sec:BJetID}.
+In addition to three leptons, jets and missing transverse energy are expected from the signal signature. The jets are reconstructed using the \antikt\ algorithm with a distance parameter of 0.4, using the particle flow particles that are not identified as isolated leptons as input. The jet momentum is determined as the vectorial sum of the particles contained in the jet. Additional selection criteria are applied to each event to remove spurious jet-like features originating from isolated noise patterns in certain hadron calorimeter regions. The jet requirements are discussed \Sec{sec:JetID}. The jets are calibrated in simulation and in data separately, accounting for deposits from \pu\ and the non-linear detector response. Calibrated jets with $\pt > 30~\GeV$ and $|\eta| < 2.4$ are selected for the analysis.  A selected jet may still overlap with the selected leptons, leading to a double-counting of reconstructed objects. To prevent such cases, jets that are found within a cone of  $R = 0.3$ around any of the signal electrons (muons) are removed from the collection of selected jets. The jets originating from b quarks are tagged using the CSVv2 algorithm, which combines the information of displaced tracks with information of secondary vertices associated with the jet using a multivariate technique. The jets are tagged as a jet coming from a b quark (b-tagged) if the CSVv2 discriminator is above a certain threshold.  This analysis uses a threshold that results in an average b-tagging efficiency of 81\% and a misidentification rate of 10\%. More information about b-tagging can be found in \Sec{sec:BJetID}.
 
 The missing transverse momentum vector \ptmisvec\ is defined as the projection on the plane perpendicular to the beams of the negative vector sum of the momenta of all reconstructed particles in an event. Its magnitude is denoted by \Etmis as shown in \Sec{sec:MET}. Its longitudinal component is calculated by limiting the lepton + neutrino to the \PW\ boson mass. In case two solutions arise, the mass closest to the known top quark mass is used. 
 
@@ -129,7 +129,7 @@ Supplementary to previous filters, only events where the first primary vertex is
 \subsection{Estimation of the trigger efficiency}
 \label{sec:triggereff}
 The trigger efficiency in data is estimated using a data sample collected using unprescaled \Etmis\ triggers. These allow events 
-with a missing transverse energy higher then 110 \GeV (120 \GeV) and that the scalar sum of the transverse momenta of the reconstructed PF jets  $H_{\mathrm{T}}^{\mathrm{trig.}}$ is at least 300 \GeV\ (120 \GeV), or a calorimeter (PF) \Etmis\  higher than 200 \GeV (300 \GeV). For a HB-HE cleaned event, the PF missing transverse energy threshold is lowered to 170 \GeV.  These trigger paths are summarised in \tab{tab:METtrig} and chosen to be completely uncorrelated with the lepton triggers given in \tab{tab:Trigger}. 
+with a missing transverse energy higher then 110~\GeV~(120~\GeV) and a scalar sum of the transverse momenta of the reconstructed PF jets  $H_{\mathrm{T}}^{\mathrm{trig.}}$ of at least 300~\GeV~(120~\GeV), or a calorimeter (PF) \Etmis\  higher than 200~\GeV~(300~\GeV). For an HB-HE cleaned event, the PF missing transverse energy threshold is lowered to 170~\GeV.  These trigger paths are summarised in \tab{tab:METtrig} and chosen to be completely uncorrelated with the lepton triggers given in \tab{tab:Trigger}. 
 \begin{table}[htbp]
 		\centering
 		\caption{Unprescaled \Etmis\ HLT trigger paths for estimating the trigger efficiency. An \textit{or} of the triggers is used to select events.}
@@ -137,11 +137,13 @@ with a missing transverse energy higher then 110 \GeV (120 \GeV) and that the sc
 			\toprule
 			Trigger path  & Requirement \\
 			\midrule
-	 HLT\_PFHT300\_PFMET110\_v* & PF \Etmis > 110 \GeV, PF $H_{\mathrm{T}}^{\mathrm{trig.}}$ > 300 \GeV \\
-	 HLT\_MET200\_v* & calorimeter \Etmis > 200 \GeV  \\
-	HLT\_PFMET300\_v* & PF \Etmis > 300 \GeV  \\
- HLT\_PFMET120\_PFHT120\_IDTight\_v* & PF \Etmis > 120 \GeV, PF $H_{\mathrm{T}}^{\mathrm{trig., tight WP}}$ > 120 \GeV \\
-	 HLT\_PFMET170\_HBHECleaned\_v* & PF \Etmis > 170 \GeV,  cleaned for HB/HE anomalous signals \\
+	 HLT\_PFHT300\_PFMET110\_v* & PF \Etmis > 110~\GeV, PF $H_{\mathrm{T}}^{\mathrm{trig.}}$ > 300 \GeV \\
+	 HLT\_MET200\_v* & calorimeter \Etmis > 200~\GeV  \T \\
+	HLT\_PFMET300\_v* & PF \Etmis > 300 \GeV  \T \\
+ \multirow{2}{*}{HLT\_PFMET120\_PFHT120\_IDTight\_v*} & PF \Etmis > 120~\GeV, \T \\
+  &  PF $H_{\mathrm{T}}^{\mathrm{trig., tight WP}}$ > 120~\GeV \T \\
+	  \multirow{2}{*}{HLT\_PFMET170\_HBHECleaned\_v*} & PF \Etmis > 170~\GeV,  cleaned for \T \\
+	  &  HB/HE anomalous signals \T \\
 	 \bottomrule
 	 \end{tabular}
  \label{tab:METtrig}
@@ -166,13 +168,13 @@ More detailed scale factors and efficiencies can be found in \App{app:TriggerSF}
 		\toprule 
 		all & \mumumu & \eee & \eemu & \emumu \\ 
 		\midrule 
-		1.0000 & 1.0000 & 0.9541 & 1.0006  & 1.0004\% \\ 
+		1.0000 & 1.0000 & 0.9541 & 1.0006  & 1.0004 \\ 
 		\bottomrule
 	\end{tabular} 
 	\label{tab:trigSFe}
 \end{table}
 
-The trigger efficiencies are also measured in function of the \pt\ of the leptons for which the distributions can be found in \App{app:TriggerSF}. The resulting scale factors  can be found in Figure \fig{image:FigurestriggerIntext}.
+The trigger efficiencies are also measured in function of the \pt\ of the leptons for which the distributions can be found in  \fig{image:FigurestriggerIntext}.
 \begin{figure}[htbp]
 	\includegraphics[width=0.48\textwidth]{Appendix/Figures/trigger/Intext/SF_trigger_1e2muhistPt.png}
 	%		\label{image:SF_trigger_1e2muhistPt.png}
@@ -186,7 +188,7 @@ The trigger efficiencies are also measured in function of the \pt\ of the lepton
 	\caption{The trigger scale factors measured as a function of lepton \pt, using the dataset collected by \Etmis\ triggers and \WZ\ simulation, after a 3 lepton and jets selection, in the Z mass window. All corrections to simulation are applied. Left, upper: \emumu\ channel. Right, upper: \eemu\ channel. Left, lower: \eee\ channel. Right, lower: \mumumu\ channel.}
 	\label{image:FigurestriggerIntext}
 \end{figure}
-The trigger efficiencies are measured to be nearly 100\% for both simulation and data. The results are dominated by statistics and assigning a large uncertainty to the trigger efficiency based on the dataset collected by \Etmis\ triggers, would be over conservative. A one percent uncertainty on the trigger selection for the \eemu\ and \mumumu\ final states, and 5\% for the \eee\ and \emumu\ final states is assigned instead. No scale factors will be applied on simulation as they are close to unity. Control plots are made in the dilepton region to validate all corrections applied to simulation and can be found in \App{app:controldilep} \todo{Make sure this is the case}.
+The trigger efficiencies are measured to be nearly 100\% for both simulation and data. The results are dominated by statistics and assigning a large uncertainty to the trigger efficiency based on the dataset collected by \Etmis\ triggers, would be over conservative. A one percent uncertainty on the trigger selection for the \eemu\ and \mumumu\ final states, and 5\% for the \eee\ and \emumu\ final states is assigned instead. No scale factors will be applied on simulation as they are close to unity. Control plots are made in the dilepton region to validate all corrections applied to simulation.
 
 \subsection{Corrections}
 \label{sec:corrections}
@@ -203,7 +205,7 @@ In data, the number of interactions per bunch crossing (pileup) is calculated wi
 	\label{fig:nbvertices}
 \end{figure}
 
-Note that \fig{fig:nbvertices} indicates that even after pileup reweighting, the primary vertex multiplicity is not well described by simulation. This is a known effect, and using  a minimum bias cross section with a slightly lower value is found to better describe the data. However, the b tagging scale factors are only provided for the nominal inelastic cross section, and thus this value is used.
+Note that \fig{fig:nbvertices} indicates that even after pileup reweighting, the primary vertex multiplicity is not well described by simulation. This is a known effect, and using  a minimum bias cross section with a slightly lower value is found to better describe the data. However, the b-tagging scale factors are only provided for the nominal inelastic cross section, and thus this value is used.
 
 
 \subsubsection*{Lepton scale factors}
@@ -213,12 +215,13 @@ SF = \frac{\epsilon_{\mathrm{data}}}{\epsilon_{\mathrm{MC}}}.
 \end{equation}
 These scale factors are measured for the identification, isolation, tracking and trigger efficiencies of the objects as a function of \pt\ and $\eta$ (see \Sec{sec:MuonID} and \Sec{sec:ElectronID}). Multiplying these scale factors for each lepton provides an overall efficiency:
 \begin{equation}
-SF^{\mu}_{\mathrm{global}} = \prod \limits_{\mathrm{i}}^{\# \mu}  SF^{\mu}_{\mathrm{ID}}(\pt,\eta) \: SF^{\mu}_{\mathrm{Iso.}}(\pt,\eta)\: SF^{\mu}_{\mathrm{Trig.}}(\pt,\eta) \:SF^{\mu}_{track}(\pt,\eta),
+SF^{\mu}_{\mathrm{global}} = \prod \limits_{\mathrm{i}}^{\# \mu}  SF^{\mu}_{\mathrm{ID}}(\pt,\eta) \: SF^{\mu}_{\mathrm{Iso.}}(\pt,\eta)\: SF^{\mu}_{\mathrm{Trig.}}(\pt,\eta) \:SF^{\mu}_{\mathrm{Track}}(\pt,\eta),
 \end{equation}
 \begin{equation}
-SF^{\mathrm{e}}_{\mathrm{global}} = \prod \limits_{\mathrm{i}}^{\# e}  SF^{\mathrm{e}}_{\mathrm{ID}}(\pt,\eta)\: SF^{\mathrm{e}}_{\mathrm{Iso.}}(\pt,\eta) \: SF^{\mathrm{e}}_{\mathrm{Trig.}}(\pt,\eta) \: SF^{\mathrm{e}}_{track}(\pt,\eta) .
+SF^{\mathrm{e}}_{\mathrm{global}} = \prod \limits_{\mathrm{i}}^{\# e}  SF^{\mathrm{e}}_{\mathrm{ID}}(\pt,\eta)\: SF^{\mathrm{e}}_{\mathrm{Iso.}}(\pt,\eta) \: SF^{\mathrm{e}}_{\mathrm{Trig.}}(\pt,\eta) \: SF^{\mathrm{e}}_{\mathrm{Track}}(\pt,\eta) .
 \end{equation}
-The effect of the scale factors can be found in \fig{fig:elSF} for the electron scaling and in \fig{fig:muSF} for the muons. The trigger efficiencies are estimated in Section \ref{sec:triggereff}.
+The effect of the scale factors can be found in \fig{fig:elSF} for the electron scaling and in \fig{fig:muSF} for the muons. The trigger efficiencies are estimated in 
+\Sec{sec:triggereff}.
 
 \begin{figure}[htbp]
 	\centering
@@ -287,11 +290,11 @@ The effect of the jet energy corrections can be found in \fig{fig:jesSF} and \fi
 
 
 \subsubsection*{Missing transverse energy}
-The energy scale and resolution corrections applied to the jets are propagated back to the  missing transverse energy (smeared Type I correction) as discussed in \Sec{sec:MET}. This rebalances the transverse net momentum of the event and improves the missing transverse energy resolution itself.
+The energy scale and resolution corrections applied to the jets are propagated back to the  missing transverse energy as discussed in \Sec{sec:MET}. This rebalances the transverse net momentum of the event and improves the missing transverse energy resolution itself.
 
 \subsection{Reconstruction of kinematic variables}
 The variables used for  the training are related to the reconstructed leptons, jets, \PZ\ boson and top quark candidates. The \PZ\ boson is reconstructed as the sum of the four vectors of the two same flavour leptons of opposite sign giving the closest value to the \PZ\ mass. The third remaining lepton is assigned as the lepton coming from the \PW\ boson decay.
-The reconstruction of the \SM\ top quark candidate is more difficult and done by summing the third lepton, the \SM\ b-jet and the neutrino (\Etmis). The \SM\ b jet is assigned to the jet with the highest CSVv2 discriminant. The longitudinal momentum of the neutrino is calculated by putting a constraint on the lepton + neutrino system with the \PW\ mass. In case two solutions are found for the $p_z^{\nu}$ component, the one that gives the reconstructed mass (lepton + neutrino + b jet) to  the known top quark mass, is used. 
+The reconstruction of the \SM\ top quark candidate is more difficult and done by summing the third lepton, the \SM\ b jet and the neutrino (\Etmis). The \SM\ b jet is assigned to the jet with the highest CSVv2 discriminant. The longitudinal momentum of the neutrino is calculated by putting a constraint on the lepton + neutrino system with the \PW\ mass. In case two solutions are found for the $p_z^{\nu}$ component, the one that gives the reconstructed mass (lepton + neutrino + b jet) to  the known top quark mass, is used. 
 The FCNC top quark is reconstructed by summing the reconstructed Z boson and the jet giving the mass closest to the top mass, from the jet collection from which the \SM\ b jet is removed. 
 
 The reconstructed objects are validated using simulation by matching the reconstructed objects to their generated counterpart by minimizing $\Delta R$. The efficiencies derived from the simulated signal samples and the \SM\ \tZq\ background process can be found in \tab{tab:matching} and \tab{tab:matching2}. 
@@ -329,11 +332,11 @@ The reconstructed objects are validated using simulation by matching the reconst
 	\label{tab:matching2}
 \end{table}
 
-
+\newpage
 \section{Analysis Strategy}
 \label{sec:selection}
 
-The analysis strategy uses five statistically independent regions to extract limits, using a likelihood fit of various observables. Two signal regions, the \tZ\ (\STSR) and \tZq\ (\TTSR) signal regions, are constructed using the jet multiplicity,  focussed on each signal signature (see Tab. \ref{tab:Regions}).  In order to constrain the rate of \WZ+jet events as well as that of \NPL\ backgrounds, three control regions are defined. The \WZ\ control region (\WZCR) focusses on \NPL s originating from \DY\ and simultaneously constrains the \WZ+jets background rate. The \NPL\ backgrounds coming from a \ttbar\ process are constrained by two control regions, \TTCR\ and \STCR, one for each signal region (\TTSR\ and \STSR).  In the \STSR\ and \TTSR, multivariate discriminants based on Boosted Decision Trees (BDT) (see \Sec{sec:BDT}) are used to respectively discriminate \FCNC\ \tZ\ and \FCNC\ \tZq\ from backgrounds. In the \WZCR, a  discriminating variable between the two backgrounds, \WZ+jets and \NPL s, is used. In \TTCR\ and \STCR, the dominating process is the \ttbar\ process, and its rate is estimated by subtracting all other background predictions from data. A simultaneous global fit using the \texttt{Higgs Combined Tool} (\Sec{sec:Stat}) is performed taking into account each region (\STSR, \TTSR, \WZCR, \TTCR\ and \STCR) for the four different leptonic channels. 
+The analysis strategy uses five statistically independent regions to extract limits, using a likelihood fit of various observables. Two signal regions, the \tZ\ (\STSR) and \tZq\ (\TTSR) signal regions, are constructed using the jet multiplicity,  focussed on each signal signature (see \tab{tab:Regions}).  In order to constrain the rate of \WZ+jet events as well as that of \NPL\ backgrounds, three control regions are defined. The \WZ\ control region (\WZCR) focusses on \NPL s originating from \DY\ and simultaneously constrains the \WZ+jets background rate. The \NPL\ backgrounds coming from a \ttbar\ process are constrained by two control regions, \TTCR\ and \STCR, one for each signal region (\TTSR\ and \STSR).  In the \STSR\ and \TTSR, multivariate discriminants based on Boosted Decision Trees (BDT) (see \Sec{sec:BDT}) are used to respectively discriminate \FCNC\ \tZ\ and \FCNC\ \tZq\ from backgrounds. In the \WZCR, a  discriminating variable between the two backgrounds, \WZ+jets and \NPL s, is used. In \TTCR\ and \STCR, the dominating process is the \ttbar\ process, and its rate is estimated by subtracting all other background predictions from data. A simultaneous global fit using the \texttt{Higgs Combined Tool} (\Sec{sec:Stat}) is performed taking into account each region (\STSR, \TTSR, \WZCR, \TTCR\ and \STCR) for the four different lepton channels. 
 
 
 \section{Data driven \NPL\ background simulation}
@@ -342,7 +345,7 @@ The analysis strategy uses five statistically independent regions to extract lim
 
 The \NPL\ background originates from hadronic objects wrongly reconstructed as leptons, real leptons coming from the semi-leptonic decay of a \Pbottom\ or \Pcharm\ hadron, or real leptons coming from the conversion of photons that pass the identification and isolation requirements. The dominant source of these \NPL s depends on the flavour of the leptons and therefore the events with a not prompt muon (\NPM) are treated differently than those with a not prompt electron (\NPE). For muons, the dominant source is the semi-leptonic decay of heavy flavour hadrons, while for electrons, the dominant sources are hadrons and photon conversions. 
 
-The backgrounds causing \NPL\ contributions are mostly \DY (Drell--Yan) and \ttbar+jets dilepton processes, and in a smaller amount \WW\ processes. All of these backgrounds contain two real leptons and one \NPL. Due to the fact that the probability for a lepton to be a \NPL\ is small, backgrounds containing two or more \NPL\  are neglected in this search. The assumption is made that for \DY\ the two leptons compatible with a \PZ\ boson decay are the real leptons, and the additional lepton is coming from a \NPL\ source, while for \ttbar+jets the \NPL\ is associated to the Z boson. This has been validated using a Monte Carlo simulation.
+The backgrounds causing \NPL\ contributions are mostly \DY\ (Drell--Yan) and \ttbar+jets dilepton processes, and in a smaller amount \WW\ processes. All of these backgrounds contain two real leptons and one \NPL. Due to the fact that the probability for a lepton to be a \NPL\ is small, backgrounds containing two or more \NPL\  are neglected in this search. The assumption is made that for \DY\ the two leptons compatible with a \PZ\ boson decay are the real leptons, and the additional lepton is coming from a \NPL\ source, while for \ttbar+jets the \NPL\ is associated to the Z boson. This assumption has been validated using a Monte Carlo simulation.
 
 The \NPL\ sample is constructed from data by requiring exactly three leptons, from which two are considered real isolated leptons and the third lepton is identified as a \NPL. This \NPL\ is created by loosening its identification and inverting its isolation criteria. The full requirements on the not prompt leptons are given in  \tab{tab:nonpromptel} and \tab{tab:nonpromptmu}. For \NPE s, a large fraction is coming from misidentified photons. These are removed by applying a tighter cut on the $1/E-1/p$ variable, and by limiting the isolation values to be smaller than one. 
 \begin{table}[htbp]
@@ -352,7 +355,7 @@ The \NPL\ sample is constructed from data by requiring exactly three leptons, fr
 		and the end caps ($|\eta_{supercluster}| > 1.479$). }
 	\begin{tabular}{ccc}
 		\toprule
-	 Properties	& \multicolumn{1}{c|}{$|\eta_{supercluster}| \leq 1.479$ } & \multicolumn{1}{c}{$|\eta_{supercluster}| > 1.479$ } \\
+	 Properties	& \multicolumn{1}{c}{$|\eta_{supercluster}| \leq 1.479$ } & \multicolumn{1}{c}{$|\eta_{supercluster}| > 1.479$ } \\
 		\midrule
 		$\sigma_{\eta \eta}$ & $<$ 0.011 & $<$ 0.0314 \\ 
 		
@@ -362,7 +365,7 @@ The \NPL\ sample is constructed from data by requiring exactly three leptons, fr
 		 
 		H/E & $<$ 0.298& $<$ 0.101 \\ 
 		
-		relative isolation & $\geq$ 0.0588 \&\& $<$ 1 &  $\geq$ 0.0571 \&\& $<$ 1\\ 
+		relative isolation & $\geq$ 0.0588 \& $<$ 1 &  $\geq$ 0.0571 \& $<$ 1\\ 
 	
 		$|1/E-1/p|$ & $<$ 0.0129 \GeVinv & $<$ 0.0129 \GeVinv \\ 
 		
@@ -415,10 +418,10 @@ The \NPL\ sample is constructed from data by requiring exactly three leptons, fr
 \newpage
 \section{Statistical independent regions}
 \label{sec:regions}
-The regions are defined as in Table \ref{tab:Regions} after a common selection of exactly three leptons containing one opposite sign same flavour pair that is assigned to the \PZ\ boson, at least one jet and at the most three jets, and the transverse mass of the \PW\ boson to be maximal 300 \GeV. %The cut on the transverse mass of the \PW\ boson is done to remove events that are passing the events cleaning elading to anomalous large missing transverse energy.
+The regions are defined as in \tab{tab:Regions} after a common selection of exactly three leptons containing one opposite sign same flavour pair that is assigned to the \PZ\ boson, at least one jet and at the most three jets, and the transverse mass of the \PW\ boson to be maximal 300 \GeV. %The cut on the transverse mass of the \PW\ boson is done to remove events that are passing the events cleaning elading to anomalous large missing transverse energy.
 The transverse mass $\mtw$ is reconstructed using
 \begin{equation}
-\mtw = \sqrt{(\pt(l_{\W}) + \pt(\nu_{\W}) ) ^2 - (p_{\mathrm{x}}(l_{\W}) + p_{\mathrm{x}}(\nu_{\W}))^2  - (p_{\mathrm{y}}(l_{\W}) + p_{\mathrm{y}}(\nu_{\W}))^2    } .
+\mtw = \sqrt{\left(\pt(l_{\W}) + \pt(\nu_{\W}) ) ^2 - (p_{\mathrm{x}}(l_{\W}) + p_{\mathrm{x}}(\nu_{\W}))^2  - (p_{\mathrm{y}}(l_{\W}) + p_{\mathrm{y}}(\nu_{\W})\right)^2    } .
 \end{equation}
 
 \begin{table}[htbp]
@@ -434,9 +437,9 @@ The transverse mass $\mtw$ is reconstructed using
 		 
 		Number of b jets & 0 & 1 & $\geqslant 1$  & 1 & $\geqslant 1$ \\ 
 		
-		$|\mZ^{\mathrm{reco}} - \mZ|< 7.5$ \GeV & Yes & Yes & Yes & No & No \\
+		$|\mZ^{\mathrm{reco}} - \mZ|< 7.5$ \GeV & Yes & Yes & Yes & No & No \B\\
 		\hdashline
-		$|\mZ^{\mathrm{reco}} - \mZ|< 30$ \GeV & Yes & Yes & Yes & Yes & Yes \\
+		$|\mZ^{\mathrm{reco}} - \mZ|< 30$ \GeV & Yes & Yes & Yes & Yes & Yes \T\\
 			Number of leptons & 3 & 3 & 3  & 3 & 3\\
 		\bottomrule 
 	\end{tabular} 
@@ -447,9 +450,9 @@ Additional leptons with a looser identification are vetoed in order to reduce th
 
 For the FCNC \tZ\ final state, one \Pbottom\ jet coming from the \SM\ top decay is expected. For the FCNC \tZq, an additional light jet is expected. In the \ttZ\ final state, two b jets are present in the final state. However, due to inefficiencies of the b-tagging algorithm, one of the two \Pbottom\ jets may be identified as a light quark jet, giving the same final state as the FCNC \tZq\ final state. For the \WZ+jets final states, one of the b jets produced by gluon splitting, can be b-tagged or light flavour jets coming from the \WZ+jets production can be mis-tagged as b jets. The SM \tZq\ final state expects the same signal as FCNC \tZq.
 
-The \NPL\  events give a significant background contribution. This background is mainly coming from \DY\ and \ttbar+jets processes (in a less significant way, also \WW\ and \tWZ\ contributes), which have very high cross sections and cause a large number of \NPL\  background events compared to the signal.
+The \NPL\  events give a significant background contribution. This background is mainly coming from \DY\ and \ttbar+jets processes (in a less significant way, also \WW\ contributes), which have very high cross sections and cause a large number of \NPL\  background events compared to the signal.
 
-In order to reduce the large uncertainties in backgrounds, five independent regions are used as defined in Table  \ref{tab:Regions}. In \fig{fig:regions}, the strategy and usage of each region is illustrated.
+In order to reduce the large uncertainties in backgrounds, five independent regions are used as defined in  \tab{tab:Regions}. In \fig{fig:regions}, the strategy and usage of each region is illustrated.
 \begin{figure}
 	\centering
 	\includegraphics[width=1.\linewidth]{5_EventSelection/Figures/regions}
@@ -457,9 +460,9 @@ In order to reduce the large uncertainties in backgrounds, five independent regi
 	\label{fig:regions}
 \end{figure}
 
-
+\newpage
 \subsection{WZCR}
-The \WZCR\ is constructed by vetoing events with jets tagged as being a b-jet, making it statistically independent from the signal regions where at least one b-tagged jet is required. In this region, a fit is performed on the transverse mass of the \PW\ boson, in order to estimate the \NPL\ yield coming from \DY\ and the \WZ+jets backgrounds. 
+The \WZCR\ is constructed by vetoing events with jets tagged as being a b jet, making it statistically independent from the signal regions where at least one b-tagged jet is required. In this region, a fit is performed on the transverse mass of the \PW\ boson, in order to estimate the \NPL\ yield coming from \DY\ and the \WZ+jets backgrounds. 
 
 A transfer factor is used to account for going from a region without b-tagged jets to a region with exactly, or at least, one  b-tagged jet. For this, the probability of tagging at least one jet with the CSVv2 algorithm at the loose working point is used to calculate the expected number of events, $N_b$, after b-tagging: 
 \begin{equation}
@@ -469,19 +472,19 @@ where $\mathcal{P}_{\mathrm{b}}$ is the probability that an event survives the b
 \begin{equation}
 \begin{aligned}
 	\mathcal{P}_{\mathrm{b}} =& 1 - \text{P(event doesn't survive b tag)},\\
-	 =& 1 - \left(\prod_{\Pbottom} \text{P(b not tagged)} \prod_{\Pcharm} \text{P(c not tagged)} \prod_{\mathrm{udsg}} \text{P(light not tagged)}\right),
+	 =& 1 - \left(\prod_{\Pbottom} \text{P(b not b-tagged)} \prod_{\Pcharm} \text{P(c not b-tagged)} \prod_{\mathrm{udsg}} \text{P(light not b-tagged)}\right),
 %	& = 1 - \left(\prod_{b} 0.10 \prod_{c} 0.40 \prod_{udsg} 0.90\right)
 \end{aligned}
 \end{equation}
 with the products going over all b-, c-, and light jets. The jet flavour is determined by means of matching the reconstructed jet to the generated quarks, based on the distance in the $\eta\phi$ plane. In order to estimate the probability for exactly one b-tagged jet, the expected number of events is corrected by the fraction of events with exactly  one jet in the \WZCR. The resulting transfer factors are given in \App{app:tablestr}. The yield of \WZ+jets events in the signal region estimated using the above described transfer factor, and the yield calculated with simulated events, are in agreement. 
 
 \subsection{\TTCR\ and \STCR}
-The \TTCR\ and \STCR  are constructed with the same selection criteria as \TTSR\ and \STSR, but are outside the \PZ\ mass window (sidebands): 
+The \TTCR\ and \STCR\  are constructed with the same selection criteria as \TTSR\ and \STSR, but are outside the \PZ\ mass window (sidebands): 
 \begin{equation}
 7.5 \:\GeV < |\mZ^{\mathrm{reco}} - \mZ| < 30 \:\GeV,
 \end{equation}
 where $\mZ^{\mathrm{reco}}$ is the reconstructed mass of the \PZ\ boson in the event, and $\mZ$ the mass of the \PZ\ boson.
-These regions are dominated by \ttbar+jets (see \App{app:tablestr}) and are used to estimate the \NPL\ coming from \ttbar+jets in the \STSR\ and \TTSR. Since there aren't enough events entering these regions, no shapes are used in the fit. The distribution of the mass of the Z boson is flat for \ttbar+jets events, as shown in Fig. \fig{fig:3lepcontrolafteratleast1jet3lepzbosonmassallnormalized},  and thus the number of expected events, $N_s$, in the signal regions estimated from the number of expected events, $N_c$, in the control region is obtained as
+These regions are dominated by \ttbar+jets (see \App{app:tablestr}) and are used to estimate the \NPL\ coming from \ttbar+jets in the \STSR\ and \TTSR. Since there aren't enough events entering these regions, no shapes are used in the fit. The distribution of the mass of the Z boson is flat for \ttbar+jets events, as shown in \fig{fig:3lepcontrolafteratleast1jet3lepzbosonmassallnormalized},  and thus the number of expected events, $N_s$, in the signal regions estimated from the number of expected events, $N_c$, in the control region is obtained as
 \begin{equation}
 N_s = \frac{15}{60-15} N_c.
 \end{equation}
@@ -489,7 +492,7 @@ The resulting transfer factors are given in \App{app:tablestr}. The expected yie
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.47\linewidth]{5_EventSelection/Figures/3lepcontrol_afterAtLeast1Jet_3lep__ZbosonMass_all_Normalized}
-	\caption{The normalized distribution for \DY\ and \ttbar+jets events before dividing the events in to regions, after $|\mZ^{\mathrm{reco}} - \mZ| < 30$ GeV. All leptonic channels combined.}
+	\caption{The normalized distribution for \DY\ and \ttbar+jets events before dividing the events in to regions, after $|\mZ^{\mathrm{reco}} - \mZ| < 30$ GeV. All lepton channels combined.}
 	\label{fig:3lepcontrolafteratleast1jet3lepzbosonmassallnormalized}
 \end{figure}
 
