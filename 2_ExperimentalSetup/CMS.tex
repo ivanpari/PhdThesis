@@ -10,7 +10,7 @@ At one of the collision points of the LHC, the CMS detector~\cite{CMS,Bayatian:9
 
 \newpage
 \subsection{CMS coordinate system}
-The coordinate system used by CMS can be found in \fig{fig:CMScoord}. The origin of the right handed orthogonal coordinate system is chosen to be the point of collisions. The x-axis points towards the centre of the LHC ring such that the y-axis points towards the sky, and the z-axis lies tangent to the beam axis. Since the experiment has a cylindrical shape, customary coordinates are used to describe the momentum \impuls: the distance $p=|\vec{p}|$, the azimuthal angle\footnote{The azimuthal angle is the angle between the x-axis and the projection in the transverse plane of the momentum \impuls, denoted as \trimpuls. } $\phi \in \left[-\pi,\pi\right]$, the pseudo-rapidity\footnote{The pseudo rapidity  is expressed by the polar angle $\theta$ between the direction of \impuls and the beam.} \psrap: 
+The coordinate system used by CMS can be found in \fig{fig:CMScoord}. The origin of the right handed orthogonal coordinate system is chosen to be the point of collisions. The x-axis points towards the centre of the LHC ring such that the y-axis points towards the sky, and the z-axis lies tangent to the beam axis. Since the experiment has a cylindrical shape, customary coordinates are used to describe the momentum \impuls: the distance $p=|\vec{p}|$, the azimuthal angle\footnote{The azimuthal angle is the angle between the x-axis and the projection in the transverse plane of the momentum \impuls, denoted as \trimpuls. } $\phi \in \left[-\pi,\pi\right]$, the pseudo-rapidity\footnote{The pseudorapidity  is expressed by the polar angle $\theta$ between the direction of \impuls and the beam.} \psrap: 
 \begin{equation}
 \eta = - \ln \left(\tan \left(\frac{\theta}{2}\right)\right).
 \end{equation}
@@ -92,7 +92,7 @@ The high magnetic field enables an efficient first level trigger and allows a go
 The hadronic calorimeter (HCAL) is dedicated to precisely measure the energy of charged and neutral hadrons via a succession of absorbers and scintillators. This makes it crucial for physics analyses with hadronic jets or missing transverse energy. The HCAL barrel extends between 1.77 $<r<$ 2.95~\meter, where $r$ is the radius in the transverse plane with respect to the beam. Due to space limitations, the HCAL needs to be as small as possible and is made from materials with short interaction lengths\footnote{Here the interaction length is the nuclear interaction length and this is the length needed for absorbing 36.7\% of the relativistic charged particles. For the electromagnetic calorimeter this is defined in radiation length $X_0$. The radiation length is the mean distance over which a high energy electron loses all but $1/e$ of its energy by bremsstrahlung.}. 
 On top of this, the HCAL should be as hermetic as possible and extend to large absolute pseudo rapidities such that it can provide a good measurement of the missing transverse energy. 
 
-The quality of the energy measurements is dependent on the fraction of the hadronic shower that can be detected. Therefore, the HCAL barrel (HB) inside the solenoid is reinforced by an outer hadronic calorimeter between the solenoid and muon detectors (HO, see \fig{fig:HCAL}), using the solenoid as extra absorber. This increases the thickness to 12 interaction lengths.  The HB and HO provide measurements for $\abspsrap<1.3$, while an endcap on each side (HE, $1.3< \abspsrap <3$) and a forward calorimeter (HF, $3.0< \abspsrap < 5.2$) extend the pseudo rapidity range. 
+The quality of the energy measurements is dependent on the fraction of the hadronic shower that can be detected. Therefore, the HCAL barrel (HB) inside the solenoid is reinforced by an outer hadronic calorimeter between the solenoid and muon detectors (HO, see \fig{fig:HCAL}), using the solenoid as extra absorber. This increases the thickness to 12 interaction lengths.  The HB and HO provide measurements for $\abspsrap<1.3$, while an endcap on each side (HE, $1.3< \abspsrap <3$) and a forward calorimeter (HF, $3.0< \abspsrap < 5.2$) extend the pseudorapidity range. 
 
 
 \begin{figure}[htbp]
@@ -130,7 +130,7 @@ The electromagnetic calorimeter (ECAL) is designed to measure the energy of phot
 	\label{fig:ECAL}
 \end{figure}
 There are three parts: a central barrel (EB), an endcap region (EE) and a preshower (ES) (\fig{fig:ECAL}). 
-The EB has an inner radius of 129~\centi \meter\ and corresponds to a pseudo rapidity of $0 < $ \abspsrap $<1.479$. At a distance of 314~\centi \meter\ from the vertex and covering a pseudo rapidity of $1.479 < $ \abspsrap $<3.0$, are the EE. They consist of semi-circular aluminium plates from which structural units of $5\times5$ crystals (super crystals) are supported. The ES is placed in front of the crystal calorimeter over the endcap pseudo rapidity range with two planes of silicon strip detectors as active elements. 
+The EB has an inner radius of 129~\centi \meter\ and corresponds to a pseudorapidity of $0 < $ \abspsrap $<1.479$. At a distance of 314~\centi \meter\ from the vertex and covering a pseudorapidity of $1.479 < $ \abspsrap $<3.0$, are the EE. They consist of semi-circular aluminium plates from which structural units of $5\times5$ crystals (super crystals) are supported. The ES is placed in front of the crystal calorimeter over the endcap pseudorapidity range with two planes of silicon strip detectors as active elements. 
 
 The electromagnetic shower will typically involve more than one channel. More than 90\% of the energy of a 35~\GeV\ electron or photon is contained in a $5\times 5$ matrix of crystals. Therefore, a clustering algorithm is performed in order to associate the energy deposits to the particles impinging the calorimeter.
 The achieved precision~\cite{1748-0221-12-01-C01069} for the barrel is 2$ \times 10^{-3}$~\rad\ in $\phi$ and 10$^{-3}$ in \psrap. For the endcaps this is 5$ \times 10^{-3}$~\rad\ in $\phi$ and 2$ \times 10^{-3}$ in \psrap. The energy is reconstructed by a supercluster algorithm, taking into account energy radiated via bremsstrahlung or conversion~\cite{Chatrchyan:2008aa}.  The energy resolution is given by 
@@ -145,7 +145,7 @@ The relative energy resolution of the ECAL for electrons is between 1.4-3\% in E
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=\linewidth]{2_ExperimentalSetup/Figures/imageedit_7_5931623976}
-	\caption{Relative energy resolution in bins of pseudo rapidity for the barrel and endcaps using electrons from $Z \rightarrow ee$. Left: low bremsstrahlung electrons, Right: high bremsstrahlung electrons\cite{Sun:2233637}.}
+	\caption{Relative energy resolution in bins of pseudorapidity for the barrel and endcaps using electrons from $Z \rightarrow ee$. Left: low bremsstrahlung electrons, Right: high bremsstrahlung electrons\cite{Sun:2233637}.}
 	\label{fig:ECALres}
 \end{figure}
 \end{comment}
