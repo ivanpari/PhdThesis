@@ -416,13 +416,13 @@ with
 \begin{equation}
 \beta = \frac{1}{2} m^2_{\PW} + p_{\mathrm{T},\Pnu} p_{\mathrm{T},\Plepton_{\PW}} \cos \left(\phi_{\Plepton_{\PW}} - \phi_{\Pnu}\right).
 \end{equation}
-When the solution of this quadratic solution is complex, only the real part is considered. When there are two real solutions, the solution for $p_{\Pnu}^z$ that gives the invariant mass $m_{\Pbottom\Pnu\Plepton_{\PW}}$ closest to the top quark mass (172.9 \GeV) is kept. The normalised distributions of the reconstructed top quark mass are shown in \fig{fig:topmass}. 
+When the solution of this quadratic solution is complex, only the real part is considered. When there are two real solutions, the solution for $p_{\Pnu}^z$ that gives the invariant mass $m_{\Pbottom\Pnu\Plepton_{\PW}}$ closest to the top quark mass (172.9 \GeV) is kept. The normalised distributions of the reconstructed top quark mass are shown in \fig{fig:topmass}. For the FCNC signal, one can clearly see a peak around the known mass of the top quark. For the \DY+jets and \ttbar+jets backgrounds, there is not enough events surviving the  three lepton requirement to make sensible distributions.
 
 \begin{figure}[tbph]
 	\centering
-	\includegraphics[width=0.49\linewidth]{5_EventSelection/Figures/3lepcontrol_dilep_FCNCTopMass_all_Normalized}
-	\includegraphics[width=0.49\linewidth]{5_EventSelection/Figures/3lepcontrol_dilep_FCNCTopMass_all_Normalized}
-	\caption{Distribution of the top quark mass decaying via the \SM\ Wtb vertex (left) and the \FCNC\ tZq vertex (right) MAKE THIS PLOT}
+	\includegraphics[width=0.49\linewidth]{5_EventSelection/Figures/3lepcontrol_dilep_FCNCTopMass_all_Normalizedkappa}
+	\includegraphics[width=0.49\linewidth]{5_EventSelection/Figures/3lepcontrol_dilep_FCNCTopMass_all_Normalizedkappa}
+	\caption{Normalised distribution of the top quark mass decaying via the \SM\ Wtb vertex (left) and the \FCNC\ tZq vertex (right). After requiring three leptons and jets, in the \PZ\ boson mass window.}
 	\label{fig:topmass}
 \end{figure}
  
@@ -518,7 +518,7 @@ The analysis strategy is shown in \fig{fig:regions}. Based on jet multiplicity, 
 \begin{equation}
 \mtw = \sqrt{\left(\pt(l_{\W}) + \pt(\nu_{\W}) ) ^2 - (p_{\mathrm{x}}(l_{\W}) + p_{\mathrm{x}}(\nu_{\W}))^2  - (p_{\mathrm{y}}(l_{\W}) + p_{\mathrm{y}}(\nu_{\W})\right)^2    } ,
 \end{equation}
-is used as  discriminating variable between the two backgrounds, \WZ+jets and \NPL s. The normalisation of the backgrounds are then used in the signal regions via the b-tagging information (\Sec{sec:WZCR}). The \NPL\ background coming from a \ttbar\ process are constrained by two control regions, \TTCR\ and \STCR, one for each signal region (\TTSR\ and \STSR).  The normalisation of the \ttbar\ process, is estimated by subtracting all other background predictions from data (\Sec{sec:TTCR}). A simultaneous global fit using the \texttt{Higgs Combined Tool} (\Sec{sec:Stat}) is performed taking into account each region (\STSR, \TTSR, \WZCR, \TTCR\ and \STCR) for the four different lepton channels. The BDTs in the signal regions, as well as the transverse mass of the \PW\ boson are discussed in \Chap{chap:6}. 
+is used as  discriminating variable between the two backgrounds, \WZ+jets and \NPL s. The normalisation of the backgrounds are then used in the signal regions via the b-tagging information (\Sec{sec:WZCR}). The \NPL\ background coming from a \ttbar\ process are constrained by two control regions, \TTCR\ and \STCR, one for each signal region (\TTSR\ and \STSR).  The normalisation of the \ttbar\ process, is estimated by subtracting all other background predictions from data (\Sec{sec:TTCR}). A simultaneous global fit using the \texttt{Higgs Combined Tool} (\Sec{sec:Stat}) is performed taking into account each region (\STSR, \TTSR, \WZCR, \TTCR\ and \STCR) for the four different lepton channels. The BDTs in the signal regions, as well as the transverse mass of the \PW\ boson are discussed in \Chap{chap:6}. The number of events for each region are shown in \Sec{sec:Yields}.
 \begin{figure}
 	\centering
 	\includegraphics[width=1.\linewidth]{5_EventSelection/Figures/regions}
@@ -592,12 +592,136 @@ N_s = \frac{15}{60-15} N_c.
 The resulting transfer factors are given in \App{app:tablestr}. The expected yield in the signal region estimated from the \TTCR\ (\STCR) is in agreement with the yield calculated from simulated events. 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.47\linewidth]{5_EventSelection/Figures/2lepcontrol_dilep_ZbosonMass_all_Normalized}
-	\caption{The normalized distribution for \DY\ and \ttbar+jets events before dividing the events into regions, after $|\mZ^{\mathrm{reco}} - \mZ| < 7.5$ GeV. All lepton channels combined. FIX PLOT}
+	\includegraphics[width=0.47\linewidth]{5_EventSelection/Figures/2lepcontrol_dilep_ZbosonMass_all_Normalized2}
+	\caption{The normalized distribution for \DY\ and \ttbar+jets events before dividing the events into regions, after $|\mZ^{\mathrm{reco}} - \mZ| < 7.5$ GeV. All lepton channels combined. }
 	\label{fig:3lepcontrolafteratleast1jet3lepzbosonmassallnormalized}
 \end{figure}
 
 %It is shown in \App{app:BDTnp}, that these two templates have the same shape within the limited statistics, not assuming any systematic uncertainties. 
+
+\subsection{Event yields}
+\label{sec:Yields}
+(to  be filled in once combine is hacked for this)
+  \begin{table}[htbp]
+	\centering
+	\caption{Event yields in the \STCR. }
+	\begin{tabular} {l c c c c c  }
+		\toprule
+		Process & all channels & \mumumu\ channel & \emumu\ channel & \eemu\ channel &\eee\ channel  \\
+		\midrule
+		\NPL\ \ttbar-like & 33.00 $ \pm $ 8.48 & \mumumu\ channel & \emumu\ channel & \eemu\ channel &\eee\ channel \\ 
+		\ttZ & 0.18 $ \pm $ 0.21 & \mumumu\ channel & \emumu\ channel & \eemu\ channel &\eee\ channel \\ 
+		\WZ & 3.52 $ \pm $ 0.25 & \mumumu\ channel & \emumu\ channel & \eemu\ channel &\eee\ channel\\ 
+		\ZZ & 0.31 $ \pm $ 0.10 & \mumumu\ channel & \emumu\ channel & \eemu\ channel &\eee\ channel\\ 
+		Other bkg. & 1.66 $ \pm $ 0.91& \mumumu\ channel & \emumu\ channel & \eemu\ channel &\eee\ channel \\ 
+		\tZq & 0.31 $ \pm $ 0.06 & \mumumu\ channel & \emumu\ channel & \eemu\ channel &\eee\ channel \B \\ 
+		\hdashline
+		\kZut  & 0.42 $ \pm $ 0.03 & \mumumu\ channel & \emumu\ channel & \eemu\ channel &\eee\ channel \T \\
+		\kZct  & 0.32 $ \pm $ 0.03  \B & \mumumu\ channel & \emumu\ channel & \eemu\ channel &\eee\ channel\\
+		\hdashline
+		Data & 32.00 $ \pm $ 3.28  \T & \mumumu\ channel & \emumu\ channel & \eemu\ channel &\eee\ channel\\
+		Total bkg. & 38.98 $ \pm $ 8.67 & \mumumu\ channel & \emumu\ channel & \eemu\ channel &\eee\ channel\\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+	\centering
+	\caption{Event yields in the \STSR}
+	
+	\begin{tabular} {l c c c c c   }
+		\toprule
+		Process &   all channels & \mumumu\ channel & \emumu\ channel & \eemu\ channel &\eee\ channel\\
+		\midrule
+		\NPL\ \DY-like & 6.12 $ \pm $ 1.41  & \mumumu\ channel & \emumu\ channel & \eemu\ channel &\eee\ channel \\ 
+		\ttZ & 3.51 $ \pm $ 0.34  & \mumumu\ channel & \emumu\ channel & \eemu\ channel &\eee\ channel \\ 
+		\WZ & 6.10 $ \pm $ 0.66 & \mumumu\ channel & \emumu\ channel & \eemu\ channel &\eee\ channel \\ 
+		\ZZ & 4.60 $ \pm $ 0.53  & \mumumu\ channel & \emumu\ channel & \eemu\ channel &\eee\ channel \\ 
+		Other bkg. & 1.25 $ \pm $ 0.25  & \mumumu\ channel & \emumu\ channel & \eemu\ channel &\eee\ channel \\ 
+		\tZq & 8.03 $ \pm $ 0.47  & \mumumu\ channel & \emumu\ channel & \eemu\ channel &\eee\ channel\\ 
+		NPL \ttbar-like & 9.33 $ \pm $ 1.55  & \mumumu\ channel & \emumu\ channel & \eemu\ channel &\eee\ channel \B\\
+		\hdashline
+		\kZut  & 11.25 $ \pm $ 0.17  & \mumumu\ channel & \emumu\ channel & \eemu\ channel &\eee\ channel\T \\
+		\kZct  & 18.52 $ \pm $ 0.30  & \mumumu\ channel & \emumu\ channel & \eemu\ channel &\eee\ channel \B \\
+		\hdashline
+		Data & 138.00 $ \pm $ 14.97  & \mumumu\ channel & \emumu\ channel & \eemu\ channel &\eee\ channel \T\\
+		Total bkg. & 38.94 $ \pm $ 2.70  & \mumumu\ channel & \emumu\ channel & \eemu\ channel &\eee\ channel\\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+	\centering
+	\caption{Event yields in the \TTCR. }
+	
+	\begin{tabular} {l c c c c c }
+		\toprule
+		Process &   all channels & \mumumu\ channel & \emumu\ channel & \eemu\ channel &\eee\ channel \\
+		\midrule
+		\NPL\ \ttbar-like & 29.00 $ \pm $ 9.62& \mumumu\ channel & \emumu\ channel & \eemu\ channel &\eee\ channel \\ 
+		\ttZ & 2.85 $ \pm $ 0.44 & \mumumu\ channel & \emumu\ channel & \eemu\ channel &\eee\ channel \\ 
+		\WZ & 3.98 $ \pm $ 0.63 & \mumumu\ channel & \emumu\ channel & \eemu\ channel &\eee\ channel \\ 
+		\ZZ & 0.32 $ \pm $ 0.08 & \mumumu\ channel & \emumu\ channel & \eemu\ channel &\eee\ channel \\ 
+		Other bkg. & 3.88 $ \pm $ 0.66 & \mumumu\ channel & \emumu\ channel & \eemu\ channel &\eee\ channel \\ 
+		\tZq & 0.79 $ \pm $ 0.13 & \mumumu\ channel & \emumu\ channel & \eemu\ channel &\eee\ channel \B\\ 
+		\hdashline
+				\kZut  & 0.61 $ \pm $ 0.05 & \mumumu\ channel & \emumu\ channel & \eemu\ channel &\eee\ channel  \T \\
+		\kZct  & 0.59 $ \pm $ 0.05& \mumumu\ channel & \emumu\ channel & \eemu\ channel &\eee\ channel \B\\
+		\hdashline
+		Data & 43.50 $ \pm $ 3.28& \mumumu\ channel & \emumu\ channel & \eemu\ channel &\eee\ channel \T\\
+		Total bkg.. & 40.81 $ \pm $ 9.87& \mumumu\ channel & \emumu\ channel & \eemu\ channel &\eee\ channel\\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+	\centering
+	\caption{Event yields in the \TTSR. }	
+	\begin{tabular} {l c c c c c}
+		\toprule
+		Process & all channels & \mumumu\ channel & \emumu\ channel & \eemu\ channel &\eee\ channel \\
+		\midrule
+		\NPL\ \DY-like & 9.36 $ \pm $ 1.62 & \mumumu\ channel & \emumu\ channel & \eemu\ channel &\eee\ channel \\ 
+		\ttZ & 42.55 $ \pm $ 2.28 & \mumumu\ channel & \emumu\ channel & \eemu\ channel &\eee\ channel \\ 
+		\WZ & 12.46 $ \pm $ 1.12 & \mumumu\ channel & \emumu\ channel & \eemu\ channel &\eee\ channel\\ 
+		\ZZ & 4.84 $ \pm $ 0.35 & \mumumu\ channel & \emumu\ channel & \eemu\ channel &\eee\ channel \\ 
+		Other bkg. & 5.62 $ \pm $ 0.82 & \mumumu\ channel & \emumu\ channel & \eemu\ channel &\eee\ channel \\ 
+		\tZq & 16.93 $ \pm $ 0.89& \mumumu\ channel & \emumu\ channel & \eemu\ channel &\eee\ channel \\ 
+		NPL \ttbar-like & 8.00 $ \pm $ 1.07 & \mumumu\ channel & \emumu\ channel & \eemu\ channel &\eee\ channel \B\\
+		\hdashline
+		\kZut  & 21.76 $ \pm $ 0.25 & \mumumu\ channel & \emumu\ channel & \eemu\ channel &\eee\ channel \T \\		
+		\kZct  & 56.85 $ \pm $ 0.57 & \mumumu\ channel & \emumu\ channel & \eemu\ channel &\eee\ channel \B\\
+		\hdashline
+		Data & 243.00 $ \pm $ 19.21& \mumumu\ channel & \emumu\ channel & \eemu\ channel &\eee\ channel\T \\
+		Total bkg.. & 99.76 $ \pm $ 4.05 & \mumumu\ channel & \emumu\ channel & \eemu\ channel &\eee\ channel\\
+		\bottomrule
+ 	\end{tabular}
+\end{table}
+\begin{table}[htbp]
+	\centering
+	\caption{Event yields  in the \WZCR. }	
+	\begin{tabular} {l c c c c c  }
+		\toprule
+		Process & all channels & \mumumu\ channel & \emumu\ channel & \eemu\ channel &\eee\ channel \\
+		\midrule
+		\NPL\ \DY-like & 204.00 $ \pm $ 22.12 & \mumumu\ channel & \emumu\ channel & \eemu\ channel &\eee\ channel \\ 
+		\ttZ & 9.57 $ \pm $ 0.69 & \mumumu\ channel & \emumu\ channel & \eemu\ channel &\eee\ channel \\ 
+		\WZ & 551.63 $ \pm $ 29.26 & \mumumu\ channel & \emumu\ channel & \eemu\ channel &\eee\ channel \\ 
+		\ZZ & 46.19 $ \pm $ 2.40 & \mumumu\ channel & \emumu\ channel & \eemu\ channel &\eee\ channel \\ 
+		Other bkg. & 6.75 $ \pm $ 0.99 & \mumumu\ channel & \emumu\ channel & \eemu\ channel &\eee\ channel \\ 
+		\tZq & 7.30 $ \pm $ 0.45 & \mumumu\ channel & \emumu\ channel & \eemu\ channel &\eee\ channel \B \\ 
+		\hdashline 
+		\kZut  & 14.12 $ \pm $ 0.23 & \mumumu\ channel & \emumu\ channel & \eemu\ channel &\eee\ channel\T \\	
+		\kZct  & 26.34 $ \pm $ 0.51& \mumumu\ channel & \emumu\ channel & \eemu\ channel &\eee\ channel \B\\
+		\hdashline
+		Data & 1053.00 $ \pm $ 34.45 & \mumumu\ channel & \emumu\ channel & \eemu\ channel &\eee\ channel \T \\
+		Total bkg. & 825.44 $ \pm $ 37.24 & \mumumu\ channel & \emumu\ channel & \eemu\ channel &\eee\ channel\\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+
+
 
 
 
