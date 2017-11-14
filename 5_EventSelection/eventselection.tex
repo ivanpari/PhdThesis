@@ -1,6 +1,6 @@
  A basic event selection is made for selecting signal like events and is discussed in \Sec{sec:trig}. The necessary  corrections in order to make simulation and data coherent, introduced in \Chap{chap:4}, are summarised in \Sec{sec:SummaryCor} and the resulting data/MC agreement is shown. One of the main background processes entering the analysis are background processes that have  prompt leptons contaminated by real leptons either  from decays of tau leptons or from hadronized mesons or baryons
  (so-called ``non-prompt leptons") as well as by hadrons or jets misidentified as leptons.  These two classes  of contamination will be referred to as the not prompt-lepton (\NPL) background process. The \NPL\ background process is
- evaluated with a data-driven method discussed in \Sec{sec:NPL}. The analysis strategy is presented in \Sec{sec:selection}, defining selection criteria to create signal and background regions to constrain the huge \SM\ background compared to the expected signal. %https://indico.cern.ch/event/283659/contributions/643371/attachments/523063/721480/davidcurtin_fakeleptonsim_MC4BSM_23may2014_v1.key.pdf
+ evaluated with a data-driven method discussed in \Sec{sec:NPL}. The analysis strategy is presented in \Sec{sec:regions}, defining selection criteria to create signal and background regions to constrain the huge \SM\ background compared to the expected signal. %https://indico.cern.ch/event/283659/contributions/643371/attachments/523063/721480/davidcurtin_fakeleptonsim_MC4BSM_23may2014_v1.key.pdf
 
 \section{Baseline event selection and filters}
 \label{sec:trig}
@@ -420,8 +420,8 @@ When the solution of this quadratic solution is complex, only the real part is c
 
 \begin{figure}[tbph]
 	\centering
-	\includegraphics[width=0.49\linewidth]{5_EventSelection/Figures/placeholder}
-	\includegraphics[width=0.49\linewidth]{5_EventSelection/Figures/placeholder}
+	\includegraphics[width=0.49\linewidth]{5_EventSelection/Figures/3lepcontrol_dilep_FCNCTopMass_all_Normalized}
+	\includegraphics[width=0.49\linewidth]{5_EventSelection/Figures/3lepcontrol_dilep_FCNCTopMass_all_Normalized}
 	\caption{Distribution of the top quark mass decaying via the \SM\ Wtb vertex (left) and the \FCNC\ tZq vertex (right) MAKE THIS PLOT}
 	\label{fig:topmass}
 \end{figure}
@@ -507,17 +507,30 @@ The normalisation of the distributions from the \NPL\ background sample is estim
 
 \newpage
 \section{Analysis Strategy}
-\label{sec:selection}
 \label{sec:regions}
 
-The analysis strategy uses five statistically independent regions to extract limits, using a likelihood fit of various observables. Two signal regions, the \tZ\ (\STSR) and \tZq\ (\TTSR) signal regions, are constructed using the jet multiplicity,  focussed on each signal signature (see \tab{tab:Regions}).  In order to constrain the rate of \WZ+jet events as well as that of \NPL\ backgrounds, three control regions are defined. The \WZ\ control region (\WZCR) focusses on \NPL s originating from \DY\ and simultaneously constrains the \WZ+jets background rate. The \NPL\ backgrounds coming from a \ttbar\ process are constrained by two control regions, \TTCR\ and \STCR, one for each signal region (\TTSR\ and \STSR).  In the \STSR\ and \TTSR, multivariate discriminants based on Boosted Decision Trees (BDT) (see \Sec{sec:BDT}) are used to respectively discriminate \FCNC\ \tZ\ and \FCNC\ \tZq\ from backgrounds. In the \WZCR, a  discriminating variable between the two backgrounds, \WZ+jets and \NPL s, is used. In \TTCR\ and \STCR, the dominating process is the \ttbar\ process, and its rate is estimated by subtracting all other background predictions from data. A simultaneous global fit using the \texttt{Higgs Combined Tool} (\Sec{sec:Stat}) is performed taking into account each region (\STSR, \TTSR, \WZCR, \TTCR\ and \STCR) for the four different lepton channels. 
+The baseline selection of this analysis selects events where jets and three leptons are present. Additional leptons with a looser identification are vetoed in order to reduce the contamination of backgrounds with four or more leptons in the final state, e.g. \ZZ, \ttZ, and \ttH. This makes that most important backgrounds in this search consist of backgrounds  that contain three prompt leptons in the final state. These are mainly \WZ +jets, \ttZ\ and SM \tZq. For these backgrounds, the three lepton topology is identical to the \FCNC\ signal: two opposite sign leptons of the same flavour decaying from the \PZ\ boson, and a third additional, high \pt\ lepton coming from the \PW\ boson decay.
+
+For the single top quark FCNC final state, one \Pbottom\ jet coming from the \SM\ top quark decay is expected. For the top quark pair FCNC signal, an additional light jet is expected. In the \ttZ\ final state, two b jets are present in the final state. However, due to inefficiencies of the b-tagging algorithm, one of the two \Pbottom\ jets may be identified as a light quark jet, giving the same final state as the top quark pair FCNC final state. For the \WZ+jets final states, one of the b jets produced by gluon splitting, can be b-tagged or light flavour jets coming from the \WZ+jets production can be mis-tagged as b jets. The SM \tZq\ final state expects the same signal as the top quark pair FCNC process. Furthermore, the \NPL\  background is responsible for a  significant amount of background events. 
 
 
-The regions are defined as in \tab{tab:Regions} after a common selection of exactly three leptons containing one opposite sign same flavour pair that is assigned to the \PZ\ boson, at least one jet and at the most three jets, and the transverse mass of the \PW\ boson to be maximal 300 \GeV. %The cut on the transverse mass of the \PW\ boson is done to remove events that are passing the events cleaning elading to anomalous large missing transverse energy.
-The transverse mass $\mtw$ is reconstructed using
+The analysis strategy is shown in \fig{fig:regions}. Based on jet multiplicity, b-tag information and the \PZ\ boson mass, five statistically independent regions are defined after a common selection of exactly three leptons containing one opposite sign same flavour pair that is assigned to the \PZ\ boson, at least one jet and at the most three jets, and the transverse mass of the \PW\ boson to be maximal 300 \GeV. The requirements for each region is shown in \tab{tab:Regions}. Two signal regions are considered, targeting the final state of each of the signals. The \STSR\ is constructed to target the final state of the single top quark FCNC signal, while the \TTSR\ is constructed to target the top quark pair FCNC signal. In each signal region, a multivariate discriminant based on Boosted Decision Trees (BDT) (see \Sec{sec:BDT}) is used to respectively discriminate single top quark \FCNC\ and top quark pair \FCNC\ signal from backgrounds. The rate of \WZ+jet events as well as that of \NPL\ background process, mainly originating mainly from the \DY\ process, is estimated in the \WZCR. Here, the transverse mass of the \PW boson, defined as 
 \begin{equation}
-\mtw = \sqrt{\left(\pt(l_{\W}) + \pt(\nu_{\W}) ) ^2 - (p_{\mathrm{x}}(l_{\W}) + p_{\mathrm{x}}(\nu_{\W}))^2  - (p_{\mathrm{y}}(l_{\W}) + p_{\mathrm{y}}(\nu_{\W})\right)^2    } .
+\mtw = \sqrt{\left(\pt(l_{\W}) + \pt(\nu_{\W}) ) ^2 - (p_{\mathrm{x}}(l_{\W}) + p_{\mathrm{x}}(\nu_{\W}))^2  - (p_{\mathrm{y}}(l_{\W}) + p_{\mathrm{y}}(\nu_{\W})\right)^2    } ,
 \end{equation}
+is used as  discriminating variable between the two backgrounds, \WZ+jets and \NPL s. The normalisation of the backgrounds are then used in the signal regions via the b-tagging information (\Sec{sec:WZCR}). The \NPL\ background coming from a \ttbar\ process are constrained by two control regions, \TTCR\ and \STCR, one for each signal region (\TTSR\ and \STSR).  The normalisation of the \ttbar\ process, is estimated by subtracting all other background predictions from data (\Sec{sec:TTCR}). A simultaneous global fit using the \texttt{Higgs Combined Tool} (\Sec{sec:Stat}) is performed taking into account each region (\STSR, \TTSR, \WZCR, \TTCR\ and \STCR) for the four different lepton channels. The BDTs in the signal regions, as well as the transverse mass of the \PW\ boson are discussed in \Chap{chap:6}. 
+\begin{figure}
+	\centering
+	\includegraphics[width=1.\linewidth]{5_EventSelection/Figures/regions}
+	\caption{The strategy used for the search presented in this thesis. The \WZCR\ region is used to estimate the \WZ+jets background process as well as the \NPL\ background coming from the \DY\ process. The \TTCR\ and \STCR\ regions are used to estimate the contributions of the \NPL\ background coming from the \ttbar+jets process.}
+	\label{fig:regions}
+\end{figure}
+
+%The regions are defined as in \tab{tab:Regions} after a common selection of exactly three leptons containing one opposite sign same flavour pair that is assigned to the \PZ\ boson, at least one jet and at the most three jets, and the transverse mass of the \PW\ boson to be maximal 300 \GeV. %The cut on the transverse mass of the \PW\ boson is done to remove events that are passing the events cleaning elading to anomalous large missing transverse energy.
+%The transverse mass $\mtw$ is reconstructed using
+%\begin{equation}
+%\mtw = \sqrt{\left(\pt(l_{\W}) + \pt(\nu_{\W}) ) ^2 - (p_{\mathrm{x}}(l_{\W}) + p_{\mathrm{x}}(\nu_{\W}))^2  - (p_{\mathrm{y}}(l_{\W}) + p_{\mathrm{y}}(\nu_{\W})\right)^2    } .
+%\end{equation}
 
 \begin{table}[htbp]
 	\centering
@@ -541,22 +554,12 @@ The transverse mass $\mtw$ is reconstructed using
 	\label{tab:Regions}
 \end{table}
 
-Additional leptons with a looser identification are vetoed in order to reduce the contamination of backgrounds with four or more leptons in the final state, e.g. \ZZ, \ttZ, and \ttH. The most important backgrounds are the ones that contain three prompt leptons in the final state. These are mainly \WZ +jets, \ttZ\ and SM \tZq. For these backgrounds, the three lepton topology is identical to the \FCNC\ signal: two opposite sign leptons of the same flavour decaying from the \PZ\ boson, and a third additional, high \pt\ lepton coming from the \PW\ boson decay.
 
-For the FCNC \tZ\ final state, one \Pbottom\ jet coming from the \SM\ top decay is expected. For the FCNC \tZq, an additional light jet is expected. In the \ttZ\ final state, two b jets are present in the final state. However, due to inefficiencies of the b-tagging algorithm, one of the two \Pbottom\ jets may be identified as a light quark jet, giving the same final state as the FCNC \tZq\ final state. For the \WZ+jets final states, one of the b jets produced by gluon splitting, can be b-tagged or light flavour jets coming from the \WZ+jets production can be mis-tagged as b jets. The SM \tZq\ final state expects the same signal as FCNC \tZq.
+%In order to reduce the large uncertainties in backgrounds, five independent regions are used as defined in  \tab{tab:Regions}. In \fig{fig:regions}, the strategy and usage of each region is illustrated.
 
-The \NPL\  events give a significant background contribution. This background is mainly coming from \DY\ and \ttbar+jets processes (in a less significant way, also \WW\ contributes), which have very high cross sections and cause a large number of \NPL\  background events compared to the signal.
 
-In order to reduce the large uncertainties in backgrounds, five independent regions are used as defined in  \tab{tab:Regions}. In \fig{fig:regions}, the strategy and usage of each region is illustrated.
-\begin{figure}
-	\centering
-	\includegraphics[width=1.\linewidth]{5_EventSelection/Figures/regions}
-	\caption{The strategy used for this search. The \WZCR\ region is used to estimate the \WZ+jets background process as well as the \NPL\ background coming from the \DY\ process. The \TTCR\ and \STCR\ regions are used to estimate the contributions of the \NPL\ background coming from the \ttbar+jets process.}
-	\label{fig:regions}
-\end{figure}
-
-\newpage
 \subsection{WZCR}
+\label{sec:WZCR}
 The \WZCR\ is constructed by vetoing events with jets tagged as being a b jet, making it statistically independent from the signal regions where at least one b-tagged jet is required. In this region, a fit is performed on the transverse mass of the \PW\ boson, in order to estimate the \NPL\ yield coming from \DY\ and the \WZ+jets backgrounds. 
 
 A transfer factor is used to account for going from a region without b-tagged jets to a region with exactly, or at least, one  b-tagged jet. For this, the probability of tagging at least one jet with the CSVv2 algorithm at the loose working point is used to calculate the expected number of events, $N_b$, after b-tagging: 
@@ -572,27 +575,28 @@ where $\mathcal{P}_{\mathrm{b}}$ is the probability that an event survives the b
 \end{aligned}
 \end{equation}
 with the products going over all b-, c-, and light jets. The jet flavour is determined by means of matching the reconstructed jet to the generated quarks, based on the distance in the $\eta\phi$ plane. In order to estimate the probability for exactly one b-tagged jet, the expected number of events is corrected by the fraction of events with exactly  one jet in the \WZCR. The resulting transfer factors are given in \App{app:tablestr}. The yield of \WZ+jets events in the signal region estimated using the above described transfer factor, and the yield calculated with simulated events, are in agreement. 
+\subsection{\TTSR\ and \STSR}
+The \TTSR\ is defined to target top quark pair FCNC (\tZq), while the \STSR\ focusses on single top quark FCNC (\tZ). They have \NPL\ contributions coming from \DY\ and \ttbar+jets events. In this region, the data driven \NPL\ template is split into two templates, based on the presence of the \NPL\ in the Z boson. The \NPL\ associated with \PW\ boson is assigned to \DY\ and estimated in the \WZCR, while  the \NPL\ associated with \PZ\ boson is assigned to \ttbar+jets and estimated in the \TTCR\ and \STCR.
 
 \subsection{\TTCR\ and \STCR}
+\label{sec:TTCR}
 The \TTCR\ and \STCR\  are constructed with the same selection criteria as \TTSR\ and \STSR, but are outside the \PZ\ boson mass window (sidebands): 
 \begin{equation}
 7.5 \:\GeV < |\mZ^{\mathrm{reco}} - \mZ| < 30 \:\GeV,
 \end{equation}
-where $\mZ^{\mathrm{reco}}$ is the reconstructed mass of the \PZ\ boson in the event, and $\mZ$ the mass of the \PZ\ boson.
-These regions are dominated by \ttbar+jets (see \App{app:tablestr}) and are used to estimate the \NPL\ coming from \ttbar+jets in the \STSR\ and \TTSR. Since there aren't enough events entering these regions, no shapes are used in the fit. The distribution of the mass of the Z boson is flat for \ttbar+jets events, as shown in \fig{fig:3lepcontrolafteratleast1jet3lepzbosonmassallnormalized},  and thus the number of expected events, $N_s$, in the signal regions estimated from the number of expected events, $N_c$, in the control region is obtained as
+where $\mZ^{\mathrm{reco}}$ is the reconstructed mass of the \PZ\ boson in the event, and $\mZ$ the  known mass of the \PZ\ boson.
+These regions are dominated by \ttbar+jets (see \App{app:tablestr}) and are used to estimate the \NPL\ background event yield coming from \ttbar+jets in the \STSR\ and \TTSR. Since there are few events entering the \STCR\ and \TTCR, no shapes are used in the fit. The distribution of the mass of the Z boson is flat for \ttbar+jets events, as shown in \fig{fig:3lepcontrolafteratleast1jet3lepzbosonmassallnormalized},  and thus the number of expected events, $N_s$, in the signal regions estimated from the number of expected events, $N_c$, in the control region is obtained as
 \begin{equation}
 N_s = \frac{15}{60-15} N_c.
 \end{equation}
 The resulting transfer factors are given in \App{app:tablestr}. The expected yield in the signal region estimated from the \TTCR\ (\STCR) is in agreement with the yield calculated from simulated events. 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.47\linewidth]{5_EventSelection/Figures/3lepcontrol_afterAtLeast1Jet_3lep__ZbosonMass_all_Normalized}
-	\caption{The normalized distribution for \DY\ and \ttbar+jets events before dividing the events in to regions, after $|\mZ^{\mathrm{reco}} - \mZ| < 30$ GeV. All lepton channels combined.}
+	\includegraphics[width=0.47\linewidth]{5_EventSelection/Figures/2lepcontrol_dilep_ZbosonMass_all_Normalized}
+	\caption{The normalized distribution for \DY\ and \ttbar+jets events before dividing the events into regions, after $|\mZ^{\mathrm{reco}} - \mZ| < 7.5$ GeV. All lepton channels combined. FIX PLOT}
 	\label{fig:3lepcontrolafteratleast1jet3lepzbosonmassallnormalized}
 \end{figure}
 
-\subsection{\TTSR\ and \STSR}
-The \TTSR\ is defined to target top quark pair FCNC (\tZq), while the \STSR\ focusses on single top quark FCNC (\tZ). They have \NPL\ contributions coming from \DY\ and \ttbar+jets events. In this region, the data driven \NPL\ template is split into two templates, based on the presence of the \NPL\ in the Z boson. The \NPL\ associated with \PW\ boson is assigned to \DY\ and estimated in the \WZCR, while  the \NPL\ associated with \PZ\ boson is assigned to \ttbar+jets and estimated in the \TTCR\ and \STCR.
 %It is shown in \App{app:BDTnp}, that these two templates have the same shape within the limited statistics, not assuming any systematic uncertainties. 
 
 
