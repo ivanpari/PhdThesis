@@ -553,7 +553,7 @@ where the Wilson coefficients $\bar{c}_{\mathrm{i}}$ depend on the considered th
 	+ i \frac{\bar{c}_{ hq}^{(1)}}{\Lambda^2}
 	\left[ \Phi^{\dagger} \overleftrightarrow{D}_\mu \Phi \right] 
 	\left[ \bar{Q}_{\mathrm{L}} \gamma^{\mu} Q_{\mathrm{L}} \right] \\
-	&\ +  \ i \frac{4 \bar{c}_{\PH\Pquark}^{(3)}}{\Lambda^2}
+	&\ +  \ i \frac{4 \bar{c}_{h\Pquark}^{(3)}}{\Lambda^2}
 	\left[ \Phi^{\dagger} {T}_{i} \overleftrightarrow{D}_\mu \Phi \right]
 	\left[ \bar{Q}_{\mathrm{L}} \gamma^\mu { T}^{\mathrm{i}} Q_{\mathrm{L}}\right]
 	+  \frac{\bar{c}_{uh}}{\Lambda^2} \Phi^{\dagger}\Phi\ 
@@ -574,21 +574,23 @@ denoting the structure constant of the \Sthree\ group  as $f^{\mathrm{a}}_{\math
 \begin{equation}
 D_{\mu} \Phi   = \partial_{\mu} \Phi - \frac{1}{2}ig'B_{\mu}\Phi - igT_{\mathrm{k}}W_{\mu}^{\mathrm{k}}\Phi
 \end{equation}
-with the conventions of \Sec{sec:SMlagr}. The representation matrices $T$ of \Stwo\ are defined in \eq{eq:Stwee}, while the representation matrices $\mathcal{T}$ of \Sthree\ are the Gell-Mann matrices~\cite{Peskin:257493}. The hermitian derivative operator is defined as 
+with the conventions of \Sec{sec:SMlagr}. The representation matrices $T$ of \Stwo\ are defined in \eq{eq:Stwee} and are half the Pauli matrices, while the representation matrices $\mathcal{T}$ of \Sthree\ are the Gell-Mann matrices~\cite{Peskin:257493}. The hermitian derivative operator is defined as 
 \begin{equation}
 	\Phi^{\dagger}\overleftrightarrow{D}\Phi = \Phi^{\dagger}D^{\mu}\Phi - D_{\mu}\Phi^{\dagger}\Phi.
 \end{equation}
 
  After electroweak symmetry breaking,  the operators induce~\cite{AguilarSaavedra:2004wm,Beneke:2000hk} both corrections to the \SM\ couplings and new interactions at tree level such as FCNC interactions. The FCNC interactions of the top quark that are not present in the \SM\ are given by
-\begin{align}
+ \begin{equation}
+\begin{aligned}
 \Lagr^{\Ptop}_{\mathrm{EFT}} =\frac{\sqrt{2}}{2}\sum\limits_{\Pquark = \Pup,\Pcharm} &\left[g'
 \frac{\kfqt}{\Lambda} \photontensor \APtop \sigma^{\mu\nu}\left(f^{\mathrm{L}}_{\Pphoton\Pquark} P_{\mathrm{L}} + f^{\mathrm{R}}_{\Pphoton\Pquark} P_{\mathrm{R}}\right) \Pquark \right. \\
 &+ \frac{g}{2\cW} \frac{\kZqt}{\Lambda} \Ztensor \APtop \sigma^{\mu\nu}\left(f^{\mathrm{L}}_{\PZ\Pquark} P_{\mathrm{L}} + f^{\mathrm{R}}_{\PZ\Pquark} P_{\mathrm{R}}\right) \Pquark \\
 &+\frac{\sqrt{2}g}{4\cW} \zZqt \APtop \gamma^{\mu} \left(\tilde{f}^{\mathrm{L}}_{\Pquark} P_{\mathrm{L}} + \tilde{f}^{\mathrm{R}}_{\Pquark} P_{\mathrm{R}}\right) \Pquark \PZ_{\mu} \\
-&+ g_{\mathrm{s}} \frac{\kgqt}{\Lambda}  \APtop \sigma^{\mu\nu}\left(f^{\mathrm{L}}_{\Pgluon\Pquark} P_{\mathrm{L}} + f^{\mathrm{R}}_{\Pgluon\Pquark} P_{\mathrm{R}}\right) \Pquark \Gtensor^{\mathrm{a}}\\
+&+ g_{\mathrm{s}} \frac{\kgqt}{\Lambda}  \APtop \sigma^{\mu\nu} \mathcal{T}_{\mathrm{a}} \left(f^{\mathrm{L}}_{\Pgluon\Pquark} P_{\mathrm{L}} + f^{\mathrm{R}}_{\Pgluon\Pquark} P_{\mathrm{R}}\right) \Pquark \Gtensor^{\mathrm{a}}\\
 &+ \left. \eta_{\PHiggs\Pquark\Ptop} \APtop\left(\hat{f}^{\mathrm{L}}_{\Pquark} P_{\mathrm{L}} + \hat{f}^{\mathrm{R}}_{\Pquark} P_{\mathrm{R}}\right) \Pquark \PHiggs + \mathrm{h.c.}\right],
 \label{eq:EFTlag}
-\end{align}
+\end{aligned}
+\end{equation}
 where the value of the \FCNC\ couplings at scale $\Lambda$ are represented by \kZqt, \kgqt, \kfqt, \zZqt, and ${ \eta_{{\PHiggs\Pquark \Ptop}}}$. These are assumed to be real and positive, with the unit of $\GeV^{-1}$ for $\kxqt$ and no unit for $\zeta_{xqt}$ and $\eta_{\mathrm{xqt}}$. In the equation, $\sigma^{{\mu \nu}}$ equals to $\frac{i}{2}\left[\gamma^{{\mu}},\gamma^{\nu}\right]$,  and the left- and right-handed chirality projector operators are denoted by $P_{\mathrm{L}}$ and $P_{\mathrm{R}}$. The electromagnetic coupling constant is denoted by $g'$, the strong interaction coupling is denoted as $g_{\mathrm{s}}$, while the electroweak interaction is parametrised by the coupling constant $g$ and the electroweak mixing angle $\theta_{\mathrm{W}}$.  The complex chiral parameters are normalized according to
 $ |f_{\mathrm{xq}}^{\mathrm{L}}|^2 + |f_{\mathrm{xq}}^{\mathrm{R}}|^2 = 1 $, $|\tilde{f}_{\mathrm{q}}^{\mathrm{L}}|^2 + |\tilde{f}_{\mathrm{q}}^{\mathrm{R}}|^2 = 1$, and $|\hat{f}_{\mathrm{q}}^{\mathrm{L}}|^2 + |\hat{f}_{\mathrm{q}}^{\mathrm{R}}|^2 = 1$. In the expression for $\Lagr^{\Ptop}_{\mathrm{EFT}}$, the unitary gauge is adopted and the scalar field is expanded around its vacuum expectation value $v$ with \PHiggs\ being the \SM\ Higgs boson. The field strength tensors of the photon \photonfield, the gluon field \Gfields, and the \PZ\ boson \Zfield\ are defined as
 \begin{equation}
