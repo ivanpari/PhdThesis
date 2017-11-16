@@ -1,12 +1,19 @@
-\section{Construction of template distributions}
-There were no selection criteria found to make a clear rejection of the background events without sacrificing a significant amount of signal. For this reason, a multivariate approach using Boosted Decision Trees that combines several discriminating variables in the TMVA framework is used. For the training, the BDTs are trained against all backgrounds, where the \NPL\ background is not taken into account. The BDT settings  avoid over-training and  maintain a good discriminating power against all backgrounds. The background and signal yields follow the relative fractions predicted by the simulation. 
+After the requirements on the events, explained in \Chap{chap:5}, to enhance the signal rate. The events are classified into five statistically independent regions: \STSR, \TTSR, \WZCR, \STCR, and \TTCR, shown in \tab{tab:regions}. In both signal regions (\STSR\ and \TTSR), no clear background discriminating variables were found and a multivariate technique was chosen. In this search, it was opted to use boosted decision trees. BDTs and neural networks are the two TMVA methods achieving the best separation for analyses were the signal and background distributions have overlap. Using a BDT has as advantage that it is a relatively fast method, it is easy to understand and has an excellent efficiency. In particle physics, using a  BDT is the most common used approach. 
+
+In \Sec{sec:templates}, the construction of the BDTs in the \STSR\ and \TTCR\ is explained. In each regiona set of discriminnating variables is defined for each coupling, and BDTs are trained in each three-lepton channel separatly. In the \WZCR, a discriminating variable between the \WZ+jets and \NPL\ background is found, this variable is presented in \Sec{sec:mtw}. The influence systematic uncertainties, introduced in \Chap{chap:4}, on the templates are investigated and the results are discussed in \Sec{sec:sys}. The analysis strategy and the global fit is validated on pseudo-data. This validation is explained in \Sec{sec:val}. After the validation, the fit is performed on the actual data and the results are shown in \Sec{sec:Result}. One dimensional and two-dimensional limits are extracted and presented in \Sec{sec:limits}.
 
 
+\section{Construction of the BDT template distributions}
+\label{sec:templates}
+There were no selection criteria found to make a clear rejection of the background events without sacrificing a significant amount of signal. For this reason, a multivariate approach using Boosted Decision Trees that combines several discriminating variables in the TMVA framework is used. For the training, the BDTs are trained against all backgrounds.  The \NPL\ background is not taken into account for the training since it is limited in statistics and would cause overtraining. The BDT settings  avoid over-training and  maintain a good discriminating power against the backgrounds. The background and signal yields follow the relative fractions predicted by the simulation. 
 
-The prefit distributions of the variables used for creating the multivariate discriminator are given in \Sec{sec:BDTvars}. The resulting multivariate discriminator are shown in \Sec{sec:BDTs}.  The technical details of the BDTs can be found in \App{app:BDTtechnics}.
+Starting from a large set of possible dsicriminating variables, a minimal set of variables is chosen based on the ROC curves. For each coupling, involving an up or charm quark, and each signal region, a minimal set of variables in constructed. The prefit distributions of the variables used for creating the multivariate discriminator are given in \Sec{sec:BDTvars}. The resulting multivariate discriminator are shown in \Sec{sec:BDTs}.  The tests for overtraining are shown in \Sec{sec:overtraining}, while the ROC curves are shown in \Sec{sec:ROC}.
 
 \subsection{Distributions of the BDT variables}
 \label{sec:BDTvars}
+- why are these sensitive
+- difference u vs c
+- which var is the most sensitive
 The variables used to construct the BDTs include the angles, distances, masses and transverse momenta:
 \begin{enumerate}
 	\item pseudorapidity of the SM top: \TTSR\ +\STSR\ \Zut  , \STSR\ \Zct 
@@ -72,6 +79,12 @@ The normalised distributions of the BDT input variables for the \Zut\ vertex in 
 \clearpage
 \subsection{BDTs}
 \label{sec:BDTs}
+- whichbkg dominates
+- is npl included how? 
+- why non gaussian shape for D
+- why all three leps different 
+- why shape u vs c differnet
+- why combining all channels if shape is different
 The normalised distributions of the multivariate discriminator, including the \NPL\ background are shown in this section. \todo{Beschrijf plotjes}
 \begin{figure}[htbp]
 	\centering
@@ -151,7 +164,15 @@ The normalised distributions of the multivariate discriminator, including the \N
 	
 
 \clearpage
-\subsection{Transverse mass in \WZCR}
+\subsection{Overtraining}
+\label{sec:overtraining}
+\subsection{ROC curves}
+\label{sec:ROC}
+\section{Transverse mass in \WZCR}
+\label{sec:mtw}
+- why mt w 
+- why this shape
+- main bkg
 The \WZCR\ is used to estimate the contribution from \WZ+jets and \NPL\ background. In this region, a fit is performed on the transverse mass distribution of the \PW\ boson. The prefit normalised templates are given in this section. \todo{beschrijf plotjes}
 \begin{figure}[htbp]
 	\centering
@@ -171,13 +192,14 @@ The \WZCR\ is used to estimate the contribution from \WZ+jets and \NPL\ backgrou
 
 
 \section{Systematic uncertainties}
-The systematic uncertainties entering the analysis are coming from different sources. The experimental uncertainties arise from the reconstruction of the objects and are discussed in \Sec{sec:PhysicsObject}. These influence the number of events passing the selection, so-called normalisation uncertainties, or the relative occupancies of the distributions, so-called shape
+\label{sec:sys}
+The systematic uncertainties entering the analysis are coming from different sources. The experimental uncertainties arise from the reconstruction of the objects and are discussed in \Sec{sec:PhysicsObject}. These influence the number of events passing the selection, so-called normalisation uncertainties, and/or the relative occupancies of the distributions, so-called shape
  uncertainties. The normalisation uncertainties coming from reconstruction include the uncertainty of 2.5\% on the measured integrated luminosity and the efficiency of the trigger logic used for the analysis which has a 1\% (5\%) uncertainty on the 
  \mumumu\ and \emumu\ (\eemu\ and \eee) channels. The  pileup distribution is calculated via the minimum bias cross section which has a 4.6\% uncertainty. This uncertainty results in a systematic shift in the pileup distribution and its shape effect is estimated by recalculating the pileup distribution for each variation of the minimum bias cross section. The shape uncertainties also include the uncertainties coming from the applied lepton scale factors. Their systematic uncertainty originates from three sources: identification, isolation and tracking.  The uncertainties arising from jet energy corrections require a recalculation of all jet related kinematic observables and its effect is propagated to the missing transverse energy.  The reweighting of the CSVv2 discriminant is also a source of uncertainty. There are three sources of uncertainty contributing to the measurement of the b-tag related scale factors: statistical uncertainties, jet energy scale and the purity of the sample. These result in eight uncorrelated contributions. 
  
- Since the \NPL\ sample is artificially made from data by inverting the isolation of the third lepton. Its effect has to be estimated. The shape uncertainty one the \NPL\ processes is obtained by varying the isolation inversion with respect to tight working point to the loose working point for electrons and muons at the same time. This found to have negligible effect. The uncertainty on the normalisation of the overall \NPL\ yield is taken as 50\% in accordance with the \SM\ \tZq\ search~\cite{CMS-PAS-TOP-16-020}.
+ Since the \NPL\ sample is artificially made from data by inverting the isolation of the third lepton. Its effect has to be estimated. The shape uncertainty for the \NPL\ processes is obtained by varying the isolation inversion with respect to relative isolation value for the tight lepton identification and the relative isolation for  the loose lepton identification for electrons and muons at the same time. This found to have negligible effect. Changing the value of the relative isolation has found to have a negligible effect on the shape of the relative distribution occupancies of the \NPL\ background. The uncertainty on the normalisation of the overall \NPL\ yield is taken as 50\% in accordance with the \SM\ \tZq\ search~\cite{CMS-PAS-TOP-16-020}.
  
- The uncertainty on the expected yield of the simulated backgrounds is taken to be 30\% of the yield such that it covers all uncertainties at next to leading order accuracy. Theory uncertainties  originating from the modelling of the main backgrounds are estimated to account for the effect on the shape of the distributions from the choice of parton density funnctions, and renormalization (\muR) and factorization (\muF) scales. The effect of the  renormalization (\muR) and factorization (\muF) scales is estimated by varying each independently and correlated up and down by a factor of two, where the anti-correlated variations are dropped. The envelope of these variations is used as an uncertainty. The uncertainties coming from the parton density functions  used for simulation are estimated using the PDF4LHC recipe~\cite{Ball:2017nwa}, which combines the MMHT14, CT14, and NNPDF3.0 PDF sets~\cite{Ball:2017nwa}. The theory uncertainties are considered for the main backgrounds coming from simulation: \WZ+jets, \ZZ+jets, \ttZ, and \tZq. This is found to have a negligible effect.
+ The uncertainty on the expected yield of the simulated backgrounds is taken to be 30\% of the yield such that it covers all uncertainties at next to leading order accuracy. Theory uncertainties  originating from the modelling of the main backgrounds are estimated to account for the effect on the shape of the distributions from the choice of parton density functions, and renormalization (\muR) and factorization (\muF) scales. The effect of the  renormalization (\muR) and factorization (\muF) scales is estimated by varying each independently ($\muR\uparrow$, $\muR\downarrow$, $\muF\uparrow$, or $\muF\downarrow $) and correlated up and down  ($\muR\uparrow\muF\uparrow$ or $\muR\downarrow\muF\downarrow $) by a factor of two. The envelope of these variations is used as an uncertainty. The uncertainties coming from the parton density functions  used for simulation are estimated using the PDF4LHC recipe~\cite{Ball:2017nwa}, which combines the MMHT14, CT14, and NNPDF3.0 PDF sets. The theory uncertainties are considered for the main backgrounds coming from simulation: \WZ+jets, \ZZ+jets, \ttZ, and \tZq. This is found to have a negligible effect.
 
  The way the uncertainties are treated as nuisance parameters is summarized in \tab{tab:nuis}. The effect of systematic uncertainties that are treated as shape uncertainties is shown in \Sec{sec:MTW} and \Sec{sec:BDTsys} . \todo{INCLUDE EFFECT PDF AND FACT/RENO}
 
@@ -224,136 +246,189 @@ The systematic uncertainties entering the analysis are coming from different sou
 	\label{tab:nuis}
 \end{table}
 \clearpage
-\subsection{Effect of systematic uncertainties on the transverse mass distribution}
+\subsection{Effect of systematic uncertainties in \WZCR}
 \label{sec:MTW}
+The effect of the experimental uncertainties influencing the shape of the distribution of the transverse mass of the \PW\ boson in the \WZCR is shown in this section for the \WZ+jet process by varying each source of uncertainty individually within its uncertainty range. The uncertainties due to pileup and lepton scale factors, shown in \fig{fig:shiftMTW1}, have the smallest effect on the distribution. The uncertainty on the pileup distribution is clearly influencing the shape of the disctribution, while the lepton identification uncertainties are more affecting the normalisation of the whole distribution. 
 \begin{figure}[htbp] 
 	\centering 
 	\subbottom[Pileup uncertainty]{
-	    \includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/MTWsys/MWT_pileupBKG}
+	    \includegraphics[width=0.3\linewidth]{6_Search/Figures/SystematicEffect/MTWsys/MWT_pileupBKG}
     }
     \subbottom[Electron identification  uncertainty]{
-    	\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/MTWsys/MWT_electronBKG}
+    	\includegraphics[width=0.3\linewidth]{6_Search/Figures/SystematicEffect/MTWsys/MWT_electronBKG}
     }
     \subbottom[Muon identification uncertainty]{
-    	\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/MTWsys/MWT_muonBKG}
+    	\includegraphics[width=0.3\linewidth]{6_Search/Figures/SystematicEffect/MTWsys/MWT_muonBKG}
     }
+	\caption{Distribution of the nominal values and shift due to the experimental systematic uncertainties for the transverse mass of the \PW\ boson in the \WZCR\ for the \WZ+jets process. All lepton channels summed.}
+\label{fig:shiftMTW1}
+\end{figure}
+
+The effect of the uncertainties arising from the jet energy corrections, shown in \fig{fig:shiftMTW3}),  have the largest effect on the shape of the distribution. The jet energy scale has the most influence on the distribution, affecting both its normalisation and shape. This is due to the fact that the missing transverse energy, which is used for constructing the transverse mass of the \PW\ boson, is influenced by the change in jet energy. Still, for the bulk of the distribution, this effect stays within a 10\% margin.
+\begin{figure}[htbp] 
+	\centering 
 	\subbottom[Jet energy scale uncertainty]{
-		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/MTWsys/MTW_JESBKG}
+		\includegraphics[width=0.3\linewidth]{6_Search/Figures/SystematicEffect/MTWsys/MTW_JESBKG}
 	}
 	\subbottom[Jet energy resolution uncertainty]{
-		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/MTWsys/MTW_JERBKG}
+		\includegraphics[width=0.3\linewidth]{6_Search/Figures/SystematicEffect/MTWsys/MTW_JERBKG}
 	}
+	\caption{Distribution of the nominal values and shift due to the experimental systematic uncertainties for the transverse mass of the \PW\ boson in the \WZCR\ for the \WZ+jets process. All lepton channels summed.}
+	\label{fig:shiftMTW3}
+\end{figure}
+
+The uncertainties due to b-tagging are shown in \fig{fig:shiftMTW2}. The uncertainty due to purity of heavy flavour jets has the largest contribution and stays within 10\% of the nominal shape. This is due to the fact that events are migrating in and out of the \WZCR, based on the presence of b jets. All The uncertainties due to b-tagging uncertainties are not having an impact on the shape of the distribution since no b-tag information is used to construct the transverse mass of the \PW\ boson.
+\begin{figure}[htbp] 
+	\centering 
 	\subbottom[CSVv2: cf uncertainty~(1)]{
-		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/MTWsys/MWT_btagSF_cferr1BKG}
+		\includegraphics[width=0.3\linewidth]{6_Search/Figures/SystematicEffect/MTWsys/MWT_btagSF_cferr1BKG}
 	}
     \subbottom[CSVv2: cf uncertainty~(2)]{
-    	\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/MTWsys/MWT_btagSF_cferr2BKG}
+    	\includegraphics[width=0.3\linewidth]{6_Search/Figures/SystematicEffect/MTWsys/MWT_btagSF_cferr2BKG}
     }
     \subbottom[CSVv2: hf uncertainty]{
-     	\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/MTWsys/MWT_btagSF_hfBKG}
+     	\includegraphics[width=0.3\linewidth]{6_Search/Figures/SystematicEffect/MTWsys/MWT_btagSF_hfBKG}
     }
     \subbottom[CSVv2: lf uncertainty ]{
-    	\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/MTWsys/MWT_btagSF_lfBKG}
+    	\includegraphics[width=0.3\linewidth]{6_Search/Figures/SystematicEffect/MTWsys/MWT_btagSF_lfBKG}
     }
     \subbottom[CSVv2: hf statistical uncertainty~(1) ]{
-    	\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/MTWsys/MWT_btagSF_hfstats1BKG}
+    	\includegraphics[width=0.3\linewidth]{6_Search/Figures/SystematicEffect/MTWsys/MWT_btagSF_hfstats1BKG}
     }
     \subbottom[CSVv2: hf statistical uncertainty~(2) ]{
-		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/MTWsys/MWT_btagSF_hfstats2BKG}
+		\includegraphics[width=0.3\linewidth]{6_Search/Figures/SystematicEffect/MTWsys/MWT_btagSF_hfstats2BKG}
     }
     \subbottom[CSVv2: lf statistical uncertainty~(1) ]{
-    	\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/MTWsys/MWT_btagSF_lfstats1BKG}
+    	\includegraphics[width=0.3\linewidth]{6_Search/Figures/SystematicEffect/MTWsys/MWT_btagSF_lfstats1BKG}
     }
     \subbottom[CSVv2: lf statistical uncertainty~(2) ]{
-		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/MTWsys/MWT_btagSF_lfstats2BKG}
+		\includegraphics[width=0.3\linewidth]{6_Search/Figures/SystematicEffect/MTWsys/MWT_btagSF_lfstats2BKG}
 	}
+	\caption{Distribution of the nominal values and shift due to the experimental systematic uncertainties for the transverse mass of the \PW\ boson in the \WZCR\ for the \WZ+jets process. All lepton channels summed.}
+\label{fig:shiftMTW2}
+\end{figure}
+
+
+
+In \fig{fig:shiftMTWt}, the effect of the theoretical uncertainties uncertainties on the distribution of the \WZ+jets process is shown. The effect of the choice of factorisation and renormalization scale is shown in \fig{fig:shiftMTWt} (a), while the effect of the knwowledge of the parton density functions is shown in \fig{fig:shiftMTWt} (b). These uncertainties have a negligible effect. 
+\begin{figure}[htbp] 
+	\centering 
+
 \subbottom[Factorisation and renormalization scale uncertainty ]{
-	\includegraphics[width=0.2\linewidth]{6_Search/Figures/theorysys/factrenoall}
+	\includegraphics[width=0.32\linewidth]{6_Search/Figures/theorysys/factrenoall}
 }
 \subbottom[PDF uncertainty ]{
-	\includegraphics[width=0.2\linewidth]{6_Search/Figures/theorysys/pdfbdtall}
+	\includegraphics[width=0.32\linewidth]{6_Search/Figures/theorysys/pdfbdtall}
 }
-	\caption{Distribution of the nominal values and shift due to  systematic uncertainties for the transverse mass of the \PW\ boson in the \WZCR\ for the \WZ\ process. All lepton channels summed.}
-	\label{fig:shiftMTW}
+	\caption{Distribution of the nominal values and shift due to  systematic uncertainties for the transverse mass of the \PW\ boson in the \WZCR\ for the \WZ+jets process. All lepton channels summed.}
+	\label{fig:shiftMTWt}
 \end{figure}
 \newpage
-\subsection{Effect of the systematic uncertainties on the multivariate discriminator distributions}
+\subsection{Effect of the systematic uncertainties in the signal regions}
 \label{sec:BDTsys}
-The  effect of the systematic uncertainties on the multivariate discriminator in the \STSR\ involving the \Zut\ vertex is shown. Other regions are shown in \App{app:sys}. \todo{Bespreek plotjes}
+In this section, the effect of the systematic uncertainties on the multivariate discriminator in the \STSR\ involving the \Zut\ vertex is shown for the \WZ+jets background and the signal (\tZ + \tZq). The effect of the systematic uncertainties for the other regions, as well as the \Zct\ coupling, are shown in \App{app:sys}. 
 
- %./BDTAnalyzer Ntup MVAinput/BDT_toppair_Zct/Reader_BDT_toppair_Zct_MVA_regionEq1.root Zct  toppair  PlotJeSystematics doSystematics
-
+The effect of the uncertainty on the estimation of the pileup distribution is shown in \fig{fig:shiftBDTSTZutPU}. This uncertainty has a small effect on the shape for the background distribution. For the distribution of the signal process, this effect is even smaller. 
 \begin{figure}[htbp] 
 	\centering 
 	\subbottom[Pileup uncertainty]{
-		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/pileupBKG}
-		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/pileupSIG}
+		\includegraphics[width=0.3\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/pileupBKG}
+		\includegraphics[width=0.3\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/pileupSIG}
 	}
+	\caption{Distribution of the nominal values and shift due to  the uncertainty on the pileup distribution for the transverse mass of the \PW\ boson in the \STSR\ for the \WZ\ process and FCNC signal involving a \Zut\ vertex. All lepton channels summed. Part one.}
+\label{fig:shiftBDTSTZutPU}
+\end{figure}
+
+In \fig{fig:shiftBDTSTZut0}, the effect of the uncertainties coming from the lepton identification is shown. Similar to the case of the \WZCR, these uncertainties only influence the normalisation of the shapes. 
+\begin{figure}[htbp] 
+\centering 
 	\subbottom[Electron identification  uncertainty]{
-		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/electronBKG}
-		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/electronSIG}
+		\includegraphics[width=0.3\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/electronBKG}
+		\includegraphics[width=0.3\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/electronSIG}
 	}
 	\subbottom[Muon identification uncertainty]{
-		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/muonBKG}
-		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/muonSIG}
+		\includegraphics[width=0.3\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/muonBKG}
+		\includegraphics[width=0.3\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/muonSIG}
 	}
+	\caption{Distribution of the nominal values and shift due to systematic uncertainties for the transverse mass of the \PW\ boson in the \STSR\ for the \WZ\ process and FCNC signal involving a \Zut\ vertex. All lepton channels summed. }
+\label{fig:shiftBDTSTZut0}
+\end{figure}
+
+The effect of the uncertainties arising from the jet energy corrections are shown in \fig{fig:shiftBDT122}. The jet energy scale uncertainty has the largest effect on the distributions. Since the jets are used to reconstruct the invariant mass of the \SM\ top, which is used to reconstruct the BDT, it is expected that the energy corrections have an effect. \todo{IS THIS TRUE}
+\begin{figure}[htbp] 
+\centering 
 	\subbottom[Jet energy scale uncertainty]{
-		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/JESBKG}
-		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/JESSIG}
+		\includegraphics[width=0.3\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/JESBKG}
+		\includegraphics[width=0.3\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/JESSIG}
 	}
 	\subbottom[Jet energy resolution uncertainty]{
-		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/JERBKG}
-		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/JERSIG}
+		\includegraphics[width=0.3\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/JERBKG}
+		\includegraphics[width=0.3\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/JERSIG}
 	}
-\subbottom[Factorisation and renormalization scale normalised uncertainty ]{
-	\includegraphics[width=0.22\linewidth]{6_Search/Figures/theorysys/factrenosinglezutbdtall}
-}
-\subbottom[PDF normalised uncertainty ]{
-	\includegraphics[width=0.22\linewidth]{6_Search/Figures/theorysys/pdfsinglezutbdtall}
-}
-
-	\caption{Distribution of the nominal values and shift due to systematic uncertainties for the transverse mass of the \PW\ boson in the \STSR\ for the \WZ\ process and FCNC signal involving a \Zut\ vertex. All lepton channels summed. Part one.}
-\label{fig:shiftBDTSTZut1}
+	\caption{Distribution of the nominal values and shift due to systematic uncertainties for the transverse mass of the \PW\ boson in the \STSR\ for the \WZ\ process and FCNC signal involving a \Zut\ vertex. All lepton channels summed.}
+\label{fig:shiftBDTSTZut122}
 \end{figure}
+
+The effect of the uncertainties that come from b-tagging are shown in \fig{fig:BDTshiftZut12} and \fig{fig:shiftBDTSTZut}. 
 \begin{figure}[htbp] 
 	\centering 
 	\subbottom[CSVv2: cf uncertainty~(1)]{
-		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/btagSF_cferr1BKG}
-		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/btagSF_cferr1SIG}
+		\includegraphics[width=0.3\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/btagSF_cferr1BKG}
+		\includegraphics[width=0.3\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/btagSF_cferr1SIG}
 	}
 	\subbottom[CSVv2: cf uncertainty~(2)]{
-		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/btagSF_cferr2BKG}
-		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/btagSF_cferr2SIG}
+		\includegraphics[width=0.3\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/btagSF_cferr2BKG}
+		\includegraphics[width=0.3\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/btagSF_cferr2SIG}
 	}
 	\subbottom[CSVv2: hf uncertainty]{
-		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/btagSF_hfBKG}
-		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/btagSF_hfSIG}
+		\includegraphics[width=0.3\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/btagSF_hfBKG}
+		\includegraphics[width=0.3\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/btagSF_hfSIG}
 	}
 	\subbottom[CSVv2: lf uncertainty ]{
-		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/btagSF_lfBKG}
-		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/btagSF_lfSIG}
+		\includegraphics[width=0.3\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/btagSF_lfBKG}
+		\includegraphics[width=0.3\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/btagSF_lfSIG}
 	}
+	\caption{Distribution of the nominal values and shift due to systematic uncertainties for the transverse mass of the \PW\ boson in the \STSR\ for the \WZ\ process and FCNC signal involving a \Zut\ vertex. All lepton channels summed. Part one.}
+\label{fig:shiftBDTSTZut12}
+\end{figure}
+\begin{figure}[htbp] 
+\centering 
 	\subbottom[CSVv2: hf statistical uncertainty~(1) ]{
-		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/btagSF_hfstats1BKG}
-		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/btagSF_hfstats1SIG}
+		\includegraphics[width=0.3\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/btagSF_hfstats1BKG}
+		\includegraphics[width=0.3\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/btagSF_hfstats1SIG}
 	}
 	\subbottom[CSVv2: hf statistical uncertainty~(2) ]{
-		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/btagSF_hfstats2BKG}
-		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/btagSF_hfstats2SIG}
+		\includegraphics[width=0.3\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/btagSF_hfstats2BKG}
+		\includegraphics[width=0.3\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/btagSF_hfstats2SIG}
 	}
 	\subbottom[CSVv2: lf statistical uncertainty~(1) ]{
-		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/btagSF_lfstats1BKG}
-		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/btagSF_lfstats1SIG}
+		\includegraphics[width=0.3\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/btagSF_lfstats1BKG}
+		\includegraphics[width=0.3\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/btagSF_lfstats1SIG}
 	}
 	\subbottom[CSVv2: lf statistical uncertainty~(2) ]{
-		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/btagSF_lfstats2BKG}
-		\includegraphics[width=0.2\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/btagSF_lfstats2SIG}
+		\includegraphics[width=0.3\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/btagSF_lfstats2BKG}
+		\includegraphics[width=0.3\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/btagSF_lfstats2SIG}
 	}
 	\caption{Distribution of the nominal values and shift due to systematic uncertainties for the transverse mass of the \PW\ boson in the \STSR\ for the \WZ\ process and FCNC signal involving a \Zut\ vertex. All lepton channels summed. Part two.}
 	\label{fig:shiftBDTSTZut}
 \end{figure}
+
+In \fig{fig:shiftBDTSTZut1}, the theoretical uncertainties arising from the factorisation and normalisation scale, as well as the parton density functions is shown. In the \STSR\ (as well as the \TTSR), these have a negligible effect. \todo{make for signal}
+\begin{figure}[htbp] 
+	\centering 
+	\subbottom[Factorisation and renormalization scale normalised uncertainty ]{
+		\includegraphics[width=0.33\linewidth]{6_Search/Figures/theorysys/factrenosinglezutbdtall}
+	}
+	\subbottom[PDF normalised uncertainty ]{
+		\includegraphics[width=0.33\linewidth]{6_Search/Figures/theorysys/pdfsinglezutbdtall}
+	}
+	
+	\caption{Distribution of the nominal values and shift due to systematic uncertainties for the transverse mass of the \PW\ boson in the \STSR\ for the \WZ\ process and FCNC signal involving a \Zut\ vertex. All lepton channels summed. Part one.}
+	\label{fig:shiftBDTSTZut1}
+\end{figure}
 \clearpage
 \section{Limit setting procedure validation}
+\label{sec:val}
 The analysis strategy has been established using a blinded strategy. Through the use of a pseudo dataset, the limit setting procedure has been validated. Signal injection tests for which the signal strength from a pseudo dataset with a pre-set  signal strength is estimated are performed and shown in \fig{fig:plotzut}. \todo{Bespreek plotjes}
 \begin{figure}[htbp]
 	\centering
@@ -385,6 +460,7 @@ Another validation has been done by performing a Maximum Likelihood fit in the \
 
 \newpage
 \section{Results and discussion}
+\label{sec:Result}
 The limit setting procedure explained in \Sec{sec:Stat} is applied and results are obtained for each lepton channel separately as well as the combination. For both the \Zut\ and \Zct\ coupling, the maximum likelihood estimator of their signal strengths $\hat{\mu}$ is compatible with zero. This is shown in \fig{fig:mlezut}. One can see that the \eee\ lepton channel has the largest uncertainty. This is due to the fact that this channel is the most influences by the lack of statistics for this search.
 \begin{figure}[htbp]
 	\centering
@@ -410,7 +486,7 @@ The maximum likelihood estimators for the nuisance parameters $\hat{\theta}$ are
 %\newpage
  In \fig{fig:impactsZut1} and \fig{fig:impactsZct1}, one can see that the nuisance parameters related to the \NPL\ normalisations are shifted with respect to their initial values. This is to be expected since their initial  normalisation is arbitrary. Furthermore, the effect of the uncertainties on the maximum likelihood estimate of the signal strength is shown. The search is limited by lack of data, as can be seen from \fig{fig:exclusionlimitbrcomp} and \fig{fig:exclusionlimitbrfcnczct}. After the limited data statistics, the most important systematic uncertainty are the \ttZ\ normalisation, JES uncertainty and the \NPL\ normalisation uncertainty. 
  
-  The distributions of multivariate discriminating  variables as well as the distribution of the transverse mass of the \PW\ boson are recreated with the maximum likelihood estimations of the nuisance parameters. The resulting distributions are shown in \fig{fig:shapesfitALL}, \fig{fig:shapesfit3mu}, \fig{fig:shapesfit1e2mu}, \fig{fig:shapesfit2e1mu}, and \fig{fig:shapesfit3e}. The post-fit distributions of the inputvariables for the BDTs are given in \App{app:PostFit}. \todo{MAKE THESE}
+ 
 
 \begin{figure}[htbp]
 	\centering
@@ -439,7 +515,9 @@ The maximum likelihood estimators for the nuisance parameters $\hat{\theta}$ are
 
 \newpage
 
-
+\subsection{Postfit distributions}
+ The distributions of multivariate discriminating  variables as well as the distribution of the transverse mass of the \PW\ boson are recreated with the maximum likelihood estimations of the nuisance parameters. The resulting distributions are shown in \fig{fig:shapesfitALL}, \fig{fig:shapesfit3mu}, \fig{fig:shapesfit1e2mu}, \fig{fig:shapesfit2e1mu}, and \fig{fig:shapesfit3e}. 
+ In the \WZCR\ and \TTSR, that have the most events entering in the regions, there is a clear agreement between data and simulation for all three-lepton channels. In the \STSR, there are some jumps due to the fact that the \NPL\ background is made from a limited data sample and does not have a smooth template to fit. 
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.32\linewidth]{6_Search/Figures/ZutFit/shapes_fit_s_0_all_error_trial.pdf}
@@ -506,10 +584,11 @@ The maximum likelihood estimators for the nuisance parameters $\hat{\theta}$ are
 %\clearpage
 \subsection{Postfit yields}
 \label{sec:postfityields}
-%\input{6_Search/tables.tex}
+In \tab{tab:PYieldSTCR} and \tab{tab:PYieldTTCR}, the  event yields for each process after the global fit for the signal involving a \Zut\ vertex is given for respectively the \STCR\ and \TTCR. All background yields are approximately unchanged and the signal is downscaled with factor of 0.2 with respect to its initial yield. In \tab{tab:PYieldWZCR}, the postfit signal yield is consistent with the other control regions. The background contribution of the \NPL\ process has been doubled, resulting in an agreement between data and simulation. The event yields in the signal regions, \STSR\ and \TTSR, are given in \tab{tab:PYieldSTSR} and \tab{tab:PYieldTTSR} respectively. The contributions of the \WZ+jets and \ttZ+jets backgrounds has risen within their uncertainties, and the contribution of the \NPL\ background has increased, making data agree with simulation. 
+
   \begin{table}[htbp]
 	\centering
-	\caption{Event yields in the \STCR. The signal yield is set to its expected value for branching fraction equal to the expected limits of most stringent upper limit set by CMS~\cite{Sirunyan:2017kkr}, being $\BR(\Ptop \rightarrow \Pup\PZ) <  2.7  \times 10^{-4}$ and  $\BR(\Ptop \rightarrow \Pcharm\PZ) < 12 \times 10^{-4}$. The \NPL\ background has an arbitrary normalisation. }
+	\caption{Event yields in the \STCR, after the global fit for the \Zut\ signal.}
 	\begin{tabular} {l c c c c c  }
 		\toprule
 		Process & all channels & \mumumu\ channel & \emumu\ channel & \eemu\ channel &\eee\ channel  \\
@@ -531,7 +610,7 @@ The maximum likelihood estimators for the nuisance parameters $\hat{\theta}$ are
 \end{table}
 \begin{table}[htbp]
 	\centering
-	\caption{Event yields in the \TTCR. The signal yield is set to its expected value for branching fraction equal to the expected limits of most stringent upper limit set by CMS~\cite{Sirunyan:2017kkr}, being $\BR(\Ptop \rightarrow \Pup\PZ) <  2.7  \times 10^{-4}$ and  $\BR(\Ptop \rightarrow \Pcharm\PZ) < 12 \times 10^{-4}$. The \NPL\ background has an arbitrary normalisation. }
+	\caption{Event yields in the \TTCR, after the global fit for the \Zut\ signal. }
 	
 	\begin{tabular} {l c c c c c }
 		\toprule
@@ -638,7 +717,10 @@ The maximum likelihood estimators for the nuisance parameters $\hat{\theta}$ are
 	\vspace*{\fill}
 \end{landscape}
 \newpage
+\section{Limits at 95\% CL}
+\label{sec:limits}
 \subsection{One dimensional limits}
+
 The limit setting procedure used in this search returns  limits on the signal strength modifier which can be translated to signal cross sections. These limits are translated to a limit on the branching fraction using \eq{eq:BR}. Additionally, the limit on the couplings are extracted using the fact that the cross sections are quadratically dependent on the couplings. In  \fig{fig:exclusionlimitbrfcnczut}, the resulting limits at 95\% CL on the branching fraction and couplings related to the \Zut\ vertex is shown. This observed (expected) limit amounts to $\BR < \BRZuto\: (\BRZut)$ when $\kZut \neq 0$ and$ \kZct = 0$.The expected limit surpasses the CMS search at a centre-of-mass of 8 \TeV\ expected limits of 0.027\% \cite{Sirunyan:2017kkr}. The observed limit of  \BRZuto\ for the \Zut\ interaction doesn't surpass the CMS 8~\TeV\ observed limit of 0.022\%~\cite{Sirunyan:2017kkr}. The ATLAS collaboration has set limits 95\% CL at a centre-of-mass of 13~\TeV~\cite{ATLAS-CONF-2017-070} with
 observed (expected) limits of 0.017\% (0.024\%) for the \Zut\ coupling. The expected limit presented in this analysis surpasses the expected limit for \Zut.
  \begin{figure}[htbp]

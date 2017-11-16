@@ -369,45 +369,27 @@ The \SM\ \Pbottom\ jet is assigned to the jet with the highest CSVv2 discriminan
 \end{equation}
 and energy conservation requires the \PW\ boson mass squared, 
 \begin{equation}
-m_{\PW}^2 = \begin{pmatrix}
-E_{\PW} \\
-\vec{p}_{\PW}
-\end{pmatrix}^2 = \left(80.4~\GeV\right)^2 , 
+m_{\PW}^2 = \left(80.4~\GeV\right)^2 , 
 \end{equation}
 is equal to the sum of the neutrino \Pnu\ and the lepton $\Plepton_{\PW}$ squared
 \begin{equation}
 \begin{aligned}
-m_{\PW}^2 &\equiv \left(
-\begin{pmatrix}
-E_{\Plepton_{\PW}} \\
-\vec{p}_{\Plepton_{\PW}} 
-\end{pmatrix}
-+ \begin{pmatrix}
-E_{\Pnu}\\
-\vec{p}_{\Pnu}
-\end{pmatrix} \right)^2, \\
-&= m_{\Plepton_{\PW}}^2 + m_{\Pnu}^2 + 2. E_{\Plepton_{\PW}}E_{\Pnu} - 2
-\begin{pmatrix}
-p_{\Plepton_{\PW}}^x & 
-p_{\Plepton_{\PW}}^y &
-p_{\Plepton_{\PW}}^z
-\end{pmatrix}
-\begin{pmatrix}
-p_{\mathrm{T},\Pnu}\; \cos \phi_{\Pnu} \T \B \\
-p_{\mathrm{T},\Pnu}\; \sin \phi_{\Pnu} \T \B\\
-p_{\Pnu}^z \T \B
-\end{pmatrix}.
+m_{\PW}^2 &\equiv (p_{\Plepton_{\PW}}+ p_{\Pnu})^2.
 \end{aligned}
 \end{equation}
-Assuming that the lepton and neutrino are approximately massless, this equation can be solved for the sought-for $p_{\Pnu}^z$  by setting $p_{\mathrm{T},\Pnu}$ equal to the missing transverse energy: 
+Assuming that the lepton and neutrino are approximately massless, this equation can be solved for the sought-for $p_{\Pnu}^z$  by setting $p_{\mathrm{T},\Pnu}$ equal to the missing transverse energy. This yields a quadratic equation of the form
 \begin{equation}
-0 = p_{\Pnu}^z - \frac{2 \: \beta \: p_{\Plepton_{\PW}}^z }{E_{\Plepton_{\PW}}^2 - \left(p_{\Plepton_{\PW}}^z\right)^2} p_{\Pnu}^z - \frac{\beta^2 - E_{\Plepton_{\PW}}^2 p_{\mathrm{T},\Pnu}^2}{E_{\Plepton_{\PW}}^2 - \left(p_{\Plepton_{\PW}}^z\right)^2}, 
-\end{equation}
-with
+	 p_{\Pnu,z} = \frac{-b}{2a} \pm \frac{\sqrt{b^2 - 4ac}}{2a} 
+\end{equation} 
+with 
 \begin{equation}
-\beta = \frac{1}{2} m^2_{\PW} + p_{\mathrm{T},\Pnu} p_{\mathrm{T},\Plepton_{\PW}} \cos \left(\phi_{\Plepton_{\PW}} - \phi_{\Pnu}\right).
+\begin{aligned}
+  a &= p_{\Plepton,x}^2 + p_{\Plepton,y}^2, \\
+  - b &= m_{\PW}^2 p_{\Plepton,z} + 2 p_{\Plepton,x} p_{\Plepton,z} p_{\Pnu,x} + 2 p_{\Plepton,x} p_{\Plepton,z} p_{\Pnu,y}, \\
+  c &=  p_{\Pnu,y} \left( p_{\Plepton,x}^2 + p_{\Plepton,z}^2 \right) + p_{\Pnu,x} \left( p_{\Plepton,x}^2 + p_{\Plepton,z}^2 \right).
+\end{aligned} 
 \end{equation}
-When the solution of this quadratic equationé is complex, only the real part is considered. When there are two real solutions, the solution for $p_{\Pnu}^z$ that gives the invariant mass $m_{\Pbottom\Pnu\Plepton_{\PW}}$ closest to the top quark mass (172.9 \GeV) is kept. The normalised distributions of the reconstructed top quark mass are shown in \fig{fig:topmass}. For the FCNC signal, one can clearly see a peak around the known mass of the top quark. For the \DY\ and \ttbar+jets backgrounds, there is not enough events surviving the  three lepton requirement to make sensible distributions.
+When the solution of this quadratic equation is complex, only the real part ($-b/2a$) is considered. If there are two real solutions, the solution for $p_{\Pnu}^z$ that gives the invariant mass $m_{\Pbottom\Pnu\Plepton_{\PW}}$ closest to the top quark mass (172.9 \GeV) is kept. The normalised distributions of the reconstructed top quark mass are shown in \fig{fig:topmass}. For the FCNC signal, one can clearly see a peak around the known mass of the top quark. For the \DY\ and \ttbar+jets backgrounds, there is not enough events surviving the  three lepton requirement to make sensible distributions.
 
 \begin{figure}[tbph]
 	\centering
