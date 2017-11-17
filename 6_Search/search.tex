@@ -7,8 +7,214 @@ In \Sec{sec:templates}, the construction of the BDTs in the \STSR\ and \TTCR\ is
 \label{sec:templates}
 There were no selection criteria found to make a clear rejection of the background events without sacrificing a significant amount of signal. For this reason, a multivariate approach using Boosted Decision Trees that combines several discriminating variables in the TMVA framework is used. For the training, the BDTs are trained against all backgrounds.  The \NPL\ background is not taken into account for the training since it is limited in statistics and would cause overtraining. The BDT settings  avoid over-training and  maintain a good discriminating power against the backgrounds. The background and signal yields follow the relative fractions predicted by the simulation. 
 
-Starting from a large set of possible dsicriminating variables, a minimal set of variables is chosen based on the ROC curves. For each coupling, involving an up or charm quark, and each signal region, a minimal set of variables in constructed. The prefit distributions of the variables used for creating the multivariate discriminator are given in \Sec{sec:BDTvars}. The resulting multivariate discriminator are shown in \Sec{sec:BDTs}.  The tests for overtraining are shown in \Sec{sec:overtraining}, while the ROC curves are shown in \Sec{sec:ROC}.
+Starting from a large set of possible discriminating variables, a minimal set of variables is chosen based on the ROC curves. For each coupling, involving an up or charm quark, and each signal region, a minimal set of variables in constructed. Since for the \Zut\ and \Zct\ coupling, for example, the expected b tag information will behave differently, as well as the fact the charm coupling will have more similarities with the \SM\ tZq process, different trainings with different input variables are performed for each coupling. Furthermore, the different three-lepton channels are trained individually, keeping the same input variables. The input variables do not depend on flavour and are therefore kept the same. However, to account for possible discrepancies between the muon and electron, the training is done seperatly for each three-lepton channel. In \Sec{sec:BDTSTSRZUT}, the construction of the multivariate discriminating variable in the \STSR, for the \Zut\ interaction, is shown. The construction of the multivariate discriminating variable in the \TTSR\ for this interaction is shown in \Sec{sec:BDTTTSRZUT}. For the \Zct\ interaction, these are shown in \Sec{sec:BDTSTSRZUT} and \Sec{sec:BDTTTSRZUT} respectively. 
 
+\subsection{BDT training in the \STSR\ for the \Zut\ intercation}
+\label{sec:BDTSTSRZUT}
+Since the single top quark signal is expected to have an enhanced discrimination against the background processes compared to the top quark pair signal,  the BDT is trained solely on the single top quark signal.  The variables used to reconstruct the multivariate discriminator are chosen based on the differences expected between signal and background. For the \STSR, the main backgrounds are the \SM\ tZq and \WZ+jets processes,  The \WZ+jets process does not contain a top quark, while for the \SM\ tZq, there the reconstructed \SM\ top quark can lose energy via the radiated \PZ\ boson.  The pseudorapidity of the SM top as well as the invariant mass of the lepton arising from the \PW\ boson and the \SM\ b jet, are used as discriminating variables. The distribution of the  pseudorapidity of the SM top peaks at zero for the FCNC single top quark signal, while the peak is broader for the background contributions. The invariant mass of the lepton arising from the \PW\ boson and the \SM\ b jet peaks at around 100~\GeV\ for signal and background, where the distribution of the background processes has a broader tail. Additionally, the difference in $\phi$ between the W lepton and the SM b jet peaks around $\pm 1$ for signal, while for background this is at $\pm 3$. Indicating that for background the  W lepton and the SM b jet are not necessarily coming from the same object. The is also visible in the distribution of the difference in the distance in the $\phi\eta$-plane, between the W lepton and the SM b jet, where signal is peaking at lower differences. For signal, the lepton assigned to the \PW\ boson should not lie close to the \PZ\ boson in the transverse plane, this is used by looking at the difference in  $\Delta \Phi$ between the W lepton and the Z boson, which peaks at large values for the signal distribution. For the  background processes these peak are not as present. For the signal, the jet with the highest transverse momentum is expected to be the b-jet. The CSVv2 discriminant of the jet with the highest \pt\ is used as discriminating variable, peaking at one for the signal process. Since the up quark is a valence quark for the proton, while the anti-up quark is a sea quark, one expects a charge asymmetry. This effect is exploited by using 
+the charge of the W lepton times the absolute pseudorapidity of the W lepton and  the \pt\ of the W lepton times its charge as discriminating variables. The distributions of the variables are shown in \fig{fig:singletopZutnormalised} for the sum of all three-lepton channels, the distributions for the individual three-lepton channels can be found in \App{app:BDTcorrZutSing}. The correlations between the different variables are shown in \fig{fig:correlationsigzutsingletop}. Almost all variables are uncorrelated with the exception of the rapidity of the \SM\ top and the variables made from the transverse momentum of the \PW\ boson. Removing the rapidity of the SM top of the list of variables however reduced the sensitivity of the search. The most discriminating variable is the distance in the $\phi\eta$-plane between the \PW\ lepton and the SM b jet, followed by the CSVv2 discriminator of the jet with the highest \pt. On third place is the invariant mass of the sum of the \PW\ lepton and \SM\ b jet. 
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.3\linewidth]{6_Search/Figures/BDTinputvars/Zut/singletop_MVA_SMtop_Eta_all_Normalized}
+	\includegraphics[width=0.3\linewidth]{6_Search/Figures/BDTinputvars/Zut/singletop_MVA_mlb_all_Normalized}
+	\includegraphics[width=0.3\linewidth]{6_Search/Figures/BDTinputvars/Zut/singletop_MVA_dPhiWlepb_all_Normalized}
+	\includegraphics[width=0.3\linewidth]{6_Search/Figures/BDTinputvars/Zut/singletop_MVA_dPhiZWlep_all_Normalized}
+	\includegraphics[width=0.3\linewidth]{6_Search/Figures/BDTinputvars/Zut/singletop_MVA_dRWlepb_all_Normalized}
+	\includegraphics[width=0.3\linewidth]{6_Search/Figures/BDTinputvars/Zut/singletop_MVA_dRWlepb_all_Normalized}
+	\includegraphics[width=0.3\linewidth]{6_Search/Figures/BDTinputvars/Zut/singletop_MVA_charge_asym_all_Normalized}
+	\includegraphics[width=0.3\linewidth]{6_Search/Figures/BDTinputvars/Zut/singletop_MVA_bdiscCSVv2_jet_0_all_Normalized}
+	\includegraphics[width=0.3\linewidth]{6_Search/Figures/BDTinputvars/Zut/singletop_MVA_TotalHt_lep_all_Normalized}
+	\includegraphics[width=0.3\linewidth]{6_Search/Figures/BDTinputvars/Zut/singletop_MVA_ptWQ_all_Normalized}
+	\caption{The normalised distributions of the input variables for reconstructing the multivariate discriminator in the \STSR\ for the \Zut\ vertex for all three-lepton channels summed. The contribution of the \NPL\ background is not included. }
+	\label{fig:singletopZutnormalized}
+\end{figure}
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.49\linewidth]{6_Search/Figures/PlotsTechnics/correlationsigZutsingletopuuu}
+	\includegraphics[width=0.49\linewidth]{6_Search/Figures/PlotsTechnics/correlationsigZutsingletopuue}
+	\includegraphics[width=0.49\linewidth]{6_Search/Figures/PlotsTechnics/correlationsigZutsingletopeeu}
+	\includegraphics[width=0.49\linewidth]{6_Search/Figures/PlotsTechnics/correlationsigZutsingletopeee}
+	\caption{The correlations between the input variables used to create the multivariate dsicriminant in the \STSR, for the \Zut\ signal. For the \mumumu\ (left,top), \emumu\ (right,top), \eemu\ (left, bottom) and \eee\ (right,bottom) three-lepton channel.}
+	\label{fig:correlationsigzutsingletop}
+\end{figure}
+
+\clearpage
+
+The resulting multivariate discriminator D is shown in \fig{fig:sigvsbkgtestzutsingletop} for all three-lepton channels. In these plots one can see that there is a clear discrimination between the FCNC single top quark signal and the backgrounds. Furthermore, one can investigate the procedure by cross checking the distribution from the training sample with an independent testing sample. As can be seen in the distributions, these samples agree with eachother.
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.49\linewidth]{6_Search/Figures/PlotsTechnics/SigVsBkgTestZutsingletopuuu}
+	\includegraphics[width=0.49\linewidth]{6_Search/Figures/PlotsTechnics/SigVsBkgTestZutsingletopuue}
+	\includegraphics[width=0.49\linewidth]{6_Search/Figures/PlotsTechnics/SigVsBkgTestZutsingletopeeu}
+	\includegraphics[width=0.49\linewidth]{6_Search/Figures/PlotsTechnics/SigVsBkgTestZutsingletopeee}
+\caption{The normalised distributions of the resulting  multivariate discriminators D in the \STSR, for the \Zut\ signal. For the \mumumu\ (left,top), \emumu\ (right,top), \eemu\ (left, bottom) and \eee\ (right,bottom) three-lepton channel.}
+	\label{fig:sigvsbkgtestzutsingletop}
+\end{figure}
+
+To include the contribution of the \NPL\ background and the top quark pair FCNC signal, the distributions are evaluated and the multivariate discriminator is constructed. In \fig{fig:bdtSTSRZut}, the normalised distributions of the multivariate discriminator, including the \NPL\ background and top quark pair signal is given. On can see that the resulting multivariate discriminator still has an high segregating power.
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.49\linewidth]{6_Search/Figures/BDTdistributionsNorm/singletop_Zut_BDT_uuu_Normalized}
+	\includegraphics[width=0.49\linewidth]{6_Search/Figures/BDTdistributionsNorm/singletop_Zut_BDT_uue_Normalized}
+	\includegraphics[width=0.49\linewidth]{6_Search/Figures/BDTdistributionsNorm/singletop_Zut_BDT_eeu_Normalized}
+	\includegraphics[width=0.49\linewidth]{6_Search/Figures/BDTdistributionsNorm/singletop_Zut_BDT_eee_Normalized}
+	\caption{Normalised distributions of the multivariate discriminating variable before the fit, in the \STSR, for the \Zut\ signal. For the \mumumu\ (left,top), \emumu\ (right,top), \eemu\ (left, bottom) and \eee\ (right,bottom) three-lepton channel.}
+	\label{fig:bdtSTSRZut}
+\end{figure}	
+
+\clearpage
+\subsection{BDT training in the \TTSR\ for the \Zut\ intercation}
+\label{sec:BDTTTSRZUT}
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.3\linewidth]{6_Search/Figures/BDTinputvars/Zut/toppair_MVA_SMtop_Eta_all_Normalized}
+	\includegraphics[width=0.3\linewidth]{6_Search/Figures/BDTinputvars/Zut/toppair_MVA_mlb_all_Normalized}
+	\includegraphics[width=0.3\linewidth]{6_Search/Figures/BDTinputvars/Zut/toppair_MVA_dPhiWlepb_all_Normalized}
+	\includegraphics[width=0.3\linewidth]{6_Search/Figures/BDTinputvars/Zut/toppair_MVA_deltaRWlepJet_min_all_Normalized}
+	\includegraphics[width=0.3\linewidth]{6_Search/Figures/BDTinputvars/Zut/toppair_MVA_Zboson_M_all_Normalized}
+	\includegraphics[width=0.3\linewidth]{6_Search/Figures/BDTinputvars/Zut/toppair_MVA_dPhiZWlep_all_Normalized}
+	\includegraphics[width=0.3\linewidth]{6_Search/Figures/BDTinputvars/Zut/toppair_MVA_dRWlepb_all_Normalized}
+	\includegraphics[width=0.3\linewidth]{6_Search/Figures/BDTinputvars/Zut/toppair_MVA_NJets_CSVv2M_all_Normalized}
+	\includegraphics[width=0.3\linewidth]{6_Search/Figures/BDTinputvars/Zut/toppair_MVA_FCNCtop_M_all_Normalized}
+	\includegraphics[width=0.3\linewidth]{6_Search/Figures/BDTinputvars/Zut/toppair_MVA_dRZc_all_Normalized}
+	\includegraphics[width=0.3\linewidth]{6_Search/Figures/BDTinputvars/Zut/toppair_MVA_dRSMjetLightjet_all_Normalized}
+	\caption{The normalised input variables for reconstructing the multivariate discriminator in the \TTSR\ for the \Zut\ vertex.}
+	\label{fig:toppairZutnormalized}
+\end{figure}
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.49\linewidth]{6_Search/Figures/PlotsTechnics/correlationsigZuttoppairuuu}
+	\includegraphics[width=0.49\linewidth]{6_Search/Figures/PlotsTechnics/correlationsigZuttoppairuue}
+	\includegraphics[width=0.49\linewidth]{6_Search/Figures/PlotsTechnics/correlationsigZuttoppaireeu}
+	\includegraphics[width=0.49\linewidth]{6_Search/Figures/PlotsTechnics/correlationsigZuttoppaireee}
+	\caption{The correlations between the input variables used to create the multivariate dsicriminant in the \TTSR, for the \Zut\ signal. For the \mumumu\ (left,top), \emumu\ (right,top), \eemu\ (left, bottom) and \eee\ (right,bottom) three-lepton channel.}
+	\label{fig:correlationsigzuttoppair}
+\end{figure}
+
+\clearpage
+
+The resulting multivariate discriminator D is shown in \fig{fig:sigvsbkgtestzuttoppair} for all three-lepton channels. In these plots one can see that there is a clear discrimination between the FCNC single top quark signal and the backgrounds. Furthermore, one can investigate the procedure by cross checking the distribution from the training sample with an independent testing sample. As can be seen in the distributions, these samples agree with eachother.
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.49\linewidth]{6_Search/Figures/PlotsTechnics/SigVsBkgTestZuttoppairuuu}
+	\includegraphics[width=0.49\linewidth]{6_Search/Figures/PlotsTechnics/SigVsBkgTestZuttoppairuue}
+	\includegraphics[width=0.49\linewidth]{6_Search/Figures/PlotsTechnics/SigVsBkgTestZuttoppaireeu}
+	\includegraphics[width=0.49\linewidth]{6_Search/Figures/PlotsTechnics/SigVsBkgTestZuttoppaireee}
+	\caption{The normalised distributions of the resulting  multivariate discriminators D in the \TTSR, for the \Zut\ signal. For the \mumumu\ (left,top), \emumu\ (right,top), \eemu\ (left, bottom) and \eee\ (right,bottom) three-lepton channel.}
+	\label{fig:sigvsbkgtestzuttoppair}
+\end{figure}
+
+To include the contribution of the \NPL\ background and the top quark pair FCNC signal, the distributions are evaluated and the multivariate discriminator is constructed. In \fig{fig:bdtTTSRZut}, the normalised distributions of the multivariate discriminator, including the \NPL\ background and top quark pair signal is given. On can see that the resulting multivariate discriminator still has an high segregating power.
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.49\linewidth]{6_Search/Figures/BDTdistributionsNorm/toppair_Zut_BDT_uuu_Normalized}
+	\includegraphics[width=0.49\linewidth]{6_Search/Figures/BDTdistributionsNorm/toppair_Zut_BDT_uue_Normalized}
+	\includegraphics[width=0.49\linewidth]{6_Search/Figures/BDTdistributionsNorm/toppair_Zut_BDT_eeu_Normalized}
+	\includegraphics[width=0.49\linewidth]{6_Search/Figures/BDTdistributionsNorm/toppair_Zut_BDT_eee_Normalized}
+	\caption{Normalised distributions of the multivariate discriminating variable before the fit, in the \STSR, for the \Zut\ signal. For the \mumumu\ (left,top), \emumu\ (right,top), \eemu\ (left, bottom) and \eee\ (right,bottom) three-lepton channel.}
+	\label{fig:bdtTTSRZut}
+\end{figure}	
+\subsection{BDT training in the \STSR\ for the \Zct\ intercation}
+\label{sec:BDTSTSRZCT}
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.25\linewidth]{6_Search/Figures/BDTinputvars/Zct/singletop_MVA_SMtop_Eta_all_Normalized}
+	\includegraphics[width=0.25\linewidth]{6_Search/Figures/BDTinputvars/Zct/singletop_MVA_mlb_all_Normalized}
+	\includegraphics[width=0.25\linewidth]{6_Search/Figures/BDTinputvars/Zct/singletop_MVA_dPhiWlepb_all_Normalized}
+	\includegraphics[width=0.25\linewidth]{6_Search/Figures/BDTinputvars/Zct/singletop_MVA_bdiscCSVv2_jet_0_all_Normalized}
+	\includegraphics[width=0.25\linewidth]{6_Search/Figures/BDTinputvars/Zct/singletop_MVA_TotalInvMass_lep_all_Normalized}
+	\includegraphics[width=0.25\linewidth]{6_Search/Figures/BDTinputvars/Zct/singletop_MVA_dRZWlep_all_Normalized}   
+	\caption{The normalised input variables for reconstructing the multivariate discriminator in the \STSR\ for the \Zct\ vertex.}
+	\label{fig:singletopZctnormalized}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.49\linewidth]{6_Search/Figures/PlotsTechnics/correlationsigZctsingletopuuu}
+	\includegraphics[width=0.49\linewidth]{6_Search/Figures/PlotsTechnics/correlationsigZctsingletopuue}
+	\includegraphics[width=0.49\linewidth]{6_Search/Figures/PlotsTechnics/correlationsigZctsingletopeeu}
+	\includegraphics[width=0.49\linewidth]{6_Search/Figures/PlotsTechnics/correlationsigZctsingletopeee}
+	\caption{The correlations between the input variables used to create the multivariate dsicriminant in the \STSR, for the \Zct\ signal. For the \mumumu\ (left,top), \emumu\ (right,top), \eemu\ (left, bottom) and \eee\ (right,bottom) three-lepton channel.}
+	\label{fig:correlationsigzctsingletop}
+\end{figure}
+
+\clearpage
+
+The resulting multivariate discriminator D is shown in \fig{fig:sigvsbkgtestzctsingletop} for all three-lepton channels. In these plots one can see that there is a clear discrimination between the FCNC single top quark signal and the backgrounds. Furthermore, one can investigate the procedure by cross checking the distribution from the training sample with an independent testing sample. As can be seen in the distributions, these samples agree with eachother.
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.49\linewidth]{6_Search/Figures/PlotsTechnics/SigVsBkgTestZctsingletopuuu}
+	\includegraphics[width=0.49\linewidth]{6_Search/Figures/PlotsTechnics/SigVsBkgTestZctsingletopuue}
+	\includegraphics[width=0.49\linewidth]{6_Search/Figures/PlotsTechnics/SigVsBkgTestZctsingletopeeu}
+	\includegraphics[width=0.49\linewidth]{6_Search/Figures/PlotsTechnics/SigVsBkgTestZctsingletopeee}
+	\caption{The normalised distributions of the resulting  multivariate discriminators D in the \STSR, for the \Zct\ signal. For the \mumumu\ (left,top), \emumu\ (right,top), \eemu\ (left, bottom) and \eee\ (right,bottom) three-lepton channel.}
+	\label{fig:sigvsbkgtestzctsingletop}
+\end{figure}
+
+To include the contribution of the \NPL\ background and the top quark pair FCNC signal, the distributions are evaluated and the multivariate discriminator is constructed. In \fig{fig:bdtTTSRZct}, the normalised distributions of the multivariate discriminator, including the \NPL\ background and top quark pair signal is given. On can see that the resulting multivariate discriminator still has an high segregating power.
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.49\linewidth]{6_Search/Figures/BDTdistributionsNorm/singletop_Zct_BDT_uuu_Normalized}
+	\includegraphics[width=0.49\linewidth]{6_Search/Figures/BDTdistributionsNorm/singletop_Zct_BDT_uue_Normalized}
+	\includegraphics[width=0.49\linewidth]{6_Search/Figures/BDTdistributionsNorm/singletop_Zct_BDT_eeu_Normalized}
+	\includegraphics[width=0.49\linewidth]{6_Search/Figures/BDTdistributionsNorm/singletop_Zct_BDT_eee_Normalized}
+	\caption{Normalised distributions of the multivariate discriminating variable before the fit, in the \STSR, for the \Zct\ signal. For the \mumumu\ (left,top), \emumu\ (right,top), \eemu\ (left, bottom) and \eee\ (right,bottom) three-lepton channel.}
+	\label{fig:bdtTTSRZct}
+\end{figure}
+\subsection{BDT training in the \TTSR\ for the \Zct\ intercation}
+\label{sec:BDTTTSRZCT}
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.25\linewidth]{6_Search/Figures/BDTinputvars/Zct/toppair_MVA_mlb_all_Normalized}
+	\includegraphics[width=0.25\linewidth]{6_Search/Figures/BDTinputvars/Zct/toppair_MVA_Zboson_M_all_Normalized}
+	\includegraphics[width=0.25\linewidth]{6_Search/Figures/BDTinputvars/Zct/toppair_MVA_dPhiZWlep_all_Normalized}
+	\includegraphics[width=0.25\linewidth]{6_Search/Figures/BDTinputvars/Zct/toppair_MVA_dRWlepb_all_Normalized}
+	\includegraphics[width=0.25\linewidth]{6_Search/Figures/BDTinputvars/Zct/toppair_MVA_NJets_CSVv2M_all_Normalized}
+	\includegraphics[width=0.25\linewidth]{6_Search/Figures/BDTinputvars/Zct/toppair_MVA_FCNCtop_M_all_Normalized}
+	\includegraphics[width=0.25\linewidth]{6_Search/Figures/BDTinputvars/Zct/toppair_MVA_dRZc_all_Normalized}
+	\includegraphics[width=0.25\linewidth]{6_Search/Figures/BDTinputvars/Zct/toppair_MVA_dRSMjetLightjet_all_Normalized}
+	\includegraphics[width=0.25\linewidth]{6_Search/Figures/BDTinputvars/Zct/toppair_MVA_TotalInvMass_all_Normalized}
+	\includegraphics[width=0.25\linewidth]{6_Search/Figures/BDTinputvars/Zct/toppair_MVA_dRZWlep_all_Normalized}
+	\includegraphics[width=0.25\linewidth]{6_Search/Figures/BDTinputvars/Zct/toppair_MVA_Bdis_Lightjet_all_Normalized}
+	\includegraphics[width=0.25\linewidth]{6_Search/Figures/BDTinputvars/Zct/toppair_MVA_dRZb_all_Normalized}
+	\caption{The normalised input variables for reconstructing the multivariate discriminator in the \TTSR\ for the \Zct\ vertex.}
+	\label{fig:toppairZctnormalized}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.49\linewidth]{6_Search/Figures/PlotsTechnics/correlationsigZcttoppairuuu}
+	\includegraphics[width=0.49\linewidth]{6_Search/Figures/PlotsTechnics/correlationsigZcttoppairuue}
+	\includegraphics[width=0.49\linewidth]{6_Search/Figures/PlotsTechnics/correlationsigZcttoppaireeu}
+	\includegraphics[width=0.49\linewidth]{6_Search/Figures/PlotsTechnics/correlationsigZcttoppaireee}
+	\caption{The correlations between the input variables used to create the multivariate dsicriminant in the \TTSR, for the \Zct\ signal. For the \mumumu\ (left,top), \emumu\ (right,top), \eemu\ (left, bottom) and \eee\ (right,bottom) three-lepton channel.}
+	\label{fig:correlationsigzcttoppaier}
+\end{figure}
+
+\clearpage
+
+The resulting multivariate discriminator D is shown in \fig{fig:sigvsbkgtestzcttoppaire} for all three-lepton channels. In these plots one can see that there is a clear discrimination between the FCNC single top quark signal and the backgrounds. Furthermore, one can investigate the procedure by cross checking the distribution from the training sample with an independent testing sample. As can be seen in the distributions, these samples agree with eachother.
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.49\linewidth]{6_Search/Figures/PlotsTechnics/SigVsBkgTestZcttoppairuuu}
+	\includegraphics[width=0.49\linewidth]{6_Search/Figures/PlotsTechnics/SigVsBkgTestZcttoppairuue}
+	\includegraphics[width=0.49\linewidth]{6_Search/Figures/PlotsTechnics/SigVsBkgTestZcttoppaireeu}
+	\includegraphics[width=0.49\linewidth]{6_Search/Figures/PlotsTechnics/SigVsBkgTestZcttoppaireee}
+	\caption{The normalised distributions of the resulting  multivariate discriminators D in the \TTSR, for the \Zct\ signal. For the \mumumu\ (left,top), \emumu\ (right,top), \eemu\ (left, bottom) and \eee\ (right,bottom) three-lepton channel.}
+	\label{fig:sigvsbkgtestzcttoppaire}
+\end{figure}
+
+To include the contribution of the \NPL\ background and the top quark pair FCNC signal, the distributions are evaluated and the multivariate discriminator is constructed. In \fig{fig:bdtTTSRZct}, the normalised distributions of the multivariate discriminator, including the \NPL\ background and top quark pair signal is given. On can see that the resulting multivariate discriminator still has an high segregating power.
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.49\linewidth]{6_Search/Figures/BDTdistributionsNorm/toppair_Zct_BDT_uuu_Normalized}
+	\includegraphics[width=0.49\linewidth]{6_Search/Figures/BDTdistributionsNorm/toppair_Zct_BDT_uue_Normalized}
+	\includegraphics[width=0.49\linewidth]{6_Search/Figures/BDTdistributionsNorm/toppair_Zct_BDT_eeu_Normalized}
+	\includegraphics[width=0.49\linewidth]{6_Search/Figures/BDTdistributionsNorm/toppair_Zct_BDT_eee_Normalized}
+	\caption{Normalised distributions of the multivariate discriminating variable before the fit, in the \STSR, for the \Zct\ signal. For the \mumumu\ (left,top), \emumu\ (right,top), \eemu\ (left, bottom) and \eee\ (right,bottom) three-lepton channel.}
+	\label{fig:bdtTTSRZct}
+\end{figure}
+\clearpage
 \subsection{Distributions of the BDT variables}
 \label{sec:BDTvars}
 - why are these sensitive
@@ -40,140 +246,12 @@ The variables used to construct the BDTs include the angles, distances, masses a
 
 The normalised distributions of the BDT input variables for the \Zut\ vertex in the \TTSR\ and \STSR\ are shown without the contribution of the \NPL\ background. The distributions for the \Zct\ vertex distributions can be found in \App{app:BDTinput}. \todo{Beschrijf plotjes}
 % Other distributions canbe found in \App{app:BDTdis}.
-\begin{figure}[htbp]
-	\centering
-	\includegraphics[width=0.3\linewidth]{6_Search/Figures/BDTinputvars/Zut/toppair_MVA_SMtop_Eta_all_Normalized}
-	\includegraphics[width=0.3\linewidth]{6_Search/Figures/BDTinputvars/Zut/toppair_MVA_mlb_all_Normalized}
-	\includegraphics[width=0.3\linewidth]{6_Search/Figures/BDTinputvars/Zut/toppair_MVA_dPhiWlepb_all_Normalized}
-	\includegraphics[width=0.3\linewidth]{6_Search/Figures/BDTinputvars/Zut/toppair_MVA_deltaRWlepJet_min_all_Normalized}
-	\includegraphics[width=0.3\linewidth]{6_Search/Figures/BDTinputvars/Zut/toppair_MVA_Zboson_M_all_Normalized}
-	\includegraphics[width=0.3\linewidth]{6_Search/Figures/BDTinputvars/Zut/toppair_MVA_dPhiZWlep_all_Normalized}
-	\includegraphics[width=0.3\linewidth]{6_Search/Figures/BDTinputvars/Zut/toppair_MVA_dRWlepb_all_Normalized}
-	\includegraphics[width=0.3\linewidth]{6_Search/Figures/BDTinputvars/Zut/toppair_MVA_NJets_CSVv2M_all_Normalized}
-	\includegraphics[width=0.3\linewidth]{6_Search/Figures/BDTinputvars/Zut/toppair_MVA_FCNCtop_M_all_Normalized}
-	\includegraphics[width=0.3\linewidth]{6_Search/Figures/BDTinputvars/Zut/toppair_MVA_dRZc_all_Normalized}
-	\includegraphics[width=0.3\linewidth]{6_Search/Figures/BDTinputvars/Zut/toppair_MVA_dRSMjetLightjet_all_Normalized}
-	\caption{The normalised input variables for reconstructing the multivariate discriminator in the \TTSR\ for the \Zut\ vertex.}
-	\label{fig:toppairZutnormalized}
-\end{figure}
-
-\begin{figure}[htbp]
-	\centering
-	\includegraphics[width=0.3\linewidth]{6_Search/Figures/BDTinputvars/Zut/singletop_MVA_SMtop_Eta_all_Normalized}
-	\includegraphics[width=0.3\linewidth]{6_Search/Figures/BDTinputvars/Zut/singletop_MVA_mlb_all_Normalized}
-	\includegraphics[width=0.3\linewidth]{6_Search/Figures/BDTinputvars/Zut/singletop_MVA_dPhiWlepb_all_Normalized}
-	\includegraphics[width=0.3\linewidth]{6_Search/Figures/BDTinputvars/Zut/singletop_MVA_dPhiZWlep_all_Normalized}
-	\includegraphics[width=0.3\linewidth]{6_Search/Figures/BDTinputvars/Zut/singletop_MVA_dRWlepb_all_Normalized}
-    \includegraphics[width=0.3\linewidth]{6_Search/Figures/BDTinputvars/Zut/singletop_MVA_dRWlepb_all_Normalized}
-    \includegraphics[width=0.3\linewidth]{6_Search/Figures/BDTinputvars/Zut/singletop_MVA_charge_asym_all_Normalized}
-    \includegraphics[width=0.3\linewidth]{6_Search/Figures/BDTinputvars/Zut/singletop_MVA_bdiscCSVv2_jet_0_all_Normalized}
-    \includegraphics[width=0.3\linewidth]{6_Search/Figures/BDTinputvars/Zut/singletop_MVA_TotalHt_lep_all_Normalized}
-    \includegraphics[width=0.3\linewidth]{6_Search/Figures/BDTinputvars/Zut/singletop_MVA_ptWQ_all_Normalized}
- 	\caption{The normalised input variables for reconstructing the multivariate discriminator in the \STSR\ for the \Zut\ vertex.}
-	\label{fig:singletopZutnormalized}
-\end{figure}
-
-
 
 
 \clearpage
-\subsection{BDTs}
-\label{sec:BDTs}
-- whichbkg dominates
-- is npl included how? 
-- why non gaussian shape for D
-- why all three leps different 
-- why shape u vs c differnet
-- why combining all channels if shape is different
-The normalised distributions of the multivariate discriminator, including the \NPL\ background are shown in this section. \todo{Beschrijf plotjes}
-\begin{figure}[htbp]
-	\centering
-	\includegraphics[width=0.49\linewidth]{6_Search/Figures/BDTdistributionsNorm/toppair_Zut_BDT_uuu_Normalized}
-	\includegraphics[width=0.49\linewidth]{6_Search/Figures/BDTdistributionsNorm/toppair_Zct_BDT_uuu_Normalized}
-	\includegraphics[width=0.49\linewidth]{6_Search/Figures/BDTdistributionsNorm/singletop_Zut_BDT_uuu_Normalized}
-	\includegraphics[width=0.49\linewidth]{6_Search/Figures/BDTdistributionsNorm/singletop_Zct_BDT_uuu_Normalized}
-	\caption{Normalised distributions of the discriminating variable before the fit, \mumumu\ lepton channel. Upper left: \TTSR\ \Zut , upper right: \TTSR\ \Zct ; lower left: \STSR\  \Zut , lower right: \STSR\  \Zct .}
-	\label{fig:bdtuuunorm}
-\end{figure}	
-
-
-\begin{figure}[htbp]
-	\centering
-	\includegraphics[width=0.49\linewidth]{6_Search/Figures/BDTdistributionsNorm/toppair_Zut_BDT_uue_Normalized}
-	\includegraphics[width=0.49\linewidth]{6_Search/Figures/BDTdistributionsNorm/toppair_Zct_BDT_uue_Normalized}
-	\includegraphics[width=0.49\linewidth]{6_Search/Figures/BDTdistributionsNorm/singletop_Zut_BDT_uue_Normalized}
-	\includegraphics[width=0.49\linewidth]{6_Search/Figures/BDTdistributionsNorm/singletop_Zct_BDT_uue_Normalized}
-	\caption{Normalised distributions of the discriminating variable before the fit, \emumu\ lepton channels. Upper left: \TTSR\ \Zut , upper right: \TTSR\ \Zct ; lower left: \STSR\  \Zut , lower right: \STSR\  \Zct .}
-	\label{fig:bdtuuenorm}
-\end{figure}	
-
-\begin{figure}[htbp]
-	\centering
-	\includegraphics[width=0.49\linewidth]{6_Search/Figures/BDTdistributionsNorm/toppair_Zut_BDT_eeu_Normalized}
-	\includegraphics[width=0.49\linewidth]{6_Search/Figures/BDTdistributionsNorm/toppair_Zct_BDT_eeu_Normalized}
-	\includegraphics[width=0.49\linewidth]{6_Search/Figures/BDTdistributionsNorm/singletop_Zut_BDT_eeu_Normalized}
-	\includegraphics[width=0.49\linewidth]{6_Search/Figures/BDTdistributionsNorm/singletop_Zct_BDT_eeu_Normalized}
-	\caption{Normalised distributions of the discriminating variable before the fit, \eemu\ lepton channel. Upper left: \TTSR\ \Zut , upper right: \TTSR\ \Zct ; lower left: \STSR\  \Zut , lower right: \STSR\  \Zct .}
-	\label{fig:bdteeunorm}
-\end{figure}	
-
-\begin{figure}[htbp]
-	\centering
-	\includegraphics[width=0.49\linewidth]{6_Search/Figures/BDTdistributionsNorm/toppair_Zut_BDT_eee_Normalized}
-	\includegraphics[width=0.49\linewidth]{6_Search/Figures/BDTdistributionsNorm/toppair_Zct_BDT_eee_Normalized}
-	\includegraphics[width=0.49\linewidth]{6_Search/Figures/BDTdistributionsNorm/singletop_Zut_BDT_eee_Normalized}
-	\includegraphics[width=0.49\linewidth]{6_Search/Figures/BDTdistributionsNorm/singletop_Zct_BDT_eee_Normalized}
-	\caption{Normalised distributions of the discriminating variable before the fit, \eee\ lepton channel. Upper left: \TTSR\ \Zut , upper right: \TTSR\ \Zct ; lower left: \STSR\  \Zut , lower right: \STSR\  \Zct .}
-	\label{fig:bdteeenorm}
-\end{figure}	
-
-
-\begin{figure}[htbp]
-	\centering
-	\includegraphics[width=0.49\linewidth]{6_Search/Figures/BDTdistributionsNorm/toppair_Zut_BDT_all_Normalized}
-	\includegraphics[width=0.49\linewidth]{6_Search/Figures/BDTdistributionsNorm/toppair_Zct_BDT_all_Normalized}
-	\includegraphics[width=0.49\linewidth]{6_Search/Figures/BDTdistributionsNorm/singletop_Zut_BDT_all_Normalized}
-	\includegraphics[width=0.49\linewidth]{6_Search/Figures/BDTdistributionsNorm/singletop_Zct_BDT_all_Normalized}
-	\caption{Normalised distributions of the discriminating variable before the fit, all different lepton channels together. Upper left: \TTSR\ \Zut , upper right: \TTSR\ \Zct ; lower left: \STSR\  \Zut , lower right: \STSR\  \Zct .}
-	\label{fig:bdtallnorm}
-\end{figure}	
-
-%\begin{figure}[htbp]
-%	\centering
-%	\includegraphics[width=0.24\linewidth]{6_Search/Figures/BDTdistributionsNorm/toppair_Zut_BDT_uuu_Normalized}
-%	\includegraphics[width=0.24\linewidth]{6_Search/Figures/BDTdistributionsNorm/toppair_Zct_BDT_uuu_Normalized}
-%	\includegraphics[width=0.24\linewidth]{6_Search/Figures/BDTdistributionsNorm/singletop_Zut_BDT_uuu_Normalized}
-%	\includegraphics[width=0.24\linewidth]{6_Search/Figures/BDTdistributionsNorm/singletop_Zct_BDT_uuu_Normalized}
-%	\includegraphics[width=0.24\linewidth]{6_Search/Figures/BDTdistributionsNorm/toppair_Zut_BDT_uue_Normalized}
-%	\includegraphics[width=0.24\linewidth]{6_Search/Figures/BDTdistributionsNorm/toppair_Zct_BDT_uue_Normalized}
-%	\includegraphics[width=0.24\linewidth]{6_Search/Figures/BDTdistributionsNorm/singletop_Zut_BDT_uue_Normalized}
-%	\includegraphics[width=0.24\linewidth]{6_Search/Figures/BDTdistributionsNorm/singletop_Zct_BDT_uue_Normalized}
-%	\includegraphics[width=0.24\linewidth]{6_Search/Figures/BDTdistributionsNorm/toppair_Zut_BDT_eeu_Normalized}
-%	\includegraphics[width=0.24\linewidth]{6_Search/Figures/BDTdistributionsNorm/toppair_Zct_BDT_eeu_Normalized}
-%	\includegraphics[width=0.24\linewidth]{6_Search/Figures/BDTdistributionsNorm/singletop_Zut_BDT_eeu_Normalized}
-%	\includegraphics[width=0.24\linewidth]{6_Search/Figures/BDTdistributionsNorm/singletop_Zct_BDT_eeu_Normalized}
-%		\includegraphics[width=0.24\linewidth]{6_Search/Figures/BDTdistributionsNorm/toppair_Zut_BDT_eee_Normalized}
-%	\includegraphics[width=0.24\linewidth]{6_Search/Figures/BDTdistributionsNorm/toppair_Zct_BDT_eee_Normalized}
-%	\includegraphics[width=0.24\linewidth]{6_Search/Figures/BDTdistributionsNorm/singletop_Zut_BDT_eee_Normalized}
-%	\includegraphics[width=0.24\linewidth]{6_Search/Figures/BDTdistributionsNorm/singletop_Zct_BDT_eee_Normalized}
-%	
-%	\caption{Normalised distributions of the discriminating variable before the fit. Each row contains: left: \TTSR\ \Zut , left-middle: \TTSR\ \Zct ; right-middle: \STSR\  \Zut , right: \STSR\  \Zct.  First row: \mumumu\ lepton channel, second row: \emumu, third row: \eemu, and last row: \eee\ lepton channel.}
-%	\label{fig:bdtuuunorm}
-%\end{figure}	
-%	
-	
-
-\clearpage
-\subsection{Overtraining}
-\label{sec:overtraining}
-\subsection{ROC curves}
-\label{sec:ROC}
 \section{Transverse mass in \WZCR}
 \label{sec:mtw}
-- why mt w 
-- why this shape
-- main bkg
-The \WZCR\ is used to estimate the contribution from \WZ+jets and \NPL\ background. In this region, a fit is performed on the transverse mass distribution of the \PW\ boson. The prefit normalised templates are given in this section. \todo{beschrijf plotjes}
+The \WZCR\ is used to estimate the contribution from \WZ+jets and \NPL\ background. This region is constructed such that the contribution of the \WZ+jets process is enhanced with respect to the other backgrounds entering the analysis In this region t, a fit is performed on the transverse mass distribution of the \PW\ boson. For the\WZ+jets background, a real \PW\ boson is expected, and the distribution will peak at the mass of the \PW\ boson. For the \NPL\ background, there is no reason for the distribution to peak at the mass of the \PW\ boson. SInce the not prompt-leptons in general tend towards lower \pt\ values, their resulting distribution will peak a zero and decrease towards higher values of $m_{\mathrm{T}}(\PW)$.  The normalised distributions are shown in \fig{fig:mtwnorm} for all three-lepton channels. The sum of the lepton channels is shown in \fig{fig:mtwallnorm}. 
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.49\linewidth]{6_Search/Figures/MTWnormalised/MTW_uuu_Normalized}
@@ -336,7 +414,7 @@ The effect of the uncertainty on the estimation of the pileup distribution is sh
 		\includegraphics[width=0.3\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/pileupBKG}
 		\includegraphics[width=0.3\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/pileupSIG}
 	}
-	\caption{Distribution of the nominal values and shift due to  the uncertainty on the pileup distribution for the transverse mass of the \PW\ boson in the \STSR\ for the \WZ\ process and FCNC signal involving a \Zut\ vertex. All lepton channels summed. Part one.}
+	\caption{Distribution of the nominal values and shift due to  the uncertainty on the pileup distribution for the transverse mass of the \PW\ boson in the \STSR\ for the \WZ\ process and FCNC signal involving a \Zut\ vertex. All lepton channels summed. }
 \label{fig:shiftBDTSTZutPU}
 \end{figure}
 
@@ -726,8 +804,8 @@ The limit setting procedure used in this search returns  limits on the signal st
 observed (expected) limits of 0.017\% (0.024\%) for the \Zut\ coupling. The expected limit presented in this analysis surpasses the expected limit for \Zut.
  \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.49\linewidth]{6_Search/Figures/ExclusionPlots1D_2017_10_25/ExclusionLimit_BR_FCNC_Zut.pdf}
-	\includegraphics[width=0.49\linewidth]{6_Search/Figures/ExclusionPlots1D_2017_10_25/ExclusionLimit_Kappa_FCNC_Zut.pdf}
+	\includegraphics[width=0.7\linewidth]{6_Search/Figures/ExclusionPlots1D_2017_10_25/ExclusionLimit_BR_FCNC_Zut.pdf}
+	\includegraphics[width=0.7\linewidth]{6_Search/Figures/ExclusionPlots1D_2017_10_25/ExclusionLimit_Kappa_FCNC_Zut.pdf}
 	\caption{Exclusion limits at 95\% CL on the FCNC branching fractions (left) and couplings (right) as a function of the cross section of the FCNC process,  considering only the \Zut\ vertex. The CMS observed (expected) limit at 95\% CL at a centre-of-mass of 8 \TeV~\cite{Sirunyan:2017kkr} is given with a blue line (dashed line).}
 	\label{fig:exclusionlimitbrfcnczut}
 \end{figure}
@@ -773,8 +851,8 @@ In \fig{fig:exclusionlimitbrcomp} and \tab{tab:ResultsTZU}, the limits for each 
  In  \fig{fig:exclusionlimitbrfcnczct}, the resulting limits at 95\% CL on the branching fraction and couplings related to the \Zct\ vertex is shown. For this coupling, the observed (expected) limit at 95\% CL is $\BR < \BRZcto\: (\BRZct)$ when $\kZct \neq 0$ and$ \kZut = 0$. The expected limit surpasses the CMS search at a centre-of-mass of 8 \TeV\ expected limits of 0.118\% \cite{Sirunyan:2017kkr}. This also the case for the observed limit of  \BRZcto\ for the \Zct\ interaction, which surpasses the CMS 8~\TeV\ observed limit of 0.049\%~\cite{Sirunyan:2017kkr}. The observed (expected) limit set by the ATLAS collaboration at a centre-of-mass of 13~\TeV~\cite{ATLAS-CONF-2017-070} is 0.023\% (0.032\%) for the \Zct\ coupling. The expected limit presented in this analysis is in accordance with this limit.
  \begin{figure}[htbp]
  	\centering
- 	\includegraphics[width=0.49\linewidth]{6_Search/Figures/ExclusionPlots1D_2017_10_25/ExclusionLimit_BR_FCNC_Zct.pdf}
- 	\includegraphics[width=0.49\linewidth]{6_Search/Figures/ExclusionPlots1D_2017_10_25/ExclusionLimit_Kappa_FCNC_Zct.pdf}
+ 	\includegraphics[width=0.7\linewidth]{6_Search/Figures/ExclusionPlots1D_2017_10_25/ExclusionLimit_BR_FCNC_Zct.pdf}
+ 	\includegraphics[width=0.7\linewidth]{6_Search/Figures/ExclusionPlots1D_2017_10_25/ExclusionLimit_Kappa_FCNC_Zct.pdf}
  	\caption{Exclusion limits at 95\% CL on the FCNC branching fractions (left) and couplings (right) as a function of the cross section of the FCNC process,  considering only the \Zct\ vertex. The CMS observed (expected) limit at 95\% CL at a centre-of-mass of 8 \TeV~\cite{Sirunyan:2017kkr} is given with a blue line (dashed line).}
  	\label{fig:exclusionlimitbrfcnczct}
  \end{figure}
@@ -831,8 +909,8 @@ is found from 100 benchmark scenarios. These scenarios are constructed from exis
 For each scenario a dedicated BDT training is performed and the expected limit at 95\% CL are calculated. The resulting two-dimensional limits are shown in \fig{fig:exclusionlimitbrfcnc}. 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.49\linewidth]{6_Search/Figures/ExclusionPlots2D_2017_10_25/ExclusionLimit_BR_FCNC.pdf}
-	\includegraphics[width=0.49\linewidth]{6_Search/Figures/ExclusionPlots2D_2017_10_25/ExclusionLimit_Kappa_FCNC.pdf}
+	\includegraphics[width=0.7\linewidth]{6_Search/Figures/ExclusionPlots2D_2017_10_25/ExclusionLimit_BR_FCNC.pdf}
+	\includegraphics[width=0.7\linewidth]{6_Search/Figures/ExclusionPlots2D_2017_10_25/ExclusionLimit_Kappa_FCNC.pdf}
 	\caption{Two-dimensional limits on the branching fractions (left) and couplings (right) for FCNC interactions involving a tZq vertex.  The CMS observed (expected) limit at 95\% CL at a centre-of-mass of 8~\TeV~\cite{Sirunyan:2017kkr} is given with a blue line (dashed line).}
 	\label{fig:exclusionlimitbrfcnc}
 \end{figure}
