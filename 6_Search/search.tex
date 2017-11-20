@@ -1,13 +1,13 @@
-After the requirements on the events, explained in \Chap{chap:5}, to enhance the signal rate. The events are classified into five statistically independent regions: \STSR, \TTSR, \WZCR, \STCR, and \TTCR, shown in \tab{tab:regions}. In both signal regions (\STSR\ and \TTSR), no clear background discriminating variables were found and a multivariate technique was chosen. In this search, it was opted to use boosted decision trees. BDTs and neural networks are the two TMVA methods achieving the best separation for analyses were the signal and background distributions have overlap. Using a BDT has as advantage that it is a relatively fast method, it is easy to understand and has an excellent efficiency. In particle physics, using a  BDT is the most common used approach. 
+After the requirements on the events, explained in \Chap{chap:5}, to enhance the signal rate. The events are classified into five statistically independent regions: \STSR, \TTSR, \WZCR, \STCR, and \TTCR, shown in \tab{tab:Regions}. In both signal regions (\STSR\ and \TTSR), no clear background discriminating variables were found and a multivariate technique was chosen. In this search, it was opted to use boosted decision trees. BDTs and neural networks are the two TMVA methods achieving the best separation for analyses were the signal and background distributions have overlap. Using a BDT has as advantage that it is a relatively fast method, it is easy to understand and has an excellent efficiency. In particle physics, using a  BDT is the most common used approach. 
 
-In \Sec{sec:templates}, the construction of the BDTs in the \STSR\ and \TTCR\ is explained. In each regiona set of discriminnating variables is defined for each coupling, and BDTs are trained in each three-lepton channel separatly. In the \WZCR, a discriminating variable between the \WZ+jets and \NPL\ background is found, this variable is presented in \Sec{sec:mtw}. The influence systematic uncertainties, introduced in \Chap{chap:4}, on the templates are investigated and the results are discussed in \Sec{sec:sys}. The analysis strategy and the global fit is validated on pseudo-data. This validation is explained in \Sec{sec:val}. After the validation, the fit is performed on the actual data and the results are shown in \Sec{sec:Result}. One dimensional and two-dimensional limits are extracted and presented in \Sec{sec:limits}.
+In \Sec{sec:templates}, the construction of the BDTs in the \STSR\ and \TTSR\ is explained. In each region set of discriminating variables is defined for each coupling, and BDTs are trained in each three-lepton channel separately. In the \WZCR, a discriminating variable between the \WZ+jets and \NPL\ background is found, this variable is presented in \Sec{sec:mtw}. The influence systematic uncertainties, introduced in \Chap{chap:4}, on the templates are investigated and the results are discussed in \Sec{sec:sys}. The analysis strategy and the global fit is validated on pseudo-data. This validation is explained in \Sec{sec:val}. After the validation, the fit is performed on the actual data and the results are shown in \Sec{sec:Result}. One dimensional and two-dimensional limits are extracted and presented in \Sec{sec:limits}.
 
 
 \section{Construction of the BDT template distributions}
 \label{sec:templates}
 There were no selection criteria found to make a clear rejection of the background events without sacrificing a significant amount of signal. For this reason, a multivariate approach using Boosted Decision Trees that combines several discriminating variables in the TMVA framework is used. For the training, the BDTs are trained against all backgrounds.  The \NPL\ background is not taken into account for the training since it is limited in statistics and would cause overtraining. The BDT settings  avoid over-training and  maintain a good discriminating power against the backgrounds. The background and signal yields follow the relative fractions predicted by the simulation. 
 
-Starting from a large set of possible discriminating variables, a minimal set of variables is chosen based on the ROC curves. For each coupling, involving an up or charm quark, and each signal region, a minimal set of variables in constructed. Since for the \Zut\ and \Zct\ coupling, for example, the expected b tag information will behave differently, as well as the fact the charm coupling will have more similarities with the \SM\ tZq process, different trainings with different input variables are performed for each coupling. Furthermore, the different three-lepton channels are trained individually, keeping the same input variables. The input variables do not depend on flavour and are therefore kept the same. However, to account for possible discrepancies between the muon and electron, the training is done seperatly for each three-lepton channel. In \Sec{sec:BDTSTSRZUT}, the construction of the multivariate discriminating variable in the \STSR, for the \Zut\ interaction, is shown. The construction of the multivariate discriminating variable in the \TTSR\ for this interaction is shown in \Sec{sec:BDTTTSRZUT}. For the \Zct\ interaction, these are shown in \Sec{sec:BDTSTSRZUT} and \Sec{sec:BDTTTSRZUT} respectively. 
+Starting from a large set of possible discriminating variables, a minimal set of variables is chosen based on the ROC curves. For each signal region, a minimal set of variables in constructed. Since for the \Zut\ and \Zct\ coupling, for example, the expected b tag information will behave differently, as well as the fact the charm coupling will have more similarities with the \SM\ tZq process, different trainings with different input variables are performed for each coupling. Furthermore, the different three-lepton channels are trained individually, keeping the same input variables. The input variables do not depend on lepton flavour and are therefore kept the same. However, keeping the \NPL\ background in mind and to account for possible discrepancies between the muon and electron, the training is done separately for each three-lepton channel. In \Sec{sec:BDTSTSRZUT}, the construction of the multivariate discriminating variable in the \STSR, for the \Zut\ interaction, is shown. The construction of the multivariate discriminating variable in the \TTSR\ for this interaction is shown in \Sec{sec:BDTTTSRZUT}. For the \Zct\ interaction, these are shown in \Sec{sec:BDTSTSRZUT} and \Sec{sec:BDTTTSRZUT} respectively. 
 
 \subsection{BDT training in the \STSR\ for the \Zut\ interaction}
 \label{sec:BDTSTSRZUT}
@@ -33,7 +33,7 @@ the charge of the W lepton times the absolute pseudorapidity of the W lepton ($|
 	\includegraphics[width=0.49\linewidth]{6_Search/Figures/PlotsTechnics/correlationsigZutsingletopuue}
 	\includegraphics[width=0.49\linewidth]{6_Search/Figures/PlotsTechnics/correlationsigZutsingletopeeu}
 	\includegraphics[width=0.49\linewidth]{6_Search/Figures/PlotsTechnics/correlationsigZutsingletopeee}
-	\caption{The correlations between the input variables used to create the multivariate dsicriminant in the \STSR, for the \Zut\ signal. For the \mumumu\ (left,top), \emumu\ (right,top), \eemu\ (left, bottom) and \eee\ (right,bottom) three-lepton channel.}
+	\caption{The correlations between the input variables used to create the multivariate discriminant in the \STSR, for the \Zut\ signal. For the \mumumu\ (left,top), \emumu\ (right,top), \eemu\ (left, bottom) and \eee\ (right,bottom) three-lepton channel.}
 	\label{fig:correlationsigzutsingletop}
 \end{figure}
 
@@ -50,7 +50,7 @@ The resulting multivariate discriminator D is shown in \fig{fig:sigvsbkgtestzuts
 	\label{fig:sigvsbkgtestzutsingletop}
 \end{figure}
 
-Additionally, the receiving operator charasterictics for the testing and training samples are shown in \fig{fig:roczutsingletop}. On can see that for all channels there is separating power and that the ROC curve of the testing sample is below the one for the training sample. This is the most present in the \eee\ channel, where there is a lack of statistics. 
+Additionally, the receiving operator characteristic for the testing and training samples are shown in \fig{fig:roczutsingletop}. On can see that for all channels there is separating power and that the ROC curve of the testing sample is below the one for the training sample. This is the most present in the \eee\ channel, where there is a lack of statistics. 
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.49\linewidth]{6_Search/Figures/PlotsTechnics/ROCZutsingletopuuu}
@@ -64,21 +64,10 @@ Additionally, the receiving operator charasterictics for the testing and trainin
 
 
 
-To include the contribution of the \NPL\ background and the top quark pair FCNC signal, the distributions are evaluated and the multivariate discriminator is constructed. In \fig{fig:bdtSTSRZut}, the normalised distributions of the multivariate discriminator for the \NPL\ background and top quark pair signal is given. The contribution of the top quark pair signal has little effect on the total distribution. The NPL background tends towards the background-like side of the distribution. 
-\begin{figure}[htbp]
-	\centering
-	\includegraphics[width=0.49\linewidth]{6_Search/Figures/PlotsTechnicsRead/BDTtechnicsallZutsingletopuuu}
-	\includegraphics[width=0.49\linewidth]{6_Search/Figures/PlotsTechnicsRead/BDTtechnicsallZutsingletopuue}
-	\includegraphics[width=0.49\linewidth]{6_Search/Figures/PlotsTechnicsRead/BDTtechnicsallZutsingletopeeu}
-	\includegraphics[width=0.49\linewidth]{6_Search/Figures/PlotsTechnicsRead/BDTtechnicsallZutsingletopeee}
-	\caption{Normalised distributions of the multivariate discriminating variable before the fit, in the \STSR, for the \Zut\ signal. For the \mumumu\ (left,top), \emumu\ (right,top), \eemu\ (left, bottom) and \eee\ (right,bottom) three-lepton channel.}
-	\label{fig:bdtSTSRZut}
-\end{figure}	
-
 \clearpage
 \subsection{BDT training in the \TTSR\ for the \Zut\ interaction}
 \label{sec:BDTTTSRZUT}
-In this region, the BDT is trained against top quark pair and single top signal at the same time. The controbution of the \NPL\ background is again not considered for training. The top quark pair FCNC signal has the largest constribution in this region and the main backgrounds are the \ttZ, \SM\ \tZq, and \WZ+jets processes. In \fig{fig:toppairZutnormalized}, the input variables used to create the multivariate discriminant are shown for the \mumumu\ channel. For the \ttZ\ process, a \PZ\ boson is radiated of one of the top quarks of a top quark pair production process. Hence, there is no top quark reconstructed from a light-flavour jet and \PZ\ boson expected. The invariant mass of the reconstructed FCNC top quark, as well as the distances in the $\phi\eta$ plane between the FCNC light-flavour jet and the \SM\ b jet, as well as between the \PZ\ boson and the FCNC light-flavour jet are used as discriminating variables for this search. For background, the invariant mass of the FCNC top quark is peaking at lower values compared to the signal. Also the distances are peaking at different values. For the same reasons as in the previous sections, pseudorapidity of the SM top quark,  the invariant mass of the \PW\ lepton and the \SM\ b jet, as well as their distance in the $\phi\eta$-plane are considered. Furthermore the difference in $\phi$ between the \PW\ lepton and the \SM\ b jet, as well as its difference in $\phi$ with the reconstructed \PZ\ boson are considered. Furthermore, the minimal distance in the $\phi\eta$-plane between the \PW\ lepton and all the jets is peaking at lower values for signal than for backgrounds. This is due to the fact that for signal this distance will be most likely the distance for the SM b  jet, while for \ttZ\ and \tZq\ this could be, biased through the radiation, and for \WZ+jets this distance will come from FSR jets. Also the number of b-tagged jets according to the CSVv2 medium working point is used in creating the multivariate discriminator, for signal this distributions peaks at one, while for background, this peaks at zero. The invariant mass of the \PZ\ boson is also used. Thought this variable is weak discriminating, this would not harm the training since the BDT can cope with weak variables.  The most important input variables for this region, for the \Zut\ interaction, are the invariant mass of the \PW\ lepton and the \SM\ b jet, as well as their distance. On the third place is the number of b-tagged jets. The distributions for each three-lepton channel separate are given in \App{app:BDTcorrZutTop}.
+In this region, the BDT is trained against top quark pair and single top signal at the same time. The contribution of the \NPL\ background is again not considered for training. The top quark pair FCNC signal has the largest contribution in this region and the main backgrounds are the \ttZ, \SM\ \tZq, and \WZ+jets processes. In \fig{fig:toppairZutnormalized}, the input variables used to create the multivariate discriminant are shown for the \mumumu\ channel. For the \ttZ\ process, a \PZ\ boson is radiated of one of the top quarks of a top quark pair production process. Hence, there is no top quark reconstructed from a light-flavour jet and \PZ\ boson expected. The invariant mass of the reconstructed FCNC top quark, as well as the distances in the $\phi\eta$ plane between the FCNC light-flavour jet and the \SM\ b jet, as well as between the \PZ\ boson and the FCNC light-flavour jet are used as discriminating variables for this search. For background, the invariant mass of the FCNC top quark is peaking at lower values compared to the signal. Also the distances are peaking at different values. For the same reasons as in the previous sections, pseudorapidity of the SM top quark,  the invariant mass of the \PW\ lepton and the \SM\ b jet, as well as their distance in the $\phi\eta$-plane are considered. Furthermore the difference in $\phi$ between the \PW\ lepton and the \SM\ b jet, as well as its difference in $\phi$ with the reconstructed \PZ\ boson are considered. Furthermore, the minimal distance in the $\phi\eta$-plane between the \PW\ lepton and all the jets is peaking at lower values for signal than for backgrounds. This is due to the fact that for signal this distance will be most likely the distance for the SM b  jet, while for \ttZ\ and \tZq\ this could be, biased through the radiation, and for \WZ+jets this distance will come from FSR jets. Also the number of b-tagged jets according to the CSVv2 medium working point is used in creating the multivariate discriminator, for signal this distributions peaks at one, while for background, this peaks at zero. The invariant mass of the \PZ\ boson is also used. Thought this variable is weak discriminating, this would not harm the training since the BDT can cope with weak variables.  The most important input variables for this region, for the \Zut\ interaction, are the invariant mass of the \PW\ lepton and the \SM\ b jet, as well as their distance. On the third place is the number of b-tagged jets. The distributions for each three-lepton channel separate are given in \App{app:BDTcorrZutTop}.
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.3\linewidth]{6_Search/Figures/PlotsTechnics/SMtopetaZuttoppairuuu_norm}
@@ -97,7 +86,7 @@ In this region, the BDT is trained against top quark pair and single top signal 
 \end{figure}
 
 \newpage
-In \fig{fig:correlationsigzuttoppair}, the correlations between the input variables used for training and creating the mulivariate discriminating variable are shown. Globally, there is no correlation between the variables, with the exception of the distances and mass of the components of the top quarks. 
+In \fig{fig:correlationsigzuttoppair}, the correlations between the input variables used for training and creating the multivariate discriminating variable are shown. Globally, there is no correlation between the variables, with the exception of the distances and mass of the components of the top quarks. 
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.49\linewidth]{6_Search/Figures/PlotsTechnics/correlationsigZuttoppairuuu}
@@ -109,7 +98,7 @@ In \fig{fig:correlationsigzuttoppair}, the correlations between the input variab
 \end{figure}
 
 \clearpage
-The resulting multivariate discriminator D for this region is shown in \fig{fig:sigvsbkgtestzuttoppair} for all three-lepton channels. Again, there is a clear discrimination between the FCNC signal and the backgrounds, and the testing and training samples agree with eachother.
+The resulting multivariate discriminator D for this region is shown in \fig{fig:sigvsbkgtestzuttoppair} for all three-lepton channels. Again, there is a clear discrimination between the FCNC signal and the backgrounds, and the testing and training samples agree with eachother. The receiving operator characteristics are shown in \fig{fig:roczuttoppair}. 
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.49\linewidth]{6_Search/Figures/PlotsTechnics/SigVsBkgTestZuttoppairuuu}
@@ -120,37 +109,14 @@ The resulting multivariate discriminator D for this region is shown in \fig{fig:
 	\label{fig:sigvsbkgtestzuttoppair}
 \end{figure}
 
-The receiving operator characteristics are shown in \fig{fig:roczuttoppair}. On can see that for all channels there is separating power and that the ROC curve of the testing sample is below the one for the training sample. This is the most present in the \eee\ channel, where there is a lack of statistics. 
-\begin{figure}[htbp]
-	\centering
-	\includegraphics[width=0.49\linewidth]{6_Search/Figures/PlotsTechnics/ROCZuttoppairuuu}
-	\includegraphics[width=0.49\linewidth]{6_Search/Figures/PlotsTechnics/ROCZuttoppairuue}
-	\includegraphics[width=0.49\linewidth]{6_Search/Figures/PlotsTechnics/ROCZuttoppaireeu}
-	\includegraphics[width=0.49\linewidth]{6_Search/Figures/PlotsTechnics/ROCZuttoppaireee}
-	\caption{ROC curves of the resulting  multivariate discriminators D in the \TTSR, for the \Zut\ signal. For the \mumumu\ (left,top), \emumu\ (right,top), \eemu\ (left, bottom) and \eee\ (right,bottom) three-lepton channel.}
-	\label{fig:roczuttoppair}
-\end{figure}
-
-
-The distributions of the multivariate discriminator for the \NPL\ background is shown \fig{fig:bdtTTSRZut}. One can see that the resulting multivariate discriminator disciriminates well between the signal and backgrounds 
-\begin{figure}[htbp]
-	\centering
-	\includegraphics[width=0.49\linewidth]{6_Search/Figures/PlotsTechnicsRead/BDTtechnicsallZuttoppairuuu}
-	\includegraphics[width=0.49\linewidth]{6_Search/Figures/PlotsTechnicsRead/BDTtechnicsallZuttoppairuue}
-	\includegraphics[width=0.49\linewidth]{6_Search/Figures/PlotsTechnicsRead/BDTtechnicsallZuttoppaireeu}
-	\includegraphics[width=0.49\linewidth]{6_Search/Figures/PlotsTechnicsRead/BDTtechnicsallZuttoppaireee}
-	\caption{Normalised distributions of the multivariate discriminating variable before the fit, in the \TTSR, for the \Zut\ signal. For the \mumumu\ (left,top), \emumu\ (right,top), \eemu\ (left, bottom) and \eee\ (right,bottom) three-lepton channel.}
-	\label{fig:bdtTTSRZut}
-\end{figure}	
 
 \clearpage	
 \subsection{BDT training in the \STSR\ for the \Zct\ interaction}
 \label{sec:BDTSTSRZCT}
 The input variables used to create the multivariate discriminator in the \STSR\ for the \Zct\ interaction are shown in \fig{fig:singletopZctnormalized}. In analogy to the training for the \Zut\ vertex in the \STSR, the training is performed with the single top quark signal only. The variables discussed in \Sec{sec:BDTSTSRZUT} are used, where the variables related to the charge asymmetry are left out. For charm coupling, both quark and anti-quarks are sea quarks, hence no charge asymmetry is expected. The most important variables are the invariant mass of all leptons,  followed by the CSVv2 discriminator of the jet with the highest \pt, and the invariant mass of the sum of the \PW\ lepton and \SM\ b jet. The distributions for each three-lepton channel separate are given in \App{app:BDTcorrZctSingle}.
 The correlations between the different input variables are given in \fig{fig:correlationsigzctsingletop}. The correlations vary from zero to $\sim 55\%$.
-The resulting multivariate discriminator D is shown in \fig{fig:sigvsbkgtestzctsingletop} for all three-lepton channels. In these plots one can see that there is a clear discrimination between the FCNC single top quark signal and the backgrounds. Furthermore, one can investigate the procedure by cross checking the distribution from the training sample with an independent testing sample. As can be seen in the distributions, these samples agree with eachother. The receiving operator charasterictics for the testing and training samples are shown in \fig{fig:roczctsingletop}. 
+The resulting multivariate discriminator D is shown in \fig{fig:sigvsbkgtestzctsingletop} for all three-lepton channels. In these plots one can see that there is a clear discrimination between the FCNC single top quark signal and the backgrounds. Furthermore, one can investigate the procedure by cross checking the distribution from the training sample with an independent testing sample. As can be seen in the distributions, these samples agree with eachother. The receiving operator characteristic for the testing and training samples are shown in \fig{fig:roczctsingletop}. 
 
-To include the contribution of the \NPL\ background and the top quark pair FCNC signal, the distributions are evaluated and the multivariate discriminator is constructed. In \fig{fig:bdtSTSRZct}, the normalised distributions of the multivariate discriminator for the \NPL\ background and FCNC signal is given. 
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.3\linewidth]{6_Search/Figures/PlotsTechnics/SMtopetaZctsingletopuuu_norm}
@@ -185,26 +151,8 @@ To include the contribution of the \NPL\ background and the top quark pair FCNC 
 	\label{fig:sigvsbkgtestzctsingletop}
 \end{figure}
 
-\begin{figure}[htbp]
-	\centering
-	\includegraphics[width=0.49\linewidth]{6_Search/Figures/PlotsTechnics/ROCZctsingletopuuu}
-	\includegraphics[width=0.49\linewidth]{6_Search/Figures/PlotsTechnics/ROCZctsingletopuue}
-	\includegraphics[width=0.49\linewidth]{6_Search/Figures/PlotsTechnics/ROCZctsingletopeeu}
-	\includegraphics[width=0.49\linewidth]{6_Search/Figures/PlotsTechnics/ROCZctsingletopeee}
-	\caption{ROC curves of the resulting  multivariate discriminators D in the \STSR, for the \Zct\ signal. For the \mumumu\ (left,top), \emumu\ (right,top), \eemu\ (left, bottom) and \eee\ (right,bottom) three-lepton channel.}
-	\label{fig:roczctsingletop}
-\end{figure}
 
-\clearpage
-\begin{figure}[htbp]
-	\centering
-	\includegraphics[width=0.49\linewidth]{6_Search/Figures/PlotsTechnicsRead/BDTtechnicsallZctsingletopuuu}
-	\includegraphics[width=0.49\linewidth]{6_Search/Figures/PlotsTechnicsRead/BDTtechnicsallZctsingletopuue}
-	\includegraphics[width=0.49\linewidth]{6_Search/Figures/PlotsTechnicsRead/BDTtechnicsallZctsingletopeeu}
-	\includegraphics[width=0.49\linewidth]{6_Search/Figures/PlotsTechnicsRead/BDTtechnicsallZctsingletopeee}
-	\caption{Normalised distributions of the multivariate discriminating variable before the fit, in the \STSR, for the \Zct\ signal. For the \mumumu\ (left,top), \emumu\ (right,top), \eemu\ (left, bottom) and \eee\ (right,bottom) three-lepton channel.}
-	\label{fig:bdtSTSRZct}
-\end{figure}	
+
 
 \clearpage
 \subsection{BDT training in the \TTSR\ for the \Zct\ interaction}
@@ -252,32 +200,11 @@ The resulting multivariate discriminator D is shown in \fig{fig:sigvsbkgtestzctt
 	\label{fig:sigvsbkgtestzcttoppaire}
 \end{figure}
 
-The receiving operator characteristics are shown in \fig{fig:roczcttoppair}. On can see that for all channels there is separating power and that the ROC curve of the testing sample is below the one for the training sample. This is the most present in the \eee\ channel, where there is a lack of statistics. 
-\begin{figure}[htbp]
-	\centering
-	\includegraphics[width=0.49\linewidth]{6_Search/Figures/PlotsTechnics/ROCZcttoppairuuu}
-	\includegraphics[width=0.49\linewidth]{6_Search/Figures/PlotsTechnics/ROCZcttoppairuue}
-	\includegraphics[width=0.49\linewidth]{6_Search/Figures/PlotsTechnics/ROCZcttoppaireeu}
-	\includegraphics[width=0.49\linewidth]{6_Search/Figures/PlotsTechnics/ROCZcttoppaireee}
-	\caption{ROC curves of the resulting  multivariate discriminators D in the \TTSR, for the \Zut\ signal. For the \mumumu\ (left,top), \emumu\ (right,top), \eemu\ (left, bottom) and \eee\ (right,bottom) three-lepton channel.}
-	\label{fig:roczcttoppair}
-\end{figure}
-
-To include the contribution of the \NPL\ background and the top quark pair FCNC signal, the distributions are evaluated and the multivariate discriminator is constructed. In \fig{fig:bdtTTSRZct}, the normalised distributions of the multivariate discriminator, including the \NPL\ background and top quark pair signal is given. On can see that the resulting multivariate discriminator still has an high segregating power.
-\begin{figure}[htbp]
-	\centering
-	\includegraphics[width=0.49\linewidth]{6_Search/Figures/PlotsTechnicsRead/BDTtechnicsallZcttoppairuuu}
-	\includegraphics[width=0.49\linewidth]{6_Search/Figures/PlotsTechnicsRead/BDTtechnicsallZcttoppairuue}
-	\includegraphics[width=0.49\linewidth]{6_Search/Figures/PlotsTechnicsRead/BDTtechnicsallZcttoppaireeu}
-	\includegraphics[width=0.49\linewidth]{6_Search/Figures/PlotsTechnicsRead/BDTtechnicsallZcttoppaireee}
-	\caption{Normalised distributions of the multivariate discriminating variable before the fit, in the \TTSR, for the \Zct\ signal. For the \mumumu\ (left,top), \emumu\ (right,top), \eemu\ (left, bottom) and \eee\ (right,bottom) three-lepton channel.}
-	\label{fig:bdtTTSRZct}
-\end{figure}	
 \clearpage
 
 \section{Transverse mass in \WZCR}
 \label{sec:mtw}
-The \WZCR\ is used to estimate the contribution from \WZ+jets and \NPL\ background. This region is constructed such that the contribution of the \WZ+jets process is enhanced with respect to the other backgrounds entering the analysis In this region t, a fit is performed on the transverse mass distribution of the \PW\ boson. For the\WZ+jets background, a real \PW\ boson is expected, and the distribution will peak at the mass of the \PW\ boson. For the \NPL\ background, there is no reason for the distribution to peak at the mass of the \PW\ boson. Since the not prompt-leptons in general tend towards lower \pt\ values, their resulting distribution will peak a zero and decrease towards higher values of $m_{\mathrm{T}}(\PW)$.  The normalised distributions are shown in \fig{fig:mtwnorm} for all three-lepton channels. The sum of the lepton channels is shown in \fig{fig:mtwallnorm}. 
+The \WZCR\ is used to estimate the contribution from \WZ+jets and \NPL\ background. This region is constructed such that the contribution of the \WZ+jets process is enhanced with respect to the other backgrounds entering the analysis In this region t, a fit is performed on the transverse mass distribution of the \PW\ boson. For the\WZ+jets background, a real \PW\ boson is expected, and the distribution will peak at the mass of the \PW\ boson. For the \NPL\ background, there is no reason for the distribution to peak at the mass of the \PW\ boson. Since the not prompt-leptons in general tend towards lower \pt\ values, their resulting distribution will peak a zero and decrease towards higher values of $m_{\mathrm{T}}(\PW)$.  The normalised distributions are shown in \fig{fig:mtwnorm} for all three-lepton channels. % The sum of the lepton channels is shown in \fig{fig:mtwallnorm}. 
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.49\linewidth]{6_Search/Figures/MTWnormalised/MTW_uuu_Normalized}
@@ -287,12 +214,12 @@ The \WZCR\ is used to estimate the contribution from \WZ+jets and \NPL\ backgrou
 	\caption{The normalised distribution of the transverse mass of the W boson in the \WZCR, before the fit. Left: \mumumu, left-middle: \emumu, right-middle: \eemu, and right: \eee\ lepton channel.  }
 	\label{fig:mtwnorm}
 \end{figure}
-\begin{figure}[htbp]
-	\centering
-	\includegraphics[width=0.49\linewidth]{6_Search/Figures/MTWnormalised/MTW_all_Normalized}
-	\caption{The normalised distribution of the transverse mass of the W boson in the \WZCR, before the fit. All different lepton channels together. }
-	\label{fig:mtwallnorm}
-\end{figure}
+%\begin{figure}[htbp]
+%	\centering
+%	\includegraphics[width=0.49\linewidth]{6_Search/Figures/MTWnormalised/MTW_all_Normalized}
+%	\caption{The normalised distribution of the transverse mass of the W boson in the \WZCR, before the fit. All different lepton channels together. }
+%	\label{fig:mtwallnorm}
+%\end{figure}
 
 \newpage
 \section{Systematic uncertainties}
@@ -352,7 +279,7 @@ The systematic uncertainties entering the analysis are coming from different sou
 \clearpage
 \subsection{Effect of systematic uncertainties in \WZCR}
 \label{sec:MTW}
-The effect of the experimental uncertainties influencing the shape of the distribution of the transverse mass of the \PW\ boson in the \WZCR is shown in this section for the \WZ+jet process by varying each source of uncertainty individually within its uncertainty range. The uncertainties due to pileup and lepton scale factors, shown in \fig{fig:shiftMTW1}, have the smallest effect on the distribution. The uncertainty on the pileup distribution is clearly influencing the shape of the distribution, while the lepton identification uncertainties are more affecting the normalisation of the whole distribution. 
+The effect of the systematic uncertainties influencing the shape of the distribution of the transverse mass of the \PW\ boson in the \WZCR is shown in this section for the \WZ+jet process by varying each source of uncertainty individually within its uncertainty range.  The uncertainties due to pileup and lepton scale factors, shown in \fig{fig:shiftMTW1}, have the smallest effect on the distribution. The uncertainty on the pileup distribution is clearly influencing the shape of the distribution, while the lepton identification uncertainties are more affecting the normalisation of the whole distribution. 
 \begin{figure}[htbp] 
 	\centering 
 	\subbottom[Pileup uncertainty]{
@@ -431,108 +358,9 @@ In \fig{fig:shiftMTWt}, the effect of the theoretical uncertainties uncertaintie
 
 \subsection{Effect of the systematic uncertainties in the signal regions}
 \label{sec:BDTsys}
-In this section, the effect of the systematic uncertainties on the multivariate discriminator in the \STSR\ involving the \Zut\ vertex is shown for the \WZ+jets background and the signal (\tZ + \tZq). The effect of the systematic uncertainties for the other regions, as well as the \Zct\ coupling, are shown in \App{app:sys}. 
+In this section, the effect of the systematic uncertainties on the multivariate discriminator in the signal regions is discussed.  Most systematic uncertainties result in an effect distribution of around 3.5\%. These include the uncertainties due to pileup,  lepton identification, jet energy resolution, the b-tagging, as well as those from theory. The uncertainty arising from the jet energy scale correction has the largest effect on the distribution, and stays within 10\%/. 
 
-The effect of the uncertainty on the estimation of the pileup distribution is shown in \fig{fig:shiftBDTSTZutPU}. This uncertainty has a small effect on the shape for the background distribution. For the distribution of the signal process, this effect is even smaller. 
-\begin{figure}[htbp] 
-	\centering 
-	\subbottom[Pileup uncertainty]{
-		\includegraphics[width=0.3\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/pileupBKG}
-		\includegraphics[width=0.3\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/pileupSIG}
-	}
-	\caption{Distribution of the nominal values and shift due to  the uncertainty on the pileup distribution for the transverse mass of the \PW\ boson in the \STSR\ for the \WZ\ process and FCNC signal involving a \Zut\ vertex. All lepton channels summed. }
-\label{fig:shiftBDTSTZutPU}
-\end{figure}
 
-In \fig{fig:shiftBDTSTZut0}, the effect of the uncertainties coming from the lepton identification is shown. Similar to the case of the \WZCR, these uncertainties only influence the normalisation of the shapes. 
-\begin{figure}[htbp] 
-\centering 
-	\subbottom[Electron identification  uncertainty]{
-		\includegraphics[width=0.3\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/electronBKG}
-		\includegraphics[width=0.3\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/electronSIG}
-	}
-	\subbottom[Muon identification uncertainty]{
-		\includegraphics[width=0.3\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/muonBKG}
-		\includegraphics[width=0.3\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/muonSIG}
-	}
-	\caption{Distribution of the nominal values and shift due to systematic uncertainties for the transverse mass of the \PW\ boson in the \STSR\ for the \WZ\ process and FCNC signal involving a \Zut\ vertex. All lepton channels summed. }
-\label{fig:shiftBDTSTZut0}
-\end{figure}
-
-The effect of the uncertainties arising from the jet energy corrections are shown in \fig{fig:shiftBDT122}. The jet energy scale uncertainty has the largest effect on the distributions. Since the jets are used to reconstruct the invariant mass of the \SM\ top, which is used to reconstruct the BDT, it is expected that the energy corrections have an effect. \todo{IS THIS TRUE}
-\begin{figure}[htbp] 
-\centering 
-	\subbottom[Jet energy scale uncertainty]{
-		\includegraphics[width=0.3\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/JESBKG}
-		\includegraphics[width=0.3\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/JESSIG}
-	}
-	\subbottom[Jet energy resolution uncertainty]{
-		\includegraphics[width=0.3\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/JERBKG}
-		\includegraphics[width=0.3\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/JERSIG}
-	}
-	\caption{Distribution of the nominal values and shift due to systematic uncertainties for the transverse mass of the \PW\ boson in the \STSR\ for the \WZ\ process and FCNC signal involving a \Zut\ vertex. All lepton channels summed.}
-\label{fig:shiftBDTSTZut122}
-\end{figure}
-
-The effect of the uncertainties that come from b-tagging are shown in \fig{fig:BDTshiftSTZut12} and \fig{fig:shiftBDTSTZut}. 
-\begin{figure}[htbp] 
-	\centering 
-	\subbottom[CSVv2: cf uncertainty~(1)]{
-		\includegraphics[width=0.3\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/btagSF_cferr1BKG}
-		\includegraphics[width=0.3\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/btagSF_cferr1SIG}
-	}
-	\subbottom[CSVv2: cf uncertainty~(2)]{
-		\includegraphics[width=0.3\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/btagSF_cferr2BKG}
-		\includegraphics[width=0.3\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/btagSF_cferr2SIG}
-	}
-	\subbottom[CSVv2: hf uncertainty]{
-		\includegraphics[width=0.3\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/btagSF_hfBKG}
-		\includegraphics[width=0.3\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/btagSF_hfSIG}
-	}
-	\subbottom[CSVv2: lf uncertainty ]{
-		\includegraphics[width=0.3\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/btagSF_lfBKG}
-		\includegraphics[width=0.3\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/btagSF_lfSIG}
-	}
-	\caption{Distribution of the nominal values and shift due to systematic uncertainties for the transverse mass of the \PW\ boson in the \STSR\ for the \WZ\ process and FCNC signal involving a \Zut\ vertex. All lepton channels summed. }
-\label{fig:shiftBDTSTZut12}
-\end{figure}
-\begin{figure}[htbp] 
-\centering 
-	\subbottom[CSVv2: hf statistical uncertainty~(1) ]{
-		\includegraphics[width=0.3\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/btagSF_hfstats1BKG}
-		\includegraphics[width=0.3\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/btagSF_hfstats1SIG}
-	}
-	\subbottom[CSVv2: hf statistical uncertainty~(2) ]{
-		\includegraphics[width=0.3\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/btagSF_hfstats2BKG}
-		\includegraphics[width=0.3\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/btagSF_hfstats2SIG}
-	}
-	\subbottom[CSVv2: lf statistical uncertainty~(1) ]{
-		\includegraphics[width=0.3\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/btagSF_lfstats1BKG}
-		\includegraphics[width=0.3\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/btagSF_lfstats1SIG}
-	}
-	\subbottom[CSVv2: lf statistical uncertainty~(2) ]{
-		\includegraphics[width=0.3\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/btagSF_lfstats2BKG}
-		\includegraphics[width=0.3\linewidth]{6_Search/Figures/SystematicEffect/singletopzut/btagSF_lfstats2SIG}
-	}
-	\caption{Distribution of the nominal values and shift due to systematic uncertainties for the transverse mass of the \PW\ boson in the \STSR\ for the \WZ\ process and FCNC signal involving a \Zut\ vertex. All lepton channels summed. }
-	\label{fig:shiftBDTSTZut}
-\end{figure}
-
-In \fig{fig:shiftBDTSTZut1}, the theoretical uncertainties arising from the factorisation and normalisation scale, as well as the parton density functions is shown. In the \STSR\ (as well as the \TTSR), these have a negligible effect. \todo{make for signal}
-\begin{figure}[htbp] 
-	\centering 
-	\subbottom[Factorisation and renormalization scale normalised uncertainty ]{
-		\includegraphics[width=0.33\linewidth]{6_Search/Figures/theorysys/factrenosinglezutbdtall}
-	}
-	\subbottom[PDF normalised uncertainty ]{
-		\includegraphics[width=0.33\linewidth]{6_Search/Figures/theorysys/pdfsinglezutbdtall}
-	}
-	
-	\caption{Distribution of the nominal values and shift due to systematic uncertainties for the transverse mass of the \PW\ boson in the \STSR\ for the \WZ\ process and FCNC signal involving a \Zut\ vertex. All lepton channels summed. }
-	\label{fig:shiftBDTSTZut1}
-\end{figure}
-
-\clearpage
 \section{Limit setting procedure validation}
 \label{sec:val}
 The analysis strategy has been established using a blinded strategy. This way, one is sure that there is no bias introduced into the analysis. Through the use of a pseudo dataset, the limit setting procedure has been validated. Signal injection tests for which the signal strength from a pseudo dataset with a pre-set  signal strength is estimated are performed and shown in \fig{fig:plotzut}. From these plots, it is clear that for a data set with a signal strength $\mu= 0.1,\;0.2,\;0.3,\;,0.4$ or $0.5$, the maximum likelihood estimate returns the same values. This validation has been done for both the \Zut\ and \Zct\ interaction.
@@ -567,7 +395,7 @@ Another validation has been done by performing a Maximum Likelihood fit in the \
 \newpage
 \section{Results and discussion}
 \label{sec:Result}
-The limit setting procedure explained in \Sec{sec:Stat} is applied and results are obtained for each lepton channel separately as well as the combination. For both the \Zut\ and \Zct\ coupling, the maximum likelihood estimator of their signal strengths $\hat{\mu}$ is compatible with zero. This is shown in \fig{fig:mlezut}. One can see that the \eee\ lepton channel has the largest uncertainty. This is due to the fact that this channel is the most influences by the lack of statistics for this search.
+The limit setting procedure explained in \Sec{sec:Stat} is applied and results are obtained for each three-lepton channel separately as well as their combined results. For both the \Zut\ and \Zct\ coupling, the maximum likelihood estimator of their signal strengths $\hat{\mu}$ is compatible with zero as is shown \fig{fig:mlezut}. One can see that the \eee\ lepton channel has the largest uncertainty. This is due to the fact that this channel is the most influenced by the lack of statistics for this search.
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.49\linewidth]{6_Search/Figures/MLE/MLEZut.pdf}
@@ -576,7 +404,7 @@ The limit setting procedure explained in \Sec{sec:Stat} is applied and results a
 	\label{fig:mlezut}
 \end{figure}
 
-The maximum likelihood estimators for the nuisance parameters $\hat{\theta}$ are shown in \fig{fig:171102zctmle} for the \Zct\ interaction and in the Appendix (\fig{fig:171102zutmle}) for the \Zut\ interaction. Their values obtained from the signal plus background or background only fits are in agreement. The transfer factors have an initial value different than one and have small uncertainties. The normalisation uncertainties on the yields of the simulated backgrounds get constrained by the fit.  %A well known verification of the error coverage for the fit is the pull distribution. For a random variable $x$ following a Gaussian distribution of mean $m$ and width $w$, the pull $g$ is defined as
+The maximum likelihood estimators for the nuisance parameters $\hat{\theta}$ are shown in \fig{fig:171102zctmle} for the \Zct\ interaction and in \fig{fig:171102zutmle} for the \Zut\ interaction. Their values obtained from the signal plus background or background only fits are in agreement with eachother. The transfer factors used to project the event rates from the control regions to the signal regions, have an initial value different than one and have small uncertainties. The normalisation uncertainties on the yields of the simulated backgrounds get constrained by the fit. The nuisance parameters related to the \NPL\ backgrounds get pulled by the fit since their initial normalisation was arbitrary chosen. These have the same tendencies for the fit performed for the \Zut\ and \Zct\ interaction.  %A well known verification of the error coverage for the fit is the pull distribution. For a random variable $x$ following a Gaussian distribution of mean $m$ and width $w$, the pull $g$ is defined as
 %\begin{equation}
 % g = \frac{x - m}{w},
 %\end{equation}
@@ -590,17 +418,23 @@ The maximum likelihood estimators for the nuisance parameters $\hat{\theta}$ are
 %\end{figure}
 
 %\newpage
- In \fig{fig:impactsZut1} and \fig{fig:impactsZct1}, one can see that the nuisance parameters related to the \NPL\ normalisations are shifted with respect to their initial values. This is to be expected since their initial  normalisation is arbitrary. Furthermore, the effect of the uncertainties on the maximum likelihood estimate of the signal strength is shown. The search is limited by lack of data, as can be seen from \fig{fig:exclusionlimitbrcomp} and \fig{fig:exclusionlimitbrfcnczct}. After the limited data statistics, the most important systematic uncertainty are the \ttZ\ normalisation, JES uncertainty and the \NPL\ normalisation uncertainty. 
+ In \fig{fig:impactsZut1} and \fig{fig:impactsZct1}, one can see again that the nuisance parameters related to the \NPL\ normalisations are shifted with respect to their initial values. This is to be expected since their initial  normalisation is arbitrary. Furthermore, the effect of the uncertainties on the maximum likelihood estimate of the signal strength is shown. The search is limited by lack of data, as can be seen from \fig{fig:exclusionlimitbrcomp} and \fig{fig:exclusionlimitbrfcnczct}. After the limited data statistics, the most important systematic uncertainty are the \ttZ\ normalisation, JES uncertainty and the \NPL\ normalisation uncertainty. 
  
  
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=1.\linewidth]{6_Search/Figures/impact/171102ZctMLE.pdf}
+	\includegraphics[width=.7\linewidth,angle=-90]{6_Search/Figures/impact/171102ZctMLE.pdf}
 	\caption{Maximum likelihood estimators for the \Zct\ vertex.}
 	\label{fig:171102zctmle}
 \end{figure}
 
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=.7\linewidth,angle=-90]{6_Search/Figures/impact/171102ZutMLE.pdf}
+	\caption{Maximum likelihood estimators for the \Zut\ vertex.}
+	\label{fig:171102zutmle}
+\end{figure}
 \newpage
 \begin{figure}[htbp] 
 	\centering
@@ -619,11 +453,12 @@ The maximum likelihood estimators for the nuisance parameters $\hat{\theta}$ are
 	\label{fig:impactsZct1}
 \end{figure}
 
-\newpage
+
+\clearpage
 
 \subsection{Postfit distributions}
  The distributions of multivariate discriminating  variables as well as the distribution of the transverse mass of the \PW\ boson are recreated with the maximum likelihood estimations of the nuisance parameters. The resulting distributions are shown in \fig{fig:shapesfitALL}, \fig{fig:shapesfit3mu}, \fig{fig:shapesfit1e2mu}, \fig{fig:shapesfit2e1mu}, and \fig{fig:shapesfit3e}. 
- In the \WZCR\ and \TTSR, that have the most events entering in the regions, there is a clear agreement between data and simulation for all three-lepton channels. In the \STSR, there are some jumps due to the fact that the \NPL\ background is made from a limited data sample and does not have a smooth template to fit. 
+ In the \WZCR\ and \TTSR, the regions where the most events  are entering, there is a clear agreement between data and simulation for all three-lepton channels. In the \STSR, there are some jumps due to the fact that the \NPL\ background is made from a limited data sample and does not have a smooth template to fit. 
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.32\linewidth]{6_Search/Figures/ZutFit/shapes_fit_s_0_all_error_trial.pdf}
@@ -687,7 +522,7 @@ The maximum likelihood estimators for the nuisance parameters $\hat{\theta}$ are
 	\label{fig:shapesfit3e}
 \end{figure}
 
-%\clearpage
+\clearpage
 \subsection{Postfit yields}
 \label{sec:postfityields}
 In \tab{tab:PYieldSTCR} and \tab{tab:PYieldTTCR}, the  event yields for each process after the global fit for the signal involving a \Zut\ vertex is given for respectively the \STCR\ and \TTCR. All background yields are approximately unchanged and the signal is downscaled with factor of 0.2 with respect to its initial yield. In \tab{tab:PYieldWZCR}, the postfit signal yield is consistent with the other control regions. The background contribution of the \NPL\ process has been doubled, resulting in an agreement between data and simulation. The event yields in the signal regions, \STSR\ and \TTSR, are given in \tab{tab:PYieldSTSR} and \tab{tab:PYieldTTSR} respectively. The contributions of the \WZ+jets and \ttZ+jets backgrounds has risen within their uncertainties, and the contribution of the \NPL\ background has increased, making data agree with simulation. 
@@ -827,17 +662,17 @@ In \tab{tab:PYieldSTCR} and \tab{tab:PYieldTTCR}, the  event yields for each pro
 \label{sec:limits}
 \subsection{One dimensional limits}
 
-The limit setting procedure used in this search returns  limits on the signal strength modifier which can be translated to signal cross sections. These limits are translated to a limit on the branching fraction using \eq{eq:BR}. Additionally, the limit on the couplings are extracted using the fact that the cross sections are quadratically dependent on the couplings. In  \fig{fig:exclusionlimitbrfcnczut}, the resulting limits at 95\% CL on the branching fraction and couplings related to the \Zut\ vertex is shown. This observed (expected) limit amounts to $\BR < \BRZuto\: (\BRZut)$ when $\kZut \neq 0$ and$ \kZct = 0$.The expected limit surpasses the CMS search at a centre-of-mass of 8 \TeV\ expected limits of 0.027\% \cite{Sirunyan:2017kkr}. The observed limit of  \BRZuto\ for the \Zut\ interaction doesn't surpass the CMS 8~\TeV\ observed limit of 0.022\%~\cite{Sirunyan:2017kkr}. The ATLAS collaboration has set limits 95\% CL at a centre-of-mass of 13~\TeV~\cite{ATLAS-CONF-2017-070} with
-observed (expected) limits of 0.017\% (0.024\%) for the \Zut\ coupling. The expected limit presented in this analysis surpasses the expected limit for \Zut.
+The limit setting procedure used in this search returns  limits on the signal strength modifier which can be translated to limits on signal cross sections. These limits are translated to a limit on the branching fraction using \eq{eq:BR}. Additionally, the limit on the couplings are extracted using the fact that the cross sections are quadratically dependent on the couplings. In  \fig{fig:exclusionlimitbrfcnczut}, the resulting limits at 95\% CL on the branching fraction and couplings related to the \Zut\ vertex is shown. This observed (expected) limit amounts to $\BR < \BRZuto\: (\BRZut)$ when $\kZut \neq 0$ and $ \kZct = 0$. The expected limit surpasses the expected limit of 0.027\%  of the previous CMS search at a centre-of-mass of 8 \TeV~\cite{Sirunyan:2017kkr}. However, the observed limit of  \BRZuto\ for the \Zut\ interaction does not surpass its observed limit of 0.022\%~\cite{Sirunyan:2017kkr}. The ATLAS collaboration has also set limits 95\% CL at a centre-of-mass of 13~\TeV~\cite{ATLAS-CONF-2017-070} with
+observed (expected) limits of 0.017\% (0.024\%) for the \Zut\ coupling. The expected limit presented in this analysis surpasses the expected limit set by ATLAS for the \Zut\ interaction.
  \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.7\linewidth]{6_Search/Figures/ExclusionPlots1D_2017_10_25/ExclusionLimit_BR_FCNC_Zut.pdf}
+	\includegraphics[width=0.7\linewidth]{6_Search/Figures/ExclusionPlots1D_2017_11_20/ExclusionLimit_BR_FCNC_Zut.pdf}
 	\includegraphics[width=0.7\linewidth]{6_Search/Figures/ExclusionPlots1D_2017_10_25/ExclusionLimit_Kappa_FCNC_Zut.pdf}
 	\caption{Exclusion limits at 95\% CL on the FCNC branching fractions (left) and couplings (right) as a function of the cross section of the FCNC process,  considering only the \Zut\ vertex. The CMS observed (expected) limit at 95\% CL at a centre-of-mass of 8 \TeV~\cite{Sirunyan:2017kkr} is given with a blue line (dashed line).}
 	\label{fig:exclusionlimitbrfcnczut}
 \end{figure}
 
-In \fig{fig:exclusionlimitbrcomp} and \tab{tab:ResultsTZU}, the limits for each lepton channel separate as well as their combined limits are shown for the \Zut\ vertex. The lepton channels are in agreement with eachother, where the presence of a muon helps pushing the limit further. The \STSR\ is the most sensitive region because of the higher presence of the targeted single top quark signal. Further, one can see that by combining single top quark and top quark pair signals, one gains in sensitivity. 
+In \fig{fig:exclusionlimitbrcomp} and \tab{tab:ResultsTZU}, the limits for each lepton channel separate as well as their combined limits are shown for the \Zut\ vertex. The lepton channels are in agreement with each other, where the presence of a muon helps pushing the limit further. The \STSR\ is the most sensitive region because of the higher presence of the targeted single top quark signal. Further, one can see that by combining single top quark and top quark pair signals  one gains in sensitivity with 0.005\%.
 \begin{table}[htbp]
 	\centering
 	\caption{Expected limits on the branching fractions at 95\% CL for the tZu coupling~\cite{Sirunyan:2017kkr,ATLAS-CONF-2017-070}.}
@@ -869,23 +704,24 @@ In \fig{fig:exclusionlimitbrcomp} and \tab{tab:ResultsTZU}, the limits for each 
 \end{table}
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.7\linewidth]{6_Search/Figures/TOP-17-017_limitsZutStat.pdf}
+	\includegraphics[width=1.\linewidth]{6_Search/Figures/TOP-17-017_limitsZutStat.pdf}
 %	\includegraphics[width=0.49\linewidth]{Figures/TOP-17-017_limitsZct.pdf}
 	\caption{Exclusion limits at 95\% CL for each lepton channel and signal region on the FCNC \Zut\ branching fractions considering one non-vanishing coupling at a time. The CMS observed (expected) limit at 95\% CL at a centre-of-mass of 8 \TeV~\cite{Sirunyan:2017kkr} is given with a blue line (dashed line).}	
 	\label{fig:exclusionlimitbrcomp}
 \end{figure}
 
- In  \fig{fig:exclusionlimitbrfcnczct}, the resulting limits at 95\% CL on the branching fraction and couplings related to the \Zct\ vertex is shown. For this coupling, the observed (expected) limit at 95\% CL is $\BR < \BRZcto\: (\BRZct)$ when $\kZct \neq 0$ and$ \kZut = 0$. The expected limit surpasses the CMS search at a centre-of-mass of 8 \TeV\ expected limits of 0.118\% \cite{Sirunyan:2017kkr}. This also the case for the observed limit of  \BRZcto\ for the \Zct\ interaction, which surpasses the CMS 8~\TeV\ observed limit of 0.049\%~\cite{Sirunyan:2017kkr}. The observed (expected) limit set by the ATLAS collaboration at a centre-of-mass of 13~\TeV~\cite{ATLAS-CONF-2017-070} is 0.023\% (0.032\%) for the \Zct\ coupling. The expected limit presented in this analysis is in accordance with this limit.
+\newpage
+ In  \fig{fig:exclusionlimitbrfcnczct}, the resulting limits at 95\% CL on the branching fraction and couplings related to the \Zct\ vertex are shown. For this coupling, the observed (expected) limit at 95\% CL is $\BR < \BRZcto\: (\BRZct)$ when $\kZct \neq 0$ and $ \kZut = 0$. The expected limit surpasses the expected limit of  0.118\%  set by the previous CMS search at a centre-of-mass of 8 \TeV~\cite{Sirunyan:2017kkr}. This also the case for the observed limit, which surpasses the observed limit of 0.049\% of the previous CMS search~\cite{Sirunyan:2017kkr}. The observed (expected) limit set by the ATLAS collaboration at a centre-of-mass of 13~\TeV~\cite{ATLAS-CONF-2017-070} is 0.023\% (0.032\%) for the \Zct\ coupling. The expected limit presented in this analysis is in accordance with this limit.
  \begin{figure}[htbp]
  	\centering
- 	\includegraphics[width=0.7\linewidth]{6_Search/Figures/ExclusionPlots1D_2017_10_25/ExclusionLimit_BR_FCNC_Zct.pdf}
+ 	\includegraphics[width=0.7\linewidth]{6_Search/Figures/ExclusionPlots1D_2017_11_20/ExclusionLimit_BR_FCNC_Zct.pdf}
  	\includegraphics[width=0.7\linewidth]{6_Search/Figures/ExclusionPlots1D_2017_10_25/ExclusionLimit_Kappa_FCNC_Zct.pdf}
  	\caption{Exclusion limits at 95\% CL on the FCNC branching fractions (left) and couplings (right) as a function of the cross section of the FCNC process,  considering only the \Zct\ vertex. The CMS observed (expected) limit at 95\% CL at a centre-of-mass of 8 \TeV~\cite{Sirunyan:2017kkr} is given with a blue line (dashed line).}
  	\label{fig:exclusionlimitbrfcnczct}
  \end{figure}
  
 
-The limits for each lepton channel separate as well as their combined limits are shown for the \Zct\ vertex in  \fig{fig:exclusionlimitbrcompc} and \tab{tab:ResultsTZC}. The lepton channels are in agreement with eachother, and the presence of a muon helps the sensitivity. For the \Zct\ vertex, the \TTSR\ is the most sensitive region  and by combining single top quark and top quark pair signals, one also gains in sensitivity. 
+The limits for each lepton channel separate as well as their combined limits are shown for the \Zct\ vertex in  \fig{fig:exclusionlimitbrcompc} and \tab{tab:ResultsTZC}. The lepton channels are in agreement with eachother, and the presence of a muon helps the sensitivity. For the \Zct\ vertex, the \TTSR\ is the most sensitive region  and by combining single top quark and top quark pair signals, one also gains in sensitivity with 0.007\%. 
 
 \begin{table}[htbp]
 	\centering
@@ -917,26 +753,26 @@ The limits for each lepton channel separate as well as their combined limits are
 \end{table}
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.7\linewidth]{6_Search/Figures/TOP-17-017_limitsZctStat.pdf}
+	\includegraphics[width=1.\linewidth]{6_Search/Figures/TOP-17-017_limitsZctStat.pdf}
 	%	\includegraphics[width=0.49\linewidth]{Figures/TOP-17-017_limitsZct.pdf}
 	\caption{Exclusion limits at 95\% CL for each lepton channel and signal region on the FCNC \Zct\ branching fractions considering one non-vanishing coupling at a time. The CMS observed (expected) limit at 95\% CL at a centre-of-mass of 8~\TeV~\cite{Sirunyan:2017kkr} is given with a blue line (dashed line).}	
 	\label{fig:exclusionlimitbrcompc}
 \end{figure}
 
-\newpage
+
 \subsection{Two-dimensional limits}
-One can interpolate the one dimensional limits $\pisces_{\tZq}^{\mathrm{1D}}$ to a scenario where both couplings are on-vanishing. The interpolation is taken from Ref.~\cite{CMS-PAS-TOP-17-003}, where an experimental extrapolation formulae
+One can interpolate the one dimensional limits to a scenario where both couplings are non-vanishing. The interpolation is taken from Ref.~\cite{CMS-PAS-TOP-17-003}, where an experimental extrapolation formulae
 \begin{equation}
- \kZct =  \pisces_{\Zct}^{\mathrm{1D}} \sqrt{1 - \frac{\kZut} {\pisces_{\Zut}^{\mathrm{1D}}}}, 
+ \kZct =  \kZct^{\mathrm{1D}} \sqrt{1 - \frac{\kZut} {{\kZut}^{\mathrm{1D}}}}, 
 \end{equation}
 is found from 100 benchmark scenarios. These scenarios are constructed from existing signal samples as
 \begin{equation}
 	\mathrm{Signal\: yield} = (\kZut)^2 (\mathrm{ST\: tZu \: yield + TT\: tZu \: yield }) + (\kZct)^2 (\mathrm{ST\: tZc \: yield + TT\: tZc \: yield }). 
 \end{equation}
-For each scenario a dedicated BDT training is performed and the expected limit at 95\% CL are calculated. The resulting two-dimensional limits are shown in \fig{fig:exclusionlimitbrfcnc}. 
+The resulting two-dimensional limits are shown in \fig{fig:exclusionlimitbrfcnc}. 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.7\linewidth]{6_Search/Figures/ExclusionPlots2D_2017_10_25/ExclusionLimit_BR_FCNC.pdf}
+	\includegraphics[width=0.7\linewidth]{6_Search/Figures/ExclusionPlots2D_2017_11_20/ExclusionLimit_BR_FCNC.pdf}
 	\includegraphics[width=0.7\linewidth]{6_Search/Figures/ExclusionPlots2D_2017_10_25/ExclusionLimit_Kappa_FCNC.pdf}
 	\caption{Two-dimensional limits on the branching fractions (left) and couplings (right) for FCNC interactions involving a tZq vertex.  The CMS observed (expected) limit at 95\% CL at a centre-of-mass of 8~\TeV~\cite{Sirunyan:2017kkr} is given with a blue line (dashed line).}
 	\label{fig:exclusionlimitbrfcnc}
