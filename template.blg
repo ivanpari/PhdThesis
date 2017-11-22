@@ -1,0 +1,44 @@
+[0] Config.pm:324> INFO - This is Biber 2.1
+[1] Config.pm:327> INFO - Logfile is 'template.blg'
+[78] biber-darwin:276> INFO - === Mon Nov 13, 2017, 15:03:38
+[78] Biber.pm:333> INFO - Reading 'template.bcf'
+[362] Biber.pm:645> INFO - Found 201 citekeys in bib section 0
+[415] Biber.pm:2977> INFO - Processing section 0
+[472] Biber.pm:3115> INFO - Looking for bibtex format file 'Bibliography/intr.bib' for section 0
+[488] bibtex.pm:1021> INFO - Decoding LaTeX character macros into UTF-8
+[492] bibtex.pm:895> INFO - Found BibTeX data source 'Bibliography/intr.bib'
+[554] Biber.pm:3115> INFO - Looking for bibtex format file 'Bibliography/Introduction.bib' for section 0
+[572] bibtex.pm:1021> INFO - Decoding LaTeX character macros into UTF-8
+[578] bibtex.pm:895> INFO - Found BibTeX data source 'Bibliography/Introduction.bib'
+[586] Utils.pm:146> WARN - Duplicate entry key: 'PhysRevD.2.1285' in file 'Bibliography/Introduction.bib', skipping ...
+[667] Biber.pm:3115> INFO - Looking for bibtex format file 'Bibliography/Chapter2.bib' for section 0
+[691] bibtex.pm:1021> INFO - Decoding LaTeX character macros into UTF-8
+[694] bibtex.pm:895> INFO - Found BibTeX data source 'Bibliography/Chapter2.bib'
+[744] Biber.pm:3115> INFO - Looking for bibtex format file 'Bibliography/CMS.bib' for section 0
+[749] bibtex.pm:1021> INFO - Decoding LaTeX character macros into UTF-8
+[753] bibtex.pm:895> INFO - Found BibTeX data source 'Bibliography/CMS.bib'
+[797] Utils.pm:146> WARN - BibTeX subsystem: warning: comma(s) at end of name (removing)
+[798] Utils.pm:146> WARN - BibTeX subsystem: author, warning: comma(s) at end of name (removing)
+[800] Biber.pm:3115> INFO - Looking for bibtex format file 'Bibliography/analysistechniques.bib' for section 0
+[830] bibtex.pm:1021> INFO - Decoding LaTeX character macros into UTF-8
+[841] bibtex.pm:895> INFO - Found BibTeX data source 'Bibliography/analysistechniques.bib'
+[1019] Biber.pm:3115> INFO - Looking for bibtex format file 'Bibliography/reconstruction.bib' for section 0
+[1036] bibtex.pm:1021> INFO - Decoding LaTeX character macros into UTF-8
+[1039] bibtex.pm:895> INFO - Found BibTeX data source 'Bibliography/reconstruction.bib'
+[1060] Biber.pm:3115> INFO - Looking for bibtex format file 'Bibliography/eventselection.bib' for section 0
+[1082] bibtex.pm:1021> INFO - Decoding LaTeX character macros into UTF-8
+[1082] bibtex.pm:895> INFO - Found BibTeX data source 'Bibliography/eventselection.bib'
+[1093] Biber.pm:3115> INFO - Looking for bibtex format file 'Bibliography/search.bib' for section 0
+[1105] bibtex.pm:1021> INFO - Decoding LaTeX character macros into UTF-8
+[1106] bibtex.pm:895> INFO - Found BibTeX data source 'Bibliography/search.bib'
+[1110] Utils.pm:146> WARN - Duplicate entry key: 'CMS-PAS-TOP-17-003' in file 'Bibliography/search.bib', skipping ...
+[1114] Biber.pm:3115> INFO - Looking for bibtex format file 'Bibliography/conclusion.bib' for section 0
+[1126] bibtex.pm:1021> INFO - Decoding LaTeX character macros into UTF-8
+[1127] bibtex.pm:895> INFO - Found BibTeX data source 'Bibliography/conclusion.bib'
+[3238] UCollate.pm:66> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[3238] UCollate.pm:66> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[3238] Biber.pm:2854> INFO - Sorting list 'none' of type 'entry' with scheme 'none' and locale 'en-US'
+[3239] Biber.pm:2858> INFO - No sort tailoring available for locale 'en-US'
+[3519] bbl.pm:505> INFO - Writing 'template.bbl' with encoding 'UTF-8'
+[3551] bbl.pm:596> INFO - Output to template.bbl
+[3551] Biber.pm:106> INFO - WARNINGS: 4

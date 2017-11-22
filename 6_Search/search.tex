@@ -1,29 +1,76 @@
-After the requirements on the events, explained in \Chap{chap:5}, to enhance the signal rate. The events are classified into five statistically independent regions: \STSR, \TTSR, \WZCR, \STCR, and \TTCR, shown in \tab{tab:Regions}. In both signal regions (\STSR\ and \TTSR), no clear background discriminating variables were found and a multivariate technique was chosen. In this search, it was opted to use boosted decision trees. BDTs and neural networks are the two TMVA methods achieving the best separation for analyses were the signal and background distributions have overlap. Using a BDT has as advantage that it is a relatively fast method, it is easy to understand and has an excellent efficiency. In particle physics, using a  BDT is the most common used approach. 
+After imposing the selection requirements on the events, explained in \Chap{chap:5}, to enhance the signal signal fraction in the selected samplen, the events are further classified into five statistically independent regions: \STSR, \TTSR, \WZCR, \STCR, and \TTCR, shown in \tab{tab:Regions}. In both signal regions (\STSR\ and \TTSR), no clear individual background discriminating variables were found and therefor a multivariate technique was chosen. In this search, it was opted to use Boosted Decision Trees. BDTs and neural networks are the two TMVA methods achieving the best separation for analyses were the signal and background distributions overlap. Using a BDT has the computational advantage that it is a relatively fast method, it is easy to understand the features and has an excellent efficiency. In particle physics, using a  BDT is the most common approach. 
 
-In \Sec{sec:templates}, the construction of the BDTs in the \STSR\ and \TTSR\ is explained. In each region set of discriminating variables is defined for each coupling, and BDTs are trained in each three-lepton channel separately. In the \WZCR, a discriminating variable between the \WZ+jets and \NPL\ background is found, this variable is presented in \Sec{sec:mtw}. The influence systematic uncertainties, introduced in \Chap{chap:4}, on the templates are investigated and the results are discussed in \Sec{sec:sys}. The analysis strategy and the global fit is validated on pseudo-data. This validation is explained in \Sec{sec:val}. After the validation, the fit is performed on the actual data and the results are shown in \Sec{sec:Result}. One dimensional and two-dimensional limits are extracted and presented in \Sec{sec:limits}.
+In \Sec{sec:templates}, the construction of the BDTs in the \STSR\ and \TTSR\ is explained. In each region, a set of discriminating variables is defined for each FCNC coupling, and BDTs are trained in each three-lepton channel separately. In the \WZCR, a discriminating variable between the \WZ+jets and \NPL\ background is found, this variable is presented in \Sec{sec:mtw}. The influence of systematic uncertainties, introduced in \Chap{chap:4}, on the distributions is investigated and the results are discussed in \Sec{sec:sys}. The analysis strategy and the global fit is validated on pseudo-data. This validation is explained in \Sec{sec:val}. After the validation, the fit is performed on the actual data and the results are shown in \Sec{sec:Result}. One dimensional and two-dimensional limits are extracted and presented in \Sec{sec:limits}.
 
 
 \section{Construction of the BDT template distributions}
 \label{sec:templates}
-There were no selection criteria found to make a clear rejection of the background events without sacrificing a significant amount of signal. For this reason, a multivariate approach using Boosted Decision Trees that combines several discriminating variables in the TMVA framework is used. For the training, the BDTs are trained against all backgrounds.  The \NPL\ background is not taken into account for the training since it is limited in statistics and would cause overtraining. The BDT settings  avoid over-training and  maintain a good discriminating power against the backgrounds. The background and signal yields follow the relative fractions predicted by the simulation. 
+There were no selection criteria found using merely individual variables to make a clear rejection of the background events without sacrificing a significant amount of signal. For this reason, a multivariate approach using Boosted Decision Trees that combines several discriminating variables in the TMVA framework is used. For the training, the BDTs are trained against all backgrounds.  The \NPL\ background is not taken into account for the training since it is limited in statistics and would cause overtraining. The BDT settings  avoid over-training and  maintain a good discriminating power against the backgrounds and are discussed in \Sec{sec:BDT}. The background and signal yields follow the relative fractions predicted by the simulation. 
 
-Starting from a large set of possible discriminating variables, a minimal set of variables is chosen based on the ROC curves. For each signal region, a minimal set of variables in constructed. Since for the \Zut\ and \Zct\ coupling, for example, the expected b tag information will behave differently, as well as the fact the charm coupling will have more similarities with the \SM\ tZq process, different trainings with different input variables are performed for each coupling. Furthermore, the different three-lepton channels are trained individually, keeping the same input variables. The input variables do not depend on lepton flavour and are therefore kept the same. However, keeping the \NPL\ background in mind and to account for possible discrepancies between the muon and electron, the training is done separately for each three-lepton channel. In \Sec{sec:BDTSTSRZUT}, the construction of the multivariate discriminating variable in the \STSR, for the \Zut\ interaction, is shown. The construction of the multivariate discriminating variable in the \TTSR\ for this interaction is shown in \Sec{sec:BDTTTSRZUT}. For the \Zct\ interaction, these are shown in \Sec{sec:BDTSTSRZUT} and \Sec{sec:BDTTTSRZUT} respectively. 
+Starting from a large set of possible discriminating variables, a minimal set of variables is chosen based on the ROC curves. For each signal region, a minimal set of variables is therefore constructed. Since for the \Zut\ and \Zct\ coupling, for example, the expected b-tag information will behave differently, as well as the fact that the charm coupling will have more similarities with the \SM\ tZq process, different trainings with different input variables are performed for each coupling. Furthermore, the different three-lepton channels are trained individually, keeping the same input variables. The input variables do not depend on lepton flavour and are therefore kept the same over all three-lepton channels. However, keeping the \NPL\ background in mind and to account for possible discrepancies between the muon and the electron, the training is done separately for each three-lepton channel. In \Sec{sec:BDTSTSRZUT}, the construction of the multivariate discriminating variable in the \STSR, for the \Zut\ interaction, is shown. The construction of the multivariate discriminating variable in the \TTSR\ for this interaction is shown in \Sec{sec:BDTTTSRZUT}. For the \Zct\ interaction, these are shown in \Sec{sec:BDTSTSRZUT} and \Sec{sec:BDTTTSRZUT} respectively. 
 
+The main backgrounds estimated from simulation in this search are \WZ+jets, \ttZ, \SM\ \tZq, and \ZZ\ processes. Their leading order Feynmann diagrams are shown in \fig{fig:WZ},  \fig{fig:ttZ}, \fig{fig:tZq} and \fig{fig:ZZ} respectively. The FCNC signal leading order Feynmann diagrams are shown in \fig{fig:feynST} and \fig{fig:feynTT}. 
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.3\linewidth]{6_Search/Figures/Feynman/WZa}
+	\includegraphics[width=0.3\linewidth]{6_Search/Figures/Feynman/WZb}
+	\includegraphics[width=0.3\linewidth]{6_Search/Figures/Feynman/WZc}
+	\caption{Leading order Feynmann diagrams for the \WZ\ production in proton collisions. Left: s-channel, middle: t-channel, right: u-channel. Figure taken from~\cite{Khachatryan:2216557}.}
+	\label{fig:WZ}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.3\linewidth]{6_Search/Figures/Feynman/tZq}
+	\includegraphics[width=0.3\linewidth]{6_Search/Figures/Feynman/tZq2}
+	\includegraphics[width=0.3\linewidth]{6_Search/Figures/Feynman/tZq3}
+		\caption{Some of the leading order Feynmann diagrams for the \SM\ \tZq\ production in proton collisions. Figure taken from~\cite{CMS-PAS-TOP-16-020}.}
+	\label{fig:tZq}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.3\linewidth]{6_Search/Figures/Feynman/ttZ}
+	\caption{Dominant leading order Feynmann diagram for the \ttZ\ production in proton collisions. Figure taken from~\cite{Khachatryan:1712680}.}
+	\label{fig:ttZ}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.3\linewidth]{6_Search/Figures/Feynman/ZZ}
+	\includegraphics[width=0.3\linewidth]{6_Search/Figures/Feynman/ZZ2}
+		\includegraphics[width=0.3\linewidth]{6_Search/Figures/Feynman/ZZ3}
+	\caption{Leading order Feynmann diagram for the \ZZ\ production in proton collisions. Left: t-channel production, middle: s-channel production, right: non-resonant production. The Z$^{(*)}$ notation is used to denote the production of on- and off-shell Z bosons and production of off-shell photons ($\gamma*$). Figure taken from~\cite{Khachatryan:1712680}.}
+	\label{fig:ZZ}
+\end{figure}
+\newpage
 \subsection{BDT training in the \STSR\ for the \Zut\ interaction}
 \label{sec:BDTSTSRZUT}
-Since the single top quark signal is expected to have an enhanced discrimination against the background processes compared to the top quark pair signal,  the BDT is trained solely on the single top quark signal.  The variables used to reconstruct the multivariate discriminator are chosen based on the differences expected between signal and background. For the \STSR, the main backgrounds are the \SM\ tZq and \WZ+jets processes,  The \WZ+jets process does not contain a top quark, while for the \SM\ tZq, there the reconstructed \SM\ top quark can lose energy via the radiated \PZ\ boson.  The pseudorapidity of the SM top $\eta(\mathrm{SM top})$ as well as the invariant mass of the lepton arising from the \PW\ boson $\mathrm{l}_{\PW}$ and the \SM\ b, are used as discriminating variables. The distribution of the  pseudorapidity of the SM top peaks at zero for the FCNC single top quark signal, while the peak is broader for the background contributions. The invariant mass of the lepton arising from the \PW\ boson and the \SM\ b jet peaks at around 100~\GeV\ for signal and background, where the distribution of the background processes has a broader tail. Additionally, the difference in $\phi$ between the W lepton and the SM b jet $\Delta \phi(\Plepton_{\PW},b)$ peaks around $\pm 1$ for signal, while for background this is at $\pm 3$. Indicating that for background the  W lepton and the SM b jet are not necessarily coming from the same object. The is also visible in the distribution of the difference in the distance in the $\phi\eta$-plane $\Delta R(\Plepton_{\PW},b)$, between the W lepton and the SM b jet, where signal is peaking at lower values. For signal, the lepton assigned to the \PW\ boson should not be close to the \PZ\ boson in the transverse plane, this is used by looking at the difference in  $\Delta R$ between the W lepton and the Z boson $\Delta R(Z,\Plepton_{\PW})$, which peaks at large values for the signal distribution. For the  background processes these peak are not as present. For the signal, the jet with the highest transverse momentum is expected to be the b jet. The CSVv2 discriminant of the jet with the highest \pt\ (CSVv2 jet $\pt^{\mathrm{max}}$) is used as discriminating variable, peaking at one for the signal process. Since the up quark is a valence quark for the proton, while the anti-up quark is a sea quark, one expects a charge asymmetry. This effect is exploited by using 
-the charge of the W lepton times the absolute pseudorapidity of the W lepton ($|\eta(\Plepton_{\PW})|\times Q(\Plepton_{\PW})$) and  the \pt\ of the W lepton times its charge ($\pt(\Plepton_{\PW})\times Q(\Plepton_{\PW})$) as discriminating variables. The distributions of the variables are shown in \fig{fig:singletopZutnormalised} for the  \mumumu\ lepton channel, the other distributions for the individual three-lepton channels can be found in \App{app:BDTcorrZutSing}. The correlations between the different variables are shown in \fig{fig:correlationsigzutsingletop}. The correlation between the variables varies from zero to $\sim 60\%$. The most discriminating variable is the distance in the $\phi\eta$-plane between the \PW\ lepton and the SM b jet, followed by the CSVv2 discriminator of the jet with the highest \pt. On third place is the invariant mass of the sum of the \PW\ lepton and \SM\ b jet. 
+Since in the \STSR\, the single top quark FCNC signal is expected to have an enhanced discrimination against the background processes compared to the top quark pair FCNC signal,  the BDT is trained solely to enhance the single top quark FCNC signal. The single top quark FCNC signal expects one \Pbottom\ jet (SM b~jet), one lepton (\PW\ lepton ) and missing transverse energy coming from the \SM\ top quark decay (SM top quark). Furthermore, two leptons from the \PZ\ boson decay are expected. 
+
+The variables used to reconstruct the multivariate discriminator are chosen based on the differences expected between signal and background. For the \STSR, the main backgrounds are the \SM\ tZq, \WZ+jets, and \ZZ\ processes.  The events originating from the \WZ+jet process, are entering the \STSR\ due to a b~jet produced by gluon splitting or the light-flavour jets that are mis-tagged as b~jets.  The SM \tZq\ is entering the \STSR\ when one jets is missing from the reconstruction. The \ZZ\ process is entering the analysis when one  jet is missing from the reconstruction and the other is (mis-)tagged as a b~jet or when one of the four leptons is missing from the reconstruction.  
+
+ The \WZ+jets and \ZZ\ processes do not contain a top quark, while for the \SM\ tZq the reconstructed \SM\ top quark can lose energy via the radiated \PZ\ boson. Therefore variables related to the properties of the top decay through the Wtb vertex are studied for their discriminating power.  The pseudorapidity of the SM top quark $\eta(\mathrm{\SM\ top})$ as well as the invariant mass of the lepton arising from the \PW\ boson $\mathrm{l}_{\PW}$ and the \SM\ b jet, are used as discriminating variables. The distribution of the  pseudorapidity of the SM top quark peaks at zero for the single top quark FCNC signal, while the distribution is broader for the background contributions. The distribution of the invariant mass of the lepton arising from the \PW\ boson and the \SM\ b~jet peaks at around 100~\GeV\ for signal and background, where the distribution of the background processes has a longer tail. Additionally, the difference in $\phi$ between the \PW\ lepton and the SM b~jet $\Delta \phi(\Plepton_{\PW},b)$ peaks around $\pm 1$ for signal, while for background this is at $\pm 3$. This indicates that for background, the  W lepton and the SM b jet are not necessarily coming from the same object, while for signal these objects are closer together. This is also visible in the distribution of the difference in distance in the $\phi\eta$-plane, $\Delta R(\Plepton_{\PW},b)$, between the W lepton and the SM b jet, where signal is peaking at lower values.
+ 
+    For signal, the lepton assigned to the \PW\ boson should be back-to-back to the \PZ\ boson, this is used by looking at the difference in  $\Delta R$ between the W lepton and the Z boson $\Delta R(Z,\Plepton_{\PW})$, which peaks at three for the single top quark FCNC signal  distribution. For the  background processes the peak  in the distribution is broader. For the signal, the jet with the highest transverse momentum is expected to be the b~jet. This jet is expected to have a high transverse momentum. For this reason, the CSVv2 discriminant of the jet with the highest \pt\ (CSVv2 jet $\pt^{\mathrm{max}}$) is used as discriminating variable, peaking at one for the single top quark FCNC signal  process and resembling a flat distribution for the backgrounds. The disitribution of the scalar sum of the \pt\ of the leptons, H$_{\mathrm{T}}$, is peaking at higher values for the single top quark FCNC signal . Hence, the single top quark FCNC signal  is more transverse than its backgrounds.
+    
+     Since the up quark is a valence quark for the proton, while the anti-up quark is a sea quark, one expects a charge asymmetry for the production of top and anti-top quarks. This effect is exploited by using 
+the charge of the W lepton times the absolute pseudorapidity of the W lepton ($|\eta(\Plepton_{\PW})|\times Q(\Plepton_{\PW})$) and  the \pt\ of the W lepton times its charge ($\pt(\Plepton_{\PW})\times Q(\Plepton_{\PW})$) as discriminating variables. Where the fact that the single top quark FCNC signal is more transverse than it backgrounds is used for the combination $|\eta(\Plepton_{\PW})|\times Q(\Plepton_{\PW})$. In the combination $\pt(\Plepton_{\PW})\times Q(\Plepton_{\PW})$, the fact that the single top quark FCNC signal is expecting a high-\pt\ prompt lepton is used. 
+
+ The distributions of the variables are shown in \fig{fig:singletopZutnormalized} for the  \mumumu\ lepton channel, the distributions for the other three-lepton channels can be found in \App{app:BDTcorrZutSing}. The correlations between the different variables are shown in \fig{fig:correlationsigzutsingletop}.
+ 
+  The correlation between the variables is mostly small, and varies from zero to $\sim 60\%$. The most discriminating variable is the distance in the $\phi\eta$-plane between the \PW\ lepton and the SM b jet, followed by the CSVv2 discriminator of the jet with the highest \pt. On the third place is the invariant mass of the \PW\ lepton and \SM\ b jet system. % harde cut off in dR op 3.14 is omdat phi maar een max vercshil van pi heeft
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.3\linewidth]{6_Search/Figures/PlotsTechnics/SMtopetaZutsingletopuuu_norm}
 	\includegraphics[width=0.3\linewidth]{6_Search/Figures/PlotsTechnics/mlbZutsingletopuuu_norm}
 	\includegraphics[width=0.3\linewidth]{6_Search/Figures/PlotsTechnics/dPhiWlepbZutsingletopuuu_norm}
-		\includegraphics[width=0.3\linewidth]{6_Search/Figures/PlotsTechnics/charge_asymZutsingletopuuu_norm}
-		\includegraphics[width=0.3\linewidth]{6_Search/Figures/PlotsTechnics/bdiscCSVv2_jet_0Zutsingletopuuu_norm}
-			\includegraphics[width=0.3\linewidth]{6_Search/Figures/PlotsTechnics/dRWlepbZutsingletopuuu_norm}
-				\includegraphics[width=0.3\linewidth]{6_Search/Figures/PlotsTechnics/TotalHt_lepZutsingletopuuu_norm}
+	\includegraphics[width=0.3\linewidth]{6_Search/Figures/PlotsTechnics/dRWlepbZutsingletopuuu_norm}
+		\includegraphics[width=0.3\linewidth]{6_Search/Figures/PlotsTechnics/dRZWlepZutsingletopuuu_norm}
+	\includegraphics[width=0.3\linewidth]{6_Search/Figures/PlotsTechnics/bdiscCSVv2_jet_0Zutsingletopuuu_norm}
+		\includegraphics[width=0.3\linewidth]{6_Search/Figures/PlotsTechnics/TotalHt_lepZutsingletopuuu_norm}
+	\includegraphics[width=0.3\linewidth]{6_Search/Figures/PlotsTechnics/charge_asymZutsingletopuuu_norm}
 			\includegraphics[width=0.3\linewidth]{6_Search/Figures/PlotsTechnics/ptWQZutsingletopuuu_norm}
-	\includegraphics[width=0.3\linewidth]{6_Search/Figures/PlotsTechnics/dRZWlepZutsingletopuuu_norm}
 	\caption{The normalised distributions of the input variables for reconstructing the multivariate discriminator in the \STSR\ for the \Zut\ vertex for the \mumumu\ channel. The contribution of the \NPL\ background is not included. }
 	\label{fig:singletopZutnormalized}
 \end{figure}
@@ -39,7 +86,7 @@ the charge of the W lepton times the absolute pseudorapidity of the W lepton ($|
 
 \clearpage
 
-The resulting multivariate discriminator D is shown in \fig{fig:sigvsbkgtestzutsingletop} for all three-lepton channels. In these plots one can see that there is a clear discrimination between the FCNC single top quark signal and the backgrounds. Furthermore, one can investigate the procedure by cross checking the distribution from the training sample with an independent testing sample. As can be seen in the distributions, these samples agree with eachother.
+The resulting multivariate discriminator D is shown in \fig{fig:sigvsbkgtestzutsingletop} for all three-lepton channels. In these plots one can observe that there is a clear discrimination between the FCNC single top quark signal and the backgrounds. Furthermore, one can investigate the procedure by cross checking the distribution from the training sample with an independent testing sample. As can be seen in the distributions, these samples agree with each other. Hence there is no overtraining for the BDT method and the testing and training sample show the same separation power. 
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.49\linewidth]{6_Search/Figures/PlotsTechnics/SigVsBkgTestZutsingletopuuu}
@@ -50,14 +97,14 @@ The resulting multivariate discriminator D is shown in \fig{fig:sigvsbkgtestzuts
 	\label{fig:sigvsbkgtestzutsingletop}
 \end{figure}
 
-Additionally, the receiving operator characteristic for the testing and training samples are shown in \fig{fig:roczutsingletop}. On can see that for all channels there is separating power and that the ROC curve of the testing sample is below the one for the training sample. This is the most present in the \eee\ channel, where there is a lack of statistics. 
+Additionally, the Receiving Operator Characteristic (ROC) curves for the testing and training samples are shown in \fig{fig:roczutsingletop}. One can observe that for all channels there is a clear separating power and that the ROC curve of the testing sample is a bit below the one for the training sample, resulting in slightly worse performance when testing the method. This is the most present in the \eee\ channel, where there is a lack of statistics. However, the distinction between signal and background like is clearly still there.
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.49\linewidth]{6_Search/Figures/PlotsTechnics/ROCZutsingletopuuu}
 	\includegraphics[width=0.49\linewidth]{6_Search/Figures/PlotsTechnics/ROCZutsingletopuue}
 	\includegraphics[width=0.49\linewidth]{6_Search/Figures/PlotsTechnics/ROCZutsingletopeeu}
 	\includegraphics[width=0.49\linewidth]{6_Search/Figures/PlotsTechnics/ROCZutsingletopeee}
-	\caption{ROC curves of the resulting  multivariate discriminators D in the \STSR, for the \Zut\ signal. For the \mumumu\ (left,top), \emumu\ (right,top), \eemu\ (left, bottom) and \eee\ (right,bottom) three-lepton channel.}
+	\caption{ROC curves of the resulting  multivariate discriminators D in the \STSR, for the \Zut\ signal. For the \mumumu\ (left,top), \emumu\ (right,top), \eemu\ (left, bottom) and \eee\ (right,bottom) three-lepton channel. The dashed line represents the case of no separation power.}
 	\label{fig:roczutsingletop}
 \end{figure}
 
@@ -67,26 +114,37 @@ Additionally, the receiving operator characteristic for the testing and training
 \clearpage
 \subsection{BDT training in the \TTSR\ for the \Zut\ interaction}
 \label{sec:BDTTTSRZUT}
-In this region, the BDT is trained against top quark pair and single top signal at the same time. The contribution of the \NPL\ background is again not considered for training. The top quark pair FCNC signal has the largest contribution in this region and the main backgrounds are the \ttZ, \SM\ \tZq, and \WZ+jets processes. In \fig{fig:toppairZutnormalized}, the input variables used to create the multivariate discriminant are shown for the \mumumu\ channel. For the \ttZ\ process, a \PZ\ boson is radiated of one of the top quarks of a top quark pair production process. Hence, there is no top quark reconstructed from a light-flavour jet and \PZ\ boson expected. The invariant mass of the reconstructed FCNC top quark, as well as the distances in the $\phi\eta$ plane between the FCNC light-flavour jet and the \SM\ b jet, as well as between the \PZ\ boson and the FCNC light-flavour jet are used as discriminating variables for this search. For background, the invariant mass of the FCNC top quark is peaking at lower values compared to the signal. Also the distances are peaking at different values. For the same reasons as in the previous sections, pseudorapidity of the SM top quark,  the invariant mass of the \PW\ lepton and the \SM\ b jet, as well as their distance in the $\phi\eta$-plane are considered. Furthermore the difference in $\phi$ between the \PW\ lepton and the \SM\ b jet, as well as its difference in $\phi$ with the reconstructed \PZ\ boson are considered. Furthermore, the minimal distance in the $\phi\eta$-plane between the \PW\ lepton and all the jets is peaking at lower values for signal than for backgrounds. This is due to the fact that for signal this distance will be most likely the distance for the SM b  jet, while for \ttZ\ and \tZq\ this could be, biased through the radiation, and for \WZ+jets this distance will come from FSR jets. Also the number of b-tagged jets according to the CSVv2 medium working point is used in creating the multivariate discriminator, for signal this distributions peaks at one, while for background, this peaks at zero. The invariant mass of the \PZ\ boson is also used. Thought this variable is weak discriminating, this would not harm the training since the BDT can cope with weak variables.  The most important input variables for this region, for the \Zut\ interaction, are the invariant mass of the \PW\ lepton and the \SM\ b jet, as well as their distance. On the third place is the number of b-tagged jets. The distributions for each three-lepton channel separate are given in \App{app:BDTcorrZutTop}.
+In this region, the BDT is trained to enhance the top quark pair and the single top FCNC signals at the same time. The contribution of the \NPL\ background is again not considered during training. The top quark pair FCNC signal has the largest contribution in this region. The top quark pair FCNC signal expects one \Pbottom\ jet (SM b~jet), one lepton (\PW\ lepton ) and missing transverse energy coming from the \SM\ top quark decay (SM top quark). The other top quark decays through the FCNC vertex and creates two leptons from the \PZ\ boson decay and a light quakr (up or charm). 
+
+In this region, the main backgrounds are the \ttZ, \SM\ \tZq, and \WZ+jets processes. Again, the events originating from the \WZ+jet process, are entering the \STSR\ due to a b~jet produced by gluon splitting or the light-flavour jets that are mis-tagged as b~jets.  The SM \tZq\ has exactly the same signature as the top quark pair FCNC signal.  The \ttZ\ process is entering the analysis when both tops are decaying leptonically and on b jet is missing from the reconstruction or in association with not prompt-leptons. 
+
+
+  In \fig{fig:toppairZutnormalized}, the input variables used to create the multivariate discriminant are shown for the \mumumu\ channel. The distributions for the other three-lepton channels are given in \App{app:BDTcorrZutTop}. For the \ttZ\ process, a \PZ\ boson is radiated of one of the top quarks of a top quark pair production process. Hence, no top quark is expected to be reconstructed from a light-flavour jet and \PZ\ boson. For the \SM\ \tZq\ process this also the case. Therefore, the invariant mass of the reconstructed FCNC top quark, as well as the distances in the $\phi\eta$-plane between the \PZ\ boson and the FCNC light-flavour jet are used as discriminating variables for this search. For background, the distribution invariant mass of the FCNC top quark has a broader peak than the FCNC signal which is peaking at the known top quark mass. The distribution of the distance between the FCNC jet and the reconstructed \PZ\ boson is peaking at higher values for the backgrounds compared to signal. Also the invariant mass of the \PZ\ boson is used as discriminating variable since the distribution the peak is finer for the FCNC signal compared to the background. 
+  
+
+   For the same reasons as in the previous sections, the pseudorapidity of the SM top quark,  the invariant mass of the \PW\ lepton and the \SM\ b jet, as well as their distances in the $\phi\eta$-plane are considered. For the backgrounds, the invariant mass of the \PW\ lepton and \SM\ jet system has a longer tail. Furthermore, the difference in distance  between the \PW\ lepton and \SM\ b jet peaks at lower values for the FCNC signal. The distribution of the difference in the azimuthal angle peaks at $\pm1$ for signal, while at $\pm 3$ for the background processes. Furthermore, the distribution of the minimal distance in the $\phi\eta$-plane between the \PW\ lepton and all the jets in the event is peaking at lower values for the FCNC signal than for backgrounds. This is due to the fact that for the FCNC signal events this distance will be most likely the distance from the SM b  jet, while for the \ttZ\ and \tZq\ processes this could be biased due to radiation, and for \WZ+jets events this distance will come from an FSR jet.  Also the number of b-tagged jets according to the CSVv2 medium working point is used in creating the multivariate discriminator. For FCNC signal this distributions peaks at one, while for background, this peaks at zero.
+   
+   
+   For the FCNC signal, one expects that the decay products coming from the FCNC interaction in the event is opposite in direction compared the decay products of the \SM\ interaction. This is exploited by looking at the distribution of difference in azimuthal angle between the  \PZ\ boson and  \PW\ lepton. For the FCNC signal, this distribution peaks at $\pm 3$, while remaining flat for the backgrounds. Furthermore the difference in the $\phi\eta$-plane between the \SM\ b jet and FCNC jet is used as discriminating variable. For the FCNC signal, this distribution peaks around three, and is broader for the backgrounds.  The most important input variables for this region, for the \Zut\ interaction, are the invariant mass of the \PW\ lepton and the \SM\ b jet system, as well as their distance. On the third place is the number of jets tagged as being a b jet according to the CSVv2 algorithm at its medium working point. 
 \begin{figure}[htbp]
 	\centering
+	\includegraphics[width=0.3\linewidth]{6_Search/Figures/PlotsTechnics/FCNCtop_MZuttoppairuuu_norm}
+	\includegraphics[width=0.3\linewidth]{6_Search/Figures/PlotsTechnics/dRZcZuttoppairuuu_norm}
+	\includegraphics[width=0.3\linewidth]{6_Search/Figures/PlotsTechnics/Zboson_MZuttoppairuuu_norm}
 	\includegraphics[width=0.3\linewidth]{6_Search/Figures/PlotsTechnics/SMtopetaZuttoppairuuu_norm}
 	\includegraphics[width=0.3\linewidth]{6_Search/Figures/PlotsTechnics/mlbZuttoppairuuu_norm}
 	\includegraphics[width=0.3\linewidth]{6_Search/Figures/PlotsTechnics/dPhiWlepbZuttoppairuuu_norm}
-	\includegraphics[width=0.3\linewidth]{6_Search/Figures/PlotsTechnics/deltaRWlepJet_minZuttoppairuuu_norm}
-	\includegraphics[width=0.3\linewidth]{6_Search/Figures/PlotsTechnics/Zboson_MZuttoppairuuu_norm}
-	\includegraphics[width=0.3\linewidth]{6_Search/Figures/PlotsTechnics/dPhiZWlepZuttoppairuuu_norm}
 	\includegraphics[width=0.3\linewidth]{6_Search/Figures/PlotsTechnics/dRWlepbZuttoppairuuu_norm}
-	\includegraphics[width=0.3\linewidth]{6_Search/Figures/PlotsTechnics/NJets_CSVv2MZuttoppairuuu_norm}
-	\includegraphics[width=0.3\linewidth]{6_Search/Figures/PlotsTechnics/FCNCtop_MZuttoppairuuu_norm}
-	\includegraphics[width=0.3\linewidth]{6_Search/Figures/PlotsTechnics/dRZcZuttoppairuuu_norm}
+	\includegraphics[width=0.3\linewidth]{6_Search/Figures/PlotsTechnics/deltaRWlepJet_minZuttoppairuuu_norm}
+		\includegraphics[width=0.3\linewidth]{6_Search/Figures/PlotsTechnics/NJets_CSVv2MZuttoppairuuu_norm}
+	\includegraphics[width=0.3\linewidth]{6_Search/Figures/PlotsTechnics/dPhiZWlepZuttoppairuuu_norm}
 	\includegraphics[width=0.3\linewidth]{6_Search/Figures/PlotsTechnics/dRSMjetLightjetZuttoppairuuu_norm}
 	\caption{The normalised distributions for input variables for reconstructing the multivariate discriminator in the \TTSR\ for the \Zut\ vertex, in the \mumumu\ lepton channel. The contribution of the \NPL\ background is not included.}
 	\label{fig:toppairZutnormalized}
 \end{figure}
 
 \newpage
-In \fig{fig:correlationsigzuttoppair}, the correlations between the input variables used for training and creating the multivariate discriminating variable are shown. Globally, there is no correlation between the variables, with the exception of the distances and mass of the components of the top quarks. 
+In \fig{fig:correlationsigzuttoppair}, the correlations between the input variables used for training and creating the multivariate discriminating variable are shown. In general, there is only a small correlation between the variables, with the exception of the distances and mass of the components of the top quarks. 
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.49\linewidth]{6_Search/Figures/PlotsTechnics/correlationsigZuttoppairuuu}
@@ -98,7 +156,7 @@ In \fig{fig:correlationsigzuttoppair}, the correlations between the input variab
 \end{figure}
 
 \clearpage
-The resulting multivariate discriminator D for this region is shown in \fig{fig:sigvsbkgtestzuttoppair} for all three-lepton channels. Again, there is a clear discrimination between the FCNC signal and the backgrounds, and the testing and training samples agree with eachother. The receiving operator characteristics are shown in \fig{fig:roczuttoppair}. 
+The resulting multivariate discriminator D for this region is shown in \fig{fig:sigvsbkgtestzuttoppair} for all three-lepton channels. Again, there is a clear discrimination between the FCNC signal and the backgrounds, and the testing and training samples agree with each other. Hence, there is no overtraining observed. The ROC curves are shown in \fig{fig:roczuttoppair}, where the testing sample is slightly under the training sample. However, a large separation power is still obtained for signal and background like events. 
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.49\linewidth]{6_Search/Figures/PlotsTechnics/SigVsBkgTestZuttoppairuuu}
@@ -113,9 +171,12 @@ The resulting multivariate discriminator D for this region is shown in \fig{fig:
 \clearpage	
 \subsection{BDT training in the \STSR\ for the \Zct\ interaction}
 \label{sec:BDTSTSRZCT}
-The input variables used to create the multivariate discriminator in the \STSR\ for the \Zct\ interaction are shown in \fig{fig:singletopZctnormalized}. In analogy to the training for the \Zut\ vertex in the \STSR, the training is performed with the single top quark signal only. The variables discussed in \Sec{sec:BDTSTSRZUT} are used, where the variables related to the charge asymmetry are left out. For charm coupling, both quark and anti-quarks are sea quarks, hence no charge asymmetry is expected. The most important variables are the invariant mass of all leptons,  followed by the CSVv2 discriminator of the jet with the highest \pt, and the invariant mass of the sum of the \PW\ lepton and \SM\ b jet. The distributions for each three-lepton channel separate are given in \App{app:BDTcorrZctSingle}.
-The correlations between the different input variables are given in \fig{fig:correlationsigzctsingletop}. The correlations vary from zero to $\sim 55\%$.
-The resulting multivariate discriminator D is shown in \fig{fig:sigvsbkgtestzctsingletop} for all three-lepton channels. In these plots one can see that there is a clear discrimination between the FCNC single top quark signal and the backgrounds. Furthermore, one can investigate the procedure by cross checking the distribution from the training sample with an independent testing sample. As can be seen in the distributions, these samples agree with eachother. The receiving operator characteristic for the testing and training samples are shown in \fig{fig:roczctsingletop}. 
+The input variables used to create the multivariate discriminator in the \STSR\ for the \Zct\ interaction are shown in \fig{fig:singletopZctnormalized}. In analogy to the training for the \Zut\ vertex in the \STSR\ (\Sec{sec:BDTSTSRZUT}), the training is performed with the single top quark FCNC signal only. The single top quark FCNC  signal signature is similar to that of the signature expected from the \Zut\ interaction and therefore most of the same variables discussed in \Sec{sec:BDTSTSRZUT} are used. For the charm coupling, both quark and anti-quarks responsible for the production of the single top quark FCNC process, are sea quarks. For this reason no charge asymmetry is expected, and the variables related to the charge asymmetry are left out.
+ The most important variables in this region for the \Zct\ interaction,  are the invariant mass of all leptons,  followed by the CSVv2 discriminator of the jet with the highest \pt, and the invariant mass of the \PW\ lepton and \SM\ b jet system. The distributions for the other three-lepton channels are given in \App{app:BDTcorrZctSingle}.
+ 
+ 
+The correlations between the different input variables are given in \fig{fig:correlationsigzctsingletop}. These correlations are in general small, but vary from zero to $\sim 55\%$.
+The resulting multivariate discriminator D is shown in \fig{fig:sigvsbkgtestzctsingletop} for all three-lepton channels. In these plots one can observe that there is a clear discrimination between the FCNC single top quark signal and the backgrounds. Furthermore, the procedure is investigated by cross checking the distribution from the training sample with an independent testing sample. As can be seen in the distributions, these samples agree with eachother, and only a minor overtraining is observed. The ROC curves for the testing and training samples are shown in \fig{fig:roczctsingletop}, where the testing sample has a slightly worse performance than the training sample. Though a clear discrimination power between signal and background like events is obtained. 
 
 \begin{figure}[htbp]
 	\centering
@@ -157,8 +218,9 @@ The resulting multivariate discriminator D is shown in \fig{fig:sigvsbkgtestzcts
 \clearpage
 \subsection{BDT training in the \TTSR\ for the \Zct\ interaction}
 \label{sec:BDTTTSRZCT}
-The training in this region for the \Zct\ interaction is done by looking at both signal contributions. The discriminating variables used are shown in \fig{fig:toppairZctnormalized}. Most of the variables are the same as the ones for the \Zut\ interaction. The most important addition is the CSVv2 discriminator value of the FCNC jet. Since here, the FCNC jet is expected to be a charm quark jet, this jet is expected to have a high CSVv2 discriminant. The most important input variables for this region, for the \Zct\ interaction, are the invariant mass of the \PW\ lepton and the \SM\ b jet,  the invariant mass of the FCNC top quark and the reconstructed \PZ\ boson mass. The distributions for each three-lepton channel separate are given in \App{app:BDTcorrZctTop}.
-The correlations between the input  variables vary from zero to 55\% (anti) correlation. 
+The training in this region for the \Zct\ interaction is performed by looking at both FCNC signal contributions. The discriminating variables used for training are shown in \fig{fig:toppairZctnormalized}. Most of the variables are the same as the ones for the \Zut\ interaction, described in \Sec{sec:BDTTTSRZUT}, since a similar signature is expected. The most important addition is the CSVv2 discriminator value of the FCNC jet. Since here, the FCNC jet is expected to be a charm quark jet, this jet is expected to have a high CSVv2 discriminator value.  One can observe that in the FCNC signal distribution, there is a small bump at the value 0.8, whereas the background distribution goes down towards higher discriminator values.
+
+The most important input variables for this region, are the invariant mass of the \PW\ lepton and the \SM\ b jet system,  the invariant mass of the FCNC top quark and the reconstructed \PZ\ boson mass. The distributions for the other three-lepton channels are given in \App{app:BDTcorrZctTop}. The correlations between the input  variables are shown in \fig{fig:correlationsigzcttoppaier}. These are in general small, but vary from zero to 55\% correlation. 
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.25\linewidth]{6_Search/Figures/PlotsTechnics/mlbZcttoppairuuu_norm}
@@ -189,7 +251,7 @@ The correlations between the input  variables vary from zero to 55\% (anti) corr
 
 \clearpage
 
-The resulting multivariate discriminator D is shown in \fig{fig:sigvsbkgtestzcttoppaire} for all three-lepton channels. In these plots one can see that there is a clear discrimination between the FCNC single top quark signal and the backgrounds. Furthermore, one can investigate the procedure by cross checking the distribution from the training sample with an independent testing sample. As can be seen in the distributions, these samples agree with eachother.
+The resulting multivariate discriminator D is shown in \fig{fig:sigvsbkgtestzcttoppaire} for all three-lepton channels. In these plots one can see that there is a clear discrimination between the FCNC single top quark signal and the backgrounds. Furthermore, the distribution from the training sample is compared with an independent testing sample, and  agree with eachother. A small overtraining is observed in the \eee\ channel due to its low number of events. The ROC curves are shown in \fig{fig:roczcttoppair} and show a slightly worse performance for the testing sample, while keeping its separation power. 
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.49\linewidth]{6_Search/Figures/PlotsTechnics/SigVsBkgTestZcttoppairuuu}
@@ -424,8 +486,8 @@ The maximum likelihood estimators for the nuisance parameters $\hat{\theta}$ are
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=.7\linewidth,angle=-90]{6_Search/Figures/impact/171102ZctMLE.pdf}
-	\caption{Maximum likelihood estimators for the \Zct\ vertex.}
+	\includegraphics[width=1.\linewidth]{6_Search/Figures/impact/Document}
+	\caption{Maximum likelihood estimators for the \Zct\ vertex (up) and \Zut\ vertex (down).}
 	\label{fig:171102zctmle}
 \end{figure}
 

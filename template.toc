@@ -1,0 +1,98 @@
+\changetocdepth {2}
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
+\select@language {english}
+\contentsline {chapter}{Introduction}{vii}{chapter*.1}
+\contentsline {chapter}{\chapternumberline {1}Theoretical basis}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}Elementary particles and forces}{1}{section.1.1}
+\contentsline {section}{\numberline {1.2}Standard Model Lagrangian, connecting fields with particles}{3}{section.1.2}
+\contentsline {section}{\numberline {1.3}Flavours in the SM}{5}{section.1.3}
+\contentsline {section}{\numberline {1.4}The top quark in the SM}{7}{section.1.4}
+\contentsline {section}{\numberline {1.5}Effective field theories}{10}{section.1.5}
+\contentsline {section}{\numberline {1.6}Motivation for new physics}{14}{section.1.6}
+\contentsline {section}{\numberline {1.7}An effective approach beyond the SM: FCNC involving a top quark}{15}{section.1.7}
+\contentsline {section}{\numberline {1.8}Experimental constraints on top-FCNC}{18}{section.1.8}
+\contentsline {chapter}{\chapternumberline {2}Experimental set-up}{23}{chapter.2}
+\contentsline {section}{\numberline {2.1}The Large Hadron Collider}{23}{section.2.1}
+\contentsline {section}{\numberline {2.2}The Compact Muon Solenoid}{27}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}CMS coordinate system}{28}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Towards the heart of CMS}{29}{subsection.2.2.2}
+\contentsline {subsubsection}{\numberline {2.2.2.1}Muon system}{31}{subsubsection.2.2.2.1}
+\contentsline {subsubsection}{\numberline {2.2.2.2}Solenoid}{32}{subsubsection.2.2.2.2}
+\contentsline {subsubsection}{\numberline {2.2.2.3}Hadronic calorimeter}{32}{subsubsection.2.2.2.3}
+\contentsline {subsubsection}{\numberline {2.2.2.4}Electromagnetic calorimeter}{34}{subsubsection.2.2.2.4}
+\contentsline {subsubsection}{\numberline {2.2.2.5}Inner tracking system and operations}{35}{subsubsection.2.2.2.5}
+\contentsline {subsection}{\numberline {2.2.3}Data acquisition}{37}{subsection.2.2.3}
+\contentsline {subsection}{\numberline {2.2.4}Phase 1 upgrades}{37}{subsection.2.2.4}
+\contentsline {subsection}{\numberline {2.2.5}CMS computing model}{39}{subsection.2.2.5}
+\contentsline {chapter}{\chapternumberline {3}Analysis techniques}{41}{chapter.3}
+\contentsline {section}{\numberline {3.1}Hadron collisions at high energies}{41}{section.3.1}
+\contentsline {section}{\numberline {3.2}Event generation}{44}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Fundamentals of simulating a proton collision}{44}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Programs for event generation}{44}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}Generating FCNC top-Z interactions}{46}{subsection.3.2.3}
+\contentsline {subsection}{\numberline {3.2.4}Generating SM\ background events}{48}{subsection.3.2.4}
+\contentsline {section}{\numberline {3.3}Multivariate analysis techniques: Boosted Decision Trees}{50}{section.3.3}
+\contentsline {section}{\numberline {3.4}Statistical methodology}{52}{section.3.4}
+\contentsline {chapter}{\chapternumberline {4}Event reconstruction and identification}{55}{chapter.4}
+\contentsline {section}{\numberline {4.1}Object Reconstruction}{55}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Charged particle tracks}{57}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Following the Muon's Footsteps}{57}{subsection.4.1.2}
+\contentsline {subsection}{\numberline {4.1.3}The path of the Electron}{57}{subsection.4.1.3}
+\contentsline {subsection}{\numberline {4.1.4}Primary Vertex Reconstruction}{58}{subsection.4.1.4}
+\contentsline {subsection}{\numberline {4.1.5}Calorimeter clusters}{58}{subsection.4.1.5}
+\contentsline {section}{\numberline {4.2}Particle flow identification}{59}{section.4.2}
+\contentsline {section}{\numberline {4.3}Pileup mitigation and luminosity measurement}{59}{section.4.3}
+\contentsline {section}{\numberline {4.4}Physics object reconstruction and identification}{60}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}Muons}{60}{subsection.4.4.1}
+\contentsline {subsection}{\numberline {4.4.2}Electrons}{62}{subsection.4.4.2}
+\contentsline {subsection}{\numberline {4.4.3}Jets}{64}{subsection.4.4.3}
+\contentsline {subsection}{\numberline {4.4.4}Jets from b quark fragmentation}{66}{subsection.4.4.4}
+\contentsline {subsection}{\numberline {4.4.5}Missing transverse energy}{68}{subsection.4.4.5}
+\contentsline {section}{\numberline {4.5}Summary of corrections}{69}{section.4.5}
+\contentsline {chapter}{\chapternumberline {5}Event selection and categorisation}{71}{chapter.5}
+\contentsline {section}{\numberline {5.1}Baseline event selection and filters}{71}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}Event cleaning}{74}{subsection.5.1.1}
+\contentsline {subsection}{\numberline {5.1.2}Estimation of the trigger efficiency}{75}{subsection.5.1.2}
+\contentsline {section}{\numberline {5.2}Corrections}{76}{section.5.2}
+\contentsline {section}{\numberline {5.3}Event reconstruction}{80}{section.5.3}
+\contentsline {section}{\numberline {5.4}Data driven \ensuremath {\mathrm {NPL}}\ background}{82}{section.5.4}
+\contentsline {section}{\numberline {5.5}Analysis Strategy}{84}{section.5.5}
+\contentsline {subsection}{\numberline {5.5.1}WZCR}{86}{subsection.5.5.1}
+\contentsline {subsection}{\numberline {5.5.2}\ensuremath {\mathrm {TTSR}}\ and \ensuremath {\mathrm {STSR}}}{87}{subsection.5.5.2}
+\contentsline {subsection}{\numberline {5.5.3}\ensuremath {\mathrm {TTCR}}\ and \ensuremath {\mathrm {STCR}}}{87}{subsection.5.5.3}
+\contentsline {subsection}{\numberline {5.5.4}Event yields}{88}{subsection.5.5.4}
+\contentsline {chapter}{\chapternumberline {6}The search for FCNC involving a top quark and a Z boson}{93}{chapter.6}
+\contentsline {section}{\numberline {6.1}Construction of the BDT template distributions}{93}{section.6.1}
+\contentsline {subsection}{\numberline {6.1.1}BDT training in the \ensuremath {\mathrm {STSR}}\ for the \ensuremath {\mathrm {tZu}}\ interaction}{94}{subsection.6.1.1}
+\contentsline {subsection}{\numberline {6.1.2}BDT training in the \ensuremath {\mathrm {TTSR}}\ for the \ensuremath {\mathrm {tZu}}\ interaction}{99}{subsection.6.1.2}
+\contentsline {subsection}{\numberline {6.1.3}BDT training in the \ensuremath {\mathrm {STSR}}\ for the \ensuremath {\mathrm {tZc}}\ interaction}{103}{subsection.6.1.3}
+\contentsline {subsection}{\numberline {6.1.4}BDT training in the \ensuremath {\mathrm {TTSR}}\ for the \ensuremath {\mathrm {tZc}}\ interaction}{106}{subsection.6.1.4}
+\contentsline {section}{\numberline {6.2}Transverse mass in \ensuremath {\mathrm {WZCR}}}{109}{section.6.2}
+\contentsline {section}{\numberline {6.3}Systematic uncertainties}{110}{section.6.3}
+\contentsline {subsection}{\numberline {6.3.1}Effect of systematic uncertainties in \ensuremath {\mathrm {WZCR}}}{112}{subsection.6.3.1}
+\contentsline {subsection}{\numberline {6.3.2}Effect of the systematic uncertainties in the signal regions}{114}{subsection.6.3.2}
+\contentsline {section}{\numberline {6.4}Limit setting procedure validation}{114}{section.6.4}
+\contentsline {section}{\numberline {6.5}Results and discussion}{116}{section.6.5}
+\contentsline {subsection}{\numberline {6.5.1}Postfit distributions}{121}{subsection.6.5.1}
+\contentsline {subsection}{\numberline {6.5.2}Postfit yields}{124}{subsection.6.5.2}
+\contentsline {section}{\numberline {6.6}Limits at 95\% CL}{128}{section.6.6}
+\contentsline {subsection}{\numberline {6.6.1}One dimensional limits}{128}{subsection.6.6.1}
+\contentsline {subsection}{\numberline {6.6.2}Two-dimensional limits}{132}{subsection.6.6.2}
+\contentsline {chapter}{\chapternumberline {7}Conclusion and prospects}{135}{chapter.7}
+\contentsline {section}{\numberline {7.1}Conclusion}{135}{section.7.1}
+\contentsline {section}{\numberline {7.2}Prospects}{136}{section.7.2}
+\contentsline {chapter}{Appendices}{137}{section*.9}
+\contentsline {appendix}{\chapternumberline {A}Trigger scale factors}{141}{chapter.A}
+\contentsline {appendix}{\chapternumberline {B}Transfer factors}{143}{chapter.B}
+\contentsline {appendix}{\chapternumberline {C}Details about the BDTs}{147}{chapter.C}
+\contentsline {section}{\numberline {C.1}Distributions of the input variables for the \ensuremath {\mathrm {STSR}}\ for the \ensuremath {\mathrm {tZu}}\ coupling}{147}{section.C.1}
+\contentsline {section}{\numberline {C.2}Distributions of the input variables for the \ensuremath {\mathrm {TTSR}}\ for the \ensuremath {\mathrm {tZu}}\ coupling}{152}{section.C.2}
+\contentsline {section}{\numberline {C.3}Distributions of the input variables for the \ensuremath {\mathrm {STSR}}\ for the \ensuremath {\mathrm {tZc}}\ coupling}{156}{section.C.3}
+\contentsline {section}{\numberline {C.4}Distributions of the input variables for the \ensuremath {\mathrm {TTSR}}\ for the \ensuremath {\mathrm {tZc}}\ coupling}{158}{section.C.4}
+\contentsline {section}{\numberline {C.5}ROC curves}{162}{section.C.5}
+\contentsline {chapter}{Summaries}{165}{figure.C.19}
+\select@language {dutch}
+\select@language {english}
+\contentsline {chapter}{Bibliography}{171}{section*.13}
+\contentsline {chapter}{Acknowledgments}{187}{section*.13}
