@@ -1,0 +1,15 @@
+plotImpacts.py -i impacts_170919Zct_datacar18_noMC.json -o 171122Zct
+
+python plotImpacts.py -i impacts_170919Zut_datacar18_noMC.json -o 171122Zut
+
+
+
+python diffNuissances_isis.py -a mlfit170919Zct_datacar18_max.root -g outZct.root 
+
+
+python diffNuissances_isis.py -a mlfit170919Zut_datacar18_max.root -g outZut2.root 
+
+/Volumes/MyBookforMac/Thesis > root -l ZctMLE.c 
+
+
+/Volumes/MyBookforMac/Thesis > root -l vtb.c 
