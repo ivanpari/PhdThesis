@@ -1,0 +1,291 @@
+[ivanpari@lxplus016 CombinedLimit]$ combine -M Asymptotic  -d datacardcreator_170918Zctscaled100/LepChan_all_Zct.root  --minimizerStrategy 0 --rMin -2 --rMax 2 --X-rtd MINIMIZER_analytic  --cminPreScan
+>>> including systematics
+>>> method used to compute upper limit is Asymptotic
+>>> random number generator seed is 123456
+Turning on runtime-define MINIMIZER_analytic
+Computing limit starting from observation
+Will compute both limit(s) using minimizer Minuit2 with strategy 0 and tolerance 0.01
+Constraints of type SimpleGaussianConstraint: 284
+Median for expected limits: 0.314063
+Sigma  for expected limits: 0.160239
+Constraints of type SimpleGaussianConstraint: 284
+Constraints of type SimpleGaussianConstraint: 284
+Restricting r to positive values.
+
+Make global fit of real data
+NLL at global minimum of data: -174.274 (r = 0.0130858)
+
+Make global fit of asimov data
+NLL at global minimum of asimov: -171.863 (r = 5.47791e-09)
+At r = 3.993438:	q_mu = 143.13713	q_A  = 158.81574	CLsb = 0.00000	CLb  = 0.73833	CLs  = 0.00000
+At r = 2.003262:	q_mu = 54.16456	q_A  = 63.12267	CLsb = 0.00000	CLb  = 0.72083	CLs  = 0.00000
+At r = 1.008174:	q_mu = 18.44962	q_A  = 23.29625	CLsb = 0.00001	CLb  = 0.70240	CLs  = 0.00001
+At r = 0.510630:	q_mu = 5.75135	q_A  = 8.25973	CLsb = 0.00824	CLb  = 0.68288	CLs  = 0.01206
+At r = 0.261858:	q_mu = 1.67338	q_A  = 2.88231	CLsb = 0.09790	CLb  = 0.65695	CLs  = 0.14903
+At r = 0.386244:	q_mu = 3.47925	q_A  = 5.32959	CLsb = 0.03107	CLb  = 0.67123	CLs  = 0.04629
+At r = 0.354805:	q_mu = 2.97925	q_A  = 4.66156	CLsb = 0.04217	CLb  = 0.66750	CLs  = 0.06317
+At r = 0.373721:	q_mu = 3.27625	q_A  = 5.05972	CLsb = 0.03514	CLb  = 0.66979	CLs  = 0.05247
+At r = 0.380082:	q_mu = 3.37870	q_A  = 5.19616	CLsb = 0.03302	CLb  = 0.67053	CLs  = 0.04925
+At r = 0.377592:	q_mu = 3.33844	q_A  = 5.14260	CLsb = 0.03384	CLb  = 0.67025	CLs  = 0.05049
+At r = 0.378867:	q_mu = 3.35904	q_A  = 5.17002	CLsb = 0.03342	CLb  = 0.67039	CLs  = 0.04985
+
+ -- Asymptotic -- 
+Observed Limit: r < 0.3789
+Expected  2.5%: r < 0.1454
+Expected 16.0%: r < 0.2080
+Expected 50.0%: r < 0.3141
+Expected 84.0%: r < 0.4756
+Expected 97.5%: r < 0.6872
+
+
+
+
+datacardcreator_170918Zctscaled300/  datacardcreator_170918Zutscaled/     datacardcreator_170921Zct/           datacardcreator_170927Zut/           
+[ivanpari@lxplus016 CombinedLimit]$ combine -M Asymptotic  -d datacardcreator_170918Zctscaled300/LepChan_all_Zct.root  --minimizerStrategy 0 --rMin -2 --rMax 2 --X-rtd MINIMIZER_analytic  --cminPreScan
+>>> including systematics
+>>> method used to compute upper limit is Asymptotic
+>>> random number generator seed is 123456
+Turning on runtime-define MINIMIZER_analytic
+Computing limit starting from observation
+Will compute both limit(s) using minimizer Minuit2 with strategy 0 and tolerance 0.01
+Constraints of type SimpleGaussianConstraint: 284
+Median for expected limits: 0.317187
+Sigma  for expected limits: 0.161833
+Constraints of type SimpleGaussianConstraint: 284
+Constraints of type SimpleGaussianConstraint: 284
+Restricting r to positive values.
+
+Make global fit of real data
+NLL at global minimum of data: -174.241 (r = 0.0103689)
+
+Make global fit of asimov data
+NLL at global minimum of asimov: -171.811 (r = 5.97565e-09)
+At r = 4.064039:	q_mu = 145.92944	q_A  = 160.50672	CLsb = 0.00000	CLb  = 0.72207	CLs  = 0.00000
+At r = 2.037204:	q_mu = 55.26248	q_A  = 63.83058	CLsb = 0.00000	CLb  = 0.71073	CLs  = 0.00000
+At r = 1.023786:	q_mu = 18.82380	q_A  = 23.51545	CLsb = 0.00001	CLb  = 0.69520	CLs  = 0.00001
+At r = 0.517078:	q_mu = 5.86453	q_A  = 8.30196	CLsb = 0.00772	CLb  = 0.67711	CLs  = 0.01141
+At r = 0.263723:	q_mu = 1.73052	q_A  = 2.87046	CLsb = 0.09417	CLb  = 0.64756	CLs  = 0.14543
+At r = 0.390400:	q_mu = 3.54589	q_A  = 5.34021	CLsb = 0.02985	CLb  = 0.66561	CLs  = 0.04484
+At r = 0.355684:	q_mu = 2.99440	q_A  = 4.61015	CLsb = 0.04178	CLb  = 0.66155	CLs  = 0.06315
+At r = 0.374623:	q_mu = 3.29051	q_A  = 5.00372	CLsb = 0.03484	CLb  = 0.66382	CLs  = 0.05248
+At r = 0.381667:	q_mu = 3.40356	q_A  = 5.15300	CLsb = 0.03253	CLb  = 0.66464	CLs  = 0.04894
+At r = 0.378533:	q_mu = 3.35306	q_A  = 5.08637	CLsb = 0.03354	CLb  = 0.66428	CLs  = 0.05049
+At r = 0.379946:	q_mu = 3.37578	q_A  = 5.11636	CLsb = 0.03308	CLb  = 0.66444	CLs  = 0.04979
+
+ -- Asymptotic -- 
+Observed Limit: r < 0.3799
+Expected  2.5%: r < 0.1468
+Expected 16.0%: r < 0.2100
+Expected 50.0%: r < 0.3172
+Expected 84.0%: r < 0.4803
+Expected 97.5%: r < 0.6940
+
+Done in 0.69 min (cpu), 0.69 min (real)
+
+
+[ivanpari@lxplus015 CombinedLimit]$ combine -M Asymptotic  -d datacardcreator_170918Zctscaled3000/LepChan_all_Zct.root  --minimizerStrategy 0 --rMin -2 --rMax 2 --X-rtd MINIMIZER_analytic  --cminPreScan 
+>>> including systematics
+>>> method used to compute upper limit is Asymptotic
+>>> random number generator seed is 123456
+Turning on runtime-define MINIMIZER_analytic
+Computing limit starting from observation
+Will compute both limit(s) using minimizer Minuit2 with strategy 0 and tolerance 0.01
+Constraints of type SimpleGaussianConstraint: 284
+Median for expected limits: 0.348437
+Sigma  for expected limits: 0.177778
+Constraints of type SimpleGaussianConstraint: 284
+Constraints of type SimpleGaussianConstraint: 284
+Restricting r to positive values.
+
+Make global fit of real data
+NLL at global minimum of data: -174.896 (r = 6.42355e-09)
+
+Make global fit of asimov data
+NLL at global minimum of asimov: -172.28 (r = 4.86782e-09)
+At r = 3.948974:	q_mu = 145.60215	q_A  = 178.62744	CLsb = 0.00000	CLb  = 0.90296	CLs  = 0.00000
+At r = 1.974487:	q_mu = 791.22146	q_A  = 98.36773	CLsb = 0.00000	CLb  = 0.00000	CLs  = 0.00000
+At r = 0.987243:	q_mu = 43.58588	q_A  = 19.20171	CLsb = 0.00000	CLb  = 0.00270	CLs  = 0.00000
+At r = 0.493622:	q_mu = 5.13940	q_A  = 99.08062	CLsb = 0.01169	CLb  = 1.00000	CLs  = 0.01169
+At r = 0.246811:	q_mu = 1.62332	q_A  = 94.07145	CLsb = 0.10131	CLb  = 1.00000	CLs  = 0.10131
+At r = 0.370216:	q_mu = 3.17407	q_A  = 96.35782	CLsb = 0.03741	CLb  = 1.00000	CLs  = 0.03741
+At r = 0.316786:	q_mu = 2.44714	q_A  = 95.30836	CLsb = 0.05887	CLb  = 1.00000	CLs  = 0.05887
+At r = 0.342866:	q_mu = 2.79209	q_A  = 95.80992	CLsb = 0.04737	CLb  = 1.00000	CLs  = 0.04737
+At r = 0.332456:	q_mu = 2.65214	q_A  = 95.60719	CLsb = 0.05171	CLb  = 1.00000	CLs  = 0.05171
+At r = 0.337724:	q_mu = 2.72259	q_A  = 95.70937	CLsb = 0.04947	CLb  = 1.00000	CLs  = 0.04947
+At r = 0.335652:	q_mu = 2.69480	q_A  = 95.66908	CLsb = 0.05034	CLb  = 1.00000	CLs  = 0.05034
+At r = 0.336708:	q_mu = 2.70894	q_A  = 95.68958	CLsb = 0.04989	CLb  = 1.00000	CLs  = 0.04989
+
+ -- Asymptotic -- 
+Observed Limit: r < 0.3367
+Expected  2.5%: r < 0.1620
+Expected 16.0%: r < 0.2312
+Expected 50.0%: r < 0.3484
+Expected 84.0%: r < 0.5276
+Expected 97.5%: r < 0.7624
+
+Done in 1.00 min (cpu), 1.01 min (real)
+
+^C
+
+
+[ combine -M Asymptotic  -d datacardcreator_170918Zutscaled100/LepChan_all_Zut.root  --minimizerStrategy 0 --rMin -2 --rMax 2 --X-rtd MINIMIZER_analytic  --cminPreScan
+>>> including systematics
+>>> method used to compute upper limit is Asymptotic
+>>> random number generator seed is 123456
+Turning on runtime-define MINIMIZER_analytic
+Computing limit starting from observation
+Will compute both limit(s) using minimizer Minuit2 with strategy 0 and tolerance 0.01
+Constraints of type SimpleGaussianConstraint: 302
+Median for expected limits: 0.551562
+Sigma  for expected limits: 0.281415
+Constraints of type SimpleGaussianConstraint: 302
+Constraints of type SimpleGaussianConstraint: 302
+Restricting r to positive values.
+
+Make global fit of real data
+NLL at global minimum of data: -182.401 (r = 0.206631)
+
+Make global fit of asimov data
+NLL at global minimum of asimov: -175.945 (r = 2.79016e-05)
+At r = 1.124905:	q_mu = 5.08121	q_A  = 11.39548	CLsb = 0.01209	CLb  = 0.86898	CLs  = 0.01392
+At r = 0.665768:	q_mu = 1.47166	q_A  = 5.12202	CLsb = 0.11254	CLb  = 0.85316	CLs  = 0.13191
+At r = 0.895336:	q_mu = 3.06494	q_A  = 8.05437	CLsb = 0.04000	CLb  = 0.86155	CLs  = 0.04643
+At r = 0.836382:	q_mu = 2.61221	q_A  = 7.25940	CLsb = 0.05302	CLb  = 0.85950	CLs  = 0.06169
+At r = 0.871241:	q_mu = 2.87644	q_A  = 7.73807	CLsb = 0.04494	CLb  = 0.86120	CLs  = 0.05219
+At r = 0.883113:	q_mu = 2.96874	q_A  = 7.88729	CLsb = 0.04244	CLb  = 0.86113	CLs  = 0.04929
+At r = 0.878355:	q_mu = 2.93160	q_A  = 7.82857	CLsb = 0.04343	CLb  = 0.86121	CLs  = 0.05043
+At r = 0.880730:	q_mu = 2.95011	q_A  = 7.85841	CLsb = 0.04294	CLb  = 0.86119	CLs  = 0.04986
+
+ -- Asymptotic -- 
+Observed Limit: r < 0.8807
+Expected  2.5%: r < 0.2510
+Expected 16.0%: r < 0.3602
+Expected 50.0%: r < 0.5516
+Expected 84.0%: r < 0.8484
+Expected 97.5%: r < 1.2142
+
+
+
+
+Will compute both limit(s) using minimizer Minuit2 with strategy 0 and tolerance 0.01
+Constraints of type SimpleGaussianConstraint: 314
+Median for expected limits: 0.00742187
+Sigma  for expected limits: 0.00378674
+Constraints of type SimpleGaussianConstraint: 314
+Constraints of type SimpleGaussianConstraint: 314
+Restricting r to positive values.
+
+Make global fit of real data
+NLL at global minimum of data: -530.8 (r = 1.6105e-09)
+
+Make global fit of asimov data
+NLL at global minimum of asimov: -490.688 (r = 4.56809e-09)
+At r = 0.120000:	q_mu = 220.00314	q_A  = 188.31279	CLsb = 0.00000	CLb  = 0.12411	CLs  = 0.00000
+At r = 0.060000:	q_mu = 98.86864	q_A  = 78.19223	CLsb = 0.00000	CLb  = 0.12118	CLs  = 0.00000
+At r = 0.030000:	q_mu = 42.23644	q_A  = 30.27052	CLsb = 0.00000	CLb  = 0.13842	CLs  = 0.00000
+At r = 0.015000:	q_mu = 17.92827	q_A  = 10.96269	CLsb = 0.00001	CLb  = 0.14643	CLs  = 0.00004
+At r = 0.007500:	q_mu = 7.90860	q_A  = 3.86434	CLsb = 0.00137	CLb  = 0.15182	CLs  = 0.00905
+At r = 0.003750:	q_mu = 3.24578	q_A  = 1.33453	CLsb = 0.02371	CLb  = 0.20405	CLs  = 0.11622
+At r = 0.005625:	q_mu = 5.29287	q_A  = 2.49082	CLsb = 0.00683	CLb  = 0.18735	CLs  = 0.03647
+At r = 0.004842:	q_mu = 4.41048	q_A  = 1.97862	CLsb = 0.01157	CLb  = 0.19368	CLs  = 0.05975
+At r = 0.005224:	q_mu = 4.83702	q_A  = 2.22398	CLsb = 0.00896	CLb  = 0.19049	CLs  = 0.04702
+
+ -- Asymptotic -- 
+Observed Limit: r < 0.0052
+Expected  2.5%: r < 0.0032
+Expected 16.0%: r < 0.0051
+Expected 50.0%: r < 0.0074
+Expected 84.0%: r < 0.0117
+Expected 97.5%: r < 0.0168
+
+
+[ivanpari@lxplus044 CombinedLimit]$ combine -M Asymptotic  -d datacardcreator_170918Zctscaled3000/LepChan_all_Zct.root  --minimizerStrategy 0 --rMin -2 --rMax 2 --X-rtd MINIMIZER_analytic  --cminPreScan
+>>> including systematics
+>>> method used to compute upper limit is Asymptotic
+>>> random number generator seed is 123456
+Turning on runtime-define MINIMIZER_analytic
+Computing limit starting from observation
+Will compute both limit(s) using minimizer Minuit2 with strategy 0 and tolerance 0.01
+Constraints of type SimpleGaussianConstraint: 289
+Median for expected limits: 0.00585938
+Sigma  for expected limits: 0.00298953
+Constraints of type SimpleGaussianConstraint: 289
+Constraints of type SimpleGaussianConstraint: 289
+Restricting r to positive values.
+
+Make global fit of real data
+NLL at global minimum of data: -1091.28 (r = 3.25032e-10)
+
+Make global fit of asimov data
+NLL at global minimum of asimov: -1046.28 (r = 7.37844e-10)
+At r = 0.120000:	q_mu = 489.65851	q_A  = 393.04304	CLsb = 0.00000	CLb  = 0.00741	CLs  = 0.00000
+At r = 0.060000:	q_mu = 228.21656	q_A  = 159.61162	CLsb = 0.00000	CLb  = 0.00331	CLs  = 0.00000
+At r = 0.030000:	q_mu = 102.09028	q_A  = 57.94049	CLsb = 0.00000	CLb  = 0.00187	CLs  = 0.00000
+At r = 0.015000:	q_mu = 45.06394	q_A  = 18.85594	CLsb = 0.00000	CLb  = 0.00127	CLs  = 0.00000
+At r = 0.007500:	q_mu = 20.29222	q_A  = 5.78790	CLsb = 0.00000	CLb  = 0.00129	CLs  = 0.00002
+At r = 0.003750:	q_mu = 9.45699	q_A  = 1.77093	CLsb = 0.00001	CLb  = 0.00194	CLs  = 0.00634
+At r = 0.001875:	q_mu = 4.53938	q_A  = 0.56926	CLsb = 0.00036	CLb  = 0.00426	CLs  = 0.08346
+At r = 0.002813:	q_mu = 6.95303	q_A  = 1.09610	CLsb = 0.00006	CLb  = 0.00258	CLs  = 0.02347
+At r = 0.002365:	q_mu = 5.79033	q_A  = 0.82579	CLsb = 0.00014	CLb  = 0.00315	CLs  = 0.04320
+
+ -- Asymptotic -- 
+Observed Limit: r < 0.0024
+Expected  2.5%: r < 0.0026
+Expected 16.0%: r < 0.0038
+Expected 50.0%: r < 0.0059
+Expected 84.0%: r < 0.0085
+Expected 97.5%: r < 0.0123
+
+Done in 0.48 min (cpu), 0.49 min (real)
+`
+Observed Limit: r < 0.3799
+Expected  2.5%: r < 0.1468
+Expected 16.0%: r < 0.2100
+Expected 50.0%: r < 0.3172
+Expected 84.0%: r < 0.4803
+Expected 97.5%: r < 0.6940
+
+
+[ivanpari@isis] 08:57 /Users/ivanpari/cernbox/CMSSW_7_4_7backup/src/Brasil > root -l Brasil_Zut_BR_proj.C 
+root [0] 
+channel 3000
+expected BR 3000 : 1.998e-06 --- 0.0001998 % 
+observed BR 3000 : 1.404e-06 --- 0.0001404 % 
+BR above 1.998e-06 excluded at 95% CL
+plus one sigma 3.159e-06 minus 1.377e-06
+plus two sigma 4.536e-06 minus 8.64e-07
+jer expected BR 3000 : 0.00027
+jer observed BR 3000 : 0.0002187
+BR above 0.000211817 excluded at 95% CL
+plus one sigma 0.000334901 minus 0.000145982
+plus two sigma 0.000480883 minus 9.15967e-05
+ root -l Brasil_Zct_BR_proj.C 
+root [0] 
+
+
+
+Processing Brasil_Zct_BR_proj.C...
+channel 3000
+expected BR 3000 : 6.962e-06 --- 0.0006962 % 
+observed BR 3000 : 6.962e-06 --- 0.0006962 % 
+BR above 6.962e-06 excluded at 95% CL
+plus one sigma 1.003e-05 minus 4.484e-06
+plus two sigma 1.4514e-05 minus 3.068e-06
+stepsize 1.75e-05
+Info in <TCanvas::Print>: pdf file ExclusionPlots1D_2017_11_23_projections/ExclusionLimit_BR_FCNC_Zct_300_3000.pdf has been created
+Info in <TCanvas::Print>: file ExclusionPlots1D_2017_11_23_projections/ExclusionLimit_BR_FCNC_Zct_300_3000.png has been created
+stepsize 1.6e-06
+Warning in <TCanvas::Constructor>: Deleting canvas with same name: Plots
+obs Kappa above 2.4e-05 excluded at 95% CL
+exp Kappa above 2.4e-05 excluded at 95% CL
+plus one sigma 2.88e-05 minus 1.92e-05
+plus two sigma 3.52e-05 minus 1.6e-05
+Info in <TCanvas::Print>: pdf file ExclusionPlots1D_2017_11_23_projections/ExclusionLimit_Kappa_FCNC_Zct.pdf has been created
+Info in <TCanvas::Print>: file ExclusionPlots1D_2017_11_23_projections/ExclusionLimit_Kappa_FCNC_Zct.png has been created
+
+
+
+
+
+
+
