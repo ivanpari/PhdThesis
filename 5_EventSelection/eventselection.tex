@@ -1,4 +1,4 @@
- A basic event selection is made to enhance the signal like events and is discussed in \Sec{sec:trig}. The necessary  corrections in order to make simulation and data coherent, introduced in \Chap{chap:4}, are summarised in \Sec{sec:SummaryCor} and the resulting data/MC agreement is shown in \Sec{sec:corrections}. The reconstruction of the physics objects in the event is discussed in \Sec{sec:recon}. One of the main background processes entering the analysis are background processes that have prompt leptons contaminated by other leptons. These contaminating leptons originate either from real lepton from decays of tau leptons or from hadronized mesons or baryons
+ A basic event selection is made to enhance the signal-like events and is discussed in \Sec{sec:trig}. The necessary  corrections in order to make simulation and data coherent, introduced in \Chap{chap:4}, are summarised in \Sec{sec:SummaryCor} and the resulting data/MC agreement is shown in \Sec{sec:corrections}. The reconstruction of the physics objects in the event is discussed in \Sec{sec:recon}. One of the main background processes entering the analysis are background processes that have prompt leptons contaminated by other leptons. These contaminating leptons originate either from real lepton from decays of tau leptons or from hadronized mesons or baryons
  (so-called ``non-prompt leptons''), or originate from hadrons or jets misidentified as leptons (so-called ``fake leptons'').  These two classes  of contamination together will be referred to as the not prompt-lepton (\NPL) background. The \NPL\ background  is
  evaluated with a data-driven method discussed in \Sec{sec:NPL}. The analysis strategy is presented in \Sec{sec:regions}, where selection criteria are defined to create signal and background regions to constrain the huge \SM\ background compared to the expected signal. %https://indico.cern.ch/event/283659/contributions/643371/attachments/523063/721480/davidcurtin_fakeleptonsim_MC4BSM_23may2014_v1.key.pdf
 
@@ -22,7 +22,7 @@
 \end{figure}
   
 
-The CMS collaboration recorded in the course of 2016, proton collisions data at a centre-of-mass of 13 \TeV\ with a total recorded integrated luminosity of $35.9~\fbinv$. The baseline event selection has as goal to substantially reject \SM\ background events, whilst maintaining a high signal efficiency. The CMS trigger system, described in \Sec{sec:DAQ}, filters out the main fraction of the collision events from uninteresting processes, and dedicated trigger paths are defined to single out the events with the required detector signature for the search prsented in  this thesis.
+The CMS collaboration recorded in the course of 2016, proton collisions data at a centre-of-mass of 13 \TeV\ with a total recorded integrated luminosity of $35.9~\fbinv$. The baseline event selection has as goal to substantially reject \SM\ background events, whilst maintaining a high signal efficiency. The CMS trigger system, described in \Sec{sec:DAQ}, filters out the main fraction of the collision events from uninteresting processes, and dedicated trigger paths are defined to single out the events with the required detector signature for the search presented in  this thesis.
 
  The trigger paths are chosen based on online trigger objects with at least one muon (M), at least one electron (E), at least two muons (MM), at least two electrons (EE), at least one muon and an electron (ME), at least three muons (MMM), at least three electrons (EEE), at least two muons and one electron (MME), or at least two electrons and one muon (EEM). For the MC simulation a simple $or$ of all triggers is taken, hence the event is considered when it passes one of the trigger paths. For data however, double counting of the same event has to be taken into account and a procedure to avoid double counting has been put into place. This procedure consists of vetoing in a given dataset the events that are already selected in another, as given in \tab{tab:triggerlogic}. 
 
@@ -159,7 +159,7 @@ SF = \frac{\epsilon_{data}}{\epsilon_{MC}}.
 More detailed scale factors and efficiencies can be found in \App{app:TriggerSF}.
 \begin{table}[htbp]
 	\centering
-	\caption{Trigger efficiencies on data events selected with \Etmis\ triggers and \WZ\ simulation for all three-lepton channels together. The unweighed number of events is quoted. Region A contains events after requiring three leptons and at least one jet. Region B has the same requirements as region A, but only events with exactly one jet that is b-tagged are considered. Region C also contains the requirements in region A, where at least one jet should be b-tagged. In region D, no events with a b-tagged jet are allowed.}
+	\caption{Trigger efficiencies on data events selected with \Etmis\ triggers and \WZ\ simulation for all three-lepton channels together. The unweighted number of events is quoted. Region A contains events after requiring three leptons and at least one jet. Region B has the same requirements as region A, but only events with exactly one jet that is b-tagged are considered. Region C also contains the requirements in region A, where at least one jet should be b-tagged. In region D, no events with a b-tagged jet are allowed.}
 	\begin{tabular}{cccc}
 		\toprule
 		Region & {data} & &  {WZ simulation} \\ 
@@ -208,7 +208,7 @@ The trigger efficiencies are measured to be nearly 100\% for both simulation and
 
 \section{Corrections}
 \label{sec:corrections}
-Mismatches between data and simulation are corrected via the use of scale factors. These are elaborately discussed in \Sec{sec:PhysicsObject}. In this section a short overview of the applied corrections on a dilepton dataset is given. Requiring three leptons would enhance the fraction of \NPL\ backgrounds. These backgrounds are however not well simulated and are determined in a data-driven way. For this reason, the study of the agreement between data and simulation is performed with events selected with the trigger logic and trigger paths described in \Sec{sec:trig}, that contain at least one opposite sign (i.e. not the same electric charge) same flavour lepton pair that has an invariant mass $m_{\mathrm{ll}}$ inside a \PZ\ boson mass window of $|m_{\mathrm{ll}}-\mZ|<7.5~\GeV$, and have jets present. The main contributing process in this selection is the \DY\ process. In the following, the distributions relevant for each correction are shown for all lepton channels. Since, events with three leptons are not vetoed from the selection, these will be also entering the collection of the dilepton channels, called ``all channels''. The effect of each correction is shown by either applying all corrections except the one under investigation (``before''), and applying all corrections (``after'').
+Mismatches between data and simulation are corrected via the use of scale factors. These are elaborately discussed in \Sec{sec:PhysicsObject}. In this section a short overview of the applied corrections on a dilepton dataset is given. Requiring three leptons would enhance the fraction of \NPL\ backgrounds. These backgrounds are however not well simulated and are determined in a data-driven way. For this reason, the study of the agreement between data and simulation is performed with events selected with the trigger logic and trigger paths described in \Sec{sec:trig}, that contain at least one opposite sign (i.e. not the same electric charge) same flavour lepton pair that has an invariant mass $m_{\mathrm{ll}}$ inside a \PZ\ boson mass window of $|m_{\mathrm{ll}}-\mZ|<7.5~\GeV$, and have jets present. The main contributing process in this selection is the \DY\ process. In the following, the distributions relevant for each correction are shown for all lepton channels. Since events with three leptons are not vetoed from the selection, these will be also entering the collection of the dilepton channels, called ``all channels''. The effect of each correction is shown by either applying all corrections except the one under investigation (``before''), and applying all corrections (``after'').
 
 \subsubsection*{Pileup reweighting}
 In data, the number of interactions per bunch crossing (pileup) is calculated with a minimum bias cross section of 69.2 mb. The distribution of the number of simulated pileup events is then reweighted to match the expected number of pileup events in data. Pileup reweighting manifests itself as an altered shape of the number of reconstructed primary vertices as can be seen in \fig{fig:nbvertices}.
@@ -271,7 +271,7 @@ Additionally, corrections are determined from $\PZ\rightarrow \Pe \Pe$ events fo
 \end{figure}
 
 \subsubsection*{CSVv2 shape correction}
-In order to make the distribution of the CSVv2 b-tagging discriminant in simulation agree with data,  jet-by-jet based scale factors are applied. These scale factors are a function of the \pt, $\eta$ and CSVv2 value of the jet as discussed in \Sec{sec:BJetID}.  The effect of these scale factors on the distribution of the CSVv2 discriminant of all jets can be found in \fig{fig:bSF}.
+In order to make the distribution of the CSVv2 b-tagging discriminant in simulation agree with data,  jet-by-jet based scale factors are applied. These scale factors are a function of the \pt, $\eta$ and flavour of the jet as discussed in \Sec{sec:BJetID}.  The effect of these scale factors on the distribution of the CSVv2 discriminant of all jets can be found in \fig{fig:bSF}.
 
 
 \begin{figure}[htbp]
@@ -352,7 +352,7 @@ The effect of the jet energy corrections on the distribution of the \pt\ of all 
 %\end{table}
 %
 %\newpage
-After selecting the events,  the objects contained in each event are assigned to physical particles.  The \PZ\ boson is reconstructed as the sum of the four vectors of the two same flavour leptons of opposite electric charge resulting in an inveriant mass that is closest to the value of the known \PZ\ boson mass. The third remaining lepton is assigned to the lepton coming from the \PW\ boson decay, so-called \PW\ lepton. This lepton assignment is  validated using simulation by matching the reconstructed objects to their generated counterpart by minimizing  the distance in the distance $\phi\eta$-plane between the true particle and reconstructed one. The efficiencies derived from the simulated signal samples and the \SM\ \tZq\ background process can be found in \tab{tab:matching} for events selected after the three-leptons and jets requirements. The probability that a lepton is assigned to the wrong boson is of the order of a percent for the top quark pair FCNC signal process, and of the order of 2\% for the single top quark FCNC signal process. For the \SM\ \tZq\ process, this probability is 3\%.
+After selecting the events,  the objects contained in each event are assigned to physical particles.  The \PZ\ boson is reconstructed as the sum of the four vectors of the two same flavour leptons of opposite electric charge resulting in an invariant mass that is closest to the value of the known \PZ\ boson mass. The third remaining lepton is assigned to the lepton coming from the \PW\ boson decay, so-called \PW\ lepton. This lepton assignment is  validated using simulation by matching the reconstructed objects to their generated counterpart by minimizing  the distance in the distance $\eta\phi$ plane between the true particle and reconstructed one. The efficiencies derived from the simulated signal samples and the \SM\ \tZq\ background process can be found in \tab{tab:matching} for events selected after the three-leptons and jets requirements. The probability that a lepton is assigned to the wrong boson is of the order of a percent for the top quark pair FCNC signal process, and of the order of 2\% for the single top quark FCNC signal process. For the \SM\ \tZq\ process, this probability is 3\%.
 \begin{table}[htbp]
 	\centering
 	\caption{Efficiencies of assigning the correct leptons in the analysis after requiring three leptons and jets.}
@@ -370,7 +370,7 @@ After selecting the events,  the objects contained in each event are assigned to
 	\label{tab:matching}
 \end{table}
 
-The jet with the highest CSVv2 discriminant is assigned to the b-flavour jet of the SM decay of the top quark, so-called SM b~jet. This jet is then removed from the collection of jets. A loop over the jets is performed and the jet that in combination with the reconstructed \PZ\ boson, gives the mass closest to the known top quark mass is assigned as the light-flavour jet coming from the FCNC decay of the top quark, so-called FCNC jet. The \SM\ top quark candidate is reconstructed by summing the third lepton, the \SM\ b~jet and the neutrino (\Etmis). In \fig{fig:topmass}, the normalized distributions of the invariant mass of the \PW\ lepton and the \SM\ b~jet ($m_{\Plepton_{\PW}b}$), and the invariant mass of the reconstructed \PZ\ boson and FCNC~jet are shown. The distribution of $m_{\Plepton_{\PW}b}$, peaks at $\pm$100~\GeV\ for the \FCNC\ signal and \SM\ \ttbar+jets process. The distribution invariant mass of the \PZ\ boson and FCNC jet peaks at the known top mass for the \FCNC\ top quark pair signal. For the single top quark FCNC signal, no extra top is expected and this distribution is smeared out. 
+The jet with the highest CSVv2 discriminant is assigned to the b-flavour jet of the SM decay of the top quark, so-called SM b~jet. This jet is then removed from the collection of jets. A loop over the jets is performed and the jet that in combination with the reconstructed \PZ\ boson, gives the mass closest to the known top quark mass is assigned as the light-flavour jet coming from the FCNC decay of the top quark, so-called FCNC jet. The \SM\ top quark candidate is reconstructed by summing the third lepton, the \SM\ b~jet and the neutrino (\Etmis). In \fig{fig:topmass}, the normalized distributions of the invariant mass of the \PW\ lepton and the \SM\ b~jet ($m_{\Plepton_{\PW}b}$), and the invariant mass of the reconstructed \PZ\ boson and FCNC~jet are shown. The distribution of $m_{\Plepton_{\PW}b}$, peaks around 100~\GeV\ for the \FCNC\ signal and \SM\ \ttbar+jets process. The distribution invariant mass of the \PZ\ boson and FCNC jet peaks at the known top mass for the \FCNC\ top quark pair signal. For the single top quark FCNC signal, no extra top is expected and this distribution is smeared out. 
 \begin{figure}[tbph]%/171128_1353
 	\centering
 	\includegraphics[width=0.49\linewidth]{5_EventSelection/Figures/3lepcontrol_dilep_mlb_all_Normalized}
@@ -422,7 +422,7 @@ When the solution of this quadratic equation is complex, only the real part ($-b
 
 The \NPL\ background  originates from hadronic objects wrongly reconstructed as leptons (so-called fake leptons), or from real leptons coming from the semi-leptonic decay of a \Pbottom\ or \Pcharm\ hadron and from the conversion of photons that pass the identification and isolation requirements (so-called non-prompt leptons). The dominant source of events contained in this \NPL\ background  depends on the flavour of the leptons and therefore the events with a not prompt-muon (\NPM) are treated differently than those with a not prompt-electron (\NPE). For muons, the dominant source is the semi-leptonic decay of heavy flavour hadrons, while for electrons, the dominant sources are hadrons and photon conversions. 
 
-The backgrounds causing events that are contained within the \NPL\ background  are mostly arising from \DY\ (Drell--Yan) and \ttbar+jets dilepton processes, and in a smaller amount from \WW\ processes. All of these processes contain two real leptons and one \NPL. Due to the fact that the probability for a lepton to be a \NPL\ is small, backgrounds containing two or more  not prompt-leptons are neglected in this search. The assumption is made that for \DY\ the two leptons compatible with a \PZ\ boson decay are the real leptons, and the additional lepton is coming from a \NPL\ source, while for \ttbar+jets the \NPL\ is associated to the Z boson. This assumption has been validated using Monte Carlo simulations of the \DY\ process and \ttbar+jets process by matching the reconstructed leptons to their true initial generated particles, after requiring exactly three leptons in the Z boson mass window, and jets. For the \DY\ process this assumption is true in 80\% of the events, increasing to 100\% of the events after requiring one b-tagged jet. For the \ttbar+jets process this is true for 60\% of the selected events, and this increases to 90\% after requiring one b-tagged jet.
+The backgrounds causing events that are contained within the \NPL\ background  are mostly arising from \DY\ (Drell--Yan) and \ttbar+jets dilepton processes, and in a smaller amount from \WW\ processes. All of these processes contain two real leptons and one \NPL. Due to the fact that the probability for a lepton to be a \NPL\ is small, backgrounds containing two or more  not prompt-leptons are neglected in this search. The assumption is made that for the \DY\ process, the two leptons compatible with a \PZ\ boson decay are the real leptons, and the additional lepton is coming from a \NPL\ source. For the \ttbar+jets process, the \NPL\ is assumed to be associated with the \PZ\ boson. This assumption has been validated using Monte Carlo simulations of the \DY\ process and \ttbar+jets process by matching the reconstructed leptons to their true initial generated particles, after requiring exactly three leptons in the Z boson mass window, and jets. For the \DY\ process this assumption is true in 80\% of the events, increasing to 100\% of the events after requiring one b-tagged jet. For the \ttbar+jets process this is true for 60\% of the selected events, and this increases to 90\% after requiring one b-tagged jet.
 
 Since simulation is not able to reproduce the events with not prompt-leptons well, the shape of the distributions for the \NPL\ background sample is constructed from data. Events are selected from data by requiring exactly  two leptons that are identified as real isolated leptons according to the tight working point given in \tab{tab:MuonReq} and \tab{tab:ElecReq}. A third lepton, the so-called not prompt-lepton,  is added by taking a lepton for which the identification criteria are loosened and the isolation citeria are inverted. The full  requirements on the not prompt-leptons are given in \tab{tab:nonpromptel} and \tab{tab:nonpromptmu}. For not prompt-electrons, a large fraction is coming from misidentified photons. These are removed by applying a tighter cut on the $1/E-1/p$ variable, and by limiting the isolation values to be smaller than one, in coherence with the \SM\ \tZq\ search from CMS~\cite{CMS-PAS-TOP-16-020}. 
 
@@ -503,21 +503,21 @@ The baseline selection of this analysis selects events where jets and three lept
 For the single top quark FCNC final state, one \Pbottom\ jet coming from the \SM\ top quark decay is expected. For the top quark pair FCNC signal, an additional light-flavour jet is expected. In the \ttZ\ final state, two b~jets are present in the final state. However, due to inefficiencies of the b-tagging algorithm, one of the two \Pbottom\ jets may be identified as a light-flavour jet, giving the same final state as the top quark pair FCNC final state. For the \WZ+jets final states, one of the b~jets produced by gluon splitting, can be b-tagged or light-flavour jets coming from the \WZ+jets production can be mis-tagged as b~jets. The SM \tZq\ final state expects the same signal as the top quark pair FCNC process. Furthermore, the \NPL\  background is responsible for a  significant amount of background events. 
 
 In \fig{fig:controldilepdecaystacklogy}, the number of events per leptonic decay are shown. In the dilepton channels, the data and simulation agrees. For the three lepton decays, there is poor agreement due to the fact that the \NPL\ background is not well simulated.  For this reason, the \NPL\ background will be estimated in a data-driven way and the simulated samples of \DY, \ttbar+jets and \WW\ will not be used as explained in \Sec{sec:NPL}. One can also see that in the three lepton channels, the other backgrounds become more important, these are mainly \WZ+jets, \SM\ \tZq, \ttZ\ and \ZZ\ processes.
-\begin{figure}
+\begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.7\linewidth]{5_EventSelection/Figures/control_dilep_Decay_StackLogY.pdf}
+	\includegraphics[width=0.58\linewidth]{5_EventSelection/Figures/control_dilep_Decay_StackLogY.pdf}
 	\caption{Number of events per leptonic-decay after requiring at least two or exactly three leptons and jets, in the \PZ\ boson mass window. The different decays are not exclusive. }
 	\label{fig:controldilepdecaystacklogy}
 \end{figure}
 
 
 
-The analysis strategy is shown in \fig{fig:regions}. Based on the jet multiplicity, the b-tag information and the reconstructed \PZ\ boson mass, five statistically independent regions are defined after a common selection of exactly three leptons containing one opposite sign same flavour pair that is assigned to the \PZ\ boson, at least one jet and at the most three jets, and the transverse mass of the \PW\ boson to be maximal 300 \GeV. The requirements for each region are shown in \tab{tab:Regions}. Two signal regions are considered, targeting the final state of each of the single top quark and top quark pair signals. The \STSR\ is constructed to target the final state of the single top quark FCNC signal, while the \TTSR\ is constructed to target the top quark pair FCNC signal. In each signal region, a multivariate discriminant based on Boosted Decision Trees (BDT) (see \Sec{sec:BDT}) is used to respectively discriminate single top quark \FCNC\ and top quark pair \FCNC\ signal from backgrounds. The rate of \WZ+jet events as well as that of the \NPL\ background, mainly originating from the \DY\ process, is estimated in the \WZCR. Here, the transverse mass of the \PW boson, defined as 
+The analysis strategy is shown in \fig{fig:regions}. Based on the jet multiplicity, the b-tag information and the reconstructed \PZ\ boson mass, five statistically independent regions are defined after a common selection of exactly three leptons containing one opposite sign same flavour pair that is assigned to the \PZ\ boson, at least one jet and at the most three jets, and the transverse mass of the \PW\ boson to be maximal 300~\GeV. The requirements for each region are shown in \tab{tab:Regions}. Two signal regions are considered, targeting the final state of each of the single top quark and top quark pair signals. The \STSR\ is constructed to target the final state of the single top quark FCNC signal, while the \TTSR\ is constructed to target the top quark pair FCNC signal. In each signal region, a multivariate discriminant based on Boosted Decision Trees (BDT) (see \Sec{sec:BDT}) is used to respectively discriminate single top quark \FCNC\ and top quark pair \FCNC\ signal from backgrounds. The rate of \WZ+jet events as well as that of the \NPL\ background, mainly originating from the \DY\ process, is estimated in the \WZCR. Here, the transverse mass of the \PW~boson \mtw\ that is defined as function of the lepton $l_{\PW}$ assigned to the \PW~boson and the neutrino  $\nu_{\W}$ coming from the missing transverse energy in the event
 \begin{equation}
-\mtw = \sqrt{\left(\pt(l_{\W}) + \pt(\nu_{\W}) ) ^2 - (p_{\mathrm{x}}(l_{\W}) + p_{\mathrm{x}}(\nu_{\W}))^2  - (p_{\mathrm{y}}(l_{\W}) + p_{\mathrm{y}}(\nu_{\W})\right)^2    } ,
+\mtw = \sqrt{\left(\pt(l_{\W}) + \pt(\nu_{\W}) \right) ^2 - \left(p_{\mathrm{x}}(l_{\W}) + p_{\mathrm{x}}(\nu_{\W})\right)^2  - \left(p_{\mathrm{y}}(l_{\W}) + p_{\mathrm{y}}(\nu_{\W})\right)^2    } ,
 \end{equation}
-is used as  discriminating variable between the two background processes, \WZ+jets and \NPL. The normalisation of the backgrounds is then used in the signal regions via the b-tagging information (\Sec{sec:WZCR}). The \NPL\ background coming from a \ttbar+jets process is constrained by two control regions, \TTCR\ and \STCR, one for each signal region (respectively \TTSR\ and \STSR).  The normalisation of the \ttbar+jets process is estimated by subtracting all other background predictions from the data rate (\Sec{sec:TTCR}). A simultaneous global fit using the \texttt{Higgs Combined Tool} (\Sec{sec:Stat}) is performed taking into account each region (\STSR, \TTSR, \WZCR, \TTCR\ and \STCR) for the four different three-lepton channels. The BDTs in the signal regions, as well as the transverse mass of the \PW\ boson are discussed in \Chap{chap:6}. The number of events for each region are shown in \Sec{sec:Yields}.
-\begin{figure}
+ is used as  discriminating variable between the two background processes, \WZ+jets and \NPL. The normalisation of the backgrounds is then used in the signal regions via the b-tagging information (\Sec{sec:WZCR}). The \NPL\ background coming from a \ttbar+jets process is constrained by two control regions, \TTCR\ and \STCR, one for each signal region (respectively \TTSR\ and \STSR).  The normalisation of the \ttbar+jets process is estimated by subtracting all other background predictions from the data rate (\Sec{sec:TTCR}). A simultaneous global fit using the \texttt{Higgs Combined Tool} (\Sec{sec:Stat}) is performed taking into account each region (\STSR, \TTSR, \WZCR, \TTCR\ and \STCR) for the four different three-lepton channels. The BDTs in the signal regions, as well as the transverse mass of the \PW\ boson are discussed in \Chap{chap:6}. The number of events for each region are shown in \Sec{sec:Yields}.
+\begin{figure}[htbp]
 	\centering
 	\includegraphics[width=1.\linewidth]{5_EventSelection/Figures/regions}
 	\caption{The strategy used for the search presented in this thesis. The \WZCR\ region is used to estimate the \WZ+jets background process as well as the \NPL\ background coming from the \DY\ process. The \TTCR\ and \STCR\ regions are used to estimate the contributions of the \NPL\ background coming from the \ttbar+jets process.}
@@ -567,14 +567,14 @@ A transfer factor is used to project the yield in the region without b-tagged je
 where $\mathcal{P}_{\mathrm{b}}$ is the probability that an event survives the b-tagging requirement,
 \begin{equation}
 \begin{aligned}
-	\mathcal{P}_{\mathrm{b}} =& 1 - \text{P(event doesn't survive b tag)},\\
+	\mathcal{P}_{\mathrm{b}} =& 1 - \text{P(event does not survive b tag)},\\
 	 =& 1 - \left(\prod_{\Pbottom} \text{P(b not b-tagged)} \prod_{\Pcharm} \text{P(c not b-tagged)} \prod_{\mathrm{udsg}} \text{P(light not b-tagged)}\right),
 %	& = 1 - \left(\prod_{b} 0.10 \prod_{c} 0.40 \prod_{udsg} 0.90\right)
 \end{aligned}
 \end{equation}
 with the products going over all b-, c-, and light-flavour jets respectively. The jet flavour is determined by means of matching the reconstructed jet to the generated quarks, based on the distance in the $\eta\phi$ plane. In order to estimate the probability for exactly one b-tagged jet, the expected number of events is corrected by the fraction of events with exactly  one jet in the \WZCR. The resulting transfer factors are given in \App{app:tablestr}. The yield of \WZ+jets events in the signal region estimated using the above described transfer factor, and the yield calculated with simulated events, are in agreement. 
 \subsection{\TTSR\ and \STSR}
-The \TTSR\ is defined to target the top quark pair FCNC (\tZq) process, while the \STSR\ focusses on the single top quark FCNC (\tZ) process. They have \NPL\ contributions coming from \DY\ and \ttbar+jets events. In these region, the data driven \NPL\ template is split into two templates, based on the presence of the \NPL\ in the Z boson. The \NPL\ associated with \PW\ boson is assigned to \DY\ and its yield is estimated in the \WZCR, while  the \NPL\ associated with \PZ\ boson is assigned to \ttbar+jets and its yield is estimated in the \TTCR\ and \STCR.
+The \TTSR\ is defined to target the top quark pair FCNC (\tZq) process, while the \STSR\ focusses on the single top quark FCNC (\tZ) process. They have \NPL\ contributions coming from \DY\ and \ttbar+jets events. In these regions, the data driven \NPL\ template is split into two templates, based on the presence of the \NPL\ in the Z boson. The \NPL\ associated with \PW\ boson is assigned to \DY\ and its yield is estimated in the \WZCR, while  the \NPL\ associated with \PZ\ boson is assigned to \ttbar+jets and its yield is estimated in the \TTCR\ and \STCR.
 
 \subsection{\TTCR\ and \STCR}
 \label{sec:TTCR}
@@ -609,18 +609,18 @@ The resulting transfer factors are given in \App{app:tablestr}. The expected yie
    if Sumw2 has been called, the error per bin is computed as the sqrt(sum of squares of weights), otherwise the error is set equal to the sqrt(bin content).
    
 \end{comment}
-In this section, the event yields for each region are given. In \tab{tab:YieldSTCR} and \tab{tab:YieldTTCR}, the event yields in the side-band control regions, \STCR\ and \TTCR, are given.  \tab{tab:YieldWZCR} contains the event yields for the \WZCR. The event yields in the signal regions, \STSR\ and \TTSR, are given in \tab{tab:YieldSTSR} and \tab{tab:YieldTTSR} respectively. The rate of the \NPL\ background is arbitrary normalised. From the signal regions and the \WZCR, it is clear that its yield should be estimated from data. The signal yield is set to its expected value for branching fraction equal to the expected limits of most stringent upper limit set by CMS~\cite{Sirunyan:2017kkr} at 95\% CL, being $\BR(\Ptop \rightarrow \Pup\PZ) <  2.7  \times 10^{-4}$ and  $\BR(\Ptop \rightarrow \Pcharm\PZ) < 12 \times 10^{-4}$. 
+In this section, the event yields for each region are given. In \tab{tab:YieldSTCR} and \tab{tab:YieldTTCR} the event yields in the side-band control regions, \STCR\ and \TTCR, are given.  \tab{tab:YieldWZCR} contains the event yields for the \WZCR. The event yields in the signal regions, \STSR\ and \TTSR, are given in \tab{tab:YieldSTSR} and \tab{tab:YieldTTSR} respectively. The background yields follow the relative fractions predicted by the simulation. The \NPL\ background is constructed from a dilepton sample with an extra not prompt-lepton. For this reason, the NPL sample is normalised to reach a total background yield equal to the observed data yield. The actual yield will be taken from data during the global fit as explained in the previous section.  The signal yield is set to its expected value for branching fraction equal to the expected limits of most stringent upper limit set by CMS~\cite{Sirunyan:2017kkr} at 95\% CL, being $\BR(\Ptop \rightarrow \Pup\PZ) <  2.7  \times 10^{-4}$ and  $\BR(\Ptop \rightarrow \Pcharm\PZ) < 12 \times 10^{-4}$. 
 
 From the tables one can see that for the \TTCR\ and the \STCR, the main contribution should come from the \NPL\ background, making this control region well defined for estimating the yield of this background. The \WZCR\ is dominated by the \WZ+jets process and also here a large contribution of the \NPL\ background is expected. In the \STSR, the main background is the \NPL\ background, followed by the \SM\ \tZq, and \WZ+jets process. For the \TTSR, the main background is also the \NPL\ background, followed by the \ttZ\ process, \SM\ \tZq\ process and \WZ+jets process. 
 
   \begin{table}[htbp]
 	\centering
-	\caption{Event yields in the \STCR. The signal yield is set to its expected value for branching fraction equal to the expected limits of most stringent upper limit set by CMS~\cite{Sirunyan:2017kkr}, being $\BR(\Ptop \rightarrow \Pup\PZ) <  2.7  \times 10^{-4}$ and  $\BR(\Ptop \rightarrow \Pcharm\PZ) < 12 \times 10^{-4}$. The \NPL\ background has an arbitrary normalisation. }
+	\caption{Event yields in the \STCR. The signal yield is set to its expected value for branching fraction equal to the expected limits of most stringent upper limit set by CMS~\cite{Sirunyan:2017kkr}, being $\BR(\Ptop \rightarrow \Pup\PZ) <  2.7  \times 10^{-4}$ and  $\BR(\Ptop \rightarrow \Pcharm\PZ) < 12 \times 10^{-4}$. The yield of the \NPL\ background will be taken from the fit.   }
 	\begin{tabular} {l c c c c c  }
 		\toprule
 		Process & all channels & \mumumu\ channel & \emumu\ channel & \eemu\ channel &\eee\ channel  \\
 		\midrule
-		\NPL\ \ttbar   & 33.00 $ \pm $ 8.48 & 14.00 $\pm$ 6.72 & 12.00 $\pm$ 6.43 & 6.00 $\pm$ 3.29 & 1.00 $\pm$ 0.57 \\ 
+		\NPL\ \ttbar   & 24.02 & 8.70  & 14.04  & 0.83  & 0.45  \\ 
 		\ttZ 				&  0.18 $ \pm $ 0.21 &  0.09 $\pm$ 0.06 &  0.03 $\pm$ 0.21 & 0.02 $\pm$ 0.03 & 0.04 $\pm$ 0.03 \\ 
 		\WZ 				&  3.52 $ \pm $ 0.25 &  1.53 $\pm$ 0.06 &  1.04 $\pm$ 0.15 & 0.59 $\pm$ 0.20 & 0.35 $\pm$ 0.07\\ 
 		\ZZ 				&  0.31 $ \pm $ 0.10 &  0.15 $\pm$ 0.08 &  0.08 $\pm$ 0.02 & 0.05 $\pm$ 0.01 & 0.03 $\pm$ 0.02\\ 
@@ -631,7 +631,7 @@ From the tables one can see that for the \TTCR\ and the \STCR, the main contribu
 		\kZct  				&  0.32 $ \pm $ 0.03 &  0.13 $\pm$ 0.01 &  0.10 $\pm$ 0.02 & 0.06 $\pm$ 0.01 & 0.04 $\pm$ 0.01 \B\\
 		\hdashline
 		Data 				& 32 $ \pm $ 3 & 11 $\pm$ 1 & 16 $\pm$ 1 & 2 $\pm$ 1 & 1  $\pm$ 1 \T \\
-		Total bkg.			& 39 $ \pm $ 9 & 16 $\pm$ 7 & 14 $\pm$ 7 & 7 $\pm$ 4 & 2  $\pm$ 1 \\
+		Total bkg.			& 30 $ \pm $ 7 & 11 $\pm$ 4 & 16 $\pm$ 8 & 2 $\pm$ 1 & 1  $\pm$ 1 \\
 		\bottomrule
 	\end{tabular}
 	\label{tab:YieldSTCR}
@@ -641,13 +641,13 @@ From the tables one can see that for the \TTCR\ and the \STCR, the main contribu
 
 	\begin{table}[htbp]
 		\centering
-		\caption{Event yields in the \TTCR. The signal yield is set to its expected value for branching fraction equal to the expected limits of most stringent upper limit set by CMS~\cite{Sirunyan:2017kkr}, being $\BR(\Ptop \rightarrow \Pup\PZ) <  2.7  \times 10^{-4}$ and  $\BR(\Ptop \rightarrow \Pcharm\PZ) < 12 \times 10^{-4}$. The \NPL\ background has an arbitrary normalisation. }
+		\caption{Event yields in the \TTCR. The signal yield is set to its expected value for branching fraction equal to the expected limits of most stringent upper limit set by CMS~\cite{Sirunyan:2017kkr}, being $\BR(\Ptop \rightarrow \Pup\PZ) <  2.7  \times 10^{-4}$ and  $\BR(\Ptop \rightarrow \Pcharm\PZ) < 12 \times 10^{-4}$. The yield of the \NPL\ background will be taken from the fit. }
 		
 		\begin{tabular} {l c c c c c }
 			\toprule
 			Process &   all channels & \mumumu\ channel & \emumu\ channel & \eemu\ channel &\eee\ channel \\
 			\midrule
-			\NPL\ \ttbar   & 29.00 $ \pm $ 9.62 & 11.00 $\pm$ 5.99 & 13.00 $\pm$ 7.75 & 3.00 $\pm$ 1.69 & 2.00 $\pm$ 1.03 \\ 
+			\NPL\ \ttbar   & 30.19 & 14.40  & 11.30  & 4.09  & 0.41  \\ 
 			\ttZ 			  	&  2.85 $ \pm $ 0.44 &  1.11 $\pm$ 0.38 &  0.73 $\pm$ 0.19 & 0.55 $\pm$ 0.16 & 0.46 $\pm$ 0.15 \\ 
 			\WZ				    &  3.98 $ \pm $ 0.63 &  1.62 $\pm$ 0.53 &  1.26 $\pm$ 0.34 & 0.48 $\pm$ 0.13 & 0.61 $\pm$ 0.07 \\ 
 			\ZZ 				&  0.32 $ \pm $ 0.08 &  0.12 $\pm$ 0.06 &  0.10 $\pm$ 0.03 & 0.05 $\pm$ 0.02 & 0.05 $\pm$ 0.02 \\ 
@@ -658,7 +658,7 @@ From the tables one can see that for the \TTCR\ and the \STCR, the main contribu
 			\kZct  				&  0.59 $ \pm $ 0.05 & 0.24 $\pm$ 0.02 & 0.20 $\pm$ 0.05  & 0.10 $\pm$ 0.01  & 0.05 $\pm$ 0.01 \B\\
 			\hdashline
 			Data 				& 44 $ \pm $ 3 & 19 $\pm$ 1 & 15 $\pm$ 1 & 6 $\pm$ 1 & 2 $\pm$ 1 \T\\
-			Total bkg.		    & 41 $ \pm $ 10 & 16 $\pm$ 6 & 17 $\pm$ 8 & 5 $\pm$ 2 & 4 $\pm$ 1\\
+			Total bkg.		    & 42 $ \pm $ 10 & 19 $\pm$ 8 & 15 $\pm$ 7 & 6 $\pm$ 2 & 2 $\pm$ 1\\
 			\bottomrule
 		\end{tabular}
 		\label{tab:YieldTTCR}
@@ -667,12 +667,12 @@ From the tables one can see that for the \TTCR\ and the \STCR, the main contribu
 \vspace*{\fill}
 	\begin{table}[htbp]
 		\centering
-		\caption{Event yields  in the \WZCR. The signal yield is set to its expected value for branching fraction equal to the expected limits of most stringent upper limit set by CMS~\cite{Sirunyan:2017kkr}, being $\BR(\Ptop \rightarrow \Pup\PZ) <  2.7  \times 10^{-4}$ and  $\BR(\Ptop \rightarrow \Pcharm\PZ) < 12 \times 10^{-4}$. The \NPL\ background has an arbitrary normalisation. }	
+		\caption{Event yields  in the \WZCR. The signal yield is set to its expected value for branching fraction equal to the expected limits of most stringent upper limit set by CMS~\cite{Sirunyan:2017kkr}, being $\BR(\Ptop \rightarrow \Pup\PZ) <  2.7  \times 10^{-4}$ and  $\BR(\Ptop \rightarrow \Pcharm\PZ) < 12 \times 10^{-4}$. The yield of the \NPL\ background will be taken from the fit. }	
 		\begin{tabular} {l c c c c c  }
 			\toprule
 			Process & all channels & \mumumu\ channel & \emumu\ channel & \eemu\ channel &\eee\ channel \\
 			\midrule
-			\NPL\ \DY  & 204.00 $ \pm $ 22.12  &  58.00 $\pm$ 11.60 &  88.00 $\pm$ 16.70 &  19.00 $\pm$ 5.50 & 39.00 $\pm$ 9.29 \\ 
+			\NPL\ \DY  & 431.56 &  158.98   &  155.42  &  54.96  & 62.20  \\ 
 			\ttZ 			& 9.57 $ \pm $ 0.69     &   3.86 $\pm$  0.50 &  2.42 $\pm$ 0.41 &   1.97 $\pm$ 0.22 &  1.33 $\pm$ 0.22 \\ 
 			\WZ 			& 551.63 $ \pm $ 29.26  & 227.59 $\pm$ 20.87 & 155.36 $\pm$ 14.20 & 101.63 $\pm$ 9.34 & 67.05 $\pm$ 6.21 \\ 
 			\ZZ 			& 46.19 $ \pm $ 2.40    &  18.34 $\pm$  1.73 & 14.75  $\pm$ 1.49 &   7.19 $\pm$ 0.60 & 5.90 $\pm$ 0.53 \\ 
@@ -683,7 +683,7 @@ From the tables one can see that for the \TTCR\ and the \STCR, the main contribu
 			\kZct  			& 26.34 $ \pm $ 0.51    & 10.79 $\pm$ 0.35 & 7.13 $ \pm $ 0.30 & 5.01 $\pm$ 0.12 & 3.41 $\pm$ 0.17 \B\\
 			\hdashline
 			Data            & 1053 $ \pm $ 34 & 415 $\pm$ 21 & 332 $\pm$ 19 & 168 $\pm$ 14 & 138 $\pm$ 13 \T \\
-			Total bkg.      & 825 $ \pm $ 37  & 314 $\pm$ 25 & 165 $\pm$ 22 & 132 $\pm$ 11 & 115 $\pm$ 11 \\
+			Total bkg.      & 1053 $ \pm $ 56  & 415 $\pm$ 38 & 332 $\pm$ 33 & 168 $\pm$ 18 & 138 $\pm$ 16 \\
 			\bottomrule
 		\end{tabular}
 		\label{tab:YieldWZCR}
@@ -695,25 +695,25 @@ From the tables one can see that for the \TTCR\ and the \STCR, the main contribu
 
 \begin{table}[htbp]
 	\centering
-	\caption{Event yields in the \STSR. The signal yield is set to its expected value for branching fraction equal to the expected limits of most stringent upper limit set by CMS~\cite{Sirunyan:2017kkr}, being $\BR(\Ptop \rightarrow \Pup\PZ) <  2.7  \times 10^{-4}$ and  $\BR(\Ptop \rightarrow \Pcharm\PZ) < 12 \times 10^{-4}$. The \NPL\ background has an arbitrary normalisation.}
+	\caption{Event yields in the \STSR. The signal yield is set to its expected value for branching fraction equal to the expected limits of most stringent upper limit set by CMS~\cite{Sirunyan:2017kkr}, being $\BR(\Ptop \rightarrow \Pup\PZ) <  2.7  \times 10^{-4}$ and  $\BR(\Ptop \rightarrow \Pcharm\PZ) < 12 \times 10^{-4}$. The yield of the \NPL\ background will be taken from the fit.}
 	
 	\begin{tabular} {l c c c c c   }
 		\toprule
 		Process &   all channels & \mumumu\ channel & \emumu\ channel & \eemu\ channel &\eee\ channel\\
 		\midrule
-		\NPL\ \DY & 6.12 $ \pm $ 1.41    & 2.70 $\pm$ 1.12 &  2.16 $\pm$ 1.04 &  0.72 $\pm$ 0.31 & 0.54 $\pm$ 0.26 \\ 
+		\NPL\ \DY & 45.34    & 16.47  &  15.90  &  8.80  & 5.44  \\ 
 		\ttZ           & 3.51 $ \pm $ 0.34    & 1.45 $\pm$ 0.22 &  0.88 $\pm$ 0.16 &  0.72 $\pm$ 0.22 & 0.47 $\pm$ 0.11\\ 
 		\WZ            & 6.10 $ \pm $ 0.66    & 2.67 $\pm$ 0.47 &  1.68 $\pm$ 0.48 &  1.07 $\pm$ 0.17 & 0.70 $\pm$ 0.15\\ 
 		\ZZ 		   & 4.60 $ \pm $ 0.53    & 1.80 $\pm$ 0.38 &  1.64 $\pm$ 0.44 &  0.61 $\pm$ 0.12 & 0.56 $\pm$ 0.09 \\ 
 		Other bkg.     & 1.25 $ \pm $ 0.25    & 0.63 $\pm$ 0.29 &  0.30 $\pm$ 0.05 &  0.20 $\pm$ 0.05 & 0.12 $\pm$ 0.04 \\ 
 		\tZq 		   & 8.03 $ \pm $ 0.47    & 3.51 $\pm$ 0.36 &  2.06 $\pm$ 0.21 &  1.46 $\pm$ 0.14 & 0.99 $\pm$ 0.09\\ 
-		NPL \ttbar & 9.33 $ \pm $ 1.55    & 6.67 $\pm$ 0.12 &  3.33 $\pm$ 0.81 &  0.67 $\pm$ 0.14 & 0.67 $\pm$ 0.15 \B\\
+		NPL \ttbar     & 69.15    & 28.47  &  24.54  &  8.14  & 6.72   \B\\
 		\hdashline
 		\kZut  		   & 11.25 $ \pm $ 0.17   & 4.48 $\pm$ 0.12 &  2.95 $\pm$ 0.09 &  2.27 $\pm$ 0.06 & 1.54 $\pm$ 0.06 \T \\
 		\kZct          & 18.52 $ \pm $ 0.30   & 7.70 $\pm$ 0.20 & 4.85 $\pm$ 0.15 & 3.61 $\pm$ 0.12 & 2.36 $\pm$ 0.10 \B \\
 		\hdashline
 		Data           & 138 $ \pm $ 15 & 55 $\pm$ 8 & 47 $\pm$ 7 & 21 $\pm$ 5 & 15 $\pm$ 5 \T\\
-		Total bkg.     & 39 $ \pm $ 3   & 17 $\pm$ 2 & 12 $\pm$ 2 &  5 $\pm$ 1 & 4 $\pm$ < 1 \\
+		Total bkg.     & 138 $ \pm $ 16   & 55 $\pm$ 10 & 47 $\pm$ 10 &  21 $\pm$ 4 & 15 $\pm$ 3 \\
 		\bottomrule
 	\end{tabular}
 	\label{tab:YieldSTSR}
@@ -726,24 +726,24 @@ From the tables one can see that for the \TTCR\ and the \STCR, the main contribu
 
 \begin{table}[htbp]
 	\centering
-	\caption{Event yields in the \TTSR. The signal yield is set to its expected value for branching fraction equal to the expected limits of most stringent upper limit set by CMS~\cite{Sirunyan:2017kkr}, being $\BR(\Ptop \rightarrow \Pup\PZ) <  2.7  \times 10^{-4}$ and  $\BR(\Ptop \rightarrow \Pcharm\PZ) < 12 \times 10^{-4}$. The \NPL\ background has an arbitrary normalisation. }	
+	\caption{Event yields in the \TTSR. The signal yield is set to its expected value for branching fraction equal to the expected limits of most stringent upper limit set by CMS~\cite{Sirunyan:2017kkr}, being $\BR(\Ptop \rightarrow \Pup\PZ) <  2.7  \times 10^{-4}$ and  $\BR(\Ptop \rightarrow \Pcharm\PZ) < 12 \times 10^{-4}$. The yield of the \NPL\ background will be taken from the fit.  }	
 	\begin{tabular} {l c c c c c}
 		\toprule
 		Process & all channels & \mumumu\ channel & \emumu\ channel & \eemu\ channel &\eee\ channel \\
 		\midrule
-		\NPL\ \DY  &   9.36 $ \pm $  1.62 &  2.40 $\pm$  0.71 &  3.60 $\pm$ 1.20 & 0.96 $\pm$ 0.29 & 2.40 $\pm$ 0.87 \\ 
+		\NPL\ \DY  &   86.60  &  37.56  &  17.79  & 12.84  & 18.57  \\ 
 		\ttZ 			&  42.55 $ \pm $  2.28 & 16.64 $\pm$  1.73 & 10.97 $\pm$ 1.07 & 8.85 $\pm$ 0.86 & 6.10 $\pm$ 0.67 \\ 
 		\WZ 			&  12.46 $ \pm $  1.12 &  4.98 $\pm$  0.80 &  3.39 $\pm$ 0.51 & 2.50 $\pm$ 0.40 & 1.57 $\pm$ 0.23\\ 
 		\ZZ 			&   4.84 $ \pm $  0.35 &  1.78 $\pm$  0.27 &  1.66 $\pm$ 0.23 & 0.76 $\pm$ 0.09 & 0.64 $\pm$ 0.11\\ 
 		Other bkg. 		&   5.62 $ \pm $  0.82 &  2.18 $\pm$  0.29 &  1.51 $\pm$ 0.18 & 1.19 $\pm$ 0.92 & 0.74 $\pm$ 0.10\\ 
 		\tZq 			&  16.93 $ \pm $  0.89 &  7.35 $\pm$  0.72 &  4.57 $\pm$ 0.38 & 2.93 $\pm$ 0.24 & 2.07 $\pm$ 0.19\\ 
-		NPL \ttbar &   8.00 $ \pm $  1.07 &  2.33 $\pm$  0.48 &  3.67 $\pm$ 0.86 & 0.67 $\pm$ 0.13 & 1.33 $\pm$ 0.29 \B\\
+		NPL \ttbar &   74.01  &  36.51  &  18.12 & 8.92  & 10.32  \B\\
 		\hdashline
 		\kZut  			&  21.76 $ \pm $  0.25 &  8.64 $\pm$  0.19 &  5.85 $\pm$ 0.12 & 4.27 $\pm$ 0.06 & 3.01 $\pm$ 0.09 \T \\		
 		\kZct  			&  56.85 $ \pm $  0.57 & 23.08 $\pm$ 0.37 & 15.56 $\pm$ 0.32 & 10.96 $\pm$ 0.18 & 7.25 $\pm$ 0.22 \B\\
 		\hdashline
 		Data 			& 243 $ \pm $ 19 & 107 $\pm$ 11 & 58 $\pm$ 10 & 38 $\pm$ 8 & 40 $\pm$ 8 \T \\
-		Total bkg. 	&  100 $ \pm $  4 &  38 $\pm$  3 & 29 $\pm$ 2 & 39 $\pm$ 2 & 15 $\pm$ 1 \\
+		Total bkg. 	&  243 $ \pm $  18 &  107 $\pm$  14 & 58 $\pm$ 7 & 38 $\pm$ 4 & 40 $\pm$ 7 \\
 		\bottomrule
 	\end{tabular}
 	\label{tab:YieldTTSR}

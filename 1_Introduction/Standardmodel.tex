@@ -1,7 +1,7 @@
 The Standard Model (\SM)~\cite{Peskin:257493} 
-is a name given in the 1970s to a theory describing the fundamental particles and their interactions. This quantum field theory describes the particles and their interactions as fields and has successfully incorporated three of the four fundamental forces in the universe. In \Sec{sec:SMcontent}, the particle content of the \SM\ is summarised, while \Sec{sec:SMlagr} describes  the \SM\ Lagrangian and its symmetries. In \Sec{sec:FCNC}, the flavour content of the \SM\ is highlighted, and \Sec{sec:top} focusses on the top quark in the \SM. 
+is a name given in the 1970s to a theory describing the fundamental particles and their interactions. This quantum field theory describes the particles and their interactions as fields and has successfully incorporated three of the four fundamental forces in the universe. In \Sec{sec:SMcontent}, the particle content of the \SM\ is summarised, while \Sec{sec:SMlagr} describes  the \SM\ Lagrangian and its symmetries. In \Sec{sec:FCNC}, the flavour content of the \SM\ is highlighted, and \Sec{sec:top} focusses on the top quark in the \SM.
 
-The successful theory of the \SM\ has some shortcomings which are discussed in \Sec{sec:BSM} and lead to searches for a more general theory. One of such  is using  an effective field theory (EFT) approach~\cite{Burgess:2007pt}  to search for new physics in a model independent way. In \Sec{sec:EFT} an EFT model focussing on flavour changing neutral currents (FCNC) involving a top quark is presented. Its current experimental constraints are given in \Sec{sec:ExpConstr}.
+The successful theory of the \SM\ has some shortcomings which are discussed in \Sec{sec:BSM} and lead to searches for a more general theory. One of such  is using  an effective field theory (EFT) approach~\cite{Burgess:2007pt}  to search for new physics in a model independent way.  A short introduction to the effective field theory approach is given in \Sec{sec:EFTSM}. In \Sec{sec:EFT}, an EFT model focussing on flavour changing neutral currents (FCNC) involving a top quark is presented. Its current experimental constraints are given in \Sec{sec:ExpConstr}.
 
 
 
@@ -78,7 +78,7 @@ The scalar boson, commonly known as the Higgs boson, is the last piece of the \S
 \newpage
 \section{Standard Model Lagrangian, connecting fields with particles}
 \label{sec:SMlagr}
-The \SM\ is a quantum field theory and thus describes the dynamics and kinematics of particles and forces by a Lagrangian \Lagr. The theory is based on the \SSU\ gauge symmetry, where \SU\ describes the electroweak interaction and \Sthree\ the strong interaction. The indices refer to colour C, the left chiral nature of the \Stwo\ coupling L, and the weak hypercharge Y. Its Lagrangian is constructed in a way that the symmetries representing physics conservation laws such as conservation of energy, momentum and angular momentum are represented. The symmetries under local gauge transformations are sustained by demanding gauge invariance\footnote{Different field configurations of unobservable fields can result in identical quantities. Transformations between such configurations are called gauge transformation and the absence of change in the measurable quantities is a characteristic called gauge invariance.}.  
+The \SM\ is a quantum field theory and thus describes the dynamics and kinematics of particles and forces by a Lagrangian \Lagr. The theory is based on the \SSU\ gauge symmetry, where \SU\ describes the electroweak interaction and \Sthree\ the strong interaction. The indices refer to colour C, the left chiral nature of the \Stwo\ coupling L, and the weak hypercharge Y. Its Lagrangian is constructed in a way that the symmetries representing physics conservation laws such as conservation of energy, momentum and angular momentum are represented. The symmetries under local gauge transformations are sustained by demanding gauge invariance\footnote{Different field configurations of unobservable fields can result in identical quantities. Transformations between such configurations are called gauge transformations and the absence of change in the measurable quantities is a characteristic called gauge invariance.}.  
 
 
 
@@ -107,7 +107,7 @@ The generators $T^a$ satisfy the Lie algebra:
 \end{equation}
 where $\epsilon_{abc}$ is an antisymmetric tensor. The gauge fields of \Stwo\ only couple to left-handed fermions as required by the observed parity violating nature of the weak force. The \Sthree\ group represents quantum chromodynamics (QCD). It  has eight generators corresponding to eight gluon fields \Gfields. Unlike \SU, \Sthree\ is not chiral. 
 
-Under \Sthree\, quarks are colour triplets while leptons are colour singlets. This implies that the quarks carry a colour index ranging between one and three, whereas leptons do not take part in strong interactions. Based on the chirality, the quarks and leptons are organized in doublets or singlets. Each generation $i$ of fermions consists of left-handed doublets and right-handed singlets: 
+Under \Sthree, quarks are colour triplets while leptons are colour singlets. This implies that the quarks carry a colour index ranging between one and three, whereas leptons do not take part in strong interactions. Based on the chirality, the quarks and leptons are organized in doublets or singlets. Each generation $i$ of fermions consists of left-handed doublets and right-handed singlets: 
 \begin{equation}
 \mathrm{l}_{\mathrm{L,i}} =  
 \begin{pmatrix}
@@ -152,7 +152,7 @@ The coupling constant representing the strength of the QCD interactions is denot
 
 
 \subsection*{Electroweak symmetry breaking}
-In $\lagr_{\mathrm{gauge}}$ and $\lagr_{\mathrm{f}}$ are no mass terms for fermions present because only singlets under \SSU\ can acquire a mass with an interaction of the type $m^2\phi^{\dagger}\phi$ without breaking the gauge invariance. In order to accommodate mass terms for fermions and gauge fields, electroweak symmetry breaking, leading to $\lagr_{\phi}$ is introduced. 
+In $\lagr_{\mathrm{gauge}}$ and $\lagr_{\mathrm{f}}$ are no mass terms for fermions present because only singlets under \SSU\ can acquire a mass with an interaction of the type $m^2\phi^{\dagger}\phi$ without breaking the gauge invariance. In order to accommodate mass terms for fermions and gauge fields, electroweak symmetry breaking leading to $\lagr_{\phi}$ is introduced. 
 
 The scalar doublet is introduced in the \SM\ as 
 \begin{equation}
@@ -218,7 +218,7 @@ J_{\mu} = \begin{pmatrix}
 \end{pmatrix}  \gamma_{\mu}\left(1+\gamma_5\right)\mathcal{R}  \begin{pmatrix}
 d \\ s
 \end{pmatrix}
-= \bar{U} \gamma_{\mu}\left(1+\gamma_5\right)\mathcal{R}D. 
+\equiv \bar{U} \gamma_{\mu}\left(1+\gamma_5\right)\mathcal{R}D. 
 \end{equation} 
 
 The neutral weak current is defined as 
@@ -245,7 +245,7 @@ V_{\Ptop\Pdown} & V_{\Ptop\Pstrange} & V_{\Ptop\Pbottom}
 \Pdown \\
 \Pstrange \\
 \Pbottom
-\end{pmatrix} = \mathcal{V}_{\mathrm{CKM}} \begin{pmatrix}
+\end{pmatrix} \equiv \mathcal{V}_{\mathrm{CKM}} \begin{pmatrix}
 \Pdown \\
 \Pstrange \\
 \Pbottom
@@ -253,7 +253,7 @@ V_{\Ptop\Pdown} & V_{\Ptop\Pstrange} & V_{\Ptop\Pbottom}
 \end{equation}
 where $\mathcal{V}_{\mathrm{CKM}}$ is unitary $\left(\mathcal{V}_{\mathrm{CKM}}^{\dagger}\mathcal{V}_{\mathrm{CKM}} = \mathbb{1}\right)$. A general $3\times 3$ unitary matrix depends on three real angles and six phases. For the CKM matrix, the freedom to redefine the phases of the quark eigenstates can remove fives of the phases, leaving a single physical phase known as the Kobayashi-Maskawa phase. This phase is responsible for the charge parity violation in the \SM~\cite{CKM}. 
 % see wolfenstein parametrisation http://pdg.lbl.gov/2017/reviews/rpp2016-rev-cp-violation.pdf 13,53
-Each element $V_{\mathrm{ij}}$ of $ \mathcal{V}_{\mathrm{CKM}}$ represents the transition probability of a quark i going to a quark j, and is experimentally determined to be~\cite{PDG}
+Each element $|V_{\mathrm{ij}}|$ of $ \mathcal{V}_{\mathrm{CKM}}$ squared represents the transition probability of a quark i going to a quark j, and is experimentally determined to be~\cite{PDG}
 \begin{equation}
 \mathcal{V}_{\mathrm{CKM}} =
 \begin{pmatrix}
@@ -296,7 +296,7 @@ yielding a Yukawa coupling of~\cite{PDG}
  This Yukawa coupling is very large compared to the other Yukawa couplings in the SM (\order$(10^{-2})$), leading to the belief that the top quark may have an important role in understanding the mechanism of electroweak symmetry breaking. On top of this, the very short lifetime of the top quark makes it an excellent candidate to study the properties of a bare quark. Its high mass, almost 40 times higher than the mass of the closest fermion in mass, leads to a large coupling with the Higgs boson and makes the top quark an interesting candidate to investigate how particles acquire mass. 
 
 
-The CKM matrix element $V_{\Ptop\Pbottom}$, given in \eq{eq:CKM}, is experimentally found to be much larger than $V_{\Ptop\Pstrange}$, $V_{\Ptop\Pdown}$, and close to unity. The top quark decays through electroweak interactions since the  \PW\ boson mass is smaller than the top quark mass and the \PW\ boson can be on shell. A consequence of this is that the top quark has a very short lifetime of only $1/\Gamma_{\Ptop}\approx 5 \: 10^{-25}$ \s~\cite{PDG} leading to the fact that the formation of bound states involving top quarks is not allowed. This lifetime is even shorter than the typical hadronisation timescale of $1/\Lambda_{\mathrm{QCD}}\approx 10^{-23}$ \s, prohibiting gluons to radiate from the top quark and keeping its spin coherent. Since the electroweak interactions have a vector-axial vector (V-A) coupling structure\footnote{In the \SM\ a vector - axial vector coupling structure $\left(\gamma^{\mu} - \gamma^{\mu}\gamma^5\right)$ is predicted  that only permits left-handed fermions  or right-handed anti fermions to interact with a spin-1 particle. }
+The CKM matrix element $V_{\Ptop\Pbottom}$, given in \eq{eq:CKM}, is experimentally found to be much larger than $V_{\Ptop\Pstrange}$, $V_{\Ptop\Pdown}$, and close to unity. The top quark decays through electroweak interactions since the  \PW\ boson mass is smaller than the top quark mass and the \PW\ boson can be on shell. A consequence of this is that the top quark has a very short lifetime of only $1/\Gamma_{\Ptop}\approx 5 \: 10^{-25}$~\s~\cite{PDG} leading to the fact that the formation of bound states involving top quarks is not allowed. This lifetime is even shorter than the typical hadronisation timescale of $1/\Lambda_{\mathrm{QCD}}\approx 10^{-23}$ \s, prohibiting gluons to radiate from the top quark and keeping its spin coherent. Since the electroweak interactions have a vector-axial vector (V-A) coupling structure\footnote{In the \SM\ a vector - axial vector coupling structure $\left(\gamma^{\mu} - \gamma^{\mu}\gamma^5\right)$ is predicted  that only permits left-handed fermions  or right-handed anti fermions to interact with a spin-1 particle. }
 %\footnote{For an interaction where a spin-1 particle is exchanged, the most general form is a linear combination of a vector and an axial vector. From experiments, the weak interaction is determined to have this V-A structure: $J^{\mu} \prop \APup_{\Pneutrino}\left(\gamma^{\mu} - \gamma^{\mu}\gamma^5\right)\Pup_{\Pe}$.}
 , the top quark spin orientation can be derived from the angular distributions of its decay products. This makes it possible to study the polarisation of top quarks from the angular distributions in various processes. 
 
@@ -353,7 +353,7 @@ The singly produced top quarks are produced via the electroweak interaction. The
 \end{figure}
 
 The production via the $t$-channel has a virtuality of the \PW\ boson $Q^2>0$, making it space-like. It is produced via the scattering of the \PW\ boson of a bottom quark coming from a proton or from gluon splitting (\Pgluon$\rightarrow$\bbbar). It has the highest single top quark cross section in proton collisions and the top quark production is roughly twice as large than the antitop quark. This is a consequence of the up-down valence quark composition of the proton. This feature makes the $t$-channel sensitive to the parton density functions of the proton. %The ratio depends however on the center-of-mass energy since at higher energies lower momentum fractions are probed at which contributions from the valence quarks become less dominant.
-The $s$-channel is the production mechanism with the smallest cross section. Here the \PW\ boson is time-like ($Q^2 <0$) which requires the \PW\ boson to have a large virtuality to produce the heavier top quark. It is produced from two quarks belonging to the same isodoublet (e.g. \Pup\APdown) and subsequently decays to \Ptop\APbottom. This process gets enhanced by many beyond the Standard Model scenarios via the addition of new heavy particles such as \PW'. The tW-channel has a top quark produced in association with a \PW\ boson produced on shell $Q^2 = -m^2_{\PW}$. This mode is negligible at the Tevatron, but of relevant size at the LHC. The tW-channel is sensitive to new physics affecting the Wtb vertex.  The single top quark production cross section measurements by the CMS collaboration can be found in \fig{fig:stcross} and are not showing any significant deviations from their \SM\ predictions.
+The $s$-channel is the production mechanism with the smallest cross section. Here the \PW\ boson is time-like ($Q^2 <0$) which requires the \PW\ boson to have a large virtuality to produce the heavier top quark. It is produced from two quarks belonging to the same isodoublet (e.g. \Pup\APdown) and subsequently decays to \Ptop\APbottom. This process gets enhanced by many beyond the Standard Model scenarios via the addition of new heavy particles such as \PW'. The tW-channel has a top quark produced in association with a \PW\ boson produced on shell, $Q^2 = -m^2_{\PW}$. This mode is negligible at the Tevatron, but of relevant size at the LHC. The tW-channel is sensitive to new physics affecting the Wtb vertex.  The single top quark production cross section measurements by the CMS collaboration can be found in \fig{fig:stcross} and are not showing any significant deviations from their \SM\ predictions.
  
  \begin{table}[htbp]
  	\centering
@@ -383,6 +383,7 @@ The $s$-channel is the production mechanism with the smallest cross section. Her
 \end{figure}
 
 \section{Effective field theories}
+\label{sec:EFTSM}
 %https://cp3.irmp.ucl.ac.be/upload/theses/phd/degrande.pdf
 %http://www.physi.uni-heidelberg.de/Forschung/he/LHCb/documents/WorkshopNeckarzMarz08/TF_OPE.pdf
 Problems can be simplified if one looks at the relevant scale of the process that one want to investigate, for example the chemical properties of an hydrogen atom can be described without any knowledge of quark interactions inside the proton. In this case, the proton can be considered the elementary object (indivisible) due to the fact that the binding energy of the constituents is much bigger than the energy of the electron in orbit around the proton. Effective field theories are based on this kind of separation of different energy scales in a system~\cite{thesisDeg}. Effective field theories can be used for theories where the perturbative expansion cannot be trusted, e.g. QCD at low energy, or as bottom up approach to look for new physics in a model independent way. The latter is the way effective field theory will be used throughout this thesis. 
@@ -506,7 +507,7 @@ The choice of the \SSU\ symmetry group itself  as well as the separate treatment
 \label{sec:EFT}
 % belagrijk om te lezen: https://indico.in2p3.fr/event/11080/contributions/4154/attachments/3112/3770/recap.pdf
 %https://mail.google.com/mail/u/0/#search/zeta/1572dd027705dda8
-The closeness of the top quark mass to the electroweak scale led physicists to believe that the top quark is a sensitive probe for new physics.  Studying its properties is therefore an important topic of the experimental program at the LHC. Several extensions of the \SM\ enhance the top quark FCNC branching fractions and can be probed at the LHC~\cite{AguilarSaavedra:2004wm}, from which some of them are shown in \tab{tab:FCNCBRnp}. Previous searches have been performed at the Tevatron by the CDF~\cite{PhysRevLett.101.192002} and D0~\cite{Abazov:2010qk} collaborations, 
+The closeness of the top quark mass to the electroweak scale led physicists to believe that the top quark is a sensitive probe for new physics.  Studying its properties is therefore an important topic of the experimental program at the LHC. Several extensions of the \SM\ enhance the top quark FCNC branching fractions and can be probed at the LHC~\cite{AguilarSaavedra:2004wm}, for which some of them are shown in \tab{tab:FCNCBRnp}. Previous searches have been performed at the Tevatron by the CDF~\cite{PhysRevLett.101.192002} and D0~\cite{Abazov:2010qk} collaborations, 
 and at the LHC by the ATLAS~\cite{Aad:2015uza,Aad:2015gea,Aad:2015pja,Aaboud:2017mfd,ATLAS-CONF-2017-070} and CMS~\cite{Sirunyan:2017kkr,Chatrchyan:2013nwa,Khachatryan:2015att,Sirunyan:2017kkr,Khachatryan:2016atv,CMS-PAS-TOP-17-003}  collaborations.
 \begin{table}[htbp]
 	\centering
@@ -572,7 +573,7 @@ with all flavour indices implied. The left handed \Stwo\ doublet of the quark fi
     	\Gtensor^{\mathrm{a}} &= \partial_{\mu} \mathrm{G}_{\nu}^{\mathrm{a}} -  \partial_{\nu}  \mathrm{G}_{\mu}^{\mathrm{a}} + g_{\mathrm{s}} f^{\mathrm{a}}_{\mathrm{bc}}   \mathrm{G}_{\mu}^{\mathrm{b}} \mathrm{G}_{\nu}^{\mathrm{c}} , 
 	\end{aligned}
 \end{equation}
-denoting the structure constant of the \Sthree\ group  as $f^{\mathrm{a}}_{\mathrm{bc}}$ and the structure constant of the \Stwo\ group as $\epsilon_{\mathrm{ij}}^{\mathrm{k}}$. The gauge covariant derivatives are also standard defined as 
+denoting the structure constant of the \Sthree\ group  as $f^{\mathrm{a}}_{\mathrm{bc}}$ and the structure constant of the \Stwo\ group as $\epsilon_{\mathrm{ij}}^{\mathrm{k}}$. The gauge covariant derivatives are  defined as 
 \begin{equation}
 D_{\mu} \Phi   = \partial_{\mu} \Phi - \frac{1}{2}ig'B_{\mu}\Phi - igT_{\mathrm{k}}W_{\mu}^{\mathrm{k}}\Phi
 \end{equation}
@@ -581,7 +582,7 @@ with the conventions of \Sec{sec:SMlagr}. The representation matrices $T$ of \St
 	\Phi^{\dagger}\overleftrightarrow{D}\Phi = \Phi^{\dagger}D^{\mu}\Phi - D_{\mu}\Phi^{\dagger}\Phi.
 \end{equation}
 
- After electroweak symmetry breaking,  the operators induce~\cite{AguilarSaavedra:2004wm,Beneke:2000hk} both corrections to the \SM\ couplings and new interactions at tree level such as FCNC interactions. The lagrangian of \eq{Wil} can then equivalently be written as  
+ After electroweak symmetry breaking,  the operators induce~\cite{AguilarSaavedra:2004wm,Beneke:2000hk} both corrections to the \SM\ couplings and new interactions at tree level such as FCNC interactions. The Lagrangian of \eq{eq:Wil} can then equivalently be written as  
  \begin{equation}
 \begin{aligned}
 \Lagr^{\Ptop}_{\mathrm{EFT}} =\frac{\sqrt{2}}{2}\sum\limits_{\Pquark = \Pup,\Pcharm} &\left[g'
@@ -667,12 +668,12 @@ $ \left(|f_{\mathrm{xq}}^{\mathrm{L}}|^2 + |f_{\mathrm{xq}}^{\mathrm{R}}|^2 \rig
 
 \section{Experimental constraints on top-FCNC}
 \label{sec:ExpConstr}
-Experimental particle physicists commonly put limits on the branching fractions which allow an easier interpretation across different EFT models by use of the branching fraction
+Experimental particle physicists commonly put limits on the branching fractions which allow an easier interpretation across different EFT models. The branching fraction takes a value between zero and one and is defined as
 \begin{equation}
 	\BR(\Ptop \rightarrow \Pquark\mathrm{X}) = \frac{\delta^2_{\Ptop \mathrm{X}\Pquark}\Gamma_{\Ptop \rightarrow \Pquark\mathrm{X}}}{\Gamma_{\Ptop}},
 	\label{eq:BR}
 \end{equation}
-taking a value between zero and one, where $\Gamma_{\Ptop \rightarrow \Pquark\mathrm{X}}$ represents the \FCNC\ decay width\footnote{The decay width of a certain process represents the probability per unit time that a particle will decay. The total decay width, defined as the sum of all possible decay widths of a particle, is inversely proportional to its lifetime. } for a coupling strength $\delta^2_{\Ptop \mathrm{X}\Pquark}=1$, and $\Gamma_{\Ptop}$ the full decay width of the top quark. In the \SM, supposing a top quark mass of 172.5~\GeV, the full width becomes $\Gamma_{\Ptop}^{\mathrm{SM}} = 1.32$~\GeV~\cite{Gao:2012ja}. 
+ where $\Gamma_{\Ptop \rightarrow \Pquark\mathrm{X}}$ represents the \FCNC\ decay width\footnote{The decay width of a certain process represents the probability per unit time that a particle will decay. The total decay width, defined as the sum of all possible decay widths of a particle, is inversely proportional to its lifetime. } for a coupling strength $\delta^2_{\Ptop \mathrm{X}\Pquark}=1$, and $\Gamma_{\Ptop}$ the full decay width of the top quark. In the \SM, supposing a top quark mass of 172.5~\GeV, the full width becomes $\Gamma_{\Ptop}^{\mathrm{SM}} = 1.32$~\GeV~\cite{Gao:2012ja}. 
 
 % top FCNC vertex in Feynman diagram -> matrix element maal kappa --> cross sectie maal kappa^2 --> cross sectie maal BR (lineair)
 
@@ -730,7 +731,7 @@ Searches for top-FCNC usually adopt a search strategy depending on the experimen
 \end{figure}
 
 
-The observation of top-FCNC interactions has yet to come and experiments have so far only been able to put upper bounds on the branching fractions. An overview of the best current limits is given in \tab{tab:FCNClimits}. In \fig{fig:fcncupperlimits} a comparison is shown between the current best limits set by ATLAS and CMS with respect to several \BSM\ model benchmark predictions. From there one can see that \FCNC\ searches involving a \PZ\ or \PHiggs\ boson are close to excluding or confirming several \BSM\ theories. In \fig{fig:summaryfcnc}, the searches performed by CMS are summarised. For the tZq vertex, the current most stringent limit is set by the ATLAS collaboration at a centre-of-mass of 13~\TeV~\cite{ATLAS-CONF-2017-070}. The observed (expected) limits at 95\% CL are $\BR(\Ptop \rightarrow \Pup\PZ) <  1.7 \times 10^{-4}\; (2.4  \times 10^{-4})$ and  $\BR(\Ptop \rightarrow \Pcharm\PZ) < 2.3 \times 10^{-4} \; (3.2 \times 10^{-4})$.  The most stringent limit from the CMS collaboration comes from Ref. \cite{Sirunyan:2017kkr} where both single top quark and top quark pair processes are studied. The observed (expected) limits at 95\% CL for a centre-of-mass of 8 \TeV\ for the FCNC tZq interaction by CMS are $\BR(\Ptop \rightarrow \Pup\PZ) <  2.2 \times 10^{-4}\; (2.7  \times 10^{-4})$ and  $\BR(\Ptop \rightarrow \Pcharm\PZ) < 4.9 \times 10^{-4} \; (12 \times 10^{-4})$.  In \fig{fig:FCNCATLASCMS}, the summary of the 95\% confidence level observed limits on the branching fractions of the top quark decays to a charm or up quark and a neutral boson is given, considering the results from the HERA, the LEP, the Tevatron, and the LHC.
+The observation of top-FCNC interactions has yet to come and experiments have so far only been able to put upper bounds on the branching fractions. An overview of the best current limits is given in \tab{tab:FCNClimits}. In \fig{fig:fcncupperlimits} a comparison is shown between the current best limits set by ATLAS and CMS with respect to several \BSM\ model benchmark predictions. From there one can see that \FCNC\ searches involving a \PZ\ or \PHiggs\ boson are close to excluding or confirming several \BSM\ theories. In \fig{fig:summaryfcnc}, the searches performed by CMS are summarised. For the tZq vertex, the current most stringent limit is set by the ATLAS collaboration at a centre-of-mass energy of 13~\TeV~\cite{ATLAS-CONF-2017-070}. The observed (expected) limits at 95\% CL are $\BR(\Ptop \rightarrow \Pup\PZ) <  1.7 \times 10^{-4}\; (2.4  \times 10^{-4})$ and  $\BR(\Ptop \rightarrow \Pcharm\PZ) < 2.3 \times 10^{-4} \; (3.2 \times 10^{-4})$.  The most stringent limit from the CMS collaboration comes from Ref.~\cite{Sirunyan:2017kkr} where both single top quark and top quark pair processes are studied. The observed (expected) limits at 95\% CL for a centre-of-mass energy of 8~\TeV\ for the FCNC tZq interaction by CMS are $\BR(\Ptop \rightarrow \Pup\PZ) <  2.2 \times 10^{-4}\; (2.7  \times 10^{-4})$ and  $\BR(\Ptop \rightarrow \Pcharm\PZ) < 4.9 \times 10^{-4} \; (12 \times 10^{-4})$.  In \fig{fig:FCNCATLASCMS}, the summary of the 95\% confidence level observed limits on the branching fractions of the top quark decays to a charm or up quark and a neutral boson is given, considering the results from the HERA, the LEP, the Tevatron, and the LHC.
 \begin{table}[htbp]
 	\centering
 	\caption{Overview of the most stringent observed and expected experimental limits on top-FCNC branching fractions \BR\ at 95\% confidence level.}
@@ -756,13 +757,13 @@ The observation of top-FCNC interactions has yet to come and experiments have so
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=1.\linewidth]{1_Introduction/Figures/fcnc_upperlimitsth.pdf}
-	\caption{Current best limits set by CMS and ATLAS for top-FCNC interactions.  Figure adapted from~\cite{summarywiki}. }
+	\caption{Current best limits at 95\% confidence level on the branching fractions set by CMS and ATLAS for top-FCNC interactions. Figure adapted from~\cite{summarywiki}. }
 	\label{fig:fcncupperlimits}
 \end{figure}
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.7\linewidth]{1_Introduction/Figures/summary_FCNC.pdf}
-	\caption{Summary of the FCNC branching fractions from CMS searches at 8 \TeV. Figure taken from~\cite{summarywiki}.}
+	\caption{Summary of the FCNC branching fractions from CMS searches at a centre-of-mass energy of 8~\TeV. Figure taken from~\cite{summarywiki}.}
 	\label{fig:summaryfcnc}
 \end{figure}
 \begin{figure}[htbp]

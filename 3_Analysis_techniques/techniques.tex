@@ -15,7 +15,7 @@ where i and j are the partons resolved from protons A and B. The parton density 
 \begin{figure}
 	\centering
 	\includegraphics[width=0.5\linewidth]{3_Analysis_techniques/Figures/factoscale}
-	\caption{Kinematic regions in momentum fraction $x$ and factorisation scale $Q^2$ probed by fixed-target and collider experiments. Some of the final states accessible at the LHC are indicated in the appropriate regions, where $y$ is the rapidity. In this figure, the incoming partons have $x_{1,2} = (M/14~\TeV)e^{\pm y}$ with $Q = M$ where $M$ is the mass of the state shown in blue in the figure. For example, exclusive J$/\psi$ and $\Upsilon$ production at high $|y|$ at the LHC may probe the gluon PDF down to $x \sim  10^{-5}$. Figure taken from \cite{PDG}.}
+	\caption{Kinematic regions in momentum fraction $x$ and factorisation scale $Q^2$ probed by fixed-target and collider experiments. Some of the final states accessible at the LHC are indicated in the appropriate regions, where $y$ is the rapidity. In this figure, the incoming partons have $x_{1,2} = (M/14~\TeV)e^{\pm y}$ with $Q = M$ where $M$ is the mass of the state shown in blue in the figure. For example, exclusive J$/\psi$ and $\Upsilon$ production at high $|y|$ at the LHC may probe the gluon PDF down to $x \sim  10^{-5}$. Figure taken from~\cite{PDG}.}
 	\label{fig:factoscale}
 \end{figure}
 %https://arxiv.org/pdf/1206.7024.pdf voor goede info
@@ -23,11 +23,11 @@ where i and j are the partons resolved from protons A and B. The parton density 
 
  The parton density functions (PDF)~\cite{Placakyte:2011az,Ball2015,Butterworth:2015oua} represent the momentum distribution of the proton amongst its partons at an energy scale \muF.  These functions are obtained from global fits to data since they can not be determined from first principles. From measurements on deep inelastic scattering using lepton-proton collision by the HERA collider~\cite{Abramowicz:1998ii}, supplemented with proton-antiproton collisions from the Tevatron~\cite{Holmes:2011ey}, and proton collision data from the ATLAS, CMS and LHCb collaborations at the LHC (Run 1)~\cite{Rojo:2015acz} the PDFs are determined and included in global PDF sets known as the \texttt{PDF4LHC} recommendation~\cite{Butterworth:2015oua}. Their measurement at scale \muF\ is extrapolated to higher energies by use of the DGLAP equations~\cite{Martin:2008cn}. Once these PDFs are known, the cross section of a certain process can be calculated and used as input for the Monte Carlo generators used to make the simulated data samples at the LHC. 
 %https://amva4newphysics.wordpress.com/2016/03/10/the-inner-life-of-protons-and-artificial-neural-networks/
-In the framework of this thesis,  the NLO \texttt{PDF4LHC}15\_100 set is used. This set is an envelope of three sets: \texttt{CT14}, \texttt{MMHT2014} and \texttt{NNPDF3.0}~\cite{Butterworth:2015oua}. As illustration, the dependency of the PDFs on the momentum fraction $x$ is shown for the \texttt{NNPDF3.0} set on hadronic scale $\muF^2 = 10~\GeV^2$ and LHC scale $\muF^2 = 10^4~\GeV^2$ in \fig{fig:nnpdf30}.  The gluon density dominated for most values of the momentum fraction, implying that it is easier to probe gluons than the quarks. When the Bj\"orken scale is set to one, the parton densities of the valence quarks of the proton, up and down quarks, dominate over the gluon density. The sea quarks originating from gluon splitting, the charm, anti-up, and anti-down quarks, have lower densities in general for the proton. The resolution scale $Q^2$ is typically taken to be the energy scale of the collision. For the top quark pair production a scale of $Q^2=(350~\GeV)^2$ is chosen, meaning that the centre-of-mass energy of the hard interaction is about twice the top quark mass.
+In the framework of this thesis,  the NLO \texttt{PDF4LHC}15\_100 set is used. This set is an envelope of three PDF sets: \texttt{CT14}, \texttt{MMHT14} and \texttt{NNPDF3.0}~\cite{Butterworth:2015oua}. As illustration, the dependency of the PDFs on the momentum fraction $x$ is shown for the \texttt{NNPDF3.0} set on hadronic scale $\muF^2 = 10~\GeV^2$ and LHC scale $\muF^2 = 10^4~\GeV^2$ in \fig{fig:nnpdf30}.  The gluon density dominated for most values of the momentum fraction, implying that it is easier to probe gluons than the quarks. When the Bj\"orken scale is set to one, the parton densities of the valence quarks of the proton, up and down quarks, dominate over the gluon density. The sea quarks originating from gluon splitting, the charm, anti-up, and anti-down quarks, have lower densities in general for the proton. The resolution scale $Q^2$ is typically taken to be the energy scale of the collision. For the top quark pair production a scale of $Q^2=(350~\GeV)^2$ is chosen, meaning that the centre-of-mass energy of the hard interaction is about twice the top quark mass.
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=1.\linewidth]{3_Analysis_techniques/Figures/NNPDF30}
-	\caption{The momentum fraction $x$ times the parton distribution functions $f(x)$, where $f=\Pup_{\mathrm{v}}, \Pdown_{\mathrm{v}} ,\APup,\APdown,\Pstrange,\Pcharm,$ or \Pgluon\ as a function of the momentum fraction obtained in the NNLO \texttt{NNPDF3.0} global analysis at factorisation scales $\mu^2 = 10 \: \GeV^2$ (left) and $\mu^2=10^4 \: \GeV^2$ (right), with $\alpha_{\mathrm{S}}(M^2_{\PZ}) = 0.118$. The gluon PDF has been scaled down by a factor of 0.1. Figure taken from \cite{PDG}.}
+	\caption{The momentum fraction $x$ times the parton distribution functions $f(x)$, where $f=\Pup_{\mathrm{v}}, \Pdown_{\mathrm{v}} ,\APup,\APdown,\Pstrange,\Pcharm,$ or \Pgluon\ as a function of the momentum fraction obtained in the NNLO \texttt{NNPDF3.0} global analysis at factorisation scales $\mu^2 = 10 \: \GeV^2$ (left) and $\mu^2=10^4 \: \GeV^2$ (right), with $\alpha_{\mathrm{S}}(M^2_{\PZ}) = 0.118$. The gluon PDF has been scaled down by a factor of 0.1. Figure taken from~\cite{PDG}.}
 	%http://pdg.lbl.gov/2017/reviews/rpp2016-rev-structure-functions.pdf
 	% The higher value of the resolution scale $Q^2$, the smaller distances that are probed in the proton.
 	\label{fig:nnpdf30}
@@ -129,7 +129,7 @@ The anomalous single top quark cross sections are calculated by convolution of t
 partons densities. The NLO effects are modelled by multiplying each LO cross section by a global $k$-factor. The LO single top quark production cross section and the global $k$-factors for the top-\PZ\ production are shown in \tab{tab:STx}. The hard scattering events are then matched to parton showers to \Pythia\ to account for the simulation of the QCD environment relevant for hadronic collisions. 
 \begin{table}[htbp]
 	\centering
-	\caption{Leading order single top quark production cross section at a centre-of-mass of 13 \TeV\ for $\Pproton\Pproton \rightarrow \tZ$ or $\tbarZ$, where the new physics scale is given in \GeV. The NLO $k-$factors~\cite{Zhang:2011gh} are given in the last column.}
+	\caption{Leading order single top quark production cross section at a centre-of-mass energy of 13 \TeV\ for $\Pproton\Pproton \rightarrow \tZ$ or $\tbarZ$, where the new physics scale is given in \GeV. The NLO $k-$factors~\cite{Zhang:2011gh} are given in the last column.}
 	\begin{tabular}{ccrlcc}
 		\toprule
 	   Anomalous  & vertex & \multicolumn{2}{c}{Cross section (\pb)} &  $\sigma_{\Pproton\Pproton\rightarrow\APtop}/\sigma_{\Pproton\Pproton\rightarrow\Ptop}$ &  NLO $k-$factor \\ 
@@ -151,15 +151,15 @@ partons densities. The NLO effects are modelled by multiplying each LO cross sec
 	\label{tab:STx}
 \end{table}
 \newpage
-The top quark pair cross sections are derived from the \SM\ \ttbar\ cross section, calculated with \aMCMG\ at NLO at a centre-of-mass of 13 \TeV\ ($\sigma_{\ttbar}^{\mathrm{SM,NLO}} = 6.741 \times 10^{2} \pb$), and considering the decay $\ttbar \rightarrow (\Pbottom \PWpm)(\mathrm{X}\Pquark\Ptop)$. The branching fraction $\BR(\Ptop \rightarrow \Pbottom\PWpm)$ is assumed to be equal to one and the FCNC branching fraction is calculated as 
+The top quark pair cross sections are derived from the \SM\ \ttbar\ cross section, calculated with \aMCMG\ at NLO at a centre-of-mass energy of 13~\TeV\ ($\sigma_{\ttbar}^{\mathrm{SM,NLO}} = 6.741 \times 10^{2}~\pb$), and considering the decay $\ttbar \rightarrow (\Pbottom \PWpm)(\mathrm{X}\Pquark\Ptop)$. The branching fraction $\BR(\Ptop \rightarrow \Pbottom\PWpm)$ is assumed to be equal to one and the FCNC branching fraction is calculated as 
 \begin{equation}
  \BR(\Ptop \rightarrow \Pquark\mathrm{X}) = \frac{ \Gamma_{\Ptop \rightarrow \Pquark\mathrm{X}} }{\Gamma_{\Ptop}^{\mathrm{SM}} + \Gamma_{\Ptop}^{\mathrm{FCNC}} }
  		\approx  \frac{ \Gamma_{\Ptop \rightarrow \Pquark\mathrm{X}} }{\Gamma_{\Ptop}^{\mathrm{SM}}} , 
 \end{equation}
-where $\Gamma_{\Ptop \rightarrow \Pquark\mathrm{X}}$ is given in \tab{tab:partialwidths}, $\Gamma_{\Ptop}^{\mathrm{SM}}=1.32 \GeV$~\cite{Gao:2012ja}, and the assumption $ \Gamma_{\Ptop}^{\mathrm{FCNC}} \ll \Gamma_{\Ptop}^{\mathrm{SM}}$ is made. In \tab{tab:TTx}  the resulting NLO cross sections for the top-Z FCNC interactions are given.  
+where $\Gamma_{\Ptop \rightarrow \Pquark\mathrm{X}}$ is given in \tab{tab:partialwidths}, $\Gamma_{\Ptop}^{\mathrm{SM}}=1.32~\GeV$~\cite{Gao:2012ja}, and the assumption $ \Gamma_{\Ptop}^{\mathrm{FCNC}} \ll \Gamma_{\Ptop}^{\mathrm{SM}}$ is made. In \tab{tab:TTx}  the resulting NLO cross sections for the top-Z FCNC interactions are given.  
 \begin{table}[htbp]
 	\centering
-	\caption{ Next to leading order top quark pair cross section for the top-Z FCNC interactions  $\ttbar \rightarrow (\Pbottom \PWpm)(\mathrm{X}\Pquark\Ptop)$ with with a full leptonic decay at a centre-of-mass of 13 \TeV, where ${\sigma_{\Pproton\Pproton\rightarrow \ttbar}^{\mathrm{SM,NLO}} = 6.741 \times 10^2~\pb}$, $\BR(\PZ\rightarrow \Plepton\APlepton) = 3.36\times 3 \times 10^{-2}$, and $\BR(\PW\rightarrow \Plepton\Pnu) = 10.80\times 3 \times 10^{-2}$.}
+	\caption{ Next to leading order top quark pair cross section for the top-Z FCNC interactions  $\ttbar \rightarrow (\Pbottom \PWpm)(\mathrm{X}\Pquark\Ptop)$ with with a full leptonic decay at a centre-of-mass energy of 13~\TeV, where ${\sigma_{\Pproton\Pproton\rightarrow \ttbar}^{\mathrm{SM,NLO}} = 6.741 \times 10^2~\pb}$, $\BR(\PZ\rightarrow \Plepton\APlepton) = 3.36\times 3 \times 10^{-2}$, and $\BR(\PW\rightarrow \Plepton\Pnu) = 10.80\times 3 \times 10^{-2}$.}
 	\begin{tabular}{cccrl}
 		\toprule
 		Anomalous coupling & vertex & Process &   \multicolumn{2}{c}{Cross section (\pb)}  \\ 
@@ -186,7 +186,7 @@ The SM \tZq\ sample is generated using the \aMCMG\ generator at leading order ac
 
 
 
-The complete list of \SM\ samples is given in Table \ref{tab:samples}, along with their cross sections at a centre-of-mass of 13 \TeV. The cross sections without a reference are coming from the generator with which the sample has been made, for some of them the uncertainties are provided by the Generator Group~\cite{generator}. For each MC sample, the integrated luminosity that the sample represents is estimated as the number of simulated events divided by the cross section of the generated process. This luminosity is then matched to integrated luminosity of 35.9 \fbinv\ represented by the data used for analysis.  For processes generated with \aMCMG, the effective number of simulated events is used, taking into account positive and negative event weights. %The correction factor for those events is defined as
+The complete list of \SM\ samples is given in Table \ref{tab:samples}, along with their cross sections at a centre-of-mass energy of 13 \TeV. The cross sections without a reference are coming from the generator with which the sample has been made, for some of them the uncertainties are provided by the Generator Group~\cite{generator}. For each MC sample, the integrated luminosity that the sample represents is estimated as the number of simulated events divided by the cross section of the generated process. This luminosity is then matched to integrated luminosity of 35.9 \fbinv\ represented by the data used for analysis.  For processes generated with \aMCMG, the effective number of simulated events is used, taking into account positive and negative event weights. %The correction factor for those events is defined as
 %\begin{equation}
 %\mathrm{C} = \frac{\textnormal{Nb. of pos. weights} + \textnormal{Nb. of neg. weights}}{\textnormal{Nb. of pos. weights} - \textnormal{Nb. of neg. weights}} \times \textnormal{MC baseweight}
 %\end{equation}
@@ -195,7 +195,7 @@ In \fig{fig:sigmanewv0}, a summary is given of the \SM\ cross section measuremen
 \begin{landscape}
 	\begin{table}
 		\centering
-		\caption{SM MC samples used in this analysis with their corresponding cross section at a centre-of-mass of 13 \TeV\ and \aMCMG\ correction C  when applicable. The generators used for each sample are indicated and the simulation of the parton shower, hadronisation, and underlying event is done by \Pythia~version 8.22~\cite{Sjostrand:2014zea} for all samples. }
+		\caption{SM MC samples used in this analysis with their corresponding cross section at a centre-of-mass energy of 13~\TeV\ and \aMCMG\ correction C  when applicable. The generators used for each sample are indicated and the simulation of the parton shower, hadronisation, and underlying event is done by \Pythia~version 8.22~\cite{Sjostrand:2014zea} for all samples. }
 		\begin{tabular}{lllll}
 			\toprule
 			Process & Generator & Cross section (\pb) & C  & Ref. \\ 
@@ -250,7 +250,7 @@ In \fig{fig:sigmanewv0}, a summary is given of the \SM\ cross section measuremen
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=1.\linewidth]{1_Introduction/Figures/SigmaNew_v0}
-	\caption{Summary of the \SM\ cross section measurements performed by the CMS collaboration. Figure taken from \cite{summarywiki}.}
+	\caption{Summary of the \SM\ cross section measurements performed by the CMS collaboration. Figure taken from~\cite{summarywiki}.}
 	\label{fig:sigmanewv0}
 \end{figure}
 
@@ -275,7 +275,7 @@ In \fig{fig:sigmanewv0}, a summary is given of the \SM\ cross section measuremen
 %https://indico.cern.ch/event/472305/contributions/1982360/attachments/1224979/1792797/ESIPAP_MVA160208-BDT.pdf
 The need for processing large quantities of data and discriminating between events with largely similar experimental signatures makes multivariate  analysis (MVA) a largely used method in the physics community. Multivariate classification methods based on machine learning techniques are a fundamental ingredient to most analyses. The advantage of using a MVA classifier is that it can achieve a better discrimination power with respect to a simpler analysis based on individual selection criteria or poorly discriminating variables. A risk of using MVA classifiers is overtraining.  This happens when there are too many model parameters of an algorithm adjusted to too few data points. This leads to an increase in the classification performance over the objectively achievable one.
 
-There are many software tools that exist for MVA. In this thesis,  the \texttt{Tool for Multivariate Analysis} (TMVA) \cite{2007physics3039H} is used. This software is an open source project included into \texttt{ROOT}~\cite{Brun:1997pa}. 
+There are many software tools that exist for MVA. In this thesis,  the \texttt{Tool for Multivariate Analysis} (TMVA)~\cite{2007physics3039H} is used. This software is an open source project included into \texttt{ROOT}~\cite{Brun:1997pa}. 
 %http://idefix.mi.infn.it/~palombo/didattica/AnalisiStatistica/mvaLectures.pdf
 %All multivariate techniques in TMVA belong to supervised learning algorithms.
  By training on events for which the classification is known, a mapping function is determined that describes a classification or an approximation of the underlying behaviour defining the target value (regression). Boosted decision trees (BDT) are employed for the classification of events as implemented in the \texttt{TMVA} framework~\cite{2007physics3039H}. This multivariate technique is based on a set of decision trees where each tree yields a binary output depending on the fact that an event is signal- or background-like. This has as advantage  that several discriminating variables can be combined into a powerful one-dimensional discriminant D. 
@@ -319,7 +319,7 @@ When the multivariate discriminator has no discriminating power, the resulting A
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.7\linewidth]{3_Analysis_techniques/Figures/ROC}
-	\caption{Example of ROC curves. In this example, the green method is better than the blue one, which is better than the red one. The dashed line represents a case where there is no separation. Figure taken from \cite{ROC}.}
+	\caption{Example of ROC curves. In this example, the green method is better than the blue one, which is better than the red one. The dashed line represents a case where there is no separation. Figure taken from~\cite{ROC}.}
 	\label{fig:ROC}
 \end{figure}
 
@@ -459,7 +459,7 @@ The 95\% CL level upper limit on $\mu$ is achieved by adjusting $\mu$ until CL$ 
 
 %\subsection{Asymptotic approximation of the CL method}
 %\label{sec:NuisAsym}
-In order to significantly reduce computing time, the Asymptotic CL method is used. This method  avoids an ensemble of toy Monte Carlo samples and instead replaces it by one representative dataset, called Asimov dataset. This dataset is constructed such that all observed quantities are set equal to their MLE values ($\hat{\theta}_{\mathrm{Asimov}}= \theta_0$). More information about this procedure can be found in Refs. \cite{Cowan:2010js}.
+In order to significantly reduce computing time, the Asymptotic CL method is used. This method  avoids an ensemble of toy Monte Carlo samples and instead replaces it by one representative dataset, called Asimov dataset. This dataset is constructed such that all observed quantities are set equal to their MLE values ($\hat{\theta}_{\mathrm{Asimov}}= \theta_0$). More information about this procedure can be found in Ref.~\cite{Cowan:2010js}.
 %https://indico.cern.ch/event/74940/contributions/2088584/attachments/1047729/1493442/Wald-Asimov.pdf
 %\subsection{Extracting the signal model parameters}
 %From a scan of the profile likelihood ratio, 
