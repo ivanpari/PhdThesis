@@ -7,9 +7,9 @@ In \Sec{sec:templates}, the construction of the BDTs in the \STSR\ and \TTSR\ is
 \label{sec:templates}
 There were no selection criteria found using merely individual variables to make a clear rejection of the background events without sacrificing a significant amount of signal. For this reason, a multivariate approach using Boosted Decision Trees that combines several discriminating variables in the TMVA framework is used. For the training, the BDTs are trained against all backgrounds.  The \NPL\ background is not taken into account for the training since it is limited in statistics and would cause overtraining. The BDT settings are chosen to avoid overtraining and to maintain a good discriminating power against the backgrounds (see \Sec{sec:BDT}). The background and signal yields follow the relative fractions predicted by the simulation. 
 
-Starting from a large set of possible discriminating variables, a minimal set of variables is chosen for each signal region based on the ROC curves. Since for the \Zut\ and \Zct\ coupling, for example, the expected b-tag information will behave differently, as well as the fact that the charm coupling will have more similarities with the \SM\ tZq process, different trainings with different input variables are performed for each coupling.  The input variables do not depend on lepton flavour and are therefore kept the same over all three-lepton channels. However, keeping the \NPL\ background in mind and to account for possible discrepancies between the muon and the electron, the training is done separately for each three-lepton channel. In \Sec{sec:BDTSTSRZUT}, the construction of the multivariate discriminating variable in the \STSR, for the \Zut\ interaction, is shown. The construction of the multivariate discriminating variable in the \TTSR\ for this interaction is shown in \Sec{sec:BDTTTSRZUT}. For the \Zct\ interaction, these are shown in \Sec{sec:BDTSTSRZUT} and \Sec{sec:BDTTTSRZUT} respectively. 
+Starting from a large set of possible discriminating variables, a minimal set of variables is chosen for each signal region based on the ROC curves. Since for the \Zut\ and \Zct\ coupling, for example, the expected b-tag information will behave differently, as well as the fact that the charm coupling will have more similarities with the \SM\ tZq process, different trainings with different input variables are performed for each coupling.  The input variables do not depend on lepton flavour and are therefore kept the same over all three-lepton channels. However, keeping the \NPL\ background in mind and to account for possible discrepancies between the muon and the electron, the training is done separately for each three-lepton channel. In \Sec{sec:BDTSTSRZUT}, the construction of the multivariate discriminating variable in the \STSR, for the \Zut\ interaction, is shown. The construction of the multivariate discriminating variable in the \TTSR\ for this interaction is shown in \Sec{sec:BDTTTSRZUT}. For the \Zct\ interaction, these are shown in \Sec{sec:BDTSTSRZCT} and \Sec{sec:BDTTTSRZCT} respectively. 
 
-The main backgrounds estimated from simulation in this search are \WZ+jets, \ttZ, \SM\ \tZq, and \ZZ\ processes. Their leading order Feynmann diagrams are shown in \fig{fig:WZ},  \fig{fig:ttZ}, \fig{fig:tZq} and \fig{fig:ZZ} respectively. The FCNC signal leading order Feynmann diagrams are shown in \fig{fig:feynST} and \fig{fig:feynTT}. 
+The main backgrounds estimated from simulation in this search are \WZ+jets,  \SM\ \tZq, \ttZ, and \ZZ\ processes. Their leading order Feynmann diagrams are shown in \fig{fig:WZ}, \fig{fig:tZq},  \fig{fig:ttZ} and \fig{fig:ZZ} respectively. The FCNC signal leading order Feynmann diagrams are shown in \fig{fig:feynST} and \fig{fig:feynTT}. 
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.3\linewidth]{6_Search/Figures/Feynman/WZa}
@@ -97,7 +97,7 @@ The resulting multivariate discriminator D is shown in \fig{fig:sigvsbkgtestzuts
 	\label{fig:sigvsbkgtestzutsingletop}
 \end{figure}
 
-Additionally, the Receiving Operator Characteristic (ROC) curves for the testing and training samples are shown in \fig{fig:roczutsingletop}. One can observe that for all channels there is a clear separating power and that the ROC curve of the testing sample is a bit below the one for the training sample, resulting in slightly worse performance when testing the method. This is the most present in the \eee\ channel, where there is a lack of statistics. However, the distinction between signal and background like is clearly still present.
+Additionally, the Receiving Operator Characteristic (ROC) curves for the testing and training samples are shown in \fig{fig:roczutsingletop}. One can observe that for all channels there is a clear separating power and that the ROC curve of the testing sample is a bit below the one for the training sample, resulting in slightly worse performance when testing the method. This is the most present in the \eee\ channel, where there is a lack of statistics. However, the distinction between signal- and background-like events is clearly still present.
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.49\linewidth]{6_Search/Figures/PlotsTechnics/ROCZutsingletopuuu}
@@ -156,7 +156,7 @@ In \fig{fig:correlationsigzuttoppair}, the correlations between the input variab
 \end{figure}
 
 \clearpage
-The resulting multivariate discriminator D for this training is shown in \fig{fig:sigvsbkgtestzuttoppair} for all three-lepton channels. Again, there is a clear discrimination between the FCNC signal and the backgrounds, and the testing and training samples agree with each other. Hence, there is no overtraining observed. The ROC curves are shown in \fig{fig:roczuttoppair}, where the testing sample has a slightly worse performance compared to the training sample. However, a large separation power is still obtained for signal and background like events. 
+The resulting multivariate discriminator D for this training is shown in \fig{fig:sigvsbkgtestzuttoppair} for all three-lepton channels. Again, there is a clear discrimination between the FCNC signal and the backgrounds, and the testing and training samples agree with each other. Hence, there is no overtraining observed. The ROC curves are shown in \fig{fig:roczuttoppair}, where the testing sample has a slightly worse performance compared to the training sample. However, a large separation power is still obtained for signal- and background-like events. 
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.49\linewidth]{6_Search/Figures/PlotsTechnics/SigVsBkgTestZuttoppairuuu}
@@ -176,7 +176,7 @@ The input variables used to create the multivariate discriminator in the \STSR\ 
  
  
 The correlations between the different input variables are given in \fig{fig:correlationsigzctsingletop}. These correlations are in general small, but vary from zero to $\sim$55\%.
-The resulting multivariate discriminator D is shown in \fig{fig:sigvsbkgtestzctsingletop} for all three-lepton channels. In these plots one can observe that there is a clear discrimination between the FCNC single top quark signal and the backgrounds. Furthermore, the procedure is investigated by cross checking the distribution from the training sample with an independent testing sample. As can be seen in the distributions, these samples agree with eachother, and only a minor overtraining is observed. The ROC curves for the testing and training samples are shown in \fig{fig:roczctsingletop}, where the testing sample has a slightly worse performance than the training sample. Though a clear discrimination power between signal and background like events is observed. 
+The resulting multivariate discriminator D is shown in \fig{fig:sigvsbkgtestzctsingletop} for all three-lepton channels. In these plots one can observe that there is a clear discrimination between the FCNC single top quark signal and the backgrounds. Furthermore, the procedure is investigated by cross checking the distribution from the training sample with an independent testing sample. As can be seen in the distributions, these samples agree with eachother, and only a minor overtraining is observed. The ROC curves for the testing and training samples are shown in \fig{fig:roczctsingletop}, where the testing sample has a slightly worse performance than the training sample. Though a clear discrimination power between signal- and background-like events is observed. 
 
 \begin{figure}[htbp]
 	\centering
@@ -199,7 +199,7 @@ The resulting multivariate discriminator D is shown in \fig{fig:sigvsbkgtestzcts
 	\label{fig:correlationsigzctsingletop}
 \end{figure}
 
-\clearpage
+
 
 
 \begin{figure}[htbp]
@@ -353,7 +353,7 @@ The effect of the systematic uncertainties influencing the shape of the distribu
     \subbottom[Muon identification uncertainty]{
     	\includegraphics[width=0.3\linewidth]{6_Search/Figures/SystematicEffect/MTWsys/MWT_muonBKG}
     }
-	\caption{Distribution of the nominal values and shift due to the experimental systematic uncertainties for the transverse mass of the \PW\ boson in the \WZCR\ for the \WZ+jets process. All lepton channels summed.}
+	\caption{Distribution of the nominal values and shift due to the experimental systematic uncertainties for the transverse mass of the \PW\ boson in the \WZCR\ for the \WZ+jets process. All three-lepton channels summed.}
 \label{fig:shiftMTW1}
 \end{figure}
 
@@ -366,11 +366,11 @@ The effect of the uncertainties arising from the jet energy corrections, shown i
 	\subbottom[Jet energy resolution uncertainty]{
 		\includegraphics[width=0.3\linewidth]{6_Search/Figures/SystematicEffect/MTWsys/MTW_JERBKG}
 	}
-	\caption{Distribution of the nominal values and shift due to the experimental systematic uncertainties for the transverse mass of the \PW\ boson in the \WZCR\ for the \WZ+jets process. All lepton channels summed.}
+	\caption{Distribution of the nominal values and shift due to the experimental systematic uncertainties for the transverse mass of the \PW\ boson in the \WZCR\ for the \WZ+jets process. All three-lepton channels summed.}
 	\label{fig:shiftMTW3}
 \end{figure}
 
-The uncertainties due to b-tagging are shown in \fig{fig:shiftMTW2}. The uncertainty due to purity of heavy flavour jets has the largest contribution and stays within 10\% of the nominal shape. This is due to the fact that events are migrating in and out of the \WZCR, based on the presence of b jets. All The uncertainties due to b-tagging uncertainties are not having an impact on the shape of the distribution since no b-tag information is used to construct the transverse mass of the \PW\ boson.
+The uncertainties due to b-tagging are shown in \fig{fig:shiftMTW2}. The uncertainty due to purity of heavy flavour jets has the largest contribution and stays within 10\% of the nominal shape. This is due to the fact that events are migrating in and out of the \WZCR, based on the presence of b jets. The other uncertainties due to b-tagging uncertainties have a small impact on the shape of the distribution since no b-tag information is used to construct the transverse mass of the \PW\ boson.
 \begin{figure}[htbp] 
 	\centering 
 	\subbottom[CSVv2: cf uncertainty~(1)]{
@@ -397,7 +397,7 @@ The uncertainties due to b-tagging are shown in \fig{fig:shiftMTW2}. The uncerta
     \subbottom[CSVv2: lf statistical uncertainty~(2) ]{
 		\includegraphics[width=0.3\linewidth]{6_Search/Figures/SystematicEffect/MTWsys/MWT_btagSF_lfstats2BKG}
 	}
-	\caption{Distribution of the nominal values and shift due to the experimental systematic uncertainties for the transverse mass of the \PW\ boson in the \WZCR\ for the \WZ+jets process. All lepton channels summed.}
+	\caption{Distribution of the nominal values and shift due to the experimental systematic uncertainties for the transverse mass of the \PW\ boson in the \WZCR\ for the \WZ+jets process. All three-lepton channels summed.}
 \label{fig:shiftMTW2}
 \end{figure}
 
@@ -413,7 +413,7 @@ In \fig{fig:shiftMTWt}, the effect of the theoretical uncertainties uncertaintie
 \subbottom[PDF uncertainty ]{
 	\includegraphics[width=0.32\linewidth]{6_Search/Figures/theorysys/pdfbdtall}
 }
-	\caption{Distribution of the nominal values and shift due to  systematic uncertainties for the transverse mass of the \PW\ boson in the \WZCR\ for the \WZ+jets process. All lepton channels summed.}
+	\caption{Distribution of the nominal values and shift due to  systematic uncertainties for the transverse mass of the \PW\ boson in the \WZCR\ for the \WZ+jets process. All three-lepton channels summed.}
 	\label{fig:shiftMTWt}
 \end{figure}
 
@@ -577,7 +577,7 @@ The maximum likelihood estimators for the nuisance parameters $\hat{\theta}$ are
 	\includegraphics[width=0.49\linewidth]{6_Search/Figures/ZctFit/shapes_fit_s_3_all_error_trial.pdf}
 	\includegraphics[width=0.49\linewidth]{6_Search/Figures/ZutFit/shapes_fit_s_4_all_error_trial.pdf}
 	\includegraphics[width=0.49\linewidth]{6_Search/Figures/ZctFit/shapes_fit_s_4_all_error_trial.pdf}
-	\caption{Post fit distributions for the all lepton channels of the transverse mass of the \PW\ boson in the \WZCR\ (top), the multivariate discriminating variable in the \STSR\ (middle), and the multivariate discriminating variable in the \TTSR\ (bottom) for the \Zut\ (left) and \Zct\ (right) couplings. }
+	\caption{Post fit distributions for all three-lepton channels of the transverse mass of the \PW\ boson in the \WZCR\ (top), the multivariate discriminating variable in the \STSR\ (middle), and the multivariate discriminating variable in the \TTSR\ (bottom) for the \Zut\ (left) and \Zct\ (right) couplings. }
 	\label{fig:shapesfitALL}
 \end{figure}
 
