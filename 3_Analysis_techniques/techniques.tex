@@ -1,4 +1,4 @@
-In order to study the collisions coming from high energy experiments, many tools have been developed. In \Sec{sec:PSmuRmuF}, the physics of hadron collision at high energies are presented. These insights are used to generate events via Monte Carlo event generators, explained in \Sec{sec:eventgeneration}. 
+In order to study the collisions coming from high energy experiments, many tools have been developed. In \Sec{sec:PSmuRmuF}, the physics of hadron collisions at high energies are presented. These insights are used to generate events via Monte Carlo event generators, explained in \Sec{sec:eventgeneration}. 
  Machine learning helps to differentiate between signal- and background-like events. In \Sec{sec:BDT}, the multivariate technique of boosted decision trees is explained. This yields powerful discriminants for separating signal and background events and provides distributions  for template-based maximum likelihood fits. The fitting method used in the search presented in this thesis is discussed in \Sec{sec:Stat}. 
 \section{Hadron collisions at high energies}
 \label{sec:PSmuRmuF}
@@ -159,7 +159,7 @@ The top quark pair cross sections are derived from the \SM\ \ttbar\ cross sectio
 where $\Gamma_{\Ptop \rightarrow \Pquark\mathrm{X}}$ is given in \tab{tab:partialwidths}, $\Gamma_{\Ptop}^{\mathrm{SM}}=1.32~\GeV$~\cite{Gao:2012ja}, and the assumption $ \Gamma_{\Ptop}^{\mathrm{FCNC}} \ll \Gamma_{\Ptop}^{\mathrm{SM}}$ is made. In \tab{tab:TTx}  the resulting NLO cross sections for the top-Z FCNC interactions are given.  
 \begin{table}[htbp]
 	\centering
-	\caption{ Next to leading order top quark pair cross section for the top-Z FCNC interactions  $\ttbar \rightarrow (\Pbottom \PWpm)(\mathrm{X}\Pquark\Ptop)$ with with a full leptonic decay at a centre-of-mass energy of 13~\TeV, where ${\sigma_{\Pproton\Pproton\rightarrow \ttbar}^{\mathrm{SM,NLO}} = 6.741 \times 10^2~\pb}$, $\BR(\PZ\rightarrow \Plepton\APlepton) = 3.36\times 3 \times 10^{-2}$, and $\BR(\PW\rightarrow \Plepton\Pnu) = 10.80\times 3 \times 10^{-2}$.}
+	\caption{ Next to leading order top quark pair cross section for the top-Z FCNC interactions  $\ttbar \rightarrow (\Pbottom \PWpm)(\mathrm{X}\Pquark\Ptop)$ with  a full leptonic decay at a centre-of-mass energy of 13~\TeV, where ${\sigma_{\Pproton\Pproton\rightarrow \ttbar}^{\mathrm{SM,NLO}} = 6.741 \times 10^2~\pb}$, $\BR(\PZ\rightarrow \Plepton\APlepton) = 3.36\times 3 \times 10^{-2}$, and $\BR(\PW\rightarrow \Plepton\Pnu) = 10.80\times 3 \times 10^{-2}$.}
 	\begin{tabular}{cccrl}
 		\toprule
 		Anomalous coupling & vertex & Process &   \multicolumn{2}{c}{Cross section (\pb)}  \\ 
@@ -186,7 +186,7 @@ The SM \tZq\ sample is generated using the \aMCMG\ generator at leading order ac
 
 
 
-The complete list of \SM\ samples is given in Table \ref{tab:samples}, along with their cross sections at a centre-of-mass energy of 13 \TeV. The cross sections without a reference are coming from the generator with which the sample has been made, for some of them the uncertainties are provided by the Generator Group~\cite{generator}. For each MC sample, the integrated luminosity that the sample represents is estimated as the number of simulated events divided by the cross section of the generated process. This luminosity is then matched to integrated luminosity of 35.9 \fbinv\ represented by the data used for analysis.  For processes generated with \aMCMG, the effective number of simulated events is used, taking into account positive and negative event weights. %The correction factor for those events is defined as
+The complete list of \SM\ samples is given in Table \ref{tab:samples}, along with their cross sections at a centre-of-mass energy of 13 \TeV. The cross sections originate from the generator with which the sample has been made. For some of the cross sections,  the uncertainties are provided by the Generator Group~\cite{generator}. For each MC sample, the integrated luminosity that the sample represents is estimated as the number of simulated events divided by the cross section of the generated process. This luminosity is then matched to integrated luminosity of 35.9 \fbinv\ represented by the data used for analysis.  For processes generated with \aMCMG, the effective number of simulated events is used, taking into account positive and negative event weights. %The correction factor for those events is defined as
 %\begin{equation}
 %\mathrm{C} = \frac{\textnormal{Nb. of pos. weights} + \textnormal{Nb. of neg. weights}}{\textnormal{Nb. of pos. weights} - \textnormal{Nb. of neg. weights}} \times \textnormal{MC baseweight}
 %\end{equation}
@@ -318,8 +318,8 @@ The discriminating power of a BDT is assessed by analysing the receiver operatin
 When the multivariate discriminator has no discriminating power, the resulting AUC will be 0\%, while 50\%  means fully separated event classes. In \fig{fig:ROC} examples of ROC curves are shown. 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.7\linewidth]{3_Analysis_techniques/Figures/ROC}
-	\caption{Example of ROC curves. In this example, the green method is better than the blue one, which is better than the red one. The dashed line represents a case where there is no separation. Figure taken from~\cite{ROC}.}
+	\includegraphics[width=0.7\linewidth]{3_Analysis_techniques/Figures/ROClies}
+	\caption{Example of ROC curves. In this example, the green method is better than the blue one, which is better than the red one. The dashed line represents a case where there is no separation. Figure taken from~\cite{lies}.}
 	\label{fig:ROC}
 \end{figure}
 
@@ -384,7 +384,7 @@ These probabilities are defined as
   1-p_{b} &= \mathrm{P}\left(q_{\mu} \geq q_{\mu}^{\mathrm{obs}}|\:  b\right) = \int \limits_{q^{\mathrm{obs}}_{\mu=0}}^{\infty} f(q_{\mu}|\: \mu=0, \hat{\theta}_{\mu=0}^{\mathrm{obs}}) \:dq_{\mu}, 
 \end{aligned}
 \end{equation}
-where $ p_{\mu}$ and $ p_{b}$ are the p-values associated to the two hypothesis, and  $f(q_{\mu}|\: \mu, \hat{\theta}_{\mu}^{\mathrm{obs}})$ and $f(q_{\mu}|\: \mu=0, \hat{\theta}_{\mu=0}^{\mathrm{obs}})$ are the probability density functions of the signal plus background and background only hypothesis constructed from toy Monte Carlo pseudo data. These are generated with nuisance parameters fixed to $\hat{\theta}_{\mu=0}^{\mathrm{obs}}$ (background only) and $\hat{\theta}_{\mu}^{\mathrm{obs}}$ (signal plus backgound).
+where $ p_{\mu}$ and $ p_{b}$ are the p-values associated to the two hypotheses, and  $f(q_{\mu}|\: \mu, \hat{\theta}_{\mu}^{\mathrm{obs}})$ and $f(q_{\mu}|\: \mu=0, \hat{\theta}_{\mu=0}^{\mathrm{obs}})$ are the probability density functions of the signal plus background and background only hypothesis constructed from toy Monte Carlo pseudo data. These are generated with nuisance parameters fixed to $\hat{\theta}_{\mu=0}^{\mathrm{obs}}$ (background only) and $\hat{\theta}_{\mu}^{\mathrm{obs}}$ (signal plus backgound).
 %These values of the nuisance parameters for the background only $\hat{\theta}_{\mu=0}^{\mathrm{obs}}$ and signal plus background  $\hat{\theta}_{\mu}^{\mathrm{obs}}$ hypothesis that best describe the data are found by maximising the likelihood from \eq{eq:like}. 
 %\begin{figure}[htbp]
 %	\centering
@@ -403,7 +403,7 @@ these definitions one can identify pμ with CLs+b and pb with 1 − CLb.
 If, for μ = 1, CLs ≤ α, we would state that the SM Higgs boson is excluded with (1 − α) CLs confidence level (C.L.). It is known that the CLs method gives conservative limits, i.e. the actual confidence level is higher than (1 − α). See Appendix A for more details.
 
 \end{comment}
-The 95\% CL level upper limit on $\mu$ is achieved by adjusting $\mu$ until CL$ = 0.05$, this is the so-called observe limit. The expected median upper limit and the $\pm 1\sigma$ and $\pm 2 \sigma$ bands for a hypothesis is generated by a large set of pseudo data and calculate the CLs and the value of $\mu$ at 95\% CL for each of them. A cumulative probability distribution can be build by starting the integration from the side corresponding to low event yields. The median expected value, so-called expected limit at 95\% CL, is where the cumulative distribution function crosses the 50\% quantile. The $\pm 1 \sigma$ (68\%)  and $\pm 2\sigma$ (95\%) bands on the expected limit are defined by the crossings of the 16\% and 84\%, and 2.5\% and 97.5\% quantiles.
+The 95\% CL level upper limit on $\mu$ is achieved by adjusting $\mu$ until CL$ = 0.05$, this is the so-called observed limit. The expected median upper limit and the $\pm 1\sigma$ and $\pm 2 \sigma$ bands for a hypothesis is generated by a large set of pseudo data and calculating the CLs and the value of $\mu$ at 95\% CL for each of them. A cumulative probability distribution can be build by starting the integration from the side corresponding to low event yields. The median expected value, so-called expected limit at 95\% CL, is where the cumulative distribution function crosses the 50\% quantile. The $\pm 1 \sigma$ (68\%)  and $\pm 2\sigma$ (95\%) bands on the expected limit are defined by the crossings of the 16\% and 84\%, and 2.5\% and 97.5\% quantiles.
 \begin{comment}
 	Despite being logically very straightforward, this prescription is not too practical from
 126 the computational point of view due to the high CPU demand. If N is the number of
