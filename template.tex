@@ -50,6 +50,7 @@
 
 % begin the document
 \begin{document}
+	
 \frontmatter
 
 
@@ -57,6 +58,7 @@
 % the title page
 \input{_titlepage}
 
+%\input{_balou}
 % table of contents
 %Protrusion (margin kerning, hanging punctuation) enables characters to cross the margin edge in order to increase uniformity of the optical appearance of text boundaries (see pages 39–50 of Hàn Thế Thành’s dissertation). After activating protrusion with the option activate={true,nocompatibility} of microtype, crossing the margins is best seen for the characters having small area (".", ",", "-") or highly non-flat contour near the margin edge ("y", "r" near the right margin). This is illustrated in the figure below where comma and "r" cross the right margin edge indicated by the red dashed line:
 \microtypesetup{protrusion=false} % disables protrusion locally in the document
@@ -75,6 +77,7 @@
 % -------------------------------------------------- %
 
 \mainmatter
+%\layout
 \chapter{Theoretical basis}
 % top quark 
 % http://www.slac.stanford.edu/pubs/slacreports/reports03/ssi95-001.pdf
@@ -216,13 +219,16 @@ In this thesis, two scenarios are being studied: one being the top-up interactio
 
 \backmatter
 %\bibliography{Bibliography/Chapter2_references}  % use with BibTeX
-\hypersetup{urlcolor=darkgreen}
+\hypersetup{urlcolor=black}
 \printbibliography  % use with BibLaTeX
-\hypersetup{urlcolor=darkblue}
+\hypersetup{urlcolor=black}
 %\printglossaries
 %\printglossary[type=\acronymtype, toctitle=\myacronymtitle, title=\myacronymtitle]  % print only one glossary, and define its title (\myacronymtitle is defined in _settings.tex)
 %\printglossaries  % print all glossaries available
 %
 \input{_acknowledgements}
+\cleardoublepage\thispagestyle{empty}
+\chapter*{Acknowledgements}
+\input{_acknowledgmentstext}
 %\input{_figrefs}
 \end{document}

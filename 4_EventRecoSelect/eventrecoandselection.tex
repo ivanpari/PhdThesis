@@ -146,7 +146,7 @@ Overall, the efficiency is about 40-87\%, with two drops due to the space betwee
 
 In addition to the identification criteria, the muons are required to be spatially isolated from electromagnetic and hadronic activity.  The relative lepton isolation is defined as estimating the total transverse energy of the particles emitted around the  direction of the lepton by defining a cone of radius $\Delta R$ in the $\eta\phi$ plane around the lepton direction. Then a summed energy is calculated from the charged hadrons (CH), neutral hadrons (NH), and photons (\Pphoton), excluding the lepton itself. This sum is then corrected to remove the energy coming from pileup interactions. The relative isolation for muons $\iso_{\Pmu}$ is defined as~\cite{CMS-PRF-14-001}:
 \begin{equation}
- \iso_{\Pmu} = \frac{\sum \pt(\mathrm{CH}) + \mathrm{max}\left(0., \sum \Et(\mathrm{NH}), \sum \Et(\Pphoton) - 0.5 \times \sum \Et (\mathrm{CH})\right)}{\pt(\Pmu)},
+ \iso_{\Pmu} = \frac{\sum \pt(\mathrm{CH}) + \mathrm{max}\left(0., \sum \Et(\mathrm{NH})+ \sum \Et(\Pphoton) - 0.5 \times \sum \Et (\mathrm{CH})\right)}{\pt(\Pmu)},
 \end{equation}
 where a cone of $\Delta R = 0.4$ is adopted and the pileup mitigation is based on the  \dbeta\ correction. The \dbeta\ correction estimates the pileup energy as half of the contribution coming from charged hadrons. For tight ID muons, this relative isolation should be $\iso_{\Pmu} <0.15$, while for loose muons this should be $\iso_{\Pmu} <0.25$. % The chosen value for β is motivated by assuming equal production rates for the (π+,π0,π−) isospin triplet leading to a ratio of 1/2 for the production of neutral pions over charged ones. 
 In \fig{fig:muoniso}, the isolation efficiencies as a function of the pseudo rapidities using the tag and probe method are shown for the tight muon working point. The efficiencies are 85-100\%  and have a decline for low-\pt\ muons. % These low-\pt\ muons are most likely coming from hadronic or heavy flavour decays. 
@@ -200,7 +200,7 @@ Starting from an electron PF candidate with a GSF track that is outside the barr
 
 Similar to the muons, the electron  relative isolation is determined from the sum of the particles in a cone around the electron itself. The cone radius used for electrons is $\Delta R=0.3$ and a $\rho$ correction for pileup mitigation is applied. For this correction, the expected pileup energy inside the isolation cone is estimated from the median density energy per area of pileup contamination ($\rho$), computed event by event, and the effective area ($A_{\mathrm{eff.}}$)~\cite{CMS-PRF-14-001}. This effective area is estimated from simulation and denotes the expected amount of neutral energy from pileup interactions per $\rho$ within the isolation cone as a function of the pseudorapidity of the associated ECAL superclusters. Table \ref{tab:EAeff} shows the values used for 13 \TeV\ data. The relative electron isolation $\iso_{\Pe}$  is calculated as
 \begin{equation}
-\iso_{\Pe} =  \frac{\sum \pt(\mathrm{CH}) + \max\left(0., \sum \Et(\mathrm{NH}), \sum \Et (\gamma) - \rho \times A_{\mathrm{eff.}}\right)}{\pt(\Pe)}.
+\iso_{\Pe} =  \frac{\sum \pt(\mathrm{CH}) + \max\left(0., \sum \Et(\mathrm{NH})+ \sum \Et (\gamma) - \rho \times A_{\mathrm{eff.}}\right)}{\pt(\Pe)}.
 \label{eq:drho}
 \end{equation}
 \begin{table}[htbp]
@@ -228,7 +228,7 @@ Similar to the muons, the electron  relative isolation is determined from the su
 	\label{tab:EAeff}
 \end{table}
 
-The efficiency of electron identification is estimated from $\PZ \rightarrow \Pelectron \APelectron$ events via the tag-and-probe method and is shown in \fig{fig:electrontightidvspt} for the tight working point. The efficiencies reach $95-100$\%.  The difference between  data and  simulation is corrected for by dedicated $\pt$- and $\eta$ dependent scale factors as well. 
+The efficiency of electron identification is estimated from $\PZ \rightarrow \Pelectron \APelectron$ events via the tag-and-probe method and is shown in \fig{fig:electrontightidvspt} for the tight working point. The efficiencies reach $60-87$\%.  The difference between  data and  simulation is corrected for by dedicated $\pt$- and $\eta$ dependent scale factors as well. 
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.7\linewidth]{4_EventRecoSelect/Figures/ElectronTightIDvsPt}

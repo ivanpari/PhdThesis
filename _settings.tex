@@ -30,6 +30,24 @@
 
 
 % size parameters
+%\setlength{\textwidth}{150mm}       % width of the text area
+%\setlength{\textwidth}{125.2mm}       % width of the text area
+%%\setlength{\textheight}{220mm}      % height of the text area
+%\setlength{\textheight}{180mm}      % height of the text area
+%\setlength{\hoffset}{0pt}           % offset insertet at the left
+%
+%%\setlength{\voffset}{10pt}          % offset inserted at the top
+%\setlength{\voffset}{5pt}          % offset inserted at the top
+%%\setlength{\topmargin}{0pt}          % offset inserted at the top
+%\setlength{\oddsidemargin}{80mm}     % offset inserted to the left for odd pages
+%\setlength{\evensidemargin}{-50mm}    % offset inserted to the left for even pages
+%%\setlength{\marginparwidth}{18mm}   % width for marginal notes (Randnotizen)
+%\setlength{\marginparwidth}{5mm}   % width for marginal notes (Randnotizen)
+%
+%\setlength{\parskip}{\bigskipamount} % space between two paragraphs
+%\setlength{\parindent}{10pt}        % indention for a new paragraph
+%\checkandfixthelayout
+
 \setlength{\textwidth}{150mm}       % width of the text area
 \setlength{\textheight}{220mm}      % height of the text area
 \setlength{\hoffset}{0pt}           % offset insertet at the left
@@ -40,6 +58,7 @@
 \setlength{\parskip}{\bigskipamount} % space between two paragraphs
 \setlength{\parindent}{10pt}        % indention for a new paragraph
 
+
 % dahsed lines
 \setlength\dashlinedash{0.2pt}
 \setlength\dashlinegap{1.5pt}
@@ -48,6 +67,7 @@
 % colors
 \definecolor{gray75}{gray}{0.75}
 \definecolor{gray90}{gray}{0.90}
+%\definecolor{black}{gray}{0.75}
 \definecolor{darkblue}{rgb}{0,0,0.5}
 \definecolor{darkgreen}{rgb}{0,0.5,0}
 \definecolor{green}{rgb}{0.2,0.8,0.2}
@@ -65,10 +85,10 @@
  % linktocpage=true,         % make page number (not text) be link on TOC
  % pdfpagelabels=true,       % set PDF page labels
  colorlinks=true,          % false: boxed links; true: colored links
- linkcolor=darkblue,       % color of internal links
- citecolor=darkblue,       % color of links to bibliography
- filecolor=darkblue,       % color of file links
- urlcolor=darkblue,        % color of external links
+ linkcolor=black,       % color of internal links
+ citecolor=black,       % color of links to bibliography
+ filecolor=black,       % color of file links
+ urlcolor=black,        % color of external links
  draft=false               % always show links, even in draft mode
 }
 
@@ -96,12 +116,12 @@
     \ifchapternonum%
     \begin{tabularx}{\textwidth}{X}%
       {\parbox[b]{\linewidth}{\chaptitlefont ##1}%
-      \vphantom{\raisebox{-15pt}{\chapnumfont 1}}}
+      \vphantom{\raisebox{-20pt}{\chapnumfont 1}}}
     \end{tabularx}%
     \else
     \begin{tabularx}{\textwidth}{Xl}
       {\parbox[b]{\linewidth}{\chaptitlefont ##1}}
-      & \raisebox{-15pt}{\chapnumfont\ \thechapter}%
+      & \raisebox{-20pt}{\chapnumfont\ \thechapter}%
     \end{tabularx}%
     \fi
     \par\vskip2mm\hrule

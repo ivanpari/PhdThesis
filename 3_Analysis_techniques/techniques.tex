@@ -76,7 +76,7 @@ The \texttt{FEYNRULES} package~\cite{Alloul:2013bka} allows for the calculation 
 
 The \MG\  program~\cite{Alwall:2011uj} is used to interpret the physics model and calculate the corresponding Feynman diagrams and matrix elements. After this, \ME~\cite{Mangano:2006rw} is used to generate the hard scattering events. These generated events can then be interfaced with \Pythia~\cite{Sjostrand:2006za,Sjostrand:2014zea} for parton showers using for example the MLM merging scheme~\cite{Alwall:2007fs}. 
 
-The \aMCMG\ program~\cite{Alwall:2014hca} combines the LO \MG~\cite{Alwall:2011uj} and the \aMC\ program into a common framework. This combination supports the generation of samples at LO or NLO together with a dedicated matching to parton showers  using the MC@NLO~\cite{Frixione:2002ik} scheme. In the \aMCMG\ prescription, a certain fraction of events with negative weights are produced originating from the subtraction of amplitudes that contain additional emissions from the NLO matrix element to prevent double-counting.
+The \aMCMG\ program~\cite{Alwall:2014hca} extends the LO \MG~\cite{Alwall:2011uj} so that NLO QCD corrections could be handled as well. This combination supports the generation of samples at LO or NLO together with a dedicated matching to parton showers  using the MC@NLO~\cite{Frixione:2002ik} scheme. In the \texttt{MC@NLO} prescription, a certain fraction of events with negative weights are produced originating from the subtraction of amplitudes that contain additional emissions from the NLO matrix element to prevent double-counting.
 %or MC$@$NLO~\cite{Frederix:2012ps}  \todo{MC$@$NLO voor ME generator }
 %or FxFx~\cite{Frederix:2012ps} 
 
